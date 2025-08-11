@@ -2,9 +2,10 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MapPin, Phone, ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
 
 export default function SiWaraCafeSite({ mapEmbedSrc }: { mapEmbedSrc?: string }) {
-  // --- รายการภาพทั้งหมด ---
+  // --- รายการภาพทั้งหมด (แก้ชื่อภายหลังได้) ---
   const allImages = [
     "/images/siwara-interior1.jpg",
     "/images/siwara-interior2.jpg",
@@ -23,35 +24,34 @@ export default function SiWaraCafeSite({ mapEmbedSrc }: { mapEmbedSrc?: string }
   const [badImages, setBadImages] = useState<string[]>([]);
   const [index, setIndex] = useState(0);
 
-  // --- ตรวจสอบว่าภาพไหนโหลดได้ ---
+  // --- ตรวจว่าภาพโหลดได้ไหม (แสดงรายชื่อที่พัง) ---
   useEffect(() => {
     Promise.all(
       allImages.map(
         (src) =>
           new Promise<{ ok: boolean; src: string }>((resolve) => {
-            const im = new Image();
+            const im = new window.Image();
             im.onload = () => resolve({ ok: true, src });
             im.onerror = () => resolve({ ok: false, src });
             im.src = src;
           })
       )
     ).then((results) => {
-      const ok = results.filter(r => r.ok).map(r => r.src);
-      const bad = results.filter(r => !r.ok).map(r => r.src);
+      const ok = results.filter((r) => r.ok).map((r) => r.src);
+      const bad = results.filter((r) => !r.ok).map((r) => r.src);
       setImages(ok.length ? ok : allImages);
       setBadImages(bad);
-      if (bad.length) {
-        console.warn("[SiWaraCafeSite] รูปโหลดไม่สำเร็จ:", bad);
-      }
+      if (bad.length) console.warn("[SiWaraCafeSite] รูปโหลดไม่สำเร็จ:", bad);
     });
   }, []);
 
-  // --- ปุ่มเลื่อนสไลด์ ---
+  // --- สไลด์ ---
   const nextSlide = () => setIndex((i) => (i + 1) % images.length);
   const prevSlide = () => setIndex((i) => (i - 1 + images.length) % images.length);
 
-  // --- Auto slide ---
+  // auto-slide
   useEffect(() => {
+    if (!images.length) return;
     const timer = setInterval(nextSlide, 4000);
     return () => clearInterval(timer);
   }, [images]);
@@ -61,10 +61,17 @@ export default function SiWaraCafeSite({ mapEmbedSrc }: { mapEmbedSrc?: string }
       {/* HERO */}
       <header
         data-testid="hero"
-        className="relative h-[70vh] bg-cover bg-center"
-        style={{ backgroundImage: 'url(/images/siwara-hero.jpg)' }}
+        className="relative h-[70vh] min-h-[420px] overflow-hidden"
         aria-label="Si-Wara Café คาเฟ่บ้านไม้ ตะกั่วป่า"
       >
+        <Image
+          src="/images/siwara-hero.jpg"
+          alt="Si-Wara Café — บรรยากาศหน้าร้าน"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
         <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -83,16 +90,23 @@ export default function SiWaraCafeSite({ mapEmbedSrc }: { mapEmbedSrc?: string }
         <div className="relative overflow-hidden rounded-2xl shadow-lg">
           {images.length > 0 && (
             <AnimatePresence mode="wait">
-              <motion.img
+              <motion.div
                 key={index}
-                src={images[index]}
-                alt={`บรรยากาศภายใน Si-Wara Café ภาพที่ ${index + 1}`}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.6 }}
-                className="w-full h-[350px] md:h-[420px] object-cover"
-              />
+                className="relative w-full h-[350px] md:h-[420px]"
+              >
+                <Image
+                  src={images[index]}
+                  alt={`บรรยากาศภายใน Si-Wara Café ภาพที่ ${index + 1}`}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
+                  // ปรับโฟกัสถ้าต้องการให้ไม่ครอปหน้าคน/เค้ก: style={{ objectPosition: "50% 70%" }}
+                />
+              </motion.div>
             </AnimatePresence>
           )}
 
@@ -135,7 +149,6 @@ export default function SiWaraCafeSite({ mapEmbedSrc }: { mapEmbedSrc?: string }
           <p className="mb-4">
             โฮมคาเฟ่เล็กๆ ที่ออกแบบสนองความต้องการของเจ้าของบ้านที่ชอบบ้านไม้เป็นทุนเดิมอยู่แล้ว
             เดิมทีเป็นบ้านไม้เก่าของ ตาศรีพรม ที่ได้รับมรดกมาจากขุนเกษม อยากให้ลองแวะมานั่งสัมผัสบรรยากาศบ้านไม้อายุ เกือบ 100 ปี
-
           </p>
           <p>สไตล์บ้านไม้โบราณผสมความร่วมสมัย ให้เพลิดเพลินกับกลิ่นกาแฟและเพลงแจ๊สเบา ๆ</p>
 
@@ -155,10 +168,10 @@ export default function SiWaraCafeSite({ mapEmbedSrc }: { mapEmbedSrc?: string }
       </section>
 
       {/* เมนูแนะนำ */}
-      <section className="bg-[#f0e8dc] py-12" aria-label="Menu" data-testid="menu">
+      <section className="bg-[#f0e8dc] py-16" aria-label="Menu" data-testid="menu">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-8 text-center">เมนูแนะนำ</h2>
-          <div className="grid md:grid-cols-3 gap-6">
+          <h2 className="text-4xl font-bold mb-10 text-center">เมนูแนะนำ</h2>
+          <div className="grid md:grid-cols-3 gap-10">
             {[
               { name: "เค้กมัทฉะ", img: "/images/menu-matcha.jpg" },
               { name: "กาแฟซิกเนเจอร์", img: "/images/menu-coffee.jpg" },
@@ -172,12 +185,19 @@ export default function SiWaraCafeSite({ mapEmbedSrc }: { mapEmbedSrc?: string }
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
               >
-                <img
-                  src={item.img}
-                  alt={`${item.name} - Si-Wara Café คาเฟ่บ้านไม้ ตะกั่วป่า`}
-            className="w-full h-96 object-cover"
-                />
-          <div className="p-6 text-center text-lg font-semibold">{item.name}</div>
+                {/* กรอบภาพแบบเต็ม ไม่มีขอบขาว */}
+                <div className="relative w-full h-96">
+                  <Image
+                    src={item.img}
+                    alt={`${item.name} - Si-Wara Café คาเฟ่บ้านไม้ ตะกั่วป่า`}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover"
+                    // ถ้าภาพเป็นแนวตั้งแล้วโดนครอปมากไป ลองเลื่อนโฟกัส:
+                    // style={{ objectPosition: "50% 70%" }}
+                  />
+                </div>
+                <div className="p-6 text-center text-lg font-semibold">{item.name}</div>
               </motion.div>
             ))}
           </div>
@@ -193,22 +213,26 @@ export default function SiWaraCafeSite({ mapEmbedSrc }: { mapEmbedSrc?: string }
         <div>
           <h2 className="text-3xl font-bold mb-4">ติดต่อเรา</h2>
           <p className="flex items-center gap-2 mb-2"><Phone size={20}/> 097-350-1514</p>
-          <p className="flex items-center gap-2 mb-2"><MapPin size={20}/> 53 ถนน ราษฎร์บำรุง ตำบล บางไทร อำเภอตะกั่วป่า พังงา 82110</p>
+          <p className="flex items-center gap-2 mb-2">
+            <MapPin size={20}/> 53 ถนน ราษฎร์บำรุง ตำบล บางไทร อำเภอตะกั่วป่า พังงา 82110
+          </p>
           <p>เปิดทุกวัน 10:00 – 17:00 น.</p>
         </div>
 
         {mapEmbedSrc?.startsWith("https://www.google.com/maps/embed") ? (
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1658.1055435387063!2d98.3628632!3d8.8336595!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3050db365f08d92d%3A0x5402fc40034bbf27!2z4Lio4Li0LeC4p-C4o-C4siDguITguLLguYDguJ_guYgg4LiV4Liw4LiB4Lix4LmI4Lin4Lib4LmI4Liy!5e1!3m2!1sth!2sth!4v1754898851972!5m2!1sth!2sth"
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-        />
+          <div className="w-full h-[400px]">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1658.1055435387063!2d98.3628632!3d8.8336595!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3050db365f08d92d%3A0x5402fc40034bbf27!2z4Lio4Li0LeC4p-C4o-C4siDguITguLLguYDguJ_guYgg4LiV4Liw4LiB4Lix4LmI4Lin4Lib4LmI4Liy!5e1!3m2!1sth!2sth!4v1754898851972!5m2!1sth!2sth"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
         ) : (
-          <div className="w-full h-64 rounded-xl border bg-white flex flex-col items-center justify-center gap-3">
+          <div className="w-full h-[400px] rounded-xl border bg-white flex flex-col items-center justify-center gap-3">
             <span>แผนที่จะมาแสดงเมื่อใส่ <code>mapEmbedSrc</code></span>
             <a className="underline" href="https://maps.google.com/?q=Si-Wara+Cafe+Takua+Pa" target="_blank" rel="noreferrer">
               เปิดใน Google Maps
