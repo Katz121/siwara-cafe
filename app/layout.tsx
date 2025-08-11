@@ -6,14 +6,14 @@ export const metadata: Metadata = {
   title: "Si-Wara Café | คาเฟ่บ้านไม้ ตะกั่วป่า",
   description: "Si-Wara Café คาเฟ่บ้านไม้ใจกลางเมืองเก่าตะกั่วป่า เสิร์ฟกาแฟและเค้กโฮมเมด",
   keywords: ["Si-Wara Café","คาเฟ่บ้านไม้","ตะกั่วป่า","คาเฟ่พังงา"],
-  metadataBase: new URL("https://www.siwara-cafe.com"),
-  alternates: { canonical: "https://www.siwara-cafe.com" },
+  metadataBase: new URL("https://www.siwara.cafe"),
+  alternates: { canonical: "https://www.siwara.cafe" },
   openGraph: {
     type: "website",
     title: "Si-Wara Café | คาเฟ่บ้านไม้ ตะกั่วป่า",
     description: "คาเฟ่บ้านไม้ใจกลางเมืองเก่าตะกั่วป่า",
     images: ["/images/siwara-hero.jpg"],
-    url: "https://www.siwara-cafe.com",
+    url: "https://www.siwara.cafe",
   },
 };
 
@@ -33,7 +33,7 @@ const schema = {
   telephone: "081-234-5678",
   servesCuisine: ["Coffee","Cake"],
   openingHours: "Mo-Su 09:00-18:00",
-  url: "https://www.siwara-cafe.com",
+  url: "https://www.siwara.cafe",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
