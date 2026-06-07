@@ -211,13 +211,14 @@ section{padding:96px 0;position:relative}
 
 /* ===== GALLERY / ATMOSPHERE ===== */
 #atmosphere{background:var(--cream-soft)}
-.atmos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-@media(max-width:760px){.atmos-grid{grid-template-columns:1fr 1fr}}
-.atmos-grid figure{overflow:hidden;border-radius:4px;box-shadow:0 8px 24px rgba(74,47,28,.18);position:relative;aspect-ratio:1/1}
+.atmos-grid{display:flex;flex-direction:column;gap:18px}
+.atmos-grid figure{overflow:hidden;border-radius:4px;box-shadow:0 8px 24px rgba(74,47,28,.18);position:relative}
 .atmos-grid img{width:100%;height:100%;object-fit:cover;transition:.6s}
 .atmos-grid figure:hover img{transform:scale(1.08)}
-.atmos-grid .feat{grid-column:span 2;grid-row:span 2;aspect-ratio:auto}
-@media(max-width:760px){.atmos-grid .feat{grid-column:span 2}}
+.atmos-grid .feat{width:100%;aspect-ratio:16/10;max-height:560px}
+.atmos-thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.atmos-thumbs figure{aspect-ratio:4/3}
+@media(max-width:760px){.atmos-thumbs{gap:10px}}
 .atmos-words{text-align:center;margin-top:48px}
 .atmos-words .line{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.4rem;color:var(--wood-mid);letter-spacing:1px}
 .atmos-words .chips{margin-top:18px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
@@ -403,9 +404,11 @@ footer .fsmall{font-size:.8rem;opacity:.55;margin-top:18px;letter-spacing:.5px}
       <figure class="feat reveal">
         <img src="618529114_122157859640920902_5818224601826972970_n.jpg" alt="บ้านไม้สักศิวรา คาเฟ่ ตะกั่วป่า มองจากภายนอก / Siwara Cafe Takua Pa teak house exterior with mountain backdrop" loading="lazy">
       </figure>
-      <figure class="reveal"><img src="719463362_122177663690920902_8872683781444008463_n.jpg" alt="ภายในศิวรา คาเฟ่ บ้านไม้สักเก่า นาฬิกาโบราณ โซฟาไม้ / Inside Siwara Cafe, antique clock and wooden sofa" loading="lazy"></figure>
-      <figure class="reveal"><img src="story.jpg" alt="เรื่องราวบ้านไม้เก่าที่หล่อหลอมเป็นศิวรา คาเฟ่ ตะกั่วป่า" loading="lazy"></figure>
-      <figure class="reveal"><img src="map.jpg" alt="แผนที่เมืองเก่าตะกั่วป่าที่ศิวรา คาเฟ่ตั้งอยู่" loading="lazy"></figure>
+      <div class="atmos-thumbs">
+        <figure class="reveal"><img src="719463362_122177663690920902_8872683781444008463_n.jpg" alt="ภายในศิวรา คาเฟ่ บ้านไม้สักเก่า นาฬิกาโบราณ โซฟาไม้ / Inside Siwara Cafe, antique clock and wooden sofa" loading="lazy"></figure>
+        <figure class="reveal"><img src="story.jpg" alt="เรื่องราวบ้านไม้เก่าที่หล่อหลอมเป็นศิวรา คาเฟ่ ตะกั่วป่า" loading="lazy"></figure>
+        <figure class="reveal"><img src="map.jpg" alt="แผนที่เมืองเก่าตะกั่วป่าที่ศิวรา คาเฟ่ตั้งอยู่" loading="lazy"></figure>
+      </div>
     </div>
 
     <div class="atmos-words reveal">
