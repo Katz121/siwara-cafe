@@ -324,6 +324,52 @@ footer .fsmall{font-size:.8rem;opacity:.55;margin-top:18px;letter-spacing:.5px}
 /* reveal */
 .reveal{opacity:0;transform:translateY(30px);transition:.9s cubic-bezier(.2,.7,.2,1)}
 .reveal.show{opacity:1;transform:none}
+
+/* ===== Menu highlight popup (best-seller + recommended, live from shop) ===== */
+.mp-backdrop{position:fixed;inset:0;z-index:1000;background:rgba(43,26,16,.55);backdrop-filter:blur(4px);
+  opacity:0;pointer-events:none;transition:opacity .4s ease}
+.mp-backdrop.show{opacity:1;pointer-events:auto}
+.mp-card{position:fixed;left:50%;top:50%;z-index:1001;width:min(92vw,440px);
+  transform:translate(-50%,-46%) scale(.96);opacity:0;pointer-events:none;
+  background:var(--cream);border:1px solid var(--gold-soft);border-radius:14px;
+  box-shadow:0 30px 70px rgba(43,26,16,.5);overflow:hidden;
+  transition:opacity .45s ease, transform .45s cubic-bezier(.2,.7,.2,1)}
+.mp-card.show{opacity:1;transform:translate(-50%,-50%) scale(1);pointer-events:auto}
+.mp-head{position:relative;padding:20px 22px 14px;
+  background:linear-gradient(135deg,var(--wood-mid),var(--wood-dark));color:var(--cream)}
+.mp-eyebrow{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--gold-soft);
+  font-size:.9rem;letter-spacing:.5px;margin-bottom:2px}
+.mp-title{font-family:'Chonburi',serif;font-size:1.4rem;line-height:1.25;letter-spacing:.5px}
+.mp-sub{font-size:.85rem;opacity:.82;margin-top:4px}
+.mp-close{position:absolute;top:12px;right:12px;width:34px;height:34px;border-radius:50%;
+  border:1px solid var(--gold-soft);background:rgba(255,255,255,.12);color:var(--cream);
+  font-size:1.1rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;
+  transition:.25s}
+.mp-close:hover{background:var(--gold);color:var(--wood-dark);border-color:var(--gold)}
+.mp-viewport{overflow:hidden;padding:18px 0}
+.mp-track{display:flex;width:max-content;will-change:transform;animation:mp-marquee linear infinite}
+.mp-track:hover{animation-play-state:paused}
+@keyframes mp-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.mp-track{animation:none}}
+.mp-item{width:142px;flex:0 0 auto;margin-left:14px;background:#fff;border:1px solid var(--paper);
+  border-radius:11px;overflow:hidden;box-shadow:0 4px 12px rgba(43,26,16,.08)}
+.mp-thumb{position:relative;width:100%;aspect-ratio:4/3;background:var(--cream-soft);
+  display:flex;align-items:center;justify-content:center;overflow:hidden}
+.mp-thumb img{width:100%;height:100%;object-fit:cover}
+.mp-thumb .mp-coffee{font-size:1.8rem;opacity:.5}
+.mp-badge{position:absolute;top:7px;left:7px;font-size:.62rem;font-weight:600;letter-spacing:.3px;
+  color:#fff;padding:3px 8px;border-radius:999px}
+.mp-badge.best{background:var(--gold);color:var(--wood-dark)}
+.mp-badge.rec{background:var(--leaf)}
+.mp-info{padding:9px 10px 11px}
+.mp-name{font-size:.8rem;font-weight:500;color:var(--wood);line-height:1.25;
+  min-height:2.1em;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.mp-price{font-family:'Chonburi',serif;color:var(--gold);font-size:.95rem;margin-top:4px}
+.mp-foot{padding:6px 22px 20px;text-align:center}
+.mp-cta{display:inline-block;font-family:'Sarabun',sans-serif;font-size:.95rem;font-weight:500;
+  background:var(--wood);color:var(--cream);border:none;border-radius:999px;
+  padding:11px 30px;cursor:pointer;letter-spacing:.5px;transition:.25s}
+.mp-cta:hover{background:var(--gold);color:var(--wood-dark)}
 </style>
 </head>
 <body>
@@ -672,6 +718,136 @@ function applyLang(lang){
 langBtn.addEventListener('click',()=>{
   applyLang(document.documentElement.lang==='en'?'th':'en');
 });
+</script>
+
+<!-- ===== Menu highlight popup — live ขายดี/แนะนำ from the shop's Firestore ===== -->
+<div class="mp-backdrop" id="mpBackdrop"></div>
+<div class="mp-card" id="mpCard" role="dialog" aria-modal="true" aria-labelledby="mpTitle">
+  <div class="mp-head">
+    <button class="mp-close" id="mpClose" aria-label="ปิด / Close">&times;</button>
+    <div class="mp-eyebrow" id="mpEyebrow">ยินดีต้อนรับ</div>
+    <div class="mp-title" id="mpTitle">เมนูแนะนำ &amp; ขายดี</div>
+    <div class="mp-sub" id="mpSub">ที่ลูกค้าสั่งบ่อยที่สุด</div>
+  </div>
+  <div class="mp-viewport"><div class="mp-track" id="mpTrack"></div></div>
+  <div class="mp-foot"><button class="mp-cta" id="mpCta">ดูเมนูทั้งหมด</button></div>
+</div>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js";
+import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-auth.js";
+import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-firestore.js";
+
+// Same Firebase project + public bundle the QR ordering page reads. The web
+// config is a public identifier (security is enforced by Firestore rules), so
+// it is safe to ship in this static page.
+const firebaseConfig = {
+  apiKey: "AIzaSyDQLSceuXischnihqCsaFgrxqX76_OULC8",
+  authDomain: "siwarapos.firebaseapp.com",
+  projectId: "siwarapos",
+  storageBucket: "siwarapos.firebasestorage.app",
+  messagingSenderId: "516304035232",
+  appId: "1:516304035232:web:d561a56266d9c2d16a98c5",
+  measurementId: "G-PRG04Y0WJF"
+};
+const APP_ID = "siwara-pos-v1";
+
+const T = {
+  th:{ eyebrow:"ยินดีต้อนรับ", title:"เมนูแนะนำ &amp; ขายดี", sub:"ที่ลูกค้าสั่งบ่อยที่สุด",
+       best:"ขายดี", rec:"แนะนำ", cta:"ดูเมนูทั้งหมด", from:"เริ่ม " },
+  en:{ eyebrow:"Welcome", title:"Recommended &amp; Best Sellers", sub:"What our guests love most",
+       best:"Best seller", rec:"Recommended", cta:"See full menu", from:"from " }
+};
+const lang = () => (document.documentElement.lang === 'en' ? 'en' : 'th');
+const roundUp5 = (n) => Math.ceil((Number(n)||0)/5)*5;
+const baht = (n) => '฿' + Number(n).toLocaleString('th-TH');
+
+const backdrop = document.getElementById('mpBackdrop');
+const card = document.getElementById('mpCard');
+const track = document.getElementById('mpTrack');
+
+let ITEMS = [];
+
+function priceText(m){
+  const coffee = !!m.allowBeanModifier;
+  const p = coffee ? roundUp5(m.price) : (Number(m.price)||0);
+  return (coffee ? T[lang()].from : '') + baht(p);
+}
+
+function cardHTML(m){
+  const t = T[lang()];
+  const badge = m.isPinnedBest
+    ? `<span class="mp-badge best">★ ${t.best}</span>`
+    : `<span class="mp-badge rec">${t.rec}</span>`;
+  const thumb = m.image
+    ? `<img src="${m.image}" alt="${(m.name||'').replace(/"/g,'&quot;')}" loading="lazy">`
+    : `<span class="mp-coffee">☕</span>`;
+  return `<div class="mp-item"><div class="mp-thumb">${thumb}${badge}</div>`
+       + `<div class="mp-info"><div class="mp-name">${m.name||''}</div>`
+       + `<div class="mp-price">${priceText(m)}</div></div></div>`;
+}
+
+function renderTexts(){
+  const t = T[lang()];
+  document.getElementById('mpEyebrow').textContent = t.eyebrow;
+  document.getElementById('mpTitle').innerHTML = t.title;
+  document.getElementById('mpSub').textContent = t.sub;
+  document.getElementById('mpCta').textContent = t.cta;
+}
+
+function renderTrack(){
+  if(!ITEMS.length) return;
+  // Duplicate the list so the -50% marquee loop is seamless.
+  track.innerHTML = [...ITEMS, ...ITEMS].map(cardHTML).join('');
+  // Speed scales with item count (~4s per item) for a calm, readable drift.
+  track.style.animationDuration = Math.max(ITEMS.length, 4) * 4 + 's';
+}
+
+function openPopup(){
+  renderTexts();
+  renderTrack();
+  backdrop.classList.add('show');
+  card.classList.add('show');
+}
+function closePopup(){
+  backdrop.classList.remove('show');
+  card.classList.remove('show');
+  try { sessionStorage.setItem('siwara_menu_popup_seen','1'); } catch(e){}
+}
+
+document.getElementById('mpClose').addEventListener('click', closePopup);
+backdrop.addEventListener('click', closePopup);
+document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closePopup(); });
+document.getElementById('mpCta').addEventListener('click', ()=>{
+  closePopup();
+  document.getElementById('menu')?.scrollIntoView({behavior:'smooth'});
+});
+// Re-localise popup text/badges if the language is toggled while it is open.
+document.getElementById('langBtn')?.addEventListener('click', ()=>{
+  if(card.classList.contains('show')){ renderTexts(); renderTrack(); }
+});
+
+(async function(){
+  // Respect "once per session" before doing any network work.
+  try { if(sessionStorage.getItem('siwara_menu_popup_seen')==='1') return; } catch(e){}
+  try {
+    const app = initializeApp(firebaseConfig);
+    await signInAnonymously(getAuth(app));
+    const db = getFirestore(app);
+    const snap = await getDoc(doc(db,'artifacts',APP_ID,'public','data','config','publicMenu'));
+    if(!snap.exists()) return;
+    const menu = (snap.data().menu || []).filter(m => m && m.available !== false && m.name);
+    const best = menu.filter(m => m.isPinnedBest);
+    const feat = menu.filter(m => m.isFeatured && !m.isPinnedBest); // best-sellers shown first, no dupes
+    ITEMS = [...best, ...feat];
+    if(!ITEMS.length) return;
+    // Small delay so visitors take in the hero first, then the menu invites them in.
+    setTimeout(openPopup, 1400);
+  } catch(err){
+    // Live menu unavailable (offline / rules) — fail silent, page is unaffected.
+    console.warn('[menu popup] skipped:', err?.code || err?.message || err);
+  }
+})();
 </script>
 </body>
 </html>
