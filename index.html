@@ -363,7 +363,6 @@ footer .fsmall{font-size:.8rem;opacity:.55;margin-top:18px;letter-spacing:.5px}
 <!-- ===== EXPLORE MAP · Leaflet + data ===== -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
-<script src="gmaps-config.js" defer></script>
 <script src="explore-data.js" defer></script>
 <style>
 #explore{padding:90px 0;background:var(--cream-soft)}
@@ -377,6 +376,17 @@ footer .fsmall{font-size:.8rem;opacity:.55;margin-top:18px;letter-spacing:.5px}
 #explore .ex-info{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--wood-mid);font-size:1.02rem}
 #ex-map{height:520px;border-radius:16px;overflow:hidden;box-shadow:0 14px 40px rgba(43,26,16,.22);border:1px solid var(--paper)}
 #explore .ex-note{margin-top:12px;text-align:center;font-size:.85rem;color:var(--wood-mid);opacity:.85}
+#explore .ex-seo{margin-top:54px;max-width:920px;margin-left:auto;margin-right:auto}
+#explore .seo-h2{font-size:1.7rem;color:var(--wood-dark);text-align:center}
+#explore .seo-intro{text-align:center;color:var(--ink);opacity:.82;line-height:1.7;margin:12px auto 26px;max-width:720px}
+#explore .seo-grp{font-size:1.15rem;color:var(--gold);border-bottom:1px solid var(--paper);padding-bottom:8px;margin:28px 0 4px}
+#explore .seo-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:6px 28px}
+#explore .seo-it{padding:14px 0;border-bottom:1px solid rgba(107,66,38,.10)}
+#explore .seo-it h3{font-family:'Sarabun',sans-serif;font-size:1.05rem;font-weight:700;color:var(--wood-dark);margin:0}
+#explore .seo-en{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;color:var(--gold);font-size:.92rem;margin-left:4px}
+#explore .seo-meta{font-size:.8rem;color:var(--wood-mid);margin:3px 0}
+#explore .seo-why{font-size:.9rem;color:var(--ink);opacity:.85;line-height:1.55;margin:3px 0 0}
+@media(max-width:680px){#explore .seo-list{grid-template-columns:1fr}}
 #explore .lp{font-family:'Sarabun',sans-serif}
 #explore .lp .ph{width:100%;height:130px;object-fit:cover;border-radius:10px;display:block;margin-bottom:2px}
 #explore .lp .cr{font-size:.62rem;color:#aaa;margin:2px 0 6px;line-height:1.3}
@@ -743,6 +753,34 @@ footer .fsmall{font-size:.8rem;opacity:.55;margin-top:18px;letter-spacing:.5px}
       <div id="ex-map"></div>
       <p class="ex-note" data-en="🟢 verified · 🟡 approximate · 🔴 needs checking. Distances/times are by car along real roads.">🟢 พิกัดยืนยันแล้ว · 🟡 ค่อนข้างแน่ · 🔴 ควรเช็ก · ระยะ/เวลาเป็นการขับรถตามถนนจริง</p>
     </div>
+
+<div class="reveal ex-seo">
+<h2 class="seo-h2" data-en="Attractions near Siwara Cafe, Takua Pa Old Town">ที่เที่ยวใกล้ศิวรา คาเฟ่ · เมืองเก่าตะกั่วป่า</h2>
+<p class="seo-intro" data-en="A guide to heritage sites and attractions around Siwara Cafe in the old town of Takua Pa, Phang-nga — Sino-Portuguese shophouses, Chinese shrines, temples, the tin-mining era iron bridge, Little Amazon, and Khao Lak nearby.">
+รวมที่เที่ยวรอบศิวรา คาเฟ่ ย่านเมืองเก่าตะกั่วป่า จังหวัดพังงา · ตึกชิโน-โปรตุกีส ศาลเจ้าจีน วัดเก่า สะพานเหล็กยุคเหมืองแร่ คลองสังเน่ห์ (Little Amazon) และเขาหลักที่อยู่ไม่ไกล</p>
+<h3 class="seo-grp" data-en="Within walking distance — the old town">เดินเที่ยวได้ในย่านเมืองเก่า</h3>
+<ul class="seo-list">
+<li class="seo-it"><h3>โรงเรียนเต้าหมิง <span class="seo-en">Tao Ming School</span></h3><p class="seo-meta">โบราณสถาน · ห่างจากร้าน ~0.3 กม.</p><p class="seo-why">โรงเรียนจีนโบราณ 1 ใน 8 จุดถนนวัฒนธรรม · สะท้อนการลงทุนการศึกษาของชุมชนจีนยุคเหมืองแร่</p></li>
+<li class="seo-it"><h3>บ้านขุนอินทร์ <span class="seo-en">Khun In House</span></h3><p class="seo-meta">โบราณสถาน · ห่างจากร้าน ~0.3 กม.</p><p class="seo-why">บ้าน-กำแพงเก่าของผู้มีฐานะยุคเมืองรุ่งเรือง · 1 ใน 8 จุดถนนวัฒนธรรม</p></li>
+<li class="seo-it"><h3>ศาลเจ้าพ่อกวนอู (ซิ่นใช่ตึ๋ง / อ๊ามใต้) <span class="seo-en">Guan Yu Shrine</span></h3><p class="seo-meta">ศาลเจ้า · ห่างจากร้าน ~0.5 กม.</p><p class="seo-why">ศาลเจ้าจีนเก่าแก่ราว 170 ปี สืบทอดประเพณีกินผักเกือบ 200 ปี · มรดกชุมชนจีนฮกเกี้ยน</p></li>
+<li class="seo-it"><h3>ย่านเมืองเก่า · ถนนสายวัฒนธรรมศรีตะกั่วป่า <span class="seo-en">Takua Pa Old Town Culture St.</span></h3><p class="seo-meta">โบราณสถาน · ห่างจากร้าน ~0.7 กม.</p><p class="seo-why">แกนหลักย่านเมืองเก่า ตึกแถวชิโน-โปรตุกีสอายุ 100 ปีขึ้นไป · หัวใจเอกลักษณ์เมือง</p></li>
+<li class="seo-it"><h3>วัดคงคาภิมุข (วัดหลวงตะกั่วป่า) <span class="seo-en">Wat Kongkhaphimuk</span></h3><p class="seo-meta">วัด · ห่างจากร้าน ~0.8 กม.</p><p class="seo-why">วัดหลวงเก่าแก่คู่เมือง สร้างยุคเจ้าเมืองตะกั่วป่า · ร.5 เคยเสด็จ</p></li>
+<li class="seo-it"><h3>สะพานเหล็กบุญสูง <span class="seo-en">Bun Sung Iron Bridge</span></h3><p class="seo-meta">โบราณสถาน · ห่างจากร้าน ~2.3 กม.</p><p class="seo-why">สะพานเหล็กยุคเหมืองแร่ ริมแม่น้ำตะกั่วป่า · จุดถ่ายรูป + มรดกวิศวกรรม</p></li>
+<li class="seo-it"><h3>คลองสังเน่ห์ (Little Amazon) <span class="seo-en">Klong Sangne / Little Amazon</span></h3><p class="seo-meta">ธรรมชาติ · ห่างจากร้าน ~5.3 กม.</p><p class="seo-why">ป่าไทรโบราณ ล่องเรือชมธรรมชาติคล้ายแอมะซอน · ~5 กม. ทางเหนือเมืองเก่า</p></li>
+<li class="seo-it"><h3>เขาพระนารายณ์ (เขาเวียง) <span class="seo-en">Khao Phra Narai (Srivijaya)</span></h3><p class="seo-meta">โบราณคดี · ห่างจากร้าน ~9.4 กม.</p><p class="seo-why">แหล่งโบราณคดีศรีวิชัย เทวรูปวิษณุ + ศิลาจารึกหลักที่ 26 (พุทธศตวรรษที่ 12) · หลักฐานสำคัญสุดของพื้นที่ · อ.กะปง</p></li>
+</ul>
+<h3 class="seo-grp" data-en="A short drive away">ขับรถไปไม่ไกล</h3>
+<ul class="seo-list">
+<li class="seo-it"><h3>หาดบางสัก <span class="seo-en">Hat Bang Sak</span></h3><p class="seo-meta">ชายหาด · ห่างจากร้าน ~11.9 กม.</p><p class="seo-why">หาดยาวเงียบ น้ำใส บรรยากาศแบบคนพื้นที่</p></li>
+<li class="seo-it"><h3>อนุสรณ์สึนามิ เรือ ต.813 (บางเนียง) <span class="seo-en">Tsunami Police Boat T813</span></h3><p class="seo-meta">อนุสรณ์ · ห่างจากร้าน ~22.0 กม.</p><p class="seo-why">เรือตรวจการณ์ถูกคลื่นสึนามิ 2547 พัดขึ้นบกกว่า 2 กม. · หลักฐานเหตุการณ์ที่จับต้องได้</p></li>
+<li class="seo-it"><h3>อุทยานแห่งชาติเขาหลัก-ลำรู่ <span class="seo-en">Khao Lak-Lam Ru NP</span></h3><p class="seo-meta">ธรรมชาติ · ห่างจากร้าน ~17.5 กม.</p><p class="seo-why">ป่าฝน + ทะเล · เส้นเดินป่าลำรู่ 2.3 กม. · จุดชมวิวทะเล</p></li>
+<li class="seo-it"><h3>หาดเขาหลัก (บ้านคึกคัก / นางทอง) <span class="seo-en">Khao Lak Beach</span></h3><p class="seo-meta">ชายหาด · ห่างจากร้าน ~26.8 กม.</p><p class="seo-why">ศูนย์กลางท่องเที่ยวเขาหลัก หาดทรายขาว ซีฟู้ด จุดออกทัวร์เกาะสิมิลัน</p></li>
+<li class="seo-it"><h3>เกาะคอเขา + เมืองโบราณทุ่งตึก <span class="seo-en">Ko Kho Khao + Tung Tuk</span></h3><p class="seo-meta">โบราณคดี · ห่างจากร้าน ~17.4 กม.</p><p class="seo-why">เกาะหาดเงียบ + ทุ่งตึก เมืองท่าการค้าโบราณ (พุทธศตวรรษที่ 12-14) · นั่งเรือข้ามจากท่าบ้านน้ำเค็ม</p></li>
+<li class="seo-it"><h3>สวนอนุสรณ์สึนามิ บ้านน้ำเค็ม <span class="seo-en">Ban Nam Khem Tsunami Memorial</span></h3><p class="seo-meta">อนุสรณ์ · ห่างจากร้าน ~11.1 กม.</p><p class="seo-why">พิพิธภัณฑ์ + สวนอนุสรณ์ เล่าเรื่องหมู่บ้านประมงที่สูญเสียมากที่สุด</p></li>
+<li class="seo-it"><h3>น้ำตกตำหนัง (อุทยานศรีพังงา) <span class="seo-en">Tam Nang Waterfall</span></h3><p class="seo-meta">ธรรมชาติ · ห่างจากร้าน ~21.8 กม.</p><p class="seo-why">น้ำตกสูง เดินจากที่ทำการไม่ไกล · ทางเลือกฝั่งป่า ทางเหนือเข้าคุระบุรี</p></li>
+<li class="seo-it"><h3>น้ำตกโตนช่องฟ้า <span class="seo-en">Ton Chong Fa Waterfall</span></h3><p class="seo-meta">ธรรมชาติ · ห่างจากร้าน ~13.6 กม.</p><p class="seo-why">น้ำตกหลายชั้น มีน้ำเกือบทั้งปี ในเขตอุทยานเขาหลัก-ลำรู่</p></li>
+</ul>
+</div>
   </div>
 </section>
 
@@ -890,8 +928,7 @@ langBtn.addEventListener('click',()=>{
     // รูป: ใช้รูปจาก Google (ชื่อ photo ฝังไว้ล่วงหน้า → โหลด <img> ตรง ไม่ต้อง fetch = ไม่ติด CORS)
     // ถ้าไม่มี key/ชื่อรูป → ใช้รูปในโฟลเดอร์ images/places/ · ถ้าไม่มีอีก → ไม่โชว์รูป
     function photoOf(p){
-      var key=window.SS_GMAPS_KEY;
-      if(key && p.gphoto) return {src:'https://places.googleapis.com/v1/'+p.gphoto+'/media?maxWidthPx=900&key='+key, credit:'ภาพ: Google'};
+      if(p.gphoto) return {src:'/api/photo?name='+encodeURIComponent(p.gphoto), credit:'ภาพ: Google'};
       if(p.slug) return {src:'images/places/'+p.slug+'.jpg', credit:p.credit||''};
       return {src:'', credit:''};
     }
