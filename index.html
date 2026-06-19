@@ -887,23 +887,13 @@ langBtn.addEventListener('click',()=>{
     var PLACES=window.SS.places, ROUTES=window.SS.routes, CAFE=window.SS.cafe, COL=window.SS.col, LBL=window.SS.lbl;
     var CONFC={high:'#5d6b4a',medium:'#c79a52',low:'#c0392b'};
     var en=function(){return document.documentElement.lang==='en';};
-    // ดึงรูปจาก Google Places API (New) ตามชื่อ+พิกัด · cache ใน localStorage กัน billing · คืน url หรือ null
-    function gPhoto(p){
-      var key=window.SS_GMAPS_KEY; if(!key) return Promise.resolve(null);
-      var ck='ssph:'+p.slug;
-      try{var c=localStorage.getItem(ck); if(c!==null) return Promise.resolve(c==='_'?null:c);}catch(e){}
-      return fetch('https://places.googleapis.com/v1/places:searchText',{
-        method:'POST',
-        headers:{'Content-Type':'application/json','X-Goog-Api-Key':key,'X-Goog-FieldMask':'places.photos'},
-        body:JSON.stringify({textQuery:(p.en||'')+' '+p.n+' พังงา',
-          locationBias:{circle:{center:{latitude:p.lat,longitude:p.lng},radius:1000}}})
-      }).then(function(r){return r.json();}).then(function(d){
-        var ph=d&&d.places&&d.places[0]&&d.places[0].photos&&d.places[0].photos[0];
-        if(!ph){try{localStorage.setItem(ck,'_');}catch(e){} return null;}
-        var url='https://places.googleapis.com/v1/'+ph.name+'/media?maxWidthPx=900&key='+key;
-        try{localStorage.setItem(ck,url);}catch(e){}
-        return url;
-      }).catch(function(){return null;});
+    // รูป: ใช้รูปจาก Google (ชื่อ photo ฝังไว้ล่วงหน้า → โหลด <img> ตรง ไม่ต้อง fetch = ไม่ติด CORS)
+    // ถ้าไม่มี key/ชื่อรูป → ใช้รูปในโฟลเดอร์ images/places/ · ถ้าไม่มีอีก → ไม่โชว์รูป
+    function photoOf(p){
+      var key=window.SS_GMAPS_KEY;
+      if(key && p.gphoto) return {src:'https://places.googleapis.com/v1/'+p.gphoto+'/media?maxWidthPx=900&key='+key, credit:'ภาพ: Google'};
+      if(p.slug) return {src:'images/places/'+p.slug+'.jpg', credit:p.credit||''};
+      return {src:'', credit:''};
     }
     var map=L.map('ex-map',{scrollWheelZoom:false}).setView(CAFE,14);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap'}).addTo(map);
@@ -929,24 +919,15 @@ langBtn.addEventListener('click',()=>{
         var E=en(), lbl=(LBL[p.cat]||[p.cat,p.cat]);
         var tier=p.tier==='A'?(E?'Near · old town':'ใกล้ · เมืองเก่า'):p.tier==='B'?(E?'Worth the trip':'ไกลแต่ห้ามพลาด'):(E?'Start':'จุดเริ่ม');
         var gmap='https://www.google.com/maps/dir/?api=1&origin='+CAFE[0]+','+CAFE[1]+'&destination='+p.lat+','+p.lng;
-        var img=p.slug?'<img class="ph" src="images/places/'+p.slug+'.jpg" loading="lazy" alt="" onerror="this.style.display=\'none\'">':'';
-        var cr=p.credit?'<div class="cr">'+p.credit+'</div>':'';
+        var pho=photoOf(p);
+        var img=pho.src?'<img class="ph" src="'+pho.src+'" loading="lazy" alt="" onerror="this.style.display=\'none\'">':'';
+        var cr=pho.credit?'<div class="cr">'+pho.credit+'</div>':'';
         var html='<div class="lp">'+img+cr+'<b>'+(E?p.en:p.n)+'</b><br><span class="en">'+(E?p.n:p.en)+'</span>'
           +'<div class="meta"><span style="color:'+c+'">●</span> '+(E?lbl[1]:lbl[0])+' · <span style="color:'+CONFC[p.conf]+'">●</span> '+tier+' · ~'+p.km+' km</div>'
           +'<div class="why">'+p.why+'</div>';
         if(!home) html+='<button class="rbtn" onclick="ssRoute('+i+')">'+(E?'🧭 Get route from cafe':'🧭 คำนวณเส้นทางจากร้าน')+'</button> '
           +'<a class="rbtn" href="'+gmap+'" target="_blank" rel="noopener">Google Maps ↗</a>';
         m.setPopupContent(html);
-        // ถ้ามี Google key → ดึงรูปจาก Google มาแทน (ถูกลิขสิทธิ์ + เครดิต Google)
-        if(window.SS_GMAPS_KEY){ gPhoto(p).then(function(url){
-          if(!url) return; var pop=m.getPopup(), elc=pop&&pop.getElement(); if(!elc) return;
-          var lp=elc.querySelector('.lp'); if(!lp) return;
-          var im=lp.querySelector('.ph');
-          if(!im){ im=document.createElement('img'); im.className='ph'; im.alt=''; lp.insertBefore(im,lp.firstChild); }
-          im.src=url; im.style.display='block';
-          var cr=lp.querySelector('.cr'); if(!cr){ cr=document.createElement('div'); cr.className='cr'; lp.insertBefore(cr, im.nextSibling); }
-          cr.textContent='ภาพ: Google Maps'; pop.update();
-        }); }
       });
       m.bindPopup('…',{maxWidth:270});
       markers.push(m);
