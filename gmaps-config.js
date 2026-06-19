@@ -11,4 +11,4 @@
  *
  * ถ้าปล่อยว่าง = เว็บจะใช้รูปในโฟลเดอร์ images/places/ ตามเดิม (ไม่พัง)
  */
-window.SS_GMAPS_KEY = "";
+window.SS_GMAPS_KEY = "AIzaSyBTOmh9qLHU0U2iMFNWugMf510YiK-WE3I";
