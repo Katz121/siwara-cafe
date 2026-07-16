@@ -9,6 +9,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Cormorant+Garamond:ital@0;1&family=Sarabun:wght@300;400;500;600&display=swap" rel="stylesheet">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-824933198"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-824933198');</script>
 <style>
 :root{--wood-dark:#2b1a10;--wood:#4a2f1c;--wood-mid:#6b4226;--wood-light:#8a5a34;--cream:#f4ead8;--cream-soft:#efe2cd;--paper:#e7d6ba;--gold:#c79a52;--gold-soft:#d9b878;--ink:#33251a;--leaf:#5d6b4a}
 *{margin:0;padding:0;box-sizing:border-box}
@@ -218,14 +221,14 @@ footer .fsmall{font-size:.78rem;opacity:.55;margin-top:14px}
 </div>
 
 <script>
-// Conversion tracking hook — ยิง event เมื่อคลิกปุ่มสั่ง (โทร/ทัก/นำทาง)
-// ใส่ Google Ads conversion ID/label ตอนตั้ง conversion แล้วเปลี่ยน gtag ให้ตรง
+// Google Ads conversion — คลิกโทร/ไลน์/เพจ = 1 lead (ติดต่อสั่ง)
+var LEAD=['call','line','message'];
 document.querySelectorAll('[data-conv]').forEach(function(el){
   el.addEventListener('click',function(){
     var t=el.getAttribute('data-conv');
-    if(window.gtag){gtag('event','cake_'+t,{event_category:'lead',event_label:t});}
-    // TODO: gtag('event','conversion',{send_to:'AW-XXXXXX- / label'});
-    console.log('lead:',t);
+    if(window.gtag && LEAD.indexOf(t)>-1){
+      gtag('event','conversion',{send_to:'AW-824933198/SURdCLvnxtEcEM72rYkD'});
+    }
   });
 });
 </script>
