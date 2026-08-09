@@ -1,0 +1,22 @@
+
+=== c01_botanical_ink.png (1024x1536) ===
+Traceback (most recent call last):
+  File "D:\Siwaracafeweb\merch\_run_codex.py", line 120, in <module>
+    run(name, size, brief)
+  File "D:\Siwaracafeweb\merch\_run_codex.py", line 109, in run
+    print(tail, flush=True)
+  File "C:\Users\siwat\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 0-30: character maps to <undefined>
+
+=== c02_engraving_street.png (1024x1536) ===
+สร้างและบันทึกไฟล์เรียบร้อยแล้วที่:
+
+`D:\Siwaracafeweb\merch\codex\c02_engraving_street.png`
+
+ตรวจแล้วไฟล์เป็น PNG ขนาด `1024x1536` bytes `4,585,097` และคัดลอกจาก output ของ `image_gen` โดยเก็บต้นฉบับไว้ด้วยครับ.
+
+exists=True
+
+=== c03_sticker_sheet.png (1024x1024) ===

@@ -1,0 +1,353 @@
+<!DOCTYPE html><html lang="th"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Sarabun:wght@300;400;600;700&family=Noto+Sans+Thai:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>html,body{margin:0;padding:0;background:#f4ece0;overflow:hidden}
+svg{display:block;width:1080px;height:1350px}</style></head><body>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+<defs>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Chonburi&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;700&display=swap');
+        .text-main { font-family: 'Chonburi', serif; fill: #241d19; text-anchor: middle; }
+        .text-sub { font-family: 'Noto Sans Thai', sans-serif; fill: #241d19; text-anchor: middle; letter-spacing: 0.5px; }
+        .text-eng { font-family: 'Noto Sans Thai', sans-serif; font-weight: 700; fill: #241d19; text-anchor: middle; letter-spacing: 2px; }
+        .ink { fill: none; stroke: #241d19; stroke-linecap: round; stroke-linejoin: round; }
+        .thick { stroke-width: 3.2; }
+        .med { stroke-width: 2.2; }
+        .thin { stroke-width: 1.5; }
+        .brick { stroke: #b4451f; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+        .teak { stroke: #8a5a2b; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+        .bg { fill: #f4ece0; }
+    </style>
+    <filter id="handDrawn" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" result="noise" />
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+</defs>
+
+<rect width="1080" height="1350" class="bg" />
+
+<!-- TITLE -->
+<text x="540" y="160" font-size="80" class="text-main">ศิวรา คาเฟ่</text>
+<text x="540" y="230" font-size="24" class="text-sub">บ้านไม้สักเกือบ 100 ปี ในเมืองเก่าตะกั่วป่า</text>
+
+<g filter="url(#handDrawn)">
+    <!-- BACKGROUND HILLS -->
+    <path d="M 80,680 Q 250,580 400,640 T 700,590 T 1000,670" class="ink thin"/>
+    <path d="M 80,700 Q 280,620 450,670 T 800,630 T 1000,700" class="ink thin"/>
+    <path d="M 120,720 Q 300,660 500,710 T 900,670 T 1000,730" class="ink thin"/>
+    <path d="M 100,740 Q 350,690 550,730 T 900,700 T 1000,750" class="ink thin"/>
+    <path d="M 80,760 Q 400,720 600,760 T 950,730 T 1000,780" class="ink thin"/>
+    
+    <!-- BIG TREE ON THE RIGHT -->
+    <path d="M 970,1100 C 970,950 980,850 975,700" class="ink thick"/>
+    <path d="M 1000,1100 C 990,950 1005,850 995,700" class="ink thick"/>
+    <path d="M 975,850 C 940,810 930,760 920,720" class="ink med"/>
+    <path d="M 995,800 C 1020,770 1010,720 1015,670" class="ink med"/>
+    <path d="M 880,700 C 830,620 900,530 950,550 C 1020,490 1080,560 1030,620 C 1080,680 1040,770 990,750 C 920,810 850,750 880,700" class="ink med"/>
+    <path d="M 890,680 C 850,620 920,550 950,570" class="ink thin"/>
+    <path d="M 970,550 C 1000,510 1050,560 1020,600" class="ink thin"/>
+    <path d="M 1020,610 C 1050,650 1030,730 990,720" class="ink thin"/>
+    
+    <!-- TREE HATCHING -->
+    <path d="M 900,650 L 910,640" class="ink thin"/>
+    <path d="M 910,660 L 920,650" class="ink thin"/>
+    <path d="M 920,680 L 930,670" class="ink thin"/>
+    <path d="M 900,600 L 915,590" class="ink thin"/>
+    <path d="M 930,580 L 945,570" class="ink thin"/>
+    <path d="M 980,560 L 990,550" class="ink thin"/>
+
+    <!-- HOUSE MAIN OUTLINES -->
+    <!-- Center 2nd Floor Walls -->
+    <path d="M 370,570 L 370,820" class="ink thick"/>
+    <path d="M 710,570 L 710,820" class="ink thick"/>
+    <path d="M 370,820 L 710,820" class="ink thick"/>
+
+    <!-- Left Wing Walls -->
+    <path d="M 150,760 L 150,1100" class="ink thick"/>
+    <path d="M 370,820 L 370,1100" class="ink thick"/>
+
+    <!-- Right Wing Walls -->
+    <path d="M 710,820 L 710,1100" class="ink thick"/>
+    <path d="M 930,760 L 930,1100" class="ink thick"/>
+    <path d="M 710,820 L 930,820" class="ink thick"/>
+
+    <!-- MAIN FLOOR LINE -->
+    <path d="M 100,1100 L 980,1100" class="ink thick"/>
+    <path d="M 100,1105 L 980,1105" class="ink med"/>
+
+    <!-- LEFT WING ROOF -->
+    <path d="M 130,760 L 370,610" class="ink thick"/>
+    <path d="M 130,775 L 370,625" class="ink med"/>
+    <!-- Right wing Roof -->
+    <path d="M 950,760 L 710,610" class="ink thick"/>
+    <path d="M 950,775 L 710,625" class="ink med"/>
+
+    <!-- CENTER GABLE -->
+    <path d="M 320,580 L 540,360 L 760,580" class="ink thick"/>
+    <path d="M 320,595 L 540,375 L 760,595" class="ink thick"/>
+    <!-- Lower gable -->
+    <path d="M 350,610 L 540,410 L 730,610" class="ink thick"/>
+    <path d="M 350,625 L 540,425 L 730,625" class="ink med"/>
+    
+    <!-- LOUVERS (ช่องลมระแนงไม้) -->
+    <!-- Horizontal base for louvers -->
+    <path d="M 400,560 L 680,560" class="ink med"/>
+    <!-- Vertical slats -->
+    <path d="M 420,560 L 420,535" class="teak med"/>
+    <path d="M 440,560 L 440,515" class="teak med"/>
+    <path d="M 460,560 L 460,495" class="teak med"/>
+    <path d="M 480,560 L 480,475" class="teak med"/>
+    <path d="M 500,560 L 500,455" class="teak med"/>
+    <path d="M 520,560 L 520,435" class="teak med"/>
+    <path d="M 540,560 L 540,420" class="teak med"/>
+    <path d="M 560,560 L 560,435" class="teak med"/>
+    <path d="M 580,560 L 580,455" class="teak med"/>
+    <path d="M 600,560 L 600,475" class="teak med"/>
+    <path d="M 620,560 L 620,495" class="teak med"/>
+    <path d="M 640,560 L 640,515" class="teak med"/>
+    <path d="M 660,560 L 660,535" class="teak med"/>
+
+    <!-- CENTER SIDING (ผนังไม้ตีนอนซ้อนเกล็ด) -->
+    <path d="M 370,640 L 710,640" class="teak thin"/>
+    <path d="M 370,660 L 710,660" class="teak thin"/>
+    <path d="M 370,680 L 710,680" class="teak thin"/>
+    <path d="M 370,700 L 710,700" class="teak thin"/>
+    <path d="M 370,720 L 710,720" class="teak thin"/>
+    <path d="M 370,740 L 710,740" class="teak thin"/>
+    <path d="M 370,760 L 710,760" class="teak thin"/>
+    <path d="M 370,780 L 710,780" class="teak thin"/>
+    <path d="M 370,800 L 710,800" class="teak thin"/>
+
+    <!-- RIGHT WING SIDING -->
+    <path d="M 710,840 L 930,840" class="teak thin"/>
+    <path d="M 710,860 L 930,860" class="teak thin"/>
+    <path d="M 710,880 L 930,880" class="teak thin"/>
+    <path d="M 710,900 L 750,900 M 890,900 L 930,900" class="teak thin"/>
+    <path d="M 710,920 L 750,920 M 890,920 L 930,920" class="teak thin"/>
+    <path d="M 710,940 L 750,940 M 890,940 L 930,940" class="teak thin"/>
+    <path d="M 710,960 L 750,960 M 890,960 L 930,960" class="teak thin"/>
+    <path d="M 710,980 L 750,980 M 890,980 L 930,980" class="teak thin"/>
+    <path d="M 710,1000 L 750,1000 M 890,1000 L 930,1000" class="teak thin"/>
+    <path d="M 710,1020 L 750,1020 M 890,1020 L 930,1020" class="teak thin"/>
+    <path d="M 710,1040 L 750,1040 M 890,1040 L 930,1040" class="teak thin"/>
+    <path d="M 710,1060 L 750,1060 M 890,1060 L 930,1060" class="teak thin"/>
+    <path d="M 710,1080 L 750,1080 M 890,1080 L 930,1080" class="teak thin"/>
+
+    <!-- LEFT WING TERRACE -->
+    <!-- Open area, so we see back wall siding -->
+    <path d="M 170,840 L 370,840" class="teak thin"/>
+    <path d="M 170,860 L 370,860" class="teak thin"/>
+    <path d="M 170,880 L 370,880" class="teak thin"/>
+    <path d="M 170,900 L 370,900" class="teak thin"/>
+    <path d="M 170,920 L 370,920" class="teak thin"/>
+    <path d="M 170,940 L 370,940" class="teak thin"/>
+    <!-- Pillars -->
+    <path d="M 170,750 L 170,1100" class="ink med"/>
+    <path d="M 180,740 L 180,1100" class="ink med"/>
+    <path d="M 270,680 L 270,1100" class="ink med"/>
+    <path d="M 280,670 L 280,1100" class="ink med"/>
+    <!-- Railing -->
+    <path d="M 180,950 L 370,950" class="ink med"/>
+    <path d="M 180,970 L 370,970" class="ink med"/>
+    <!-- Balusters -->
+    <path d="M 200,970 L 200,1100" class="ink thin"/>
+    <path d="M 220,970 L 220,1100" class="ink thin"/>
+    <path d="M 240,970 L 240,1100" class="ink thin"/>
+    <path d="M 260,970 L 260,1100" class="ink thin"/>
+    <path d="M 300,970 L 300,1100" class="ink thin"/>
+    <path d="M 320,970 L 320,1100" class="ink thin"/>
+    <path d="M 340,970 L 340,1100" class="ink thin"/>
+    <path d="M 360,970 L 360,1100" class="ink thin"/>
+
+    <!-- 2ND FLOOR WINDOWS (3x2 Panes) -->
+    <!-- Window 1 -->
+    <path d="M 400,630 L 460,630 L 460,770 L 400,770 Z" class="ink med"/>
+    <path d="M 430,630 L 430,770" class="ink thin"/>
+    <path d="M 400,675 L 460,675" class="ink thin"/>
+    <path d="M 400,725 L 460,725" class="ink thin"/>
+    <path d="M 390,620 L 470,620" class="ink med"/>
+    <!-- Window 2 -->
+    <path d="M 510,630 L 570,630 L 570,770 L 510,770 Z" class="ink med"/>
+    <path d="M 540,630 L 540,770" class="ink thin"/>
+    <path d="M 510,675 L 570,675" class="ink thin"/>
+    <path d="M 510,725 L 570,725" class="ink thin"/>
+    <path d="M 500,620 L 580,620" class="ink med"/>
+    <!-- Window 3 -->
+    <path d="M 620,630 L 680,630 L 680,770 L 620,770 Z" class="ink med"/>
+    <path d="M 650,630 L 650,770" class="ink thin"/>
+    <path d="M 620,675 L 680,675" class="ink thin"/>
+    <path d="M 620,725 L 680,725" class="ink thin"/>
+    <path d="M 610,620 L 690,620" class="ink med"/>
+
+    <!-- CENTER 1ST FLOOR FOLDING DOORS -->
+    <path d="M 390,850 L 690,850 L 690,1100 L 390,1100 Z" class="ink med"/>
+    <!-- Folding panels -->
+    <path d="M 440,850 L 440,1100" class="ink med"/>
+    <path d="M 490,850 L 490,1100" class="ink med"/>
+    <path d="M 540,850 L 540,1100" class="ink med"/>
+    <path d="M 590,850 L 590,1100" class="ink med"/>
+    <path d="M 640,850 L 640,1100" class="ink med"/>
+    <!-- Transom details -->
+    <path d="M 390,900 L 690,900" class="ink thin"/>
+    <path d="M 390,1050 L 690,1050" class="ink thin"/>
+    <!-- Base details -->
+    <path d="M 400,1060 L 430,1060 L 430,1090 L 400,1090 Z" class="ink thin"/>
+    <path d="M 450,1060 L 480,1060 L 480,1090 L 450,1090 Z" class="ink thin"/>
+    <path d="M 500,1060 L 530,1060 L 530,1090 L 500,1090 Z" class="ink thin"/>
+    <path d="M 550,1060 L 580,1060 L 580,1090 L 550,1090 Z" class="ink thin"/>
+    <path d="M 600,1060 L 630,1060 L 630,1090 L 600,1090 Z" class="ink thin"/>
+    <path d="M 650,1060 L 680,1060 L 680,1090 L 650,1090 Z" class="ink thin"/>
+
+    <!-- RIGHT WING DOUBLE DOORS -->
+    <path d="M 750,880 L 890,880 L 890,1100 L 750,1100 Z" class="ink med"/>
+    <path d="M 820,880 L 820,1100" class="ink med"/>
+    <!-- Door panels left -->
+    <path d="M 765,900 L 805,900 L 805,960 L 765,960 Z" class="ink thin"/>
+    <path d="M 765,980 L 805,980 L 805,1080 L 765,1080 Z" class="ink thin"/>
+    <!-- Door panels right -->
+    <path d="M 835,900 L 875,900 L 875,960 L 835,960 Z" class="ink thin"/>
+    <path d="M 835,980 L 875,980 L 875,1080 L 835,1080 Z" class="ink thin"/>
+    <!-- Door knobs -->
+    <circle cx="810" cy="980" r="3" class="ink med"/>
+    <circle cx="830" cy="980" r="3" class="ink med"/>
+
+    <!-- WALL LAMPS (โคมไฟติดผนัง) -->
+    <!-- Lamp 1: Center left -->
+    <path d="M 370,890 L 360,885" class="ink med"/>
+    <path d="M 350,880 Q 360,875 370,885" class="ink med"/>
+    <circle cx="360" cy="888" r="2" class="ink med"/>
+    <!-- Lamp 2: Center right -->
+    <path d="M 710,890 L 720,885" class="ink med"/>
+    <path d="M 730,880 Q 720,875 710,885" class="ink med"/>
+    <circle cx="720" cy="888" r="2" class="ink med"/>
+    <!-- Lamp 3: Right door left -->
+    <path d="M 730,930 L 740,925" class="ink med"/>
+    <path d="M 750,920 Q 740,915 730,925" class="ink med"/>
+    <circle cx="740" cy="928" r="2" class="ink med"/>
+    <!-- Lamp 4: Right door right -->
+    <path d="M 910,930 L 900,925" class="ink med"/>
+    <path d="M 890,920 Q 900,915 910,925" class="ink med"/>
+    <circle cx="900" cy="928" r="2" class="ink med"/>
+
+    <!-- ROOF TILES (TERRA COTTA / BRICK HATCHING) -->
+    <!-- Center Top Roof Tiles -->
+    <path d="M 370,540 L 540,370 L 710,540" class="brick med" opacity="0.8"/>
+    <path d="M 390,520 L 540,370" class="brick thin" opacity="0.6"/>
+    <path d="M 410,500 L 540,370" class="brick thin" opacity="0.6"/>
+    <path d="M 430,480 L 540,370" class="brick thin" opacity="0.6"/>
+    <path d="M 450,460 L 540,370" class="brick thin" opacity="0.6"/>
+    <path d="M 470,440 L 540,370" class="brick thin" opacity="0.6"/>
+    <path d="M 490,420 L 540,370" class="brick thin" opacity="0.6"/>
+    
+    <path d="M 690,520 L 540,370" class="brick thin" opacity="0.6"/>
+    <path d="M 670,500 L 540,370" class="brick thin" opacity="0.6"/>
+    <path d="M 650,480 L 540,370" class="brick thin" opacity="0.6"/>
+    <path d="M 630,460 L 540,370" class="brick thin" opacity="0.6"/>
+    <path d="M 610,440 L 540,370" class="brick thin" opacity="0.6"/>
+    <path d="M 590,420 L 540,370" class="brick thin" opacity="0.6"/>
+
+    <!-- Center Lower Roof Tiles -->
+    <path d="M 390,580 L 540,430 L 690,580" class="brick med" opacity="0.8"/>
+    <path d="M 410,580 L 540,450 L 670,580" class="brick thin" opacity="0.6"/>
+    <path d="M 430,580 L 540,470 L 650,580" class="brick thin" opacity="0.6"/>
+    <path d="M 450,580 L 540,490 L 630,580" class="brick thin" opacity="0.6"/>
+    <path d="M 470,580 L 540,510 L 610,580" class="brick thin" opacity="0.6"/>
+    <path d="M 490,580 L 540,530 L 590,580" class="brick thin" opacity="0.6"/>
+    <path d="M 510,580 L 540,550 L 570,580" class="brick thin" opacity="0.6"/>
+
+    <!-- Left Wing Roof Tiles -->
+    <path d="M 170,720 L 370,590" class="brick thin" opacity="0.7"/>
+    <path d="M 190,720 L 370,600" class="brick thin" opacity="0.7"/>
+    <path d="M 210,720 L 370,610" class="brick thin" opacity="0.7"/>
+    <path d="M 230,720 L 370,620" class="brick thin" opacity="0.7"/>
+    <path d="M 250,720 L 370,640" class="brick thin" opacity="0.7"/>
+    <path d="M 270,720 L 370,650" class="brick thin" opacity="0.7"/>
+    <path d="M 290,720 L 370,660" class="brick thin" opacity="0.7"/>
+    <path d="M 310,720 L 370,670" class="brick thin" opacity="0.7"/>
+    <path d="M 330,720 L 370,690" class="brick thin" opacity="0.7"/>
+
+    <!-- Right Wing Roof Tiles -->
+    <path d="M 910,720 L 710,590" class="brick thin" opacity="0.7"/>
+    <path d="M 890,720 L 710,600" class="brick thin" opacity="0.7"/>
+    <path d="M 870,720 L 710,610" class="brick thin" opacity="0.7"/>
+    <path d="M 850,720 L 710,620" class="brick thin" opacity="0.7"/>
+    <path d="M 830,720 L 710,640" class="brick thin" opacity="0.7"/>
+    <path d="M 810,720 L 710,650" class="brick thin" opacity="0.7"/>
+    <path d="M 790,720 L 710,660" class="brick thin" opacity="0.7"/>
+    <path d="M 770,720 L 710,670" class="brick thin" opacity="0.7"/>
+    <path d="M 750,720 L 710,690" class="brick thin" opacity="0.7"/>
+
+    <!-- FOREGROUND SHRUBS & BUSHES (พุ่มไม้กลมเรียงหน้าบ้าน) -->
+    <path d="M 120,1100 C 120,1050 180,1050 180,1100" class="ink med"/>
+    <path d="M 160,1100 C 160,1030 240,1030 240,1100" class="ink med"/>
+    <path d="M 220,1100 C 220,1040 300,1040 300,1100" class="ink med"/>
+    <path d="M 280,1100 C 280,1060 350,1060 350,1100" class="ink med"/>
+    
+    <path d="M 380,1100 C 380,1070 430,1070 430,1100" class="ink med"/>
+    <path d="M 420,1100 C 420,1060 470,1060 470,1100" class="ink med"/>
+    <path d="M 460,1100 C 460,1050 510,1050 510,1100" class="ink med"/>
+    <path d="M 500,1100 C 500,1060 560,1060 560,1100" class="ink med"/>
+    <path d="M 540,1100 C 540,1050 610,1050 610,1100" class="ink med"/>
+    <path d="M 590,1100 C 590,1070 650,1070 650,1100" class="ink med"/>
+    <path d="M 640,1100 C 640,1060 690,1060 690,1100" class="ink med"/>
+    
+    <path d="M 720,1100 C 720,1060 780,1060 780,1100" class="ink med"/>
+    <path d="M 760,1100 C 760,1040 840,1040 840,1100" class="ink med"/>
+    <path d="M 820,1100 C 820,1050 890,1050 890,1100" class="ink med"/>
+    <path d="M 870,1100 C 870,1060 940,1060 940,1100" class="ink med"/>
+
+    <!-- Shrub inner hatching -->
+    <path d="M 140,1080 L 150,1090 M 160,1070 L 170,1080" class="ink thin"/>
+    <path d="M 200,1060 L 210,1070 M 220,1050 L 230,1060" class="ink thin"/>
+    <path d="M 260,1060 L 270,1070 M 280,1050 L 290,1060" class="ink thin"/>
+    <path d="M 320,1080 L 330,1090 M 340,1070 L 350,1080" class="ink thin"/>
+    
+    <path d="M 400,1080 L 410,1090" class="ink thin"/>
+    <path d="M 440,1080 L 450,1090" class="ink thin"/>
+    <path d="M 480,1070 L 490,1080" class="ink thin"/>
+    <path d="M 530,1080 L 540,1090" class="ink thin"/>
+    <path d="M 580,1070 L 590,1080" class="ink thin"/>
+    <path d="M 620,1080 L 630,1090" class="ink thin"/>
+    <path d="M 660,1080 L 670,1090" class="ink thin"/>
+    
+    <path d="M 740,1080 L 750,1090" class="ink thin"/>
+    <path d="M 790,1060 L 800,1070" class="ink thin"/>
+    <path d="M 850,1070 L 860,1080" class="ink thin"/>
+    <path d="M 900,1080 L 910,1090" class="ink thin"/>
+
+    <!-- CIRCULAR LAWN (สนามหญ้าวงกลม) -->
+    <!-- Front curve of the lawn -->
+    <path d="M 300,1110 Q 540,1160 780,1110" class="ink med" opacity="0.8"/>
+    <!-- Grass blades hatching -->
+    <path d="M 400,1120 L 405,1110 M 420,1125 L 425,1115 M 440,1130 L 445,1120" class="ink thin"/>
+    <path d="M 480,1135 L 485,1125 M 500,1140 L 505,1130 M 540,1145 L 545,1135" class="ink thin"/>
+    <path d="M 580,1140 L 585,1130 M 600,1135 L 605,1125 M 640,1130 L 645,1120" class="ink thin"/>
+    <path d="M 680,1125 L 685,1115 M 700,1120 L 705,1110" class="ink thin"/>
+
+    <!-- GRAVEL (กรวด - stippling) -->
+    <!-- Dozens of small dots for gravel texture -->
+    <path d="
+        M 150,1120 L 152,1120 M 180,1115 L 182,1115 M 220,1130 L 222,1130 M 260,1140 L 262,1140 
+        M 290,1125 L 292,1125 M 320,1150 L 322,1150 M 350,1135 L 352,1135 M 380,1160 L 382,1160 
+        M 420,1150 L 422,1150 M 450,1170 L 452,1170 M 480,1160 L 482,1160 M 520,1180 L 522,1180 
+        M 560,1175 L 562,1175 M 600,1165 L 602,1165 M 630,1155 L 632,1155 M 670,1145 L 672,1145
+        M 720,1160 L 722,1160 M 750,1140 L 752,1140 M 780,1130 L 782,1130 M 820,1145 L 822,1145
+        M 860,1125 L 862,1125 M 900,1135 L 902,1135 M 940,1120 L 942,1120 M 970,1130 L 972,1130
+        " class="ink thick"/>
+        
+    <path d="
+        M 160,1140 L 162,1140 M 190,1135 L 192,1135 M 230,1150 L 232,1150 M 270,1160 L 272,1160 
+        M 310,1145 L 312,1145 M 340,1170 L 342,1170 M 370,1155 L 372,1155 M 400,1180 L 402,1180 
+        M 440,1190 L 442,1190 M 470,1180 L 472,1180 M 510,1195 L 512,1195 M 550,1190 L 552,1190 
+        M 590,1185 L 592,1185 M 620,1175 L 622,1175 M 660,1180 L 662,1180 M 700,1170 L 702,1170
+        M 740,1155 L 742,1155 M 770,1165 L 772,1165 M 810,1150 L 812,1150 M 850,1160 L 852,1160
+        M 890,1140 L 892,1140 M 930,1150 L 932,1150 M 960,1145 L 962,1145 M 980,1150 L 982,1150
+        " class="ink med"/>
+</g>
+
+<!-- BOTTOM TEXT -->
+<text x="540" y="1280" font-size="28" class="text-eng">SIWARA CAFE · EST. 2475</text>
+
+</svg>
+
+</body></html>

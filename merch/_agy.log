@@ -1,0 +1,20 @@
+--- start a01_house_portrait.svg
+--- start a02_sticker_sheet.svg
+--- start a03_tee_emblem.svg
+--- done a03_tee_emblem.svg exit=0 exists=True size=32385
+--- start a04_oldtown_street.svg
+--- done a01_house_portrait.svg exit=0 exists=True size=18844
+--- start a05_interior_scene.svg
+--- done a02_sticker_sheet.svg exit=1 exists=False size=0
+
+--- start a06_botanical_frame.svg
+--- done a04_oldtown_street.svg exit=0 exists=True size=85013
+--- done a05_interior_scene.svg exit=0 exists=True size=243729
+--- done a06_botanical_frame.svg exit=1 exists=False size=0
+
+
+=== results ===
+18 KB a01_house_portrait.svg
+31 KB a03_tee_emblem.svg
+83 KB a04_oldtown_street.svg
+238 KB a05_interior_scene.svg

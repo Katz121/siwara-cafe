@@ -1,0 +1,434 @@
+<meta charset="utf-8">
+<title>เมืองเก่าตะกั่วป่า · tee strip</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Sarabun:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  html,body{margin:0;padding:0;width:1080px;height:1350px;overflow:hidden;background:#f4ece0;}
+  svg{display:block;width:1080px;height:1350px;}
+</style>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <filter id="wob1" x="-6%" y="-6%" width="112%" height="112%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="2" seed="23" result="n1"/>
+      <feDisplacementMap in="SourceGraphic" in2="n1" scale="2.7" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="wob2" x="-6%" y="-6%" width="112%" height="112%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.017" numOctaves="2" seed="5" result="n2"/>
+      <feDisplacementMap in="SourceGraphic" in2="n2" scale="3.0" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="wob3" x="-8%" y="-8%" width="116%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.0105" numOctaves="3" seed="61" result="n3"/>
+      <feDisplacementMap in="SourceGraphic" in2="n3" scale="3.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+
+    <g id="strip-lines" fill="none" stroke="#241d19" stroke-linecap="round" stroke-linejoin="round">
+      <g id="S-build" filter="url(#wob2)"></g>
+      <g id="S-teak" filter="url(#wob3)"></g>
+      <g id="S-pole" filter="url(#wob1)"></g>
+      <g id="S-rule" filter="url(#wob1)"></g>
+    </g>
+
+    <g id="strip-type" fill="#241d19">
+      <text x="540" y="762" font-family="Chonburi" font-size="72" letter-spacing="2"
+            text-anchor="middle" transform="rotate(-0.5 540 750)">เมืองเก่าตะกั่วป่า</text>
+      <text x="540" y="822" font-family="Sarabun" font-weight="700" font-size="36"
+            letter-spacing="15" text-anchor="middle" transform="rotate(0.4 540 812)">SIWARA CAFE</text>
+    </g>
+
+    <g id="tee-lines" fill="none" stroke="#241d19" stroke-linecap="round" stroke-linejoin="round">
+      <g id="L-tee" filter="url(#wob2)"></g>
+    </g>
+  </defs>
+
+  <rect x="0" y="0" width="1080" height="1350" fill="#f4ece0"/>
+  <g id="L-frame" filter="url(#wob1)" fill="none" stroke="#241d19"
+     stroke-linecap="round" stroke-linejoin="round"></g>
+
+  <use href="#strip-lines"/>
+  <use href="#strip-type"/>
+
+  <use href="#tee-lines" transform="translate(337,884)"/>
+  <use href="#strip-lines" transform="translate(539,1078) rotate(-0.8) scale(0.202) translate(-540,-478)"/>
+  <use href="#strip-type"  transform="translate(539,1078) rotate(-0.8) scale(0.202) translate(-540,-478)"/>
+</svg>
+
+<script>
+(function(){
+var SVG="http://www.w3.org/2000/svg";
+var INK="#241d19", BRK="#b4451f", CRM="#f4ece0";
+var seed=13572468;
+function rnd(){ seed=(seed*1103515245+12345)&0x7fffffff; return seed/0x7fffffff; }
+function rr(a,b){ return a+rnd()*(b-a); }
+function G(id){ return document.getElementById(id); }
+function el(g,tag,at){ var e=document.createElementNS(SVG,tag); for(var k in at) e.setAttribute(k,at[k]); g.appendChild(e); return e; }
+function fx(n){ return (Math.round(n*10)/10); }
+
+/* ---------- hand-drawn primitives ---------- */
+function line(g,x1,y1,x2,y2,sw,col,opt){
+  opt=opt||{};
+  var dx=x2-x1, dy=y2-y1, L=Math.hypot(dx,dy)||1;
+  var ux=dx/L, uy=dy/L, nx=-uy, ny=ux;
+  var over=(opt.over===undefined)?1:opt.over;
+  var passes=(opt.single)?1:2;
+  var bowMax=Math.min(2.2, 0.6+L*0.02);
+  for(var p=0;p<passes;p++){
+    var o1=over?rr(1.5,4.6):rr(0,1), o2=over?rr(1.8,5.0):rr(0,1);
+    var off=(p===0)?0:(rnd()<0.5?-1:1)*rr(0.8,1.8);
+    var sx=x1-ux*o1+nx*off+rr(-0.8,0.8), sy=y1-uy*o1+ny*off+rr(-0.8,0.8);
+    var ex=x2+ux*o2+nx*off+rr(-0.8,0.8), ey=y2+uy*o2+ny*off+rr(-0.8,0.8);
+    var b1=rr(-bowMax,bowMax), b2=rr(-bowMax,bowMax);
+    el(g,"path",{d:"M "+fx(sx)+","+fx(sy)+" C "+fx(sx+(ex-sx)/3+nx*b1)+","+fx(sy+(ey-sy)/3+ny*b1)+" "+
+      fx(sx+(ex-sx)*2/3+nx*b2)+","+fx(sy+(ey-sy)*2/3+ny*b2)+" "+fx(ex)+","+fx(ey),
+      "stroke-width":fx(sw*(p===0?rr(0.92,1.14):rr(0.66,0.86))), stroke:col||INK,
+      "stroke-opacity":(p===0?1:fx(rr(0.5,0.7)))});
+  }
+}
+function poly(g,pts,sw,col,closed){
+  for(var i=0;i<pts.length-1;i++) line(g,pts[i][0],pts[i][1],pts[i+1][0],pts[i+1][1],sw*rr(0.9,1.12),col);
+  if(closed) line(g,pts[pts.length-1][0],pts[pts.length-1][1],pts[0][0],pts[0][1],sw*rr(0.9,1.12),col);
+}
+function rectR(g,x,y,w,h,sw,col){ poly(g,[[x,y],[x+w,y],[x+w,y+h],[x,y+h]],sw,col,true); }
+function crPath(pts,closed){
+  var n=pts.length;
+  function at(i){ return closed? pts[(i+n)%n] : pts[Math.max(0,Math.min(n-1,i))]; }
+  var d="M "+fx(pts[0][0])+","+fx(pts[0][1]);
+  var last=closed?n:n-1;
+  for(var i=0;i<last;i++){
+    var p0=at(i-1),p1=at(i),p2=at(i+1),p3=at(i+2);
+    d+=" C "+fx(p1[0]+(p2[0]-p0[0])/6)+","+fx(p1[1]+(p2[1]-p0[1])/6)+" "+
+       fx(p2[0]-(p3[0]-p1[0])/6)+","+fx(p2[1]-(p3[1]-p1[1])/6)+" "+fx(p2[0])+","+fx(p2[1]);
+  }
+  if(closed) d+=" Z";
+  return d;
+}
+function jitPts(pts,a){ return pts.map(function(p){ return [p[0]+rr(-a,a), p[1]+rr(-a,a)]; }); }
+function fill(g,pts,col){ el(g,"path",{d:crPath(jitPts(pts,0.8),true),fill:col,stroke:"none"}); }
+function shape(g,pts,sw,col,fl){
+  if(fl) fill(g,pts,fl);
+  for(var p=0;p<2;p++)
+    el(g,"path",{d:crPath(jitPts(pts,p?1.6:0.9),true),fill:"none",
+      "stroke-width":fx(sw*(p?rr(0.66,0.86):rr(0.94,1.12))),stroke:col||INK,
+      "stroke-opacity":(p?fx(rr(0.5,0.7)):1)});
+}
+function curve(g,pts,sw,col,opt){
+  opt=opt||{};
+  for(var p=0;p<(opt.single?1:2);p++)
+    el(g,"path",{d:crPath(jitPts(pts,p?1.5:0.8),false),fill:"none",
+      "stroke-width":fx(sw*(p?rr(0.66,0.86):rr(0.92,1.14))),stroke:col||INK,
+      "stroke-opacity":(p?fx(rr(0.5,0.7)):1)});
+}
+function arcPts(cx,cy,rx,ry,a0,a1,steps,jit){
+  var o=[];
+  for(var i=0;i<=steps;i++){ var t=a0+(a1-a0)*i/steps; o.push([cx+rx*Math.cos(t)+rr(-jit,jit), cy+ry*Math.sin(t)+rr(-jit,jit)]); }
+  return o;
+}
+function ovalR(g,cx,cy,rx,ry,sw,col){
+  for(var p=0;p<2;p++){
+    var a0=rr(0,6.28), a1=a0+Math.PI*2+rr(0.10,0.34), k=rr(0.994,1.006);
+    el(g,"path",{d:crPath(arcPts(cx+rr(-1.2,1.2),cy+rr(-1.2,1.2),rx*k+(p?rr(-1.8,1.8):0),ry*rr(0.99,1.01)+(p?rr(-1.4,1.4):0),a0,a1,14,Math.min(1.6,ry*0.1)),false),
+      fill:"none","stroke-width":fx(sw*(p?rr(0.62,0.84):rr(0.94,1.14))),stroke:col||INK,
+      "stroke-opacity":(p?fx(rr(0.5,0.7)):1)});
+  }
+}
+function hatch(g,x1,y1,x2,y2,n,sx,sy,sw,col){
+  for(var i=0;i<n;i++){
+    var k=i+rr(-0.22,0.22);
+    var ax=x1+sx*k, ay=y1+sy*k, bx=x2+sx*k, by=y2+sy*k;
+    var t0=rr(0,0.16), t1=rr(0.82,1.04);
+    line(g,ax+(bx-ax)*t0,ay+(by-ay)*t0,ax+(bx-ax)*t1,ay+(by-ay)*t1,sw*rr(0.85,1.2),col,{single:(rnd()<0.6),over:0});
+  }
+}
+
+var B=G("S-build"), T=G("S-teak"), P=G("S-pole"), R=G("S-rule");
+
+/* ================= STREET LINE ================= */
+line(B,84,622,996,619,8.4,INK);
+line(B,92,634,988,631,3.4,INK);
+hatch(B,110,640,124,628,26,33,0,2.6,INK);
+
+/* ================= SHINO-PORTUGUESE SHOPHOUSE BAYS ================= */
+function shutterWindow(g,cx,y,w,h,slats){
+  var x=cx-w/2;
+  fill(g,[[x,y],[x+w,y],[x+w,y+h],[x,y+h]],CRM);
+  /* arched head */
+  curve(g,[[x-3,y+16],[x+w*0.18,y+1],[cx,y-6],[x+w*0.82,y+1],[x+w+3,y+16]],4.6,INK);
+  line(g,x,y+16,x-1,y+h,5.0,INK);
+  line(g,x+w,y+16,x+w+1,y+h,5.0,INK);
+  line(g,x-6,y+h,x+w+6,y+h+1,5.2,INK);
+  line(g,cx,y+4,cx,y+h-3,3.6,INK,{over:0});
+  for(var s=0;s<slats;s++){
+    var sy=y+18+s*((h-24)/(slats-1));
+    line(g,x+4,sy,cx-4,sy+rr(-1.2,1.2),2.7,INK,{single:1,over:0});
+    line(g,cx+4,sy+rr(-1.5,1.5),x+w-4,sy+rr(-1.2,1.2),2.7,INK,{single:1,over:0});
+  }
+  /* sill + brackets */
+  line(g,x-9,y+h+9,x+w+9,y+h+8,4.4,INK);
+  line(g,x+4,y+h+2,x+2,y+h+9,2.8,INK,{single:1,over:0});
+  line(g,x+w-4,y+h+2,x+w-2,y+h+9,2.8,INK,{single:1,over:0});
+}
+function stuccoVent(g,cx,y,w,h,kind){
+  var x=cx-w/2;
+  fill(g,[[x,y],[x+w,y],[x+w,y+h],[x,y+h]],CRM);
+  rectR(g,x,y,w,h,4.2,INK);
+  if(kind===0){ for(var i=1;i<4;i++) line(g,x+w*i/4,y+3,x+w*i/4+rr(-1.5,1.5),y+h-3,3.0,INK,{over:0}); }
+  else if(kind===1){ for(var i=1;i<3;i++) line(g,x+3,y+h*i/3,x+w-3,y+h*i/3+rr(-1,1),3.0,INK,{over:0});
+                     line(g,x+w/2,y+3,x+w/2,y+h-3,3.0,INK,{over:0}); }
+  else { line(g,x+3,y+3,x+w-3,y+h-3,3.0,INK,{over:0}); line(g,x+w-3,y+3,x+3,y+h-3,3.0,INK,{over:0});
+         ovalR(g,cx,y+h/2,w*0.18,h*0.3,2.7,INK); }
+}
+function bay(g,x0,x1,par,kind){
+  var w=x1-x0, cx=(x0+x1)/2;
+  /* wall mass */
+  fill(g,[[x0,par+2],[x1,par+2],[x1,622],[x0,622]],CRM);
+  /* party walls */
+  line(g,x0,622,x0-1,par+4,6.2,INK);
+  line(g,x1,622,x1+1,par+4,6.2,INK);
+  /* parapet crown, different silhouette per bay */
+  if(kind===0){
+    poly(g,[[x0-6,par+16],[x0-6,par],[x0+w*0.3,par],[x0+w*0.3,par-13],[x1-w*0.3,par-13],[x1-w*0.3,par],[x1+6,par],[x1+6,par+16]],5.6,INK);
+  }else if(kind===1){
+    curve(g,[[x0-6,par+16],[x0-4,par-2],[cx-w*0.22,par-16],[cx,par-21],[cx+w*0.22,par-16],[x1+4,par-2],[x1+6,par+16]],5.6,INK);
+  }else if(kind===2){
+    poly(g,[[x0-6,par+16],[x0-6,par-2],[cx-w*0.26,par-2],[cx,par-22],[cx+w*0.26,par-2],[x1+6,par-2],[x1+6,par+16]],5.6,INK);
+  }else{
+    poly(g,[[x0-6,par+16],[x0-6,par-4],[x0+w*0.22,par-4],[x0+w*0.22,par-15],[x0+w*0.38,par-15],[x0+w*0.38,par-24],
+            [x1-w*0.38,par-24],[x1-w*0.38,par-15],[x1-w*0.22,par-15],[x1-w*0.22,par-4],[x1+6,par-4],[x1+6,par+16]],5.6,INK);
+  }
+  /* cornice */
+  line(g,x0-9,par+30,x1+9,par+28,6.0,INK);
+  line(g,x0-6,par+40,x1+6,par+38,3.0,INK);
+  hatch(g,x0+4,par+38,x0+4,par+31,Math.round(w/16),16,0,2.5,INK);
+  /* stucco air vent above the windows */
+  stuccoVent(g,cx,par+50,Math.min(74,w*0.42),22,kind%3);
+  /* upper floor louvered casements */
+  shutterWindow(g,x0+w*0.29,330,56,96,6);
+  shutterWindow(g,x0+w*0.71,330,56,96,6);
+  /* pilaster between them */
+  line(g,cx,par+78,cx,452,3.4,INK);
+  line(g,cx+7,par+84,cx+7,450,2.6,INK,{single:1});
+  /* awning */
+  line(g,x0-2,454,x1+2,452,4.4,INK);
+  line(g,x0-10,478,x1+10,476,7.0,INK);
+  line(g,x0-2,454,x0-10,478,4.6,INK);
+  line(g,x1+2,452,x1+10,476,4.6,INK);
+  for(var a=0;a<Math.round(w/20);a++){
+    var ax=x0+8+a*20+rr(-2,2);
+    line(g,ax,454,ax-rr(5,9),476,2.8,BRK,{single:(rnd()<0.5),over:0});
+  }
+  hatch(g,x0+8,492,x0+8,480,Math.round(w/14),14,0,2.5,INK);
+  /* old shop signboard: worn marks only, no lettering */
+  fill(g,[[x0+18,496],[x1-18,496],[x1-18,528],[x0+18,528]],CRM);
+  rectR(g,x0+18,496,w-36,32,4.8,INK);
+  var marks=Math.max(3,Math.round(w/34));
+  for(var mm=0;mm<marks;mm++){
+    var mx=x0+34+mm*((w-70)/(marks-1));
+    line(g,mx,rr(505,508),mx+rr(-2,2),rr(518,521),rr(4.2,6.4),INK,{over:0});
+  }
+  ovalR(g,x0+24,512,3.2,3.2,2.6,INK);
+  ovalR(g,x1-24,512,3.2,3.2,2.6,INK);
+  /* shopfront: arched opening, folding wooden doors */
+  var ox=x0+16, ow=w-32;
+  fill(g,[[ox,540],[ox+ow,540],[ox+ow,622],[ox,622]],CRM);
+  curve(g,[[ox,556],[ox+ow*0.2,542],[ox+ow/2,536],[ox+ow*0.8,542],[ox+ow,556]],5.2,INK);
+  line(g,ox,556,ox-1,620,5.4,INK);
+  line(g,ox+ow,556,ox+ow+1,620,5.4,INK);
+  var leaves=Math.round(ow/17);
+  for(var d=1;d<leaves;d++){
+    var dx=ox+ow*d/leaves;
+    line(g,dx,rr(548,556),dx+rr(-2,2),rr(614,620),2.8,INK,{single:(rnd()<0.35),over:0});
+  }
+  line(g,ox-8,620,ox+ow+8,618,6.0,INK);
+  hatch(g,ox+6,566,ox+26,546,4,13,0,2.6,INK);
+  hatch(g,ox+ow-6,566,ox+ow-26,546,4,-13,0,2.6,INK);
+  /* base plinth */
+  line(g,x0-4,612,x0+16,611,3.0,INK,{single:1});
+  line(g,x1+4,612,x1-16,611,3.0,INK,{single:1});
+}
+bay(B,96,262,258,0);
+bay(B,262,428,246,1);
+bay(B,428,594,264,2);
+bay(B,594,752,252,3);
+
+/* ================= TEAK HOUSE OF THE CAFE, RIGHT END ================= */
+(function(){
+  var g=T, x0=752, x1=992, cx=872;
+  fill(g,[[x0-4,396],[cx,268],[x1+4,396],[x1,622],[x0,622]],CRM);
+  /* gable roof with tile bands */
+  line(g,748,398,872,266,8.8,INK);
+  line(g,776,396,872,294,4.4,INK);
+  line(g,996,398,873,266,8.8,INK);
+  line(g,968,396,873,294,4.4,INK);
+  for(var k=0;k<9;k++){
+    var t=0.08+k*0.104+rr(-0.02,0.02);
+    var ox=748+124*t, oy=398-132*t, ix=776+96*t, iy=396-102*t;
+    line(g,ox,oy,ix,iy,3.3*rr(0.85,1.2),BRK,{single:(rnd()<0.55),over:0});
+    line(g,1744-ox,oy+rr(-2,2),1744-ix,iy,3.3*rr(0.85,1.2),BRK,{single:(rnd()<0.55),over:0});
+  }
+  line(g,872,266,873,248,5.4,INK);
+  line(g,860,253,885,252,4.0,INK);
+  line(g,740,400,1004,398,8.6,INK);
+  line(g,748,411,996,409,3.3,INK);
+  line(g,760,398,759,411,3.0,INK);
+  line(g,872,398,873,411,3.0,INK);
+  line(g,984,398,985,411,3.0,INK);
+  /* gable louver */
+  curve(g,[[790,396],[830,352],[872,308],[914,352],[954,396]],4.6,INK);
+  rectR(g,842,326,60,44,4.8,INK);
+  for(var v=0;v<4;v++) line(g,rr(845,848),336+v*10,rr(896,900),336+v*10+rr(-1,1),3.2,INK,{single:1,over:0});
+  line(g,800,388,944,387,2.9,INK,{single:1});
+  hatch(g,806,392,824,364,5,10,0,2.6,INK);
+  hatch(g,938,392,920,364,5,-10,0,2.6,INK);
+  /* wall */
+  line(g,x0,412,x0-1,622,6.0,INK);
+  line(g,x1,412,x1+1,622,6.0,INK);
+  /* windows 3x2 */
+  function win(x,y,w,h){
+    fill(g,[[x,y],[x+w,y],[x+w,y+h],[x,y+h]],CRM);
+    rectR(g,x,y,w,h,4.9,INK);
+    rectR(g,x+5,y+5,w-10,h-10,2.9,INK);
+    line(g,x+w/2,y+5,x+w/2+rr(-1.5,1.5),y+h-5,3.7,INK,{over:0});
+    line(g,x+w/3,y+6,x+w/3+rr(-1.5,1.5),y+h-6,2.7,INK,{single:1,over:0});
+    line(g,x+2*w/3,y+6,x+2*w/3+rr(-1.5,1.5),y+h-6,2.7,INK,{single:1,over:0});
+    line(g,x+5,y+h/2,x+w-5,y+h/2+rr(-1.5,1.5),2.9,INK,{single:1,over:0});
+    line(g,x-7,y+h+6,x+w+7,y+h+5,4.5,INK);
+    line(g,x-4,y-5,x+w+4,y-6,3.5,INK);
+  }
+  win(772,432,60,48);
+  win(912,432,60,48);
+  /* mid band */
+  line(g,744,504,1000,502,7.2,INK);
+  line(g,752,514,992,512,3.2,INK);
+  for(var m=0;m<11;m++){
+    var mx=756+m*23+rr(-3,3);
+    line(g,mx,503,mx+rr(-3,3),486,3.0*rr(0.85,1.2),BRK,{single:(rnd()<0.5),over:0});
+  }
+  /* ground floor: double teak door + veranda posts + lantern */
+  line(g,790,516,789,620,5.0,INK);
+  line(g,956,516,957,620,5.0,INK);
+  fill(g,[[840,528],[906,528],[906,620],[840,620]],CRM);
+  rectR(g,840,528,66,92,5.3,INK);
+  line(g,873,528,872,620,4.1,INK);
+  rectR(g,846,538,22,32,2.9,INK);
+  rectR(g,878,538,22,32,2.9,INK);
+  rectR(g,846,578,22,32,2.9,INK);
+  rectR(g,878,578,22,32,2.9,INK);
+  line(g,830,621,916,619,6.2,INK);
+  line(g,836,630,910,628,3.3,INK,{single:1});
+  win(798,548,34,40);
+  win(916,548,34,40);
+  /* lantern by the door */
+  (function(x,y){
+    line(g,x,y,x+8,y+rr(-1,1),3.3,INK,{single:1});
+    line(g,x+8,y-7,x+8,y+2,3.1,INK,{single:1});
+    fill(g,[[x+1,y+2],[x+16,y+2],[x+13,y+20],[x+4,y+20]],CRM);
+    poly(g,[[x+1,y+2],[x+16,y+2],[x+13,y+20],[x+4,y+20]],3.5,INK,true);
+    line(g,x+8,y+6,x+8,y+16,2.7,INK,{single:1,over:0});
+    line(g,x+3,y+23,x+14,y+23,2.9,INK,{single:1});
+  })(918,524);
+  /* lap siding */
+  for(var y=420;y<500;y+=11*rr(0.92,1.1)){
+    if(y>424 && y<488){
+      line(g,756,y,768,y+rr(-1,1),2.6,INK,{single:1,over:0});
+      line(g,838,y,906,y+rr(-1,1),2.6,INK,{single:1,over:0});
+      line(g,978,y,988,y+rr(-1,1),2.6,INK,{single:1,over:0});
+    }
+  }
+  for(var y2=524;y2<612;y2+=11*rr(0.92,1.1)){
+    line(g,756,y2,786,y2+rr(-1,1),2.6,INK,{single:1,over:0});
+    line(g,960,y2,988,y2+rr(-1,1),2.6,INK,{single:1,over:0});
+  }
+})();
+
+/* ================= POLES, WIRES, ROADSIDE TREE ================= */
+function pole(g,x,topy){
+  line(g,x,622,x-2,topy,7.0,INK);
+  line(g,x+9,618,x+7,topy+16,3.0,INK,{single:1});
+  line(g,x-26,topy+22,x+26,topy+20,5.0,INK);
+  line(g,x-19,topy+48,x+19,topy+46,4.4,INK);
+  for(var i=-1;i<2;i+=2){
+    line(g,x+i*20,topy+22,x+i*20,topy+12,3.0,INK,{over:0});
+    ovalR(g,x+i*20,topy+9,4.6,4.2,2.7,INK);
+    line(g,x+i*14,topy+46,x+i*14,topy+37,2.8,INK,{over:0});
+    ovalR(g,x+i*14,topy+34,4.0,3.8,2.6,INK);
+  }
+  ovalR(g,x,topy+6,4.6,4.4,2.7,INK);
+  line(g,x,topy+22,x,topy+10,3.0,INK,{over:0});
+  hatch(g,x-4,600,x-4,540,5,9,0,2.5,INK);
+}
+pole(P,346,176);
+pole(P,690,186);
+/* street lamp arm on the first pole */
+curve(P,[[346,214],[318,208],[300,216],[296,230]],4.0,INK);
+shape(P,[[286,232],[306,232],[302,248],[290,248]],3.6,INK,CRM);
+line(P,288,252,304,251,2.8,INK,{single:1});
+/* wires strung the whole length */
+curve(P,[[86,206],[200,224],[300,214],[344,198]],3.2,INK,{single:1});
+curve(P,[[348,198],[470,228],[600,232],[688,208]],3.2,INK,{single:1});
+curve(P,[[692,208],[800,236],[920,240],[996,226]],3.2,INK,{single:1});
+curve(P,[[86,222],[200,244],[300,234],[344,222]],2.8,INK,{single:1});
+curve(P,[[348,222],[470,252],[600,256],[688,232]],2.8,INK,{single:1});
+curve(P,[[692,232],[800,258],[920,262],[996,248]],2.8,INK,{single:1});
+curve(P,[[86,240],[210,266],[320,254],[344,246]],2.6,INK,{single:1});
+curve(P,[[348,246],[480,276],[610,278],[688,254]],2.6,INK,{single:1});
+/* roadside tree at the left end */
+line(P,128,636,130,516,8.0,INK);
+line(P,129,556,108,534,4.0,INK);
+line(P,129,540,150,520,3.8,INK);
+line(P,129,584,113,570,3.2,INK,{single:1});
+(function(){
+  el(P,"path",{d:crPath(arcPts(130,476,52,42,0,Math.PI*2,18,1.4),true),fill:CRM,stroke:"none"});
+  ovalR(P,130,476,50,40,5.2,INK);
+  curve(P,[[92,462],[104,446],[122,442],[136,450]],3.2,INK,{single:1});
+  curve(P,[[140,444],[156,450],[168,462],[170,476]],3.2,INK,{single:1});
+  curve(P,[[96,494],[112,504],[130,508],[146,502]],3.0,INK,{single:1});
+})();
+for(var tt=0;tt<9;tt++) line(P,96+tt*8,rr(474,486),96+tt*8+rr(9,14),rr(494,508),2.7,INK,{single:1,over:0});
+/* pavement kerb dashes */
+for(var q=0;q<20;q++) line(P,100+q*46,640,124+q*46,639,3.0,INK,{single:1,over:0});
+
+/* ================= RULES AROUND THE WORDMARK ================= */
+line(R,150,668,930,666,4.4,INK);
+line(R,196,680,884,678,2.7,INK);
+line(R,240,846,840,844,3.6,INK);
+shape(R,[[540,833],[556,845],[540,857],[524,845]],3.6,BRK);
+line(R,262,845,300,844,2.8,INK);
+line(R,780,845,818,844,2.8,INK);
+
+/* ================= TEE MOCKUP ================= */
+var teePts=[[108,20],[86,26],[64,36],[44,50],[28,63],[16,78],[26,96],[38,112],[52,125],
+  [64,113],[72,102],[70,150],[68,200],[67,250],[66,296],[86,302],[118,306],[150,307],[182,306],[214,302],[234,296],
+  [233,250],[232,200],[230,150],[228,102],[236,113],[248,125],[262,112],[274,96],[284,78],
+  [272,63],[256,50],[236,36],[214,26],[192,20],[180,42],[166,54],[150,57],[134,54],[120,42]];
+(function(){
+  var g=G("L-tee");
+  var pts=teePts.map(function(p){ return [p[0]*1.35, p[1]*1.35+rr(-2,2)]; });
+  shape(g,pts,5.6,INK,CRM);
+  function c(a,sw,single){ curve(g,a.map(function(p){return [p[0]*1.35,p[1]*1.35];}),sw,INK,{single:single}); }
+  c([[112,29],[122,47],[134,61],[150,64],[166,61],[178,47],[188,29]],4.2);
+  c([[52,122],[58,112],[64,104],[71,100]],3.5);
+  c([[248,122],[242,112],[236,104],[229,100]],3.5);
+  c([[67,290],[104,296],[150,298],[196,296],[233,290]],3.5);
+  c([[72,104],[80,116],[84,130],[83,146]],2.7,1);
+  c([[228,104],[220,116],[216,130],[217,146]],2.7,1);
+  c([[80,110],[90,128],[93,146],[90,162]],2.5,1);
+  c([[220,110],[210,128],[207,146],[210,162]],2.5,1);
+  c([[76,268],[92,258],[108,256],[120,261]],2.6,1);
+  c([[224,268],[208,258],[192,256],[180,261]],2.6,1);
+  c([[74,206],[82,220],[82,234],[76,246]],2.5,1);
+  c([[226,206],[218,220],[218,234],[224,246]],2.5,1);
+  c([[32,70],[42,62],[52,55],[60,50]],2.6,1);
+  c([[268,70],[258,62],[248,55],[240,50]],2.6,1);
+  hatch(g,81,378,81,319,4,11,0,2.6,INK);
+  hatch(g,324,378,324,319,4,-11,0,2.6,INK);
+  hatch(g,41,119,59,92,3,9,4,2.5,INK);
+  hatch(g,364,119,346,92,3,-9,4,2.5,INK);
+})();
+
+/* ================= SHEET FRAME ================= */
+var fr=G("L-frame");
+poly(fr,[[30,30],[1050,30],[1050,1320],[30,1320]],4.6,INK,true);
+poly(fr,[[43,43],[1037,43],[1037,1307],[43,1307]],2.7,INK,true);
+})();
+</script>

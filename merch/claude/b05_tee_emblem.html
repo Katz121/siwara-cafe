@@ -1,0 +1,466 @@
+<meta charset="utf-8">
+<title>ศิวรา คาเฟ่ · tee emblem</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Sarabun:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  html,body{margin:0;padding:0;width:1080px;height:1350px;overflow:hidden;background:#f4ece0;}
+  svg{display:block;width:1080px;height:1350px;}
+</style>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <filter id="wob1" x="-7%" y="-7%" width="114%" height="114%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.013" numOctaves="2" seed="3" result="n1"/>
+      <feDisplacementMap in="SourceGraphic" in2="n1" scale="2.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="wob2" x="-7%" y="-7%" width="114%" height="114%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.018" numOctaves="2" seed="17" result="n2"/>
+      <feDisplacementMap in="SourceGraphic" in2="n2" scale="3.1" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="wob3" x="-9%" y="-9%" width="118%" height="118%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.011" numOctaves="3" seed="41" result="n3"/>
+      <feDisplacementMap in="SourceGraphic" in2="n3" scale="3.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+
+    <!-- hand-drawn baselines for the seal type (d written by script) -->
+    <path id="arcTop" d=""/>
+    <path id="arcBot" d=""/>
+
+    <g id="em-lines" fill="none" stroke="#241d19" stroke-linecap="round" stroke-linejoin="round">
+      <g id="L-plate"></g>
+      <g id="L-ring" filter="url(#wob1)"></g>
+      <g id="L-scene" filter="url(#wob2)"></g>
+      <g id="L-orn" filter="url(#wob3)"></g>
+    </g>
+
+    <g id="em-type" fill="#241d19">
+      <text font-family="Chonburi" font-size="58" letter-spacing="7" text-anchor="middle">
+        <textPath href="#arcTop" startOffset="50%">ศิวรา คาเฟ่</textPath>
+      </text>
+      <text font-family="Chonburi" font-size="54" letter-spacing="13" text-anchor="middle">
+        <textPath href="#arcBot" startOffset="50%">ตะกั่วป่า</textPath>
+      </text>
+      <text x="540" y="616" font-family="Sarabun" font-weight="700" font-size="39"
+            letter-spacing="7" text-anchor="middle" transform="rotate(-0.7 540 610)">EST. 2475</text>
+    </g>
+
+    <g id="tee-lines" fill="none" stroke="#241d19" stroke-linecap="round" stroke-linejoin="round">
+      <g id="L-tee" filter="url(#wob2)"></g>
+    </g>
+    <g id="tee-lines-b" fill="none" stroke="#241d19" stroke-linecap="round" stroke-linejoin="round">
+      <g id="L-teeb" filter="url(#wob3)"></g>
+    </g>
+  </defs>
+
+  <rect x="0" y="0" width="1080" height="1350" fill="#f4ece0"/>
+  <g id="L-frame" filter="url(#wob1)" fill="none" stroke="#241d19"
+     stroke-linecap="round" stroke-linejoin="round"></g>
+
+  <use href="#em-lines"/>
+  <use href="#em-type"/>
+
+  <use href="#tee-lines" transform="translate(144,890)"/>
+  <use href="#tee-lines-b" transform="translate(636,896)"/>
+
+  <use href="#em-lines" transform="translate(294,1042) rotate(-1.2) scale(0.152) translate(-540,-425)"/>
+  <use href="#em-type"  transform="translate(294,1042) rotate(-1.2) scale(0.152) translate(-540,-425)"/>
+  <use href="#em-lines" transform="translate(786,1048) rotate(1.4) scale(0.152) translate(-540,-425)"/>
+  <use href="#em-type"  transform="translate(786,1048) rotate(1.4) scale(0.152) translate(-540,-425)"/>
+
+  <text x="540" y="1290" font-family="Sarabun" font-weight="600" font-size="34"
+        letter-spacing="3" text-anchor="middle" fill="#241d19"
+        transform="rotate(-0.6 540 1284)">28 ซม.</text>
+</svg>
+
+<script>
+(function(){
+var SVG="http://www.w3.org/2000/svg";
+var INK="#241d19", BRK="#b4451f", CRM="#f4ece0";
+var seed=20250809;
+function rnd(){ seed=(seed*1103515245+12345)&0x7fffffff; return seed/0x7fffffff; }
+function rr(a,b){ return a+rnd()*(b-a); }
+function G(id){ return document.getElementById(id); }
+function el(g,tag,at){ var e=document.createElementNS(SVG,tag); for(var k in at) e.setAttribute(k,at[k]); g.appendChild(e); return e; }
+function fx(n){ return (Math.round(n*10)/10); }
+
+/* ---------- hand-drawn primitives ---------- */
+// one stroke, drawn twice, with overshoot past both ends and a slight bow
+function line(g,x1,y1,x2,y2,sw,col,opt){
+  opt=opt||{};
+  var col2=col||INK;
+  var dx=x2-x1, dy=y2-y1, L=Math.hypot(dx,dy)||1;
+  var ux=dx/L, uy=dy/L, nx=-uy, ny=ux;
+  var over=(opt.over===undefined)?1:opt.over;
+  var passes=(opt.single)?1:2;
+  var bowMax=Math.min(2.2, 0.6+L*0.02);
+  for(var p=0;p<passes;p++){
+    var o1=over?rr(1.5,4.6):rr(0,1), o2=over?rr(1.8,5.0):rr(0,1);
+    var off=(p===0)?0:(rnd()<0.5?-1:1)*rr(0.8,1.8);
+    var sx=x1-ux*o1+nx*off+rr(-0.8,0.8), sy=y1-uy*o1+ny*off+rr(-0.8,0.8);
+    var ex=x2+ux*o2+nx*off+rr(-0.8,0.8), ey=y2+uy*o2+ny*off+rr(-0.8,0.8);
+    var b1=rr(-bowMax,bowMax), b2=rr(-bowMax,bowMax);
+    var c1x=sx+(ex-sx)/3+nx*b1, c1y=sy+(ey-sy)/3+ny*b1;
+    var c2x=sx+(ex-sx)*2/3+nx*b2, c2y=sy+(ey-sy)*2/3+ny*b2;
+    el(g,"path",{d:"M "+fx(sx)+","+fx(sy)+" C "+fx(c1x)+","+fx(c1y)+" "+fx(c2x)+","+fx(c2y)+" "+fx(ex)+","+fx(ey),
+      "stroke-width":fx(sw*(p===0?rr(0.92,1.14):rr(0.66,0.86))), stroke:col2,
+      "stroke-opacity":(p===0?1:fx(rr(0.5,0.7)))});
+  }
+}
+function poly(g,pts,sw,col,closed){
+  for(var i=0;i<pts.length-1;i++) line(g,pts[i][0],pts[i][1],pts[i+1][0],pts[i+1][1],sw*rr(0.9,1.12),col);
+  if(closed) line(g,pts[pts.length-1][0],pts[pts.length-1][1],pts[0][0],pts[0][1],sw*rr(0.9,1.12),col);
+}
+function rectR(g,x,y,w,h,sw,col){
+  poly(g,[[x,y],[x+w,y],[x+w,y+h],[x,y+h]],sw,col,true);
+}
+// catmull-rom through points
+function crPath(pts,closed){
+  var n=pts.length;
+  function at(i){ return closed? pts[(i+n)%n] : pts[Math.max(0,Math.min(n-1,i))]; }
+  var d="M "+fx(pts[0][0])+","+fx(pts[0][1]);
+  var last=closed?n:n-1;
+  for(var i=0;i<last;i++){
+    var p0=at(i-1),p1=at(i),p2=at(i+1),p3=at(i+2);
+    d+=" C "+fx(p1[0]+(p2[0]-p0[0])/6)+","+fx(p1[1]+(p2[1]-p0[1])/6)+" "+
+       fx(p2[0]-(p3[0]-p1[0])/6)+","+fx(p2[1]-(p3[1]-p1[1])/6)+" "+fx(p2[0])+","+fx(p2[1]);
+  }
+  if(closed) d+=" Z";
+  return d;
+}
+function jitPts(pts,a){
+  return pts.map(function(p){ return [p[0]+rr(-a,a), p[1]+rr(-a,a)]; });
+}
+function shape(g,pts,sw,col,fill){
+  if(fill) el(g,"path",{d:crPath(jitPts(pts,0.7),true),fill:fill,stroke:"none"});
+  for(var p=0;p<2;p++){
+    el(g,"path",{d:crPath(jitPts(pts,p?1.6:0.9),true),fill:"none",
+      "stroke-width":fx(sw*(p?rr(0.66,0.86):rr(0.94,1.12))),stroke:col||INK,
+      "stroke-opacity":(p?fx(rr(0.5,0.7)):1)});
+  }
+}
+function curve(g,pts,sw,col,opt){
+  opt=opt||{};
+  var passes=opt.single?1:2;
+  for(var p=0;p<passes;p++){
+    el(g,"path",{d:crPath(jitPts(pts,p?1.5:0.8),false),fill:"none",
+      "stroke-width":fx(sw*(p?rr(0.66,0.86):rr(0.92,1.14))),stroke:col||INK,
+      "stroke-opacity":(p?fx(rr(0.5,0.7)):1)});
+  }
+}
+function arcPts(cx,cy,rx,ry,a0,a1,steps,jit){
+  var out=[];
+  for(var i=0;i<=steps;i++){
+    var t=a0+(a1-a0)*i/steps;
+    out.push([cx+rx*Math.cos(t)+rr(-jit,jit), cy+ry*Math.sin(t)+rr(-jit,jit)]);
+  }
+  return out;
+}
+// wobbly ellipse: open arc that overshoots its own start, drawn twice
+function ovalR(g,cx,cy,rx,ry,sw,col){
+  for(var p=0;p<2;p++){
+    var a0=rr(0,6.28), a1=a0+Math.PI*2+rr(0.10,0.34);
+    var k=rr(0.994,1.006);
+    var rxx=rx*k+(p?rr(-2.2,2.2):0), ryy=ry*rr(0.988,1.012)+(p?rr(-1.6,1.6):0);
+    el(g,"path",{d:crPath(arcPts(cx+rr(-1.5,1.5),cy+rr(-1.5,1.5),rxx,ryy,a0,a1,15,Math.min(1.9,ry*0.09)),false),
+      fill:"none","stroke-width":fx(sw*(p?rr(0.62,0.84):rr(0.94,1.14))),stroke:col||INK,
+      "stroke-opacity":(p?fx(rr(0.5,0.7)):1)});
+  }
+}
+function ringR(g,cx,cy,r,sw,col){ ovalR(g,cx,cy,r,r*rr(0.99,1.012),sw,col); }
+// woodcut hatching: uneven spacing, uneven length, uneven angle
+function hatch(g,x1,y1,x2,y2,n,stepx,stepy,sw,col){
+  for(var i=0;i<n;i++){
+    var k=i+rr(-0.22,0.22);
+    var ax=x1+stepx*k, ay=y1+stepy*k;
+    var bx=x2+stepx*k, by=y2+stepy*k;
+    var t0=rr(0,0.16), t1=rr(0.82,1.04);
+    var px=ax+(bx-ax)*t0, py=ay+(by-ay)*t0;
+    var qx=ax+(bx-ax)*t1, qy=ay+(by-ay)*t1;
+    line(g,px,py,qx,qy,sw*rr(0.85,1.2),col,{single:(rnd()<0.62),over:0});
+  }
+}
+
+/* ================= PLATE + RING ================= */
+var plate=G("L-plate"), ring=G("L-ring"), sc=G("L-scene"), orn=G("L-orn");
+el(plate,"path",{d:crPath(arcPts(540,425,255,254,0,Math.PI*2,18,1.2),true),fill:CRM,stroke:"none"});
+ringR(ring,540,425,357,8.4,INK);
+ringR(ring,540,425,343,3.6,BRK);
+ringR(ring,540,425,268,5.6,INK);
+ringR(ring,540,425,257,2.7,INK);
+
+/* type baselines, slightly out of round so the letters ride a hand-drawn curve */
+G("arcTop").setAttribute("d",crPath(arcPts(540,426,283,281,Math.PI,Math.PI*2,20,1.5),false));
+G("arcBot").setAttribute("d",crPath(arcPts(540,424,330,328,Math.PI,0,20,1.5),false));
+
+/* ================= BACKGROUND: HILLS + TREE ================= */
+curve(sc,[[300,438],[330,398],[364,362],[400,350],[432,376],[460,408],[478,426],[494,438]],5.0,INK);
+curve(sc,[[324,436],[350,404],[380,388],[406,396],[424,414]],3.0,INK,{single:1});
+curve(sc,[[596,436],[634,378],[668,340],[706,328],[742,362],[766,404],[782,436]],5.2,INK);
+curve(sc,[[622,436],[654,392],[690,368],[722,382],[742,404]],3.0,INK,{single:1});
+for(var i=0;i<9;i++){
+  var hx=330+i*17, hy=424-Math.sin(i/9*Math.PI)*30;
+  line(sc,hx,hy,hx+rr(6,10),hy+rr(7,11),2.6,INK,{single:1,over:0});
+}
+for(var i=0;i<9;i++){
+  var hx2=628+i*14, hy2=420-Math.sin(i/9*Math.PI)*38;
+  line(sc,hx2,hy2,hx2+rr(6,10),hy2+rr(8,12),2.6,INK,{single:1,over:0});
+}
+/* tree */
+line(sc,734,470,731,398,9.0,INK);
+line(sc,733,432,712,410,4.6,INK);
+line(sc,734,420,754,400,4.2,INK);
+/* scalloped canopy: lobes, not a balloon */
+(function(){
+  var lobes=[[708,366,27,25],[738,336,30,27],[760,364,24,22]];
+  lobes.forEach(function(L){
+    el(sc,"path",{d:crPath(arcPts(L[0],L[1],L[2]+2,L[3]+2,0,Math.PI*2,13,1.1),true),fill:CRM,stroke:"none"});
+  });
+  lobes.forEach(function(L){ ovalR(sc,L[0],L[1],L[2],L[3],4.8,INK); });
+})();
+for(var t=0;t<9;t++){
+  var tx=702+t*8;
+  line(sc,tx,rr(348,360),tx+rr(9,15),rr(368,382),2.7,INK,{single:1,over:0});
+}
+line(sc,726,318,742,306,2.6,INK,{single:1,over:0});
+line(sc,748,330,764,344,2.6,INK,{single:1,over:0});
+
+/* ================= HOUSE ================= */
+/* cream masses first so the hills never read through the walls */
+el(sc,"path",{d:crPath(jitPts([[384,384],[460,310],[540,232],[620,310],[696,384],[540,392]],1.2),true),fill:CRM,stroke:"none"});
+el(sc,"path",{d:crPath(jitPts([[428,374],[540,372],[652,374],[652,456],[540,458],[428,456]],1.2),true),fill:CRM,stroke:"none"});
+el(sc,"path",{d:crPath(jitPts([[334,456],[540,452],[746,456],[746,472],[540,474],[334,472]],1.2),true),fill:CRM,stroke:"none"});
+el(sc,"path",{d:crPath(jitPts([[342,468],[540,466],[738,468],[738,548],[540,550],[342,548]],1.2),true),fill:CRM,stroke:"none"});
+
+/* upper roof · thick tiled bands */
+line(sc,393,380,540,236,8.6,INK);
+line(sc,420,379,540,262,4.3,INK);
+line(sc,687,380,541,236,8.6,INK);
+line(sc,660,379,541,262,4.3,INK);
+for(var k=0;k<10;k++){
+  var tt=0.06+k*0.095+rr(-0.018,0.018);
+  var ox=393+147*tt, oy=380-144*tt;
+  var ix=420+120*tt, iy=379-117*tt;
+  line(sc,ox,oy,ix,iy,3.3*rr(0.85,1.2),BRK,{single:(rnd()<0.55),over:0});
+  line(sc,1080-ox+rr(-2,2),oy+rr(-2,2),1080-ix,iy,3.3*rr(0.85,1.2),BRK,{single:(rnd()<0.55),over:0});
+}
+line(sc,540,237,541,219,5.4,INK);
+line(sc,528,224,553,223,4.0,INK);
+line(sc,383,381,697,379,8.6,INK);
+line(sc,390,392,690,390,3.3,INK);
+line(sc,402,379,401,392,3.0,INK);
+line(sc,540,379,541,392,3.0,INK);
+line(sc,678,379,679,392,3.0,INK);
+
+/* gable face + louvered vent */
+curve(sc,[[423,378],[480,322],[540,265],[600,322],[657,378]],4.6,INK);
+rectR(sc,496,304,88,58,4.8,INK);
+for(var v=0;v<5;v++) line(sc,rr(499,502),315+v*10.8,rr(578,582),315+v*10.8+rr(-1,1),3.3,INK,{single:1,over:0});
+line(sc,434,370,646,369,2.9,INK,{single:1});
+line(sc,506,298,575,297,2.9,INK,{single:1});
+line(sc,518,286,563,285,2.9,INK,{single:1});
+for(var q=0;q<6;q++){
+  line(sc,438+q*9,371-q*2,458+q*9,rr(336,344)-q*8,2.7,INK,{single:1,over:0});
+  line(sc,642-q*9,371-q*2,622-q*9,rr(336,344)-q*8,2.7,INK,{single:1,over:0});
+}
+
+/* second floor wall */
+line(sc,430,374,429,458,5.6,INK);
+line(sc,650,374,651,458,5.6,INK);
+
+/* window: casement pair, 3x2 panes */
+function win(g,x,y,w,h){
+  el(g,"path",{d:crPath(jitPts([[x,y],[x+w,y],[x+w,y+h],[x,y+h]],1),true),fill:CRM,stroke:"none"});
+  rectR(g,x,y,w,h,4.9,INK);
+  rectR(g,x+5,y+5,w-10,h-10,2.9,INK);
+  line(g,x+w/2,y+5,x+w/2+rr(-1.5,1.5),y+h-5,3.7,INK,{over:0});
+  line(g,x+w/3,y+6,x+w/3+rr(-1.5,1.5),y+h-6,2.7,INK,{single:1,over:0});
+  line(g,x+2*w/3,y+6,x+2*w/3+rr(-1.5,1.5),y+h-6,2.7,INK,{single:1,over:0});
+  line(g,x+5,y+h/2,x+w-5,y+h/2+rr(-1.5,1.5),2.9,INK,{single:1,over:0});
+  line(g,x-7,y+h+5,x+w+7,y+h+4,4.5,INK);
+  line(g,x-4,y-5,x+w+4,y-6,3.5,INK);
+  hatch(g,x+w-14,y+h-8,x+w-4,y+8,3,3.2,0,2.5,INK);
+}
+win(sc,458,390,68,54);
+win(sc,554,390,68,54);
+
+/* lap siding, only where the wall is bare */
+function siding(g,x1,x2,y1,y2,step,skips){
+  for(var y=y1;y<=y2;y+=step*rr(0.9,1.12)){
+    var segs=[[x1,x2]];
+    skips.forEach(function(sk){
+      if(y>sk[1]-6 && y<sk[3]+12){
+        var out=[];
+        segs.forEach(function(sg){
+          if(sk[2]<=sg[0]||sk[0]>=sg[1]){ out.push(sg); return; }
+          if(sk[0]>sg[0]) out.push([sg[0],sk[0]-4]);
+          if(sk[2]<sg[1]) out.push([sk[2]+4,sg[1]]);
+        });
+        segs=out;
+      }
+    });
+    segs.forEach(function(sg){ if(sg[1]-sg[0]>8) line(g,sg[0]+rr(0,2),y,sg[1]-rr(0,2),y+rr(-1.2,1.2),2.6,INK,{single:1,over:0}); });
+  }
+}
+siding(sc,433,647,386,450,11,[[452,384,532,450],[548,384,628,450]]);
+siding(sc,455,626,478,542,11,[[460,480,544,544],[542,480,626,544]]);
+siding(sc,640,734,478,542,11,[[646,470,720,552]]);
+
+/* middle tier roof over the wings */
+line(sc,334,463,746,461,9.2,INK);
+line(sc,399,441,681,439,4.5,INK);
+line(sc,335,462,400,440,5.5,INK);
+line(sc,745,462,680,440,5.5,INK);
+for(var m=0;m<17;m++){
+  var mx=352+m*23+rr(-3,3);
+  var topx=mx+(mx<400?10:(mx>680?-10:rr(-2,2)));
+  line(sc,mx,461+rr(-1.5,1.5),topx,442+rr(-2,3),3.1*rr(0.85,1.2),BRK,{single:(rnd()<0.5),over:0});
+}
+line(sc,341,472,739,470,3.3,INK,{single:1});
+
+/* ground floor · left wing open veranda */
+line(sc,356,470,355,547,5.8,INK);
+line(sc,398,470,399,547,5.1,INK);
+line(sc,440,470,439,547,5.1,INK);
+line(sc,351,512,445,511,4.5,INK);
+for(var b=0;b<9;b++) line(sc,358+b*10.5+rr(-1.5,1.5),513,358+b*10.5+rr(-2,2),543,2.6,INK,{single:1,over:0});
+line(sc,351,544,445,543,4.1,INK);
+line(sc,362,503,434,502,2.8,INK,{single:1});
+hatch(sc,360,500,360,470,5,9,0,2.5,INK);
+
+/* ground floor · centre wall + windows */
+line(sc,452,470,451,547,5.5,INK);
+line(sc,628,470,629,547,5.5,INK);
+win(sc,466,486,72,52);
+win(sc,548,486,72,52);
+
+/* right wing · double teak door + step */
+line(sc,736,470,737,547,5.5,INK);
+el(sc,"path",{d:crPath(jitPts([[652,476],[714,476],[714,546],[652,546]],1),true),fill:CRM,stroke:"none"});
+rectR(sc,652,476,62,70,5.3,INK);
+line(sc,683,476,682,547,4.1,INK);
+rectR(sc,658,484,19,26,2.9,INK);
+rectR(sc,689,484,19,26,2.9,INK);
+rectR(sc,658,516,19,24,2.9,INK);
+rectR(sc,689,516,19,24,2.9,INK);
+line(sc,639,548,727,547,6.2,INK);
+line(sc,645,556,721,555,3.3,INK,{single:1});
+
+/* wall lanterns */
+function lantern(g,x,y){
+  line(g,x,y,x+8,y+rr(-1,1),3.3,INK,{single:1});
+  line(g,x+8,y-6,x+8,y+2,3.1,INK,{single:1});
+  el(g,"path",{d:crPath(jitPts([[x+1,y+2],[x+15,y+2],[x+12,y+18],[x+4,y+18]],0.8),true),fill:CRM,stroke:"none"});
+  poly(g,[[x+1,y+2],[x+15,y+2],[x+12,y+18],[x+4,y+18]],3.5,INK,true);
+  line(g,x+8,y+5,x+8,y+15,2.7,INK,{single:1,over:0});
+  line(g,x+3,y+21,x+13,y+21,2.9,INK,{single:1});
+}
+lantern(sc,632,482); lantern(sc,722,482); lantern(sc,442,482); lantern(sc,540,394);
+
+/* ground line, circular lawn, gravel, trimmed bushes */
+line(sc,304,548,778,546,7.6,INK);
+el(sc,"path",{d:crPath(arcPts(540,570,181,28,0,Math.PI*2,16,1.4),true),fill:CRM,stroke:"none"});
+ovalR(sc,540,570,180,27,4.8,INK);
+ovalR(sc,540,570,150,16,2.8,INK);
+for(var g1=0;g1<12;g1++){
+  var lx=398+g1*26;
+  line(sc,lx,rr(556,562),lx+rr(6,12),rr(572,580),2.6,INK,{single:1,over:0});
+}
+for(var g2=0;g2<15;g2++){
+  var a2=Math.PI*(g2/14);
+  var gx=540+196*Math.cos(a2), gy=570+35*Math.sin(a2), gy2=570-35*Math.sin(a2);
+  line(sc,gx,gy,gx+rr(5,9),gy+rr(2,6),2.8,BRK,{single:1,over:0});
+  line(sc,gx,gy2,gx+rr(5,9),gy2-rr(2,6),2.8,BRK,{single:1,over:0});
+}
+function bush(g,x,y,r){
+  el(g,"path",{d:crPath(arcPts(x,y,r,r,0,Math.PI*2,11,1.1),true),fill:CRM,stroke:"none"});
+  ringR(g,x,y,r,4.5,INK);
+  curve(g,[[x-r*0.6,y+r*0.3],[x,y-r*0.2],[x+r*0.6,y+r*0.3]],2.7,INK,{single:1});
+  curve(g,[[x-r*0.5,y+r*0.66],[x,y+r*0.14],[x+r*0.5,y+r*0.66]],2.6,INK,{single:1});
+}
+bush(sc,468,534,16); bush(sc,512,538,12); bush(sc,576,538,12); bush(sc,620,534,16);
+hatch(sc,350,543,392,543,4,0,-6,2.6,INK);
+hatch(sc,690,543,732,543,4,0,-6,2.6,INK);
+
+/* ribbon */
+var ribPts=[[398,578],[470,570],[540,566],[612,570],[684,578],[684,604],[684,628],[612,637],[540,642],[468,637],[398,628],[398,602]];
+shape(sc,ribPts,6.2,INK,CRM);
+shape(sc,[[398,578],[374,572],[352,566],[364,584],[370,600],[362,618],[352,634],[376,631],[398,628],[398,604]],5.1,INK,CRM);
+shape(sc,[[682,578],[706,572],[728,566],[716,584],[710,600],[718,618],[728,634],[704,631],[682,628],[682,604]],5.1,INK,CRM);
+line(sc,397,586,398,622,3.1,INK,{single:1});
+line(sc,683,586,684,622,3.1,INK,{single:1});
+line(sc,359,580,372,585,2.8,INK,{single:1,over:0});
+line(sc,357,622,370,617,2.8,INK,{single:1,over:0});
+line(sc,721,580,708,585,2.8,INK,{single:1,over:0});
+line(sc,723,622,710,617,2.8,INK,{single:1,over:0});
+
+/* ================= ORNAMENTS IN THE TYPE BAND ================= */
+function bean(g,ang,rot){
+  var a=ang*Math.PI/180, x=540+302*Math.cos(a), y=425+302*Math.sin(a);
+  var gg=el(g,"g",{transform:"translate("+fx(x)+","+fx(y)+") rotate("+fx(rot)+")"});
+  el(gg,"path",{d:crPath(arcPts(0,0,21,14,0,Math.PI*2,11,1.1),true),fill:CRM,stroke:"none"});
+  ovalR(gg,0,0,20,13.5,4.6,INK);
+  curve(gg,[[-16,-4],[-8,3],[0,0],[8,-3],[16,4]],3.6,INK);
+}
+function leaf(g,ang,rot){
+  var a=ang*Math.PI/180, x=540+300*Math.cos(a), y=425+300*Math.sin(a);
+  var gg=el(g,"g",{transform:"translate("+fx(x)+","+fx(y)+") rotate("+fx(rot)+")"});
+  shape(gg,[[-27,0],[-16,-11],[0,-16],[16,-11],[27,0],[16,11],[0,16],[-16,11]],3.9,INK,CRM);
+  line(gg,-27,0,27,1,2.9,INK,{single:1});
+  line(gg,-12,-1,-4,-9,2.5,INK,{single:1,over:0});
+  line(gg,2,-1,10,-9,2.5,INK,{single:1,over:0});
+  line(gg,-12,1,-4,9,2.5,INK,{single:1,over:0});
+  line(gg,2,1,10,9,2.5,INK,{single:1,over:0});
+}
+bean(orn,180,11); bean(orn,167,-31); bean(orn,193,27);
+bean(orn,0,-13); bean(orn,13,29); bean(orn,-13,-26);
+leaf(orn,156,57); leaf(orn,204,-59); leaf(orn,24,-57); leaf(orn,-24,58);
+
+/* ================= TEE MOCKUPS ================= */
+var teePts=[[108,20],[86,26],[64,36],[44,50],[28,63],[16,78],[26,96],[38,112],[52,125],
+  [64,113],[72,102],[70,150],[68,200],[67,250],[66,296],[86,302],[118,306],[150,307],[182,306],[214,302],[234,296],
+  [233,250],[232,200],[230,150],[228,102],[236,113],[248,125],[262,112],[274,96],[284,78],
+  [272,63],[256,50],[236,36],[214,26],[192,20],[180,42],[166,54],[150,57],[134,54],[120,42]];
+function tee(g,mirror){
+  var pts=teePts.map(function(p){ return [mirror?300-p[0]:p[0], p[1]+rr(-1.5,1.5)]; });
+  shape(g,pts,5.8,INK,CRM);
+  curve(g,[[112,29],[122,47],[134,61],[150,64],[166,61],[178,47],[188,29]],4.3,INK);
+  curve(g,[[52,122],[58,112],[64,104],[71,100]],3.6,INK);
+  curve(g,[[248,122],[242,112],[236,104],[229,100]],3.6,INK);
+  curve(g,[[67,290],[104,296],[150,298],[196,296],[233,290]],3.6,INK);
+  curve(g,[[72,104],[80,116],[84,130],[83,146]],2.8,INK,{single:1});
+  curve(g,[[228,104],[220,116],[216,130],[217,146]],2.8,INK,{single:1});
+  curve(g,[[80,110],[90,128],[93,146],[90,162]],2.6,INK,{single:1});
+  curve(g,[[220,110],[210,128],[207,146],[210,162]],2.6,INK,{single:1});
+  curve(g,[[76,268],[92,258],[108,256],[120,261]],2.7,INK,{single:1});
+  curve(g,[[224,268],[208,258],[192,256],[180,261]],2.7,INK,{single:1});
+  curve(g,[[74,206],[82,220],[82,234],[76,246]],2.5,INK,{single:1});
+  curve(g,[[226,206],[218,220],[218,234],[224,246]],2.5,INK,{single:1});
+  curve(g,[[32,70],[42,62],[52,55],[60,50]],2.7,INK,{single:1});
+  curve(g,[[268,70],[258,62],[248,55],[240,50]],2.7,INK,{single:1});
+  hatch(g,60,280,60,236,4,8,0,2.6,INK);
+  hatch(g,240,280,240,236,4,-8,0,2.6,INK);
+  hatch(g,30,88,44,68,3,7,3,2.5,INK);
+  hatch(g,270,88,256,68,3,-7,3,2.5,INK);
+}
+tee(G("L-tee"),false);
+tee(G("L-teeb"),true);
+
+/* ================= SHEET FRAME + DIMENSION BAR ================= */
+var fr=G("L-frame");
+poly(fr,[[30,30],[1050,30],[1050,1320],[30,1320]],4.6,INK,true);
+poly(fr,[[43,43],[1037,43],[1037,1307],[43,1307]],2.7,INK,true);
+line(fr,190,838,470,836,4.1,INK);
+line(fr,610,837,890,839,4.1,INK);
+shape(fr,[[540,825],[557,838],[540,851],[523,838]],3.7,BRK);
+line(fr,500,838,516,837,3.0,INK);
+line(fr,564,838,580,839,3.0,INK);
+line(fr,420,1244,660,1242,3.7,INK);
+line(fr,420,1231,419,1257,3.7,INK);
+line(fr,660,1231,661,1257,3.7,INK);
+line(fr,429,1237,419,1244,3.1,INK);
+line(fr,429,1251,419,1244,3.1,INK);
+line(fr,651,1237,661,1243,3.1,INK);
+line(fr,651,1251,661,1243,3.1,INK);
+})();
+</script>

@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "D:\Siwaracafeweb\merch\_run_codex3.py", line 111, in <module>
+    run(name, size, brief)
+  File "D:\Siwaracafeweb\merch\_run_codex2.py", line 146, in run
+    print(f"\n=== {name} ({size}) ===", flush=True)
+ValueError: I/O operation on closed file.
