@@ -1,6 +1,98 @@
-Traceback (most recent call last):
-  File "D:\Siwaracafeweb\merch\_run_codex3.py", line 111, in <module>
-    run(name, size, brief)
-  File "D:\Siwaracafeweb\merch\_run_codex2.py", line 146, in run
-    print(f"\n=== {name} ({size}) ===", flush=True)
-ValueError: I/O operation on closed file.
+
+=== e01_stickers_objects.png (1024x1024) ===
+สร้างและบันทึกไฟล์เรียบร้อยแล้วที่:
+
+`D:\Siwaracafeweb\merch\codex\e01_stickers_objects.png`
+
+ตรวจสอบแล้ว ขนาดไฟล์ภาพสุดท้ายคือ `1024x1024` พิกเซล PNG.
+
+exists=True
+
+=== e02_stickers_house_set.png (1024x1024) ===
+สร้างและบันทึกไฟล์เรียบร้อยแล้วที่:
+
+[D:\Siwaracafeweb\merch\codex\e02_stickers_house_set.png](</abs/path/D:/Siwaracafeweb/merch/codex/e02_stickers_house_set.png>)
+
+ตรวจแล้วเป็น PNG ขนาด `1024x1024` ตามที่ระบุครับ.
+
+exists=True
+
+=== e03_tee_minimal_house.png (1024x1024) ===
+สร้างและบันทึกไฟล์เรียบร้อยแล้วครับ:
+
+`D:\Siwaracafeweb\merch\codex\e03_tee_minimal_house.png`
+
+ตรวจยืนยันแล้วว่าไฟล์ปลายทางเป็น PNG ขนาด `1024x1024` สำเร็จ.
+
+exists=True
+
+=== e04_tee_coffee_house.png (1024x1024) ===
+สร้างและบันทึกไฟล์เรียบร้อยแล้วที่:
+
+`D:\Siwaracafeweb\merch\codex\e04_tee_coffee_house.png`
+
+ตรวจสอบแล้วว่าไฟล์มีอยู่จริง และขนาดสุดท้ายคือ `1024x1024` PNG.
+
+exists=True
+
+=== e05_poster_dusk_pencil.png (1024x1536) ===
+บันทึกภาพเรียบร้อยแล้วที่:
+
+`D:\Siwaracafeweb\merch\codex\e05_poster_dusk_pencil.png`
+
+ตรวจแล้วไฟล์ปลายทางเป็น PNG ขนาด `1024x1536` ตามที่ต้องการครับ.
+
+exists=True
+
+=== e06_poster_botanical_page.png (1024x1536) ===
+สร้างและบันทึกไฟล์เรียบร้อยแล้วที่:
+
+`D:/Siwaracafeweb/merch/codex/e06_poster_botanical_page.png`
+
+ตรวจสอบแล้วไฟล์มีอยู่จริง และปรับขนาดปลายทางเป็น `1024x1536` px ตามที่ระบุครับ.
+
+exists=True
+
+=== e07_interior_corner.png (1024x1536) ===
+สร้างและบันทึกไฟล์สำเร็จแล้วครับ
+
+ไฟล์อยู่ที่: `D:/Siwaracafeweb/merch/codex/e07_interior_corner.png`
+
+ตรวจสอบแล้วขนาดภาพคือ `1024x1536` PNG.
+
+exists=True
+
+=== e08_counter_slowbar.png (1024x1536) ===
+สร้างและบันทึกไฟล์เรียบร้อยแล้วที่:
+
+[D:/Siwaracafeweb/merch/codex/e08_counter_slowbar.png](</mnt/d/Siwaracafeweb/merch/codex/e08_counter_slowbar.png>)
+
+ตรวจสอบแล้วเป็น PNG ขนาด `1024x1536` ครับ
+
+exists=True
+
+=== e09_shophouse_row.png (1024x1536) ===
+สร้างและบันทึกไฟล์เรียบร้อยแล้วที่:
+
+`D:/Siwaracafeweb/merch/codex/e09_shophouse_row.png`
+
+ตรวจแล้วไฟล์เป็น PNG ขนาด `1024x1536` และมีขนาดประมาณ `3.3 MB` ครับ.
+
+exists=True
+
+=== e10_river_garden.png (1024x1536) ===
+สร้างและบันทึกไฟล์สำเร็จแล้วครับ
+
+ไฟล์: `D:\Siwaracafeweb\merch\codex\e10_river_garden.png`  
+ขนาดที่ตรวจแล้ว: `1024x1536` PNG
+
+exists=True
+
+=== e11_handlettered_sign.png (1024x1536) ===
+สร้างและบันทึกไฟล์เรียบร้อยแล้วที่:
+
+[D:/Siwaracafeweb/merch/codex/e11_handlettered_sign.png](</mnt/d/Siwaracafeweb/merch/codex/e11_handlettered_sign.png>)
+
+ตรวจสอบแล้วไฟล์เป็น PNG ขนาด `1024x1536` พิกเซล ขนาดไฟล์ประมาณ `3.3 MB` ใช้ built-in `image_gen` ตามสเปกที่ให้มาเรียบร้อยครับ
+
+exists=True
