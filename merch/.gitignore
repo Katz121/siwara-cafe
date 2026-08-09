@@ -1,3 +1,4 @@
 merch/**/*.png
 merch/*.log
 !merch/selected/*.png
+!merch/print/postcards/*.png
