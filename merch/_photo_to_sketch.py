@@ -35,6 +35,13 @@ SLUG = {
     "มุมเหงาๆ": "g05_window_counter",
     "มุมสวย": "g06_signature_window",
     "ดอกไม้ในร้าน": "g07_roses_table",
+    "ตะกั่วป่า-เมืองเก่า": "g08_oldtown_street",
+    "ศาลเจ้าซินใช่ตึ๋ง": "g09_shrine_lanterns",
+    "218417157_565871948196588_1608805810878632308_n": "g10_street_from_above",
+    "484050234_1060696479434794_5969050394251992980_n": "g11_elephants_old_street",
+    "491754068_1319477803282106_5281644519154895610_n": "g12_songthaew_1950s",
+    "shutterstock_1645099648": "g13_street_morning",
+    "สำเนาของ-สำเนาของ-the-sand-khaolak-11": "g14_songthaew_mural",
 }
 
 
@@ -210,7 +217,8 @@ def process(path: Path):
 
 if __name__ == "__main__":
     names = sys.argv[1:]
-    files = [SRC / n for n in names] if names else sorted(SRC.glob("*.jpg"))
+    files = ([SRC / n for n in names] if names else
+             sorted(f for f in SRC.iterdir() if f.suffix.lower() in (".jpg", ".jpeg", ".png")))
     for f in files:
         print(f"\n=== {f.name}")
         process(f)
