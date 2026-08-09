@@ -1,2 +1,3 @@
 merch/**/*.png
 merch/*.log
+!merch/selected/*.png
