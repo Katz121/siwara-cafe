@@ -17,6 +17,14 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://siwaracafe.com/guide</loc>
+    <xhtml:link rel="alternate" hreflang="th" href="https://siwaracafe.com/guide"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://siwaracafe.com/guide?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siwaracafe.com/guide"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://siwaracafe.com/privacy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
