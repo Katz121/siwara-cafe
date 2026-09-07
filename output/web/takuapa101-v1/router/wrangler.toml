@@ -1,0 +1,15 @@
+name = "takuapa101-router"
+main = "src/index.js"
+compatibility_date = "2026-09-01"
+
+# Serves the Pages deployment under siwaracafe.com/takuapa/ so the pages live on
+# the main domain instead of a separate one.
+routes = [
+  { pattern = "siwaracafe.com/takuapa", zone_name = "siwaracafe.com" },
+  { pattern = "siwaracafe.com/takuapa/*", zone_name = "siwaracafe.com" },
+]
+
+[vars]
+PAGES_ORIGIN = "https://takuapa101.pages.dev"
+NEWS_WORKER = "https://takuapa101-news.workers.dev"
+BASE_PATH = "/takuapa"
