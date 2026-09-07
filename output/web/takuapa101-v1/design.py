@@ -233,7 +233,7 @@ def city_feed(ctx, limit_news=8):
         + '<div class="city-feed-grid">'
         + f'<div class="cf-stories"><h3 class="cf-title">เรื่องเล่าของเมือง</h3><div class="story-tiles">{left}</div>'
           '<a class="text-link" href="/stories/">อ่านเรื่องเล่าทั้งหมด ↗</a></div>'
-        + f'<div class="cf-news"><h3 class="cf-title">ความเคลื่อนไหวล่าสุด</h3><ol class="news-list">{right}</ol>'
+        + f'<div class="cf-news"><h3 class="cf-title">ความเคลื่อนไหวล่าสุด</h3><ol class="news-list" data-news-list data-news-max="4" data-news-keep="10">{right}</ol><p class="small" data-news-updated hidden></p>'
           '<a class="text-link" href="/news/">ดูความเคลื่อนไหวทั้งหมด ↗</a>'
           '<p class="small">รวบรวมจากข่าวสาธารณะ · ตรวจกำหนดการกับผู้จัดก่อนเดินทาง</p></div>'
         + '</div></section>')
@@ -255,5 +255,5 @@ def shell(path, html):
         bar += f'<a href="{href}"{cur}><span class="tb-glyph" aria-hidden="true">{glyph}</span>{label}{badge}</a>'
     bar += '</nav>'
     html = html.replace('</body>', bar + '</body>')
-    html = html.replace('</head>', '<link rel="stylesheet" href="/assets/ui.css"><script src="/assets/trip.js" defer></script><script src="/assets/search.js" defer></script><meta name="theme-color" content="#203f39"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"></head>')
+    html = html.replace('</head>', '<link rel="stylesheet" href="/assets/ui.css"><script src="/assets/trip.js" defer></script><script src="/assets/search.js" defer></script><script src="/assets/live-news.js" defer></script><meta name="theme-color" content="#203f39"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"></head>')
     return html

@@ -35,3 +35,8 @@ body.searchbox-open{overflow:hidden}
   body{padding-bottom:70px}
 }
 @media (prefers-reduced-motion:reduce){.searchbox-backdrop{backdrop-filter:none}}
+
+/* Auto-harvested news rows */
+.news-sum{font-size:.84rem;line-height:1.6;color:#55625a}
+.news-auto-tag{align-self:flex-start;font-size:.68rem;letter-spacing:.07em;padding:2px 8px;border-radius:999px;background:#efe6cd;color:#7a6234;border:1px solid rgba(122,98,52,.28)}
+.news-row.is-auto .news-date{color:#7a6234}
