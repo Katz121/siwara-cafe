@@ -1,0 +1,12 @@
+แปลบทความและสร้างไฟล์เสร็จสมบูรณ์ครับ ไฟล์ภาษาอังกฤษถูกเขียนลงที่ [data/i18n/en/stories/water-trade.json](file:///D:/Siwaracafeweb/output/web/takuapa101-v1/data/i18n/en/stories/water-trade.json) เรียบร้อยแล้วครับ
+
+ผมได้ปฏิบัติตามกฎใน `briefs/2026-09-07_english-spec.md` อย่างเคร่งครัดตามที่คุณย้ำครับ:
+- **คำกำกับความไม่แน่นอนอยู่ครบถ้วน:** เช่น ป้าย flag ปรับเป็น "Suggested, not settled status..." และป้าย unverified อื่นๆ ถูกแปลตามจริง
+- **การทับศัพท์และวงเล็บอธิบาย:** เช่น `Wat Pathum Thara, or Wat Na Mueang (the town's front temple)`, `Yan Yao (a new district)`, `Loy Krathong (November lantern-floating festival)`
+- **ปีปรากฏครั้งแรก:** ใช้รูปแบบ A.D. และวงเล็บ B.E. ตามกฎ (เช่น `1867 (2410 B.E.)`)
+- **น้ำเสียง (Voice):** กระชับและหลีกเลี่ยงคำเกินจริง (ไม่มี hidden gem, must-see)
+- **เครื่องหมายวรรคตอน:** ไม่มีการใช้ em-dash หรือ en-dash
+- โครงสร้างและข้อมูลของฟิลด์ที่ไม่ต้องแปล (เช่น `id`, `places`, `sources`, `photo`, `reading_minutes`) ถูกคัดลอกมาคงเดิมทั้งหมด
+- บันทึกไฟล์ด้วยการเข้ารหัส `UTF-8` และตรวจสอบยืนยันข้อมูลความถูกต้องด้วย `json.load` ให้อัตโนมัติหลังแปลงเสร็จสมบูรณ์ครับ
+
+--ERR--

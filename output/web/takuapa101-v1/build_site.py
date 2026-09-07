@@ -25,7 +25,7 @@ BASE = SITE_BASE_URL
 SOURCE = library['source_url']
 PAGES = []
 groups = [('วัด',[r['id'] for r in places if r['category']=='temple']),('ศาลเจ้าและโรงเจ',['guan-yu','pun-thao','kue-chai','rong-jae']),('ตึกเก่าและร่องรอยเมือง',['iron-bridge','governor-wall','khun-in','tao-ming']),('สวนและพื้นที่สาธารณะ',['phra-narai','thung-phra']),('ตลาด ถนน และของกิน',['riverwalk','culture-street','food-center']),('พิพิธภัณฑ์',['museum'])]
-routes = [('เส้นวัดและเจดีย์',groups[0][1]),('เส้นศาลเจ้าและโรงเจ',groups[1][1]),('เส้นตึกเก่าและตลาดริมน้ำ',['tao-ming','khun-in','governor-wall','culture-street','riverwalk','food-center'])]
+routes = [('เส้นวัดและเจดีย์',groups[0][1]),('เส้นศาลเจ้าและโรงเจ',groups[1][1]),('เส้นตึกเก่าและตลาดริมน้ำ',['tao-ming','khun-in','governor-wall','culture-street','riverwalk','food-center']), ('เดินสั้นจากบ้านไม้',['khun-in','tao-ming','guan-yu','iron-bridge'])]
 links = {'narai-ceremony':['phra-narai'],'vegetarian':groups[1][1],'relic-procession':['wat-boromthat'],'chak-phra':groups[0][1],'loy-krathong':['riverwalk'],'ruler-ceremony':['governor-wall'],'culture-street':['tao-ming','khun-in','iron-bridge','food-center']}
 if not (DATA/'links.json').exists(): (DATA/'links.json').write_text(json.dumps(links,ensure_ascii=False,indent=2),encoding='utf-8')
 links = json.loads((DATA/'links.json').read_text(encoding='utf-8'))
@@ -44,6 +44,7 @@ def pic(id, eager=False):
 def source(): return f'<aside class="source"><h2>ที่มาของข้อมูล</h2><p>เรียบเรียงจาก<a href="{SOURCE}">แผ่นพับเทศบาลเมืองตะกั่วป่า</a> · สกัดข้อมูล 6 กันยายน 2569 เอกสารไม่ระบุวันที่เผยแพร่ เวลาเปิด สถานะร้าน และกำหนดงานปัจจุบันยังไม่ได้ยืนยัน ควรตรวจสอบกับสถานที่ก่อนเดินทาง</p></aside>'
 nav=[('places','สถานที่'),('map','แผนที่'),('traditions','ประเพณี'),('eat','กินและของฝาก'),('routes','เส้นทางเดิน'),('trip','ทริปของคุณ'),('about','เกี่ยวกับ')]
 nav.insert(1, ('news', 'ความเคลื่อนไหว'))
+nav.insert(5, ('rest', 'พักเบรก'))
 nav.insert(0, ("stories", "เรื่องเล่าตะกั่วป่า"))
 def page(path,title,desc,body,record=None):
  body = design.transform(path, body, globals(), record)
@@ -62,7 +63,13 @@ def page(path,title,desc,body,record=None):
 def intro(title,desc): return f'<div class="intro"><a class="eyebrow" href="/">ตะกั่วป่า 101 / คู่มือเมืองเก่า</a><h1>{title}</h1><p class="lead">{desc}</p></div>'
 def cards(ids): return '<div class="places-grid">'+''.join(f'<article class="place"><a class="art" href="{url(byid[id])}">{pic(id)}</a><div><span class="eyebrow">{places.index(byid[id])+1:02d} / TAKUA PA</span><h3>{a(byid[id])}</h3><p>{copy[id]["kicker"]}</p></div></article>' for id in ids)+'</div>'
 def directory(): return ''.join(f'<section class="category" id="category-{i}"><div class="section-heading"><h2>{label}</h2><span>{len(ids):02d} แห่ง</span></div>{cards(ids)}</section>' for i,(label,ids) in enumerate(groups))
-def route_list(): return '<div class="route-list">'+''.join(f'<article id="route-{i}"><span class="number">0{i}</span><div><h3><a href="/routes/#route-{i}">{name} ↗</a></h3><p>'+ ' · '.join(a(byid[id]) for id in ids)+'</p></div></article>' for i,(name,ids) in enumerate(routes,1))+'</div>'
+def route_list(is_route_page=False):
+ out = '<div class="route-list">'
+ for i,(name,ids) in enumerate(routes,1):
+  desc = '<p>เหมาะกับคนมีเวลาครึ่งวัน</p>' if i == 4 and is_route_page else ''
+  out += f'<article id="route-{i}"><span class="number">0{i}</span><div><h3><a href="/routes/#route-{i}">{name} ↗</a></h3>{desc}<p>'+ ' · '.join(a(byid[id]) for id in ids)+'</p></div></article>'
+ out += '</div>'
+ return out
 roads=[('ถนนเพชรเกษม','M 413,90 L 450,120 L 450,477 L 400,565 Q 390,655 480,680 L 600,717'),('ถนนเสนารัฐ','M 407,250 L 636,230 L 907,211'),('ถนนศรีเมือง','M 449,373 Q 600,400 781,382'),('ถนนศรีมนตรี','M 625,30 L 633,230 L 643,384'),('ถนนมนตรี 2','M 633,310 L 679,300 L 774,320'),('ถนนเสนานุชิต','M 180,891 Q 420,1020 480,930 Q 475,893 516,908'),('ถนนศรีตะกั่วป่า','M 785,400 L 789,520 L 735,709 Q 749,755 701,828 L 590,900 L 584,1210'),('ถนนอุดมธารา','M 521,908 L 700,828'),('ถนนบรมธาตุ','M 350,980 L 380,1040 Q 420,1055 514,1037'),('ถนนหน้าเมือง','M 584,1150 Q 716,1117 764,1045'),('ถนนเกี่ยวข้าว','M 277,510 L 400,565'),('ซอยศรีมนตรี','M 679,300 L 674,384'),('ซอยหิรัณย์','M 741,310 L 739,384'),('ซอยรวงผึ้ง','M 470,684 Q 453,793 401,855')]
 linework=''.join(f'<path id="road-{i}" d="{d}"/>' for i,(_,d) in enumerate(roads))
 labels=''.join(f'<text><textPath href="#road-{i}" startOffset="12%">{name}</textPath></text>' for i,(name,_) in enumerate(roads))
@@ -89,14 +96,97 @@ page('/traditions/','ประเพณีตลอดปี','กิจกร�
 for r in events:
  body=intro(r['name_th'],period(r))+'<div class="detail"><h2>ช่วงเวลาจากเอกสาร</h2><p>'+period(r)+'</p><p>รายการนี้ปรากฏในหมวดกิจกรรมและประเพณีของแผ่นพับเทศบาลเมืองตะกั่วป่า ช่วงเวลาข้างต้นเป็นข้อมูลจากเอกสาร ยังไม่ใช่กำหนดการยืนยันของปีปัจจุบัน</p>'+('<h2>สถานที่ที่เกี่ยวข้อง</h2><ul>'+''.join(f'<li>{a(byid[id])}</li>' for id in links.get(r['id'],[]))+'</ul>' if links.get(r['id']) else '')+source()+'</div>'
  page(url(r),r['name_th'],r['name_th']+' · '+period(r)+' ตามเอกสารเทศบาลเมืองตะกั่วป่า',body,r)
-page('/routes/','เส้นทางเดินอ่านเมือง','เลือกจุดแวะตามเรื่องวัดและเจดีย์ ศาลเจ้า หรือตึกเก่าและตลาดริมน้ำ',intro('เส้นทางเดินอ่านเมือง','สามชุดจุดหมายให้เลือกตามความสนใจ')+'<p class="measure">รายการนี้จัดกลุ่มสถานที่ตามเรื่องราว ไม่กำหนดเวลาเดินหรือระยะทาง ใช้แผนที่ประกอบการเลือกจุดแวะ และตรวจสอบการเข้าชมก่อนออกเดินทาง</p>'+route_list()+map_preview()+source())
+page('/routes/','เส้นทางเดินอ่านเมือง','เลือกจุดแวะตามเรื่องวัดและเจดีย์ ศาลเจ้า หรือตึกเก่าและตลาดริมน้ำ',intro('เส้นทางเดินอ่านเมือง','สามชุดจุดหมายให้เลือกตามความสนใจ')+'<p class="measure">รายการนี้จัดกลุ่มสถานที่ตามเรื่องราว ไม่กำหนดเวลาเดินหรือระยะทาง ใช้แผนที่ประกอบการเลือกจุดแวะ และตรวจสอบการเข้าชมก่อนออกเดินทาง</p>'+route_list(True)+map_preview()+source())
 shopgroups=[('restaurant','ร้านอาหาร'),('drink_shop','เครื่องดื่ม'),('souvenir_shop','ของฝาก')]
 shophtml=''.join(f'<section class="shop-group" data-category="{cat}"><h2>{label} <span class="count">{sum(r["category"]==cat for r in shops)}</span></h2><ol class="shop-list">'+''.join(f'<li id="{r["id"]}" data-shop="{esc(r["name_th"])}"><span class="shop-number">{r["source_list_number"]:02d}</span><span>{esc(r["name_th"])}</span></li>' for r in shops if r['category']==cat)+'</ol></section>' for cat,label in shopgroups)
 page('/eat/','กินและของฝาก','ค้นหารายชื่อร้านอาหาร เครื่องดื่ม และของฝาก 59 ร้าน ตามแผ่นพับเทศบาลเมืองตะกั่วป่า',intro('กินและของฝากในย่าน','59 รายชื่อจากแผ่นพับเทศบาลเมืองตะกั่วป่า')+'<p>รายชื่อและลำดับตามเอกสารต้นทาง ยังไม่ได้ยืนยันสถานะการเปิดร้านในปัจจุบัน</p><div class="filters"><label>ค้นหาชื่อร้าน<input id="shop-search" type="search" placeholder="พิมพ์ชื่อร้านที่ต้องการ"></label><label>หมวดหมู่<select id="shop-category"><option value="all">ทุกร้าน</option>'+''.join(f'<option value="{cat}">{label}</option>' for cat,label in shopgroups)+'</select></label></div><p id="results" role="status" aria-live="polite">แสดง 59 ร้าน</p><p id="empty" hidden>ไม่พบรายชื่อ ลองเปลี่ยนคำค้นหรือเลือกหมวดอื่น</p>'+shophtml+source())
 table='<table><caption>รายชื่อจุดบนผัง</caption><thead><tr><th>หมายเลข</th><th>สถานที่</th><th>ตำแหน่งในต้นทาง</th></tr></thead><tbody>'+''.join(f'<tr><td>{places.index(byid[p["id"]])+1:02d}</td><td>{a(byid[p["id"]])}</td><td>{"ปรากฏในแผนที่" if p["x"] is not None else "ไม่ปรากฏตำแหน่ง"}</td></tr>' for p in points)+'</tbody></table>'
 page('/map/','แผนที่ย่านเก่า','ผังถนนและสถานที่จากแผนที่เทศบาลเมืองตะกั่วป่า พร้อมรายชื่อจุดและแผนที่ต้นทาง',intro('แผนที่ย่านเก่า','ถนน สายน้ำ และจุดหมายที่เชื่อมเรื่องราวของเมือง')+f'<p class="measure">{caption}</p><details class="map-panel"><summary>ดูเป็นผังแผนที่ · 14 จุดจากต้นทาง</summary><div class="map-scroll">{map_svg()}</div></details>'+table+'<h2>เทียบกับแผนที่ต้นทาง</h2><p>แสดงเฉพาะหมุดสถานที่ที่จับคู่ได้ชัดเจน หมายเลขร้านบนภาพต้นทางยังไม่ได้จับคู่เป็นหมุดในผังนี้</p><a class="text-link" href="/assets/municipal-map.png">เปิดภาพแผนที่เทศบาลฉบับเต็ม ↗</a>'+source())
-page('/about/','ข้อมูลนี้มาจากไหน','ที่มาของคู่มือเมืองเก่าตะกั่วป่า ความสัมพันธ์กับบ้านศิวรา และขอบเขตข้อมูลจากแผ่นพับเทศบาล',intro('ข้อมูลนี้มาจากไหน','รู้จักเมือง พร้อมรู้ที่มาของเรื่องที่อ่าน')+'<div class="detail"><h2>คู่มือจากบ้านศิวรา</h2><p>ตะกั่วป่า 101 จัดทำโดย <a href="https://siwaracafe.com/">บ้านศิวรา</a> ในตะกั่วป่า เพื่อรวบรวมเรื่องสถานที่ ประเพณี และร้านค้าในเมืองให้อ่านต่อกันได้</p><h2>ข้อมูลที่นำมาใช้</h2><p>แผ่นพับเทศบาลเมืองตะกั่วป่าเป็นต้นทางของข้อมูลสถานที่ 20 แห่ง ประเพณี 7 รายการ และรายชื่อร้าน 59 แห่ง รวม 86 รายการ สกัดเมื่อ 6 กันยายน 2569</p><h2>ก่อนออกเดินทาง</h2><p>เอกสารต้นทางไม่ระบุวันที่เผยแพร่ เว็บไซต์จึงยังไม่ยืนยันเวลาเปิด ค่าเข้า สถานะร้าน หรือกำหนดการจัดงานปัจจุบัน ควรติดต่อสถานที่หรือเทศบาลเพื่อยืนยันรายละเอียดก่อนเดินทาง</p><h2>อ่านผังอย่างไร</h2><p>'+caption+'</p><p>จับคู่สถานที่ได้ 14 แห่ง ส่วนอีก 6 แห่งแสดงในรายชื่อโดยไม่เติมตำแหน่งขึ้นเอง</p>'+source()+'</div>')
+about_jsonld = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ศิวรา คาเฟ่",
+    "sameAs": ["https://siwaracafe.com/"]
+  }
+]
+about_html = intro('ข้อมูลนี้มาจากไหน','รู้จักเมือง พร้อมรู้ที่มาของเรื่องที่อ่าน') + f'<div class="detail"><h2>คู่มือจากบ้านศิวรา</h2><p>ตะกั่วป่า 101 จัดทำโดย <a href="https://siwaracafe.com/">บ้านศิวรา</a> ในตะกั่วป่า เพื่อรวบรวมเรื่องสถานที่ ประเพณี และร้านค้าในเมืองให้อ่านต่อกันได้</p><p>ศิวรา คาเฟ่ เป็นบ้านไม้สักหลังหนึ่งในย่านตลาดเก่า สังเกตได้จากจั่วไม้ กระจกสี และบานประตูไม้เก่าแบบดั้งเดิม ตั้งอยู่ที่ 53 ถนนราษฎร์บำรุง โดยเราตั้งใจให้บ้านไม้หลังนี้พาผู้คนไปรู้จักเมืองให้ลึกซึ้งขึ้น</p><h2>ข้อมูลที่นำมาใช้</h2><p>แผ่นพับเทศบาลเมืองตะกั่วป่าเป็นต้นทางของข้อมูลสถานที่ 20 แห่ง ประเพณี 7 รายการ และรายชื่อร้าน 59 แห่ง รวม 86 รายการ สกัดเมื่อ 6 กันยายน 2569</p><h2>ก่อนออกเดินทาง</h2><p>เอกสารต้นทางไม่ระบุวันที่เผยแพร่ เว็บไซต์จึงยังไม่ยืนยันเวลาเปิด ค่าเข้า สถานะร้าน หรือกำหนดการจัดงานปัจจุบัน ควรติดต่อสถานที่หรือเทศบาลเพื่อยืนยันรายละเอียดก่อนเดินทาง</p><h2>อ่านผังอย่างไร</h2><p>'+caption+'</p><p>จับคู่สถานที่ได้ 14 แห่ง ส่วนอีก 6 แห่งแสดงในรายชื่อโดยไม่เติมตำแหน่งขึ้นเอง</p>'+source()+'</div>'
+about_html += f'<script type="application/ld+json">{json.dumps(about_jsonld, ensure_ascii=False).replace("</", "<\\/")}</script>'
+page('/about/','ข้อมูลนี้มาจากไหน','ที่มาของคู่มือเมืองเก่าตะกั่วป่า ความสัมพันธ์กับบ้านศิวรา และขอบเขตข้อมูลจากแผ่นพับเทศบาล', about_html)
 page('/trip/','ทริปของคุณ','เลือกจุดหมายในเมืองเก่าตะกั่วป่า แล้วจัดเป็นเส้นทางเดินของคุณเอง','<div id="trip-app"></div><noscript><p>ต้องเปิด JavaScript เพื่อใช้งานจัดทริป หรือเลือกดู<a href="/places/">สถานที่ทั้งหมด</a>และ<a href="/map/">แผนที่</a></p></noscript>')
+def render_rest():
+    extra_shops = json.loads((DATA/'shops-extra.json').read_text(encoding='utf-8'))
+    all_shops = shops + extra_shops
+    rest_stops = [r for r in all_shops if r['category'] == 'drink_shop' and (r.get('near_old_town') == True or r.get('subdistrict') == 'ตะกั่วป่า')]
+    rest_stops.sort(key=lambda x: x['name_th'])
+    
+    html = intro('พักเบรกระหว่างเดินเมืองเก่า', 'จุดนั่งพัก ห้องน้ำ และร้านเครื่องดื่มระหว่างเดินเมืองเก่าตะกั่วป่า')
+    html += '<p>เมืองเก่าเดินได้ทั้งย่านแต่ร่มน้อย ช่วงบ่ายแดดแรง การมีจุดพักช่วยให้เดินได้ครบ</p>'
+    
+    html += '<h2>จุดพักในย่าน</h2><div class="rest-stops">'
+    json_ld_list = []
+    for i, r in enumerate(rest_stops):
+        gmap = f'<a href="{esc(r["maps_search_url"])}" target="_blank" rel="noopener">หาบน Google Maps</a>' if r.get('maps_search_url') else ''
+        hours = f'<p>เวลาเปิด: {esc(r["hours_th"])}</p>' if r.get('hours_th') else 'ตรวจสอบจากช่องทางร้านก่อนมา'
+        desc = f'<p>{esc(r.get("one_liner_th") or "")}</p>'
+        html += f'<article class="rest-stop"><h3>{esc(r["name_th"])}</h3>{desc}{hours}{gmap}</article>'
+        item_type = "Place" if r['id'] == 'siwara-cafe' else "LocalBusiness"
+        if r['id'] != 'siwara-cafe': # Rule: ห้ามใส่ schema Restaurant หรือ LocalBusiness ของศิวราในหน้านี้ ให้ใช้ sameAs ในหน้า /about/ แทน
+            json_ld_list.append({
+                "@type": "ListItem",
+                "position": len(json_ld_list) + 1,
+                "item": {
+                    "@type": item_type,
+                    "name": r["name_th"],
+                    "url": r.get("website") or r.get("maps_search_url") or f"{BASE}/rest/"
+                }
+            })
+    html += '</div>'
+    
+    html += '''
+    <h2>บ้านไม้ที่ทำคู่มือเล่มนี้</h2>
+    <div class="siwara-card">
+        <p>เว็บไซต์นี้จัดทำโดยศิวรา คาเฟ่ บ้านไม้สัก จั่วไม้ กระจกสี ประตูบานเก่า ที่อยู่ 53 ถนนราษฎร์บำรุง ย่านตลาดเก่า</p>
+        <a href="https://siwaracafe.com/" target="_blank" rel="noopener">รู้จักบ้านศิวราผู้จัดทำคู่มือ ↗</a>
+    </div>
+    '''
+    
+    html += '<h2>เส้นทางเดินสั้นจากบ้านไม้</h2>'
+    walk_points = [
+        ('khun-in', 'หลังคาระเบียงและช่องเปิด'),
+        ('tao-ming', 'หน้าจั่วและระเบียงสีเหลือง'),
+        ('guan-yu', 'ประตูและรายละเอียดสีแดง'),
+        ('iron-bridge', 'โครงเหล็กและภูมิทัศน์ริมน้ำ')
+    ]
+    html += '<div class="short-walk">'
+    for pid, focus in walk_points:
+        html += f'<article class="walk-point"><a href="{url(byid[pid])}">{pic(pid)}</a><div><h3>{a(byid[pid])}</h3><p>ชวนมอง: {focus}</p><button data-trip-add="{pid}">เพิ่มลงทริป</button></div></article>'
+    html += '</div>'
+    
+    html += '<p>วางแผนต่อ: <a href="/trip/">จัดทริปของคุณ ↗</a> · <a href="/map/">ดูแผนที่เมือง ↗</a></p>'
+    html += source()
+    
+    json_ld = [
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "หน้าแรก", "item": BASE + "/"},
+                {"@type": "ListItem", "position": 2, "name": "พักเบรกระหว่างเดินเมืองเก่า", "item": BASE + "/rest/"}
+            ]
+        }
+    ]
+    if json_ld_list:
+        json_ld.append({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "itemListElement": json_ld_list
+        })
+    html += f'<script type="application/ld+json">{json.dumps(json_ld, ensure_ascii=False).replace("</", "<\\/")}</script>'
+    return html
+
+page('/rest/', 'พักเบรกระหว่างเดินเมืองเก่า', 'จุดนั่งพัก ห้องน้ำ และร้านเครื่องดื่มระหว่างเดินเมืองเก่าตะกั่วป่า', render_rest())
+
 (OUT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join(f'<url><loc>{esc(BASE+p)}</loc><lastmod>{date.today().isoformat()}</lastmod></url>' for p in PAGES)+'</urlset>',encoding='utf-8')
 (OUT/'robots.txt').write_text('User-agent: *\nAllow: /\nSitemap: '+BASE+'/sitemap.xml\n',encoding='utf-8')
 
@@ -160,6 +250,79 @@ page('/stories/','เรื่องเล่าตะกั่วป่า','�
 for story in stories.get_all_stories():
  route = story.get('route') or f"/stories/{story['id']}/"
  page(route, story['title'], story['dek'], stories.article(story, {'byid': byid}))
+def render_rest():
+    extra_shops = json.loads((DATA/'shops-extra.json').read_text(encoding='utf-8'))
+    all_shops = shops + extra_shops
+    rest_stops = [r for r in all_shops if r['category'] == 'drink_shop' and (r.get('near_old_town') == True or r.get('subdistrict') == 'ตะกั่วป่า')]
+    rest_stops.sort(key=lambda x: x['name_th'])
+    
+    html = intro('พักเบรกระหว่างเดินเมืองเก่า', 'จุดนั่งพัก ห้องน้ำ และร้านเครื่องดื่มระหว่างเดินเมืองเก่าตะกั่วป่า')
+    html += '<p>เมืองเก่าเดินได้ทั้งย่านแต่ร่มน้อย ช่วงบ่ายแดดแรง การมีจุดพักช่วยให้เดินได้ครบ</p>'
+    
+    html += '<h2>จุดพักในย่าน</h2><div class="rest-stops">'
+    json_ld_list = []
+    for i, r in enumerate(rest_stops):
+        gmap = f'<a href="{esc(r["maps_search_url"])}" target="_blank" rel="noopener">หาบน Google Maps</a>' if r.get('maps_search_url') else ''
+        hours = f'<p>เวลาเปิด: {esc(r["hours_th"])}</p>' if r.get('hours_th') else 'ตรวจสอบจากช่องทางร้านก่อนมา'
+        desc = f'<p>{esc(r.get("one_liner_th") or "")}</p>'
+        html += f'<article class="rest-stop"><h3>{esc(r["name_th"])}</h3>{desc}{hours}{gmap}</article>'
+        item_type = "Place" if r['id'] == 'siwara-cafe' else "LocalBusiness"
+        if r['id'] != 'siwara-cafe': # Rule: ห้ามใส่ schema Restaurant หรือ LocalBusiness ของศิวราในหน้านี้ ให้ใช้ sameAs ในหน้า /about/ แทน
+            json_ld_list.append({
+                "@type": "ListItem",
+                "position": len(json_ld_list) + 1,
+                "item": {
+                    "@type": item_type,
+                    "name": r["name_th"],
+                    "url": r.get("website") or r.get("maps_search_url") or f"{BASE}/rest/"
+                }
+            })
+    html += '</div>'
+    
+    html += '''
+    <h2>บ้านไม้ที่ทำคู่มือเล่มนี้</h2>
+    <div class="siwara-card">
+        <p>เว็บไซต์นี้จัดทำโดยศิวรา คาเฟ่ บ้านไม้สัก จั่วไม้ กระจกสี ประตูบานเก่า ที่อยู่ 53 ถนนราษฎร์บำรุง ย่านตลาดเก่า</p>
+        <a href="https://siwaracafe.com/" target="_blank" rel="noopener">รู้จักบ้านศิวราผู้จัดทำคู่มือ ↗</a>
+    </div>
+    '''
+    
+    html += '<h2>เส้นทางเดินสั้นจากบ้านไม้</h2>'
+    walk_points = [
+        ('khun-in', 'หลังคาระเบียงและช่องเปิด'),
+        ('tao-ming', 'หน้าจั่วและระเบียงสีเหลือง'),
+        ('guan-yu', 'ประตูและรายละเอียดสีแดง'),
+        ('iron-bridge', 'โครงเหล็กและภูมิทัศน์ริมน้ำ')
+    ]
+    html += '<div class="short-walk">'
+    for pid, focus in walk_points:
+        html += f'<article class="walk-point"><a href="{url(byid[pid])}">{pic(pid)}</a><div><h3>{a(byid[pid])}</h3><p>ชวนมอง: {focus}</p><button data-trip-add="{pid}">เพิ่มลงทริป</button></div></article>'
+    html += '</div>'
+    
+    html += '<p>วางแผนต่อ: <a href="/trip/">จัดทริปของคุณ ↗</a> · <a href="/map/">ดูแผนที่เมือง ↗</a></p>'
+    html += source()
+    
+    json_ld = [
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "หน้าแรก", "item": BASE + "/"},
+                {"@type": "ListItem", "position": 2, "name": "พักเบรกระหว่างเดินเมืองเก่า", "item": BASE + "/rest/"}
+            ]
+        }
+    ]
+    if json_ld_list:
+        json_ld.append({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "itemListElement": json_ld_list
+        })
+    html += f'<script type="application/ld+json">{json.dumps(json_ld, ensure_ascii=False).replace("</", "<\\/")}</script>'
+    return html
+
+page('/rest/', 'พักเบรกระหว่างเดินเมืองเก่า', 'จุดนั่งพัก ห้องน้ำ และร้านเครื่องดื่มระหว่างเดินเมืองเก่าตะกั่วป่า', render_rest())
+
 (OUT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join(f'<url><loc>{esc(BASE+p)}</loc><lastmod>{date.today().isoformat()}</lastmod></url>' for p in PAGES)+'</urlset>',encoding='utf-8')
 for name in ['NotoSerifThai','IBMPlexSansThaiLooped-Regular','CormorantGaramond']:
  target=OUT/f'assets/{name}.woff2'

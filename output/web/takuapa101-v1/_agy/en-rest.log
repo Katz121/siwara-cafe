@@ -1,0 +1,5 @@
+jobs=6
+  story-city: rc=0
+  story-architecture: rc=0
+  story-food-people: rc=0
+  story-water-trade: rc=0

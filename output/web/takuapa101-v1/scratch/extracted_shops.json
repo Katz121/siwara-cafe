@@ -1,0 +1,296 @@
+[
+  {
+    "id": "siwara-cafe",
+    "name_th": "ศิวรา คาเฟ่",
+    "name_en": "Siwara Cafe",
+    "one_liner_th": "คาเฟ่ในตะกั่วป่า ผู้จัดทำคู่มือเมืองเล่มนี้"
+  },
+  {
+    "id": "baan-bai",
+    "name_th": "บ้านใบ",
+    "name_en": null,
+    "one_liner_th": null
+  },
+  {
+    "id": "pa-daeng-khanom-wan",
+    "name_th": "ป้าแดงขนมหวาน",
+    "name_en": "Pa Daeng Khanom Wan",
+    "one_liner_th": "ร้านขนมหวานไทยดั้งเดิมรสชาติเข้มข้น ราคาเป็นกันเองในย่านตลาดลานโล่ง"
+  },
+  {
+    "id": "khanom-jeen-pa-mom",
+    "name_th": "ขนมจีนป้าม่อม",
+    "name_en": "Khanom Jeen Pa Mom",
+    "one_liner_th": "ร้านขนมจีนตำนานคู่ตะกั่วป่า มีน้ำยาให้เลือกถึง 8 ชนิดพร้อมผักเหนาะจัดเต็ม"
+  },
+  {
+    "id": "khanom-jeen-phi-neng",
+    "name_th": "ขนมจีนพี่เหน่ง",
+    "name_en": "Khanom Jeen Phi Neng",
+    "one_liner_th": "ขนมจีนรสเด็ดในตลาดลานโล่ง เติมผักสดผักดองได้ไม่อั้น ราคาประหยัด"
+  },
+  {
+    "id": "khanom-jeen-nai-na",
+    "name_th": "ขนมจีนในนา",
+    "name_en": "Khanom Jeen Nai Na",
+    "one_liner_th": "ร้านขนมจีนบรรยากาศร่มรื่นกลางสวนปาล์ม ขายแบบเป็นชุดพร้อมน้ำยาหลากหลาย"
+  },
+  {
+    "id": "mata-coffee-and-bakery",
+    "name_th": "มาตา Coffee And Bakery",
+    "name_en": "Mata Coffee And Bakery",
+    "one_liner_th": "ร้านเบเกอรี่และกาแฟบรรยากาศสบายๆ โดดเด่นด้วยเค้กโฮมเมดทำสดใหม่"
+  },
+  {
+    "id": "the-eighth-room",
+    "name_th": "The Eighth Room",
+    "name_en": "The Eighth Room",
+    "one_liner_th": "คาเฟ่สไตล์ลอฟท์ย่านเขาหลัก มีเมนูครบทั้งอาหารคาว ขนมหวาน และชาเขียวมัทฉะ"
+  },
+  {
+    "id": "delicacy-khaolak",
+    "name_th": "Delicacy Khaolak",
+    "name_en": "Delicacy Khaolak",
+    "one_liner_th": "คาเฟ่และเบเกอรี่ตกแต่งสไตล์บาหลี โดดเด่นด้วยขนมอบโฮมเมดและบรรยากาศอบอุ่น"
+  },
+  {
+    "id": "garang-khao-lak",
+    "name_th": "การัง เขาหลัก",
+    "name_en": "Garang Khao Lak",
+    "one_liner_th": "คาเฟ่ชื่อดังดีไซน์ล้ำสมัย ขึ้นชื่อเรื่องไอศกรีมโฮมเมดที่มีให้เลือกกว่าร้อยรสชาติ"
+  },
+  {
+    "id": "baan-khanom-arom-dee",
+    "name_th": "บ้านขนมอารมณ์ดี",
+    "name_en": "Baan Khanom Arom Dee",
+    "one_liner_th": "คาเฟ่สไตล์มินิมอลที่มีเค้กเนื้อนุ่มละมุนลิ้น และรับทำเค้กตามโอกาสพิเศษต่างๆ"
+  },
+  {
+    "id": "ocean-man-cafe",
+    "name_th": "โอเชี่ยน แมน คาเฟ่",
+    "name_en": "Ocean Man Café",
+    "one_liner_th": "คาเฟ่สไตล์มินิมอลอิฐแดงรูปเกลียวคลื่น มีเบเกอรี่โฮมเมดและสามารถนำสัตว์เลี้ยงเข้าโซนเอาท์ดอร์ได้"
+  },
+  {
+    "id": "la-malila-cafe",
+    "name_th": "ลา มะลิลา คาเฟ่",
+    "name_en": "La Malila Café",
+    "one_liner_th": "คาเฟ่บรรยากาศเรียบหรูย่านหาดบางเนียง โดดเด่นด้วยกาแฟคั่วเองและเบเกอรี่อบสดใหม่"
+  },
+  {
+    "id": "pa-fon-khanom-wan",
+    "name_th": "ป้าฝนขนมหวาน",
+    "name_en": "Pa Fon Khanom Wan",
+    "one_liner_th": "ร้านขนมหวานไทยพื้นเมืองที่มีหลากหลายเมนูตั้งอยู่ในตลาดเจ๊มุก"
+  },
+  {
+    "id": "the-eighth-room-by-mata-cafe",
+    "name_th": "ดิ เอท รูม บาย มาตาคาเฟ่",
+    "name_en": "The Eighth Room by mata cafe",
+    "one_liner_th": "คาเฟ่สไตล์โคซี่ในย่านเขาหลัก มีเมนูบรันช์ วาฟเฟิลโฮมเมด และเครื่องดื่มหลากหลาย"
+  },
+  {
+    "id": "garang-artisan-icecream",
+    "name_th": "การัง คาเฟ่",
+    "name_en": "Garang Artisan Icecream",
+    "one_liner_th": "ร้านไอศกรีมโฮมเมดและคาเฟ่ริมหาดบางสัก โดดเด่นด้วยการตกแต่งสไตล์โมร็อกโกและรสชาติไอศกรีมที่ใช้วัตถุดิบท้องถิ่น"
+  },
+  {
+    "id": "yellow-snail-cafe-gallery",
+    "name_th": "เยลโลว์ สเนล คาเฟ่ แอนด์ แกลลอรี่",
+    "name_en": "Yellow Snail Cafe & Gallery",
+    "one_liner_th": "คาเฟ่สไตล์ปูนเปลือยในย่านเขาหลัก โดดเด่นเรื่องกาแฟและการจัดแสดงงานศิลปะ"
+  },
+  {
+    "id": "mahamitr-cafe",
+    "name_th": "มาหามิตร คาเฟ่",
+    "name_en": "Mahamitr Cafe",
+    "one_liner_th": "คาเฟ่สไตล์ดาร์กมินิมอลท่ามกลางสวนปาล์มร่มรื่น มีลานเซิร์ฟสเก็ตและเสิร์ฟอาหารจานเดียว"
+  },
+  {
+    "id": "trok-ca-fe",
+    "name_th": "ตรอกคาเฟ่",
+    "name_en": "TROK CA'FE",
+    "one_liner_th": "ร้านกาแฟลับสุดวินเทจที่ซ่อนตัวอยู่ในตรอกเมืองเก่าตะกั่วป่า ให้บรรยากาศดิบเท่ท่ามกลางซากตึกร้อยปี"
+  },
+  {
+    "id": "tribe-khaolak",
+    "name_th": "ไทรบ์ เขาหลัก",
+    "name_en": "Tribe.Khaolak",
+    "one_liner_th": "คาเฟ่และร้านบรันช์สไตล์โฮมมี่บรรยากาศอบอุ่น เป็นมิตรกับสัตว์เลี้ยง ช่วงค่ำเปิดเป็นบาร์"
+  },
+  {
+    "id": "valhalla-villas-teahouse",
+    "name_th": "วัลฮัลลา วิลล่า แอนด์ ทีเฮาส์",
+    "name_en": "Valhalla Villas & Teahouse",
+    "one_liner_th": "คาเฟ่สไตล์มินิมอลบนเนินเขาเขาหลัก โดดเด่นด้วยกระจกบานใหญ่ที่มองเห็นวิวทะเลอันดามันแบบพาโนรามา"
+  },
+  {
+    "id": "karkinos-khao-lak",
+    "name_th": "คาคีนอส เขาหลัก",
+    "name_en": "KARKINOS KHAO LAK",
+    "one_liner_th": "บีชคลับและร้านอาหารอิตาเลียนริมหาดปะการัง บรรยากาศโอเพ่นแอร์เหมาะแก่การชมพระอาทิตย์ตก"
+  },
+  {
+    "id": "underground-tea-cafe",
+    "name_th": "อันเดอร์กราวด์ ที คาเฟ่",
+    "name_en": "Underground Tea Cafe",
+    "one_liner_th": "คาเฟ่ชาไข่มุกสไตล์ลอฟต์ดิบเท่ ซ่อนตัวอยู่ชั้นใต้ดินร้านก๋วยเตี๋ยวในย่านเมืองเก่า"
+  },
+  {
+    "id": "unnamed-khaolak",
+    "name_th": "อันเนม เขาหลัก",
+    "name_en": "Unnamed Khaolak",
+    "one_liner_th": "โฮมมี่คาเฟ่ในบ้านสีขาวสไตล์สมาคมชาวเซิร์ฟ เสิร์ฟบรันช์และกาแฟคั่วสดใหม่"
+  },
+  {
+    "id": "tubtim-dimsum",
+    "name_th": "ทับทิม ติ่มซำ",
+    "name_en": "Tubtim Dimsum",
+    "one_liner_th": "ร้านอาหารเช้าและติ่มซำบรรยากาศดี ท่ามกลางสวนดอกไม้และต้นไม้ร่มรื่น"
+  },
+  {
+    "id": "kai-tong-dimsum",
+    "name_th": "ไก่โต้ง อาหารเช้า",
+    "name_en": "Kai Tong Dimsum",
+    "one_liner_th": "ร้านติ่มซำนึ่งสดและอาหารเช้ายอดนิยมของคนท้องถิ่นและนักท่องเที่ยว"
+  },
+  {
+    "id": "punthong-dimsum",
+    "name_th": "ปั้นทองติ่มซำ",
+    "name_en": "Punthong Dimsum",
+    "one_liner_th": "ร้านติ่มซำนึ่งสดกว่า 60 เมนู เลือกจากตู้ให้พนักงานนึ่งร้อนๆ บริการรวดเร็ว"
+  },
+  {
+    "id": "hua-ta-bistro",
+    "name_th": "หัวท่า บิสโทร",
+    "name_en": "Hua Ta Bistro",
+    "one_liner_th": "ร้านอาหารฟิวชั่นในบ้านเก่า ตกแต่งสไตล์วินเทจย้อนยุคเมืองตะกั่วป่า"
+  },
+  {
+    "id": "ice-tae-cha-chak",
+    "name_th": "ไอซ์แต ชาชัก & ชาระบำ",
+    "name_en": "Ice Tae Cha Chak",
+    "one_liner_th": "ร้านอาหารฮาลาลและเครื่องดื่มยามเย็น โดดเด่นด้วยลีลาชาชักและโรตีภูเขาไฟ"
+  },
+  {
+    "id": "lert-ocha",
+    "name_th": "เลิศโอชา",
+    "name_en": "Lert Ocha",
+    "one_liner_th": "ร้านอาหารเช้าสไตล์โกปี้เตี๊ยมเก่าแก่ของตะกั่วป่า สัมผัสวิถีชีวิตดั้งเดิม"
+  },
+  {
+    "id": "krua-luang-ten",
+    "name_th": "ครัวหลวงเทน",
+    "name_en": "Krua Luang Ten",
+    "one_liner_th": "ร้านอาหารใต้รสจัดจ้านระดับมิชลินไกด์ นิยามตัวเองว่าหรอยที่สุดในเมืองมนุษย์"
+  },
+  {
+    "id": "khrua-nong",
+    "name_th": "ครัวน้อง",
+    "name_en": "Khrua Nong",
+    "one_liner_th": "ร้านอาหารใต้ไซส์มินิแต่รสชาติระดับมิชลินไกด์ แนะนำใบเหลียงผัดไข่ใส่กุ้งเสียบ"
+  },
+  {
+    "id": "yim-yim-restaurant",
+    "name_th": "ยิ้ม ยิ้ม ชวนชิม",
+    "name_en": "Yim Yim Restaurant",
+    "one_liner_th": "ร้านอาหารพื้นบ้านระดับตำนานเปิดมากว่า 30 ปี ผสมผสานอาหารจีนและใต้ได้อย่างลงตัว"
+  },
+  {
+    "id": "timbre",
+    "name_th": "ทิมเบอร์",
+    "name_en": "Timbre",
+    "one_liner_th": "ร้านอาหารกึ่งบาร์บรรยากาศดี มีดนตรีสด เหมาะสำหรับนั่งชิลล์ยามค่ำคืน"
+  },
+  {
+    "id": "khrua-ko-yot",
+    "name_th": "ครัวโก้ยศ",
+    "name_en": "Khrua Ko Yot",
+    "one_liner_th": "ร้านอาหารใต้และตามสั่งยอดฮิต รสชาติจัดจ้าน ราคาเป็นมิตร"
+  },
+  {
+    "id": "khonkon-kitchen",
+    "name_th": "ครัวฅนคอน",
+    "name_en": "Khonkon Kitchen",
+    "one_liner_th": "ร้านอาหารพื้นบ้านปักษ์ใต้สไตล์ครอบครัว นั่งซุ้มไม้ไผ่บรรยากาศสบาย"
+  },
+  {
+    "id": "karkinos-khaolak",
+    "name_th": "คาร์คินอส",
+    "name_en": "KARKINOS Khaolak",
+    "one_liner_th": "บีชคลับและร้านอาหารอิตาเลียนริมหาดปะการัง บรรยากาศชิลล์ชมพระอาทิตย์ตก"
+  },
+  {
+    "id": "the-eighth-room-by-mata-cafe-2",
+    "name_th": "ดิ เอทธ์ รูม",
+    "name_en": "The Eighth Room by mata cafe",
+    "one_liner_th": "คาเฟ่สไตล์โคซี่ริมถนนเขาหลัก บรรยากาศอบอุ่น มี All Day Breakfast และขนมโฮมเมด"
+  },
+  {
+    "id": "swell-cafe",
+    "name_th": "สเวลล์ คาเฟ่",
+    "name_en": "Swell Cafe",
+    "one_liner_th": "คาเฟ่สไตล์โฮมมี่รับลมทะเล เป็นมิตรกับเด็กๆ มีของเล่นให้เล่น"
+  },
+  {
+    "id": "cotton-cafe-and-library",
+    "name_th": "คอตตอน คาเฟ่ แอนด์ ไลบรารี่",
+    "name_en": "Cotton Cafe and Library",
+    "one_liner_th": "คาเฟ่สไตล์ห้องสมุดในโรงแรมหรู มองเห็นวิวสระว่ายน้ำ"
+  },
+  {
+    "id": "jee-tarn-souvenir-shop",
+    "name_th": "จี้ถ้าน จำหน่ายสินค้าของฝาก",
+    "name_en": "Jee Tarn Souvenir Shop",
+    "one_liner_th": "ศูนย์รวมสินค้า OTOP ระดับ 5 ดาวของพังงา มีของฝากครบครัน"
+  },
+  {
+    "id": "shop",
+    "name_th": "ร้านณัฐชวัล",
+    "name_en": null,
+    "one_liner_th": "ร้านของฝากย่านตลาด บขส. ตะกั่วป่า แหล่งรวมขนมพื้นเมืองและสินค้า OTOP"
+  },
+  {
+    "id": "kongsri-souvenir-shop",
+    "name_th": "กงสี ขนมและของฝากตะกั่วป่า",
+    "name_en": "Kongsri Souvenir Shop",
+    "one_liner_th": "ร้านขนมพื้นเมืองและของฝากตะกั่วป่า เน้นอบสดใหม่และแพ็กเกจจิ้งสวยงาม"
+  },
+  {
+    "id": "shop-2",
+    "name_th": "เยี่ยม เทียนเฮง (โกวเยี่ยม)",
+    "name_en": null,
+    "one_liner_th": "ร้านต้นตำรับผู้สืบทอดการทำขนมหมั่วหลาว (ขนมงาพอง) แบบดั้งเดิมในตะกั่วป่า"
+  },
+  {
+    "id": "siriporn-batik",
+    "name_th": "ศิริพรบาติก",
+    "name_en": "Siriporn Batik",
+    "one_liner_th": "ร้านผ้าเพ้นท์บาติกและงานพิมพ์ใบไม้สีธรรมชาติ งานคราฟต์ทำมือโดยคนท้องถิ่น"
+  },
+  {
+    "id": "shop-3",
+    "name_th": "ขนมเบื้องโบราณป้าหลัน",
+    "name_en": null,
+    "one_liner_th": "ร้านระดับตำนานในตลาดสดตะกั่วป่า ขายขนมเบื้องโบราณสูตรแป้งข้าวสารโม่เอง"
+  },
+  {
+    "id": "shop-4",
+    "name_th": "บาติก มัดย้อม @ตะกั่วป่า (เจ้าสุ พานพระ)",
+    "name_en": null,
+    "one_liner_th": "งานศิลปะผ้าบาติกและมัดย้อมที่สะท้อนอัตลักษณ์ท้องถิ่น โดยศิลปินชาวตะกั่วป่า"
+  },
+  {
+    "id": "eco-print-by-kanokwan",
+    "name_th": "Eco Print by Kanokwan",
+    "name_en": null,
+    "one_liner_th": "กลุ่มผู้ผลิตงานผ้าพิมพ์ลายใบไม้และบาติกที่นำเสนอผลิตภัณฑ์เป็นมิตรกับสิ่งแวดล้อม"
+  },
+  {
+    "id": "shop-5",
+    "name_th": "ตำนานโกสุ้ย อ๊ามในสวน",
+    "name_en": null,
+    "one_liner_th": "ขนมโกสุ้ยสูตรโบราณดั้งเดิมกว่า 60 ปี ทำขายเพียงปีละครั้งช่วงเทศกาลกินเจ"
+  }
+]

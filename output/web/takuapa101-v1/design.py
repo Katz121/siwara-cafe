@@ -48,7 +48,7 @@ def explorer(ctx, search=False):
     return f'<div class="explorer" data-explorer><div class="explorer-tools">{field}<div class="filter-tabs" role="group" aria-label="หมวดสถานที่">{tabs}</div></div><div class="explorer-status"><span data-place-count role="status" aria-live="polite">20 สถานที่ให้ค่อย ๆ รู้จัก</span><span>เลือกภาพเพื่อเปิดอ่าน ↗</span></div><div class="places-grid">'+''.join(card(id,ctx) for _,_,ids in GROUPS for id in ids)+'</div><div class="empty-state" data-place-empty hidden><h3>ยังไม่เจอจุดหมายนี้</h3><p>ลองคำค้นอื่น หรือเลือกดูสถานที่ทั้งหมด</p><button type="button" data-clear-places>ล้างตัวกรอง</button></div></div>'
 
 def route_cards(ctx):
-    arts=['wat-boromthat','guan-yu','tao-ming']; angles=['อ่านเมืองผ่านศรัทธา','มองเรื่องราวของชุมชนจีน','ตามรอยอาคาร การค้า และผู้คน']
+    arts=['wat-boromthat','guan-yu','tao-ming','khun-in']; angles=['อ่านเมืองผ่านศรัทธา','มองเรื่องราวของชุมชนจีน','ตามรอยอาคาร การค้า และผู้คน','เหมาะกับคนมีเวลาครึ่งวัน']
     return '<div class="route-cards">'+''.join(f'<a class="route-card" href="/routes/#route-{i}"><div class="route-art">{ctx["pic"](arts[i-1])}<span class="route-no">0{i}</span></div><div class="route-copy"><span class="eyebrow">{angles[i-1]}</span><h3>{name}</h3><span class="route-footer">{len(ids)} จุดหมาย <span aria-hidden="true">↗</span></span></div></a>' for i,(name,ids) in enumerate(ctx['routes'],1))+'</div>'
 
 def map_teaser():
