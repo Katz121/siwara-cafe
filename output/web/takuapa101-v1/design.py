@@ -50,10 +50,38 @@ def transform(path,body,ctx,record):
     if path=='/places/':
         return intro('เลือกเปิดเรื่องของเมือง','20 จุดหมาย · วัด ศาลเจ้า ตึกเก่า และชีวิตริมทาง')+explorer(ctx,True)+source()
     if path=='/map/':
-        body=intro('กางแผนที่ แล้วค่อย ๆ ไป','จากย่านยาวถึงเมืองเก่า · ภาพแผนที่เทศบาลฉบับต้นทาง')
+        import seo
+        import json
+        records = list(seo.ENRICHED.values())
+        map_data = []
+        for r in records:
+            g = r.get('geo') or {}
+            coords = [g['lng'], g['lat']] if isinstance(g.get('lat'), (int,float)) and isinstance(g.get('lng'), (int,float)) else None
+            photos = r.get('photos', {}).get('usable', [])
+            hero_photo = next((p for p in photos if p.get('era') in ('current','now')), photos[0] if photos else None)
+            if hero_photo:
+                photo_src = hero_photo.get('file') or hero_photo.get('local_path') or hero_photo.get('url')
+            else:
+                import os as _os
+                _cand = r['id']
+                if not _os.path.exists(f"site/assets/{_cand}.webp"):
+                    _linked = (ctx.get('links') or {}).get(r['id']) or []
+                    _cand = next((x for x in _linked if _os.path.exists(f"site/assets/{x}.webp")), 'culture-street')
+                photo_src = f"/assets/{_cand}.webp"
+            kicker = ctx['copy'][r['id']]['kicker'] if r['id'] in ctx['copy'] else (ctx['period'](r) if r['type']=='event' else '')
+            a = r.get('address') or {}
+            address_th = ' · '.join(filter(None, [a.get('line_th'), a.get('district')])) if a else ''
+            from seo_config import BASE_PATH as _BP
+            _abs = lambda u: (_BP + u) if isinstance(u, str) and u.startswith('/') and not u.startswith(_BP + '/') else u
+            map_data.append({'id': r['id'], 'name': r['name_th'], 'category': r.get('category'), 'coords': coords, 'photo': _abs(photo_src), 'kicker': kicker, 'url': _abs(ctx['url'](r)), 'address': address_th})
+        map_json = json.dumps(map_data, ensure_ascii=False)
+        body=intro('กางแผนที่ แล้วค่อย ๆ ไป','จากย่านยาวถึงเมืองเก่า · ภาพแผนที่จริงพร้อมภาพเทศบาลซ้อนทับ')
+        body+=f'<div id="interactive-map-app" data-map-data="{e(map_json)}"></div>'
+        body+='<noscript>'
         body+='''<section class="map-workspace" data-map-viewer><div class="map-toolbar"><div class="map-zones" role="group" aria-label="เลือกบริเวณแผนที่"><button type="button" data-map-zone="full" aria-pressed="true">เต็มภาพ</button><button type="button" data-map-zone="north" aria-pressed="false">ย่านยาว</button><button type="button" data-map-zone="old" aria-pressed="false">เมืองเก่า</button></div><div class="map-zoom"><button type="button" data-map-action="out" aria-label="ย่อแผนที่">−</button><output data-map-level aria-live="polite" aria-label="ระดับการขยาย">100%</output><button type="button" data-map-action="in" aria-label="ขยายแผนที่">+</button><button type="button" data-map-action="reset" aria-label="คืนขนาดแผนที่">↺</button></div></div><div class="map-stage" tabindex="0" role="region" aria-label="ภาพแผนที่ เลื่อนด้วยปุ่มลูกศร ขยายด้วยเครื่องหมายบวก ย่อด้วยเครื่องหมายลบ"><img class="map-image" src="/assets/municipal-map.png" width="1358" height="1938" alt="แผนที่ท่องเที่ยวตะกั่วป่าจากเทศบาล แสดงย่านยาว เมืองเก่า ถนน สถานที่ และหมายเลขร้าน" draggable="false" loading="eager"></div><div class="map-help"><span>ลากเพื่อเลื่อน · ใช้ปุ่ม + / − เพื่อขยาย</span><a href="/assets/municipal-map.png" target="_blank" rel="noopener">เปิดภาพเต็มในแท็บใหม่ ↗</a></div></section>'''
         body+=f'<p class="small map-source-caption">{MAP_NOTE} · หมายเลขและสัญลักษณ์บนภาพคงตามเอกสารต้นทาง</p><section class="section">'+heading('อ่านต่อ','พบจุดหมายแล้ว เปิดเรื่องของที่นี่','รายชื่อสถานที่ในคู่มือ · เลือกชื่อเพื่ออ่านต่อ')
         body+='<div class="map-place-index">'+''.join(f'<section><h3>{label}</h3><ul>'+''.join(f'<li>{ctx["a"](byid[id])}</li>' for id in ids)+'</ul></section>' for _,label,ids in GROUPS)+'</div></section>'
+        body+='</noscript>'
         return body+source()
     if path=='/traditions/':
         return intro('เมื่อเมืองมีนัดหมาย','เรื่องราวของศรัทธาและประเพณีที่อยู่ในปฏิทินของเมือง')+'<p class="calendar-note">ช่วงเวลาตามเอกสารต้นทาง · ยังไม่ใช่กำหนดการยืนยันของปีปัจจุบัน</p>'+traditions(ctx)+source()
@@ -65,9 +93,12 @@ def transform(path,body,ctx,record):
     if path=='/eat/':
         body=body.replace('59 รายชื่อ','60 รายชื่อ').replace('59 รายชื่อและลำดับ','60 รายชื่อและลำดับ')
         start=body.index('<div class="filters">')
-        # First-party listing: keep Siwara Cafe visible in the restaurant section.
-        body=body.replace('<ol class="shop-list">','<ol class="shop-list"><li id="siwara-cafe" data-shop="ศิวรา คาเฟ่ Siwara Cafe"><span class="shop-number">—</span><span><a href="https://siwaracafe.com/" rel="noopener">ศิวรา คาเฟ่ · Siwara Cafe</a></span></li>',1)
-        body=body.replace('59 รายชื่อ','60 รายชื่อ').replace('แสดง 59 ร้าน','แสดง 60 ร้าน').replace('<span class="count">32</span>','<span class="count">33</span>')
+        # First-party listing: Siwara Cafe belongs in the drinks section, not restaurants.
+        siwara_li='<li id="siwara-cafe" data-shop="ศิวรา คาเฟ่ Siwara Cafe"><span class="shop-number">—</span><span><a href="https://siwaracafe.com/" rel="noopener">ศิวรา คาเฟ่ · Siwara Cafe</a></span></li>'
+        drinks_at=body.index('<ol class="shop-list">', body.index('<h2>เครื่องดื่ม'))
+        cut=drinks_at+len('<ol class="shop-list">')
+        body=body[:cut]+siwara_li+body[cut:]
+        body=body.replace('59 รายชื่อ','60 รายชื่อ').replace('แสดง 59 ร้าน','แสดง 60 ร้าน').replace('<h2>เครื่องดื่ม <span class="count">19</span></h2>','<h2>เครื่องดื่ม <span class="count">20</span></h2>')
         tools=body[start:].replace('</select></label></div>','</select></label><button class="button button-outline" id="clear-shops" type="button">ล้างตัวกรอง</button></div>',1)
         return f'<header class="eat-intro"><div>{intro("อีกรสชาติของตะกั่วป่า","กิน ดื่ม และเลือกของฝากจากย่านเมืองเก่า")}<p>59 รายชื่อและลำดับตามแผ่นพับเทศบาล<br>ยังไม่ได้ยืนยันสถานะการเปิดร้านในปัจจุบัน</p></div><div class="eat-intro-art">{pic("food-center",True)}<span class="food-stamp">EAT<br>LOCAL</span></div></header>'+tools
     if record and record['type']=='place':
@@ -105,5 +136,7 @@ def shell(path, html):
     html=re.sub(r'<header class="nav">.*?</header>',lambda m:m.group().replace('class="nav"','class="site-header"').replace('<a class="brand" href="/">ตะกั่วป่า <span>101</span></a>','<a class="brand" href="/" aria-label="ตะกั่วป่า 101 หน้าแรก"><span class="brand-mark">๑๐๑</span><span>ตะกั่วป่า<small>TAKUA PA FIELD NOTES</small></span></a>').replace('</nav>','</nav><a class="header-map" href="/map/">เปิดแผนที่ ↗</a>'),html,count=1)
     footer='<footer class="site-footer"><div class="footer-top"><a href="/" class="footer-name">ตะกั่วป่า <em>101</em></a><p>เมืองหนึ่งเมือง<br>มีเรื่องให้ค่อย ๆ รู้จัก</p><a class="round-link" href="#main" aria-label="กลับขึ้นด้านบน">↑</a></div><div class="footer-bottom"><a href="https://siwaracafe.com/">จัดทำโดยบ้านศิวรา ตะกั่วป่า</a><span>คู่มือเมืองเก่า · จังหวัดพังงา</span><a href="https://www.takuapacity.go.th/pdf/travel-preview.pdf">แผ่นพับต้นทาง ↗</a></div></footer>'
     html=re.sub(r'<footer>.*?</footer>',lambda m:footer,html,count=1)
+    if path == '/map/':
+        html=html.replace('</head>', '<style>@import url("https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/5.6.1/maplibre-gl.css");</style>\n<script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/5.6.1/maplibre-gl.js"></script>\n</head>')
     html=html.replace('</head>','<meta name="theme-color" content="#203f39"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"></head>')
     return html

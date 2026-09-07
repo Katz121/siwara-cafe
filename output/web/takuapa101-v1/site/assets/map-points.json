@@ -1,0 +1,295 @@
+{
+  "points": [
+    {
+      "id": "wat-boromthat",
+      "name_th": "วัดบรมธาตุคีรีเขต (วัดลุ่ม)",
+      "name_en": "Wat Boromthat Khiri Khet",
+      "category": "temple",
+      "lat": 8.8336680169,
+      "lng": 98.3563150443,
+      "confidence": "high",
+      "url": "/takuapa/places/wat-boromthat/",
+      "image": "/takuapa/assets/wat-boromthat.webp",
+      "kicker": "มองเมืองผ่านเจดีย์และศรัทธาของผู้คน"
+    },
+    {
+      "id": "wat-khuha",
+      "name_th": "วัดคุหาภิมุข (วัดควนถ้ำ)",
+      "name_en": "Wat Khuha Phimuk",
+      "category": "temple",
+      "lat": 8.831526975,
+      "lng": 98.367913006,
+      "confidence": "high",
+      "url": "/takuapa/places/wat-khuha/",
+      "image": "/takuapa/assets/wat-khuha.webp",
+      "kicker": "รายละเอียดเล็กที่ชวนให้หยุดมอง"
+    },
+    {
+      "id": "wat-kongkha",
+      "name_th": "วัดคงคาภิมุข (วัดคงคา)",
+      "name_en": "Wat Kongkha Phimuk",
+      "category": "temple",
+      "lat": 8.840837,
+      "lng": 98.362899,
+      "confidence": "high",
+      "url": "/takuapa/places/wat-kongkha/",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3c/%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%84%E0%B8%87%E0%B8%84%E0%B8%B22563_%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2.jpg",
+      "kicker": "สังเกตเส้นสายอุโบสถภาคใต้"
+    },
+    {
+      "id": "wat-nikorn",
+      "name_th": "วัดนิกรวราราม (วัดย่านยาว)",
+      "name_en": "Wat Nikornwararam",
+      "category": "temple",
+      "lat": 8.8691760396,
+      "lng": 98.348042969,
+      "confidence": "high",
+      "url": "/takuapa/places/wat-nikorn/",
+      "image": "/takuapa/assets/wat-nikorn.webp",
+      "kicker": "เล่าเรื่องสถานที่ผ่านบทบาทต่อชุมชน"
+    },
+    {
+      "id": "wat-sena",
+      "name_th": "วัดเสนานุชรังสรรค์ (วัดใหม่)",
+      "name_en": "Wat Sena Nuch Rangsan",
+      "category": "temple",
+      "lat": 8.8302299579,
+      "lng": 98.3624509671,
+      "confidence": "high",
+      "url": "/takuapa/places/wat-sena/",
+      "image": "/takuapa/assets/wat-sena.webp",
+      "kicker": "ชวนมองสิ่งที่ไทยกับจีนอยู่ร่วมกัน"
+    },
+    {
+      "id": "museum",
+      "name_th": "พิพิธภัณฑ์เสนานุชรังสรรค์ชุมชนตะกั่วป่า",
+      "name_en": "Takua Pa Community Museum",
+      "category": "museum",
+      "lat": 8.8302299579,
+      "lng": 98.3624509671,
+      "confidence": "high",
+      "url": "/takuapa/places/museum/",
+      "image": "/takuapa/assets/museum.webp",
+      "kicker": "ต่อเรื่องจากบ้านเก่าสู่ความทรงจำของเมือง"
+    },
+    {
+      "id": "guan-yu",
+      "name_th": "ศาลเจ้าพ่อกวนอู ซิ่นไช่ตึ๋ง",
+      "name_en": "Guan Yu / Sin Chai Tung Shrine",
+      "category": "shrine",
+      "lat": 8.82945,
+      "lng": 98.36518,
+      "confidence": "medium",
+      "url": "/takuapa/places/guan-yu/",
+      "image": "/takuapa/assets/guan-yu.webp",
+      "kicker": "ประตูสีแดงกับเรื่องศรัทธาของเมือง"
+    },
+    {
+      "id": "pun-thao",
+      "name_th": "ศาลเจ้าปุนเถ่ากงอ๊า",
+      "name_en": "Pun Thao Kong A Shrine",
+      "category": "shrine",
+      "lat": 8.8313123,
+      "lng": 98.3684438,
+      "confidence": "medium",
+      "url": "/takuapa/places/pun-thao/",
+      "image": "/takuapa/assets/pun-thao.webp",
+      "kicker": "เชื่อมศรัทธากับย่านท่าเรือ"
+    },
+    {
+      "id": "kue-chai",
+      "name_th": "ศาลเจ้ากู่ใช่ตึ๋ง",
+      "name_en": "Kue Chai Tung Shrine",
+      "category": "shrine",
+      "lat": 8.8265089587,
+      "lng": 98.3647240165,
+      "confidence": "high",
+      "url": "/takuapa/places/kue-chai/",
+      "image": "/takuapa/assets/kue-chai.webp",
+      "kicker": "เล่าวัฒนธรรมการสักการะผ่านรายละเอียดศาลเจ้า"
+    },
+    {
+      "id": "phra-narai",
+      "name_th": "สวนสาธารณะพระนารายณ์",
+      "name_en": "Phra Narai Park",
+      "category": "park",
+      "lat": 8.8696046,
+      "lng": 98.3445279,
+      "confidence": "high",
+      "url": "/takuapa/places/phra-narai/",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/48/Takua_Pa%2C_Takua_Pa_District%2C_Phang-nga%2C_Thailand_-_panoramio_%281%29.jpg",
+      "kicker": "พักในสวนแล้วต่อเรื่องประวัติเมือง"
+    },
+    {
+      "id": "thung-phra",
+      "name_th": "สวนสาธารณะทุ่งพระโพธิ์",
+      "name_en": "Thung Phra Pho Park",
+      "category": "park",
+      "lat": 8.8293,
+      "lng": 98.36792,
+      "confidence": "medium",
+      "url": "/takuapa/places/thung-phra/",
+      "image": "/takuapa/assets/thung-phra.webp",
+      "kicker": "วัตถุหนึ่งชิ้นเล่าเรื่องเมืองท่า"
+    },
+    {
+      "id": "riverwalk",
+      "name_th": "ตลาดริมน้ำตะกั่วป่า",
+      "name_en": "Takuapa Riverwalk",
+      "category": "market",
+      "lat": 8.87157,
+      "lng": 98.35091,
+      "confidence": "medium",
+      "url": "/takuapa/places/riverwalk/",
+      "image": "/takuapa/assets/photos/kuapapoh-port.webp",
+      "kicker": "เดินดูวิถีเมืองผ่านอาหารและแม่น้ำ"
+    },
+    {
+      "id": "culture-street",
+      "name_th": "ถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า",
+      "name_en": "Takua Pa Culture Street",
+      "category": "street",
+      "lat": 8.829848,
+      "lng": 98.364073,
+      "confidence": "medium",
+      "url": "/takuapa/places/culture-street/",
+      "image": "/takuapa/assets/photos/shophouse-78.webp",
+      "kicker": "อ่านหน้าต่าง ป้ายร้าน และชีวิตบนถนน"
+    },
+    {
+      "id": "iron-bridge",
+      "name_th": "สะพานเหล็กบุญสูง",
+      "name_en": "Boon Soong Iron Bridge",
+      "category": "heritage",
+      "lat": 8.8531719567,
+      "lng": 98.3540239936,
+      "confidence": "high",
+      "url": "/takuapa/places/iron-bridge/",
+      "image": "/takuapa/assets/iron-bridge.webp",
+      "kicker": "มองโครงเหล็กแล้วนึกถึงการเดินทางของคนทำเหมือง"
+    },
+    {
+      "id": "governor-wall",
+      "name_th": "กำแพงจวนเจ้าเมืองตะกั่วป่า",
+      "name_en": "Governor’s Residence Wall",
+      "category": "heritage",
+      "lat": 8.830904,
+      "lng": 98.366634,
+      "confidence": "high",
+      "url": "/takuapa/places/governor-wall/",
+      "image": "/takuapa/assets/governor-wall.webp",
+      "kicker": "ร่องรอยบนกำแพงที่เล่าเรื่องเมือง"
+    },
+    {
+      "id": "khun-in",
+      "name_th": "บ้านขุนอินทร์",
+      "name_en": "Khun In House",
+      "category": "heritage",
+      "lat": 8.8307319975,
+      "lng": 98.3633399749,
+      "confidence": "high",
+      "url": "/takuapa/places/khun-in/",
+      "image": "/takuapa/assets/khun-in.webp",
+      "kicker": "หน้าต่างและระเบียงเป็นทางเข้าเรื่องประวัติบ้าน"
+    },
+    {
+      "id": "tao-ming",
+      "name_th": "โรงเรียนเต้าหมิง",
+      "name_en": "Tao Ming School",
+      "category": "heritage",
+      "lat": 8.8338139717,
+      "lng": 98.3649490347,
+      "confidence": "high",
+      "url": "/takuapa/places/tao-ming/",
+      "image": "/takuapa/assets/photos/tao-ming-school.jpg",
+      "kicker": "อาคารโรงเรียนเล่าเรื่องการส่งต่อวัฒนธรรม"
+    },
+    {
+      "id": "narai-ceremony",
+      "name_th": "พิธีบวงสรวงองค์เทวรูปพระนารายณ์และเทพบริวาร",
+      "name_en": null,
+      "category": "tradition",
+      "lat": 8.8696046,
+      "lng": 98.3445279,
+      "confidence": "high",
+      "url": "/takuapa/traditions/",
+      "image": "/takuapa/assets/narai-ceremony.webp",
+      "kicker": "เรื่องความเชื่อและความสัมพันธ์กับพื้นที่"
+    },
+    {
+      "id": "ruler-ceremony",
+      "name_th": "พิธีบวงสรวงเจ้าเมืองตะกั่วป่า",
+      "name_en": null,
+      "category": "tradition",
+      "lat": 8.830904,
+      "lng": 98.366634,
+      "confidence": "high",
+      "url": "/takuapa/traditions/",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Takua_Pa%2C_Takua_Pa_District%2C_Phang-nga%2C_Thailand_-_panoramio_%281%29.jpg/1280px-Takua_Pa%2C_Takua_Pa_District%2C_Phang-nga%2C_Thailand_-_panoramio_%281%29.jpg",
+      "kicker": "เรื่องการรำลึกถึงผู้ปกครองเมือง"
+    },
+    {
+      "id": "relic-procession",
+      "name_th": "ขบวนแห่อัญเชิญพระบรมสารีริกธาตุขึ้นเขาพระบาท",
+      "name_en": null,
+      "category": "tradition",
+      "lat": 8.8336680169,
+      "lng": 98.3563150443,
+      "confidence": "high",
+      "url": "/takuapa/traditions/",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Takua_Pa,_Takua_Pa_District,_Phang-nga,_Thailand_-_panoramio_(1).jpg?width=1600",
+      "kicker": "ประเพณีที่เชื่อมการเดินทางและการสักการะ"
+    }
+  ],
+  "unlocated": [
+    {
+      "id": "wat-pathum",
+      "name_th": "วัดปทุมธารา (วัดหน้าเมือง)",
+      "category": "temple",
+      "address": "ถนนหน้าเมือง ชุมชนตลาดใหญ่",
+      "url": "/takuapa/places/wat-pathum/"
+    },
+    {
+      "id": "rong-jae",
+      "name_th": "โรงเจในสวน",
+      "category": "shrine",
+      "address": "ซอยโรงพระ ถนนราษฎร์บำรุง อำเภอตะกั่วป่า จังหวัดพังงา",
+      "url": "/takuapa/places/rong-jae/"
+    },
+    {
+      "id": "new-year-alms",
+      "name_th": "ตักบาตรยามรุ่ง รับอรุณปีใหม่",
+      "category": "tradition",
+      "address": null,
+      "url": "/takuapa/traditions/"
+    },
+    {
+      "id": "vegetarian",
+      "name_th": "ประเพณีกินผัก (เจี๊ยะกิ๊วอ๋องฉ่าย)",
+      "category": "tradition",
+      "address": "ถนนศรีตะกั่วป่าและพื้นที่ชุมชนตลาดใหญ่ เมืองเก่าตะกั่วป่า",
+      "url": "/takuapa/traditions/"
+    },
+    {
+      "id": "loy-krathong",
+      "name_th": "ลอยกระทง",
+      "category": "tradition",
+      "address": "บริเวณคลองตะกั่วป่า และจุดจัดงานตามที่องค์กรปกครองส่วนท้องถิ่นกำหนด",
+      "url": "/takuapa/traditions/"
+    },
+    {
+      "id": "chak-phra",
+      "name_th": "ประเพณีชักพระ",
+      "category": "tradition",
+      "address": null,
+      "url": "/takuapa/traditions/"
+    },
+    {
+      "id": "food-center",
+      "name_th": "ศูนย์อาหารลานโล่งตะกั่วป่า",
+      "category": "food_center",
+      "address": null,
+      "url": "/takuapa/places/food-center/"
+    }
+  ]
+}
