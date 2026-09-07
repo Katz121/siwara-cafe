@@ -96,11 +96,21 @@ def transform(path,body,ctx,record):
         body=body.replace('59 รายชื่อ','60 รายชื่อ').replace('59 รายชื่อและลำดับ','60 รายชื่อและลำดับ')
         start=body.index('<div class="filters">')
         # First-party listing: Siwara Cafe belongs in the drinks section, not restaurants.
-        siwara_li='<li id="siwara-cafe" data-shop="ศิวรา คาเฟ่ Siwara Cafe"><span class="shop-number">—</span><span><a href="https://siwaracafe.com/" rel="noopener">ศิวรา คาเฟ่ · Siwara Cafe</a></span></li>'
+        # Drinks places added outside the municipal brochure. Kept in the same
+        # list so readers see one directory, not two.
+        extra_drinks = [
+            ('siwara-cafe', 'ศิวรา คาเฟ่ · Siwara Cafe', 'ศิวรา คาเฟ่ Siwara Cafe', 'https://siwaracafe.com/'),
+            ('baan-bai', 'บ้านใบ', 'บ้านใบ Baan Bai', None),
+        ]
+        rows = ''
+        for eid, label, key, href in extra_drinks:
+            name = f'<a href="{href}" rel="noopener">{label}</a>' if href else label
+            rows += f'<li id="{eid}" data-shop="{key}"><span class="shop-number">—</span><span>{name}</span></li>'
         drinks_at=body.index('<ol class="shop-list">', body.index('<h2>เครื่องดื่ม'))
         cut=drinks_at+len('<ol class="shop-list">')
-        body=body[:cut]+siwara_li+body[cut:]
-        body=body.replace('59 รายชื่อ','60 รายชื่อ').replace('แสดง 59 ร้าน','แสดง 60 ร้าน').replace('<h2>เครื่องดื่ม <span class="count">19</span></h2>','<h2>เครื่องดื่ม <span class="count">20</span></h2>')
+        body=body[:cut]+rows+body[cut:]
+        total=59+len(extra_drinks); drinks=19+len(extra_drinks)
+        body=body.replace('59 รายชื่อ',f'{total} รายชื่อ').replace('แสดง 59 ร้าน',f'แสดง {total} ร้าน').replace('<h2>เครื่องดื่ม <span class="count">19</span></h2>',f'<h2>เครื่องดื่ม <span class="count">{drinks}</span></h2>')
         tools=body[start:].replace('</select></label></div>','</select></label><button class="button button-outline" id="clear-shops" type="button">ล้างตัวกรอง</button></div>',1)
         return f'<header class="eat-intro"><div>{intro("อีกรสชาติของตะกั่วป่า","กิน ดื่ม และเลือกของฝากจากย่านเมืองเก่า")}<p>59 รายชื่อและลำดับตามแผ่นพับเทศบาล<br>ยังไม่ได้ยืนยันสถานะการเปิดร้านในปัจจุบัน</p></div><div class="eat-intro-art">{pic("food-center",True)}<span class="food-stamp">EAT<br>LOCAL</span></div></header>'+tools
     if record and record['type']=='place':

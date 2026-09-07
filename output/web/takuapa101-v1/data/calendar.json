@@ -13,7 +13,7 @@
    "activities_th": [
     "ทำบุญตักบาตรอาหารแห้ง"
    ],
-   "url": "/takuapa/traditions/#new-year-alms",
+   "url": "/traditions/#new-year-alms",
    "image": null,
    "sources": [
     "https://www.takuapacity.go.th/files/com_strategy/2022-12_231dcd9d5169573.pdf"
@@ -36,7 +36,7 @@
     "จำหน่ายสินค้า OTOP และอาหารท้องถิ่น",
     "การแข่งขันนกกรงหัวจุก"
    ],
-   "url": "/takuapa/traditions/#narai-ceremony",
+   "url": "/traditions/#narai-ceremony",
    "image": null,
    "sources": [
     "https://www.thaipr.net/travel/3321904",
@@ -59,7 +59,7 @@
     "การแสดงศิลปวัฒนธรรม",
     "จำหน่ายขนมพื้นบ้าน อาหารพื้นเมือง และสินค้าโอทอป"
    ],
-   "url": "/takuapa/traditions/#ruler-ceremony",
+   "url": "/traditions/#ruler-ceremony",
    "image": null,
    "sources": [
     "https://radiothailand.prd.go.th/th/content/category/detail/id/9/iid/481052"
@@ -84,7 +84,7 @@
     "ขบวนแห่พระรอบเมือง",
     "จำหน่ายอาหารเจ"
    ],
-   "url": "/takuapa/traditions/#vegetarian",
+   "url": "/traditions/#vegetarian",
    "image": null,
    "sources": [
     "https://api.tat.or.th/upload/live/multimedia/9121/TPhangnga.pdf",
@@ -108,7 +108,7 @@
     "การแสดงบนเวที",
     "นิทรรศการหรือตกแต่งประดับท่าน้ำ"
    ],
-   "url": "/takuapa/traditions/#loy-krathong",
+   "url": "/traditions/#loy-krathong",
    "image": null,
    "sources": [
     "https://www.takuapacity.go.th/files/com_strategy/2022-12_231dcd9d5169573.pdf",
@@ -133,7 +133,7 @@
     "สมโภชเรือพระ",
     "การแสดงทางวัฒนธรรม"
    ],
-   "url": "/takuapa/traditions/#chak-phra",
+   "url": "/traditions/#chak-phra",
    "image": null,
    "sources": [
     "https://api.tat.or.th/upload/live/multimedia/9121/TPhangnga.pdf",
@@ -153,7 +153,7 @@
     "แห่พระบรมสารีริกธาตุขึ้นสู่ยอดเขาพระบาท",
     "สักการะพระบรมธาตุเจดีย์"
    ],
-   "url": "/takuapa/traditions/#relic-procession",
+   "url": "/traditions/#relic-procession",
    "image": null,
    "sources": [
     "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf",

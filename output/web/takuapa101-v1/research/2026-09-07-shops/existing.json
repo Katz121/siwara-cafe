@@ -1,0 +1,368 @@
+[
+ {
+  "id": "restaurant-01",
+  "category": "restaurant",
+  "name_th": "ฮกกี่เหลา",
+  "name_en": ""
+ },
+ {
+  "id": "restaurant-02",
+  "category": "restaurant",
+  "name_th": "ร้านหลกอั้น",
+  "name_en": ""
+ },
+ {
+  "id": "restaurant-03",
+  "category": "restaurant",
+  "name_th": "ข้าวมันไก่ป้าสุ",
+  "name_en": ""
+ },
+ {
+  "id": "restaurant-04",
+  "category": "restaurant",
+  "name_th": "ฟู่เย็นตาโฟกลางซอย",
+  "name_en": ""
+ },
+ {
+  "id": "restaurant-05",
+  "category": "restaurant",
+  "name_th": "บังดีน อาหารไทยมุสลิม",
+  "name_en": ""
+ },
+ {
+  "id": "restaurant-06",
+  "category": "restaurant",
+  "name_th": "ร้านเจ๊อู๋ ข้าวมันไก่ ตะกั่วป่า",
+  "name_en": ""
+ },
+ {
+  "id": "restaurant-07",
+  "category": "restaurant",
+  "name_th": "ก๋วยเตี๋ยวหมูเทวดา",
+  "name_en": ""
+ },
+ {
+  "id": "restaurant-08",
+  "category": "restaurant",
+  "name_th": "บ่าวโอม ติ่มซำ",
+  "name_en": ""
+ },
+ {
+  "id": "restaurant-09",
+  "category": "restaurant",
+  "name_th": "ข้าวมันไก่ต้นโพธิ์",
+  "name_en": ""
+ },
+ {
+  "id": "restaurant-10",
+  "category": "restaurant",
+  "name_th": "กะไหล บะหมี่เกี๊ยวโบราณ",
+  "name_en": ""
+ },
+ {
+  "id": "restaurant-11",
+  "category": "restaurant",
+  "name_th": "บะหมี่พังงา - ตลาดขวาง สาขาตะกั่วป่า",
+  "name_en": ""
+ },
+ {
+  "id": "restaurant-12",
+  "category": "restaurant",
+  "name_th": "กาแฟชาย ตะกั่วป่า",
+  "name_en": ""
+ },
+ {
+  "id": "restaurant-13",
+  "category": "restaurant",
+  "name_th": "โกคุ้น ข้าวมันไก่",
+  "name_en": ""
+ },
+ {
+  "id": "restaurant-14",
+  "category": "restaurant",
+  "name_th": "จิ้นคัง ติ่มซำ",
+  "name_en": ""
+ },
+ {
+  "id": "restaurant-15",
+  "category": "restaurant",
+  "name_th": "ป้าดาหมี่ฮกเกี้ยน",
+  "name_en": ""
+ },
+ {
+  "id": "restaurant-16",
+  "category": "restaurant",
+  "name_th": "หมี่ป้าเปรม",
+  "name_en": ""
+ },
+ {
+  "id": "restaurant-17",
+  "category": "restaurant",
+  "name_th": "ไส้กรอกตะกั่วป่า",
+  "name_en": ""
+ },
+ {
+  "id": "restaurant-18",
+  "category": "restaurant",
+  "name_th": "สะเต๊ะ ทุ่งพระโพธิ์",
+  "name_en": ""
+ },
+ {
+  "id": "restaurant-19",
+  "category": "restaurant",
+  "name_th": "สะเต๊ะตะกั่วป่า",
+  "name_en": ""
+ },
+ {
+  "id": "restaurant-20",
+  "category": "restaurant",
+  "name_th": "มุมเด็กเส้น",
+  "name_en": ""
+ },
+ {
+  "id": "restaurant-21",
+  "category": "restaurant",
+  "name_th": "ขนมจีนป้าน้อย",
+  "name_en": ""
+ },
+ {
+  "id": "restaurant-22",
+  "category": "restaurant",
+  "name_th": "ส้มตำ หัวถนน",
+  "name_en": ""
+ },
+ {
+  "id": "restaurant-23",
+  "category": "restaurant",
+  "name_th": "จี้เก้ ผัดไทหัวถนน",
+  "name_en": ""
+ },
+ {
+  "id": "restaurant-24",
+  "category": "restaurant",
+  "name_th": "ป้าแก้วอาหารตามสั่ง",
+  "name_en": ""
+ },
+ {
+  "id": "restaurant-25",
+  "category": "restaurant",
+  "name_th": "ชานนท์กาแฟโบราณ ติ่มซำ",
+  "name_en": ""
+ },
+ {
+  "id": "restaurant-26",
+  "category": "restaurant",
+  "name_th": "ร้านมุมน้ำเงิน",
+  "name_en": ""
+ },
+ {
+  "id": "restaurant-27",
+  "category": "restaurant",
+  "name_th": "ไอติมทอด ณ ตะกั่วป่า",
+  "name_en": ""
+ },
+ {
+  "id": "restaurant-28",
+  "category": "restaurant",
+  "name_th": "โรตีบังลา",
+  "name_en": ""
+ },
+ {
+  "id": "restaurant-29",
+  "category": "restaurant",
+  "name_th": "ครัวอีสานใต้",
+  "name_en": ""
+ },
+ {
+  "id": "restaurant-30",
+  "category": "restaurant",
+  "name_th": "ข้าวขาหมูจี้หญิง",
+  "name_en": ""
+ },
+ {
+  "id": "restaurant-31",
+  "category": "restaurant",
+  "name_th": "ข้าวมันไก่โกก่วน 2",
+  "name_en": ""
+ },
+ {
+  "id": "restaurant-32",
+  "category": "restaurant",
+  "name_th": "ครัวริมทุ่ง",
+  "name_en": ""
+ },
+ {
+  "id": "drink_shop-01",
+  "category": "drink_shop",
+  "name_th": "กอคอฟฟี่ ตะกั่วป่า",
+  "name_en": ""
+ },
+ {
+  "id": "drink_shop-02",
+  "category": "drink_shop",
+  "name_th": "กฤษณวารี specialty coffee",
+  "name_en": ""
+ },
+ {
+  "id": "drink_shop-03",
+  "category": "drink_shop",
+  "name_th": "Bless U Cafe",
+  "name_en": ""
+ },
+ {
+  "id": "drink_shop-04",
+  "category": "drink_shop",
+  "name_th": "Mali Cafe",
+  "name_en": ""
+ },
+ {
+  "id": "drink_shop-05",
+  "category": "drink_shop",
+  "name_th": "A Hunger Cafe",
+  "name_en": ""
+ },
+ {
+  "id": "drink_shop-06",
+  "category": "drink_shop",
+  "name_th": "Saraan Ice Cream Homemade",
+  "name_en": ""
+ },
+ {
+  "id": "drink_shop-07",
+  "category": "drink_shop",
+  "name_th": "DREDGER Cafe",
+  "name_en": ""
+ },
+ {
+  "id": "drink_shop-08",
+  "category": "drink_shop",
+  "name_th": "ดอกกาแฟ ณ ตะโกลา",
+  "name_en": ""
+ },
+ {
+  "id": "drink_shop-09",
+  "category": "drink_shop",
+  "name_th": "MAMA’S OVEN",
+  "name_en": ""
+ },
+ {
+  "id": "drink_shop-10",
+  "category": "drink_shop",
+  "name_th": "โอวเล้ง ตะกั่วป่า",
+  "name_en": ""
+ },
+ {
+  "id": "drink_shop-11",
+  "category": "drink_shop",
+  "name_th": "โกปี้ กั่วป่า",
+  "name_en": ""
+ },
+ {
+  "id": "drink_shop-12",
+  "category": "drink_shop",
+  "name_th": "BAN KHANOM WAN NO.77",
+  "name_en": ""
+ },
+ {
+  "id": "drink_shop-13",
+  "category": "drink_shop",
+  "name_th": "เถียนมี่",
+  "name_en": ""
+ },
+ {
+  "id": "drink_shop-14",
+  "category": "drink_shop",
+  "name_th": "ซีนคา",
+  "name_en": ""
+ },
+ {
+  "id": "drink_shop-15",
+  "category": "drink_shop",
+  "name_th": "กาแฟโบราณป้าอี๊ด",
+  "name_en": ""
+ },
+ {
+  "id": "drink_shop-16",
+  "category": "drink_shop",
+  "name_th": "กาแฟโก๊ติ - จี้มุ้ย",
+  "name_en": ""
+ },
+ {
+  "id": "drink_shop-17",
+  "category": "drink_shop",
+  "name_th": "ฟินน์ คอฟฟี่",
+  "name_en": ""
+ },
+ {
+  "id": "drink_shop-18",
+  "category": "drink_shop",
+  "name_th": "ฟีโน่กาแฟ",
+  "name_en": ""
+ },
+ {
+  "id": "drink_shop-19",
+  "category": "drink_shop",
+  "name_th": "ร้านกาแฟมาลี",
+  "name_en": ""
+ },
+ {
+  "id": "souvenir_shop-01",
+  "category": "souvenir_shop",
+  "name_th": "เต้าส้อตวงรัตน์",
+  "name_en": ""
+ },
+ {
+  "id": "souvenir_shop-02",
+  "category": "souvenir_shop",
+  "name_th": "เต้าส้อนันทวัน",
+  "name_en": ""
+ },
+ {
+  "id": "souvenir_shop-03",
+  "category": "souvenir_shop",
+  "name_th": "เต้าส้อแม่อารี",
+  "name_en": ""
+ },
+ {
+  "id": "souvenir_shop-04",
+  "category": "souvenir_shop",
+  "name_th": "ขนมผิงลูกแม่แบบ",
+  "name_en": ""
+ },
+ {
+  "id": "souvenir_shop-05",
+  "category": "souvenir_shop",
+  "name_th": "เต้าส้อเจ๊หยี่",
+  "name_en": ""
+ },
+ {
+  "id": "souvenir_shop-06",
+  "category": "souvenir_shop",
+  "name_th": "เต้าส้อป้าแอ๋ว",
+  "name_en": ""
+ },
+ {
+  "id": "souvenir_shop-07",
+  "category": "souvenir_shop",
+  "name_th": "สิริพร",
+  "name_en": ""
+ },
+ {
+  "id": "souvenir_shop-08",
+  "category": "souvenir_shop",
+  "name_th": "วุ้นกะทิมะพร้าวอ่อน เอสโซ่-ตะกั่วป่า",
+  "name_en": ""
+ },
+ {
+  "id": "siwara-cafe",
+  "category": "drink_shop",
+  "name_th": "ศิวรา คาเฟ่",
+  "name_en": "Siwara Cafe"
+ },
+ {
+  "id": "baan-bai",
+  "category": "drink_shop",
+  "name_th": "บ้านใบ",
+  "name_en": "Baan Bai"
+ }
+]

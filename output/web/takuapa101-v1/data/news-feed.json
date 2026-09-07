@@ -7,7 +7,7 @@
   "url": "https://www.youtube.com/watch?v=q6K2Zl6700I",
   "place_id": "kue-chai",
   "place_name": "ศาลเจ้ากู่ใช่ตึ๋ง",
-  "place_url": "/takuapa/places/kue-chai/",
+  "place_url": "/places/kue-chai/",
   "category": "shrine"
  },
  {
@@ -18,7 +18,7 @@
   "url": "https://www.topnews.co.th/news/1546452",
   "place_id": "new-year-alms",
   "place_name": "ตักบาตรยามรุ่ง รับอรุณปีใหม่",
-  "place_url": "/takuapa/traditions/",
+  "place_url": "/traditions/",
   "category": "tradition"
  },
  {
@@ -29,7 +29,7 @@
   "url": "https://mgronline.com/onlinesection/detail/9690000036775",
   "place_id": "new-year-alms",
   "place_name": "ตักบาตรยามรุ่ง รับอรุณปีใหม่",
-  "place_url": "/takuapa/traditions/",
+  "place_url": "/traditions/",
   "category": "tradition"
  },
  {
@@ -40,7 +40,7 @@
   "url": "https://www.keereekatschool.ac.th/gallery-detail_1497",
   "place_id": "thung-phra",
   "place_name": "สวนสาธารณะทุ่งพระโพธิ์",
-  "place_url": "/takuapa/places/thung-phra/",
+  "place_url": "/places/thung-phra/",
   "category": "park"
  },
  {
@@ -51,7 +51,7 @@
   "url": "https://radiothailand.prd.go.th/th/content/category/detail/id/9/iid/481052",
   "place_id": "museum",
   "place_name": "พิพิธภัณฑ์เสนานุชรังสรรค์ชุมชนตะกั่วป่า",
-  "place_url": "/takuapa/places/museum/",
+  "place_url": "/places/museum/",
   "category": "museum"
  },
  {
@@ -62,7 +62,7 @@
   "url": "https://youphuket.club/author/admin/page/58/",
   "place_id": "tao-ming",
   "place_name": "โรงเรียนเต้าหมิง",
-  "place_url": "/takuapa/places/tao-ming/",
+  "place_url": "/places/tao-ming/",
   "category": "heritage"
  },
  {
@@ -73,7 +73,7 @@
   "url": "https://www.youtube.com/watch?v=QUZ54DTc0LQ",
   "place_id": "iron-bridge",
   "place_name": "สะพานเหล็กบุญสูง",
-  "place_url": "/takuapa/places/iron-bridge/",
+  "place_url": "/places/iron-bridge/",
   "category": "heritage"
  },
  {
@@ -84,7 +84,7 @@
   "url": "https://newweb.dmcr.go.th/detailAll/81026/nws/258",
   "place_id": "loy-krathong",
   "place_name": "ลอยกระทง",
-  "place_url": "/takuapa/traditions/",
+  "place_url": "/traditions/",
   "category": "tradition"
  },
  {
@@ -95,7 +95,7 @@
   "url": "https://siamrath.co.th/n/630235",
   "place_id": "food-center",
   "place_name": "ศูนย์อาหารลานโล่งตะกั่วป่า",
-  "place_url": "/takuapa/places/food-center/",
+  "place_url": "/places/food-center/",
   "category": "food_center"
  },
  {
@@ -106,7 +106,7 @@
   "url": "https://www.topnews.co.th/news/1546452",
   "place_id": "wat-nikorn",
   "place_name": "วัดนิกรวราราม (วัดย่านยาว)",
-  "place_url": "/takuapa/places/wat-nikorn/",
+  "place_url": "/places/wat-nikorn/",
   "category": "temple"
  },
  {
@@ -117,7 +117,7 @@
   "url": "https://thailandtravel.app/content/read/3344",
   "place_id": "phra-narai",
   "place_name": "สวนสาธารณะพระนารายณ์",
-  "place_url": "/takuapa/places/phra-narai/",
+  "place_url": "/places/phra-narai/",
   "category": "park"
  },
  {
@@ -128,7 +128,7 @@
   "url": "https://www.thaipost.net/district-news/738702/",
   "place_id": "wat-boromthat",
   "place_name": "วัดบรมธาตุคีรีเขต (วัดลุ่ม)",
-  "place_url": "/takuapa/places/wat-boromthat/",
+  "place_url": "/places/wat-boromthat/",
   "category": "temple"
  },
  {
@@ -139,7 +139,7 @@
   "url": "https://mgronline.com/travel/detail/9680000012560",
   "place_id": "relic-procession",
   "place_name": "ขบวนแห่อัญเชิญพระบรมสารีริกธาตุขึ้นเขาพระบาท",
-  "place_url": "/takuapa/traditions/",
+  "place_url": "/traditions/",
   "category": "tradition"
  },
  {
@@ -150,7 +150,7 @@
   "url": "https://travel.kapook.com/view288836.html",
   "place_id": "relic-procession",
   "place_name": "ขบวนแห่อัญเชิญพระบรมสารีริกธาตุขึ้นเขาพระบาท",
-  "place_url": "/takuapa/traditions/",
+  "place_url": "/traditions/",
   "category": "tradition"
  },
  {
@@ -161,7 +161,7 @@
   "url": "https://www.ride-explorer.com/?p=7378",
   "place_id": "wat-nikorn",
   "place_name": "วัดนิกรวราราม (วัดย่านยาว)",
-  "place_url": "/takuapa/places/wat-nikorn/",
+  "place_url": "/places/wat-nikorn/",
   "category": "temple"
  },
  {
@@ -172,7 +172,7 @@
   "url": "https://mgronline.com/daily/detail/9670000105538",
   "place_id": "food-center",
   "place_name": "ศูนย์อาหารลานโล่งตะกั่วป่า",
-  "place_url": "/takuapa/places/food-center/",
+  "place_url": "/places/food-center/",
   "category": "food_center"
  },
  {
@@ -183,7 +183,7 @@
   "url": "https://mgronline.com/south/detail/9670000097253",
   "place_id": "culture-street",
   "place_name": "ถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า",
-  "place_url": "/takuapa/places/culture-street/",
+  "place_url": "/places/culture-street/",
   "category": "street"
  },
  {
@@ -194,7 +194,7 @@
   "url": "https://mgronline.com/south/detail/9670000093105",
   "place_id": "guan-yu",
   "place_name": "ศาลเจ้าพ่อกวนอู ซิ่นไช่ตึ๋ง",
-  "place_url": "/takuapa/places/guan-yu/",
+  "place_url": "/places/guan-yu/",
   "category": "shrine"
  },
  {
@@ -205,7 +205,7 @@
   "url": "https://archive.siamrath.co.th/n/568331",
   "place_id": "wat-nikorn",
   "place_name": "วัดนิกรวราราม (วัดย่านยาว)",
-  "place_url": "/takuapa/places/wat-nikorn/",
+  "place_url": "/places/wat-nikorn/",
   "category": "temple"
  },
  {
@@ -216,7 +216,7 @@
   "url": "https://www.thailandplus.tv/archives/864741",
   "place_id": "vegetarian",
   "place_name": "ประเพณีกินผัก (เจี๊ยะกิ๊วอ๋องฉ่าย)",
-  "place_url": "/takuapa/traditions/",
+  "place_url": "/traditions/",
   "category": "tradition"
  },
  {
@@ -227,7 +227,7 @@
   "url": "https://www.youtube.com/watch?v=YBj0I_sMc-I",
   "place_id": "food-center",
   "place_name": "ศูนย์อาหารลานโล่งตะกั่วป่า",
-  "place_url": "/takuapa/places/food-center/",
+  "place_url": "/places/food-center/",
   "category": "food_center"
  },
  {
@@ -238,7 +238,7 @@
   "url": "https://www.prd.go.th/th/content/category/detail/id/2040/iid/319567",
   "place_id": "museum",
   "place_name": "พิพิธภัณฑ์เสนานุชรังสรรค์ชุมชนตะกั่วป่า",
-  "place_url": "/takuapa/places/museum/",
+  "place_url": "/places/museum/",
   "category": "museum"
  },
  {
@@ -249,7 +249,7 @@
   "url": "https://www.thailandplus.tv/archives/755868",
   "place_id": "chak-phra",
   "place_name": "ประเพณีชักพระ",
-  "place_url": "/takuapa/traditions/",
+  "place_url": "/traditions/",
   "category": "tradition"
  },
  {
@@ -260,7 +260,7 @@
   "url": "https://www.innews.news/news.php?n=48726",
   "place_id": "kue-chai",
   "place_name": "ศาลเจ้ากู่ใช่ตึ๋ง",
-  "place_url": "/takuapa/places/kue-chai/",
+  "place_url": "/places/kue-chai/",
   "category": "shrine"
  },
  {
@@ -271,7 +271,7 @@
   "url": "https://www.youtube.com/watch?v=76z9YMImUUk",
   "place_id": "wat-sena",
   "place_name": "วัดเสนานุชรังสรรค์ (วัดใหม่)",
-  "place_url": "/takuapa/places/wat-sena/",
+  "place_url": "/places/wat-sena/",
   "category": "temple"
  },
  {
@@ -282,7 +282,7 @@
   "url": "https://www.thaipr.net/travel/3321904",
   "place_id": "phra-narai",
   "place_name": "สวนสาธารณะพระนารายณ์",
-  "place_url": "/takuapa/places/phra-narai/",
+  "place_url": "/places/phra-narai/",
   "category": "park"
  },
  {
@@ -293,7 +293,7 @@
   "url": "https://pna.onab.go.th/th/content/page/index/id/34431",
   "place_id": "wat-nikorn",
   "place_name": "วัดนิกรวราราม (วัดย่านยาว)",
-  "place_url": "/takuapa/places/wat-nikorn/",
+  "place_url": "/places/wat-nikorn/",
   "category": "temple"
  },
  {
@@ -304,7 +304,7 @@
   "url": "https://mgronline.com/travel/detail/9650000061422",
   "place_id": "culture-street",
   "place_name": "ถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า",
-  "place_url": "/takuapa/places/culture-street/",
+  "place_url": "/places/culture-street/",
   "category": "street"
  },
  {
@@ -315,7 +315,7 @@
   "url": "https://www.dit.go.th/FILE/CONTENT_FILE/256602221220300556074.pdf",
   "place_id": "culture-street",
   "place_name": "ถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า",
-  "place_url": "/takuapa/places/culture-street/",
+  "place_url": "/places/culture-street/",
   "category": "street"
  },
  {
@@ -326,7 +326,7 @@
   "url": "https://www.youtube.com/watch?v=PkMXN_xPdLI",
   "place_id": "pun-thao",
   "place_name": "ศาลเจ้าปุนเถ่ากงอ๊า",
-  "place_url": "/takuapa/places/pun-thao/",
+  "place_url": "/places/pun-thao/",
   "category": "shrine"
  },
  {
@@ -337,7 +337,7 @@
   "url": "https://siamrath.co.th/n/609307",
   "place_id": "phra-narai",
   "place_name": "สวนสาธารณะพระนารายณ์",
-  "place_url": "/takuapa/places/phra-narai/",
+  "place_url": "/places/phra-narai/",
   "category": "park"
  }
 ]
