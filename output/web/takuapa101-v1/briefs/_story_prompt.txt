@@ -1,0 +1,23 @@
+โฟลเดอร์งาน D:\Siwaracafeweb\output\web\takuapa101-v1
+
+อ่านให้ครบก่อนลงมือ:
+1. briefs/2026-09-07_stories-rewrite-spec.md (สเปกและกฎเขียน อ่านทั้งไฟล์)
+2. briefs/story-json-schema.md (รูปแบบผลลัพธ์)
+3. stories.py (ดูเนื้อหาเดิมของบทความ id '{ID}' เพื่อรู้ว่าเดิมพูดอะไร แล้วเขียนใหม่ให้ดีกว่ามาก)
+4. data/places-enriched.json (แหล่งข้อเท็จจริงหลัก · eras/timeline/history/did_you_know ของ 27 สถานที่ ทุกข้อมี status และ source_url)
+5. research/2026-09-07-history/buildings/findings.json · research/2026-09-07-history/food/findings.json · research/2026-09-07-history/audit.json
+6. data/photos-cc-manifest.json และ data/photos-local.json (ภาพที่ใช้ได้จริงเท่านั้น ห้ามใช้ภาพอื่น)
+
+งาน: เขียนบทความ id '{ID}' ใหม่ทั้งหมด เขียนเป็นไฟล์ data/stories/{ID}.json ตาม schema
+
+เป้าหมายความยาว 4,000-7,000 ตัวอักษรไทย · 5-7 sections · แต่ละ section 3-5 ย่อหน้า
+
+กฎที่ห้ามฝ่าฝืน:
+- ห้ามแต่งข้อเท็จจริง ทุกปี ทุกชื่อ ทุกตัวเลข ต้องมาจากไฟล์ต้นทางในเครื่อง ถ้าไม่มีก็ไม่ต้องเขียน
+- ห้ามใส่คำกำกับหลักฐานกลางประโยคแบบเดิม ("การอธิบายนี้เป็นกรอบจากเอกสารทางการ ไม่ได้แปลว่า...") ให้ใช้ flags ท้าย section และ evidence_box แทน
+- เล่าเรื่องจริง มีฉาก มีคน มีการเปลี่ยนแปลง ไม่ใช่รายการข้อเท็จจริง
+- ตัด em-dash และ en-dash ทั้งหมด ใช้ · แทน · ห้าม emoji · เสียงเล่าใช้ เรา/คุณ
+- ห้ามใช้ภาพที่ไม่ได้อยู่ใน manifest ทั้งสองไฟล์
+
+เขียนไฟล์เป็น UTF-8 เท่านั้น ถ้าใช้ PowerShell ต้อง -Encoding utf8 ถ้าใช้ Python ต้อง encoding='utf-8' ไม่งั้นภาษาไทยจะกลายเป็นเครื่องหมายคำถาม
+เสร็จแล้ว json.load ไฟล์กลับมายืนยันว่า parse ผ่านและภาษาไทยไม่เพี้ยน แล้วรายงานจำนวนตัวอักษรรวมและจำนวน section

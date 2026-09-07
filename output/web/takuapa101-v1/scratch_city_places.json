@@ -1,0 +1,1304 @@
+[
+  {
+    "id": "wat-kongkha",
+    "type": "place",
+    "category": "temple",
+    "name_th": "วัดคงคาภิมุข (วัดคงคา)",
+    "name_en": "Wat Kongkha Phimuk",
+    "editorial_angle": "สังเกตเส้นสายอุโบสถภาคใต้",
+    "illustration": "/assets/wat-kongkha.webp",
+    "brochure_facts": [
+      "มีอุโบสถแบบปักษ์ใต้ซึ่งเอกสารระบุว่าเป็นโบราณสถาน"
+    ],
+    "geo": {
+      "lat": 8.840837,
+      "lng": 98.362899,
+      "confidence": "high",
+      "source_url": "https://archaeology.sac.or.th/archaeology/881",
+      "source_name": "ฐานข้อมูลแหล่งโบราณคดีที่สำคัญในประเทศไทย (ศมส.)"
+    },
+    "address": {
+      "line_th": "ถนนราษฎร์บำรุง",
+      "subdistrict": "ตะกั่วป่า",
+      "district": "ตะกั่วป่า",
+      "province": "พังงา",
+      "postcode": null,
+      "source_url": "https://archaeology.sac.or.th/archaeology/881"
+    },
+    "contact": {
+      "phone": "076-421-479",
+      "facebook": null,
+      "website": null,
+      "line": null,
+      "source_url": "https://archaeology.sac.or.th/archaeology/881"
+    },
+    "visit": {
+      "opening_hours_th": null,
+      "opening_hours_status": "UNKNOWN",
+      "admission_fee_th": null,
+      "admission_status": "UNKNOWN",
+      "best_time_th": null,
+      "duration_minutes": null,
+      "parking_th": null,
+      "restroom": null,
+      "wheelchair_th": "ข้อมูล OpenStreetMap ที่แสดงผ่าน Mapcarta ระบุแท็ก wheelchair=yes แต่ยังไม่พบรายละเอียดสภาพทางลาดหรือสิ่งอำนวยความสะดวกจากแหล่งทางการ",
+      "dress_code_th": null,
+      "source_urls": [
+        "https://archaeology.sac.or.th/archaeology/881",
+        "https://mapcarta.com/29028704"
+      ]
+    },
+    "getting_there": [
+      {
+        "from": "ตัวเมืองตะกั่วป่า",
+        "text_th": "จากที่ทำการเทศบาลเมืองตะกั่วป่าไปทางตะวันตกตามถนนเพชรเกษม/ทางหลวงหมายเลข 4 ราว 5 กิโลเมตร เลี้ยวซ้ายเข้าถนนราษฎร์บำรุง ตรงต่อประมาณ 280 เมตร แล้วเลี้ยวซ้ายตามทาง จะพบวัดอยู่ด้านขวามือ",
+        "distance_km": 5.28,
+        "source_url": "https://archaeology.sac.or.th/archaeology/881"
+      },
+      {
+        "from": "ภูเก็ต",
+        "text_th": null,
+        "distance_km": null,
+        "source_url": ""
+      },
+      {
+        "from": "เขาหลัก",
+        "text_th": null,
+        "distance_km": null,
+        "source_url": ""
+      },
+      {
+        "from": "สนามบิน",
+        "text_th": null,
+        "distance_km": null,
+        "source_url": ""
+      }
+    ],
+    "highlights": [
+      {
+        "title_th": "อุโบสถโบราณสถาน",
+        "detail_th": "ชมอาคารก่ออิฐถือปูน หน้าบันและซุ้มประตูหน้าต่างประดับปูนปั้น รวมถึงภาพพระพุทธรูปและลวดลายพันธุ์พฤกษา",
+        "source_url": "https://archaeology.sac.or.th/archaeology/881"
+      },
+      {
+        "title_th": "เจดีย์",
+        "detail_th": "เป็นหนึ่งในโบราณสถานสำคัญภายในวัดและยังอยู่ในวัดที่มีการใช้งาน",
+        "source_url": "https://archaeology.sac.or.th/archaeology/881"
+      },
+      {
+        "title_th": "บรรยากาศริมคลองตะกั่วป่า",
+        "detail_th": "วัดตั้งอยู่ริมฝั่งคลองตะกั่วป่าด้านตะวันตก โดยคลองอยู่ทางทิศตะวันออกของวัด",
+        "source_url": "https://archaeology.sac.or.th/archaeology/881"
+      },
+      {
+        "title_th": "รายละเอียดปูนปั้นหน้าบัน",
+        "detail_th": "ด้านหน้ามีเจดีย์ พระพุทธรูปปางถวายเนตรและปางอุ้มบาตร ส่วนด้านหลังมีธรรมจักรและพระพุทธรูปปางนาคปรก",
+        "source_url": "https://archaeology.sac.or.th/archaeology/881"
+      }
+    ],
+    "nearby": [
+      {
+        "name_th": "อาคารสมชายอันดามัน",
+        "walk_minutes": null,
+        "source_url": "https://mapcarta.com/29028704"
+      },
+      {
+        "name_th": "ร้านค้าซูเปอร์มาร์เก็ตกานดา",
+        "walk_minutes": null,
+        "source_url": "https://mapcarta.com/29028704"
+      }
+    ],
+    "festival": {
+      "months_th": null,
+      "lunar_calendar_th": null,
+      "activities_th": [
+        "ปฏิบัติธรรมเฉลิมพระเกียรติ",
+        "สวดมนต์ข้ามปี",
+        "บวชชีพราหมณ์เพื่อถวายเป็นพระราชกุศล",
+        "บวชสามเณรภาคฤดูร้อน"
+      ],
+      "venue_th": "วัดคงคาภิมุข",
+      "source_urls": [
+        "https://archaeology.sac.or.th/archaeology/881"
+      ]
+    },
+    "history": [
+      {
+        "claim_th": "แหล่งข้อมูล ONEP ระบุว่าวัดสร้างเมื่อ พ.ศ. 2305 และเดิมชื่อวัดคงคา",
+        "status": "DISPUTED",
+        "quote": "สร้างเมื่อปี พ.ศ. 2305 เดิมชื่อวัดคงคา",
+        "source_name": "สิ่งแวดล้อมศิลปกรรม (ONEP)",
+        "source_url": "https://culturalenvi.onep.go.th/site/detail/4417",
+        "year_be": 2305,
+        "year_ce": 1762
+      },
+      {
+        "claim_th": "ประวัติวัดที่บันทึกในฐานข้อมูลโบราณคดีระบุว่าอุโบสถสร้าง พ.ศ. 2479 เดิมชื่อวัดคงคา และเปลี่ยนชื่อเป็นวัดคงคาพิมุขใน พ.ศ. 2483",
+        "status": "DISPUTED",
+        "quote": "อุโบสถของวัดสร้างขึ้นเมื่อ พ.ศ. 2479",
+        "source_name": "ฐานข้อมูลแหล่งโบราณคดีที่สำคัญในประเทศไทย (ศมส.)",
+        "source_url": "https://archaeology.sac.or.th/archaeology/881",
+        "year_be": 2479,
+        "year_ce": 1936
+      },
+      {
+        "claim_th": "อุโบสถและเจดีย์เป็นโบราณสถานที่ยังใช้งานอยู่ และวัดเป็นสถานปฏิบัติธรรมประจำจังหวัดพังงาแห่งที่ 1",
+        "status": "CONFIRMED",
+        "quote": "อุโบสถและเจดีย์ของวัดคงคาพิมุขเป็นโบราณสถานที่ยังใช้งานอยู่",
+        "source_name": "ฐานข้อมูลแหล่งโบราณคดีที่สำคัญในประเทศไทย (ศมส.)",
+        "source_url": "https://archaeology.sac.or.th/archaeology/881",
+        "year_be": null,
+        "year_ce": null
+      },
+      {
+        "claim_th": "กรมศิลปากรประกาศขึ้นทะเบียนโบราณสถานและกำหนดเขตที่ดินในราชกิจจานุเบกษาเมื่อ 18 ธันวาคม พ.ศ. 2539",
+        "status": "CONFIRMED",
+        "quote": "เล่ม 113 ตอนพิเศษ 50ง วันที่ 18 ธันวาคม พ.ศ. 2539",
+        "source_name": "ฐานข้อมูลแหล่งโบราณคดีที่สำคัญในประเทศไทย (ศมส.)",
+        "source_url": "https://archaeology.sac.or.th/archaeology/881",
+        "year_be": 2539,
+        "year_ce": 1996
+      },
+      {
+        "claim_th": "อุโบสถเป็นอาคารก่ออิฐถือปูนผังสี่เหลี่ยมผืนผ้า หันหน้าไปทางทิศตะวันออก มีลวดลายปูนปั้นและเครื่องบนแบบไทยภาคใต้",
+        "status": "CONFIRMED",
+        "quote": "ลักษณะเป็นอาคารก่ออิฐถือปูน ผังรูปสี่เหลี่ยมผืนผ้า",
+        "source_name": "ฐานข้อมูลแหล่งโบราณคดีที่สำคัญในประเทศไทย (ศมส.)",
+        "source_url": "https://archaeology.sac.or.th/archaeology/881",
+        "year_be": null,
+        "year_ce": null
+      }
+    ],
+    "eras": {
+      "then": {
+        "headline_th": "วัดริมคลองของเมืองตะกั่วป่า เริ่มต้นในชื่อ “วัดคงคา”",
+        "years_th": "พ.ศ. 2305 / ค.ศ. 1762 (ข้อเสนอจากแหล่งข้อมูลท้องถิ่น-ราชการ); พ.ศ. 2479 / ค.ศ. 1936 (อุโบสถ)",
+        "body_th": "หลักฐานของหน่วยงานด้านสิ่งแวดล้อมศิลปกรรมระบุว่าวัดสร้างขึ้นใน พ.ศ. 2305 และเดิมชื่อวัด “คงคา” ขณะที่ฐานข้อมูลโบราณคดีของศูนย์มานุษยวิทยาสิรินธรระบุอายุโบราณสถานสำคัญจากอุโบสถที่สร้างใน พ.ศ. 2479 จึงควรอ่านเรื่องกำเนิดเป็นประวัติ 2 ชั้น: อายุวัดตามทะเบียน/คำบอกเล่า กับอายุอาคารที่ยังเห็นอยู่ ซึ่งไม่ใช่เรื่องเดียวกัน\n\nวัดตั้งอยู่บนที่ราบตะกอนริมคลองตะกั่วป่า ด้านตะวันตกของลำน้ำ ในเมืองที่มีประวัติเป็นหัวเมืองชายฝั่งและศูนย์กลางแร่ดีบุกกับการค้าทางทะเล บริบทเมืองเช่นนี้ทำให้วัดน่าจะทำหน้าที่เป็นศาสนสถานประจำชุมชนริมน้ำ แต่ยังไม่พบหลักฐานเฉพาะวัดที่ระบุผู้สร้าง เหตุผลการสร้าง หรือบทบาทของชาวจีนฮกเกี้ยน/เจ้าเมืองโดยตรง จึงไม่ควรเติมรายละเอียดเกินหลักฐาน\n\nอุโบสถที่สร้างใน พ.ศ. 2479 เป็นอาคารก่ออิฐถือปูนแบบปักษ์ใต้ หันหน้าไปทางตะวันออก และประดับปูนปั้นเรื่องเจดีย์ พระพุทธรูป ธรรมจักร และพรรณพฤกษา สะท้อนการเป็นทั้งพื้นที่ประกอบศาสนกิจและงานช่างของชุมชนในยุครัตนโกสินทร์ตอนปลายถึงรัชกาลที่ 8",
+        "status": "DISPUTED",
+        "sources": [
+          {
+            "name": "สิ่งแวดล้อมศิลปกรรม (ONEP)",
+            "url": "https://culturalenvi.onep.go.th/site/detail/4417"
+          },
+          {
+            "name": "ฐานข้อมูลแหล่งโบราณคดีที่สำคัญในประเทศไทย (ศมส.)",
+            "url": "https://archaeology.sac.or.th/archaeology/881"
+          },
+          {
+            "name": "เทศบาลเมืองตะกั่วป่า แผนการดำเนินงานด้านสิ่งแวดล้อม",
+            "url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf"
+          }
+        ]
+      },
+      "before": {
+        "headline_th": "ชื่อใหม่ โบราณสถานใหม่ และการกลับมาเป็นวัดที่มีชีวิต",
+        "years_th": "พ.ศ. 2483 / ค.ศ. 1940; พ.ศ. 2539 / ค.ศ. 1996; พ.ศ. 2545 / ค.ศ. 2002",
+        "body_th": "ประวัติวัดที่บันทึกในฐานข้อมูลโบราณคดีระบุว่าเดิมเรียกวัดคงคา ก่อนเปลี่ยนเป็นวัดคงคาพิมุขใน พ.ศ. 2483 ขณะเดียวกันอุโบสถและเจดีย์ยังถูกใช้งาน ไม่ได้กลายเป็นซากโบราณสถานที่แยกขาดจากวัด ชื่อที่ต่างกันในเอกสารจึงเป็นสิ่งที่ควรเก็บไว้ให้คนอ่านเห็นพัฒนาการของสถานที่\n\nกรมศิลปากรประกาศขึ้นทะเบียนอุโบสถและเจดีย์ พร้อมกำหนดเขตที่ดินโบราณสถานในราชกิจจานุเบกษาเมื่อ 18 ธันวาคม พ.ศ. 2539 การขึ้นทะเบียนทำให้คุณค่าของอาคารเก่าได้รับการคุ้มครองในฐานะมรดกทางศิลปกรรม ขณะเดียวกันวัดยังคงเป็นวัดราษฎร์สังกัดมหานิกาย มีพระสงฆ์จำพรรษา\n\nทะเบียนสำนักปฏิบัติธรรมประจำจังหวัดของสำนักงานพระพุทธศาสนาแห่งชาติระบุ “คงคาภิมุข” เป็นสำนักปฏิบัติธรรมแห่งที่ 1 ของจังหวัดพังงา ตามมติ พ.ศ. 2545 ปัจจุบันฐานข้อมูลโบราณคดีระบุว่ามีการดูแลรักษาและสภาพโดยรวมมั่นคงแข็งแรง แต่ยังไม่พบหลักฐานที่ยืนยันว่าพื้นที่ได้รับผลกระทบจากสึนามิ พ.ศ. 2547 หรือมีช่วงถูกทิ้งร้าง/การบูรณะเป็นปีใดโดยเฉพาะ",
+        "status": "CONFIRMED",
+        "sources": [
+          {
+            "name": "ฐานข้อมูลแหล่งโบราณคดีที่สำคัญในประเทศไทย (ศมส.)",
+            "url": "https://archaeology.sac.or.th/archaeology/881"
+          },
+          {
+            "name": "สำนักงานพระพุทธศาสนาแห่งชาติ ทะเบียนสำนักปฏิบัติธรรมประจำจังหวัด",
+            "url": "https://www.onab.go.th/th/file/get/file/20230608fc490ca45c00b1249bbe3554a4fdf6fb104517.pdf"
+          }
+        ]
+      },
+      "now": {
+        "headline_th": "โบราณสถานที่ยังหายใจ: วัดใช้งานจริงและเป็นสำนักปฏิบัติธรรม",
+        "years_th": "2569 / 2026",
+        "body_th": "ในข้อมูลที่เผยแพร่ล่าสุด วัดคงคาภิมุขยังมีพระสงฆ์จำพรรษาและใช้งานเป็นวัดราษฎร์สังกัดมหานิกาย หน่วยงานที่ดูแลรักษาระบุเป็นตัววัดเอง โดยฐานข้อมูลโบราณคดีให้ติดต่อพระครูนันทปัญญากร เจ้าอาวาส ที่หมายเลข 076-421-479\n\nอุโบสถและเจดีย์ยังเป็นโบราณสถานที่ใช้งานอยู่ ภายในวัดถูกบรรยายว่าสะอาด ร่มรื่น และเหมาะแก่การปฏิบัติศาสนกิจ วัดยังทำหน้าที่เป็นสถานปฏิบัติธรรมประจำจังหวัดพังงาแห่งที่ 1 จึงเป็นสถานที่ที่คนมาได้ทั้งไหว้พระ ชมงานปูนปั้น และเข้าปฏิบัติธรรม\n\nกิจกรรมที่มีแหล่งอ้างอิงระบุ ได้แก่ ปฏิบัติธรรมเฉลิมพระเกียรติ สวดมนต์ข้ามปี บวชชีพราหมณ์เพื่อถวายเป็นพระราชกุศล และบวชสามเณรภาคฤดูร้อน อย่างไรก็ตาม ยังไม่พบประกาศปี 2569 ที่ยืนยันตารางกิจกรรม เวลาเปิด-ปิด โครงการบูรณะใหม่ หรือรายละเอียดสิ่งอำนวยความสะดวก จึงควรโทรสอบถามวัดก่อนเดินทาง",
+        "status": "CONFIRMED",
+        "sources": [
+          {
+            "name": "ฐานข้อมูลแหล่งโบราณคดีที่สำคัญในประเทศไทย (ศมส.)",
+            "url": "https://archaeology.sac.or.th/archaeology/881"
+          },
+          {
+            "name": "สำนักงานพระพุทธศาสนาแห่งชาติ ทะเบียนสำนักปฏิบัติธรรมประจำจังหวัด",
+            "url": "https://www.onab.go.th/th/file/get/file/20230608fc490ca45c00b1249bbe3554a4fdf6fb104517.pdf"
+          }
+        ]
+      }
+    },
+    "timeline": [
+      {
+        "year_ce": 1762,
+        "year_be": 2305,
+        "date_th": null,
+        "title_th": "ก่อตั้งวัดคงคา (ข้อมูลยังขัดกับหลักฐานอายุอาคาร)",
+        "detail_th": "ONEP ระบุว่าวัดสร้างใน พ.ศ. 2305 และเดิมชื่อวัดคงคา แต่ฐานข้อมูลโบราณคดีใช้ พ.ศ. 2479 เป็นอายุอุโบสถ จึงยังสรุปไม่ได้ว่าพื้นที่หรืออาคารเริ่มต้นในปีเดียวกัน",
+        "status": "DISPUTED",
+        "source_url": "https://culturalenvi.onep.go.th/site/detail/4417"
+      },
+      {
+        "year_ce": 1936,
+        "year_be": 2479,
+        "date_th": null,
+        "title_th": "สร้างอุโบสถหลังที่เป็นโบราณสถานสำคัญ",
+        "detail_th": "อุโบสถก่ออิฐถือปูนผังสี่เหลี่ยมผืนผ้า หันหน้าไปทางทิศตะวันออก มีลวดลายปูนปั้นและเครื่องบนแบบไทยภาคใต้",
+        "status": "CONFIRMED",
+        "source_url": "https://archaeology.sac.or.th/archaeology/881"
+      },
+      {
+        "year_ce": 1940,
+        "year_be": 2483,
+        "date_th": null,
+        "title_th": "เปลี่ยนชื่อเป็นวัดคงคาพิมุข",
+        "detail_th": "ประวัติวัดในฐานข้อมูลโบราณคดีระบุว่าเดิมชื่อวัดคงคา แล้วเปลี่ยนชื่อเป็นวัดคงคาพิมุข",
+        "status": "DISPUTED",
+        "source_url": "https://archaeology.sac.or.th/archaeology/881"
+      },
+      {
+        "year_ce": 1996,
+        "year_be": 2539,
+        "date_th": "18 ธันวาคม 2539",
+        "title_th": "ขึ้นทะเบียนโบราณสถาน",
+        "detail_th": "กรมศิลปากรประกาศขึ้นทะเบียนโบราณสถานและกำหนดเขตที่ดินในราชกิจจานุเบกษา เล่ม 113 ตอนพิเศษ 50ง",
+        "status": "CONFIRMED",
+        "source_url": "https://archaeology.sac.or.th/archaeology/881"
+      },
+      {
+        "year_ce": 2002,
+        "year_be": 2545,
+        "date_th": null,
+        "title_th": "เป็นสำนักปฏิบัติธรรมประจำจังหวัดพังงาแห่งที่ 1",
+        "detail_th": "ทะเบียนสำนักงานพระพุทธศาสนาแห่งชาติระบุคงคาภิมุขเป็นสำนักลำดับที่ 1 ของจังหวัดพังงา ตามมติครั้งที่ 12/2545",
+        "status": "CONFIRMED",
+        "source_url": "https://www.onab.go.th/th/file/get/file/20230608fc490ca45c00b1249bbe3554a4fdf6fb104517.pdf"
+      }
+    ],
+    "news": [],
+    "did_you_know": [
+      {
+        "fact_th": "ชื่อ “คงคาภิมุข” ปรากฏในทะเบียนสำนักปฏิบัติธรรมประจำจังหวัดพังงาเป็นลำดับที่ 1",
+        "status": "CONFIRMED",
+        "source_url": "https://www.onab.go.th/th/file/get/file/20230608fc490ca45c00b1249bbe3554a4fdf6fb104517.pdf"
+      },
+      {
+        "fact_th": "อุโบสถและเจดีย์ยังทำหน้าที่เป็นโบราณสถานที่ใช้งานอยู่ ไม่ได้ปิดเป็นแหล่งชมโบราณคดีเพียงอย่างเดียว",
+        "status": "CONFIRMED",
+        "source_url": "https://archaeology.sac.or.th/archaeology/881"
+      }
+    ],
+    "photos": {
+      "usable": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/3c/%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%84%E0%B8%87%E0%B8%84%E0%B8%B22563_%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2.jpg",
+          "page_url": "https://commons.wikimedia.org/wiki/File:%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%84%E0%B8%87%E0%B8%84%E0%B8%B22563_%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2.jpg",
+          "license": "CC BY-SA 4.0",
+          "license_verdict": "USABLE",
+          "attribution_th": "Chefboy.noodle — CC BY-SA 4.0 (ผ่าน Wikimedia Commons)",
+          "caption_th": "วัดคงคาภิมุข (วัดคงคา) จังหวัดพังงา",
+          "era": "current",
+          "width": 4160,
+          "height": 3120,
+          "http_status": 200
+        }
+      ],
+      "needs_permission": [
+        {
+          "url": "https://tatmediaassets.com/file/1097442",
+          "page_url": "https://tatmediaassets.com/file/1097442",
+          "caption_th": "ภาพวัดคงคาภิมุข",
+          "credit": "การท่องเที่ยวแห่งประเทศไทย (TAT Media Assets)",
+          "license_note_th": "ไม่ทราบสิทธิ์ ต้องขออนุญาตก่อนใช้"
+        }
+      ],
+      "broken": []
+    },
+    "seo": {
+      "keywords_th": [
+        "วัดคงคาภิมุข",
+        "วัดคงคา ตะกั่วป่า",
+        "วัดคงคาพิมุข",
+        "โบราณสถานตะกั่วป่า",
+        "อุโบสถปักษ์ใต้ พังงา",
+        "วัดเก่าเมืองตะกั่วป่า",
+        "เที่ยวเมืองเก่าตะกั่วป่า",
+        "วัดริมคลองตะกั่วป่า",
+        "เจดีย์วัดคงคาภิมุข"
+      ],
+      "keywords_en": [
+        "Wat Kongkha Phimuk",
+        "Wat Khongkha Takua Pa",
+        "Khongkha Phimuk Temple",
+        "Takua Pa ancient temple",
+        "Phang Nga temple",
+        "old town Takua Pa temple"
+      ]
+    },
+    "unknowns": [
+      "ไม่พบเวลาเปิด-ปิดที่เผยแพร่และยืนยันได้",
+      "ไม่พบข้อมูลค่าเข้าชม",
+      "ไม่พบเพจเฟซบุ๊ก เว็บไซต์ หรือ LINE ที่ยืนยันว่าเป็นของวัด",
+      "ไม่พบรหัสไปรษณีย์ที่ยืนยันตรงกับวัดจากแหล่งหลัก",
+      "ไม่พบข้อมูลเส้นทางและระยะทางที่ตรวจสอบได้จากภูเก็ต เขาหลัก หรือสนามบิน",
+      "ไม่พบข้อมูลที่ยืนยันบทบาทของวัดในยุคเหมืองแร่ดีบุก",
+      "ไม่พบหลักฐานยืนยันสถาปัตยกรรมชิโน-โปรตุกีส/จีน",
+      "ไม่พบข้อมูลที่ยืนยันที่จอดรถ ห้องน้ำ และช่วงเวลาที่ควรไป",
+      "ไม่พบเดือนหรือปฏิทินจันทรคติของเทศกาล",
+      "ไม่พบเวลาเดินถึงของสถานที่ใกล้เคียง",
+      "ยังไม่พบหลักฐานระบุผู้ก่อตั้งและเหตุผลการสร้างใน พ.ศ. 2305",
+      "แหล่งข้อมูลให้ปีเริ่มต้นของวัดกับปีสร้างอุโบสถต่างกัน จึงยังสรุปอายุวัดเป็นปีเดียวไม่ได้",
+      "ยังไม่พบหลักฐานเฉพาะวัดเรื่องบทบาทในเหมืองดีบุก การค้าทางทะเล ชาวจีนฮกเกี้ยน หรือระบบเจ้าเมือง",
+      "ยังไม่พบหลักฐานยืนยันว่าถูกทิ้งร้างหรือได้รับความเสียหายจากสึนามิ พ.ศ. 2547",
+      "ยังไม่พบข่าวย้อนหลัง 5 ปีที่ยืนยันโครงการบูรณะ/พัฒนาเฉพาะวัด",
+      "ยังไม่พบภาพเก่าที่ตรวจสอบแหล่งที่มาได้",
+      "ยังไม่พบประกาศปี 2569 เรื่องเวลาเปิด-ปิด ตารางกิจกรรม และสิ่งอำนวยความสะดวก"
+    ],
+    "sources": [
+      {
+        "name": "ฐานข้อมูลแหล่งโบราณคดีที่สำคัญในประเทศไทย (ศมส.)",
+        "url": "https://archaeology.sac.or.th/archaeology/881",
+        "type": "academic",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "สิ่งแวดล้อมศิลปกรรม (ONEP)",
+        "url": "https://culturalenvi.onep.go.th/site/detail/4417",
+        "type": "official",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "Mapcarta (ข้อมูลจาก OpenStreetMap)",
+        "url": "https://mapcarta.com/29028704",
+        "type": "map",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "TAT Media Assets",
+        "url": "https://tatmediaassets.com/file/1097442",
+        "type": "official",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "ไทยแลนด์ เยลโล่เพจเจส",
+        "url": "https://www.yellowpages.co.th/profile/%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%84%E0%B8%87%E0%B8%84%E0%B8%B2%E0%B8%A0%E0%B8%B4%E0%B8%A1%E0%B8%B8%E0%B8%82-nabHw5",
+        "type": "review",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "สำนักงานพระพุทธศาสนาแห่งชาติ",
+        "url": "https://www.onab.go.th/th/file/get/file/20230608fc490ca45c00b1249bbe3554a4fdf6fb104517.pdf",
+        "type": "official",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "เทศบาลเมืองตะกั่วป่า แผนการดำเนินงานด้านสิ่งแวดล้อม",
+        "url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf",
+        "type": "official",
+        "accessed": "2026-09-07"
+      }
+    ],
+    "counts": {
+      "confirmed": 6,
+      "unverified": 0,
+      "disputed": 4
+    }
+  },
+  {
+    "id": "riverwalk",
+    "type": "place",
+    "category": "market",
+    "name_th": "ตลาดริมน้ำตะกั่วป่า",
+    "name_en": "Takuapa Riverwalk",
+    "editorial_angle": "เดินดูวิถีเมืองผ่านอาหารและแม่น้ำ",
+    "illustration": "/assets/riverwalk.webp",
+    "brochure_facts": [
+      "พื้นที่ตลาดริมแม่น้ำที่มีสินค้าและอาหารท้องถิ่น"
+    ],
+    "geo": {
+      "lat": 8.87157,
+      "lng": 98.35091,
+      "confidence": "medium",
+      "source_url": "https://mapcarta.com/W816145865",
+      "source_name": "Mapcarta (ข้อมูล OpenStreetMap)"
+    },
+    "address": {
+      "line_th": "ถนนศรีตะกั่วป่า/ถนนริมคลอง ข้างวัดย่านยาว",
+      "subdistrict": "ตะกั่วป่า",
+      "district": "ตะกั่วป่า",
+      "province": "พังงา",
+      "postcode": "82110",
+      "source_url": "https://www.gplace.com/960259"
+    },
+    "contact": {
+      "phone": null,
+      "facebook": null,
+      "website": null,
+      "line": null,
+      "source_url": null
+    },
+    "visit": {
+      "opening_hours_th": "วันเสาร์ 15:00–20:00 น.",
+      "opening_hours_status": "UNVERIFIED",
+      "admission_fee_th": "ไม่มีค่าธรรมเนียมการเข้าชม",
+      "admission_status": "UNVERIFIED",
+      "best_time_th": "ช่วงบ่ายถึงเย็นวันเสาร์ โดยตลาดเริ่มคึกคักราว 16:00 น.",
+      "duration_minutes": 20,
+      "parking_th": null,
+      "restroom": null,
+      "wheelchair_th": null,
+      "dress_code_th": null,
+      "source_urls": [
+        "https://www.dit.go.th/FILE/CONTENT_FILE/256202181736250948974.pdf",
+        "https://www.thai-tour.com/place/phangnga/takuapa/4206",
+        "https://www.gplace.com/960259",
+        "https://wanderlog.com/place/details/11412806/takuapa-river-market"
+      ]
+    },
+    "getting_there": [
+      {
+        "from": "ตัวเมืองตะกั่วป่า",
+        "text_th": "เดินทางไปย่านริมน้ำ/ถนนศรีตะกั่วป่า บริเวณข้างวัดย่านยาว; แหล่งข้อมูลระบุว่าสามารถใช้รถรับจ้างท้องถิ่นหรือมอเตอร์ไซค์รับจ้างจากสถานีขนส่งตะกั่วป่าได้",
+        "distance_km": null,
+        "source_url": "https://www.gplace.com/960259"
+      },
+      {
+        "from": "ภูเก็ต",
+        "text_th": "ไม่พบเส้นทางหรือระยะทางเฉพาะตลาดจากแหล่งที่อ่านได้",
+        "distance_km": null,
+        "source_url": "https://www.gplace.com/960259"
+      },
+      {
+        "from": "เขาหลัก",
+        "text_th": "ไม่พบเส้นทางหรือระยะทางเฉพาะตลาดจากแหล่งที่อ่านได้",
+        "distance_km": null,
+        "source_url": "https://www.gplace.com/960259"
+      },
+      {
+        "from": "สนามบิน",
+        "text_th": "ไม่พบเส้นทางหรือระยะทางเฉพาะตลาดจากแหล่งที่อ่านได้",
+        "distance_km": null,
+        "source_url": "https://www.gplace.com/960259"
+      }
+    ],
+    "highlights": [
+      {
+        "title_th": "อาหารและขนมพื้นบ้าน",
+        "detail_th": "มีแผงจำหน่ายขนมพื้นบ้าน อาหารพื้นเมือง สินค้าโอทอป และของดีเมืองตะกั่วป่า",
+        "source_url": "https://www.thai-tour.com/place/phangnga/takuapa/4206"
+      },
+      {
+        "title_th": "บรรยากาศริมคลอง",
+        "detail_th": "ตลาดตั้งอยู่ติดแนวคลอง/แม่น้ำตะกั่วป่า เหมาะกับการชมวิวริมน้ำและถ่ายภาพ",
+        "source_url": "https://www.gplace.com/960259"
+      },
+      {
+        "title_th": "การแสดงและดนตรี",
+        "detail_th": "รีวิวผู้ใช้ระบุว่ามีดนตรีสดโดยนักเรียนในบางช่วง",
+        "source_url": "https://wanderlog.com/place/details/11412806/takuapa-river-market"
+      },
+      {
+        "title_th": "เชื่อมย่านเมืองเก่า",
+        "detail_th": "อยู่ใกล้ย่านเมืองเก่าตะกั่วป่าและอาคารชิโน-โปรตุกีสของชุมชนตลาดใหญ่",
+        "source_url": "https://wikicommunity.sac.or.th/community/1527"
+      }
+    ],
+    "nearby": [
+      {
+        "name_th": "วัดย่านยาว (วัดนิกรวราราม)",
+        "walk_minutes": null,
+        "source_url": "https://www.dit.go.th/FILE/CONTENT_FILE/256202181736250948974.pdf"
+      },
+      {
+        "name_th": "ย่านเมืองเก่าตะกั่วป่า/ชุมชนตลาดใหญ่",
+        "walk_minutes": null,
+        "source_url": "https://wikicommunity.sac.or.th/community/1527"
+      },
+      {
+        "name_th": "สถานีขนส่งตะกั่วป่า",
+        "walk_minutes": null,
+        "source_url": "https://mapcarta.com/W816145865"
+      }
+    ],
+    "festival": {
+      "months_th": null,
+      "lunar_calendar_th": null,
+      "activities_th": [],
+      "venue_th": null,
+      "source_urls": []
+    },
+    "history": [
+      {
+        "claim_th": "ตลาดมีชื่อในโครงการตลาดประชารัฐต้องชมว่า ‘ตลาดริมน้ำตะกั่วป่า ร่วมใจประชารัฐ’ และตั้งอยู่ถนนริมคลองข้างวัดย่านยาว",
+        "status": "CONFIRMED",
+        "quote": "ถนนริมคลอง (ข้างวัดย่านยาว)",
+        "source_name": "กรมการค้าภายใน",
+        "source_url": "https://www.dit.go.th/FILE/CONTENT_FILE/256202181736250948974.pdf",
+        "year_be": 2562,
+        "year_ce": 2019
+      },
+      {
+        "claim_th": "แหล่งท่องเที่ยวออนไลน์ระบุว่าตลาดเชื่อมโยงการท่องเที่ยวทางน้ำและการล่องเรือชมสองฝั่งแม่น้ำตะกั่วป่า",
+        "status": "UNVERIFIED",
+        "quote": "ล่องเรือชมทิวทัศน์สองฝั่งแม่น้ำตะกั่วป่า",
+        "source_name": "Thai-tour",
+        "source_url": "https://www.thai-tour.com/place/phangnga/takuapa/4206",
+        "year_be": null,
+        "year_ce": null
+      },
+      {
+        "claim_th": "ย่านตลาดใหญ่/เมืองเก่าตะกั่วป่าเป็นศูนย์กลางการค้าในยุคเหมืองแร่ และมีอาคารชิโน-โปรตุกีส แต่ยังไม่พบหลักฐานว่าตลาดริมน้ำเองสร้างในปีใดหรือขึ้นทะเบียนโบราณสถาน",
+        "status": "CONFIRMED",
+        "quote": "ศูนย์กลางการค้าในยุคเหมืองแร่",
+        "source_name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม",
+        "source_url": "https://culturalenvi.onep.go.th/index.php/site/detail/4431",
+        "year_be": null,
+        "year_ce": null
+      }
+    ],
+    "eras": {
+      "then": {
+        "headline_th": "จากท่าเรือเมืองเหมือง สู่พื้นที่ตลาดริมน้ำ",
+        "years_th": "ไม่พบปีสร้างตลาดปัจจุบัน; บริบทเมืองเก่า พ.ศ. 2325–ต้นพุทธศตวรรษที่ 20",
+        "body_th": "หลักฐานที่มีอธิบายประวัติของพื้นที่เมืองตะกั่วป่าและท่าน้ำ มากกว่าจะระบุวันกำเนิดตลาดริมน้ำแห่งนี้โดยตรง ตะกั่วป่าเป็นเมืองท่าและศูนย์กลางแลกเปลี่ยนสินค้ามาแต่โบราณ ก่อนจะเติบโตจากการขุดแร่ดีบุกและการค้าทางน้ำ เมืองเก่าตั้งอยู่ในทำเลที่มีแม่น้ำล้อมรอบสามด้าน จึงเหมาะทั้งต่อการเดินเรือ การค้า และการป้องกันเมือง",
+        "status": "CONFIRMED",
+        "sources": [
+          {
+            "name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม",
+            "url": "https://culturalenvi.onep.go.th/site/detail/4428"
+          },
+          {
+            "name": "ศูนย์มานุษยวิทยาสิรินธร: ชุมชนตลาดใหญ่",
+            "url": "https://wikicommunity.sac.or.th/community/1527"
+          }
+        ]
+      },
+      "before": {
+        "headline_th": "เมื่อเหมืองซบเซา ท่าน้ำกลายเป็นความทรงจำ แล้วถูกปลุกให้กลับมาคึกคัก",
+        "years_th": "ราวทศวรรษ 2520–พ.ศ. 2562",
+        "body_th": "ช่วงหลังจึงเกิดการฟื้นพื้นที่ในรูปตลาดชุมชน ภายใต้ชื่อ “ตลาดริมน้ำตะกั่วป่า ร่วมใจประชารัฐ” โดยเอกสารกรมการค้าภายในที่จัดทำข้อมูล ณ วันที่ 31 มกราคม 2562 ระบุที่ตั้งข้างวัดย่านยาวและเวลาเปิดวันเสาร์ 15.00–20.00 น. ยังไม่พบหลักฐานว่าตลาดได้รับผลกระทบโดยตรงจากสึนามิ พ.ศ. 2547 หรือได้รับการขึ้นทะเบียนโบราณสถานในนามตลาด",
+        "status": "CONFIRMED",
+        "sources": [
+          {
+            "name": "กรมการค้าภายใน กระทรวงพาณิชย์",
+            "url": "https://www.dit.go.th/FILE/CONTENT_FILE/256202181736250948974.pdf"
+          },
+          {
+            "name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม",
+            "url": "https://culturalenvi.onep.go.th/site/detail/4428"
+          }
+        ]
+      },
+      "now": {
+        "headline_th": "ตลาดเสาร์ริมคลองที่พาความทรงจำเมืองเก่ากลับมาเดินได้อีกครั้ง",
+        "years_th": "2569 / 2026",
+        "body_th": "ตลาดตั้งอยู่ในภูมิทัศน์เมืองเก่าที่มีอาคารจีนและชิโน-โปรตุกีส กิจกรรมริมแม่น้ำของเทศบาลยังปรากฏในเอกสารแผนงาน เช่น การทำบุญตักบาตรบริเวณริมแม่น้ำข้างวัดนิกรวราราม และกระทรวงวัฒนธรรมมีรายการเทศกาลอาหารทะเลที่ระบุตลาดเป็นสถานที่จัด อย่างไรก็ดี ยังไม่พบชื่อหน่วยงานหรือบุคคลที่ดูแลตลาดโดยตรง รวมถึงโครงการบูรณะถาวรของตัวตลาดในปี 2569",
+        "status": "UNVERIFIED",
+        "sources": [
+          {
+            "name": "Gplace",
+            "url": "https://www.gplace.com/960259"
+          },
+          {
+            "name": "Thai-tour",
+            "url": "https://www.thai-tour.com/place/phangnga/takuapa/4206"
+          },
+          {
+            "name": "เทศบาลเมืองตะกั่วป่า: รายงานติดตามแผนพัฒนา",
+            "url": "https://www.takuapacity.go.th/files/com_strategy/2022-12_231dcd9d5169573.pdf"
+          },
+          {
+            "name": "ปฏิทินวัฒนธรรม กระทรวงวัฒนธรรม",
+            "url": "https://calendar.m-culture.go.th/events/103651"
+          }
+        ]
+      }
+    },
+    "timeline": [
+      {
+        "year_ce": 1809,
+        "year_be": 2352,
+        "date_th": "พ.ศ. 2352",
+        "title_th": "เมืองเดิมถูกพม่าทำลายและผู้คนอพยพ",
+        "detail_th": "เมืองตะกั่วป่าเดิมถูกทำลายจนร้าง ก่อนมีการฟื้นเมืองบริเวณบ้านตลาดใหญ่ในสมัยรัชกาลที่ 3",
+        "status": "CONFIRMED",
+        "source_url": "https://culturalenvi.onep.go.th/site/detail/4428"
+      },
+      {
+        "year_ce": 2018,
+        "year_be": 2561,
+        "date_th": "พ.ศ. 2561",
+        "title_th": "ตลาดถูกระบุในโครงการตลาดต้องชม",
+        "detail_th": "เอกสารภาครัฐระบุชื่อ ตลาดริมน้ำตะกั่วป่า ร่วมใจประชารัฐ ในจังหวัดพังงา",
+        "status": "CONFIRMED",
+        "source_url": "https://einspection.moc.go.th/th/file/get/file/20210720dcb8f52155b576a7ca523b2a2247e871134559.pdf"
+      },
+      {
+        "year_ce": 2019,
+        "year_be": 2562,
+        "date_th": "ข้อมูล ณ 31 มกราคม 2562",
+        "title_th": "มีข้อมูลที่ตั้งและเวลาตลาดอย่างเป็นทางการ",
+        "detail_th": "กรมการค้าภายในระบุว่าตลาดอยู่ถนนริมคลองข้างวัดย่านยาว เปิดวันเสาร์ 15.00–20.00 น.",
+        "status": "CONFIRMED",
+        "source_url": "https://www.dit.go.th/FILE/CONTENT_FILE/256202181736250948974.pdf"
+      },
+      {
+        "year_ce": null,
+        "year_be": null,
+        "date_th": null,
+        "title_th": "เมืองตะกั่วป่าเติบโตเป็นเมืองท่าและศูนย์กลางการค้า",
+        "detail_th": "พื้นที่ริมแม่น้ำเป็นแกนของการเดินเรือ แลกเปลี่ยนสินค้า และการตั้งถิ่นฐานของผู้คนหลายชาติ",
+        "status": "CONFIRMED",
+        "source_url": "https://culturalenvi.onep.go.th/site/detail/4428"
+      },
+      {
+        "year_ce": null,
+        "year_be": null,
+        "date_th": null,
+        "title_th": "ย่านจับเสทำหน้าที่เป็นท่าเรือเก่า",
+        "detail_th": "ชื่อจับเส/จับเซ้เป็นคำจีนฮกเกี้ยนที่หมายถึงท่าเรือ และสัมพันธ์กับชุมชนพ่อค้าจีนกับเศรษฐกิจเหมืองแร่",
+        "status": "CONFIRMED",
+        "source_url": "https://wikicommunity.sac.or.th/community/1527"
+      },
+      {
+        "year_ce": null,
+        "year_be": null,
+        "date_th": null,
+        "title_th": "เหมืองแร่ทยอยปิด เมืองเปลี่ยนจากศูนย์กลางเหมืองสู่เมืองเก่า",
+        "detail_th": "แหล่งข้อมูลประวัติศาสตร์ท้องถิ่นระบุว่าความรุ่งเรืองจากเหมืองลดลงหลังเหมืองทยอยปิด และแม่น้ำตื้นเขินจากตะกอนเหมือง",
+        "status": "CONFIRMED",
+        "source_url": "https://www.muangboranjournal.com/post/Takuapa_Naver_Ending_Stories"
+      },
+      {
+        "year_ce": null,
+        "year_be": null,
+        "date_th": null,
+        "title_th": "เทศกาลอาหารทะเลใช้ตลาดเป็นสถานที่จัด",
+        "detail_th": "ปฏิทินวัฒนธรรมของกระทรวงวัฒนธรรมมีรายการ Takuapa Seafood Festival ณ ตลาดริมน้ำตะกั่วป่า แต่หน้าที่เปิดได้ไม่แสดงวันที่จัดอย่างชัดเจน",
+        "status": "CONFIRMED",
+        "source_url": "https://calendar.m-culture.go.th/events/103651"
+      }
+    ],
+    "news": [],
+    "did_you_know": [
+      {
+        "fact_th": "คำว่า “จับเส” ที่ใช้เรียกย่านการค้าเก่า สัมพันธ์กับคำจีนฮกเกี้ยนและท่าเรือเก่าของตะกั่วป่า",
+        "status": "CONFIRMED",
+        "source_url": "https://wikicommunity.sac.or.th/community/1527"
+      },
+      {
+        "fact_th": "เมืองเก่าตะกั่วป่ามีหลักฐานการค้าทางน้ำกับเรือสินค้าจากจีนและพม่า",
+        "status": "CONFIRMED",
+        "source_url": "https://culturalenvi.onep.go.th/site/detail/4428"
+      }
+    ],
+    "photos": {
+      "usable": [
+        {
+          "file": "/assets/photos/kuapapoh-port.webp",
+          "place_id": "riverwalk",
+          "caption_th": "ท่าเรือ/ริมน้ำตะกั่วป่า",
+          "era": "archive",
+          "credit": "กั่วป่าโพ้ / คลังภาพโครงการเมืองเก่าตะกั่วป่า",
+          "license_note_th": "ภาพจากคลังของโครงการ ใช้ในเว็บนี้ได้",
+          "source_local": "D:\\Takuapa\\images\\photo-port.webp",
+          "url": "/assets/photos/kuapapoh-port.webp",
+          "license_verdict": "USABLE",
+          "http_status": 200
+        }
+      ],
+      "needs_permission": [
+        {
+          "url": "https://www.thai-tour.com/include/p_img/6/42/tt5ceb9fb8895e8.jpg",
+          "page_url": "https://www.thai-tour.com/place/phangnga/takuapa/4206",
+          "caption_th": "ภาพตลาดริมน้ำตะกั่วป่า",
+          "credit": "Thai-tour",
+          "license_note_th": "ไม่ทราบสิทธิ์ ต้องขออนุญาตก่อนใช้"
+        },
+        {
+          "url": "https://www.thai-tour.com/include/p_img_gal/ttgal5ceba002480ec.jpg",
+          "page_url": "https://www.thai-tour.com/place/phangnga/takuapa/4206",
+          "caption_th": "ภาพมุมสูงตลาดริมน้ำตะกั่วป่า",
+          "credit": "Thai-tour",
+          "license_note_th": "ไม่ทราบสิทธิ์ ต้องขออนุญาตก่อนใช้"
+        },
+        {
+          "url": "https://www.thai-tour.com/include/p_img_gal/ttgal5ceba002572c2.jpg",
+          "page_url": "https://www.thai-tour.com/place/phangnga/takuapa/4206",
+          "caption_th": "ซุ้มทางเดินเข้าตลาด",
+          "credit": "Thai-tour",
+          "license_note_th": "ไม่ทราบสิทธิ์ ต้องขออนุญาตก่อนใช้"
+        },
+        {
+          "url": "https://www.thai-tour.com/include/p_img_gal/ttgal5ceba00267646.jpg",
+          "page_url": "https://www.thai-tour.com/place/phangnga/takuapa/4206",
+          "caption_th": "บรรยากาศริมแม่น้ำ",
+          "credit": "Thai-tour",
+          "license_note_th": "ไม่ทราบสิทธิ์ ต้องขออนุญาตก่อนใช้"
+        }
+      ],
+      "broken": []
+    },
+    "seo": {
+      "keywords_th": [
+        "ตลาดริมน้ำตะกั่วป่า",
+        "ตลาดท่าน้ำศรีเมือง",
+        "ตลาดวันเสาร์ตะกั่วป่า",
+        "ตลาดตะกั่วป่า",
+        "ของกินตะกั่วป่า",
+        "อาหารพื้นเมืองตะกั่วป่า",
+        "เมืองเก่าตะกั่วป่า",
+        "ตลาดริมคลองพังงา",
+        "เที่ยวตะกั่วป่า",
+        "ตลาดประชารัฐตะกั่วป่า"
+      ],
+      "keywords_en": [
+        "Takuapa Riverwalk",
+        "Takuapa riverside market",
+        "Takuapa Saturday market",
+        "Takua Pa market",
+        "old town Takuapa market",
+        "Phang Nga local market",
+        "Takuapa street food",
+        "Takuapa old town"
+      ]
+    },
+    "unknowns": [
+      "ไม่พบพิกัดที่ติดป้ายชื่อเฉพาะตลาดริมน้ำ จึงใช้พิกัดตลาด/พื้นที่ใกล้เคียงจาก OpenStreetMap ผ่าน Mapcarta",
+      "ไม่พบเบอร์โทรศัพท์ เพจเฟซบุ๊ก เว็บไซต์ หรือ LINE ทางการของตลาด",
+      "ไม่พบหลักฐานยืนยันปีสร้าง ผู้สร้าง หรือการขึ้นทะเบียนโบราณสถานของตลาด",
+      "ไม่พบข้อมูลยืนยันที่จอดรถ ห้องน้ำ การเข้าถึงสำหรับผู้สูงอายุ/รถเข็น และการแต่งกาย",
+      "ไม่พบเทศกาลเฉพาะตลาดที่ยืนยันได้",
+      "ไม่พบลิงก์รูปภาพทางการที่ระบุสิทธิ์การใช้งาน",
+      "ไม่พบหลักฐานระบุปีเปิดตลาดครั้งแรก ผู้ก่อตั้ง ผู้รับผิดชอบ หรือหน่วยงานเจ้าของตลาด",
+      "ไม่พบหลักฐานว่าตลาดถูกทิ้งร้าง บูรณะ หรือเปลี่ยนมือในช่วงใด",
+      "ไม่พบหลักฐานยืนยันผลกระทบโดยตรงจากสึนามิ พ.ศ. 2547 ต่อพื้นที่ตลาด",
+      "ไม่พบหลักฐานว่าตลาดริมน้ำขึ้นทะเบียนโบราณสถาน; การขึ้นทะเบียนที่พบเป็นขององค์ประกอบอื่นในเมืองเก่า",
+      "ไม่พบประกาศเปิดตลาดล่าสุดปี 2569 จากผู้ดูแลโดยตรง จึงยังยืนยันวันเวลาเปิดปัจจุบันไม่ได้",
+      "ไม่พบข่าวย้อนหลัง 5 ปีที่ระบุการบูรณะหรือโครงการพัฒนาตลาดโดยตรงพร้อมวันที่เผยแพร่ชัดเจน",
+      "ไม่พบภาพเก่าที่ระบุว่าเป็นพื้นที่ตลาดริมน้ำโดยตรง",
+      "ภาพทั้งหมดเป็นลิงก์จากแหล่งท่องเที่ยวออนไลน์และไม่ทราบสิทธิ์ ต้องขออนุญาตก่อนใช้"
+    ],
+    "sources": [
+      {
+        "name": "กรมการค้าภายใน กระทรวงพาณิชย์",
+        "url": "https://www.dit.go.th/FILE/CONTENT_FILE/256202181736250948974.pdf",
+        "type": "official",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "Mapcarta (ข้อมูล OpenStreetMap)",
+        "url": "https://mapcarta.com/W816145865",
+        "type": "map",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "Thai-tour",
+        "url": "https://www.thai-tour.com/place/phangnga/takuapa/4206",
+        "type": "blog",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "Gplace",
+        "url": "https://www.gplace.com/960259",
+        "type": "blog",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "ศูนย์มานุษยวิทยาสิรินธร: ชุมชนตลาดใหญ่",
+        "url": "https://wikicommunity.sac.or.th/community/1527",
+        "type": "academic",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม",
+        "url": "https://culturalenvi.onep.go.th/index.php/site/detail/4431",
+        "type": "official",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "Wanderlog",
+        "url": "https://wanderlog.com/place/details/11412806/takuapa-river-market",
+        "type": "review",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม",
+        "url": "https://culturalenvi.onep.go.th/site/detail/4428",
+        "type": "official",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "เทศบาลเมืองตะกั่วป่า",
+        "url": "https://www.takuapacity.go.th/files/com_strategy/2022-12_231dcd9d5169573.pdf",
+        "type": "official",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "ปฏิทินวัฒนธรรม กระทรวงวัฒนธรรม",
+        "url": "https://calendar.m-culture.go.th/events/103651",
+        "type": "official",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "Muang Boran Journal",
+        "url": "https://www.muangboranjournal.com/post/Takuapa_Naver_Ending_Stories",
+        "type": "blog",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "กระทรวงพาณิชย์: ตลาดต้องชมภาคใต้",
+        "url": "https://einspection.moc.go.th/th/file/get/file/20210720dcb8f52155b576a7ca523b2a2247e871134559.pdf",
+        "type": "official",
+        "accessed": "2026-09-07"
+      }
+    ],
+    "counts": {
+      "confirmed": 9,
+      "unverified": 1,
+      "disputed": 0
+    }
+  },
+  {
+    "id": "governor-wall",
+    "type": "place",
+    "category": "heritage",
+    "name_th": "กำแพงจวนเจ้าเมืองตะกั่วป่า",
+    "name_en": "Governor’s Residence Wall",
+    "editorial_angle": "ร่องรอยบนกำแพงที่เล่าเรื่องเมือง",
+    "illustration": "/assets/governor-wall.webp",
+    "brochure_facts": [
+      "กำแพงเก่าเชื่อมกับประวัติการปกครองและความขัดแย้งในอดีต"
+    ],
+    "geo": {
+      "lat": 8.830904,
+      "lng": 98.366634,
+      "confidence": "high",
+      "source_url": "https://archaeology.sac.or.th/archaeology/874",
+      "source_name": "ฐานข้อมูลแหล่งโบราณคดีที่สำคัญในประเทศไทย (ศูนย์มานุษยวิทยาสิรินธร)"
+    },
+    "address": {
+      "line_th": "ถนนอุดมธารา",
+      "subdistrict": "ตะกั่วป่า",
+      "district": "ตะกั่วป่า",
+      "province": "พังงา",
+      "postcode": "",
+      "source_url": "https://archaeology.sac.or.th/archaeology/874"
+    },
+    "contact": {
+      "phone": null,
+      "facebook": null,
+      "website": null,
+      "line": null,
+      "source_url": null
+    },
+    "visit": {
+      "opening_hours_th": "เข้าชมได้ทุกวัน (ไม่ระบุเวลา)",
+      "opening_hours_status": "CONFIRMED",
+      "admission_fee_th": "ไม่เสียค่าเข้าชม",
+      "admission_status": "CONFIRMED",
+      "best_time_th": null,
+      "duration_minutes": null,
+      "parking_th": null,
+      "restroom": null,
+      "wheelchair_th": null,
+      "dress_code_th": null,
+      "source_urls": [
+        "https://archaeology.sac.or.th/archaeology/874"
+      ]
+    },
+    "getting_there": [
+      {
+        "from": "ตัวเมืองตะกั่วป่า",
+        "text_th": "จากที่ทำการเทศบาลเมืองตะกั่วป่า ใช้ถนนราษฎร์บำรุง เลี้ยวขวาเข้าถนนมนตรี 2 แล้วเลี้ยวซ้ายเข้าถนนศรีตะกั่วป่า ตรงประมาณ 260 เมตร พบโบราณสถานอยู่ทางซ้ายมือ",
+        "distance_km": null,
+        "source_url": "https://archaeology.sac.or.th/archaeology/874"
+      },
+      {
+        "from": "ภูเก็ต",
+        "text_th": "ไม่พบเส้นทางและระยะทางเฉพาะจากภูเก็ตในแหล่งที่อ่านแล้ว",
+        "distance_km": null,
+        "source_url": "https://archaeology.sac.or.th/archaeology/874"
+      },
+      {
+        "from": "เขาหลัก",
+        "text_th": "ไม่พบเส้นทางและระยะทางเฉพาะจากเขาหลักในแหล่งที่อ่านแล้ว",
+        "distance_km": null,
+        "source_url": "https://archaeology.sac.or.th/archaeology/874"
+      },
+      {
+        "from": "สนามบิน",
+        "text_th": "ไม่พบสนามบินต้นทางที่ระบุและระยะทางในแหล่งที่อ่านแล้ว",
+        "distance_km": null,
+        "source_url": "https://archaeology.sac.or.th/archaeology/874"
+      }
+    ],
+    "highlights": [
+      {
+        "title_th": "แนวกำแพงโบราณ",
+        "detail_th": "ชมกำแพงส่วนที่ยังสมบูรณ์ สูงประมาณ 5 เมตร และส่วนที่ชำรุดตามกาลเวลา",
+        "source_url": "https://archaeology.sac.or.th/archaeology/874"
+      },
+      {
+        "title_th": "ผัง 3 ส่วน",
+        "detail_th": "สังเกตการแบ่งพื้นที่เป็นวังหน้า ห้องโถง และวังหลัง พร้อมช่องประตูเชื่อม",
+        "source_url": "https://archaeology.sac.or.th/archaeology/874"
+      },
+      {
+        "title_th": "เทคนิคก่อสร้าง",
+        "detail_th": "เห็นชั้นวัสดุปูนผสมกรวดทรายและฐานกำแพงที่กว้างกว่าตัวกำแพง",
+        "source_url": "https://archaeology.sac.or.th/archaeology/874"
+      },
+      {
+        "title_th": "ป้ายข้อมูล",
+        "detail_th": "ด้านหน้ามีป้ายข้อมูลประวัติจากกรมศิลปากรและการท่องเที่ยวแห่งประเทศไทย",
+        "source_url": "https://archaeology.sac.or.th/archaeology/874"
+      },
+      {
+        "title_th": "บริบทเมืองเก่า",
+        "detail_th": "อยู่ริมถนนอุดมธารา ฝั่งตะวันตกของแม่น้ำตะกั่วป่า และใกล้วัดหน้าเมือง",
+        "source_url": "https://archaeology.sac.or.th/archaeology/874"
+      }
+    ],
+    "nearby": [
+      {
+        "name_th": "วัดหน้าเมือง",
+        "walk_minutes": null,
+        "source_url": "https://archaeology.sac.or.th/archaeology/874"
+      },
+      {
+        "name_th": "ตลาดเก่าตะกั่วป่า",
+        "walk_minutes": null,
+        "source_url": "https://archaeology.sac.or.th/archaeology/874"
+      },
+      {
+        "name_th": "ตึกขุนอินทร์",
+        "walk_minutes": null,
+        "source_url": "https://archaeology.sac.or.th/archaeology/874"
+      }
+    ],
+    "festival": {
+      "months_th": "ประมาณพฤศจิกายน–เมษายน (ถนนสายวัฒนธรรม)",
+      "lunar_calendar_th": null,
+      "activities_th": [
+        "พิธีทำบุญเลี้ยงพระจวนเจ้าเมืองตะกั่วป่า",
+        "การแสดงศิลปวัฒนธรรม",
+        "ทำขนมพื้นบ้านและอาหารพื้นเมือง",
+        "สาธิตวิถีชีวิตและภูมิปัญญาท้องถิ่น",
+        "นิทรรศการภาพถ่าย"
+      ],
+      "venue_th": "บริเวณจวนเจ้าเมืองและถนนศรีตะกั่วป่าหรือตลาดเก่า",
+      "source_urls": [
+        "https://archaeology.sac.or.th/archaeology/874"
+      ]
+    },
+    "history": [
+      {
+        "claim_th": "แหล่งนี้มีอายุทางโบราณคดีอยู่ในช่วง พ.ศ. 2383–2424 (ค.ศ. 1840–1881)",
+        "status": "CONFIRMED",
+        "quote": "พ.ศ. 2383 – 2424",
+        "source_name": "ฐานข้อมูลแหล่งโบราณคดีที่สำคัญในประเทศไทย",
+        "source_url": "https://archaeology.sac.or.th/archaeology/874",
+        "year_be": null,
+        "year_ce": null
+      },
+      {
+        "claim_th": "สันนิษฐานว่าสร้างในสมัยพระยาเสนานุชิต (นุช ณ นคร) เจ้าเมืองตะกั่วป่า เพื่อเป็นกำแพงล้อมรอบจวนและป้องกันศัตรู",
+        "status": "CONFIRMED",
+        "quote": "สร้างล้อมรอบจวนที่พัก เป็นลักษณะของกำแพงค่ายป้องกันศัตรู",
+        "source_name": "ฐานข้อมูลแหล่งโบราณคดีที่สำคัญในประเทศไทย",
+        "source_url": "https://archaeology.sac.or.th/archaeology/874",
+        "year_be": null,
+        "year_ce": null
+      },
+      {
+        "claim_th": "เกี่ยวข้องกับความขัดแย้งของกลุ่มชาวจีนในเมืองตะกั่วป่าซึ่งเชื่อมโยงกับผลประโยชน์เหมืองแร่ดีบุก และใช้เป็นที่หลบภัยของชาวเมือง",
+        "status": "CONFIRMED",
+        "quote": "ขัดผลประโยชน์ในการทำเหมืองแร่ดีบุก",
+        "source_name": "ฐานข้อมูลแหล่งโบราณคดีที่สำคัญในประเทศไทย",
+        "source_url": "https://archaeology.sac.or.th/archaeology/874",
+        "year_be": null,
+        "year_ce": null
+      },
+      {
+        "claim_th": "พระบาทสมเด็จพระจุลจอมเกล้าเจ้าอยู่หัวเสด็จตะกั่วป่าและทอดพระเนตรจวนเจ้าเมืองเมื่อวันที่ 28 พฤษภาคม ร.ศ. 109 (พ.ศ. 2433/ค.ศ. 1890)",
+        "status": "CONFIRMED",
+        "quote": "ทอดพระเนตรจวนเจ้าเมืองตะกั่วป่าแห่งนี้ด้วย",
+        "source_name": "ฐานข้อมูลแหล่งโบราณคดีที่สำคัญในประเทศไทย",
+        "source_url": "https://archaeology.sac.or.th/archaeology/874",
+        "year_be": 2433,
+        "year_ce": 1890
+      },
+      {
+        "claim_th": "กำแพงเป็นผังสี่เหลี่ยมผืนผ้า ก่อด้วยปูนผสมกรวดทรายซ้อนเป็นชั้น ฐานกว้างกว่าตัวกำแพง และส่วนที่สมบูรณ์สูงประมาณ 5 เมตร",
+        "status": "CONFIRMED",
+        "quote": "กำแพงรูปสี่เหลี่ยมผืนผ้า",
+        "source_name": "ฐานข้อมูลแหล่งโบราณคดีที่สำคัญในประเทศไทย",
+        "source_url": "https://archaeology.sac.or.th/archaeology/874",
+        "year_be": null,
+        "year_ce": null
+      },
+      {
+        "claim_th": "ภายในแบ่งเป็น 3 ส่วน ได้แก่ วังหน้า ห้องโถง และวังหลัง มีประตูเชื่อมถึงกัน",
+        "status": "CONFIRMED",
+        "quote": "ภายในกำแพงแบ่งเป็น 3 ส่วน",
+        "source_name": "ฐานข้อมูลแหล่งโบราณคดีที่สำคัญในประเทศไทย",
+        "source_url": "https://archaeology.sac.or.th/archaeology/874",
+        "year_be": null,
+        "year_ce": null
+      },
+      {
+        "claim_th": "กรมศิลปากรขุดแต่งและขุดค้นใน พ.ศ. 2542 พบเครื่องถ้วยจีนสมัยราชวงศ์ชิง เครื่องถ้วยยุโรป และหลักฐานอื่น ๆ",
+        "status": "CONFIRMED",
+        "quote": "การขุดแต่งและขุดค้นทางโบราณคดีของกรมศิลปากร เมื่อ พ.ศ.2542",
+        "source_name": "ฐานข้อมูลแหล่งโบราณคดีที่สำคัญในประเทศไทย",
+        "source_url": "https://archaeology.sac.or.th/archaeology/874",
+        "year_be": 2542,
+        "year_ce": 1999
+      },
+      {
+        "claim_th": "ขึ้นทะเบียนโบราณสถานและกำหนดเขตที่ดินโบราณสถานตามประกาศในราชกิจจานุเบกษา เล่ม 113 ตอนพิเศษ 50 ง วันที่ 18 ธันวาคม พ.ศ. 2539",
+        "status": "CONFIRMED",
+        "quote": "ขึ้นทะเบียนของกรมศิลปากร",
+        "source_name": "ฐานข้อมูลแหล่งโบราณคดีที่สำคัญในประเทศไทย",
+        "source_url": "https://archaeology.sac.or.th/archaeology/874",
+        "year_be": 2539,
+        "year_ce": 1996
+      }
+    ],
+    "eras": {
+      "then": {
+        "headline_th": "กำแพงค่ายของจวนเจ้าเมือง ในเมืองเหมืองดีบุกริมเส้นทางทะเล",
+        "years_th": "พ.ศ. 2383–2424 (ค.ศ. 1840–1881)",
+        "body_th": "กำแพงจวนเจ้าเมืองตะกั่วป่าน่าจะสร้างขึ้นในสมัยพระยาเสนานุชิต (นุช ณ นคร) เจ้าเมืองตะกั่วป่า ช่วง พ.ศ. 2383–2424 แต่แหล่งวิชาการยังไม่ระบุปีเริ่มก่อสร้างที่แน่นอน ตัวกำแพงล้อมจวนที่พักและพื้นที่ราชการ ทำหน้าที่คล้ายกำแพงค่ายสำหรับป้องกันอันตรายและเป็นที่หลบภัยของชาวเมือง\n\nนี่คือช่วงที่ตะกั่วป่าเติบโตจากเศรษฐกิจเหมืองแร่ดีบุกและการค้าชายฝั่ง เมืองเก่าตั้งอยู่ริมแม่น้ำตะกั่วป่า ซึ่งเชื่อมกับทะเลอันดามันและเครือข่ายการค้าหลายชาติ ชุมชนจีนที่เข้ามาทำเหมืองและค้าขายมีบทบาทสำคัญ แต่ความขัดแย้งเรื่องผลประโยชน์เหมืองแร่ทำให้ต้องมีพื้นที่คุ้มกันที่มั่นคง กำแพงจึงเป็นทั้งบ้านของผู้ปกครองและเครื่องมือรักษาความสงบของเมือง\n\nผังภายในแบ่งเป็นวังหน้า ห้องโถง และวังหลัง มีประตูเชื่อมกัน ก่อด้วยปูนผสมกรวดทรายวางซ้อนเป็นชั้นและทำฐานกว้างกว่าตัวกำแพง ส่วนที่ยังสมบูรณ์สูงราว 5 เมตร หลักฐานจากการขุดค้นภายหลังพบเครื่องถ้วยจีนสมัยราชวงศ์ชิง เครื่องถ้วยยุโรป และวัสดุร่วมสมัย สะท้อนการติดต่อค้าขายของเมืองในยุคนั้น",
+        "status": "CONFIRMED",
+        "sources": [
+          {
+            "name": "ฐานข้อมูลแหล่งโบราณคดีที่สำคัญในประเทศไทย (ศมส.)",
+            "url": "https://archaeology.sac.or.th/archaeology/874"
+          },
+          {
+            "name": "สำนักงานสิ่งแวดล้อมศิลปกรรม ONEP: แหล่งศิลปกรรมเมืองตะกั่วป่า",
+            "url": "https://culturalenvi.onep.go.th/site/detail/4428"
+          }
+        ]
+      },
+      "before": {
+        "headline_th": "จากจวนที่เคยมีคนอยู่ สู่โบราณสถานที่เมืองเก่าช่วยกันรักษา",
+        "years_th": "พ.ศ. 2424–2568 (ค.ศ. 1881–2025)",
+        "body_th": "หลังพระยาเสนานุชิต (นุช) พ้นตำแหน่ง กำแพงและจวนยังใช้งานต่อในสมัยพระยาเสนานุชิต (เอี่ยม ณ นคร) ระหว่าง พ.ศ. 2424–2435 พระบาทสมเด็จพระจุลจอมเกล้าเจ้าอยู่หัวเสด็จตะกั่วป่าและทอดพระเนตรจวนแห่งนี้เมื่อ 28 พฤษภาคม ร.ศ. 109 หรือ พ.ศ. 2433\n\nต่อมาเมื่อมีการย้ายที่ตั้งเมืองไปเกาะคอเขาและบ้านย่านยาวในสมัยพระนราเทพภักดี (สิทธิ์ ณ นคร) จวนเดิมจึงหมดบทบาทราชการและน่าจะถูกทิ้งร้างตั้งแต่ช่วงนั้น แหล่งข้อมูลที่ตรวจสอบได้ไม่พบหลักฐานยืนยันว่ากำแพงถูกใช้เป็นกิจการอื่น หรือได้รับความเสียหายโดยตรงจากสึนามิ พ.ศ. 2547\n\nกรมศิลปากรขึ้นทะเบียนเป็นโบราณสถานและกำหนดเขตที่ดินในราชกิจจานุเบกษา เล่ม 113 ตอนพิเศษ 50 ง วันที่ 18 ธันวาคม พ.ศ. 2539 ต่อมาขุดแต่งและขุดค้นใน พ.ศ. 2542 ก่อนมีการบูรณปฏิสังขรณ์และปรับภูมิทัศน์ในระยะหลัง แหล่งปัจจุบันระบุว่ากำแพงมั่นคงขึ้น แต่ยังมีวัชพืชและรากไม้บางจุดที่ต้องดูแล",
+        "status": "CONFIRMED",
+        "sources": [
+          {
+            "name": "ฐานข้อมูลแหล่งโบราณคดีที่สำคัญในประเทศไทย (ศมส.)",
+            "url": "https://archaeology.sac.or.th/archaeology/874"
+          }
+        ]
+      },
+      "now": {
+        "headline_th": "โบราณสถานมีชีวิต: กำแพงเก่ากลายเป็นเวทีของเมืองตะกั่วป่า",
+        "years_th": "2569 / 2026",
+        "body_th": "ปัจจุบันกำแพงจวนเจ้าเมืองตะกั่วป่าเป็นโบราณสถานที่ยังเปิดให้เข้าชมทุกวันโดยไม่เสียค่าเข้าชม ฐานข้อมูลแหล่งโบราณคดีระบุหน่วยงานดูแลร่วม ได้แก่ กรมศิลปากร เทศบาลเมืองตะกั่วป่า และตระกูล ณ นคร ภายในมีสนามหญ้าและทางเดินบางส่วน พร้อมป้ายข้อมูลของกรมศิลปากรและการท่องเที่ยวแห่งประเทศไทย\n\nพื้นที่ไม่ได้ทำหน้าที่เป็นที่พักของเจ้าเมืองแล้ว แต่ยังทำหน้าที่เป็นหมุดหมายของย่านเมืองเก่าและพื้นที่ประกอบพิธี/กิจกรรมชุมชน ในช่วง พ.ศ. 2569 จังหวัดพังงาและเทศบาลเมืองตะกั่วป่าจัดงาน “จากตะโกลา สู่ตะกั่วป่า ครั้งที่ 12” ที่จวนฯ ระหว่าง 28 กุมภาพันธ์–3 มีนาคม มีการแสดง โขน โนรา หนังตะลุง พิธีบวงสรวงและเจริญพระพุทธมนต์ รวมถึงจำหน่ายอาหารพื้นบ้านและสินค้า OTOP\n\nการใช้พื้นที่ร่วมสมัยจึงเป็นการท่องเที่ยวเชิงมรดกและการเรียนรู้วิถีคนตะกั่วป่า ขณะเดียวกันสภาพกำแพงบางช่วงยังชำรุดและมีพืชยึดเกาะ แหล่งทางการที่ตรวจสอบได้ยังไม่ประกาศโครงการบูรณะระยะใหม่หรือรายละเอียดงบประมาณเฉพาะสำหรับ พ.ศ. 2569",
+        "status": "CONFIRMED",
+        "sources": [
+          {
+            "name": "ฐานข้อมูลแหล่งโบราณคดีที่สำคัญในประเทศไทย (ศมส.)",
+            "url": "https://archaeology.sac.or.th/archaeology/874"
+          },
+          {
+            "name": "สถานีวิทยุกระจายเสียงแห่งประเทศไทย: งานจากตะโกลา สู่ตะกั่วป่า ครั้งที่ 12",
+            "url": "https://radiothailand.prd.go.th/th/content/category/detail/id/9/iid/481052"
+          }
+        ]
+      }
+    },
+    "timeline": [
+      {
+        "year_ce": 1840,
+        "year_be": 2383,
+        "date_th": null,
+        "title_th": "เริ่มช่วงสมัยพระยาเสนานุชิต (นุช)",
+        "detail_th": "สันนิษฐานว่าเริ่มสร้างกำแพงล้อมจวนที่พักและพื้นที่ราชการ เพื่อป้องกันศัตรูและความวุ่นวายจากความขัดแย้งเรื่องเหมืองดีบุก",
+        "status": "CONFIRMED",
+        "source_url": "https://archaeology.sac.or.th/archaeology/874"
+      },
+      {
+        "year_ce": 1881,
+        "year_be": 2424,
+        "date_th": null,
+        "title_th": "จวนยังใช้งานต่อในสมัยเจ้าเมืองคนถัดมา",
+        "detail_th": "พระยาเสนานุชิต (เอี่ยม ณ นคร) เป็นเจ้าเมือง และการใช้พื้นที่จวนดำเนินต่อถึง พ.ศ. 2435 ตามหลักฐานเอกสารที่ฐานข้อมูลโบราณคดีสรุปไว้",
+        "status": "CONFIRMED",
+        "source_url": "https://archaeology.sac.or.th/archaeology/874"
+      },
+      {
+        "year_ce": 1890,
+        "year_be": 2433,
+        "date_th": "28 พฤษภาคม ร.ศ. 109",
+        "title_th": "รัชกาลที่ 5 ทอดพระเนตรจวนเจ้าเมือง",
+        "detail_th": "พระบาทสมเด็จพระจุลจอมเกล้าเจ้าอยู่หัวเสด็จตะกั่วป่าและทอดพระเนตรจวนเจ้าเมืองแห่งนี้",
+        "status": "CONFIRMED",
+        "source_url": "https://archaeology.sac.or.th/archaeology/874"
+      },
+      {
+        "year_ce": 1892,
+        "year_be": 2435,
+        "date_th": null,
+        "title_th": "หมดบทบาทเมื่อย้ายศูนย์กลางเมือง",
+        "detail_th": "เมื่อย้ายที่ตั้งเมืองไปเกาะคอเขาและบ้านย่านยาว จวนเดิมไม่มีการใช้งานและคงถูกทิ้งร้างตั้งแต่ช่วงนี้",
+        "status": "CONFIRMED",
+        "source_url": "https://archaeology.sac.or.th/archaeology/874"
+      },
+      {
+        "year_ce": 1996,
+        "year_be": 2539,
+        "date_th": "18 ธันวาคม 2539",
+        "title_th": "ขึ้นทะเบียนโบราณสถาน",
+        "detail_th": "กรมศิลปากรประกาศขึ้นทะเบียนและกำหนดเขตที่ดินโบราณสถานในราชกิจจานุเบกษา",
+        "status": "CONFIRMED",
+        "source_url": "https://archaeology.sac.or.th/archaeology/874"
+      },
+      {
+        "year_ce": 1999,
+        "year_be": 2542,
+        "date_th": null,
+        "title_th": "ขุดแต่งและขุดค้นทางโบราณคดี",
+        "detail_th": "พบเครื่องถ้วยจีนสมัยราชวงศ์ชิง เครื่องถ้วยยุโรป เศษภาชนะ เครื่องแก้ว และชิ้นส่วนประดับสถาปัตยกรรม",
+        "status": "CONFIRMED",
+        "source_url": "https://archaeology.sac.or.th/archaeology/874"
+      },
+      {
+        "year_ce": 2026,
+        "year_be": 2569,
+        "date_th": "28 กุมภาพันธ์–3 มีนาคม 2569",
+        "title_th": "จวนฯ เป็นพื้นที่จัดงานเมืองเก่า",
+        "detail_th": "จัดงานจากตะโกลา สู่ตะกั่วป่า ครั้งที่ 12 มีการแสดง พิธีกรรม และตลาดอาหารพื้นบ้าน/สินค้า OTOP",
+        "status": "CONFIRMED",
+        "source_url": "https://radiothailand.prd.go.th/th/content/category/detail/id/9/iid/481052"
+      }
+    ],
+    "news": [
+      {
+        "date": "2026-02-28",
+        "title_th": "จังหวัดพังงาจัดงาน จากตะโกลา สู่ตะกั่วป่า ครั้งที่ 12",
+        "summary_th": "เทศบาลเมืองตะกั่วป่าจัดกิจกรรมส่งเสริมการท่องเที่ยวเมืองเก่าที่จวนเจ้าเมืองตะกั่วป่า ระหว่าง 28 กุมภาพันธ์–3 มีนาคม 2569",
+        "outlet": "สถานีวิทยุกระจายเสียงแห่งประเทศไทย",
+        "url": "https://radiothailand.prd.go.th/th/content/category/detail/id/9/iid/481052"
+      }
+    ],
+    "did_you_know": [
+      {
+        "fact_th": "กำแพงมีผังสี่เหลี่ยมผืนผ้าและแบ่งพื้นที่ภายในเป็นวังหน้า ห้องโถง และวังหลัง",
+        "status": "CONFIRMED",
+        "source_url": "https://archaeology.sac.or.th/archaeology/874"
+      },
+      {
+        "fact_th": "การขุดค้นพบทั้งเครื่องถ้วยจีนสมัยราชวงศ์ชิงและเครื่องถ้วยยุโรปในแหล่งเดียวกัน",
+        "status": "CONFIRMED",
+        "source_url": "https://archaeology.sac.or.th/archaeology/874"
+      }
+    ],
+    "photos": {
+      "usable": [],
+      "needs_permission": [
+        {
+          "url": "https://img.wongnai.com/p/1920x0/2022/07/17/b51c676106884f98a0c8334b8584b456.jpg",
+          "page_url": "https://www.wongnai.com/attractions/403843FU-%E0%B8%81%E0%B8%B3%E0%B9%81%E0%B8%9E%E0%B8%87%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%81%E0%B9%88%E0%B8%B2%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2/photos/b51c676106884f98a0c8334b8584b456",
+          "caption_th": "แนวกำแพงจวนเจ้าเมืองตะกั่วป่าภายในสนามหญ้า",
+          "credit": "Wongnai (ผู้ใช้/สมาชิกที่อัปโหลดบนหน้าสถานที่)",
+          "license_note_th": "ไม่ทราบสิทธิ์ ต้องขออนุญาตก่อนใช้"
+        },
+        {
+          "url": "https://ak-d.tripcdn.com/images/1mi0a2224wtrvu7ps3172.jpg?proc=source%2Ftrip",
+          "page_url": "https://th.trip.com/moments/detail/takua-pa-14944-119730152/",
+          "caption_th": "ป้ายจวนเจ้าเมืองตะกั่วป่ากับแนวกำแพงและลานด้านใน",
+          "credit": "Trip.com (ภาพประกอบหน้าสถานที่)",
+          "license_note_th": "ไม่ทราบสิทธิ์ ต้องขออนุญาตก่อนใช้"
+        }
+      ],
+      "broken": []
+    },
+    "seo": {
+      "keywords_th": [
+        "กำแพงจวนเจ้าเมืองตะกั่วป่า",
+        "กำแพงค่ายตะกั่วป่า",
+        "กำแพงเมืองเก่าตะกั่วป่า",
+        "จวนเจ้าเมืองตะกั่วป่า",
+        "เมืองเก่าตะกั่วป่า",
+        "โบราณสถานตะกั่วป่า",
+        "เที่ยวตะกั่วป่า",
+        "ประวัติตะกั่วป่า",
+        "เหมืองแร่ดีบุกตะกั่วป่า",
+        "ถนนอุดมธารา",
+        "ตะกั่วป่าเมืองเก่าเล่าความหลัง"
+      ],
+      "keywords_en": [
+        "Takuapa Governor's Residence Wall",
+        "Takua Pa old town wall",
+        "Takuapa historic wall",
+        "Takua Pa heritage site",
+        "Takuapa old town",
+        "Phang Nga heritage",
+        "tin mining history Takuapa",
+        "Governor's Residence Takuapa"
+      ]
+    },
+    "unknowns": [
+      "ไม่พบรหัสไปรษณีย์ที่ระบุเฉพาะสถานที่จากแหล่งที่อ่านแล้ว",
+      "ไม่พบเวลาเปิด–ปิดที่แน่นอน แหล่งทางการระบุเพียงเข้าชมได้ทุกวัน",
+      "ไม่พบเบอร์โทรศัพท์ เพจเฟซบุ๊ก เว็บไซต์ หรือ LINE ของสถานที่โดยตรง",
+      "ไม่พบค่าใช้จ่ายด้านที่จอดรถ ห้องน้ำ และข้อมูลการเข้าถึงสำหรับผู้สูงอายุ/รถเข็น",
+      "ไม่พบข้อมูลยืนยันว่าเป็นสถาปัตยกรรมชิโน-โปรตุกีสโดยตรงของกำแพง",
+      "ไม่พบระยะทาง/เวลาเดินทางจากภูเก็ต เขาหลัก หรือสนามบิน",
+      "ไม่พบภาพที่สามารถยืนยันสิทธิ์การใช้งานได้ จึงไม่ใส่ลิงก์รูปภาพ",
+      "ไม่พบหลักฐานที่ยืนยันปีเริ่มก่อสร้างแบบปีเดียว นอกจากกรอบ พ.ศ. 2383–2424",
+      "ไม่พบหลักฐานยืนยันว่ากำแพงได้รับผลกระทบโดยตรงจากสึนามิ พ.ศ. 2547",
+      "ไม่พบรายละเอียดโครงการบูรณะหรืองบประมาณเฉพาะสำหรับ พ.ศ. 2569",
+      "ไม่พบภาพเก่าที่ตรวจสอบแหล่งที่มาและสิทธิ์การใช้งานได้ จึงเว้น photos_archive ว่าง"
+    ],
+    "sources": [
+      {
+        "name": "ฐานข้อมูลแหล่งโบราณคดีที่สำคัญในประเทศไทย: กำแพงจวนเจ้าเมืองตะกั่วป่า",
+        "url": "https://archaeology.sac.or.th/archaeology/874",
+        "type": "academic",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "เมืองตะกั่วป่า — ศูนย์ข้อมูลชุมชน ศมส.",
+        "url": "https://wikicommunity.sac.or.th/community/1549",
+        "type": "academic",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "แหล่งศิลปกรรมอันควรอนุรักษ์: ตะกั่วป่า",
+        "url": "https://culturalenvi.onep.go.th/site/detail/4428",
+        "type": "official",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "ฐานข้อมูลแหล่งโบราณคดีที่สำคัญในประเทศไทย (ศูนย์มานุษยวิทยาสิรินธร)",
+        "url": "https://archaeology.sac.or.th/archaeology/874",
+        "type": "academic",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "สำนักงานสิ่งแวดล้อมศิลปกรรม ONEP: แหล่งศิลปกรรมเมืองตะกั่วป่า",
+        "url": "https://culturalenvi.onep.go.th/site/detail/4428",
+        "type": "official",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "สถานีวิทยุกระจายเสียงแห่งประเทศไทย",
+        "url": "https://radiothailand.prd.go.th/th/content/category/detail/id/9/iid/481052",
+        "type": "news",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "Wongnai: รูปกำแพงเมืองเก่าตะกั่วป่า",
+        "url": "https://www.wongnai.com/attractions/403843FU-%E0%B8%81%E0%B8%B3%E0%B9%81%E0%B8%9E%E0%B8%87%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%81%E0%B9%88%E0%B8%B2%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2/photos/b51c676106884f98a0c8334b8584b456",
+        "type": "blog",
+        "accessed": "2026-09-07"
+      }
+    ],
+    "counts": {
+      "confirmed": 15,
+      "unverified": 0,
+      "disputed": 0
+    }
+  }
+]

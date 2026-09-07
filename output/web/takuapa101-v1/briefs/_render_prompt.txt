@@ -1,0 +1,47 @@
+โฟลเดอร์งาน D:\Siwaracafeweb\output\web\takuapa101-v1 · static site generator ภาษา Python vanilla · BASE_PATH='/takuapa'
+
+อ่านก่อน: briefs/2026-09-07_stories-rewrite-spec.md · briefs/story-json-schema.md · stories.py · design.py (ดูฟังก์ชัน city_feed กับ quick_start ที่เพิ่งเพิ่ม) · site/assets/design.css
+
+มีไฟล์บทความรูปแบบใหม่แล้วที่ data/stories/*.json (city, architecture, water-trade, food-people และ kuapapoh กำลังตามมา)
+ตอนนี้หน้า /stories/<id>/ **ยังเรนเดอร์เนื้อหาเก่าจากตัวแปร STORIES ใน stories.py อยู่** ต้องเปลี่ยนมาเรนเดอร์จาก JSON ใหม่
+
+## งานที่ 1 · เรนเดอร์บทความรูปแบบใหม่
+แก้ stories.py ให้:
+- โหลด data/stories/*.json ถ้ามี ใช้แทน STORIES เดิม · id ไหนไม่มีไฟล์ให้ fallback ไปโครงเดิม (อย่าให้หน้าหาย)
+- เรียงบทความตามลำดับ city, architecture, water-trade, food-people, kuapapoh
+- โครงหน้าบทความใหม่:
+  1. breadcrumb · eyebrow กลุ่ม · h1 title · lead dek · แถวเมตา: ปรับปรุงเมื่อ · เวลาอ่าน `reading_minutes` นาที
+  2. hero_photo ถ้ามี พร้อม caption และ credit ใต้ภาพ
+  3. lede หลายย่อหน้า ตัวอักษรใหญ่กว่าเนื้อปกติเล็กน้อย
+  4. sections: h2 จาก heading_th · ย่อหน้าจาก paragraphs · ถ้ามี photo ให้แทรกพร้อม caption+credit · ถ้ามี flags ให้แสดงเป็นป้ายเล็กท้าย section (kind=unverified สีเหลืองอ่อน · disputed สีส้มอ่อน) ห้ามแสดงกลางย่อหน้า
+  5. pull_quotes แทรกคั่นระหว่าง section (blockquote ตัวใหญ่ ฟอนต์ Noto Serif Thai)
+  6. กล่อง evidence_box ข้างบทความ (sticky บนเดสก์ท็อป) หัวข้อจาก heading_th ลิสต์ items แต่ละข้อมี claim_th, ป้าย status, explain_th, ลิงก์ source_url
+  7. section "ไปดูของจริงได้ที่ไหน" จาก places[] · การ์ดสถานที่พร้อมภาพ ชื่อ และปุ่ม `เพิ่มลงทริป` ที่มี data-trip-add="<id>"
+  8. `<details>` "ข้อมูลที่ยังหาไม่เจอ" จาก unknowns[]
+  9. รายการแหล่งข้อมูลท้ายบท จาก sources[] · ชื่อ · ผู้เผยแพร่ · locator · ลิงก์ · วันที่เข้าถึง
+  10. สารบัญด้านข้างจาก heading ของทุก section พร้อม scrollspy
+- หน้า /stories/ (index) ใช้ข้อมูลใหม่: การ์ดใบแรกใหญ่ · แสดง reading_minutes · แสดงภาพ
+
+## งานที่ 2 · หน้า /news/
+- เพิ่มหน้า path '/news/' title 'ความเคลื่อนไหวของเมือง' ใน build_site.py (ใส่ sitemap ด้วย ยังไม่ต้องใส่เมนูหลัก)
+- แสดงข่าวทั้งหมดจาก data/news-feed.json (31 ชิ้น) เรียงใหม่ไปเก่า
+- แต่ละชิ้น: วันที่แบบไทย · หัวข้อ · สรุป · สำนักข่าว · ลิงก์สถานที่ที่เกี่ยวข้อง · ลิงก์ข่าวต้นทาง rel=noopener target=_blank
+- ฟิลเตอร์ตามสถานที่และตามปี (ปุ่ม pill ทำงานด้วย JS แต่ต้องเห็นข่าวครบเมื่อปิด JS)
+- ใส่ JSON-LD `ItemList` ของข่าว
+- ตอนนี้ลิงก์ "ดูความเคลื่อนไหวทั้งหมด" บนหน้าแรกชี้ /news/ แล้วได้ 404 ต้องแก้ให้ได้ 200
+
+## งานที่ 3 · CSS
+เพิ่มสไตล์ที่จำเป็นทั้งหมดใน site/assets/design.css ให้เข้าธีมเดิม (ครีม #f6f1e6 · เขียวเข้ม #203f39 · Noto Serif Thai + IBM Plex Sans Thai Looped)
+ใช้ได้ที่ 390px · รองรับ prefers-reduced-motion · ปุ่มแตะได้สูงอย่างน้อย 44px บนมือถือ
+
+## กฎ
+- vanilla เท่านั้น ไม่เพิ่ม dependency · ลิงก์ภายในทุกอันต้องผ่าน BASE_PATH
+- ห้ามแต่งเนื้อหาเพิ่มเอง ใช้เฉพาะที่มีใน JSON
+- ภาษาไทยทั้งหมด · ใช้ · แทน em/en-dash · ห้าม emoji
+- **เขียนไฟล์เป็น UTF-8 เท่านั้น** PowerShell ต้อง -Encoding utf8 · Python ต้อง encoding='utf-8' ไม่งั้นภาษาไทยจะกลายเป็นเครื่องหมายคำถาม
+- ห้ามทำหน้าอื่นพัง
+
+## ตรวจก่อนจบ
+python make_feeds.py && python build_site.py
+ตรวจว่าไม่มี ??? ในไฟล์ที่แก้ · curl /takuapa/news/ ได้ 200 · /takuapa/stories/city/ แสดงเนื้อหาใหม่
+รายงานไฟล์ที่แก้และผลตรวจ
