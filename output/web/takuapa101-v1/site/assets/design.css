@@ -211,7 +211,7 @@
 .story-meta { font-size: 0.9rem; color: #6b7a70; }
 
 .hero-photo-v2 { margin: 0 auto 2rem; max-width: 1000px; }
-.hero-photo-v2 img, .section-photo-v2 img, .card-art-v2 img { width: 100%; height: auto; border-radius: 8px; }
+.hero-photo-v2 img, .section-photo-v2 img { width: 100%; height: auto; border-radius: 8px; }
 .hero-photo-v2 figcaption, .section-photo-v2 figcaption { font-size: 0.8rem; color: #6b7a70; text-align: center; margin-top: 0.5rem; }
 .credit { display: block; font-size: 0.75rem; opacity: 0.8; }
 
@@ -280,16 +280,8 @@
 .story-toc-v2 a { text-decoration: none; color: #3a5c53; display: block; min-height: 32px; display: flex; align-items: center; }
 .story-toc-v2 a:hover, .story-toc-v2 a.active { color: #a3492f; font-weight: bold; }
 
-.story-grid-v2 { display: grid; gap: 1.5rem; grid-template-columns: 1fr; max-width: 1200px; margin: 2rem auto; padding: 0 1rem; }
 @media (min-width: 768px) {
-  .story-grid-v2 { grid-template-columns: 1fr 1fr; }
-  .story-card-v2-lead { grid-column: span 2; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; }
 }
-.story-card-v2 { background: #fff; border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; text-decoration: none; color: inherit; box-shadow: 0 2px 8px rgba(0,0,0,0.05); transition: transform 0.2s; }
-.story-card-v2:hover { transform: translateY(-4px); }
-.card-art-v2 img { height: 200px; object-fit: cover; }
-.card-content-v2 { padding: 1.5rem; display: flex; flex-direction: column; flex-grow: 1; }
-.card-meta-v2 { margin-top: auto; padding-top: 1rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.9rem; }
 
 .news-page { max-width: 800px; margin: 0 auto; padding: 2rem 1rem; }
 .news-filters { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2rem; }
@@ -305,6 +297,56 @@
 .news-item p { margin: 0 0 0.5rem 0; }
 
 @media (prefers-reduced-motion: reduce) {
-  .story-card-v2 { transition: none; }
-  .story-card-v2:hover { transform: none; }
+}
+
+/* ============ Story index cards ============ */
+.story-grid-v2{
+  display:grid;gap:26px;grid-template-columns:1fr;
+  max-width:1180px;margin:34px auto 12px;padding:0 24px;
+  align-items:stretch;
+}
+.story-card-v2{
+  display:flex;flex-direction:column;overflow:hidden;
+  background:#fffdf7;border:1px solid rgba(32,63,57,.15);border-radius:16px;
+  transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;
+}
+.story-card-v2:hover{transform:translateY(-3px);border-color:rgba(32,63,57,.34);box-shadow:0 16px 34px -22px rgba(20,36,31,.65)}
+.story-card-v2:focus-within{border-color:#203f39;box-shadow:0 0 0 3px rgba(32,63,57,.16)}
+
+.card-art-v2{flex:0 0 auto;background:#eee6d3;overflow:hidden}
+.card-art-v2 img{display:block;width:100%;height:210px;object-fit:cover;border-radius:0}
+
+.card-content-v2{display:flex;flex-direction:column;gap:9px;padding:20px 22px 20px;flex:1 1 auto}
+.card-content-v2 .chapter{font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:#a3492f}
+.card-content-v2 h2{margin:0;font-family:"Noto Serif Thai",serif;font-size:1.24rem;line-height:1.5;font-weight:600}
+/* The whole card is clickable through this one link, so nothing else is
+   underlined and the heading stays the only anchor a screen reader announces. */
+.card-content-v2 h2 a{color:inherit;text-decoration:none}
+.card-content-v2 h2 a::after{content:"";position:absolute;inset:0}
+.card-content-v2 h2 a:focus-visible{outline:none}
+.story-card-v2{position:relative}
+.card-content-v2 p{margin:0;font-size:.92rem;line-height:1.7;color:#4c574f}
+.card-meta-v2{
+  margin-top:auto;padding-top:16px;display:flex;justify-content:space-between;align-items:baseline;
+  gap:12px;font-size:.82rem;color:#7d8c81;border-top:1px solid rgba(32,63,57,.1)
+}
+.card-go{color:#203f39;font-weight:600}
+.story-mins{letter-spacing:.02em}
+
+@media (min-width:860px){
+  .story-grid-v2{grid-template-columns:1fr 1fr}
+  .story-card-v2-lead{
+    grid-column:1 / -1;
+    display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);align-items:stretch;
+  }
+  .story-card-v2-lead{max-height:330px}
+  .story-card-v2-lead .card-art-v2{height:100%}
+  .story-card-v2-lead .card-art-v2 img{height:100%;min-height:0}
+  .story-card-v2-lead .card-content-v2{justify-content:center;padding:34px 36px;gap:12px}
+  .story-card-v2-lead .card-content-v2 h2{font-size:1.72rem;line-height:1.4}
+  .story-card-v2-lead .card-content-v2 p{font-size:1rem}
+}
+@media (prefers-reduced-motion:reduce){
+  .story-card-v2{transition:none}
+  .story-card-v2:hover{transform:none}
 }

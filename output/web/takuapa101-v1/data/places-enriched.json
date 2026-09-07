@@ -729,7 +729,13 @@
   "brochure_facts": [
    "โบสถ์เก่าและเรื่องการขนส่งทางน้ำเชื่อมสถานที่นี้กับประวัติการค้าของเมือง"
   ],
-  "geo": null,
+  "geo": {
+   "lat": 8.8282064,
+   "lng": 98.3667554,
+   "confidence": "medium",
+   "source_name": "OpenStreetMap",
+   "source_url": "https://www.openstreetmap.org/way/815944559"
+  },
   "address": {
    "line_th": "ถนนหน้าเมือง ชุมชนตลาดใหญ่",
    "subdistrict": "ตะกั่วป่า",

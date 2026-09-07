@@ -241,7 +241,12 @@
   ],
   "address_th": "ริมถนนเพชรเกษม (เยื้องธนาคารไทยพาณิชย์ สาขาเขาหลัก) ตำบลคึกคัก อำเภอตะกั่วป่า จังหวัดพังงา",
   "subdistrict": "คึกคัก",
-  "geo": null,
+  "geo": {
+   "lat": 8.6484047,
+   "lng": 98.2519573,
+   "source_url": "https://www.openstreetmap.org/node/6172916065",
+   "source_name": "OpenStreetMap"
+  },
   "hours_th": null,
   "price_range_th": null,
   "phone": null,
@@ -406,7 +411,12 @@
   ],
   "address_th": "หน้าโรงแรม Khaolak Paradise Resort ตำบลคึกคัก อำเภอตะกั่วป่า จังหวัดพังงา",
   "subdistrict": "คึกคัก",
-  "geo": null,
+  "geo": {
+   "lat": 8.6314019,
+   "lng": 98.2462415,
+   "source_name": "OpenStreetMap",
+   "source_url": "https://www.openstreetmap.org/node/12329195370"
+  },
   "hours_th": "09:00-18:00 น.",
   "price_range_th": null,
   "phone": null,
@@ -446,7 +456,12 @@
   ],
   "address_th": "ซอยหาดบางเนียง (ข้างโรงแรม La Flora Khao Lak) ตำบลคึกคัก อำเภอตะกั่วป่า จังหวัดพังงา",
   "subdistrict": "คึกคัก",
-  "geo": null,
+  "geo": {
+   "lat": 8.6650274,
+   "lng": 98.2476249,
+   "source_name": "OpenStreetMap",
+   "source_url": "https://www.openstreetmap.org/node/10768403343"
+  },
   "hours_th": "08:00-20:00 น.",
   "price_range_th": null,
   "phone": null,
@@ -1124,7 +1139,12 @@
   ],
   "address_th": "ใกล้ตลาดสด บขส. ตะกั่วป่า",
   "subdistrict": "ตะกั่วป่า",
-  "geo": null,
+  "geo": {
+   "lat": 8.8716865,
+   "lng": 98.3512039,
+   "source_url": "https://www.openstreetmap.org/way/816146095",
+   "source_name": "OpenStreetMap"
+  },
   "hours_th": "06:00 - 12:00",
   "price_range_th": null,
   "phone": null,
@@ -1165,7 +1185,12 @@
   ],
   "address_th": "160 หมู่ 2 ถนนเพชรเกษม ฝั่งตรงข้ามทางเข้าแหลมปะการัง",
   "subdistrict": "คึกคัก",
-  "geo": null,
+  "geo": {
+   "lat": 8.7220298,
+   "lng": 98.256671,
+   "source_url": "https://www.openstreetmap.org/node/8347237389",
+   "source_name": "OpenStreetMap"
+  },
   "hours_th": "11:00 - 13:30, 17:00 - 21:00",
   "price_range_th": null,
   "phone": "090-716-4182",
@@ -1205,10 +1230,15 @@
   ],
   "address_th": "ฝั่งซ้ายมือก่อนถึงโรงพยาบาลตะกั่วป่า (มาจากเขาหลัก)",
   "subdistrict": "บางนายสี",
-  "geo": null,
+  "geo": {
+   "lat": 8.8647498,
+   "lng": 98.3300385,
+   "source_url": "https://www.openstreetmap.org/node/8422154482",
+   "source_name": "OpenStreetMap"
+  },
   "hours_th": "จันทร์·อังคาร, พฤหัส·อาทิตย์ 11:00-21:00 (ปิดวันพุธ)",
   "price_range_th": null,
-  "phone": null,
+  "phone": "+66 76 424 497;+680 389 5554",
   "facebook": "https://www.facebook.com/p/ร้านครัวน้อง·ตะกั่วป่า·จพังงา·100063625442273/",
   "google_maps_url": null,
   "near_old_town": false,
@@ -1243,7 +1273,12 @@
   ],
   "address_th": "11/27 หมู่ 3 ริมถนนเพชรเกษม",
   "subdistrict": "บางม่วง",
-  "geo": null,
+  "geo": {
+   "lat": 8.8280769,
+   "lng": 98.2830365,
+   "source_name": "OpenStreetMap",
+   "source_url": "https://www.openstreetmap.org/node/4171667789"
+  },
   "hours_th": "11:00-21:00 (หยุดวันจันทร์)",
   "price_range_th": null,
   "phone": "076·593·058",
@@ -1828,10 +1863,15 @@
   ],
   "address_th": null,
   "subdistrict": null,
-  "geo": null,
-  "hours_th": null,
+  "geo": {
+   "lat": 8.7033812,
+   "lng": 98.2530902,
+   "source_url": "https://www.openstreetmap.org/node/8046492048",
+   "source_name": "OpenStreetMap"
+  },
+  "hours_th": "Mo-Su 07:00-23:00",
   "price_range_th": null,
-  "phone": null,
+  "phone": "+66846055497",
   "facebook": null,
   "google_maps_url": null,
   "near_old_town": false,

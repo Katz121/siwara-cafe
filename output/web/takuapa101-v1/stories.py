@@ -251,15 +251,21 @@ def article(story, ctx):
 
 def index(ctx):
     cards = ''
+    used_art = set()
     for i, s in enumerate(get_all_stories()):
         is_new = 'reading_minutes' in s
         route = s.get('route', f'/stories/{s["id"]}/')
         mins = f'<span class="story-mins">{s["reading_minutes"]} นาที</span>' if is_new else ''
+        # The index is a gallery, so every card gets the same treatment: the
+        # commissioned illustration of a place the story is about. Photographs
+        # stay inside the articles where a caption gives them context.
         photo = ''
-        _hp = photo_for(s.get("id"), (s.get("hero_photo") or {}).get("file")) if is_new else None
-        if _hp:
-            photo = f'<img src="{escape(_hp["file"])}" alt="" loading="lazy">'
-        else:
+        for pid in s.get("places", []):
+            if pid not in used_art and os.path.exists(f"site/assets/{pid}.webp"):
+                photo = f'<img src="/assets/{pid}.webp" alt="" loading="lazy">'
+                used_art.add(pid)
+                break
+        if not photo:
             for pid in s.get("places", []):
                 if os.path.exists(f"site/assets/{pid}.webp"):
                     photo = f'<img src="/assets/{pid}.webp" alt="" loading="lazy">'
@@ -269,7 +275,15 @@ def index(ctx):
         if i == 0:
             cls += " story-card-v2-lead"
             
-        cards += f'<article class="{cls}"><a href="{route}">{photo_html}<div class="card-content-v2"><span class="chapter">{escape(s["group"])}</span><h2>{escape(s["title"])}</h2><p>{escape(s["dek"])}</p><div class="card-meta-v2">{mins}<span class="text-link">เปิดเรื่องนี้ ↗</span></div></div></a></article>'
+        cards += (
+            f'<article class="{cls}">'
+            f'{photo_html}'
+            f'<div class="card-content-v2">'
+            f'<span class="chapter">{escape(s["group"])}</span>'
+            f'<h2><a href="{route}">{escape(s["title"])}</a></h2>'
+            f'<p>{escape(s["dek"])}</p>'
+            f'<div class="card-meta-v2">{mins}<span class="card-go" aria-hidden="true">เปิดเรื่องนี้ ↗</span></div>'
+            f'</div></article>')
     return f'<div class="stories-index-v2"><div class="intro"><a class="eyebrow" href="/">ตะกั่วป่า 101 / คู่มือเมืองเก่า</a><h1>เรื่องเล่าตะกั่วป่า</h1><p class="lead">สี่มุมมองสำหรับอ่านเมืองผ่านแหล่งข้อมูล · รู้จักเมือง บ้านเก่าและสถาปัตยกรรม สายน้ำและการค้า ผู้คนและรสชาติ</p></div><div class="story-grid-v2">{cards}</div><aside class="source"><h2>วิธีอ่านหน้านี้</h2><p>บทความเรียบเรียงจากเอกสารราชการและฐานข้อมูลสถาบันการศึกษา พร้อมแยกระดับหลักฐานในแต่ละเรื่อง · ข้อมูลร้าน เวลาเปิด และกำหนดการควรตรวจสอบกับผู้ให้บริการก่อนเดินทาง</p></aside></div>'
 
 def write_audit():

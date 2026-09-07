@@ -1,0 +1,5 @@
+jobs=3
+  shop-coords: rc=1
+  en-places: rc=1
+  en-ui: rc=1
+done
