@@ -1,0 +1,1675 @@
+[
+  {
+    "id": "wat-nikorn",
+    "type": "place",
+    "category": "temple",
+    "name_th": "วัดนิกรวราราม (วัดย่านยาว)",
+    "name_en": "Wat Nikornwararam",
+    "editorial_angle": "เล่าเรื่องสถานที่ผ่านบทบาทต่อชุมชน",
+    "illustration": "/assets/wat-nikorn.webp",
+    "brochure_facts": [
+      "เอกสารเชื่อมวัดกับชุมชนและเหตุการณ์สึนามิ พ.ศ. 2547"
+    ],
+    "geo": {
+      "lat": 8.8691760396,
+      "lng": 98.348042969,
+      "confidence": "high",
+      "source_url": "https://culturalenvi.onep.go.th/site/detail/4416",
+      "source_name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม (สผ.)"
+    },
+    "address": {
+      "line_th": "บ้านย่านยาว ถนนเพชรเกษม",
+      "subdistrict": "ตะกั่วป่า",
+      "district": "ตะกั่วป่า",
+      "province": "พังงา",
+      "postcode": null,
+      "source_url": "https://books.classstart.org/thai-buddhist-temples/03/%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%99%E0%B8%B4%E0%B8%81%E0%B8%A3%E0%B8%A7%E0%B8%A3%E0%B8%B2%E0%B8%A1.html"
+    },
+    "contact": {
+      "phone": null,
+      "facebook": null,
+      "website": null,
+      "line": null,
+      "source_url": null
+    },
+    "visit": {
+      "opening_hours_th": null,
+      "opening_hours_status": "UNKNOWN",
+      "admission_fee_th": null,
+      "admission_status": "UNKNOWN",
+      "best_time_th": null,
+      "duration_minutes": null,
+      "parking_th": null,
+      "restroom": null,
+      "wheelchair_th": null,
+      "dress_code_th": "ควรแต่งกายสุภาพเมื่อเข้าสู่ศาสนสถาน",
+      "source_urls": []
+    },
+    "getting_there": [
+      {
+        "from": "ตัวเมืองตะกั่วป่า",
+        "text_th": "ไม่พบคำแนะนำเส้นทางที่อ่านยืนยันได้จากแหล่งที่ค้นพบ",
+        "distance_km": null,
+        "source_url": ""
+      },
+      {
+        "from": "ภูเก็ต",
+        "text_th": "ไม่พบคำแนะนำเส้นทางที่อ่านยืนยันได้จากแหล่งที่ค้นพบ",
+        "distance_km": null,
+        "source_url": ""
+      },
+      {
+        "from": "เขาหลัก",
+        "text_th": "ไม่พบคำแนะนำเส้นทางที่อ่านยืนยันได้จากแหล่งที่ค้นพบ",
+        "distance_km": null,
+        "source_url": ""
+      },
+      {
+        "from": "สนามบิน",
+        "text_th": "ไม่พบคำแนะนำเส้นทางที่อ่านยืนยันได้จากแหล่งที่ค้นพบ",
+        "distance_km": null,
+        "source_url": ""
+      }
+    ],
+    "highlights": [
+      {
+        "title_th": "วัดเก่าแก่ของชุมชนย่านยาว",
+        "detail_th": "จุดเด่นที่ยืนยันได้คือประวัติการก่อตั้งใน พ.ศ. 2336 และการได้รับวิสุงคามสีมาใน พ.ศ. 2385",
+        "source_url": "https://culturalenvi.onep.go.th/site/detail/4416"
+      },
+      {
+        "title_th": "พื้นที่ความทรงจำสึนามิ",
+        "detail_th": "วัดเคยใช้รวบรวมศพผู้ประสบภัยเพื่อรอการตรวจพิสูจน์เอกลักษณ์บุคคล",
+        "source_url": "https://culturalenvi.onep.go.th/site/detail/4416"
+      }
+    ],
+    "nearby": [
+      {
+        "name_th": "ตลาดริมน้ำตะกั่วป่า ถนนคนเดินย่านยาว",
+        "walk_minutes": null,
+        "source_url": "https://www.youtube.com/watch?v=ZeycJnHU_Nw"
+      }
+    ],
+    "festival": {
+      "months_th": null,
+      "lunar_calendar_th": null,
+      "activities_th": [],
+      "venue_th": null,
+      "source_urls": []
+    },
+    "history": [
+      {
+        "claim_th": "วัดสร้างเมื่อ พ.ศ. 2336 โดยคุณตาแก้วและคุณตาราม",
+        "status": "CONFIRMED",
+        "quote": "สร้างเมื่อปี พ.ศ. 2336 โดยคุณตาแก้ว และคุณตาราม",
+        "source_name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม (สผ.)",
+        "source_url": "https://culturalenvi.onep.go.th/site/detail/4416",
+        "year_be": 2336,
+        "year_ce": 1793
+      },
+      {
+        "claim_th": "วัดได้รับพระราชทานวิสุงคามสีมาใน พ.ศ. 2385",
+        "status": "CONFIRMED",
+        "quote": "ได้รับพระราชทาน วิสุงคามสีมา เมื่อปี พ.ศ. 2385",
+        "source_name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม (สผ.)",
+        "source_url": "https://culturalenvi.onep.go.th/site/detail/4416",
+        "year_be": 2385,
+        "year_ce": 1842
+      },
+      {
+        "claim_th": "วัดเคยเป็นสถานที่รวบรวมศพผู้ประสบภัยสึนามิ พ.ศ. 2547 เพื่อรอการตรวจพิสูจน์เอกลักษณ์บุคคล",
+        "status": "CONFIRMED",
+        "quote": "เก็บรวบรวมศพ ผู้ประสบภัยสึนามิเพื่อรอการตรวจ พิสูจน์เอกลักษณ์บุคคล",
+        "source_name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม (สผ.)",
+        "source_url": "https://culturalenvi.onep.go.th/site/detail/4416",
+        "year_be": 2547,
+        "year_ce": 2004
+      }
+    ],
+    "eras": {
+      "then": {
+        "headline_th": "วัดของชุมชนย่านยาวในเมืองตะกั่วป่ายุคต้น",
+        "years_th": "พ.ศ. 2336–2385 / ค.ศ. 1793–1842",
+        "body_th": "วัดนิกรวราราม หรือวัดย่านยาว เริ่มสร้างใน พ.ศ. 2336 โดยคุณตาแก้วและคุณตาราม หลักฐานที่พบยืนยันปีและชื่อผู้ริเริ่ม แต่ยังไม่บอกเหตุผลเชิงรายละเอียดว่าตั้งวัดขึ้นเพื่อภารกิจใดโดยเฉพาะ จึงควรอ่านวัดนี้ในฐานะศาสนสถานของชุมชนท้องถิ่นที่กำลังก่อรูปในลุ่มตะกั่วป่า มากกว่าจะผูกเข้ากับเรื่องเล่าที่ไม่มีหลักฐานตรง\n\nเมืองตะกั่วป่าในภาพกว้างมีประวัติเป็นเมืองท่าและแหล่งแร่ดีบุก มีการติดต่อค้าขายทางทะเลและผู้คนหลายกลุ่ม แต่ยังไม่พบหลักฐานเฉพาะวัดที่ยืนยันบทบาทของวัดนิกรวรารามต่อเหมืองดีบุก การค้าทางทะเล คนจีนฮกเกี้ยน หรือระบบเจ้าเมือง จึงไม่สรุปเกินแหล่งข้อมูล",
+        "status": "CONFIRMED",
+        "sources": [
+          {
+            "name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม — แหล่งศิลปกรรมอันควรอนุรักษ์",
+            "url": "https://culturalenvi.onep.go.th/site/detail/4416"
+          },
+          {
+            "name": "อดีตตะโกลา...ตะกั่วป่า ปัจจุบัน",
+            "url": "https://anyflip.com/vlkdm/ecrk/basic"
+          }
+        ]
+      },
+      "before": {
+        "headline_th": "จากวัดเก่าแก่สู่พื้นที่ความทรงจำสึนามิและการจัดการที่ดิน",
+        "years_th": "พ.ศ. 2385–2565 / ค.ศ. 1842–2022",
+        "body_th": "วัดได้รับพระราชทานวิสุงคามสีมาใน พ.ศ. 2385 ซึ่งเป็นหลักฐานสำคัญว่าศาสนสถานได้รับการรับรองพื้นที่ประกอบสังฆกรรมตามแบบแผนของคณะสงฆ์ในเวลานั้น อย่างไรก็ตาม ยังไม่พบเอกสารที่ระบุการบูรณะครั้งใหญ่ การเปลี่ยนมือ หรือช่วงเวลาร้าง\n\nหลังสึนามิวันที่ 26 ธันวาคม 2547 วัดถูกใช้เป็นสถานที่รวบรวมศพผู้ประสบภัยเพื่อรอการตรวจพิสูจน์เอกลักษณ์บุคคล บทบาทชั่วคราวนี้ทำให้วัดย่านยาวเป็นส่วนหนึ่งของประวัติศาสตร์การรับมือภัยพิบัติของตะกั่วป่า ต่อมาในวันที่ 30 ตุลาคม 2565 สำนักงานพระพุทธศาสนาจังหวัดพังงาร่วมมอบเอกสารโฉนดที่ดินให้เจ้าอาวาส เป็นหลักฐานการจัดการกรรมสิทธิ์ที่ดินในยุคปัจจุบัน",
+        "status": "CONFIRMED",
+        "sources": [
+          {
+            "name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม",
+            "url": "https://culturalenvi.onep.go.th/site/detail/4416"
+          },
+          {
+            "name": "สำนักงานพระพุทธศาสนาจังหวัดพังงา — มอบเอกสารโฉนดที่ดิน",
+            "url": "https://pna.onab.go.th/th/content/page/index/id/34431"
+          },
+          {
+            "name": "สถาบันนิติวิทยาศาสตร์ — บันทึกเหตุการณ์ 28 ธันวาคม 2547",
+            "url": "https://www.cifs.go.th/Files/news/file/ff82ea76-112f-4392-a8ff-e485e9fbc04e.pdf"
+          }
+        ]
+      },
+      "now": {
+        "headline_th": "วัดที่ยังทำหน้าที่ศูนย์กลางศรัทธาและงานสาธารณะของชุมชน",
+        "years_th": "2569 / 2026",
+        "body_th": "หลักฐานล่าสุดที่ค้นพบยืนยันว่า วัดยังใช้งานอยู่ มีพระครูนิกรธรรมโสภิตเป็นเจ้าอาวาส และมีพระจำพรรษา โดยฐานข้อมูลวัดระบุการจัดกฐินสามัคคีใน พ.ศ. 2567 และ 2568 ส่วนข่าวราชการ/ข่าวท้องถิ่นยืนยันการมีส่วนร่วมของวัดในกิจกรรมระดับอำเภอและจังหวัด\n\nในช่วงไม่กี่ปีที่ผ่านมา วัดเป็นทั้งพื้นที่ประกอบศาสนกิจและพื้นที่สาธารณะ: ปี 2567 ใช้เป็นศูนย์รับบริจาคช่วยผู้ประสบอุทกภัยภาคเหนือ และมีการตรวจเยี่ยมโครงการวัด ประชา รัฐ สร้างสุขในฐานะวัดต้นแบบระดับภาคใต้ ทั้งนี้ยังไม่พบข้อมูลที่ยืนยันเวลาเปิด-ปิดสำหรับนักท่องเที่ยว สภาพอาคารโดยละเอียด หรือโครงการบูรณะเฉพาะวัดในปี 2569",
+        "status": "CONFIRMED",
+        "sources": [
+          {
+            "name": "สำนักงานพระพุทธศาสนาจังหวัดพังงา",
+            "url": "https://pna.onab.go.th/th/content/page/index/id/34431"
+          },
+          {
+            "name": "DMC — โครงการกฐินสามัคคีทั่วไทย 10,000 วัด",
+            "url": "https://www.dmc.tv/wat/13166"
+          },
+          {
+            "name": "สยามรัฐ — ศูนย์รับบริจาคช่วยผู้ประสบภัยน้ำท่วม",
+            "url": "https://archive.siamrath.co.th/n/568331"
+          },
+          {
+            "name": "Ride Explorer — ตรวจเยี่ยมวัดต้นแบบ",
+            "url": "https://www.ride-explorer.com/?p=7378"
+          },
+          {
+            "name": "TOPNEWS — สืบสานสงกรานต์เมืองเก่าตะกั่วป่า",
+            "url": "https://www.topnews.co.th/news/1546452"
+          }
+        ]
+      }
+    },
+    "timeline": [
+      {
+        "year_ce": 1793,
+        "year_be": 2336,
+        "date_th": null,
+        "title_th": "เริ่มสร้างวัด",
+        "detail_th": "คุณตาแก้วและคุณตารามสร้างวัดนิกรวราราม",
+        "status": "CONFIRMED",
+        "source_url": "https://culturalenvi.onep.go.th/site/detail/4416"
+      },
+      {
+        "year_ce": 1842,
+        "year_be": 2385,
+        "date_th": null,
+        "title_th": "ได้รับวิสุงคามสีมา",
+        "detail_th": "วัดได้รับพระราชทานวิสุงคามสีมา",
+        "status": "CONFIRMED",
+        "source_url": "https://culturalenvi.onep.go.th/site/detail/4416"
+      },
+      {
+        "year_ce": 2004,
+        "year_be": 2547,
+        "date_th": "26 ธันวาคม 2547",
+        "title_th": "พื้นที่ความทรงจำหลังสึนามิ",
+        "detail_th": "ใช้รวบรวมศพผู้ประสบภัยเพื่อรอการตรวจพิสูจน์เอกลักษณ์บุคคล",
+        "status": "CONFIRMED",
+        "source_url": "https://www.cifs.go.th/Files/news/file/ff82ea76-112f-4392-a8ff-e485e9fbc04e.pdf"
+      },
+      {
+        "year_ce": 2022,
+        "year_be": 2565,
+        "date_th": "30 ตุลาคม 2565",
+        "title_th": "รับมอบเอกสารโฉนดที่ดิน",
+        "detail_th": "สำนักงานพระพุทธศาสนาจังหวัดพังงาและสำนักงานที่ดินมอบเอกสารโฉนดให้เจ้าอาวาส",
+        "status": "CONFIRMED",
+        "source_url": "https://pna.onab.go.th/th/content/page/index/id/34431"
+      },
+      {
+        "year_ce": 2024,
+        "year_be": 2567,
+        "date_th": "22 กันยายน 2567",
+        "title_th": "ศูนย์รับบริจาคช่วยน้ำท่วมภาคเหนือ",
+        "detail_th": "วัดร่วมกับคณะสงฆ์และประชาชนตะกั่วป่ารวบรวมสิ่งของช่วยผู้ประสบอุทกภัย",
+        "status": "CONFIRMED",
+        "source_url": "https://archive.siamrath.co.th/n/568331"
+      },
+      {
+        "year_ce": 2025,
+        "year_be": 2568,
+        "date_th": null,
+        "title_th": "ร่วมงานสงกรานต์เมืองเก่าตะกั่วป่า",
+        "detail_th": "เจ้าอาวาสและพระสงฆ์วัดนิกรวรารามเข้าร่วมกิจกรรมทำบุญตักบาตรที่จัดโดยจังหวัด",
+        "status": "CONFIRMED",
+        "source_url": "https://www.topnews.co.th/news/1546452"
+      }
+    ],
+    "news": [
+      {
+        "date": "2025-04-13",
+        "title_th": "พังงาสืบสานสงกรานต์ ตักบาตรเมืองเก่าตะกั่วป่า",
+        "summary_th": "พระครูนิกรธรรมโสภิตและพระสงฆ์วัดนิกรวรารามร่วมกิจกรรมจังหวัด",
+        "outlet": "TOPNEWS",
+        "url": "https://www.topnews.co.th/news/1546452"
+      },
+      {
+        "date": "2025-01-01",
+        "title_th": "ตรวจเยี่ยมโครงการวัด ประชา รัฐ สร้างสุข",
+        "summary_th": "วัดนิกรวรารามได้รับการกล่าวถึงในฐานะวัดที่พร้อมรับการประเมินระดับภาคใต้",
+        "outlet": "Ride Explorer",
+        "url": "https://www.ride-explorer.com/?p=7378"
+      },
+      {
+        "date": "2024-09-22",
+        "title_th": "คณะสงฆ์พังงาร่วมใจช่วยผู้ประสบภัยน้ำท่วมภาคเหนือ",
+        "summary_th": "วัดตั้งศูนย์รับบริจาคสิ่งของร่วมกับคณะสงฆ์และประชาชน",
+        "outlet": "สยามรัฐ",
+        "url": "https://archive.siamrath.co.th/n/568331"
+      },
+      {
+        "date": "2022-10-30",
+        "title_th": "พศจ.พังงาร่วมมอบเอกสารโฉนดที่ดินของวัดนิกรวราราม",
+        "summary_th": "มอบเอกสารโฉนดที่ดินให้พระครูนิกรธรรมโสภิต เจ้าอาวาสวัดนิกรวราราม",
+        "outlet": "สำนักงานพระพุทธศาสนาจังหวัดพังงา",
+        "url": "https://pna.onab.go.th/th/content/page/index/id/34431"
+      }
+    ],
+    "did_you_know": [
+      {
+        "fact_th": "วัดย่านยาวเคยเป็นสถานที่รวบรวมศพผู้ประสบภัยสึนามิ พ.ศ. 2547 เพื่อรอการพิสูจน์เอกลักษณ์บุคคล",
+        "status": "CONFIRMED",
+        "source_url": "https://culturalenvi.onep.go.th/site/detail/4416"
+      },
+      {
+        "fact_th": "ใน พ.ศ. 2567 วัดทำหน้าที่เป็นศูนย์รับบริจาคช่วยผู้ประสบอุทกภัยภาคเหนือ",
+        "status": "CONFIRMED",
+        "source_url": "https://archive.siamrath.co.th/n/568331"
+      }
+    ],
+    "photos": {
+      "usable": [],
+      "needs_permission": [],
+      "broken": []
+    },
+    "seo": {
+      "keywords_th": [
+        "วัดนิกรวราราม",
+        "วัดย่านยาว",
+        "วัดตะกั่วป่า",
+        "วัดเก่าตะกั่วป่า",
+        "วัดพังงา",
+        "สถานที่ท่องเที่ยวตะกั่วป่า",
+        "ประวัติวัดนิกรวราราม",
+        "วัดกับสึนามิ",
+        "ย่านยาวตะกั่วป่า",
+        "เที่ยวตะกั่วป่า"
+      ],
+      "keywords_en": [
+        "Wat Nikornwararam",
+        "Wat Yanyao",
+        "Takuapa temple",
+        "Phang Nga temple",
+        "old temple in Takuapa",
+        "Takuapa cultural heritage",
+        "Wat Nikornwararam history",
+        "Yanyao Takuapa"
+      ]
+    },
+    "unknowns": [
+      "ไม่พบเวลาเปิด-ปิดที่ยืนยันได้จากแหล่งที่อ่าน",
+      "ไม่พบค่าเข้าชม เบอร์โทร เพจเฟซบุ๊ก เว็บไซต์ หรือ LINE ที่ยืนยันได้",
+      "ไม่พบรหัสไปรษณีย์ที่ยืนยันได้ และแหล่งข้อมูลรองระบุตำบลต่างจากรายการทางการ จึงไม่เดา",
+      "ไม่พบหลักฐานที่ยืนยันบทบาทในยุคเหมืองแร่ดีบุก สถาปัตยกรรมชิโน-โปรตุกีส/จีน หรือการขึ้นทะเบียนโบราณสถาน",
+      "ไม่พบข้อมูลยืนยันที่จอดรถ ห้องน้ำ ทางลาด/การเข้าถึงรถเข็น และเทศกาลประจำวัด",
+      "ไม่พบลิงก์รูปภาพทางการที่ระบุสิทธิ์การใช้งาน",
+      "ยังไม่พบหลักฐานเฉพาะวัดที่ยืนยันว่าก่อตั้งเพื่อกิจกรรมเหมืองดีบุก การค้าทางทะเล คนจีนฮกเกี้ยน หรือระบบเจ้าเมือง",
+      "ยังไม่พบปีและรายละเอียดการบูรณะ การถูกทิ้งร้าง หรือการขึ้นทะเบียนโบราณสถาน",
+      "ยังไม่พบข้อมูลยืนยันสภาพอาคาร แผนบูรณะ/พัฒนา เวลาเปิด-ปิด และกิจกรรมประจำปีในปี 2569",
+      "ยังไม่พบ URL ไฟล์ภาพเก่าหรือภาพปัจจุบันของวัดที่ตรวจสอบสิทธิ์การใช้งานได้ จึงเว้น photos_archive และ photos_current เป็นอาร์เรย์ว่าง",
+      "แหล่งข้อมูลบางแห่งระบุตำบลไม่ตรงกัน จึงยึดพิกัดและรายการทางการจาก สผ./สำนักงานพระพุทธศาสนาจังหวัดพังงาเป็นหลัก"
+    ],
+    "sources": [
+      {
+        "name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม (สผ.) — แหล่งศิลปกรรมอันควรอนุรักษ์",
+        "url": "https://culturalenvi.onep.go.th/site/detail/4416",
+        "type": "official",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "วัดนิกรวราราม — ClassStart Books",
+        "url": "https://books.classstart.org/thai-buddhist-temples/03/%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%99%E0%B8%B4%E0%B8%81%E0%B8%A3%E0%B8%A7%E0%B8%A3%E0%B8%B2%E0%B8%A1.html",
+        "type": "blog",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "เลาะกินตลาดริมน้ำตะกั่วป่า ถนนคนเดินย่านยาว — YouTube",
+        "url": "https://www.youtube.com/watch?v=ZeycJnHU_Nw",
+        "type": "review",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม — แหล่งศิลปกรรมอันควรอนุรักษ์",
+        "url": "https://culturalenvi.onep.go.th/site/detail/4416",
+        "type": "official",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "สำนักงานพระพุทธศาสนาจังหวัดพังงา",
+        "url": "https://pna.onab.go.th/th/content/page/index/id/34431",
+        "type": "official",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "สถาบันนิติวิทยาศาสตร์ — บันทึกเหตุการณ์สึนามิ",
+        "url": "https://www.cifs.go.th/Files/news/file/ff82ea76-112f-4392-a8ff-e485e9fbc04e.pdf",
+        "type": "official",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "DMC — วัดนิกรวราราม",
+        "url": "https://www.dmc.tv/wat/13166",
+        "type": "blog",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "สยามรัฐ — ศูนย์รับบริจาคช่วยน้ำท่วม",
+        "url": "https://archive.siamrath.co.th/n/568331",
+        "type": "news",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "TOPNEWS — สงกรานต์เมืองเก่าตะกั่วป่า",
+        "url": "https://www.topnews.co.th/news/1546452",
+        "type": "news",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "Ride Explorer — วัดต้นแบบระดับภาคใต้",
+        "url": "https://www.ride-explorer.com/?p=7378",
+        "type": "news",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "อดีตตะโกลา...ตะกั่วป่า ปัจจุบัน",
+        "url": "https://anyflip.com/vlkdm/ecrk/basic",
+        "type": "academic",
+        "accessed": "2026-09-07"
+      }
+    ],
+    "counts": {
+      "confirmed": 9,
+      "unverified": 0,
+      "disputed": 0
+    }
+  },
+  {
+    "id": "wat-sena",
+    "type": "place",
+    "category": "temple",
+    "name_th": "วัดเสนานุชรังสรรค์ (วัดใหม่)",
+    "name_en": "Wat Sena Nuch Rangsan",
+    "editorial_angle": "ชวนมองสิ่งที่ไทยกับจีนอยู่ร่วมกัน",
+    "illustration": "/assets/wat-sena.webp",
+    "brochure_facts": [
+      "สถาปัตยกรรมอุโบสถมีองค์ประกอบจีนและสะท้อนวัฒนธรรมไทย-จีน"
+    ],
+    "geo": {
+      "lat": 8.8302299579,
+      "lng": 98.3624509671,
+      "confidence": "high",
+      "source_url": "https://culturalenvi.onep.go.th/site/detail/4412",
+      "source_name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม (ONEP)"
+    },
+    "address": {
+      "line_th": "ตลาดเก่า ตำบลตะกั่วป่า",
+      "subdistrict": "ตะกั่วป่า",
+      "district": "ตะกั่วป่า",
+      "province": "พังงา",
+      "postcode": null,
+      "source_url": "https://www.50amfh.org/userfiles/file/News/Thai%20temple%20name%20list/south/Phangnga.pdf"
+    },
+    "contact": {
+      "phone": null,
+      "facebook": null,
+      "website": null,
+      "line": null,
+      "source_url": null
+    },
+    "visit": {
+      "opening_hours_th": null,
+      "opening_hours_status": "UNKNOWN",
+      "admission_fee_th": null,
+      "admission_status": "UNKNOWN",
+      "best_time_th": null,
+      "duration_minutes": null,
+      "parking_th": null,
+      "restroom": null,
+      "wheelchair_th": null,
+      "dress_code_th": null,
+      "source_urls": []
+    },
+    "getting_there": [
+      {
+        "from": "ตัวเมืองตะกั่วป่า",
+        "text_th": null,
+        "distance_km": null,
+        "source_url": ""
+      },
+      {
+        "from": "ภูเก็ต",
+        "text_th": null,
+        "distance_km": null,
+        "source_url": ""
+      },
+      {
+        "from": "เขาหลัก",
+        "text_th": null,
+        "distance_km": null,
+        "source_url": ""
+      },
+      {
+        "from": "สนามบิน",
+        "text_th": null,
+        "distance_km": null,
+        "source_url": ""
+      }
+    ],
+    "highlights": [
+      {
+        "title_th": "อุโบสถอิทธิพลจีน",
+        "detail_th": "ชมอุโบสถขนาดใหญ่ที่ฐานข้อมูล ONEP ระบุว่าได้รับอิทธิพลจากสถาปัตยกรรมจีน",
+        "source_url": "https://culturalenvi.onep.go.th/site/detail/4412"
+      },
+      {
+        "title_th": "พิพิธภัณฑ์และโบราณวัตถุ",
+        "detail_th": "แหล่งท่องเที่ยวระบุว่ามีพิพิธภัณฑ์จัดแสดงโบราณวัตถุ รวมถึงธรรมาสน์ไม้ที่มีอักษร จปร. แต่ควรตรวจสอบการเปิดชมหน้างาน",
+        "source_url": "https://live.phuketindex.com/tat-phangnga-6049.html"
+      },
+      {
+        "title_th": "ร่องรอยโบราณสถาน",
+        "detail_th": "ชมพื้นที่วัดที่ได้รับการขึ้นทะเบียนโบราณสถาน พ.ศ. 2539",
+        "source_url": "https://culturalenvi.onep.go.th/site/detail/4412"
+      },
+      {
+        "title_th": "ภูมิทัศน์เมืองเก่าตะกั่วป่า",
+        "detail_th": "วัดตั้งอยู่ในตำบลตะกั่วป่าและเป็นหนึ่งในสถานที่สำคัญของย่านเมืองเก่า",
+        "source_url": "https://tatmediaassets.com/file/1097577"
+      }
+    ],
+    "nearby": [],
+    "festival": {
+      "months_th": null,
+      "lunar_calendar_th": null,
+      "activities_th": [],
+      "venue_th": null,
+      "source_urls": []
+    },
+    "history": [
+      {
+        "claim_th": "วัดก่อตั้งใน พ.ศ. 2390 (ค.ศ. 1847) โดยพระยาเสนานุชิต (นุช ณ นคร) ผู้ปกครองเมืองตะกั่วป่า",
+        "status": "CONFIRMED",
+        "quote": "created by Phraya Senanuchit ... in 1847",
+        "source_name": "Phuketindex / ข้อมูลท่องเที่ยวที่อ้างอิง ททท.",
+        "source_url": "https://live.phuketindex.com/tat-phangnga-6049.html",
+        "year_be": 2390,
+        "year_ce": 1847
+      },
+      {
+        "claim_th": "ทะเบียนวัดระบุวันตั้งวัดเป็น พ.ศ. 2390 และเป็นวัดราษฎร์มหานิกาย",
+        "status": "CONFIRMED",
+        "quote": "เสนานุชรังสรรค์ ... 2390 2449",
+        "source_name": "รายงานทะเบียนวัดจังหวัดพังงา",
+        "source_url": "https://www.50amfh.org/userfiles/file/News/Thai%20temple%20name%20list/south/Phangnga.pdf",
+        "year_be": 2390,
+        "year_ce": 1847
+      },
+      {
+        "claim_th": "อุโบสถมีสถาปัตยกรรมได้รับอิทธิพลจากแบบจีน และวัดได้รับการขึ้นทะเบียนเป็นโบราณสถานโดยกรมศิลปากรใน พ.ศ. 2539",
+        "status": "CONFIRMED",
+        "quote": "สถาปัตยกรรมที่ได้รับอิทธิพลจากแบบของจีน",
+        "source_name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม (ONEP)",
+        "source_url": "https://culturalenvi.onep.go.th/site/detail/4412",
+        "year_be": 2539,
+        "year_ce": 1996
+      },
+      {
+        "claim_th": "แหล่งข้อมูลท่องเที่ยวระบุว่าวัดเคยเป็นสถานที่ประกอบพิธีถือน้ำพระพิพัฒน์สัตยา และมีพิพิธภัณฑ์จัดแสดงโบราณวัตถุ รวมถึงธรรมาสน์ไม้ที่มีอักษรพระปรมาภิไธยย่อ จปร.",
+        "status": "UNVERIFIED",
+        "quote": "A museum at the temple displays many antiques",
+        "source_name": "Phuketindex / ข้อมูลท่องเที่ยวที่อ้างอิง ททท.",
+        "source_url": "https://live.phuketindex.com/tat-phangnga-6049.html",
+        "year_be": null,
+        "year_ce": null
+      },
+      {
+        "claim_th": "ยังไม่พบหลักฐานที่ยืนยันบทบาทของวัดโดยตรงในกิจการเหมืองแร่ดีบุก",
+        "status": "UNVERIFIED",
+        "quote": "",
+        "source_name": "การสืบค้นครั้งนี้",
+        "source_url": "https://culturalenvi.onep.go.th/site/detail/4412",
+        "year_be": null,
+        "year_ce": null
+      }
+    ],
+    "eras": {
+      "then": {
+        "headline_th": "วัดใหม่กำแพง: วัดของเจ้าเมืองในเมืองตะกั่วป่ายุคเหมืองแร่",
+        "years_th": "ประมาณ พ.ศ. 2390 / ค.ศ. 1847",
+        "body_th": "วัดเสนานุชรังสรรค์ หรือที่ชาวบ้านเรียกว่า “วัดใหม่กำแพง” เกิดขึ้นในช่วงที่พระยาเสนานุชิต (นุช ณ นคร) เป็นผู้สำเร็จราชการเมืองตะกั่วป่า แหล่งข้อมูลของศูนย์มานุษยวิทยาสิรินธรเล่าว่า วัดสร้างหลังจากกำแพงเมือง สถานที่ว่าการ และที่พำนักของเจ้าเมืองเสร็จแล้ว จึงมีความหมายทั้งเป็นพุทธบูชาและอนุสรณ์ของผู้สร้าง\n\nพื้นที่เดิมเป็นเนินดินเชิงเขาฉมมังคิรี พระยาเสนานุชิตให้ปรับพื้นที่ แล้วก่อกำแพงอิฐถือปูนสูงราว 2 เมตร มีประตูด้านตะวันออกและตะวันตก ก่อนสร้างอุโบสถไว้กลางวัดและศาลาการเปรียญสองด้าน ชื่อ “วัดใหม่กำแพง” จึงไม่ได้เป็นเพียงชื่อเรียกวัดใหม่ แต่สะท้อนภูมิทัศน์เมืองที่กำลังก่อรูปขึ้นพร้อมอำนาจการปกครองและศูนย์กลางชุมชน\n\nในยุคที่ตะกั่วป่ายังเป็นเมืองท่าฝั่งอันดามัน เชื่อมโยงการค้าทางทะเลและเศรษฐกิจดีบุก อุโบสถของวัดถูกใช้เป็นสถานที่ถือน้ำพิพัฒน์สัตยา แสดงว่าวัดทำหน้าที่เชื่อมพิธีกรรมทางศาสนากับระเบียบการเมืองของเมืองโดยตรง ส่วนรูปแบบอุโบสถที่ได้รับอิทธิพลจีนก็สอดคล้องกับย่านตลาดและชุมชนคนจีนฮกเกี้ยนของตะกั่วป่า แต่แหล่งข้อมูลไม่ได้ยืนยันว่าช่างหรือผู้อุปถัมภ์เป็นชาวจีนโดยตรง",
+        "status": "CONFIRMED",
+        "sources": [
+          {
+            "name": "ศูนย์มานุษยวิทยาสิรินธร – สารานุกรมวัฒนธรรมไทย",
+            "url": "https://db.sac.or.th/thailand-cultural-encyclopedia/detail.php?id=24480"
+          },
+          {
+            "name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม (ONEP)",
+            "url": "https://culturalenvi.onep.go.th/site/detail/4412"
+          },
+          {
+            "name": "วารสารปาริชาต มหาวิทยาลัยทักษิณ",
+            "url": "https://so05.tci-thaijo.org/index.php/parichartjournal/article/download/219292/168797/871014"
+          }
+        ]
+      },
+      "before": {
+        "headline_th": "จากวัดพิธีการสู่มรดกเมืองเก่า: ซ่อมแซม เปลี่ยนสภาพ และขึ้นทะเบียน",
+        "years_th": "พ.ศ. 2408–2566 / ค.ศ. 1865–2023",
+        "body_th": "วัดยังเป็นสถานที่ประกอบพิธีถือน้ำพิพัฒน์สัตยาต่อเนื่องในสมัยก่อนการเปลี่ยนแปลงการปกครอง พ.ศ. 2475 ขณะเดียวกันประวัติวัดบันทึกพระครูอุดมปัญญา (น่วม) เป็นเจ้าอาวาสระหว่าง พ.ศ. 2408–2452 และภายหลังศิษยานุศิษย์สร้างเจดีย์บรรจุอัฐิของท่านราว พ.ศ. 2557 เรื่องนี้ทำให้วัดมีชั้นความทรงจำทั้งของเมืองและของคณะสงฆ์ท้องถิ่น\n\nอาคารไม่ได้คงรูปเดิมทั้งหมด สารานุกรมวัฒนธรรมไทยระบุว่าอุโบสถเคยมีหลังคาสามชั้นมุงกระเบื้องเกล็ด แต่มีการซ่อมโดยลดเหลือชั้นเดียวและเปลี่ยนเป็นมุงสังกะสี ข้อมูลทะเบียนวัดอีกชุดระบุว่าศาลาการเปรียญปัจจุบันสร้าง พ.ศ. 2506 และระบุวันได้รับพระราชทานวิสุงคามสีมาเป็น 8 มกราคม พ.ศ. 2440 อย่างไรก็ดี รายละเอียดบางปีในแหล่งรองมีการพิมพ์/สแกนคลาดเคลื่อน จึงไม่ใช้เป็นหลักฐานยืนยันปีบูรณะอื่นเพิ่มเติม\n\nกรมศิลปากรขึ้นทะเบียนโบราณสถานของวัดใน พ.ศ. 2539 โดยจุดเด่นคือกำแพงรอบวัดและอุโบสถขนาดใหญ่ที่มีอิทธิพลจีน ต่อมาในบริบทการฟื้นฟูเมืองเก่าตะกั่วป่า วัดยังเป็นที่ตั้งพิพิธภัณฑ์ชุมชนตะกั่วป่า ซึ่งรวบรวมเครื่องใช้และอุปกรณ์จากวิถีเหมืองแร่ ทำให้พื้นที่วัดทำหน้าที่เป็นทั้งศาสนสถานและพื้นที่เล่าความทรงจำของเมืองหลังยุคเหมือง",
+        "status": "CONFIRMED",
+        "sources": [
+          {
+            "name": "ศูนย์มานุษยวิทยาสิรินธร – สารานุกรมวัฒนธรรมไทย",
+            "url": "https://db.sac.or.th/thailand-cultural-encyclopedia/detail.php?id=24480"
+          },
+          {
+            "name": "ONEP – แหล่งศิลปกรรมอันควรอนุรักษ์",
+            "url": "https://culturalenvi.onep.go.th/site/detail/4412"
+          },
+          {
+            "name": "วัดเสนานุชรังสรรค์ – ฐานข้อมูลวัด (ClassStart Books)",
+            "url": "https://books.classstart.org/thai-buddhist-temples/03/%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B9%80%E0%B8%AA%E0%B8%99%E0%B8%B2%E0%B8%99%E0%B8%B8%E0%B8%8A%E0%B8%A3%E0%B8%B1%E0%B8%87%E0%B8%AA%E0%B8%A3%E0%B8%A3%E0%B8%84%E0%B9%8C.html"
+          },
+          {
+            "name": "วารสารปาริชาต มหาวิทยาลัยทักษิณ",
+            "url": "https://so05.tci-thaijo.org/index.php/parichartjournal/article/download/219292/168797/871014"
+          }
+        ]
+      },
+      "now": {
+        "headline_th": "โบราณสถานที่ยังอยู่ในชีวิตเมือง แต่สถานะการเข้าชมต้องเช็กหน้างาน",
+        "years_th": "2569 / 2026",
+        "body_th": "หลักฐานล่าสุดที่เข้าถึงได้ยืนยันว่า วัดเสนานุชรังสรรค์ยังถูกนำเสนอเป็นแหล่งเรียนรู้และแหล่งท่องเที่ยวของเมืองเก่าตะกั่วป่า เทศบาลเมืองตะกั่วป่ามีสื่อแนะนำวัด และในปี 2566 เผยแพร่กิจกรรมแห่เทียน–เวียนเมืองพร้อมพิธีบวงสรวงเพื่อขออนุญาตบูรณะอุโบสถ\n\nภายในพื้นที่มีองค์ประกอบสำคัญให้ติดตาม ได้แก่ อุโบสถ กำแพงอิฐรอบวัด เจดีย์บรรจุอัฐิพระครูอุดมปัญญา และพิพิธภัณฑ์ชุมชนตะกั่วป่า งานวิชาการระบุว่าพิพิธภัณฑ์เก็บของใช้และอุปกรณ์จากยุคเหมืองแร่ จึงทำให้การมาเยือนวัดเชื่อมต่อกับประวัติแรงงาน การค้า และชีวิตประจำวันของเมืองได้\n\nอย่างไรก็ตาม ยังไม่พบประกาศทางการในปี 2569 ที่ยืนยันชื่อผู้ดูแลปัจจุบัน เวลาเปิด พื้นที่ที่เปิดเข้าชม สภาพผลการบูรณะหลังพิธีปี 2566 หรือกิจกรรมประจำวัด จึงควรถือว่าสถานะการเข้าชมเป็น “ต้องตรวจสอบก่อนเดินทาง” และไม่ควรสรุปว่าพิพิธภัณฑ์หรืออุโบสถเปิดทุกวันจากข้อมูลออนไลน์เพียงอย่างเดียว",
+        "status": "CONFIRMED",
+        "sources": [
+          {
+            "name": "เทศบาลเมืองตะกั่วป่า – วิดีโอแนะนำและประกาศกิจกรรมปี 2566",
+            "url": "https://www.youtube.com/watch?v=76z9YMImUUk"
+          },
+          {
+            "name": "วารสารปาริชาต มหาวิทยาลัยทักษิณ",
+            "url": "https://so05.tci-thaijo.org/index.php/parichartjournal/article/download/219292/168797/871014"
+          },
+          {
+            "name": "ONEP – แหล่งศิลปกรรมอันควรอนุรักษ์",
+            "url": "https://culturalenvi.onep.go.th/site/detail/4412"
+          }
+        ]
+      }
+    },
+    "timeline": [
+      {
+        "year_ce": 1847,
+        "year_be": 2390,
+        "date_th": null,
+        "title_th": "ก่อสร้างวัดใหม่กำแพง",
+        "detail_th": "พระยาเสนานุชิต (นุช ณ นคร) สร้างวัดหลังจัดระเบียบกำแพงเมืองและที่ว่าการตะกั่วป่า พร้อมก่อกำแพงและอุโบสถเป็นศูนย์กลางศาสนพิธีของเมือง",
+        "status": "CONFIRMED",
+        "source_url": "https://db.sac.or.th/thailand-cultural-encyclopedia/detail.php?id=24480"
+      },
+      {
+        "year_ce": 1865,
+        "year_be": 2408,
+        "date_th": null,
+        "title_th": "พระครูอุดมปัญญา (น่วม) เริ่มเป็นเจ้าอาวาส",
+        "detail_th": "ข้อมูลสารานุกรมระบุช่วงดำรงตำแหน่ง พ.ศ. 2408–2452 และยกให้เป็นเจ้าคณะเมืองตะกั่วป่ารูปแรก",
+        "status": "CONFIRMED",
+        "source_url": "https://db.sac.or.th/thailand-cultural-encyclopedia/detail.php?id=24480"
+      },
+      {
+        "year_ce": 1897,
+        "year_be": 2440,
+        "date_th": "8 มกราคม 2440",
+        "title_th": "ได้รับพระราชทานวิสุงคามสีมา",
+        "detail_th": "แหล่งข้อมูลทะเบียนวัดระบุวันได้รับพระราชทานวิสุงคามสีมาเป็น 8 มกราคม พ.ศ. 2440",
+        "status": "UNVERIFIED",
+        "source_url": "https://books.classstart.org/thai-buddhist-temples/03/%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B9%80%E0%B8%AA%E0%B8%99%E0%B8%B2%E0%B8%99%E0%B8%B8%E0%B8%8A%E0%B8%A3%E0%B8%B1%E0%B8%87%E0%B8%AA%E0%B8%A3%E0%B8%A3%E0%B8%84%E0%B9%8C.html"
+      },
+      {
+        "year_ce": 1932,
+        "year_be": 2475,
+        "date_th": null,
+        "title_th": "สิ้นบทบาทพิธีถือน้ำในระบอบเดิม",
+        "detail_th": "ข้อมูลประวัติวัดระบุว่าวัดเคยใช้ประกอบพิธีถือน้ำพิพัฒน์สัตยามาจนถึงก่อนการเปลี่ยนแปลงการปกครอง พ.ศ. 2475",
+        "status": "CONFIRMED",
+        "source_url": "https://books.classstart.org/thai-buddhist-temples/03/%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B9%80%E0%B8%AA%E0%B8%99%E0%B8%B2%E0%B8%99%E0%B8%B8%E0%B8%8A%E0%B8%A3%E0%B8%B1%E0%B8%87%E0%B8%AA%E0%B8%A3%E0%B8%A3%E0%B8%84%E0%B9%8C.html"
+      },
+      {
+        "year_ce": 1963,
+        "year_be": 2506,
+        "date_th": null,
+        "title_th": "สร้างศาลาการเปรียญหลังปัจจุบัน",
+        "detail_th": "ฐานข้อมูลวัดระบุว่าศาลาการเปรียญโครงสร้างคอนกรีตเสริมเหล็กสร้างใน พ.ศ. 2506",
+        "status": "UNVERIFIED",
+        "source_url": "https://books.classstart.org/thai-buddhist-temples/03/%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B9%80%E0%B8%AA%E0%B8%99%E0%B8%B2%E0%B8%99%E0%B8%B8%E0%B8%8A%E0%B8%A3%E0%B8%B1%E0%B8%87%E0%B8%AA%E0%B8%A3%E0%B8%A3%E0%B8%84%E0%B9%8C.html"
+      },
+      {
+        "year_ce": 1996,
+        "year_be": 2539,
+        "date_th": null,
+        "title_th": "ขึ้นทะเบียนโบราณสถาน",
+        "detail_th": "ONEP ระบุว่าวัดได้รับการขึ้นทะเบียนโดยกรมศิลปากรใน พ.ศ. 2539 โดยเน้นคุณค่าของอุโบสถและอิทธิพลสถาปัตยกรรมจีน",
+        "status": "CONFIRMED",
+        "source_url": "https://culturalenvi.onep.go.th/site/detail/4412"
+      },
+      {
+        "year_ce": 2014,
+        "year_be": 2557,
+        "date_th": null,
+        "title_th": "สร้างเจดีย์บรรจุอัฐิพระครูอุดมปัญญา (น่วม)",
+        "detail_th": "ศิษยานุศิษย์สร้างเจดีย์ทางทิศอีสานของอุโบสถเพื่อบรรจุอัฐิพระครูอุดมปัญญา (น่วม)",
+        "status": "CONFIRMED",
+        "source_url": "https://db.sac.or.th/thailand-cultural-encyclopedia/detail.php?id=24480"
+      },
+      {
+        "year_ce": 2023,
+        "year_be": 2566,
+        "date_th": "26 กรกฎาคม 2566",
+        "title_th": "พิธีขออนุญาตบูรณะอุโบสถ",
+        "detail_th": "เทศบาลเมืองตะกั่วป่าเผยแพร่ข่าวกิจกรรมวันเข้าพรรษาและพิธีบวงสรวงเพื่อขออนุญาตบูรณะอุโบสถ เป็นหลักฐานว่ามีโครงการบูรณะในช่วงนั้น แต่ไม่ยืนยันผลสำเร็จของงาน",
+        "status": "CONFIRMED",
+        "source_url": "https://www.youtube.com/watch?v=76z9YMImUUk"
+      }
+    ],
+    "news": [
+      {
+        "date": "2023-07-20",
+        "title_th": "เทศบาลเมืองตะกั่วป่าพาชมวัดเสนานุชรังสรรค์และเชิญร่วมพิธีขออนุญาตบูรณะอุโบสถ",
+        "summary_th": "วิดีโอประชาสัมพันธ์ของเทศบาลกล่าวถึงวัดเก่าแก่คู่เมือง และระบุพิธีบวงสรวงขออนุญาตบูรณะอุโบสถในวันที่ 26 กรกฎาคม 2566 ควบคู่กิจกรรมแห่เทียน–เวียนเมือง",
+        "outlet": "เทศบาลเมืองตะกั่วป่า",
+        "url": "https://www.youtube.com/watch?v=76z9YMImUUk"
+      }
+    ],
+    "did_you_know": [
+      {
+        "fact_th": "ชื่อ “วัดใหม่กำแพง” มาจากกำแพงอิฐถือปูนสูงรอบวัด ไม่ใช่ชื่อทางการเดิมของวัด",
+        "status": "CONFIRMED",
+        "source_url": "https://db.sac.or.th/thailand-cultural-encyclopedia/detail.php?id=24480"
+      },
+      {
+        "fact_th": "อุโบสถเคยมีหลังคาสามชั้นมุงกระเบื้องเกล็ด ก่อนซ่อมลดเหลือชั้นเดียวและมุงสังกะสี",
+        "status": "CONFIRMED",
+        "source_url": "https://db.sac.or.th/thailand-cultural-encyclopedia/detail.php?id=24480"
+      },
+      {
+        "fact_th": "พิพิธภัณฑ์ชุมชนตะกั่วป่าภายในวัดรวบรวมของใช้และอุปกรณ์ที่สะท้อนยุคเหมืองแร่ของเมือง",
+        "status": "CONFIRMED",
+        "source_url": "https://so05.tci-thaijo.org/index.php/parichartjournal/article/download/219292/168797/871014"
+      }
+    ],
+    "photos": {
+      "usable": [],
+      "needs_permission": [
+        {
+          "url": "https://db.sac.or.th/thailand-cultural-encyclopedia/uploads/0217/000132.PNG",
+          "page_url": "https://db.sac.or.th/thailand-cultural-encyclopedia/detail.php?id=24480",
+          "caption_th": "วัดเสนานุชรังสรรค์ในอดีต และสถานที่เคยใช้ถือน้ำพิพัฒน์สัตยา",
+          "credit": "สารานุกรมวัฒนธรรมไทย / ศูนย์มานุษยวิทยาสิรินธร",
+          "license_note_th": "เนื้อหาอยู่ภายใต้ CC BY 4.0 ตามหน้าแหล่งข้อมูล แต่ควรตรวจเงื่อนไขการใช้ภาพต้นฉบับเพิ่มเติม"
+        },
+        {
+          "url": "https://db.sac.or.th/thailand-cultural-encyclopedia/uploads/0217/000133.PNG",
+          "page_url": "https://db.sac.or.th/thailand-cultural-encyclopedia/detail.php?id=24480",
+          "caption_th": "พระอุโบสถวัดเสนานุชรังสรรค์",
+          "credit": "สารานุกรมวัฒนธรรมไทย / ศูนย์มานุษยวิทยาสิรินธร",
+          "license_note_th": "เนื้อหาอยู่ภายใต้ CC BY 4.0 ตามหน้าแหล่งข้อมูล แต่ควรตรวจเงื่อนไขการใช้ภาพต้นฉบับเพิ่มเติม"
+        },
+        {
+          "url": "https://tatmediaassets.com/file/1097561",
+          "page_url": "https://tatmediaassets.com/file/1097561",
+          "caption_th": "วัดเสนานุชรังสรรค์ หรือวัดใหม่กำแพง จังหวัดพังงา",
+          "credit": "การท่องเที่ยวแห่งประเทศไทย / นายพัทธ์รวินทร์ วาณิชย์สถาพร",
+          "license_note_th": "ไม่ทราบสิทธิ์ ต้องขออนุญาตก่อนใช้"
+        },
+        {
+          "url": "https://tatmediaassets.com/file/1097577",
+          "page_url": "https://tatmediaassets.com/file/1097577",
+          "caption_th": "ภาพวัดเสนานุชรังสรรค์ หรือวัดใหม่กำแพง",
+          "credit": "TAT Media Assets",
+          "license_note_th": "ไม่ทราบสิทธิ์ ต้องขออนุญาตก่อนใช้"
+        }
+      ],
+      "broken": []
+    },
+    "seo": {
+      "keywords_th": [
+        "วัดเสนานุชรังสรรค์",
+        "วัดใหม่ ตะกั่วป่า",
+        "วัดใหม่กำแพง",
+        "วัดใหม่กำแพงแลง",
+        "วัดโบราณตะกั่วป่า",
+        "วัดจีนตะกั่วป่า",
+        "อุโบสถวัดเสนานุชรังสรรค์",
+        "เมืองเก่าตะกั่วป่า",
+        "โบราณสถานพังงา",
+        "เที่ยวตะกั่วป่า"
+      ],
+      "keywords_en": [
+        "Wat Sena Nuch Rangsan",
+        "Wat Mai Kampang",
+        "Wat Mai Kamphaeng",
+        "Takuapa old town temple",
+        "ancient temple in Takuapa",
+        "Phang Nga historic temple",
+        "Chinese-influenced temple Thailand",
+        "Takuapa cultural heritage"
+      ]
+    },
+    "unknowns": [
+      "ไม่พบรหัสไปรษณีย์ของจุดวัดจากแหล่งที่อ่านได้โดยตรง",
+      "ไม่พบเวลาเปิด-ปิดที่ยืนยันได้",
+      "ไม่พบค่าเข้าชมที่ยืนยันได้",
+      "ไม่พบเบอร์โทร เพจเฟซบุ๊ก เว็บไซต์ หรือ LINE ทางการที่ยืนยันได้",
+      "ไม่พบข้อมูลยืนยันที่จอดรถ ห้องน้ำ ทางลาด/การเข้าถึงรถเข็น และข้อกำหนดการแต่งกาย",
+      "ไม่พบระยะทางหรือเส้นทางที่ยืนยันได้จากตัวเมืองตะกั่วป่า ภูเก็ต เขาหลัก และสนามบิน",
+      "ไม่พบหลักฐานยืนยันบทบาทของวัดในยุคเหมืองแร่ดีบุก",
+      "ไม่พบเทศกาลประจำวัดหรือช่วงเวลาที่ควรไปที่ระบุเฉพาะวัด",
+      "ไม่พบสถานที่ใกล้เคียงที่ยืนยันระยะเดินถึงได้",
+      "ภาพจาก TAT Media Assets มีแหล่งที่มา แต่ไม่ทราบสิทธิ์การใช้งานซ้ำ",
+      "ยังไม่พบหลักฐานยืนยันผู้ดูแลวัดหรือเจ้าอาวาสปัจจุบันในปี 2569",
+      "ยังไม่พบเวลาเปิด–ปิด ค่าเข้าชม และประกาศทางการว่าอุโบสถหรือพิพิธภัณฑ์เปิดให้เข้าชมทุกวัน",
+      "ยังไม่พบรายงานผลว่าการบูรณะอุโบสถที่มีพิธีขออนุญาตในปี 2566 แล้วเสร็จหรือดำเนินถึงขั้นใด",
+      "ยังไม่พบหลักฐานเฉพาะเจาะจงว่าสึนามิ พ.ศ. 2547 สร้างความเสียหายต่อวัดอย่างไร",
+      "ยังไม่พบหลักฐานตรงว่าวัดเคยถูกทิ้งร้างหรือมีการเปลี่ยนมือ",
+      "ยังไม่พบข่าวย้อนหลัง 5 ปีที่ยืนยันกิจกรรมหรือโครงการอื่นนอกเหนือจากข่าว/สื่อปี 2566",
+      "ภาพจาก TAT Media Assets ไม่ทราบสิทธิ์ ต้องขออนุญาตก่อนใช้"
+    ],
+    "sources": [
+      {
+        "name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม (ONEP) – แหล่งศิลปกรรมอันควรอนุรักษ์",
+        "url": "https://culturalenvi.onep.go.th/site/detail/4412",
+        "type": "official",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "รายงานทะเบียนวัดจังหวัดพังงา",
+        "url": "https://www.50amfh.org/userfiles/file/News/Thai%20temple%20name%20list/south/Phangnga.pdf",
+        "type": "official",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "Phuketindex – Phang Nga’s Eight Shrines and Eight Temples",
+        "url": "https://live.phuketindex.com/tat-phangnga-6049.html",
+        "type": "blog",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "TAT Media Assets – Wat Sena Nucharangsan",
+        "url": "https://tatmediaassets.com/file/1097577",
+        "type": "official",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "ศูนย์มานุษยวิทยาสิรินธร – สารานุกรมวัฒนธรรมไทย",
+        "url": "https://db.sac.or.th/thailand-cultural-encyclopedia/detail.php?id=24480",
+        "type": "academic",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "ONEP – แหล่งศิลปกรรมอันควรอนุรักษ์",
+        "url": "https://culturalenvi.onep.go.th/site/detail/4412",
+        "type": "official",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "วารสารปาริชาต มหาวิทยาลัยทักษิณ",
+        "url": "https://so05.tci-thaijo.org/index.php/parichartjournal/article/download/219292/168797/871014",
+        "type": "academic",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "เทศบาลเมืองตะกั่วป่า – วิดีโอประชาสัมพันธ์กิจกรรมและบูรณะอุโบสถ",
+        "url": "https://www.youtube.com/watch?v=76z9YMImUUk",
+        "type": "news",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "TAT Media Assets – ภาพวัดเสนานุชรังสรรค์",
+        "url": "https://tatmediaassets.com/file/1097561",
+        "type": "official",
+        "accessed": "2026-09-07"
+      }
+    ],
+    "counts": {
+      "confirmed": 9,
+      "unverified": 4,
+      "disputed": 0
+    }
+  },
+  {
+    "id": "museum",
+    "type": "place",
+    "category": "museum",
+    "name_th": "พิพิธภัณฑ์เสนานุชรังสรรค์ชุมชนตะกั่วป่า",
+    "name_en": "Takua Pa Community Museum",
+    "editorial_angle": "ต่อเรื่องจากบ้านเก่าสู่ความทรงจำของเมือง",
+    "illustration": "/assets/museum.webp",
+    "brochure_facts": [
+      "รวบรวมเรื่องศาสนา ศิลปะ และการค้าของท้องถิ่น"
+    ],
+    "geo": {
+      "lat": 8.8302299579,
+      "lng": 98.3624509671,
+      "confidence": "high",
+      "source_url": "https://culturalenvi.onep.go.th/site/detail/4412",
+      "source_name": "สิ่งแวดล้อมศิลปกรรมอันควรอนุรักษ์ (ONEP)"
+    },
+    "address": {
+      "line_th": "ภายในวัดเสนานุชรังสรรค์ ย่านตลาดเก่า",
+      "subdistrict": "ตะกั่วป่า",
+      "district": "ตะกั่วป่า",
+      "province": "พังงา",
+      "postcode": "82110",
+      "source_url": "https://www.50amfh.org/userfiles/file/News/Thai%20temple%20name%20list/south/Phangnga.pdf"
+    },
+    "contact": {
+      "phone": null,
+      "facebook": null,
+      "website": null,
+      "line": null,
+      "source_url": null
+    },
+    "visit": {
+      "opening_hours_th": null,
+      "opening_hours_status": "UNKNOWN",
+      "admission_fee_th": null,
+      "admission_status": "UNKNOWN",
+      "best_time_th": "ช่วงเย็นวันอาทิตย์เหมาะกับการเที่ยวต่อบนถนนวัฒนธรรมเมืองเก่าตะกั่วป่า",
+      "duration_minutes": null,
+      "parking_th": null,
+      "restroom": null,
+      "wheelchair_th": null,
+      "dress_code_th": "ควรแต่งกายสุภาพเมื่อเข้าพื้นที่วัด",
+      "source_urls": [
+        "https://mgronline.com/south/detail/9610000016873",
+        "https://www.gplace.com/960255"
+      ]
+    },
+    "getting_there": [],
+    "highlights": [
+      {
+        "title_th": "อาคารพิพิธภัณฑ์สองชั้น",
+        "detail_th": "ตัวพิพิธภัณฑ์ชุมชนตั้งอยู่ภายในวัดเสนานุชรังสรรค์",
+        "source_url": "https://so05.tci-thaijo.org/index.php/parichartjournal/article/download/219292/168797/871014"
+      },
+      {
+        "title_th": "ของใช้และอุปกรณ์ยุคเหมืองแร่",
+        "detail_th": "จัดเก็บสิ่งของจากยุคทำเหมืองและของหายากที่สะท้อนวิถีชีวิตท้องถิ่น",
+        "source_url": "https://so05.tci-thaijo.org/index.php/parichartjournal/article/download/219292/168797/871014"
+      },
+      {
+        "title_th": "อุโบสถอิทธิพลจีน",
+        "detail_th": "อุโบสถขนาดใหญ่มีรูปแบบได้รับอิทธิพลจากสถาปัตยกรรมจีน",
+        "source_url": "https://culturalenvi.onep.go.th/site/detail/4412"
+      },
+      {
+        "title_th": "บริบทเมืองเก่าตะกั่วป่า",
+        "detail_th": "อยู่ในชุมชนเมืองเก่าที่มีอาคารชิโน-โปรตุกีสและมรดกจากยุคเหมืองแร่",
+        "source_url": "https://wikicommunity.sac.or.th/community/951"
+      }
+    ],
+    "nearby": [
+      {
+        "name_th": "ศาลเจ้าซิ่นใช่ตึ๋ง",
+        "walk_minutes": null,
+        "source_url": "https://mapcarta.com/N7619565714"
+      },
+      {
+        "name_th": "ศาลเจ้ากู่ใช่ตึ๋ง",
+        "walk_minutes": null,
+        "source_url": "https://mapcarta.com/N7619565714"
+      },
+      {
+        "name_th": "บ้านขุนอินทร์",
+        "walk_minutes": null,
+        "source_url": "https://www.lovethailand.org/travel/en/68-Phang-Nga/7957-Khun-In-House.html"
+      },
+      {
+        "name_th": "กำแพงจวนเจ้าเมืองตะกั่วป่า",
+        "walk_minutes": null,
+        "source_url": "https://archaeology.sac.or.th/archaeology/874"
+      }
+    ],
+    "festival": {
+      "months_th": null,
+      "lunar_calendar_th": null,
+      "activities_th": [],
+      "venue_th": null,
+      "source_urls": []
+    },
+    "history": [
+      {
+        "claim_th": "พิพิธภัณฑ์ชุมชนตะกั่วป่าเป็นอาคารสองชั้นภายในวัดเสนานุชรังสรรค์ และรวบรวมเครื่องใช้กับอุปกรณ์ที่สะท้อนวิถีชีวิตคนตะกั่วป่า รวมถึงของจากยุคเหมืองแร่",
+        "status": "CONFIRMED",
+        "quote": "พิพิธภัณฑ์ชุมชนตะกั่วป่าเป็นอาคารลักษณะสองชั้น",
+        "source_name": "วารสารปาริชาต มหาวิทยาลัยทักษิณ",
+        "source_url": "https://so05.tci-thaijo.org/index.php/parichartjournal/article/download/219292/168797/871014",
+        "year_be": null,
+        "year_ce": null
+      },
+      {
+        "claim_th": "วัดเสนานุชรังสรรค์สร้างโดยพระยาเสนานุชิต (นุช) และอุโบสถมีอิทธิพลทางสถาปัตยกรรมจากจีน",
+        "status": "CONFIRMED",
+        "quote": "พระยาเสนานุชิต (นุช) เป็นผู้สร้างขึ้น",
+        "source_name": "สิ่งแวดล้อมศิลปกรรมอันควรอนุรักษ์ (ONEP)",
+        "source_url": "https://culturalenvi.onep.go.th/site/detail/4412",
+        "year_be": null,
+        "year_ce": null
+      },
+      {
+        "claim_th": "วัดเสนานุชรังสรรค์มีทะเบียนวัดระบุวันตั้งวัด พ.ศ. 2390",
+        "status": "CONFIRMED",
+        "quote": "วันที่ตั้งวัด 2390",
+        "source_name": "รายงานทะเบียนวัดจังหวัดพังงา",
+        "source_url": "https://www.50amfh.org/userfiles/file/News/Thai%20temple%20name%20list/south/Phangnga.pdf",
+        "year_be": 2390,
+        "year_ce": 1847
+      },
+      {
+        "claim_th": "อุโบสถวัดได้รับการขึ้นทะเบียนเป็นโบราณสถานโดยกรมศิลปากร แต่แหล่งที่อ่านได้ไม่ระบุปีในข้อความที่ค้นพบ",
+        "status": "CONFIRMED",
+        "quote": "ได้รับการขึ้นทะเบียนโดยกรมศิลปากร",
+        "source_name": "สิ่งแวดล้อมศิลปกรรมอันควรอนุรักษ์ (ONEP)",
+        "source_url": "https://culturalenvi.onep.go.th/site/detail/4412",
+        "year_be": null,
+        "year_ce": null
+      }
+    ],
+    "eras": {
+      "then": {
+        "headline_th": "วัดใหม่กำแพงในเมืองเหมืองและเมืองท่า",
+        "years_th": "พ.ศ. 2390 / ค.ศ. 1847 เป็นต้นมา",
+        "body_th": "จุดตั้งต้นของสถานที่นี้อยู่ที่วัดเสนานุชรังสรรค์ หรือชื่อเดิมที่ชาวบ้านเรียกว่า “วัดใหม่กำแพง” วัดมีทะเบียนระบุวันตั้งวัด พ.ศ. 2390 และแหล่งข้อมูลท้องถิ่นระบุว่าสร้างในสมัยรัชกาลที่ 3 โดยพระยาเสนานุชิต (นุช) ผู้สำเร็จราชการเมืองตะกั่วป่า\n\nในเวลานั้นตะกั่วป่าเป็นเมืองท่าชายฝั่งอันดามันที่เชื่อมการค้าและทรัพยากรดีบุก ผู้คนหลายกลุ่ม โดยเฉพาะแรงงานและพ่อค้าจีน ได้เข้ามาตั้งถิ่นฐานจนเกิดย่านตลาดและวัฒนธรรมจีน อาคารอุโบสถของวัดที่รับอิทธิพลสถาปัตยกรรมจีนจึงเป็นหลักฐานของเมืองพหุวัฒนธรรม ส่วนพิพิธภัณฑ์ที่เห็นในปัจจุบันยังไม่มีหลักฐานเปิดเผยว่าเริ่มจัดตั้งในปีใดหรือใครเป็นผู้ก่อตั้งโดยตรง",
+        "status": "CONFIRMED",
+        "sources": [
+          {
+            "name": "รายงานทะเบียนวัดจังหวัดพังงา",
+            "url": "https://www.50amfh.org/userfiles/file/News/Thai%20temple%20name%20list/south/Phangnga.pdf"
+          },
+          {
+            "name": "สิ่งแวดล้อมศิลปกรรมอันควรอนุรักษ์ (ONEP)",
+            "url": "https://culturalenvi.onep.go.th/site/detail/4412"
+          },
+          {
+            "name": "ศูนย์มานุษยวิทยาสิรินธร: เมืองตะกั่วป่า",
+            "url": "https://wikicommunity.sac.or.th/community/951"
+          }
+        ]
+      },
+      "before": {
+        "headline_th": "จากวัดและชุมชน สู่พิพิธภัณฑ์ความทรงจำ",
+        "years_th": "ไม่พบปีเริ่มจัดตั้งพิพิธภัณฑ์; ก่อน พ.ศ. 2561 มีหลักฐานการใช้งานในบริบทเมืองเก่า",
+        "body_th": "ระหว่างทาง วัดเสนานุชรังสรรค์ยังทำหน้าที่เป็นศาสนสถานและพื้นที่ของชุมชน ขณะเดียวกันเมืองตะกั่วป่าเปลี่ยนจากศูนย์กลางเหมืองดีบุกและการค้าไปสู่เมืองประวัติศาสตร์ที่ต้องอนุรักษ์มรดกเดิม แหล่งวิชาการอธิบายว่าพิพิธภัณฑ์ชุมชนตะกั่วป่าเป็นอาคารสองชั้น จัดแสดงเครื่องใช้ อุปกรณ์ และสิ่งของหายากที่สะท้อนวิถีชีวิต รวมถึงร่องรอยยุคเหมืองแร่\n\nอุโบสถวัดได้รับการขึ้นทะเบียนเป็นโบราณสถานโดยกรมศิลปากร แต่แหล่งที่ตรวจสอบได้ในครั้งนี้ไม่แสดงปีขึ้นทะเบียนอย่างชัดเจน และยังไม่พบหลักฐานว่าตัวอาคารพิพิธภัณฑ์เคยถูกทิ้งร้าง บูรณะครั้งใหญ่ หรือได้รับผลกระทบจากสึนามิ พ.ศ. 2547 โดยตรง จึงไม่สรุปเกินหลักฐาน",
+        "status": "CONFIRMED",
+        "sources": [
+          {
+            "name": "วารสารปาริชาต มหาวิทยาลัยทักษิณ",
+            "url": "https://so05.tci-thaijo.org/index.php/parichartjournal/article/download/219292/168797/871014"
+          },
+          {
+            "name": "สิ่งแวดล้อมศิลปกรรมอันควรอนุรักษ์ (ONEP)",
+            "url": "https://culturalenvi.onep.go.th/site/detail/4412"
+          },
+          {
+            "name": "สารสนเทศท้องถิ่นภาคใต้ฝั่งอันดามัน",
+            "url": "https://www.andamannlttrang.com/%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5/%E0%B8%AD%E0%B8%B8%E0%B9%82%E0%B8%9A%E0%B8%AA%E0%B8%96%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B9%80%E0%B8%AA%E0%B8%99%E0%B8%B2%E0%B8%99%E0%B8%B8%E0%B8%8A%E0%B8%A3%E0%B8%B1%E0%B8%87%E0%B8%AA%E0%B8%A3%E0%B8%A3/"
+          }
+        ]
+      },
+      "now": {
+        "headline_th": "พิพิธภัณฑ์เล็กในเส้นทางเมืองเก่า",
+        "years_th": "2569 / 2026",
+        "body_th": "หลักฐานร่วมสมัยเรียกพื้นที่นี้ทั้ง “พิพิธภัณฑ์ชุมชนตะกั่วป่า” และ “พิพิธภัณฑ์บ้านตะกั่วป่า” โดยวางไว้ในบริบทถนนวัฒนธรรมเมืองเก่า จัดแสดงภาพ โบราณวัตถุ และเรื่องราวของชุมชนควบคู่กับอาคารชิโน-โปรตุกีสและวัดเก่า จึงมีบทบาทเป็นแหล่งเรียนรู้ความทรงจำของเมือง มากกว่าจะเป็นพิพิธภัณฑ์ขนาดใหญ่ที่มีระบบบริการนักท่องเที่ยวครบถ้วน\n\nอย่างไรก็ดี ยังไม่พบประกาศทางการที่ยืนยันเวลาเปิด-ปิด ค่าเข้าชม ผู้ดูแลโดยตรง สภาพอาคารล่าสุด หรือโครงการบูรณะเฉพาะพิพิธภัณฑ์ในปี 2569 กิจกรรมเมืองเก่าและถนนวัฒนธรรมยังดำเนินต่อในระดับเทศบาล/ชุมชน แต่ไม่ควรตีความว่าเป็นหลักฐานว่าพิพิธภัณฑ์เปิดทุกวัน",
+        "status": "CONFIRMED",
+        "sources": [
+          {
+            "name": "กรมการค้าภายใน กระทรวงพาณิชย์",
+            "url": "https://www.dit.go.th/th/market/2383/%E0%B8%A0%E0%B8%B2%E0%B8%84%E0%B9%83%E0%B8%95/%E0%B8%9E-%E0%B8%87%E0%B8%87%E0%B8%B2/%E0%B8%96%E0%B8%99%E0%B8%99%E0%B8%A7-%E0%B8%92%E0%B8%99%E0%B8%98%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B9%80%E0%B8%A1-%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%81-%E0%B8%B2%E0%B8%95%E0%B8%B0%E0%B8%81-%E0%B8%A7%E0%B8%9B-%E0%B8%B2/"
+          },
+          {
+            "name": "จังหวัดพังงา: เมืองเก่าตะกั่วป่า",
+            "url": "https://www.phangngapao.go.th/travel/detail/89"
+          },
+          {
+            "name": "สถานีวิทยุกระจายเสียงแห่งประเทศไทย",
+            "url": "https://radiothailand.prd.go.th/th/content/category/detail/id/9/iid/481052"
+          }
+        ]
+      }
+    },
+    "timeline": [
+      {
+        "year_ce": 1847,
+        "year_be": 2390,
+        "date_th": "พ.ศ. 2390",
+        "title_th": "ตั้งวัดเสนานุชรังสรรค์",
+        "detail_th": "ทะเบียนวัดระบุวันตั้งวัด พ.ศ. 2390; แหล่งท้องถิ่นระบุผู้สร้างคือพระยาเสนานุชิต (นุช)",
+        "status": "CONFIRMED",
+        "source_url": "https://www.50amfh.org/userfiles/file/News/Thai%20temple%20name%20list/south/Phangnga.pdf"
+      },
+      {
+        "year_ce": 2026,
+        "year_be": 2569,
+        "date_th": "พ.ศ. 2569",
+        "title_th": "อยู่ในบริบทการท่องเที่ยวเมืองเก่า",
+        "detail_th": "พิพิธภัณฑ์บ้านตะกั่วป่าถูกกล่าวถึงเป็นส่วนหนึ่งของถนนวัฒนธรรมเมืองเก่า แต่ไม่พบประกาศเวลาเปิดเฉพาะสถานที่",
+        "status": "CONFIRMED",
+        "source_url": "https://www.dit.go.th/th/market/2383/%E0%B8%A0%E0%B8%B2%E0%B8%84%E0%B9%83%E0%B8%95/%E0%B8%9E-%E0%B8%87%E0%B8%87%E0%B8%B2/%E0%B8%96%E0%B8%99%E0%B8%99%E0%B8%A7-%E0%B8%92%E0%B8%99%E0%B8%98%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B9%80%E0%B8%A1%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%81-%E0%B8%B2%E0%B8%95%E0%B8%B0%E0%B8%81-%E0%B8%A7%E0%B8%9B-%E0%B8%B2/"
+      },
+      {
+        "year_ce": null,
+        "year_be": null,
+        "date_th": null,
+        "title_th": "อุโบสถได้รับการขึ้นทะเบียนโบราณสถาน",
+        "detail_th": "กรมศิลปากรขึ้นทะเบียนอุโบสถ แต่แหล่งที่ตรวจสอบได้ไม่ระบุปีในข้อความที่อ่านได้",
+        "status": "CONFIRMED",
+        "source_url": "https://culturalenvi.onep.go.th/site/detail/4412"
+      },
+      {
+        "year_ce": null,
+        "year_be": null,
+        "date_th": null,
+        "title_th": "จัดตั้งพิพิธภัณฑ์ชุมชนในอาคารสองชั้น",
+        "detail_th": "มีหลักฐานวิชาการบรรยายอาคารและสิ่งจัดแสดง แต่ไม่พบปีเริ่มจัดตั้งหรือชื่อผู้ก่อตั้ง",
+        "status": "CONFIRMED",
+        "source_url": "https://so05.tci-thaijo.org/index.php/parichartjournal/article/download/219292/168797/871014"
+      }
+    ],
+    "news": [
+      {
+        "date": "2026-03-01",
+        "title_th": "จังหวัดพังงาจัดงาน จากตะโกลา สู่ตะกั่วป่า ครั้งที่ 12",
+        "summary_th": "งานส่งเสริมการท่องเที่ยวเมืองเก่าตะกั่วป่าเชื่อมโยงการเรียนรู้วิถีคนตะกั่วป่าและเศรษฐกิจชุมชน แต่ข่าวไม่ได้ยืนยันกิจกรรมภายในพิพิธภัณฑ์โดยตรง",
+        "outlet": "สถานีวิทยุกระจายเสียงแห่งประเทศไทย",
+        "url": "https://radiothailand.prd.go.th/th/content/category/detail/id/9/iid/481052"
+      },
+      {
+        "date": "2024-08-28",
+        "title_th": "ย้อนตำนานเมืองตะโกลา สู่เสน่ห์อารยะเมืองเก่าตะกั่วป่า",
+        "summary_th": "จังหวัดพังงาและเทศบาลประชาสัมพันธ์การท่องเที่ยวเมืองเก่าและกระตุ้นเศรษฐกิจชุมชน ไม่พบข้อความเฉพาะการบูรณะพิพิธภัณฑ์",
+        "outlet": "กรมประชาสัมพันธ์",
+        "url": "https://www.prd.go.th/th/content/category/detail/id/2040/iid/319567"
+      }
+    ],
+    "did_you_know": [
+      {
+        "fact_th": "วัดเสนานุชรังสรรค์มีชื่อเดิมว่า “วัดใหม่กำแพง” และอุโบสถได้รับอิทธิพลจากสถาปัตยกรรมจีน",
+        "status": "CONFIRMED",
+        "source_url": "https://culturalenvi.onep.go.th/site/detail/4412"
+      },
+      {
+        "fact_th": "พิพิธภัณฑ์ชุมชนตะกั่วป่าเป็นอาคารสองชั้นและเก็บของใช้จากยุคเหมืองแร่",
+        "status": "CONFIRMED",
+        "source_url": "https://so05.tci-thaijo.org/index.php/parichartjournal/article/download/219292/168797/871014"
+      }
+    ],
+    "photos": {
+      "usable": [],
+      "needs_permission": [],
+      "broken": []
+    },
+    "seo": {
+      "keywords_th": [
+        "พิพิธภัณฑ์เสนานุชรังสรรค์",
+        "พิพิธภัณฑ์ชุมชนตะกั่วป่า",
+        "พิพิธภัณฑ์บ้านตะกั่วป่า",
+        "วัดเสนานุชรังสรรค์",
+        "วัดใหม่กำแพง",
+        "เมืองเก่าตะกั่วป่า",
+        "พิพิธภัณฑ์ยุคเหมืองแร่ตะกั่วป่า",
+        "ของเก่าตะกั่วป่า",
+        "สถานที่ท่องเที่ยวตะกั่วป่า"
+      ],
+      "keywords_en": [
+        "Takua Pa Community Museum",
+        "Takua Pa Museum",
+        "Wat Sena Nucharangsan",
+        "Takua Pa old town museum",
+        "Phang Nga local museum",
+        "tin mining museum Takua Pa",
+        "Takua Pa cultural heritage",
+        "Sena Nucharangsan temple"
+      ]
+    },
+    "unknowns": [
+      "ไม่พบเวลาเปิด-ปิดของพิพิธภัณฑ์โดยตรง",
+      "ไม่พบค่าเข้าชมที่ยืนยันได้สำหรับพิพิธภัณฑ์",
+      "ไม่พบเบอร์โทร เพจเฟซบุ๊ก เว็บไซต์ หรือ LINE ของพิพิธภัณฑ์โดยตรง",
+      "ไม่พบระยะทางและเส้นทางจากตัวเมืองตะกั่วป่า ภูเก็ต เขาหลัก หรือสนามบิน",
+      "ไม่พบข้อมูลยืนยันปีสร้าง ผู้ก่อตั้ง และรายละเอียดการขึ้นทะเบียนของตัวพิพิธภัณฑ์เอง",
+      "ไม่พบข้อมูลยืนยันที่จอดรถ ห้องน้ำ หรือการรองรับรถเข็น",
+      "ไม่พบภาพถ่ายทางการที่ยืนยันสิทธิ์การใช้งาน",
+      "ไม่พบปีเริ่มจัดตั้งพิพิธภัณฑ์และชื่อผู้ก่อตั้ง",
+      "ไม่พบปีขึ้นทะเบียนโบราณสถานของอุโบสถจากข้อความแหล่งที่ตรวจสอบได้",
+      "ไม่พบหลักฐานยืนยันการบูรณะ การถูกทิ้งร้าง หรือความเสียหายจากสึนามิ พ.ศ. 2547 ของตัวพิพิธภัณฑ์",
+      "ไม่พบผู้ดูแลโดยตรง เวลาเปิด-ปิด ค่าเข้าชม และประกาศว่ายังเปิดให้เข้าชมในปี 2569",
+      "ไม่พบข่าวย้อนหลัง 5 ปีที่กล่าวถึงการบูรณะหรือโครงการเฉพาะพิพิธภัณฑ์",
+      "ไม่พบ URL รูปภาพจริงที่ตรวจสอบสิทธิ์และระบุได้แน่ชัดว่าเป็นตัวพิพิธภัณฑ์ จึงเว้น photos_archive และ photos_current เป็นอาร์เรย์ว่าง"
+    ],
+    "sources": [
+      {
+        "name": "สิ่งแวดล้อมศิลปกรรมอันควรอนุรักษ์ (ONEP)",
+        "url": "https://culturalenvi.onep.go.th/site/detail/4412",
+        "type": "official",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "วารสารปาริชาต มหาวิทยาลัยทักษิณ",
+        "url": "https://so05.tci-thaijo.org/index.php/parichartjournal/article/download/219292/168797/871014",
+        "type": "academic",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "ฐานข้อมูลชุมชน ศูนย์มานุษยวิทยาสิรินธร",
+        "url": "https://wikicommunity.sac.or.th/community/951",
+        "type": "academic",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "Mapcarta / OpenStreetMap",
+        "url": "https://mapcarta.com/N7619565714",
+        "type": "map",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "รายงานทะเบียนวัดจังหวัดพังงา",
+        "url": "https://www.50amfh.org/userfiles/file/News/Thai%20temple%20name%20list/south/Phangnga.pdf",
+        "type": "official",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "กรมโบราณคดี ศูนย์มานุษยวิทยาสิรินธร",
+        "url": "https://archaeology.sac.or.th/archaeology/874",
+        "type": "academic",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "MGR Online",
+        "url": "https://mgronline.com/south/detail/9610000016873",
+        "type": "news",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "ศูนย์มานุษยวิทยาสิรินธร: เมืองตะกั่วป่า",
+        "url": "https://wikicommunity.sac.or.th/community/951",
+        "type": "academic",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "สารสนเทศท้องถิ่นภาคใต้ฝั่งอันดามัน",
+        "url": "https://www.andamannlttrang.com/%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5/%E0%B8%AD%E0%B8%B8%E0%B9%82%E0%B8%9A%E0%B8%AA%E0%B8%96%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B9%80%E0%B8%AA%E0%B8%99%E0%B8%B2%E0%B8%99%E0%B8%B8%E0%B8%8A%E0%B8%A3%E0%B8%B1%E0%B8%87%E0%B8%AA%E0%B8%A3%E0%B8%A3/",
+        "type": "wiki",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "กรมการค้าภายใน กระทรวงพาณิชย์",
+        "url": "https://www.dit.go.th/th/market/2383/%E0%B8%A0%E0%B8%B2%E0%B8%84%E0%B9%83%E0%B8%95/%E0%B8%9E-%E0%B8%87%E0%B8%87%E0%B8%B2/%E0%B8%96%E0%B8%99%E0%B8%99%E0%B8%A7-%E0%B8%92%E0%B8%99%E0%B8%98%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B9%80%E0%B8%A1%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%81%E0%B9%88%E0%B8%B2%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2/",
+        "type": "official",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "สถานีวิทยุกระจายเสียงแห่งประเทศไทย",
+        "url": "https://radiothailand.prd.go.th/th/content/category/detail/id/9/iid/481052",
+        "type": "news",
+        "accessed": "2026-09-07"
+      }
+    ],
+    "counts": {
+      "confirmed": 8,
+      "unverified": 0,
+      "disputed": 0
+    }
+  },
+  {
+    "id": "guan-yu",
+    "type": "place",
+    "category": "shrine",
+    "name_th": "ศาลเจ้าพ่อกวนอู ซิ่นไช่ตึ๋ง",
+    "name_en": "Guan Yu / Sin Chai Tung Shrine",
+    "editorial_angle": "ประตูสีแดงกับเรื่องศรัทธาของเมือง",
+    "illustration": "/assets/guan-yu.webp",
+    "brochure_facts": [
+      "ศาลเจ้าที่สัมพันธ์กับความเชื่อในเทพกวนอูและชุมชนการค้า"
+    ],
+    "geo": {
+      "lat": 8.82945,
+      "lng": 98.36518,
+      "confidence": "medium",
+      "source_url": "https://mapcarta.com/W816145901",
+      "source_name": "แมปคาร์ตา อ้างข้อมูลโอเพนสตรีตแมป"
+    },
+    "address": {
+      "line_th": "บริเวณถนนอุดมธาราตัดถนนศรีตะกั่วป่า ย่านตลาดใหญ่ ตำบลตะกั่วป่า อำเภอตะกั่วป่า จังหวัดพังงา",
+      "subdistrict": "ตะกั่วป่า",
+      "district": "ตะกั่วป่า",
+      "province": "พังงา",
+      "postcode": "82110",
+      "source_url": "https://wikicommunity.sac.or.th/community/1527"
+    },
+    "contact": {
+      "phone": null,
+      "facebook": null,
+      "website": null,
+      "line": null,
+      "source_url": null
+    },
+    "visit": {
+      "opening_hours_th": null,
+      "opening_hours_status": "UNKNOWN",
+      "admission_fee_th": null,
+      "admission_status": "UNKNOWN",
+      "best_time_th": "ช่วงเทศกาลถือศีลกินผักเหมาะสำหรับชมพิธีกรรมของชุมชน ต้องตรวจสอบกำหนดการของปีที่จะเดินทาง; ข่าวปี 2567 ระบุจัดวันที่ 2–11 ตุลาคม ไม่ใช่กำหนดการปี 2569",
+      "duration_minutes": null,
+      "parking_th": null,
+      "restroom": "มีรีวิวกล่าวถึงห้องน้ำสาธารณะใกล้ศาลเจ้า แต่ยังไม่ยืนยันการเปิดใช้ปัจจุบันและสิ่งอำนวยความสะดวกภายใน",
+      "wheelchair_th": null,
+      "dress_code_th": "แหล่งข้อมูลชุมชนระบุว่าผู้ร่วมเทศกาลกินผักแต่งชุดขาว; ไม่พบข้อบังคับการแต่งกายในวันปกติ",
+      "source_urls": [
+        "https://mgronline.com/south/detail/9670000093105",
+        "https://wikicommunity.sac.or.th/community/1527",
+        "https://wanderlog.com/place/details/10219897/sin-chai-tueng-shrine"
+      ]
+    },
+    "getting_there": [
+      {
+        "from": "ตัวเมืองตะกั่วป่า",
+        "text_th": "ปลายทางอยู่ในย่านตลาดใหญ่ บริเวณถนนอุดมธาราตัดถนนศรีตะกั่วป่า; ยังไม่พบเส้นทางรถโดยสารจากตัวเมืองใหม่ถึงหน้าศาลเจ้าที่ตรวจสอบได้",
+        "distance_km": null,
+        "source_url": "https://wikicommunity.sac.or.th/community/1527"
+      },
+      {
+        "from": "ภูเก็ต",
+        "text_th": "เว็บข้อมูลการเดินรถระบุรถสาย 436 ภูเก็ต–ตะกั่วป่า ผ่านโคกกลอย ท้ายเหมือง และเขาหลัก ไปยังสถานีขนส่งตะกั่วป่า ข้อมูลนี้ยังไม่ยืนยันเที่ยวรถปัจจุบันหรือการต่อรถถึงศาลเจ้า",
+        "distance_km": null,
+        "source_url": "https://gogo.town/route/phuket-takuapa-bus-436/"
+      },
+      {
+        "from": "เขาหลัก",
+        "text_th": "เขาหลักอยู่บนเส้นทางรถสาย 436 ภูเก็ต–ตะกั่วป่าตามเว็บข้อมูลการเดินรถ ต้องตรวจสอบจุดขึ้นรถและเที่ยวที่รับผู้โดยสารระหว่างทาง; ยังไม่พบข้อมูลต่อรถจากสถานีขนส่งถึงศาลเจ้า",
+        "distance_km": null,
+        "source_url": "https://gogo.town/route/phuket-takuapa-bus-436/"
+      }
+    ],
+    "highlights": [
+      {
+        "title_th": "องค์กวนอูและเจ้าแม่กวนอิม",
+        "detail_th": "สิ่งสักการะสำคัญที่เทศบาลระบุไว้สำหรับศาลเจ้าแห่งนี้",
+        "source_url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf"
+      },
+      {
+        "title_th": "อาคารสองรูปแบบ",
+        "detail_th": "จีเพลสระบุอาคารชิโน-โปรตุกีสและอาคารศาลเจ้าจีนคนละฝั่งถนน ข้อมูลรูปแบบยังไม่ยืนยันจากการสำรวจสถาปัตยกรรม",
+        "source_url": "https://www.gplace.com/972712"
+      },
+      {
+        "title_th": "เกี้ยวอัญเชิญเทพเจ้า",
+        "detail_th": "จีเพลสระบุว่ามีเกี้ยวสำหรับใช้ในขบวนแห่ ต้องตรวจสอบหน้างานว่าเปิดให้ชมในวันเดินทางหรือไม่",
+        "source_url": "https://www.gplace.com/972712"
+      }
+    ],
+    "nearby": [
+      {
+        "name_th": "กำแพงเมืองเก่า",
+        "walk_minutes": null,
+        "source_url": "https://mapcarta.com/W816145901"
+      },
+      {
+        "name_th": "วัดหน้าเมือง",
+        "walk_minutes": null,
+        "source_url": "https://mapcarta.com/W816145901"
+      },
+      {
+        "name_th": "ศาลเจ้ากู่ใช่ตึ๋ง",
+        "walk_minutes": null,
+        "source_url": "https://mapcarta.com/W816145901"
+      },
+      {
+        "name_th": "วัดเสนานุชรังสรรค์",
+        "walk_minutes": null,
+        "source_url": "https://mapcarta.com/W816145901"
+      }
+    ],
+    "festival": {
+      "months_th": "พบหลักฐานเดือนตุลาคมเฉพาะปี 2567: วันที่ 2–11 ตุลาคม; ยังไม่ยืนยันกำหนดปี 2569",
+      "lunar_calendar_th": "เรื่องเล่าในจีเพลสระบุวันขึ้น 1–9 ค่ำ เดือน 9 ตามปฏิทินจีน สำหรับพิธีกินผักดั้งเดิม ข้อมูลยังไม่ยืนยันด้วยปฏิทินศาลเจ้าปัจจุบัน",
+      "activities_th": [
+        "ยกเสาโกเต้งแขวนตะเกียงเก้าดวง",
+        "อัญเชิญกิ๋วอ๋องไต่เต่และพระผู้ใหญ่ทั้งเก้า",
+        "ร่วมถือศีลกินผักและแต่งกายชุดขาว"
+      ],
+      "venue_th": "ศาลเจ้าพ่อกวนอู ซิ่นใช่ตึ๋ง หรือโรงพระตลาดใต้ เมืองเก่าตะกั่วป่า",
+      "source_urls": [
+        "https://mgronline.com/south/detail/9670000093105",
+        "https://wikicommunity.sac.or.th/community/1527",
+        "https://www.gplace.com/972712"
+      ]
+    },
+    "history": [
+      {
+        "claim_th": "เทศบาลระบุว่าศาลเจ้าเกิดจากศรัทธาของชาวจีนฮกเกี้ยนในตะกั่วป่า มีอายุนับร้อยปี และเป็นที่ยึดเหนี่ยวจิตใจผ่านความเชื่อในกวนอูและเจ้าแม่กวนอิม",
+        "status": "CONFIRMED",
+        "quote": "เกิดขึ้นจากความศรัทธาของชาวจีนเชื้อสายฮกเกี้ยน",
+        "source_name": "เทศบาลเมืองตะกั่วป่า",
+        "source_url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf",
+        "year_be": null,
+        "year_ce": null
+      },
+      {
+        "claim_th": "เทศบาลระบุศาลเจ้าแห่งนี้เป็นต้นกำเนิดเทศกาลกินผักตะกั่วป่า",
+        "status": "CONFIRMED",
+        "quote": "ต้นกําเนิดแห่งเทศกาลกินผักตะกั่วป่า",
+        "source_name": "เทศบาลเมืองตะกั่วป่า",
+        "source_url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf",
+        "year_be": null,
+        "year_ce": null
+      },
+      {
+        "claim_th": "เว็บจีเพลสเสนอเรื่องเล่าว่าเจ้าของโรงถลุงแร่ในชุมชนคลองปีชื่อหลิม บุน ตึก ก่อตั้งศาลกวนอู และเริ่มพิธีกินผักใน พ.ศ. 2386; ชื่อบุคคลสะกดไม่สม่ำเสมอและยังไม่มีหลักฐานปฐมภูมิยืนยัน",
+        "status": "UNVERIFIED",
+        "quote": "สมมุติฐานการเริ่มกินผัก",
+        "source_name": "จีเพลส",
+        "source_url": "https://www.gplace.com/972712",
+        "year_be": 2386,
+        "year_ce": 1843
+      },
+      {
+        "claim_th": "เรื่องเล่าในจีเพลสระบุว่าหลิม เอ๋ง เช่ง หรือเถ้าแก่พ่อแดงระดมทุนซื้อบ้านเพื่อย้ายศาลมาตั้งถาวรใน พ.ศ. 2445; ยังไม่ยืนยันปีสร้างตัวอาคาร",
+        "status": "UNVERIFIED",
+        "quote": "เมื่อ พ.ศ. 2445",
+        "source_name": "จีเพลส",
+        "source_url": "https://www.gplace.com/972712",
+        "year_be": 2445,
+        "year_ce": 1902
+      },
+      {
+        "claim_th": "จีเพลสจัดอาคารศาลในกลุ่มชิโน-โปรตุกีส และระบุว่ามีอาคารศาลเจ้าจีนอีกส่วนอยู่ฝั่งตรงข้ามถนน",
+        "status": "UNVERIFIED",
+        "quote": "อาคารสไตล์ชิโน-โปรตุกีส",
+        "source_name": "จีเพลส",
+        "source_url": "https://www.gplace.com/972712",
+        "year_be": null,
+        "year_ce": null
+      },
+      {
+        "claim_th": "ข่าววันที่ 2 ตุลาคม 2567 บันทึกพิธียกเสาโกเต้งที่โรงพระตลาดใต้เพื่อเริ่มเทศกาลถือศีลกินผัก",
+        "status": "CONFIRMED",
+        "quote": "พิธียกเสาโกเต้ง",
+        "source_name": "ผู้จัดการออนไลน์",
+        "source_url": "https://mgronline.com/south/detail/9670000093105",
+        "year_be": 2567,
+        "year_ce": 2024
+      }
+    ],
+    "eras": {
+      "then": {
+        "headline_th": "ศรัทธากวนอูในเมืองเหมือง: จุดตั้งต้นของโรงพระตลาดใต้",
+        "years_th": "พ.ศ. 2386 (เรื่องเล่า; ยังไม่ยืนยัน)",
+        "body_th": "เรื่องเล่าที่บันทึกโดย Gplace ระบุว่า ชาวจีนฮกเกี้ยนที่เข้ามาทำเหมืองแร่ในชุมชนคลองปีรวมตัวกันสร้างศาลกวนอู โดยมีเถ้าแก่หลิม บุน ตึกเกี่ยวข้องกับการก่อตั้ง และเริ่มพิธีกินผัก 9 วัน 9 คืนใน พ.ศ. 2386 แต่แหล่งเดียวกันสะกดชื่อบุคคลไม่สม่ำเสมอ และยังไม่พบหลักฐานปฐมภูมิ จึงควรอ่านเป็นตำนานกำเนิด ไม่ใช่ปีที่ยืนยันแล้ว\n\nฉากหลังของตะกั่วป่าในเวลานั้นคือเมืองชายฝั่งที่เติบโตจากเหมืองดีบุกและเครือข่ายพ่อค้าจีนฮกเกี้ยน ศาลจึงน่าจะทำหน้าที่ทั้งเป็นที่ประดิษฐานเทพผู้คุ้มครองชุมชนและเป็นศูนย์กลางพิธีกรรมของคนงานเหมืองกับพ่อค้า ข้อนี้สอดคล้องกับคำอธิบายของเทศบาลที่ระบุว่าศาลเกิดจากศรัทธาชาวจีนฮกเกี้ยนและเป็นต้นกำเนิดเทศกาลกินผักตะกั่วป่า แต่รายละเอียดปีและผู้สร้างยังไม่ถูกยืนยันในเอกสารวิชาการ.",
+        "status": "DISPUTED",
+        "sources": [
+          {
+            "name": "Gplace",
+            "url": "https://www.gplace.com/972712"
+          },
+          {
+            "name": "เทศบาลเมืองตะกั่วป่า",
+            "url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf"
+          },
+          {
+            "name": "ศูนย์มานุษยวิทยาสิรินธร: เมืองตะกั่วป่า",
+            "url": "https://wikicommunity.sac.or.th/community/951"
+          }
+        ]
+      },
+      "before": {
+        "headline_th": "จากศาลชุมชนสู่โรงพระตลาดใต้ในเมืองเก่า",
+        "years_th": "พ.ศ. 2445 (เรื่องเล่า; ยังไม่ยืนยัน) – ก่อน พ.ศ. 2567",
+        "body_th": "Gplace เล่าว่าศาลถูกย้ายจากชุมชนคลองปีไปตั้งถาวรที่บ้านแช่หลิมในตลาดใหญ่ และมีการระดมทุนซื้อบ้านใน พ.ศ. 2445 โดยหลิม เอ๋ง เช่ง หรือเถ้าแก่พ่อแดง อย่างไรก็ตาม ยังไม่พบหลักฐานยืนยันปีสร้างอาคารหรือการเปลี่ยนมือ จึงไม่ควรสรุปว่าปีดังกล่าวคือปีสร้างศาลปัจจุบัน\n\nหลักฐานที่พบอธิบายบทบาทของสถานที่ต่อเนื่องมากกว่าการเปลี่ยนหน้าที่: ศาลยังผูกกับพิธีกินผักของชุมชนตะกั่วป่า ซึ่งสืบทอดในหมู่ชาวไทยเชื้อสายจีนฝั่งอันดามัน และต่อมากลายเป็นส่วนหนึ่งของภูมิทัศน์เมืองเก่าตลาดใหญ่ ขณะเดียวกันยังไม่พบหลักฐานออนไลน์ที่ยืนยันการบูรณะครั้งใด การถูกทิ้งร้าง ผลกระทบโดยตรงจากสึนามิ พ.ศ. 2547 หรือการขึ้นทะเบียนเป็นโบราณสถานของศาลแห่งนี้.",
+        "status": "UNVERIFIED",
+        "sources": [
+          {
+            "name": "Gplace",
+            "url": "https://www.gplace.com/972712"
+          },
+          {
+            "name": "ศูนย์มานุษยวิทยาสิรินธร: เมืองตะกั่วป่า",
+            "url": "https://wikicommunity.sac.or.th/community/951"
+          },
+          {
+            "name": "ศูนย์มานุษยวิทยาสิรินธร: ตลาดใหญ่",
+            "url": "https://wikicommunity.sac.or.th/community/1527"
+          }
+        ]
+      },
+      "now": {
+        "headline_th": "ศาลที่ยังหายใจไปพร้อมเทศกาลกินผัก",
+        "years_th": "2569 / 2026",
+        "body_th": "หลักฐานข่าวล่าสุดที่พบยืนยันการใช้งานศาลในฐานะโรงพระตลาดใต้: วันที่ 2 ตุลาคม 2567 มีพิธียกเสาโกเต้งที่ศาลเจ้าเพื่อเริ่มเทศกาลถือศีลกินผัก การแขวนตะเกียง 9 ดวงและพิธีต่อเนื่องทำให้ศาลยังเป็นศูนย์กลางศรัทธาและกิจกรรมร่วมของชุมชน ไม่ใช่เพียงอาคารเก่าในย่านตลาด\n\nสำหรับปี 2569 ยังไม่มีแหล่งที่ยืนยันเวลาเปิด ผู้ดูแล ค่าเข้าชม สภาพอาคารล่าสุด หรือโครงการบูรณะเฉพาะศาล จึงควรติดต่อชุมชน/เทศบาลก่อนเดินทาง เท่าที่มีข้อมูล ศาลตั้งอยู่บริเวณถนนอุดมธาราตัดถนนศรีตะกั่วป่าในย่านตลาดใหญ่ และกิจกรรมที่ยืนยันได้คือเทศกาลถือศีลกินผักกับพิธียกเสาโกเต้ง.",
+        "status": "CONFIRMED",
+        "sources": [
+          {
+            "name": "ผู้จัดการออนไลน์",
+            "url": "https://mgronline.com/south/detail/9670000093105"
+          },
+          {
+            "name": "ศูนย์มานุษยวิทยาสิรินธร: ตลาดใหญ่",
+            "url": "https://wikicommunity.sac.or.th/community/1527"
+          }
+        ]
+      }
+    },
+    "timeline": [
+      {
+        "year_ce": 1843,
+        "year_be": 2386,
+        "date_th": null,
+        "title_th": "เรื่องเล่าการก่อตั้งศาลและเริ่มกินผัก",
+        "detail_th": "Gplace ระบุว่ามีการก่อตั้งศาลกวนอูและเริ่มพิธีกินผัก 9 วัน 9 คืนในชุมชนคลองปี แต่ยังไม่มีหลักฐานปฐมภูมิยืนยัน",
+        "status": "UNVERIFIED",
+        "source_url": "https://www.gplace.com/972712"
+      },
+      {
+        "year_ce": 1902,
+        "year_be": 2445,
+        "date_th": null,
+        "title_th": "เรื่องเล่าการย้ายมาตั้งถาวรที่ตลาดใหญ่",
+        "detail_th": "Gplace ระบุการระดมทุนซื้อบ้านเพื่อย้ายศาลมาตั้งในตลาดใหญ่ แต่ไม่ยืนยันว่าเป็นปีสร้างอาคารปัจจุบัน",
+        "status": "UNVERIFIED",
+        "source_url": "https://www.gplace.com/972712"
+      },
+      {
+        "year_ce": 2024,
+        "year_be": 2567,
+        "date_th": "2 ตุลาคม 2567",
+        "title_th": "ยกเสาโกเต้งที่โรงพระตลาดใต้",
+        "detail_th": "ข่าวรายงานพิธียกเสาโกเต้งเพื่อเริ่มเทศกาลถือศีลกินผักของชาวตะกั่วป่า",
+        "status": "CONFIRMED",
+        "source_url": "https://mgronline.com/south/detail/9670000093105"
+      }
+    ],
+    "news": [
+      {
+        "date": "2024-10-02",
+        "title_th": "ศาลเจ้าเก่าแก่ในพื้นที่ อ.ตะกั่วป่า จ.พังงา ประกอบพิธียกเสาโกเต้งแล้ว",
+        "summary_th": "รายงานพิธียกเสาโกเต้งที่ศาลเจ้าพ่อกวนอู ซิ่นใช่ตึ๋ง โรงพระตลาดใต้ เพื่อเริ่มเทศกาลถือศีลกินผัก",
+        "outlet": "ผู้จัดการออนไลน์",
+        "url": "https://mgronline.com/south/detail/9670000093105"
+      }
+    ],
+    "did_you_know": [
+      {
+        "fact_th": "เทศบาลเมืองตะกั่วป่าระบุว่าศาลแห่งนี้เป็นต้นกำเนิดเทศกาลกินผักตะกั่วป่า",
+        "status": "CONFIRMED",
+        "source_url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf"
+      },
+      {
+        "fact_th": "ชื่อที่ใช้เรียกศาลอีกชื่อหนึ่งคือ โรงพระตลาดใต้",
+        "status": "CONFIRMED",
+        "source_url": "https://mgronline.com/south/detail/9670000093105"
+      }
+    ],
+    "photos": {
+      "usable": [],
+      "needs_permission": [
+        {
+          "url": "https://1672travelbuddy.com/article_images/5a6723e400e164db90bf870d1e86029e.jpg",
+          "page_url": "https://1672travelbuddy.com/",
+          "caption_th": "ภาพศาลเจ้าพ่อกวนอูในเมืองเก่าตะกั่วป่า",
+          "credit": "1672 TravelBuddy",
+          "license_note_th": "ไม่ทราบสิทธิ์ ต้องขออนุญาตก่อนใช้"
+        }
+      ],
+      "broken": []
+    },
+    "seo": {
+      "keywords_th": [
+        "ศาลเจ้าพ่อกวนอู ตะกั่วป่า",
+        "ศาลเจ้าซิ่นไช่ตึ๋ง",
+        "ศาลเจ้าซิ่นใช่ตึ๋ง",
+        "โรงพระตลาดใต้",
+        "กินผักตะกั่วป่า",
+        "ศาลเจ้าเมืองเก่าตะกั่วป่า",
+        "ไหว้กวนอู พังงา",
+        "ซินใช่ตึ๋ง ตะกั่วป่า"
+      ],
+      "keywords_en": [
+        "Guan Yu Shrine Takua Pa",
+        "Sin Chai Tung Shrine",
+        "Sin Chai Tueng Shrine",
+        "Takua Pa vegetarian festival"
+      ]
+    },
+    "unknowns": [
+      "พิกัดใช้จุดสถานที่จากแมปคาร์ตาที่อ้างโอเพนสตรีตแมป ยังไม่ยืนยันว่าเป็นทางเข้าหรืออาคารส่วนใด จึงให้ความมั่นใจปานกลาง",
+      "ที่อยู่ในวันเดอร์ล็อกระบุตำบลบางไทร ต่างจากจีเพลสและฐานข้อมูลชุมชนของศูนย์มานุษยวิทยาสิรินธร จึงเลือกตำบลตะกั่วป่าตามแหล่งหลัง; ไม่พบเลขที่อาคาร",
+      "เวลาเปิด–ปิดและค่าเข้าชมเป็น null เพราะไม่พบประกาศที่ยืนยันได้",
+      "เบอร์โทรเป็น null: วันเดอร์ล็อกแสดง +66 82 652 9164 แต่ยังไม่พบแหล่งศาลเจ้าหรือหน่วยงานยืนยันว่าเป็นเบอร์ติดต่อปัจจุบัน",
+      "เฟซบุ๊กเป็น null: จีเพลสมีลิงก์ที่ตัดขาดหรือเสียหาย เปิดตรวจสอบเพจไม่ได้; ไม่พบเว็บไซต์และไลน์ทางการ",
+      "ปีสร้างและผู้สร้างที่ยืนยันได้ยังไม่พบ ปี 2386 และ 2445 เป็นเรื่องเล่าจากจีเพลส ไม่ควรใช้เป็นปีสร้างอาคารโดยตรง",
+      "ความเกี่ยวข้องกับโรงถลุงดีบุกพบเฉพาะเรื่องเล่า ยังยืนยันบทบาทต่อแรงงานเหมืองหรือเครือข่ายการค้าโดยตรงไม่ได้",
+      "ยังไม่พบเอกสารกรมศิลปากรหรือประกาศราชกิจจานุเบกษาที่ระบุการขึ้นทะเบียนโบราณสถานของศาลนี้; การกล่าวถึงการจดทะเบียนสังกัดมหาดไทยในจีเพลสไม่ใช่หลักฐานขึ้นทะเบียนโบราณสถาน",
+      "ไม่พบข้อมูลที่จอดรถ ทางลาด ความกว้างประตู ขั้นบันได หรือห้องน้ำสำหรับรถเข็น จึงไม่ประเมินความสะดวกสำหรับผู้สูงอายุ",
+      "ไม่พบเวลาที่แนะนำสำหรับการชมทั่วไปและระยะเวลาเยี่ยมชมที่มีหลักฐานรองรับ",
+      "ยังไม่มีระยะทางจากต้นทางถึงศาลเจ้า เส้นทางต่อรถ และเวลาเดินถึงสถานที่ใกล้เคียงที่ตรวจสอบได้; รายการใกล้เคียงมาจากแผนที่ ไม่ใช่การสำรวจทางเท้า",
+      "ยังไม่พบกำหนดเทศกาลปี 2569 ที่อ่านและยืนยันได้",
+      "ไม่พบลิงก์ไฟล์รูปภาพทางการของศาลเจ้าที่ตรวจสอบตัวภาพและที่มาได้ จึงเว้น photos เป็นรายการว่าง",
+      "คำค้น SEO เป็นข้อเสนอจากชื่อและเนื้อหาที่พบ ไม่ใช่ข้อมูลปริมาณการค้นหาจริง",
+      "ชื่ออังกฤษใช้ตามโจทย์ และมีชื่อสะกดต่างกันในจีเพลสกับแมปคาร์ตา ยังไม่พบชื่ออังกฤษที่ประกาศโดยศาลเจ้า",
+      "ปี พ.ศ. ที่ก่อตั้งศาลและปีสร้างอาคารปัจจุบันยังไม่มีหลักฐานปฐมภูมิ",
+      "ชื่อผู้ก่อตั้งและผู้ดูแลในแต่ละยุคยังไม่ยืนยัน",
+      "ไม่พบหลักฐานยืนยันการบูรณะ การถูกทิ้งร้าง หรือการใช้ทำหน้าที่อื่น",
+      "ไม่พบหลักฐานยืนยันว่าศาลได้รับผลกระทบโดยตรงจากสึนามิ พ.ศ. 2547",
+      "ไม่พบหลักฐานว่าศาลขึ้นทะเบียนโบราณสถาน",
+      "ยังไม่ยืนยันเวลาเปิด สภาพอาคาร ผู้ดูแล และกำหนดเทศกาลปี 2569"
+    ],
+    "sources": [
+      {
+        "name": "เทศบาลเมืองตะกั่วป่า: แผนการดำเนินงานด้านสิ่งแวดล้อม หน้าเอกสาร 14",
+        "url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf",
+        "type": "official",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "ศูนย์มานุษยวิทยาสิรินธร: ฐานข้อมูลชุมชน ตลาดใหญ่",
+        "url": "https://wikicommunity.sac.or.th/community/1527",
+        "type": "academic",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "ผู้จัดการออนไลน์: พิธียกเสาโกเต้ง 2 ตุลาคม 2567",
+        "url": "https://mgronline.com/south/detail/9670000093105",
+        "type": "news",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "แมปคาร์ตา: ศาลเจ้าซิ่นไช่ตึ๋ง",
+        "url": "https://mapcarta.com/W816145901",
+        "type": "map",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "จีเพลส: ศาลเจ้าพ่อกวนอู ซินใช่ตึ๋ง",
+        "url": "https://www.gplace.com/972712",
+        "type": "blog",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "วันเดอร์ล็อก: ศาลเจ้าซิ่นไช่ตึ๋ง",
+        "url": "https://wanderlog.com/place/details/10219897/sin-chai-tueng-shrine",
+        "type": "review",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "โกโกทาวน์: รถสาย 436 ภูเก็ต–ตะกั่วป่า",
+        "url": "https://gogo.town/route/phuket-takuapa-bus-436/",
+        "type": "blog",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "เทศบาลเมืองตะกั่วป่า",
+        "url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf",
+        "type": "official",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "ศูนย์มานุษยวิทยาสิรินธร: เมืองตะกั่วป่า",
+        "url": "https://wikicommunity.sac.or.th/community/951",
+        "type": "academic",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "ศูนย์มานุษยวิทยาสิรินธร: ตลาดใหญ่",
+        "url": "https://wikicommunity.sac.or.th/community/1527",
+        "type": "academic",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "ผู้จัดการออนไลน์",
+        "url": "https://mgronline.com/south/detail/9670000093105",
+        "type": "news",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "Gplace",
+        "url": "https://www.gplace.com/972712",
+        "type": "blog",
+        "accessed": "2026-09-07"
+      },
+      {
+        "name": "1672 TravelBuddy",
+        "url": "https://1672travelbuddy.com/",
+        "type": "blog",
+        "accessed": "2026-09-07"
+      }
+    ],
+    "counts": {
+      "confirmed": 4,
+      "unverified": 5,
+      "disputed": 0
+    }
+  }
+]
