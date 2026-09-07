@@ -17,6 +17,20 @@ sys.stdout.reconfigure(encoding='utf-8')
 AGY = r"C:\Users\siwat\AppData\Local\agy\bin\agy.cmd"
 if not os.path.exists(AGY):
     AGY = shutil.which("agy") or "agy"
+CODEX = shutil.which("codex") or shutil.which("codex.cmd") or "codex"
+# agy and codex hit their quotas at different times, so either can drive this.
+RUNNER = os.environ.get("TRANSLATE_RUNNER", "codex")
+
+
+def cmd(prompt):
+    if RUNNER == "codex":
+        argv = [CODEX, "exec", "-m", os.environ.get("TRANSLATE_MODEL", "gpt-5.6-luna"),
+                "--skip-git-repo-check", "--dangerously-bypass-approvals-and-sandbox", "-"]
+        return argv, prompt
+    argv = [AGY, "--dangerously-skip-permissions", "--model", "gemini-3.1-pro-high", "-p", prompt]
+    return argv, None
+
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 I18N = os.path.join(HERE, "data", "i18n", "en")
 OUT = os.path.join(I18N, "missing-parts")
@@ -70,15 +84,14 @@ def run(i, keys):
     prompt = (PROMPT.replace("{HERE}", HERE).replace("{N}", str(len(keys)))
               .replace("{LIST}", listing).replace("{SLUG}", slug))
     for attempt in range(3):
-        p = subprocess.run([AGY, "--dangerously-skip-permissions", "--model", "gemini-3.1-pro-high",
-                            "-p", prompt],
-                           cwd=HERE, capture_output=True, text=True, encoding="utf-8",
-                           errors="replace", timeout=3000)
+        argv, stdin = cmd(prompt)
+        p = subprocess.run(argv, input=stdin, cwd=HERE, capture_output=True, text=True,
+                           encoding="utf-8", errors="replace", timeout=3000)
         log = (p.stdout or "") + "\n--ERR--\n" + (p.stderr or "")
         open(os.path.join(OUT, slug + ".log"), "w", encoding="utf-8").write(log)
         if os.path.exists(out) and os.path.getsize(out) > 200:
             return slug, "OK"
-        if "quota reached" in log:
+        if "quota reached" in log or "usage limit" in log:
             time.sleep(900)
             continue
         break

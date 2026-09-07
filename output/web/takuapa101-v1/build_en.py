@@ -187,6 +187,14 @@ def translate_html(html, mem, missing=None):
             if not stripped or not re.search(r'[฀-๿]', stripped):
                 continue
             hit = mem.get(stripped)
+            if not hit:
+                # Breadcrumbs render as "/ ชื่อหมวด" in one text node, so the
+                # separator has to come off before the label can match.
+                bare = stripped.lstrip('/·|- ').rstrip('/·|- ').strip()
+                alt = mem.get(bare)
+                if alt:
+                    pieces[i] = piece.replace(bare, alt)
+                    continue
             if hit:
                 pieces[i] = piece.replace(stripped, hit)
             elif missing is not None:

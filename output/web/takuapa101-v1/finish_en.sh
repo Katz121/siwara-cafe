@@ -20,7 +20,7 @@ for round in 1 2 3 4 5 6 7 8; do
 
   # Fresh batches from the current gap, not the gap this run started with.
   rm -rf data/i18n/en/missing-parts-round
-  python run_en_missing.py >> "$LOG" 2>&1
+  TRANSLATE_RUNNER=codex python run_en_missing.py >> "$LOG" 2>&1
 
   rm -rf site/en
   python build_site.py >> "$LOG" 2>&1

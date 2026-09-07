@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <title>Peranakan portal and iron bridge mark</title>
+  <path fill="#a3492f" d="M9 54h46v4H9zM14 50V25h36v25H14Z"/>
+  <path fill="#203f39" d="M20 50V32h24v18H20Z"/>
+  <path fill="#203f39" d="M24 50V36h16v14H24Z"/>
+  <path fill="#e8a931" d="m32 9 4.2 8.6 9.5 1.4-6.9 6.7 1.6 9.5-8.4-4.5-8.4 4.5 1.6-9.5-6.9-6.7 9.5-1.4L32 9Z"/>
+  <path stroke="#203f39" stroke-width="2.8" stroke-linecap="round" d="M9 43h46M9 49h46M15 54l8-11 9 11 9-11 8 11"/>
+</svg>

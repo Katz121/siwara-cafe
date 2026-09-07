@@ -1,0 +1,393 @@
+เสร็จแล้ว เขียนไฟล์ [miss-71faa349c0.json](D:/Siwaracafeweb/output/web/takuapa101-v1/data/i18n/en/missing-parts/miss-71faa349c0.json)
+
+ตรวจสอบด้วย `json.load` แล้ว:
+
+- คีย์ครบ 45 รายการ
+- UTF-8 ถูกต้อง
+- ไม่พบ em-dash หรือ en-dash
+
+--ERR--
+OpenAI Codex v0.153.4
+--------
+workdir: D:\Siwaracafeweb\output\web\takuapa101-v1
+model: gpt-5.6-luna
+provider: openai
+approval: never
+sandbox: danger-full-access
+reasoning effort: low
+reasoning summaries: none
+session id: 01a07b1d-e323-7342-abe8-410a6751bb03
+--------
+user
+โฟลเดอร์งาน D:\Siwaracafeweb\output\web\takuapa101-v1
+อ่าน `briefs/2026-09-07_english-spec.md` หัวข้อ "กฎการแปล" ให้ครบก่อนลงมือ
+
+แปลข้อความไทยต่อไปนี้เป็นภาษาอังกฤษ · ทั้งหมด 45 รายการ
+ข้อความเหล่านี้มาจากเว็บไกด์เมืองเก่าตะกั่วป่า มีทั้งป้ายสถานะ ปุ่ม หัวข้อ และเนื้อหา
+
+- อุโบสถและเจดีย์ยังเป็นโบราณสถานที่ใช้งานอยู่ ภายในวัดถูกบรรยายว่าสะอาด ร่มรื่น และเหมาะแก่การปฏิบัติศาสนกิจ วัดยังทำหน้าที่เป็นสถานปฏิบัติธรรมประจำจังหวัดพังงาแห่งที่ 1 จึงเป็นสถานที่ที่คนมาได้ทั้งไหว้พระ ชมงานปูนปั้น และเข้าปฏิบัติธรรม
+- กิจกรรมที่มีแหล่งอ้างอิงระบุ ได้แก่ ปฏิบัติธรรมเฉลิมพระเกียรติ สวดมนต์ข้ามปี บวชชีพราหมณ์เพื่อถวายเป็นพระราชกุศล และบวชสามเณรภาคฤดูร้อน อย่างไรก็ตาม ยังไม่พบประกาศปี 2569 ที่ยืนยันตารางกิจกรรม เวลาเปิด-ปิด โครงการบูรณะใหม่ หรือรายละเอียดสิ่งอำนวยความสะดวก จึงควรโทรสอบถามวัดก่อนเดินทาง
+- พ.ศ. 2305
+- พ.ศ. 2479
+- พ.ศ. 2483
+- พ.ศ. 2545
+- อุโบสถและเจดีย์เป็นโบราณสถานที่ยังใช้งานอยู่ และวัดเป็นสถานปฏิบัติธรรมประจำจังหวัดพังงาแห่งที่ 1 กรมศิลปากรประกาศขึ้นทะเบียนโบราณสถานและกำหนดเขตที่ดินในราชกิจจานุเบกษาเมื่อ 18 ธันวาคม พ.ศ. 2539
+- ชมอาคารก่ออิฐถือปูน หน้าบันและซุ้มประตูหน้าต่างประดับปูนปั้น รวมถึงภาพพระพุทธรูปและลวดลายพันธุ์พฤกษา เป็นหนึ่งในโบราณสถานสำคัญภายในวัดและยังอยู่ในวัดที่มีการใช้งาน วัดตั้งอยู่ริมฝั่งคลองตะกั่วป่าด้านตะวันตก โดยคลองอยู่ทางทิศตะวันออกของวัด
+- Mapcarta (ข้อมูลจาก OpenStreetMap)
+- ไทยแลนด์ เยลโล่เพจเจส
+- สำนักงานพระพุทธศาสนาแห่งชาติ
+- วัดนิกรวราราม (วัดย่านยาว) · ตะกั่วป่า 101
+- [{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "หน้าแรก", "item": "https://takuapa101.pages.dev/"}, {"@type": "ListItem", "position": 2, "name": "วัดนิกรวราราม (วัดย่านยาว)", "item": "https://takuapa101.pages.dev/places/wat-nikorn/"}]}, {"@context": "https://schema.org", "@type": "TouristAttraction", "name": "วัดนิกรวราราม (วัดย่านยาว)", "url": "https://takuapa101.pages.dev/places/wat-nikorn/", "image": "https://takuapa101.pages.dev/assets/wat-nikorn.webp", "description": "เอกสารเชื่อมวัดกับชุมชนและเหตุการณ์สึนามิ พ.ศ. 2547", "address": {"@type": "PostalAddress", "streetAddress": "บ้านย่านยาว ถนนเพชรเกษม", "addressLocality": "ตะกั่วป่า", "addressRegion": "พังงา", "addressCountry": "TH"}, "geo": {"@type": "GeoCoordinates", "latitude": 8.8691760396, "longitude": 98.348042969}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "ควรแต่งกายอย่างไร", "acceptedAnswer": {"@type": "Answer", "text": "ควรแต่งกายสุภาพเมื่อเข้าสู่ศาสนสถาน"}}, {"@type": "Question", "name": "สถานที่นี้มีประวัติความเป็นมาอย่างไร", "acceptedAnswer": {"@type": "Answer", "text": "วัดสร้างเมื่อ พ.ศ. 2336 โดยคุณตาแก้วและคุณตาราม วัดได้รับพระราชทานวิสุงคามสีมาใน พ.ศ. 2385"}}, {"@type": "Question", "name": "มีจุดเด่นอะไรให้ชม", "acceptedAnswer": {"@type": "Answer", "text": "จุดเด่นที่ยืนยันได้คือประวัติการก่อตั้งใน พ.ศ. 2336 และการได้รับวิสุงคามสีมาใน พ.ศ. 2385 วัดเคยใช้รวบรวมศพผู้ประสบภัยเพื่อรอการตรวจพิสูจน์เอกลักษณ์บุคคล"}}]}]
+- พ.ศ. 2336·2385 / ค.ศ. 1793·1842
+- วัดนิกรวราราม หรือวัดย่านยาว เริ่มสร้างใน พ.ศ. 2336 โดยคุณตาแก้วและคุณตาราม หลักฐานที่พบยืนยันปีและชื่อผู้ริเริ่ม แต่ยังไม่บอกเหตุผลเชิงรายละเอียดว่าตั้งวัดขึ้นเพื่อภารกิจใดโดยเฉพาะ จึงควรอ่านวัดนี้ในฐานะศาสนสถานของชุมชนท้องถิ่นที่กำลังก่อรูปในลุ่มตะกั่วป่า มากกว่าจะผูกเข้ากับเรื่องเล่าที่ไม่มีหลักฐานตรง
+- เมืองตะกั่วป่าในภาพกว้างมีประวัติเป็นเมืองท่าและแหล่งแร่ดีบุก มีการติดต่อค้าขายทางทะเลและผู้คนหลายกลุ่ม แต่ยังไม่พบหลักฐานเฉพาะวัดที่ยืนยันบทบาทของวัดนิกรวรารามต่อเหมืองดีบุก การค้าทางทะเล คนจีนฮกเกี้ยน หรือระบบเจ้าเมือง จึงไม่สรุปเกินแหล่งข้อมูล
+- พ.ศ. 2385·2565 / ค.ศ. 1842·2022
+- วัดได้รับพระราชทานวิสุงคามสีมาใน พ.ศ. 2385 ซึ่งเป็นหลักฐานสำคัญว่าศาสนสถานได้รับการรับรองพื้นที่ประกอบสังฆกรรมตามแบบแผนของคณะสงฆ์ในเวลานั้น อย่างไรก็ตาม ยังไม่พบเอกสารที่ระบุการบูรณะครั้งใหญ่ การเปลี่ยนมือ หรือช่วงเวลาร้าง
+- หลังสึนามิวันที่ 26 ธันวาคม 2547 วัดถูกใช้เป็นสถานที่รวบรวมศพผู้ประสบภัยเพื่อรอการตรวจพิสูจน์เอกลักษณ์บุคคล บทบาทชั่วคราวนี้ทำให้วัดย่านยาวเป็นส่วนหนึ่งของประวัติศาสตร์การรับมือภัยพิบัติของตะกั่วป่า ต่อมาในวันที่ 30 ตุลาคม 2565 สำนักงานพระพุทธศาสนาจังหวัดพังงาร่วมมอบเอกสารโฉนดที่ดินให้เจ้าอาวาส เป็นหลักฐานการจัดการกรรมสิทธิ์ที่ดินในยุคปัจจุบัน
+- สำนักงานพระพุทธศาสนาจังหวัดพังงา · มอบเอกสารโฉนดที่ดิน
+- สถาบันนิติวิทยาศาสตร์ · บันทึกเหตุการณ์ 28 ธันวาคม 2547
+- หลักฐานล่าสุดที่ค้นพบยืนยันว่า วัดยังใช้งานอยู่ มีพระครูนิกรธรรมโสภิตเป็นเจ้าอาวาส และมีพระจำพรรษา โดยฐานข้อมูลวัดระบุการจัดกฐินสามัคคีใน พ.ศ. 2567 และ 2568 ส่วนข่าวราชการ/ข่าวท้องถิ่นยืนยันการมีส่วนร่วมของวัดในกิจกรรมระดับอำเภอและจังหวัด
+- ในช่วงไม่กี่ปีที่ผ่านมา วัดเป็นทั้งพื้นที่ประกอบศาสนกิจและพื้นที่สาธารณะ: ปี 2567 ใช้เป็นศูนย์รับบริจาคช่วยผู้ประสบอุทกภัยภาคเหนือ และมีการตรวจเยี่ยมโครงการวัด ประชา รัฐ สร้างสุขในฐานะวัดต้นแบบระดับภาคใต้ ทั้งนี้ยังไม่พบข้อมูลที่ยืนยันเวลาเปิด-ปิดสำหรับนักท่องเที่ยว สภาพอาคารโดยละเอียด หรือโครงการบูรณะเฉพาะวัดในปี 2569
+- DMC · โครงการกฐินสามัคคีทั่วไทย 10,000 วัด
+- สยามรัฐ · ศูนย์รับบริจาคช่วยผู้ประสบภัยน้ำท่วม
+- Ride Explorer · ตรวจเยี่ยมวัดต้นแบบ
+- TOPNEWS · สืบสานสงกรานต์เมืองเก่าตะกั่วป่า
+- พ.ศ. 2336
+- พ.ศ. 2385
+- 26 ธันวาคม 2547
+- 30 ตุลาคม 2565
+- 22 กันยายน 2567
+- 2024-09-22 · สยามรัฐ
+- 2022-10-30 · สำนักงานพระพุทธศาสนาจังหวัดพังงา
+- วัดสร้างเมื่อ พ.ศ. 2336 โดยคุณตาแก้วและคุณตาราม วัดได้รับพระราชทานวิสุงคามสีมาใน พ.ศ. 2385
+- จุดเด่นที่ยืนยันได้คือประวัติการก่อตั้งใน พ.ศ. 2336 และการได้รับวิสุงคามสีมาใน พ.ศ. 2385 วัดเคยใช้รวบรวมศพผู้ประสบภัยเพื่อรอการตรวจพิสูจน์เอกลักษณ์บุคคล
+- วัดนิกรวราราม · ClassStart Books
+- เลาะกินตลาดริมน้ำตะกั่วป่า ถนนคนเดินย่านยาว · YouTube
+- สถาบันนิติวิทยาศาสตร์ · บันทึกเหตุการณ์สึนามิ
+- DMC · วัดนิกรวราราม
+- สยามรัฐ · ศูนย์รับบริจาคช่วยน้ำท่วม
+- TOPNEWS · สงกรานต์เมืองเก่าตะกั่วป่า
+- Ride Explorer · วัดต้นแบบระดับภาคใต้
+- แหล่งข้อมูลบางแห่งระบุตำบลไม่ตรงกัน จึงยึดพิกัดและรายการทางการจาก สผ./สำนักงานพระพุทธศาสนาจังหวัดพังงาเป็นหลัก
+- วัดปทุมธารา (วัดหน้าเมือง) · ตะกั่วป่า 101
+
+เขียนไฟล์ `data/i18n/en/missing-parts/miss-71faa349c0.json` เป็น JSON object
+คีย์คือข้อความไทยเดิม **เป๊ะตัวต่อตัว** ค่าคือคำแปลอังกฤษ
+```
+{{"ยังไม่ยืนยัน": "Not verified", "ยืนยันแล้ว": "Verified"}}
+```
+
+กฎ:
+- คีย์ต้องเหมือนต้นฉบับทุกตัวอักษร รวมช่องว่างและลูกศร ↗ ห้ามแก้ไข
+- ค่าที่แปลให้คงลูกศร ↗ หรือ · ไว้ถ้าต้นฉบับมี
+- ป้ายสถานะให้สั้น กระชับ เช่น "ยังไม่ยืนยัน" -> "Not verified"
+- ห้ามเพิ่มข้อเท็จจริงที่ต้นฉบับไม่มี · คำกำกับความไม่แน่นอนต้องอยู่ครบ
+- ชื่อวัด ศาลเจ้า ถนน ให้ทับศัพท์ เช่น Wat Kongkha Phimuk, Thanon Si Takua Pa
+- ชื่อหน่วยงานราชการให้เขียนเป็น "ชื่อไทย (English name)"
+- ปีใช้ ค.ศ. พร้อมวงเล็บ พ.ศ. ถ้าต้นฉบับระบุ พ.ศ.
+- ห้าม em-dash และ en-dash · ห้ามคำโฆษณาลอย ๆ
+
+เขียนลง path จริง ห้ามลง scratch · **UTF-8 เท่านั้น**
+เสร็จแล้ว json.load ยืนยันว่าคีย์ครบ 45 รายการ แล้วรายงาน
+
+codex
+ผมจะอ่านหัวข้อ “กฎการแปล” ใน brief ให้ครบก่อน จากนั้นสร้างไฟล์ JSON UTF-8 ตามคีย์ต้นฉบับแบบตรงตัว และตรวจด้วย `json.load` ว่าครบ 45 รายการครับ
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$p='"'briefs/2026-09-07_english-spec.md'; "'$lines=Get-Content -LiteralPath $p; $start=($lines | Select-String -Pattern '"'กฎการแปล' -SimpleMatch).LineNumber; "'$lines[($start-1)..($lines.Length-1)]' in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 303ms:
+à¸•à¸£à¸§à¸ˆà¸§à¹ˆà¸²: à¹„à¸¡à¹ˆà¸¡à¸µ console error Â· à¹„à¸¡à¹ˆà¸¡à¸µà¸‚à¹‰à¸­à¸„à¸§à¸²à¸¡à¹„à¸—à¸¢à¸«à¸¥à¸‡à¹ƒà¸™à¸«à¸™à¹‰à¸²à¸­à¸±à¸‡à¸à¸¤à¸© Â· à¸›à¸¸à¹ˆà¸¡à¸ªà¸¥à¸±à¸šà¸ à¸²à¸©à¸²à¹„à¸›à¸«à¸™à¹‰à¸²à¸„à¸¹à¹ˆà¸à¸±à¸™à¸–à¸¹à¸à¸•à¹‰à¸­à¸‡
+# à¸•à¸°à¸à¸±à¹ˆà¸§à¸›à¹ˆà¸² 101 Â· à¹€à¸§à¸­à¸£à¹Œà¸Šà¸±à¸™à¸ à¸²à¸©à¸²à¸­à¸±à¸‡à¸à¸¤à¸©
+
+à¹‚à¸Ÿà¸¥à¹€à¸”à¸­à¸£à¹Œà¸‡à¸²à¸™ `D:\Siwaracafeweb\output\web\takuapa101-v1`
+static site generator à¸ à¸²à¸©à¸² Python vanilla Â· `build_site.py` + `design.py` + `stories.py` + `seo.py`
+à¹‚à¸”à¹€à¸¡à¸™à¸ˆà¸£à¸´à¸‡ `https://takuapa101.com` Â· à¸•à¸­à¸™à¸™à¸µà¹‰ preview à¸­à¸¢à¸¹à¹ˆà¸—à¸µà¹ˆ `https://takuapa101.pages.dev`
+
+## à¸—à¸³à¹„à¸¡à¸•à¹‰à¸­à¸‡à¸¡à¸µ
+à¹€à¸‚à¸²à¸«à¸¥à¸±à¸à¸­à¸¢à¸¹à¹ˆà¸«à¹ˆà¸²à¸‡à¸•à¸°à¸à¸±à¹ˆà¸§à¸›à¹ˆà¸² 30 à¸à¸¡. à¸¡à¸µà¸™à¸±à¸à¸—à¹ˆà¸­à¸‡à¹€à¸—à¸µà¹ˆà¸¢à¸§à¸¢à¸¸à¹‚à¸£à¸›à¸—à¸±à¹‰à¸‡à¸›à¸µ Â· à¸„à¸³à¸„à¹‰à¸™ `Takua Pa old town`,
+`things to do Takua Pa`, `Takua Pa Sunday market` à¹à¸—à¸šà¹„à¸¡à¹ˆà¸¡à¸µà¹€à¸§à¹‡à¸šà¸—à¸µà¹ˆà¸•à¸­à¸šà¹„à¸”à¹‰à¸ˆà¸£à¸´à¸‡
+à¸™à¸µà¹ˆà¸„à¸·à¸­à¸•à¸¥à¸²à¸”à¸—à¸µà¹ˆà¸§à¹ˆà¸²à¸‡à¸—à¸µà¹ˆà¸ªà¸¸à¸”à¸‚à¸­à¸‡à¹€à¸§à¹‡à¸šà¸™à¸µà¹‰
+
+## à¹‚à¸„à¸£à¸‡à¸—à¸µà¹ˆà¸•à¹‰à¸­à¸‡à¹„à¸”à¹‰
+- à¹„à¸—à¸¢à¸­à¸¢à¸¹à¹ˆà¸—à¸µà¹ˆà¸£à¸²à¸ `/` à¹€à¸«à¸¡à¸·à¸­à¸™à¹€à¸”à¸´à¸¡ Â· à¸­à¸±à¸‡à¸à¸¤à¸©à¸­à¸¢à¸¹à¹ˆà¹ƒà¸•à¹‰ `/en/` (à¹€à¸Šà¹ˆà¸™ `/en/places/tao-ming/`)
+- à¸—à¸¸à¸à¸«à¸™à¹‰à¸²à¸¡à¸µ `<link rel="alternate" hreflang="th">`, `hreflang="en"`, `hreflang="x-default"` à¸Šà¸µà¹‰à¸«à¸™à¹‰à¸²à¹„à¸—à¸¢
+- à¸«à¸™à¹‰à¸²à¸­à¸±à¸‡à¸à¸¤à¸© `<html lang="en">` Â· canonical à¸Šà¸µà¹‰à¸•à¸±à¸§à¹€à¸­à¸‡ Â· sitemap à¸£à¸§à¸¡à¸—à¸±à¹‰à¸‡à¸ªà¸­à¸‡à¸ à¸²à¸©à¸²
+- à¸›à¸¸à¹ˆà¸¡à¸ªà¸¥à¸±à¸šà¸ à¸²à¸©à¸²à¸šà¸™à¸«à¸±à¸§à¹€à¸§à¹‡à¸š (TH / EN) à¹„à¸›à¸«à¸™à¹‰à¸²à¸„à¸¹à¹ˆà¸à¸±à¸™à¹€à¸ªà¸¡à¸­ à¹„à¸¡à¹ˆà¹ƒà¸Šà¹ˆà¸à¸¥à¸±à¸šà¸«à¸™à¹‰à¸²à¹à¸£à¸
+- à¸–à¹‰à¸²à¸«à¸™à¹‰à¸²à¹„à¸«à¸™à¸¢à¸±à¸‡à¹„à¸¡à¹ˆà¸¡à¸µà¸„à¸³à¹à¸›à¸¥ **à¸«à¹‰à¸²à¸¡à¸ªà¸£à¹‰à¸²à¸‡à¸«à¸™à¹‰à¸²à¸­à¸±à¸‡à¸à¸¤à¸©à¹€à¸›à¸¥à¹ˆà¸²** à¹ƒà¸«à¹‰à¸‚à¹‰à¸²à¸¡à¹„à¸›à¹€à¸¥à¸¢ à¹„à¸¡à¹ˆà¸‡à¸±à¹‰à¸™ Google à¹€à¸ˆà¸­à¸«à¸™à¹‰à¸²à¹‚à¸«à¸¥ à¹†
+
+## à¸„à¸³à¹à¸›à¸¥
+à¹€à¸à¹‡à¸šà¹ƒà¸™ `data/i18n/en/` à¹à¸¢à¸à¹„à¸Ÿà¸¥à¹Œ:
+- `ui.json` â€” à¹€à¸¡à¸™à¸¹ à¸›à¸¸à¹ˆà¸¡ à¸«à¸±à¸§à¸‚à¹‰à¸­ section à¸›à¹‰à¸²à¸¢à¸ªà¸–à¸²à¸™à¸° à¸‚à¹‰à¸­à¸„à¸§à¸²à¸¡à¹ƒà¸™à¸•à¸±à¸§à¸à¸£à¸­à¸‡ à¸¯à¸¥à¸¯ (à¸”à¸¶à¸‡à¸ªà¸•à¸£à¸´à¸‡à¸ˆà¸²à¸ design.py, build_site.py, stories.py, trip-page.js, map à¹ƒà¸™ design.js, search.js)
+- `places.json` â€” 27 à¸ªà¸–à¸²à¸™à¸—à¸µà¹ˆ/à¸›à¸£à¸°à¹€à¸žà¸“à¸µ: `name_en`, `lead`, `eras.then/before/now` (headline + body), `highlights`, `getting_there`, `did_you_know`, `visit` labels
+- `stories.json` â€” 5 à¸šà¸—à¸„à¸§à¸²à¸¡: title, dek, lede, sections (heading + paragraphs), pull_quotes, evidence_box
+- `shops.json` â€” à¸„à¸³à¸­à¸˜à¸´à¸šà¸²à¸¢à¸£à¹‰à¸²à¸™ 49 à¸£à¹‰à¸²à¸™ (one_liner) à¹à¸¥à¸°à¸Šà¸·à¹ˆà¸­à¸«à¸¡à¸§à¸”
+
+## à¸à¸Žà¸à¸²à¸£à¹à¸›à¸¥
+1. **à¹à¸›à¸¥à¹€à¸žà¸·à¹ˆà¸­à¸„à¸™à¸­à¹ˆà¸²à¸™à¸ˆà¸£à¸´à¸‡ à¹„à¸¡à¹ˆà¹ƒà¸Šà¹ˆà¹à¸›à¸¥à¸•à¸£à¸‡à¸•à¸±à¸§** Â· à¸Šà¸·à¹ˆà¸­à¹€à¸‰à¸žà¸²à¸°à¹ƒà¸«à¹‰à¸—à¸±à¸šà¸¨à¸±à¸žà¸—à¹Œà¹à¸¥à¹‰à¸§à¸§à¸‡à¹€à¸¥à¹‡à¸šà¸„à¸³à¸­à¸˜à¸´à¸šà¸²à¸¢ à¹€à¸Šà¹ˆà¸™
+   `Wat Boromthat Khiri Khet (the town's relic temple)` Â· `Tao Ming School (the town's first Chinese school)`
+2. à¸Šà¸·à¹ˆà¸­à¸ªà¸–à¸²à¸™à¸—à¸µà¹ˆà¹ƒà¸Šà¹‰à¸£à¸°à¸šà¸šà¸—à¸±à¸šà¸¨à¸±à¸žà¸—à¹Œà¹€à¸”à¸µà¸¢à¸§à¸à¸±à¸™à¸—à¸±à¹‰à¸‡à¹€à¸§à¹‡à¸š Â· à¸—à¸³ `data/i18n/romanisation.json` à¹€à¸›à¹‡à¸™à¸•à¸²à¸£à¸²à¸‡à¸à¸¥à¸²à¸‡
+3. **à¸«à¹‰à¸²à¸¡à¹€à¸žà¸´à¹ˆà¸¡à¸‚à¹‰à¸­à¹€à¸—à¹‡à¸ˆà¸ˆà¸£à¸´à¸‡à¸—à¸µà¹ˆà¹„à¸¡à¹ˆà¸¡à¸µà¹ƒà¸™à¸•à¹‰à¸™à¸‰à¸šà¸±à¸šà¹„à¸—à¸¢** à¹à¸¥à¸°à¸«à¹‰à¸²à¸¡à¸•à¸±à¸”à¸„à¸³à¸à¸³à¸à¸±à¸šà¸„à¸§à¸²à¸¡à¹„à¸¡à¹ˆà¹à¸™à¹ˆà¸™à¸­à¸™à¸—à¸´à¹‰à¸‡
+   `à¸¢à¸±à¸‡à¹„à¸¡à¹ˆà¸¢à¸·à¸™à¸¢à¸±à¸™` à¸•à¹‰à¸­à¸‡à¸à¸¥à¸²à¸¢à¹€à¸›à¹‡à¸™ `not verified` à¹„à¸¡à¹ˆà¹ƒà¸Šà¹ˆà¸«à¸²à¸¢à¹„à¸›
+   `à¸ªà¸±à¸™à¸™à¸´à¸©à¸à¸²à¸™` à¹€à¸›à¹‡à¸™ `suggested, not settled`
+4. à¸­à¸˜à¸´à¸šà¸²à¸¢à¸šà¸£à¸´à¸šà¸—à¸—à¸µà¹ˆà¸„à¸™à¸•à¹ˆà¸²à¸‡à¸Šà¸²à¸•à¸´à¹„à¸¡à¹ˆà¸£à¸¹à¹‰à¹€à¸žà¸´à¹ˆà¸¡à¹„à¸”à¹‰ **à¹€à¸‰à¸žà¸²à¸°à¸—à¸µà¹ˆà¹€à¸›à¹‡à¸™à¸„à¸§à¸²à¸¡à¸£à¸¹à¹‰à¸—à¸±à¹ˆà¸§à¹„à¸›** à¹€à¸Šà¹ˆà¸™ à¸šà¸­à¸à¸§à¹ˆà¸² Loy Krathong à¸„à¸·à¸­
+   à¹€à¸—à¸¨à¸à¸²à¸¥à¸¥à¸­à¸¢à¸à¸£à¸°à¸—à¸‡à¹€à¸”à¸·à¸­à¸™à¸žà¸¤à¸¨à¸ˆà¸´à¸à¸²à¸¢à¸™ Â· à¹à¸•à¹ˆà¸«à¹‰à¸²à¸¡à¹€à¸žà¸´à¹ˆà¸¡à¸‚à¹‰à¸­à¸¡à¸¹à¸¥à¹€à¸‰à¸žà¸²à¸°à¸‚à¸­à¸‡à¸•à¸°à¸à¸±à¹ˆà¸§à¸›à¹ˆà¸²à¸—à¸µà¹ˆà¸•à¹‰à¸™à¸‰à¸šà¸±à¸šà¹„à¸¡à¹ˆà¹„à¸”à¹‰à¸žà¸¹à¸”
+5. à¸«à¸™à¹ˆà¸§à¸¢à¹à¸¥à¸°à¸§à¸±à¸™à¸—à¸µà¹ˆ: à¹ƒà¸Šà¹‰à¸›à¸µ à¸„.à¸¨. à¹ƒà¸™à¸ à¸²à¸©à¸²à¸­à¸±à¸‡à¸à¸¤à¸© à¸žà¸£à¹‰à¸­à¸¡à¸§à¸‡à¹€à¸¥à¹‡à¸š à¸ž.à¸¨. à¸„à¸£à¸±à¹‰à¸‡à¹à¸£à¸à¸—à¸µà¹ˆà¸›à¸£à¸²à¸à¸à¹ƒà¸™à¹à¸•à¹ˆà¸¥à¸°à¸«à¸™à¹‰à¸²
+6. à¹€à¸ªà¸µà¸¢à¸‡à¹€à¸¥à¹ˆà¸²: à¸à¸£à¸°à¸Šà¸±à¸š à¸•à¸£à¸‡à¹„à¸›à¸•à¸£à¸‡à¸¡à¸² à¹à¸šà¸šà¸„à¸¹à¹ˆà¸¡à¸·à¸­à¹€à¸”à¸´à¸™à¸—à¸²à¸‡à¸—à¸µà¹ˆà¸”à¸µ à¹„à¸¡à¹ˆà¹ƒà¸Šà¹ˆà¹‚à¸šà¸£à¸Šà¸±à¸§à¸£à¹Œ à¹„à¸¡à¹ˆà¹ƒà¸Šà¹‰à¸„à¸³à¹‚à¸†à¸©à¸“à¸²à¹€à¸à¸´à¸™à¸ˆà¸£à¸´à¸‡
+   à¸«à¹‰à¸²à¸¡ `hidden gem`, `must-see`, `paradise`, `authentic` à¹à¸šà¸šà¸¥à¸­à¸¢ à¹†
+7. à¸«à¹‰à¸²à¸¡ em-dash à¹à¸¥à¸° en-dash Â· à¹ƒà¸Šà¹‰ `Â·` à¸«à¸£à¸·à¸­à¹€à¸‚à¸µà¸¢à¸™à¹€à¸›à¹‡à¸™à¸›à¸£à¸°à¹‚à¸¢à¸„à¹ƒà¸«à¸¡à¹ˆ
+8. **à¹€à¸‚à¸µà¸¢à¸™à¹„à¸Ÿà¸¥à¹Œà¹€à¸›à¹‡à¸™ UTF-8 à¹€à¸—à¹ˆà¸²à¸™à¸±à¹‰à¸™**
+
+## SEO à¸à¸±à¹ˆà¸‡à¸­à¸±à¸‡à¸à¸¤à¸©
+- title/description à¸•à¹ˆà¸­à¸«à¸™à¹‰à¸²à¹€à¸‚à¸µà¸¢à¸™à¹ƒà¸«à¸¡à¹ˆà¹ƒà¸«à¹‰à¸•à¸£à¸‡à¸„à¸³à¸„à¹‰à¸™à¸­à¸±à¸‡à¸à¸¤à¸© à¹„à¸¡à¹ˆà¹ƒà¸Šà¹ˆà¹à¸›à¸¥ title à¹„à¸—à¸¢à¸•à¸£à¸‡à¸•à¸±à¸§
+- JSON-LD à¸‚à¸­à¸‡à¸«à¸™à¹‰à¸²à¸­à¸±à¸‡à¸à¸¤à¸©à¹ƒà¸Šà¹‰ `inLanguage: "en"` à¹à¸¥à¸°à¸Šà¸·à¹ˆà¸­à¸­à¸±à¸‡à¸à¸¤à¸©
+- à¸„à¸³à¸„à¹‰à¸™à¹€à¸›à¹‰à¸²à¸«à¸¡à¸²à¸¢: `Takua Pa old town`, `Takua Pa Phang Nga`, `things to do Takua Pa`,
+  `Takua Pa Sunday market`, `Khao Lak day trip old town`, `Sino Portuguese Takua Pa`,
+  `Takua Pa temples`, `Takua Pa vegetarian festival`
+
+## à¸•à¸£à¸§à¸ˆà¸à¹ˆà¸­à¸™à¸ˆà¸š
+```
+python build_site.py
+python -c "import glob;print(len(glob.glob('site/en/**/index.html',recursive=True)),'à¸«à¸™à¹‰à¸²à¸­à¸±à¸‡à¸à¸¤à¸©')"
+grep -c hreflang site/index.html
+python validate_site.py
+```
+à¹à¸¥à¹‰à¸§à¹€à¸›à¸´à¸” `/en/`, `/en/places/`, `/en/places/tao-ming/`, `/en/stories/city/` à¸”à¹‰à¸§à¸¢ Playwright
+à¸•à¸£à¸§à¸ˆà¸§à¹ˆà¸²: à¹„à¸¡à¹ˆà¸¡à¸µ console error Â· à¹„à¸¡à¹ˆà¸¡à¸µà¸‚à¹‰à¸­à¸„à¸§à¸²à¸¡à¹„à¸—à¸¢à¸«à¸¥à¸‡à¹ƒà¸™à¸«à¸™à¹‰à¸²à¸­à¸±à¸‡à¸à¸¤à¸© Â· à¸›à¸¸à¹ˆà¸¡à¸ªà¸¥à¸±à¸šà¸ à¸²à¸©à¸²à¹„à¸›à¸«à¸™à¹‰à¸²à¸„à¸¹à¹ˆà¸à¸±à¸™à¸–à¸¹à¸à¸•à¹‰à¸­à¸‡
+
+codex
+อ่านกฎครบแล้วครับ โดยเฉพาะข้อกำหนดเรื่องไม่เติมข้อเท็จจริง, คงถ้อยคำไม่ยืนยัน, ใช้ ค.ศ. พร้อม พ.ศ., ทับศัพท์ชื่อสถานที่ และห้าม em-dash/en-dash ตอนนี้กำลังเขียนคีย์ทั้ง 45 รายการแบบคงอักขระเดิมทุกตัว。
+apply patch
+patch: completed
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-71faa349c0.json
+diff --git a/output/web/takuapa101-v1/data/i18n/en/missing-parts/miss-71faa349c0.json b/output/web/takuapa101-v1/data/i18n/en/missing-parts/miss-71faa349c0.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..783bd28355ae9e7953c90c94089771d86c71d078
+--- /dev/null
++++ b/output/web/takuapa101-v1/data/i18n/en/missing-parts/miss-71faa349c0.json
+@@ -0,0 +1,47 @@
++{
++  "อุโบสถและเจดีย์ยังเป็นโบราณสถานที่ใช้งานอยู่ ภายในวัดถูกบรรยายว่าสะอาด ร่มรื่น และเหมาะแก่การปฏิบัติศาสนกิจ วัดยังทำหน้าที่เป็นสถานปฏิบัติธรรมประจำจังหวัดพังงาแห่งที่ 1 จึงเป็นสถานที่ที่คนมาได้ทั้งไหว้พระ ชมงานปูนปั้น และเข้าปฏิบัติธรรม": "The ubosot and chedi remain active historic monuments. The temple grounds are described as clean, shaded, and suitable for religious practice. The temple also serves as Phang Nga's first provincial meditation center, so visitors can come to pay respects, view the stucco work, and practice meditation.",
++  "กิจกรรมที่มีแหล่งอ้างอิงระบุ ได้แก่ ปฏิบัติธรรมเฉลิมพระเกียรติ สวดมนต์ข้ามปี บวชชีพราหมณ์เพื่อถวายเป็นพระราชกุศล และบวชสามเณรภาคฤดูร้อน อย่างไรก็ตาม ยังไม่พบประกาศปี 2569 ที่ยืนยันตารางกิจกรรม เวลาเปิด-ปิด โครงการบูรณะใหม่ หรือรายละเอียดสิ่งอำนวยความสะดวก จึงควรโทรสอบถามวัดก่อนเดินทาง": "Activities identified by referenced sources include meditation practice held in honor of the King, New Year's Eve chanting, ordination as nuns and Brahmin devotees as a royal merit offering, and summer novice ordination. However, no 2026 (B.E. 2569) announcement has been found confirming the activity schedule, opening hours, new restoration projects, or facility details, so you should call the temple before traveling.",
++  "พ.ศ. 2305": "1759 (B.E. 2305)",
++  "พ.ศ. 2479": "1936 (B.E. 2479)",
++  "พ.ศ. 2483": "1940 (B.E. 2483)",
++  "พ.ศ. 2545": "2002 (B.E. 2545)",
++  "อุโบสถและเจดีย์เป็นโบราณสถานที่ยังใช้งานอยู่ และวัดเป็นสถานปฏิบัติธรรมประจำจังหวัดพังงาแห่งที่ 1 กรมศิลปากรประกาศขึ้นทะเบียนโบราณสถานและกำหนดเขตที่ดินในราชกิจจานุเบกษาเมื่อ 18 ธันวาคม พ.ศ. 2539": "The ubosot and chedi are active historic monuments, and the temple is Phang Nga's first provincial meditation center. The Fine Arts Department announced the registration of the historic monument and the designation of its land boundary in the Royal Gazette on 18 December 1996 (B.E. 2539).",
++  "ชมอาคารก่ออิฐถือปูน หน้าบันและซุ้มประตูหน้าต่างประดับปูนปั้น รวมถึงภาพพระพุทธรูปและลวดลายพันธุ์พฤกษา เป็นหนึ่งในโบราณสถานสำคัญภายในวัดและยังอยู่ในวัดที่มีการใช้งาน วัดตั้งอยู่ริมฝั่งคลองตะกั่วป่าด้านตะวันตก โดยคลองอยู่ทางทิศตะวันออกของวัด": "See the masonry building, with stucco ornament on the pediments and door and window arches, as well as Buddha images and botanical motifs. It is one of the important historic monuments within the temple, which remains in active use. The temple stands on the west bank of Khlong Takua Pa, with the canal to the east of the temple.",
++  "Mapcarta (ข้อมูลจาก OpenStreetMap)": "Mapcarta (data from OpenStreetMap)",
++  "ไทยแลนด์ เยลโล่เพจเจส": "Thailand YellowPages",
++  "สำนักงานพระพุทธศาสนาแห่งชาติ": "สำนักงานพระพุทธศาสนาแห่งชาติ (National Office of Buddhism)",
++  "วัดนิกรวราราม (วัดย่านยาว) · ตะกั่วป่า 101": "Wat Nikornwararam (Wat Yan Yao) · Takua Pa 101",
++  "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"หน้าแรก\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"วัดนิกรวราราม (วัดย่านยาว)\", \"item\": \"https://takuapa101.pages.dev/places/wat-nikorn/\"}]}, {\"@context\": \"https://schema.org\", \"@type\": \"TouristAttraction\", \"name\": \"วัดนิกรวราราม (วัดย่านยาว)\", \"url\": \"https://takuapa101.pages.dev/places/wat-nikorn/\", \"image\": \"https://takuapa101.pages.dev/assets/wat-nikorn.webp\", \"description\": \"เอกสารเชื่อมวัดกับชุมชนและเหตุการณ์สึนามิ พ.ศ. 2547\", \"address\": {\"@type\": \"PostalAddress\", \"streetAddress\": \"บ้านย่านยาว ถนนเพชรเกษม\", \"addressLocality\": \"ตะกั่วป่า\", \"addressRegion\": \"พังงา\", \"addressCountry\": \"TH\"}, \"geo\": {\"@type\": \"GeoCoordinates\", \"latitude\": 8.8691760396, \"longitude\": 98.348042969}}, {\"@context\": \"https://schema.org\", \"@type\": \"FAQPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"ควรแต่งกายอย่างไร\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"ควรแต่งกายสุภาพเมื่อเข้าสู่ศาสนสถาน\"}}, {\"@type\": \"Question\", \"name\": \"สถานที่นี้มีประวัติความเป็นมาอย่างไร\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"วัดสร้างเมื่อ พ.ศ. 2336 โดยคุณตาแก้วและคุณตาราม วัดได้รับพระราชทานวิสุงคามสีมาใน พ.ศ. 2385\"}}, {\"@type\": \"Question\", \"name\": \"มีจุดเด่นอะไรให้ชม\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"จุดเด่นที่ยืนยันได้คือประวัติการก่อตั้งใน พ.ศ. 2336 และการได้รับวิสุงคามสีมาใน พ.ศ. 2385 วัดเคยใช้รวบรวมศพผู้ประสบภัยเพื่อรอการตรวจพิสูจน์เอกลักษณ์บุคคล\"}}]}]": "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Wat Nikornwararam (Wat Yan Yao)\", \"item\": \"https://takuapa101.pages.dev/places/wat-nikorn/\"}]}, {\"@context\": \"https://schema.org\", \"@type\": \"TouristAttraction\", \"name\": \"Wat Nikornwararam (Wat Yan Yao)\", \"url\": \"https://takuapa101.pages.dev/places/wat-nikorn/\", \"image\": \"https://takuapa101.pages.dev/assets/wat-nikorn.webp\", \"description\": \"Documentation linking the temple with the community and the 2004 tsunami\", \"address\": {\"@type\": \"PostalAddress\", \"streetAddress\": \"Yan Yao Village, Phetkasem Road\", \"addressLocality\": \"Takua Pa\", \"addressRegion\": \"Phang Nga\", \"addressCountry\": \"TH\"}, \"geo\": {\"@type\": \"GeoCoordinates\", \"latitude\": 8.8691760396, \"longitude\": 98.348042969}}, {\"@context\": \"https://schema.org\", \"@type\": \"FAQPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"How should I dress?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Dress respectfully when entering a religious site.\"}}, {\"@type\": \"Question\", \"name\": \"What is the history of this place?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"The temple was built in 1793 (B.E. 2336) by Khun Ta Kaeo and Khun Ta Ram. It received royal designation of a Wisungkhamsima boundary in 1842 (B.E. 2385).\"}}, {\"@type\": \"Question\", \"name\": \"What is there to see?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Confirmed highlights are its founding in 1793 (B.E. 2336) and its receipt of a Wisungkhamsima boundary in 1842 (B.E. 2385). The temple was once used to gather victims' remains while awaiting forensic identification.\"}}]}]",
++  "พ.ศ. 2336·2385 / ค.ศ. 1793·1842": "B.E. 2336·2385 / C.E. 1793·1842",
++  "วัดนิกรวราราม หรือวัดย่านยาว เริ่มสร้างใน พ.ศ. 2336 โดยคุณตาแก้วและคุณตาราม หลักฐานที่พบยืนยันปีและชื่อผู้ริเริ่ม แต่ยังไม่บอกเหตุผลเชิงรายละเอียดว่าตั้งวัดขึ้นเพื่อภารกิจใดโดยเฉพาะ จึงควรอ่านวัดนี้ในฐานะศาสนสถานของชุมชนท้องถิ่นที่กำลังก่อรูปในลุ่มตะกั่วป่า มากกว่าจะผูกเข้ากับเรื่องเล่าที่ไม่มีหลักฐานตรง": "Wat Nikornwararam, or Wat Yan Yao, began construction in 1793 (B.E. 2336) by Khun Ta Kaeo and Khun Ta Ram. The evidence found confirms the year and the names of the initiators, but does not explain in detail what specific purpose the temple was established for. It is therefore better understood as a religious site of a local community taking shape in the Takua Pa basin, rather than tied to stories without direct evidence.",
++  "เมืองตะกั่วป่าในภาพกว้างมีประวัติเป็นเมืองท่าและแหล่งแร่ดีบุก มีการติดต่อค้าขายทางทะเลและผู้คนหลายกลุ่ม แต่ยังไม่พบหลักฐานเฉพาะวัดที่ยืนยันบทบาทของวัดนิกรวรารามต่อเหมืองดีบุก การค้าทางทะเล คนจีนฮกเกี้ยน หรือระบบเจ้าเมือง จึงไม่สรุปเกินแหล่งข้อมูล": "Takua Pa broadly has a history as a port city and tin-mining area, with maritime trade and many communities. However, no temple-specific evidence has been found confirming Wat Nikornwararam's role in tin mining, maritime trade, Hokkien Chinese communities, or the muang ruler system, so no conclusion is drawn beyond the sources.",
++  "พ.ศ. 2385·2565 / ค.ศ. 1842·2022": "B.E. 2385·2565 / C.E. 1842·2022",
++  "วัดได้รับพระราชทานวิสุงคามสีมาใน พ.ศ. 2385 ซึ่งเป็นหลักฐานสำคัญว่าศาสนสถานได้รับการรับรองพื้นที่ประกอบสังฆกรรมตามแบบแผนของคณะสงฆ์ในเวลานั้น อย่างไรก็ตาม ยังไม่พบเอกสารที่ระบุการบูรณะครั้งใหญ่ การเปลี่ยนมือ หรือช่วงเวลาร้าง": "The temple received a royal Wisungkhamsima boundary designation in 1842 (B.E. 2385), important evidence that the religious site was granted recognized space for monastic acts according to the Sangha's conventions at the time. However, no documents have been found specifying major restoration, a change of ownership, or a period of abandonment.",
++  "หลังสึนามิวันที่ 26 ธันวาคม 2547 วัดถูกใช้เป็นสถานที่รวบรวมศพผู้ประสบภัยเพื่อรอการตรวจพิสูจน์เอกลักษณ์บุคคล บทบาทชั่วคราวนี้ทำให้วัดย่านยาวเป็นส่วนหนึ่งของประวัติศาสตร์การรับมือภัยพิบัติของตะกั่วป่า ต่อมาในวันที่ 30 ตุลาคม 2565 สำนักงานพระพุทธศาสนาจังหวัดพังงาร่วมมอบเอกสารโฉนดที่ดินให้เจ้าอาวาส เป็นหลักฐานการจัดการกรรมสิทธิ์ที่ดินในยุคปัจจุบัน": "After the tsunami on 26 December 2004 (B.E. 2547), the temple was used to gather victims' remains while awaiting forensic identification. This temporary role made Wat Yan Yao part of Takua Pa's disaster-response history. Later, on 30 October 2022 (B.E. 2565), the Phang Nga Provincial Office of Buddhism jointly presented a land-title document to the abbot, evidence of contemporary land-ownership administration.",
++  "สำนักงานพระพุทธศาสนาจังหวัดพังงา · มอบเอกสารโฉนดที่ดิน": "สำนักงานพระพุทธศาสนาจังหวัดพังงา (Phang Nga Provincial Office of Buddhism) · Presentation of a land-title document",
++  "สถาบันนิติวิทยาศาสตร์ · บันทึกเหตุการณ์ 28 ธันวาคม 2547": "สถาบันนิติวิทยาศาสตร์ (Central Institute of Forensic Science) · Incident record, 28 December 2004 (B.E. 2547)",
++  "หลักฐานล่าสุดที่ค้นพบยืนยันว่า วัดยังใช้งานอยู่ มีพระครูนิกรธรรมโสภิตเป็นเจ้าอาวาส และมีพระจำพรรษา โดยฐานข้อมูลวัดระบุการจัดกฐินสามัคคีใน พ.ศ. 2567 และ 2568 ส่วนข่าวราชการ/ข่าวท้องถิ่นยืนยันการมีส่วนร่วมของวัดในกิจกรรมระดับอำเภอและจังหวัด": "The latest evidence found confirms that the temple remains active, with Phra Khru Nikorn Thammasophit as abbot and monks in residence. The temple database records kathin unity ceremonies in 2024 (B.E. 2567) and 2025 (B.E. 2568), while official and local news confirm the temple's participation in district and provincial activities.",
++  "ในช่วงไม่กี่ปีที่ผ่านมา วัดเป็นทั้งพื้นที่ประกอบศาสนกิจและพื้นที่สาธารณะ: ปี 2567 ใช้เป็นศูนย์รับบริจาคช่วยผู้ประสบอุทกภัยภาคเหนือ และมีการตรวจเยี่ยมโครงการวัด ประชา รัฐ สร้างสุขในฐานะวัดต้นแบบระดับภาคใต้ ทั้งนี้ยังไม่พบข้อมูลที่ยืนยันเวลาเปิด-ปิดสำหรับนักท่องเที่ยว สภาพอาคารโดยละเอียด หรือโครงการบูรณะเฉพาะวัดในปี 2569": "In recent years, the temple has served both religious and public functions: in 2024 (B.E. 2567), it was used as a donation center for flood victims in northern Thailand, and the Wat Pracha Rath Sang Sook project was inspected there as a model temple at the southern regional level. No information has yet been found confirming visitor opening hours, detailed building conditions, or a temple-specific restoration project in 2026 (B.E. 2569).",
++  "DMC · โครงการกฐินสามัคคีทั่วไทย 10,000 วัด": "DMC · Nationwide Kathin Unity Project for 10,000 Temples",
++  "สยามรัฐ · ศูนย์รับบริจาคช่วยผู้ประสบภัยน้ำท่วม": "สยามรัฐ (Siam Rath) · Donation center for flood victims",
++  "Ride Explorer · ตรวจเยี่ยมวัดต้นแบบ": "Ride Explorer · Inspection visit to a model temple",
++  "TOPNEWS · สืบสานสงกรานต์เมืองเก่าตะกั่วป่า": "TOPNEWS · Continuing the Songkran tradition in Takua Pa Old Town",
++  "พ.ศ. 2336": "1793 (B.E. 2336)",
++  "พ.ศ. 2385": "1842 (B.E. 2385)",
++  "26 ธันวาคม 2547": "26 December 2004 (B.E. 2547)",
++  "30 ตุลาคม 2565": "30 October 2022 (B.E. 2565)",
++  "22 กันยายน 2567": "22 September 2024 (B.E. 2567)",
++  "2024-09-22 · สยามรัฐ": "2024-09-22 · สยามรัฐ (Siam Rath)",
++  "2022-10-30 · สำนักงานพระพุทธศาสนาจังหวัดพังงา": "2022-10-30 · สำนักงานพระพุทธศาสนาจังหวัดพังงา (Phang Nga Provincial Office of Buddhism)",
++  "วัดสร้างเมื่อ พ.ศ. 2336 โดยคุณตาแก้วและคุณตาราม วัดได้รับพระราชทานวิสุงคามสีมาใน พ.ศ. 2385": "The temple was built in 1793 (B.E. 2336) by Khun Ta Kaeo and Khun Ta Ram. It received a royal Wisungkhamsima boundary designation in 1842 (B.E. 2385).",
++  "จุดเด่นที่ยืนยันได้คือประวัติการก่อตั้งใน พ.ศ. 2336 และการได้รับวิสุงคามสีมาใน พ.ศ. 2385 วัดเคยใช้รวบรวมศพผู้ประสบภัยเพื่อรอการตรวจพิสูจน์เอกลักษณ์บุคคล": "Confirmed highlights are its founding in 1793 (B.E. 2336) and its receipt of a Wisungkhamsima boundary designation in 1842 (B.E. 2385). The temple was once used to gather victims' remains while awaiting forensic identification.",
++  "วัดนิกรวราราม · ClassStart Books": "Wat Nikornwararam · ClassStart Books",
++  "เลาะกินตลาดริมน้ำตะกั่วป่า ถนนคนเดินย่านยาว · YouTube": "Strolling and eating at Takua Pa riverside market, Yan Yao walking street · YouTube",
++  "สถาบันนิติวิทยาศาสตร์ · บันทึกเหตุการณ์สึนามิ": "สถาบันนิติวิทยาศาสตร์ (Central Institute of Forensic Science) · Tsunami incident record",
++  "DMC · วัดนิกรวราราม": "DMC · Wat Nikornwararam",
++  "สยามรัฐ · ศูนย์รับบริจาคช่วยน้ำท่วม": "สยามรัฐ (Siam Rath) · Flood-relief donation center",
++  "TOPNEWS · สงกรานต์เมืองเก่าตะกั่วป่า": "TOPNEWS · Songkran in Takua Pa Old Town",
++  "Ride Explorer · วัดต้นแบบระดับภาคใต้": "Ride Explorer · Southern regional model temple",
++  "แหล่งข้อมูลบางแห่งระบุตำบลไม่ตรงกัน จึงยึดพิกัดและรายการทางการจาก สผ./สำนักงานพระพุทธศาสนาจังหวัดพังงาเป็นหลัก": "Some sources give conflicting subdistrict names, so the coordinates and official listings from สผ./สำนักงานพระพุทธศาสนาจังหวัดพังงา are treated as primary.",
++  "วัดปทุมธารา (วัดหน้าเมือง) · ตะกั่วป่า 101": "Wat Pathumthara (Wat Na Mueang) · Takua Pa 101"
++}
+
+diff --git a/output/web/takuapa101-v1/data/i18n/en/missing-parts/miss-71faa349c0.json b/output/web/takuapa101-v1/data/i18n/en/missing-parts/miss-71faa349c0.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..783bd28355ae9e7953c90c94089771d86c71d078
+--- /dev/null
++++ b/output/web/takuapa101-v1/data/i18n/en/missing-parts/miss-71faa349c0.json
+@@ -0,0 +1,47 @@
++{
++  "อุโบสถและเจดีย์ยังเป็นโบราณสถานที่ใช้งานอยู่ ภายในวัดถูกบรรยายว่าสะอาด ร่มรื่น และเหมาะแก่การปฏิบัติศาสนกิจ วัดยังทำหน้าที่เป็นสถานปฏิบัติธรรมประจำจังหวัดพังงาแห่งที่ 1 จึงเป็นสถานที่ที่คนมาได้ทั้งไหว้พระ ชมงานปูนปั้น และเข้าปฏิบัติธรรม": "The ubosot and chedi remain active historic monuments. The temple grounds are described as clean, shaded, and suitable for religious practice. The temple also serves as Phang Nga's first provincial meditation center, so visitors can come to pay respects, view the stucco work, and practice meditation.",
++  "กิจกรรมที่มีแหล่งอ้างอิงระบุ ได้แก่ ปฏิบัติธรรมเฉลิมพระเกียรติ สวดมนต์ข้ามปี บวชชีพราหมณ์เพื่อถวายเป็นพระราชกุศล และบวชสามเณรภาคฤดูร้อน อย่างไรก็ตาม ยังไม่พบประกาศปี 2569 ที่ยืนยันตารางกิจกรรม เวลาเปิด-ปิด โครงการบูรณะใหม่ หรือรายละเอียดสิ่งอำนวยความสะดวก จึงควรโทรสอบถามวัดก่อนเดินทาง": "Activities identified by referenced sources include meditation practice held in honor of the King, New Year's Eve chanting, ordination as nuns and Brahmin devotees as a royal merit offering, and summer novice ordination. However, no 2026 (B.E. 2569) announcement has been found confirming the activity schedule, opening hours, new restoration projects, or facility details, so you should call the temple before traveling.",
++  "พ.ศ. 2305": "1759 (B.E. 2305)",
++  "พ.ศ. 2479": "1936 (B.E. 2479)",
++  "พ.ศ. 2483": "1940 (B.E. 2483)",
++  "พ.ศ. 2545": "2002 (B.E. 2545)",
++  "อุโบสถและเจดีย์เป็นโบราณสถานที่ยังใช้งานอยู่ และวัดเป็นสถานปฏิบัติธรรมประจำจังหวัดพังงาแห่งที่ 1 กรมศิลปากรประกาศขึ้นทะเบียนโบราณสถานและกำหนดเขตที่ดินในราชกิจจานุเบกษาเมื่อ 18 ธันวาคม พ.ศ. 2539": "The ubosot and chedi are active historic monuments, and the temple is Phang Nga's first provincial meditation center. The Fine Arts Department announced the registration of the historic monument and the designation of its land boundary in the Royal Gazette on 18 December 1996 (B.E. 2539).",
++  "ชมอาคารก่ออิฐถือปูน หน้าบันและซุ้มประตูหน้าต่างประดับปูนปั้น รวมถึงภาพพระพุทธรูปและลวดลายพันธุ์พฤกษา เป็นหนึ่งในโบราณสถานสำคัญภายในวัดและยังอยู่ในวัดที่มีการใช้งาน วัดตั้งอยู่ริมฝั่งคลองตะกั่วป่าด้านตะวันตก โดยคลองอยู่ทางทิศตะวันออกของวัด": "See the masonry building, with stucco ornament on the pediments and door and window arches, as well as Buddha images and botanical motifs. It is one of the important historic monuments within the temple, which remains in active use. The temple stands on the west bank of Khlong Takua Pa, with the canal to the east of the temple.",
++  "Mapcarta (ข้อมูลจาก OpenStreetMap)": "Mapcarta (data from OpenStreetMap)",
++  "ไทยแลนด์ เยลโล่เพจเจส": "Thailand YellowPages",
++  "สำนักงานพระพุทธศาสนาแห่งชาติ": "สำนักงานพระพุทธศาสนาแห่งชาติ (National Office of Buddhism)",
++  "วัดนิกรวราราม (วัดย่านยาว) · ตะกั่วป่า 101": "Wat Nikornwararam (Wat Yan Yao) · Takua Pa 101",
++  "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"หน้าแรก\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"วัดนิกรวราราม (วัดย่านยาว)\", \"item\": \"https://takuapa101.pages.dev/places/wat-nikorn/\"}]}, {\"@context\": \"https://schema.org\", \"@type\": \"TouristAttraction\", \"name\": \"วัดนิกรวราราม (วัดย่านยาว)\", \"url\": \"https://takuapa101.pages.dev/places/wat-nikorn/\", \"image\": \"https://takuapa101.pages.dev/assets/wat-nikorn.webp\", \"description\": \"เอกสารเชื่อมวัดกับชุมชนและเหตุการณ์สึนามิ พ.ศ. 2547\", \"address\": {\"@type\": \"PostalAddress\", \"streetAddress\": \"บ้านย่านยาว ถนนเพชรเกษม\", \"addressLocality\": \"ตะกั่วป่า\", \"addressRegion\": \"พังงา\", \"addressCountry\": \"TH\"}, \"geo\": {\"@type\": \"GeoCoordinates\", \"latitude\": 8.8691760396, \"longitude\": 98.348042969}}, {\"@context\": \"https://schema.org\", \"@type\": \"FAQPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"ควรแต่งกายอย่างไร\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"ควรแต่งกายสุภาพเมื่อเข้าสู่ศาสนสถาน\"}}, {\"@type\": \"Question\", \"name\": \"สถานที่นี้มีประวัติความเป็นมาอย่างไร\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"วัดสร้างเมื่อ พ.ศ. 2336 โดยคุณตาแก้วและคุณตาราม วัดได้รับพระราชทานวิสุงคามสีมาใน พ.ศ. 2385\"}}, {\"@type\": \"Question\", \"name\": \"มีจุดเด่นอะไรให้ชม\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"จุดเด่นที่ยืนยันได้คือประวัติการก่อตั้งใน พ.ศ. 2336 และการได้รับวิสุงคามสีมาใน พ.ศ. 2385 วัดเคยใช้รวบรวมศพผู้ประสบภัยเพื่อรอการตรวจพิสูจน์เอกลักษณ์บุคคล\"}}]}]": "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Wat Nikornwararam (Wat Yan Yao)\", \"item\": \"https://takuapa101.pages.dev/places/wat-nikorn/\"}]}, {\"@context\": \"https://schema.org\", \"@type\": \"TouristAttraction\", \"name\": \"Wat Nikornwararam (Wat Yan Yao)\", \"url\": \"https://takuapa101.pages.dev/places/wat-nikorn/\", \"image\": \"https://takuapa101.pages.dev/assets/wat-nikorn.webp\", \"description\": \"Documentation linking the temple with the community and the 2004 tsunami\", \"address\": {\"@type\": \"PostalAddress\", \"streetAddress\": \"Yan Yao Village, Phetkasem Road\", \"addressLocality\": \"Takua Pa\", \"addressRegion\": \"Phang Nga\", \"addressCountry\": \"TH\"}, \"geo\": {\"@type\": \"GeoCoordinates\", \"latitude\": 8.8691760396, \"longitude\": 98.348042969}}, {\"@context\": \"https://schema.org\", \"@type\": \"FAQPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"How should I dress?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Dress respectfully when entering a religious site.\"}}, {\"@type\": \"Question\", \"name\": \"What is the history of this place?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"The temple was built in 1793 (B.E. 2336) by Khun Ta Kaeo and Khun Ta Ram. It received royal designation of a Wisungkhamsima boundary in 1842 (B.E. 2385).\"}}, {\"@type\": \"Question\", \"name\": \"What is there to see?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Confirmed highlights are its founding in 1793 (B.E. 2336) and its receipt of a Wisungkhamsima boundary in 1842 (B.E. 2385). The temple was once used to gather victims' remains while awaiting forensic identification.\"}}]}]",
++  "พ.ศ. 2336·2385 / ค.ศ. 1793·1842": "B.E. 2336·2385 / C.E. 1793·1842",
++  "วัดนิกรวราราม หรือวัดย่านยาว เริ่มสร้างใน พ.ศ. 2336 โดยคุณตาแก้วและคุณตาราม หลักฐานที่พบยืนยันปีและชื่อผู้ริเริ่ม แต่ยังไม่บอกเหตุผลเชิงรายละเอียดว่าตั้งวัดขึ้นเพื่อภารกิจใดโดยเฉพาะ จึงควรอ่านวัดนี้ในฐานะศาสนสถานของชุมชนท้องถิ่นที่กำลังก่อรูปในลุ่มตะกั่วป่า มากกว่าจะผูกเข้ากับเรื่องเล่าที่ไม่มีหลักฐานตรง": "Wat Nikornwararam, or Wat Yan Yao, began construction in 1793 (B.E. 2336) by Khun Ta Kaeo and Khun Ta Ram. The evidence found confirms the year and the names of the initiators, but does not explain in detail what specific purpose the temple was established for. It is therefore better understood as a religious site of a local community taking shape in the Takua Pa basin, rather than tied to stories without direct evidence.",
++  "เมืองตะกั่วป่าในภาพกว้างมีประวัติเป็นเมืองท่าและแหล่งแร่ดีบุก มีการติดต่อค้าขายทางทะเลและผู้คนหลายกลุ่ม แต่ยังไม่พบหลักฐานเฉพาะวัดที่ยืนยันบทบาทของวัดนิกรวรารามต่อเหมืองดีบุก การค้าทางทะเล คนจีนฮกเกี้ยน หรือระบบเจ้าเมือง จึงไม่สรุปเกินแหล่งข้อมูล": "Takua Pa broadly has a history as a port city and tin-mining area, with maritime trade and many communities. However, no temple-specific evidence has been found confirming Wat Nikornwararam's role in tin mining, maritime trade, Hokkien Chinese communities, or the muang ruler system, so no conclusion is drawn beyond the sources.",
++  "พ.ศ. 2385·2565 / ค.ศ. 1842·2022": "B.E. 2385·2565 / C.E. 1842·2022",
++  "วัดได้รับพระราชทานวิสุงคามสีมาใน พ.ศ. 2385 ซึ่งเป็นหลักฐานสำคัญว่าศาสนสถานได้รับการรับรองพื้นที่ประกอบสังฆกรรมตามแบบแผนของคณะสงฆ์ในเวลานั้น อย่างไรก็ตาม ยังไม่พบเอกสารที่ระบุการบูรณะครั้งใหญ่ การเปลี่ยนมือ หรือช่วงเวลาร้าง": "The temple received a royal Wisungkhamsima boundary designation in 1842 (B.E. 2385), important evidence that the religious site was granted recognized space for monastic acts according to the Sangha's conventions at the time. However, no documents have been found specifying major restoration, a change of ownership, or a period of abandonment.",
++  "หลังสึนามิวันที่ 26 ธันวาคม 2547 วัดถูกใช้เป็นสถานที่รวบรวมศพผู้ประสบภัยเพื่อรอการตรวจพิสูจน์เอกลักษณ์บุคคล บทบาทชั่วคราวนี้ทำให้วัดย่านยาวเป็นส่วนหนึ่งของประวัติศาสตร์การรับมือภัยพิบัติของตะกั่วป่า ต่อมาในวันที่ 30 ตุลาคม 2565 สำนักงานพระพุทธศาสนาจังหวัดพังงาร่วมมอบเอกสารโฉนดที่ดินให้เจ้าอาวาส เป็นหลักฐานการจัดการกรรมสิทธิ์ที่ดินในยุคปัจจุบัน": "After the tsunami on 26 December 2004 (B.E. 2547), the temple was used to gather victims' remains while awaiting forensic identification. This temporary role made Wat Yan Yao part of Takua Pa's disaster-response history. Later, on 30 October 2022 (B.E. 2565), the Phang Nga Provincial Office of Buddhism jointly presented a land-title document to the abbot, evidence of contemporary land-ownership administration.",
++  "สำนักงานพระพุทธศาสนาจังหวัดพังงา · มอบเอกสารโฉนดที่ดิน": "สำนักงานพระพุทธศาสนาจังหวัดพังงา (Phang Nga Provincial Office of Buddhism) · Presentation of a land-title document",
++  "สถาบันนิติวิทยาศาสตร์ · บันทึกเหตุการณ์ 28 ธันวาคม 2547": "สถาบันนิติวิทยาศาสตร์ (Central Institute of Forensic Science) · Incident record, 28 December 2004 (B.E. 2547)",
++  "หลักฐานล่าสุดที่ค้นพบยืนยันว่า วัดยังใช้งานอยู่ มีพระครูนิกรธรรมโสภิตเป็นเจ้าอาวาส และมีพระจำพรรษา โดยฐานข้อมูลวัดระบุการจัดกฐินสามัคคีใน พ.ศ. 2567 และ 2568 ส่วนข่าวราชการ/ข่าวท้องถิ่นยืนยันการมีส่วนร่วมของวัดในกิจกรรมระดับอำเภอและจังหวัด": "The latest evidence found confirms that the temple remains active, with Phra Khru Nikorn Thammasophit as abbot and monks in residence. The temple database records kathin unity ceremonies in 2024 (B.E. 2567) and 2025 (B.E. 2568), while official and local news confirm the temple's participation in district and provincial activities.",
++  "ในช่วงไม่กี่ปีที่ผ่านมา วัดเป็นทั้งพื้นที่ประกอบศาสนกิจและพื้นที่สาธารณะ: ปี 2567 ใช้เป็นศูนย์รับบริจาคช่วยผู้ประสบอุทกภัยภาคเหนือ และมีการตรวจเยี่ยมโครงการวัด ประชา รัฐ สร้างสุขในฐานะวัดต้นแบบระดับภาคใต้ ทั้งนี้ยังไม่พบข้อมูลที่ยืนยันเวลาเปิด-ปิดสำหรับนักท่องเที่ยว สภาพอาคารโดยละเอียด หรือโครงการบูรณะเฉพาะวัดในปี 2569": "In recent years, the temple has served both religious and public functions: in 2024 (B.E. 2567), it was used as a donation center for flood victims in northern Thailand, and the Wat Pracha Rath Sang Sook project was inspected there as a model temple at the southern regional level. No information has yet been found confirming visitor opening hours, detailed building conditions, or a temple-specific restoration project in 2026 (B.E. 2569).",
++  "DMC · โครงการกฐินสามัคคีทั่วไทย 10,000 วัด": "DMC · Nationwide Kathin Unity Project for 10,000 Temples",
++  "สยามรัฐ · ศูนย์รับบริจาคช่วยผู้ประสบภัยน้ำท่วม": "สยามรัฐ (Siam Rath) · Donation center for flood victims",
++  "Ride Explorer · ตรวจเยี่ยมวัดต้นแบบ": "Ride Explorer · Inspection visit to a model temple",
++  "TOPNEWS · สืบสานสงกรานต์เมืองเก่าตะกั่วป่า": "TOPNEWS · Continuing the Songkran tradition in Takua Pa Old Town",
++  "พ.ศ. 2336": "1793 (B.E. 2336)",
++  "พ.ศ. 2385": "1842 (B.E. 2385)",
++  "26 ธันวาคม 2547": "26 December 2004 (B.E. 2547)",
++  "30 ตุลาคม 2565": "30 October 2022 (B.E. 2565)",
++  "22 กันยายน 2567": "22 September 2024 (B.E. 2567)",
++  "2024-09-22 · สยามรัฐ": "2024-09-22 · สยามรัฐ (Siam Rath)",
++  "2022-10-30 · สำนักงานพระพุทธศาสนาจังหวัดพังงา": "2022-10-30 · สำนักงานพระพุทธศาสนาจังหวัดพังงา (Phang Nga Provincial Office of Buddhism)",
++  "วัดสร้างเมื่อ พ.ศ. 2336 โดยคุณตาแก้วและคุณตาราม วัดได้รับพระราชทานวิสุงคามสีมาใน พ.ศ. 2385": "The temple was built in 1793 (B.E. 2336) by Khun Ta Kaeo and Khun Ta Ram. It received a royal Wisungkhamsima boundary designation in 1842 (B.E. 2385).",
++  "จุดเด่นที่ยืนยันได้คือประวัติการก่อตั้งใน พ.ศ. 2336 และการได้รับวิสุงคามสีมาใน พ.ศ. 2385 วัดเคยใช้รวบรวมศพผู้ประสบภัยเพื่อรอการตรวจพิสูจน์เอกลักษณ์บุคคล": "Confirmed highlights are its founding in 1793 (B.E. 2336) and its receipt of a Wisungkhamsima boundary designation in 1842 (B.E. 2385). The temple was once used to gather victims' remains while awaiting forensic identification.",
++  "วัดนิกรวราราม · ClassStart Books": "Wat Nikornwararam · ClassStart Books",
++  "เลาะกินตลาดริมน้ำตะกั่วป่า ถนนคนเดินย่านยาว · YouTube": "Strolling and eating at Takua Pa riverside market, Yan Yao walking street · YouTube",
++  "สถาบันนิติวิทยาศาสตร์ · บันทึกเหตุการณ์สึนามิ": "สถาบันนิติวิทยาศาสตร์ (Central Institute of Forensic Science) · Tsunami incident record",
++  "DMC · วัดนิกรวราราม": "DMC · Wat Nikornwararam",
++  "สยามรัฐ · ศูนย์รับบริจาคช่วยน้ำท่วม": "สยามรัฐ (Siam Rath) · Flood-relief donation center",
++  "TOPNEWS · สงกรานต์เมืองเก่าตะกั่วป่า": "TOPNEWS · Songkran in Takua Pa Old Town",
++  "Ride Explorer · วัดต้นแบบระดับภาคใต้": "Ride Explorer · Southern regional model temple",
++  "แหล่งข้อมูลบางแห่งระบุตำบลไม่ตรงกัน จึงยึดพิกัดและรายการทางการจาก สผ./สำนักงานพระพุทธศาสนาจังหวัดพังงาเป็นหลัก": "Some sources give conflicting subdistrict names, so the coordinates and official listings from สผ./สำนักงานพระพุทธศาสนาจังหวัดพังงา are treated as primary.",
++  "วัดปทุมธารา (วัดหน้าเมือง) · ตะกั่วป่า 101": "Wat Pathumthara (Wat Na Mueang) · Takua Pa 101"
++}
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$p='"'data/i18n/en/missing-parts/miss-71faa349c0.json'; python -c \"import json; p=r'"'$p'"'; d=json.load(open(p,encoding='utf-8')); print('keys=',len(d)); print('utf8_ok=True'); print('bad_dash=', any('\\u2013' in k or '\\u2013' in v or '\\u2014' in k or '\\u2014' in v for k,v in d.items()))\"" in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 148ms:
+keys= 45
+utf8_ok=True
+bad_dash= False
+
+diff --git a/output/web/takuapa101-v1/data/i18n/en/missing-parts/miss-71faa349c0.json b/output/web/takuapa101-v1/data/i18n/en/missing-parts/miss-71faa349c0.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..783bd28355ae9e7953c90c94089771d86c71d078
+--- /dev/null
++++ b/output/web/takuapa101-v1/data/i18n/en/missing-parts/miss-71faa349c0.json
+@@ -0,0 +1,47 @@
++{
++  "อุโบสถและเจดีย์ยังเป็นโบราณสถานที่ใช้งานอยู่ ภายในวัดถูกบรรยายว่าสะอาด ร่มรื่น และเหมาะแก่การปฏิบัติศาสนกิจ วัดยังทำหน้าที่เป็นสถานปฏิบัติธรรมประจำจังหวัดพังงาแห่งที่ 1 จึงเป็นสถานที่ที่คนมาได้ทั้งไหว้พระ ชมงานปูนปั้น และเข้าปฏิบัติธรรม": "The ubosot and chedi remain active historic monuments. The temple grounds are described as clean, shaded, and suitable for religious practice. The temple also serves as Phang Nga's first provincial meditation center, so visitors can come to pay respects, view the stucco work, and practice meditation.",
++  "กิจกรรมที่มีแหล่งอ้างอิงระบุ ได้แก่ ปฏิบัติธรรมเฉลิมพระเกียรติ สวดมนต์ข้ามปี บวชชีพราหมณ์เพื่อถวายเป็นพระราชกุศล และบวชสามเณรภาคฤดูร้อน อย่างไรก็ตาม ยังไม่พบประกาศปี 2569 ที่ยืนยันตารางกิจกรรม เวลาเปิด-ปิด โครงการบูรณะใหม่ หรือรายละเอียดสิ่งอำนวยความสะดวก จึงควรโทรสอบถามวัดก่อนเดินทาง": "Activities identified by referenced sources include meditation practice held in honor of the King, New Year's Eve chanting, ordination as nuns and Brahmin devotees as a royal merit offering, and summer novice ordination. However, no 2026 (B.E. 2569) announcement has been found confirming the activity schedule, opening hours, new restoration projects, or facility details, so you should call the temple before traveling.",
++  "พ.ศ. 2305": "1759 (B.E. 2305)",
++  "พ.ศ. 2479": "1936 (B.E. 2479)",
++  "พ.ศ. 2483": "1940 (B.E. 2483)",
++  "พ.ศ. 2545": "2002 (B.E. 2545)",
++  "อุโบสถและเจดีย์เป็นโบราณสถานที่ยังใช้งานอยู่ และวัดเป็นสถานปฏิบัติธรรมประจำจังหวัดพังงาแห่งที่ 1 กรมศิลปากรประกาศขึ้นทะเบียนโบราณสถานและกำหนดเขตที่ดินในราชกิจจานุเบกษาเมื่อ 18 ธันวาคม พ.ศ. 2539": "The ubosot and chedi are active historic monuments, and the temple is Phang Nga's first provincial meditation center. The Fine Arts Department announced the registration of the historic monument and the designation of its land boundary in the Royal Gazette on 18 December 1996 (B.E. 2539).",
++  "ชมอาคารก่ออิฐถือปูน หน้าบันและซุ้มประตูหน้าต่างประดับปูนปั้น รวมถึงภาพพระพุทธรูปและลวดลายพันธุ์พฤกษา เป็นหนึ่งในโบราณสถานสำคัญภายในวัดและยังอยู่ในวัดที่มีการใช้งาน วัดตั้งอยู่ริมฝั่งคลองตะกั่วป่าด้านตะวันตก โดยคลองอยู่ทางทิศตะวันออกของวัด": "See the masonry building, with stucco ornament on the pediments and door and window arches, as well as Buddha images and botanical motifs. It is one of the important historic monuments within the temple, which remains in active use. The temple stands on the west bank of Khlong Takua Pa, with the canal to the east of the temple.",
++  "Mapcarta (ข้อมูลจาก OpenStreetMap)": "Mapcarta (data from OpenStreetMap)",
++  "ไทยแลนด์ เยลโล่เพจเจส": "Thailand YellowPages",
++  "สำนักงานพระพุทธศาสนาแห่งชาติ": "สำนักงานพระพุทธศาสนาแห่งชาติ (National Office of Buddhism)",
++  "วัดนิกรวราราม (วัดย่านยาว) · ตะกั่วป่า 101": "Wat Nikornwararam (Wat Yan Yao) · Takua Pa 101",
++  "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"หน้าแรก\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"วัดนิกรวราราม (วัดย่านยาว)\", \"item\": \"https://takuapa101.pages.dev/places/wat-nikorn/\"}]}, {\"@context\": \"https://schema.org\", \"@type\": \"TouristAttraction\", \"name\": \"วัดนิกรวราราม (วัดย่านยาว)\", \"url\": \"https://takuapa101.pages.dev/places/wat-nikorn/\", \"image\": \"https://takuapa101.pages.dev/assets/wat-nikorn.webp\", \"description\": \"เอกสารเชื่อมวัดกับชุมชนและเหตุการณ์สึนามิ พ.ศ. 2547\", \"address\": {\"@type\": \"PostalAddress\", \"streetAddress\": \"บ้านย่านยาว ถนนเพชรเกษม\", \"addressLocality\": \"ตะกั่วป่า\", \"addressRegion\": \"พังงา\", \"addressCountry\": \"TH\"}, \"geo\": {\"@type\": \"GeoCoordinates\", \"latitude\": 8.8691760396, \"longitude\": 98.348042969}}, {\"@context\": \"https://schema.org\", \"@type\": \"FAQPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"ควรแต่งกายอย่างไร\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"ควรแต่งกายสุภาพเมื่อเข้าสู่ศาสนสถาน\"}}, {\"@type\": \"Question\", \"name\": \"สถานที่นี้มีประวัติความเป็นมาอย่างไร\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"วัดสร้างเมื่อ พ.ศ. 2336 โดยคุณตาแก้วและคุณตาราม วัดได้รับพระราชทานวิสุงคามสีมาใน พ.ศ. 2385\"}}, {\"@type\": \"Question\", \"name\": \"มีจุดเด่นอะไรให้ชม\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"จุดเด่นที่ยืนยันได้คือประวัติการก่อตั้งใน พ.ศ. 2336 และการได้รับวิสุงคามสีมาใน พ.ศ. 2385 วัดเคยใช้รวบรวมศพผู้ประสบภัยเพื่อรอการตรวจพิสูจน์เอกลักษณ์บุคคล\"}}]}]": "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Wat Nikornwararam (Wat Yan Yao)\", \"item\": \"https://takuapa101.pages.dev/places/wat-nikorn/\"}]}, {\"@context\": \"https://schema.org\", \"@type\": \"TouristAttraction\", \"name\": \"Wat Nikornwararam (Wat Yan Yao)\", \"url\": \"https://takuapa101.pages.dev/places/wat-nikorn/\", \"image\": \"https://takuapa101.pages.dev/assets/wat-nikorn.webp\", \"description\": \"Documentation linking the temple with the community and the 2004 tsunami\", \"address\": {\"@type\": \"PostalAddress\", \"streetAddress\": \"Yan Yao Village, Phetkasem Road\", \"addressLocality\": \"Takua Pa\", \"addressRegion\": \"Phang Nga\", \"addressCountry\": \"TH\"}, \"geo\": {\"@type\": \"GeoCoordinates\", \"latitude\": 8.8691760396, \"longitude\": 98.348042969}}, {\"@context\": \"https://schema.org\", \"@type\": \"FAQPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"How should I dress?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Dress respectfully when entering a religious site.\"}}, {\"@type\": \"Question\", \"name\": \"What is the history of this place?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"The temple was built in 1793 (B.E. 2336) by Khun Ta Kaeo and Khun Ta Ram. It received royal designation of a Wisungkhamsima boundary in 1842 (B.E. 2385).\"}}, {\"@type\": \"Question\", \"name\": \"What is there to see?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Confirmed highlights are its founding in 1793 (B.E. 2336) and its receipt of a Wisungkhamsima boundary in 1842 (B.E. 2385). The temple was once used to gather victims' remains while awaiting forensic identification.\"}}]}]",
++  "พ.ศ. 2336·2385 / ค.ศ. 1793·1842": "B.E. 2336·2385 / C.E. 1793·1842",
++  "วัดนิกรวราราม หรือวัดย่านยาว เริ่มสร้างใน พ.ศ. 2336 โดยคุณตาแก้วและคุณตาราม หลักฐานที่พบยืนยันปีและชื่อผู้ริเริ่ม แต่ยังไม่บอกเหตุผลเชิงรายละเอียดว่าตั้งวัดขึ้นเพื่อภารกิจใดโดยเฉพาะ จึงควรอ่านวัดนี้ในฐานะศาสนสถานของชุมชนท้องถิ่นที่กำลังก่อรูปในลุ่มตะกั่วป่า มากกว่าจะผูกเข้ากับเรื่องเล่าที่ไม่มีหลักฐานตรง": "Wat Nikornwararam, or Wat Yan Yao, began construction in 1793 (B.E. 2336) by Khun Ta Kaeo and Khun Ta Ram. The evidence found confirms the year and the names of the initiators, but does not explain in detail what specific purpose the temple was established for. It is therefore better understood as a religious site of a local community taking shape in the Takua Pa basin, rather than tied to stories without direct evidence.",
++  "เมืองตะกั่วป่าในภาพกว้างมีประวัติเป็นเมืองท่าและแหล่งแร่ดีบุก มีการติดต่อค้าขายทางทะเลและผู้คนหลายกลุ่ม แต่ยังไม่พบหลักฐานเฉพาะวัดที่ยืนยันบทบาทของวัดนิกรวรารามต่อเหมืองดีบุก การค้าทางทะเล คนจีนฮกเกี้ยน หรือระบบเจ้าเมือง จึงไม่สรุปเกินแหล่งข้อมูล": "Takua Pa broadly has a history as a port city and tin-mining area, with maritime trade and many communities. However, no temple-specific evidence has been found confirming Wat Nikornwararam's role in tin mining, maritime trade, Hokkien Chinese communities, or the muang ruler system, so no conclusion is drawn beyond the sources.",
++  "พ.ศ. 2385·2565 / ค.ศ. 1842·2022": "B.E. 2385·2565 / C.E. 1842·2022",
++  "วัดได้รับพระราชทานวิสุงคามสีมาใน พ.ศ. 2385 ซึ่งเป็นหลักฐานสำคัญว่าศาสนสถานได้รับการรับรองพื้นที่ประกอบสังฆกรรมตามแบบแผนของคณะสงฆ์ในเวลานั้น อย่างไรก็ตาม ยังไม่พบเอกสารที่ระบุการบูรณะครั้งใหญ่ การเปลี่ยนมือ หรือช่วงเวลาร้าง": "The temple received a royal Wisungkhamsima boundary designation in 1842 (B.E. 2385), important evidence that the religious site was granted recognized space for monastic acts according to the Sangha's conventions at the time. However, no documents have been found specifying major restoration, a change of ownership, or a period of abandonment.",
++  "หลังสึนามิวันที่ 26 ธันวาคม 2547 วัดถูกใช้เป็นสถานที่รวบรวมศพผู้ประสบภัยเพื่อรอการตรวจพิสูจน์เอกลักษณ์บุคคล บทบาทชั่วคราวนี้ทำให้วัดย่านยาวเป็นส่วนหนึ่งของประวัติศาสตร์การรับมือภัยพิบัติของตะกั่วป่า ต่อมาในวันที่ 30 ตุลาคม 2565 สำนักงานพระพุทธศาสนาจังหวัดพังงาร่วมมอบเอกสารโฉนดที่ดินให้เจ้าอาวาส เป็นหลักฐานการจัดการกรรมสิทธิ์ที่ดินในยุคปัจจุบัน": "After the tsunami on 26 December 2004 (B.E. 2547), the temple was used to gather victims' remains while awaiting forensic identification. This temporary role made Wat Yan Yao part of Takua Pa's disaster-response history. Later, on 30 October 2022 (B.E. 2565), the Phang Nga Provincial Office of Buddhism jointly presented a land-title document to the abbot, evidence of contemporary land-ownership administration.",
++  "สำนักงานพระพุทธศาสนาจังหวัดพังงา · มอบเอกสารโฉนดที่ดิน": "สำนักงานพระพุทธศาสนาจังหวัดพังงา (Phang Nga Provincial Office of Buddhism) · Presentation of a land-title document",
++  "สถาบันนิติวิทยาศาสตร์ · บันทึกเหตุการณ์ 28 ธันวาคม 2547": "สถาบันนิติวิทยาศาสตร์ (Central Institute of Forensic Science) · Incident record, 28 December 2004 (B.E. 2547)",
++  "หลักฐานล่าสุดที่ค้นพบยืนยันว่า วัดยังใช้งานอยู่ มีพระครูนิกรธรรมโสภิตเป็นเจ้าอาวาส และมีพระจำพรรษา โดยฐานข้อมูลวัดระบุการจัดกฐินสามัคคีใน พ.ศ. 2567 และ 2568 ส่วนข่าวราชการ/ข่าวท้องถิ่นยืนยันการมีส่วนร่วมของวัดในกิจกรรมระดับอำเภอและจังหวัด": "The latest evidence found confirms that the temple remains active, with Phra Khru Nikorn Thammasophit as abbot and monks in residence. The temple database records kathin unity ceremonies in 2024 (B.E. 2567) and 2025 (B.E. 2568), while official and local news confirm the temple's participation in district and provincial activities.",
++  "ในช่วงไม่กี่ปีที่ผ่านมา วัดเป็นทั้งพื้นที่ประกอบศาสนกิจและพื้นที่สาธารณะ: ปี 2567 ใช้เป็นศูนย์รับบริจาคช่วยผู้ประสบอุทกภัยภาคเหนือ และมีการตรวจเยี่ยมโครงการวัด ประชา รัฐ สร้างสุขในฐานะวัดต้นแบบระดับภาคใต้ ทั้งนี้ยังไม่พบข้อมูลที่ยืนยันเวลาเปิด-ปิดสำหรับนักท่องเที่ยว สภาพอาคารโดยละเอียด หรือโครงการบูรณะเฉพาะวัดในปี 2569": "In recent years, the temple has served both religious and public functions: in 2024 (B.E. 2567), it was used as a donation center for flood victims in northern Thailand, and the Wat Pracha Rath Sang Sook project was inspected there as a model temple at the southern regional level. No information has yet been found confirming visitor opening hours, detailed building conditions, or a temple-specific restoration project in 2026 (B.E. 2569).",
++  "DMC · โครงการกฐินสามัคคีทั่วไทย 10,000 วัด": "DMC · Nationwide Kathin Unity Project for 10,000 Temples",
++  "สยามรัฐ · ศูนย์รับบริจาคช่วยผู้ประสบภัยน้ำท่วม": "สยามรัฐ (Siam Rath) · Donation center for flood victims",
++  "Ride Explorer · ตรวจเยี่ยมวัดต้นแบบ": "Ride Explorer · Inspection visit to a model temple",
++  "TOPNEWS · สืบสานสงกรานต์เมืองเก่าตะกั่วป่า": "TOPNEWS · Continuing the Songkran tradition in Takua Pa Old Town",
++  "พ.ศ. 2336": "1793 (B.E. 2336)",
++  "พ.ศ. 2385": "1842 (B.E. 2385)",
++  "26 ธันวาคม 2547": "26 December 2004 (B.E. 2547)",
++  "30 ตุลาคม 2565": "30 October 2022 (B.E. 2565)",
++  "22 กันยายน 2567": "22 September 2024 (B.E. 2567)",
++  "2024-09-22 · สยามรัฐ": "2024-09-22 · สยามรัฐ (Siam Rath)",
++  "2022-10-30 · สำนักงานพระพุทธศาสนาจังหวัดพังงา": "2022-10-30 · สำนักงานพระพุทธศาสนาจังหวัดพังงา (Phang Nga Provincial Office of Buddhism)",
++  "วัดสร้างเมื่อ พ.ศ. 2336 โดยคุณตาแก้วและคุณตาราม วัดได้รับพระราชทานวิสุงคามสีมาใน พ.ศ. 2385": "The temple was built in 1793 (B.E. 2336) by Khun Ta Kaeo and Khun Ta Ram. It received a royal Wisungkhamsima boundary designation in 1842 (B.E. 2385).",
++  "จุดเด่นที่ยืนยันได้คือประวัติการก่อตั้งใน พ.ศ. 2336 และการได้รับวิสุงคามสีมาใน พ.ศ. 2385 วัดเคยใช้รวบรวมศพผู้ประสบภัยเพื่อรอการตรวจพิสูจน์เอกลักษณ์บุคคล": "Confirmed highlights are its founding in 1793 (B.E. 2336) and its receipt of a Wisungkhamsima boundary designation in 1842 (B.E. 2385). The temple was once used to gather victims' remains while awaiting forensic identification.",
++  "วัดนิกรวราราม · ClassStart Books": "Wat Nikornwararam · ClassStart Books",
++  "เลาะกินตลาดริมน้ำตะกั่วป่า ถนนคนเดินย่านยาว · YouTube": "Strolling and eating at Takua Pa riverside market, Yan Yao walking street · YouTube",
++  "สถาบันนิติวิทยาศาสตร์ · บันทึกเหตุการณ์สึนามิ": "สถาบันนิติวิทยาศาสตร์ (Central Institute of Forensic Science) · Tsunami incident record",
++  "DMC · วัดนิกรวราราม": "DMC · Wat Nikornwararam",
++  "สยามรัฐ · ศูนย์รับบริจาคช่วยน้ำท่วม": "สยามรัฐ (Siam Rath) · Flood-relief donation center",
++  "TOPNEWS · สงกรานต์เมืองเก่าตะกั่วป่า": "TOPNEWS · Songkran in Takua Pa Old Town",
++  "Ride Explorer · วัดต้นแบบระดับภาคใต้": "Ride Explorer · Southern regional model temple",
++  "แหล่งข้อมูลบางแห่งระบุตำบลไม่ตรงกัน จึงยึดพิกัดและรายการทางการจาก สผ./สำนักงานพระพุทธศาสนาจังหวัดพังงาเป็นหลัก": "Some sources give conflicting subdistrict names, so the coordinates and official listings from สผ./สำนักงานพระพุทธศาสนาจังหวัดพังงา are treated as primary.",
++  "วัดปทุมธารา (วัดหน้าเมือง) · ตะกั่วป่า 101": "Wat Pathumthara (Wat Na Mueang) · Takua Pa 101"
++}
+
+codex
+เสร็จแล้ว เขียนไฟล์ [miss-71faa349c0.json](D:/Siwaracafeweb/output/web/takuapa101-v1/data/i18n/en/missing-parts/miss-71faa349c0.json)
+
+ตรวจสอบด้วย `json.load` แล้ว:
+
+- คีย์ครบ 45 รายการ
+- UTF-8 ถูกต้อง
+- ไม่พบ em-dash หรือ en-dash
+diff --git a/output/web/takuapa101-v1/data/i18n/en/missing-parts/miss-71faa349c0.json b/output/web/takuapa101-v1/data/i18n/en/missing-parts/miss-71faa349c0.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..783bd28355ae9e7953c90c94089771d86c71d078
+--- /dev/null
++++ b/output/web/takuapa101-v1/data/i18n/en/missing-parts/miss-71faa349c0.json
+@@ -0,0 +1,47 @@
++{
++  "อุโบสถและเจดีย์ยังเป็นโบราณสถานที่ใช้งานอยู่ ภายในวัดถูกบรรยายว่าสะอาด ร่มรื่น และเหมาะแก่การปฏิบัติศาสนกิจ วัดยังทำหน้าที่เป็นสถานปฏิบัติธรรมประจำจังหวัดพังงาแห่งที่ 1 จึงเป็นสถานที่ที่คนมาได้ทั้งไหว้พระ ชมงานปูนปั้น และเข้าปฏิบัติธรรม": "The ubosot and chedi remain active historic monuments. The temple grounds are described as clean, shaded, and suitable for religious practice. The temple also serves as Phang Nga's first provincial meditation center, so visitors can come to pay respects, view the stucco work, and practice meditation.",
++  "กิจกรรมที่มีแหล่งอ้างอิงระบุ ได้แก่ ปฏิบัติธรรมเฉลิมพระเกียรติ สวดมนต์ข้ามปี บวชชีพราหมณ์เพื่อถวายเป็นพระราชกุศล และบวชสามเณรภาคฤดูร้อน อย่างไรก็ตาม ยังไม่พบประกาศปี 2569 ที่ยืนยันตารางกิจกรรม เวลาเปิด-ปิด โครงการบูรณะใหม่ หรือรายละเอียดสิ่งอำนวยความสะดวก จึงควรโทรสอบถามวัดก่อนเดินทาง": "Activities identified by referenced sources include meditation practice held in honor of the King, New Year's Eve chanting, ordination as nuns and Brahmin devotees as a royal merit offering, and summer novice ordination. However, no 2026 (B.E. 2569) announcement has been found confirming the activity schedule, opening hours, new restoration projects, or facility details, so you should call the temple before traveling.",
++  "พ.ศ. 2305": "1759 (B.E. 2305)",
++  "พ.ศ. 2479": "1936 (B.E. 2479)",
++  "พ.ศ. 2483": "1940 (B.E. 2483)",
++  "พ.ศ. 2545": "2002 (B.E. 2545)",
++  "อุโบสถและเจดีย์เป็นโบราณสถานที่ยังใช้งานอยู่ และวัดเป็นสถานปฏิบัติธรรมประจำจังหวัดพังงาแห่งที่ 1 กรมศิลปากรประกาศขึ้นทะเบียนโบราณสถานและกำหนดเขตที่ดินในราชกิจจานุเบกษาเมื่อ 18 ธันวาคม พ.ศ. 2539": "The ubosot and chedi are active historic monuments, and the temple is Phang Nga's first provincial meditation center. The Fine Arts Department announced the registration of the historic monument and the designation of its land boundary in the Royal Gazette on 18 December 1996 (B.E. 2539).",
++  "ชมอาคารก่ออิฐถือปูน หน้าบันและซุ้มประตูหน้าต่างประดับปูนปั้น รวมถึงภาพพระพุทธรูปและลวดลายพันธุ์พฤกษา เป็นหนึ่งในโบราณสถานสำคัญภายในวัดและยังอยู่ในวัดที่มีการใช้งาน วัดตั้งอยู่ริมฝั่งคลองตะกั่วป่าด้านตะวันตก โดยคลองอยู่ทางทิศตะวันออกของวัด": "See the masonry building, with stucco ornament on the pediments and door and window arches, as well as Buddha images and botanical motifs. It is one of the important historic monuments within the temple, which remains in active use. The temple stands on the west bank of Khlong Takua Pa, with the canal to the east of the temple.",
++  "Mapcarta (ข้อมูลจาก OpenStreetMap)": "Mapcarta (data from OpenStreetMap)",
++  "ไทยแลนด์ เยลโล่เพจเจส": "Thailand YellowPages",
++  "สำนักงานพระพุทธศาสนาแห่งชาติ": "สำนักงานพระพุทธศาสนาแห่งชาติ (National Office of Buddhism)",
++  "วัดนิกรวราราม (วัดย่านยาว) · ตะกั่วป่า 101": "Wat Nikornwararam (Wat Yan Yao) · Takua Pa 101",
++  "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"หน้าแรก\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"วัดนิกรวราราม (วัดย่านยาว)\", \"item\": \"https://takuapa101.pages.dev/places/wat-nikorn/\"}]}, {\"@context\": \"https://schema.org\", \"@type\": \"TouristAttraction\", \"name\": \"วัดนิกรวราราม (วัดย่านยาว)\", \"url\": \"https://takuapa101.pages.dev/places/wat-nikorn/\", \"image\": \"https://takuapa101.pages.dev/assets/wat-nikorn.webp\", \"description\": \"เอกสารเชื่อมวัดกับชุมชนและเหตุการณ์สึนามิ พ.ศ. 2547\", \"address\": {\"@type\": \"PostalAddress\", \"streetAddress\": \"บ้านย่านยาว ถนนเพชรเกษม\", \"addressLocality\": \"ตะกั่วป่า\", \"addressRegion\": \"พังงา\", \"addressCountry\": \"TH\"}, \"geo\": {\"@type\": \"GeoCoordinates\", \"latitude\": 8.8691760396, \"longitude\": 98.348042969}}, {\"@context\": \"https://schema.org\", \"@type\": \"FAQPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"ควรแต่งกายอย่างไร\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"ควรแต่งกายสุภาพเมื่อเข้าสู่ศาสนสถาน\"}}, {\"@type\": \"Question\", \"name\": \"สถานที่นี้มีประวัติความเป็นมาอย่างไร\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"วัดสร้างเมื่อ พ.ศ. 2336 โดยคุณตาแก้วและคุณตาราม วัดได้รับพระราชทานวิสุงคามสีมาใน พ.ศ. 2385\"}}, {\"@type\": \"Question\", \"name\": \"มีจุดเด่นอะไรให้ชม\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"จุดเด่นที่ยืนยันได้คือประวัติการก่อตั้งใน พ.ศ. 2336 และการได้รับวิสุงคามสีมาใน พ.ศ. 2385 วัดเคยใช้รวบรวมศพผู้ประสบภัยเพื่อรอการตรวจพิสูจน์เอกลักษณ์บุคคล\"}}]}]": "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Wat Nikornwararam (Wat Yan Yao)\", \"item\": \"https://takuapa101.pages.dev/places/wat-nikorn/\"}]}, {\"@context\": \"https://schema.org\", \"@type\": \"TouristAttraction\", \"name\": \"Wat Nikornwararam (Wat Yan Yao)\", \"url\": \"https://takuapa101.pages.dev/places/wat-nikorn/\", \"image\": \"https://takuapa101.pages.dev/assets/wat-nikorn.webp\", \"description\": \"Documentation linking the temple with the community and the 2004 tsunami\", \"address\": {\"@type\": \"PostalAddress\", \"streetAddress\": \"Yan Yao Village, Phetkasem Road\", \"addressLocality\": \"Takua Pa\", \"addressRegion\": \"Phang Nga\", \"addressCountry\": \"TH\"}, \"geo\": {\"@type\": \"GeoCoordinates\", \"latitude\": 8.8691760396, \"longitude\": 98.348042969}}, {\"@context\": \"https://schema.org\", \"@type\": \"FAQPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"How should I dress?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Dress respectfully when entering a religious site.\"}}, {\"@type\": \"Question\", \"name\": \"What is the history of this place?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"The temple was built in 1793 (B.E. 2336) by Khun Ta Kaeo and Khun Ta Ram. It received royal designation of a Wisungkhamsima boundary in 1842 (B.E. 2385).\"}}, {\"@type\": \"Question\", \"name\": \"What is there to see?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Confirmed highlights are its founding in 1793 (B.E. 2336) and its receipt of a Wisungkhamsima boundary in 1842 (B.E. 2385). The temple was once used to gather victims' remains while awaiting forensic identification.\"}}]}]",
++  "พ.ศ. 2336·2385 / ค.ศ. 1793·1842": "B.E. 2336·2385 / C.E. 1793·1842",
++  "วัดนิกรวราราม หรือวัดย่านยาว เริ่มสร้างใน พ.ศ. 2336 โดยคุณตาแก้วและคุณตาราม หลักฐานที่พบยืนยันปีและชื่อผู้ริเริ่ม แต่ยังไม่บอกเหตุผลเชิงรายละเอียดว่าตั้งวัดขึ้นเพื่อภารกิจใดโดยเฉพาะ จึงควรอ่านวัดนี้ในฐานะศาสนสถานของชุมชนท้องถิ่นที่กำลังก่อรูปในลุ่มตะกั่วป่า มากกว่าจะผูกเข้ากับเรื่องเล่าที่ไม่มีหลักฐานตรง": "Wat Nikornwararam, or Wat Yan Yao, began construction in 1793 (B.E. 2336) by Khun Ta Kaeo and Khun Ta Ram. The evidence found confirms the year and the names of the initiators, but does not explain in detail what specific purpose the temple was established for. It is therefore better understood as a religious site of a local community taking shape in the Takua Pa basin, rather than tied to stories without direct evidence.",
++  "เมืองตะกั่วป่าในภาพกว้างมีประวัติเป็นเมืองท่าและแหล่งแร่ดีบุก มีการติดต่อค้าขายทางทะเลและผู้คนหลายกลุ่ม แต่ยังไม่พบหลักฐานเฉพาะวัดที่ยืนยันบทบาทของวัดนิกรวรารามต่อเหมืองดีบุก การค้าทางทะเล คนจีนฮกเกี้ยน หรือระบบเจ้าเมือง จึงไม่สรุปเกินแหล่งข้อมูล": "Takua Pa broadly has a history as a port city and tin-mining area, with maritime trade and many communities. However, no temple-specific evidence has been found confirming Wat Nikornwararam's role in tin mining, maritime trade, Hokkien Chinese communities, or the muang ruler system, so no conclusion is drawn beyond the sources.",
++  "พ.ศ. 2385·2565 / ค.ศ. 1842·2022": "B.E. 2385·2565 / C.E. 1842·2022",
++  "วัดได้รับพระราชทานวิสุงคามสีมาใน พ.ศ. 2385 ซึ่งเป็นหลักฐานสำคัญว่าศาสนสถานได้รับการรับรองพื้นที่ประกอบสังฆกรรมตามแบบแผนของคณะสงฆ์ในเวลานั้น อย่างไรก็ตาม ยังไม่พบเอกสารที่ระบุการบูรณะครั้งใหญ่ การเปลี่ยนมือ หรือช่วงเวลาร้าง": "The temple received a royal Wisungkhamsima boundary designation in 1842 (B.E. 2385), important evidence that the religious site was granted recognized space for monastic acts according to the Sangha's conventions at the time. However, no documents have been found specifying major restoration, a change of ownership, or a period of abandonment.",
++  "หลังสึนามิวันที่ 26 ธันวาคม 2547 วัดถูกใช้เป็นสถานที่รวบรวมศพผู้ประสบภัยเพื่อรอการตรวจพิสูจน์เอกลักษณ์บุคคล บทบาทชั่วคราวนี้ทำให้วัดย่านยาวเป็นส่วนหนึ่งของประวัติศาสตร์การรับมือภัยพิบัติของตะกั่วป่า ต่อมาในวันที่ 30 ตุลาคม 2565 สำนักงานพระพุทธศาสนาจังหวัดพังงาร่วมมอบเอกสารโฉนดที่ดินให้เจ้าอาวาส เป็นหลักฐานการจัดการกรรมสิทธิ์ที่ดินในยุคปัจจุบัน": "After the tsunami on 26 December 2004 (B.E. 2547), the temple was used to gather victims' remains while awaiting forensic identification. This temporary role made Wat Yan Yao part of Takua Pa's disaster-response history. Later, on 30 October 2022 (B.E. 2565), the Phang Nga Provincial Office of Buddhism jointly presented a land-title document to the abbot, evidence of contemporary land-ownership administration.",
++  "สำนักงานพระพุทธศาสนาจังหวัดพังงา · มอบเอกสารโฉนดที่ดิน": "สำนักงานพระพุทธศาสนาจังหวัดพังงา (Phang Nga Provincial Office of Buddhism) · Presentation of a land-title document",
++  "สถาบันนิติวิทยาศาสตร์ · บันทึกเหตุการณ์ 28 ธันวาคม 2547": "สถาบันนิติวิทยาศาสตร์ (Central Institute of Forensic Science) · Incident record, 28 December 2004 (B.E. 2547)",
++  "หลักฐานล่าสุดที่ค้นพบยืนยันว่า วัดยังใช้งานอยู่ มีพระครูนิกรธรรมโสภิตเป็นเจ้าอาวาส และมีพระจำพรรษา โดยฐานข้อมูลวัดระบุการจัดกฐินสามัคคีใน พ.ศ. 2567 และ 2568 ส่วนข่าวราชการ/ข่าวท้องถิ่นยืนยันการมีส่วนร่วมของวัดในกิจกรรมระดับอำเภอและจังหวัด": "The latest evidence found confirms that the temple remains active, with Phra Khru Nikorn Thammasophit as abbot and monks in residence. The temple database records kathin unity ceremonies in 2024 (B.E. 2567) and 2025 (B.E. 2568), while official and local news confirm the temple's participation in district and provincial activities.",
++  "ในช่วงไม่กี่ปีที่ผ่านมา วัดเป็นทั้งพื้นที่ประกอบศาสนกิจและพื้นที่สาธารณะ: ปี 2567 ใช้เป็นศูนย์รับบริจาคช่วยผู้ประสบอุทกภัยภาคเหนือ และมีการตรวจเยี่ยมโครงการวัด ประชา รัฐ สร้างสุขในฐานะวัดต้นแบบระดับภาคใต้ ทั้งนี้ยังไม่พบข้อมูลที่ยืนยันเวลาเปิด-ปิดสำหรับนักท่องเที่ยว สภาพอาคารโดยละเอียด หรือโครงการบูรณะเฉพาะวัดในปี 2569": "In recent years, the temple has served both religious and public functions: in 2024 (B.E. 2567), it was used as a donation center for flood victims in northern Thailand, and the Wat Pracha Rath Sang Sook project was inspected there as a model temple at the southern regional level. No information has yet been found confirming visitor opening hours, detailed building conditions, or a temple-specific restoration project in 2026 (B.E. 2569).",
++  "DMC · โครงการกฐินสามัคคีทั่วไทย 10,000 วัด": "DMC · Nationwide Kathin Unity Project for 10,000 Temples",
++  "สยามรัฐ · ศูนย์รับบริจาคช่วยผู้ประสบภัยน้ำท่วม": "สยามรัฐ (Siam Rath) · Donation center for flood victims",
++  "Ride Explorer · ตรวจเยี่ยมวัดต้นแบบ": "Ride Explorer · Inspection visit to a model temple",
++  "TOPNEWS · สืบสานสงกรานต์เมืองเก่าตะกั่วป่า": "TOPNEWS · Continuing the Songkran tradition in Takua Pa Old Town",
++  "พ.ศ. 2336": "1793 (B.E. 2336)",
++  "พ.ศ. 2385": "1842 (B.E. 2385)",
++  "26 ธันวาคม 2547": "26 December 2004 (B.E. 2547)",
++  "30 ตุลาคม 2565": "30 October 2022 (B.E. 2565)",
++  "22 กันยายน 2567": "22 September 2024 (B.E. 2567)",
++  "2024-09-22 · สยามรัฐ": "2024-09-22 · สยามรัฐ (Siam Rath)",
++  "2022-10-30 · สำนักงานพระพุทธศาสนาจังหวัดพังงา": "2022-10-30 · สำนักงานพระพุทธศาสนาจังหวัดพังงา (Phang Nga Provincial Office of Buddhism)",
++  "วัดสร้างเมื่อ พ.ศ. 2336 โดยคุณตาแก้วและคุณตาราม วัดได้รับพระราชทานวิสุงคามสีมาใน พ.ศ. 2385": "The temple was built in 1793 (B.E. 2336) by Khun Ta Kaeo and Khun Ta Ram. It received a royal Wisungkhamsima boundary designation in 1842 (B.E. 2385).",
++  "จุดเด่นที่ยืนยันได้คือประวัติการก่อตั้งใน พ.ศ. 2336 และการได้รับวิสุงคามสีมาใน พ.ศ. 2385 วัดเคยใช้รวบรวมศพผู้ประสบภัยเพื่อรอการตรวจพิสูจน์เอกลักษณ์บุคคล": "Confirmed highlights are its founding in 1793 (B.E. 2336) and its receipt of a Wisungkhamsima boundary designation in 1842 (B.E. 2385). The temple was once used to gather victims' remains while awaiting forensic identification.",
++  "วัดนิกรวราราม · ClassStart Books": "Wat Nikornwararam · ClassStart Books",
++  "เลาะกินตลาดริมน้ำตะกั่วป่า ถนนคนเดินย่านยาว · YouTube": "Strolling and eating at Takua Pa riverside market, Yan Yao walking street · YouTube",
++  "สถาบันนิติวิทยาศาสตร์ · บันทึกเหตุการณ์สึนามิ": "สถาบันนิติวิทยาศาสตร์ (Central Institute of Forensic Science) · Tsunami incident record",
++  "DMC · วัดนิกรวราราม": "DMC · Wat Nikornwararam",
++  "สยามรัฐ · ศูนย์รับบริจาคช่วยน้ำท่วม": "สยามรัฐ (Siam Rath) · Flood-relief donation center",
++  "TOPNEWS · สงกรานต์เมืองเก่าตะกั่วป่า": "TOPNEWS · Songkran in Takua Pa Old Town",
++  "Ride Explorer · วัดต้นแบบระดับภาคใต้": "Ride Explorer · Southern regional model temple",
++  "แหล่งข้อมูลบางแห่งระบุตำบลไม่ตรงกัน จึงยึดพิกัดและรายการทางการจาก สผ./สำนักงานพระพุทธศาสนาจังหวัดพังงาเป็นหลัก": "Some sources give conflicting subdistrict names, so the coordinates and official listings from สผ./สำนักงานพระพุทธศาสนาจังหวัดพังงา are treated as primary.",
++  "วัดปทุมธารา (วัดหน้าเมือง) · ตะกั่วป่า 101": "Wat Pathumthara (Wat Na Mueang) · Takua Pa 101"
++}
+
+tokens used
+37,633

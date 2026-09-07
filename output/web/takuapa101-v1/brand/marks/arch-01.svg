@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <title>Gabled shophouse arch mark</title>
+  <path fill="#203f39" d="M10 54V25.5L32 10l22 15.5V54H10Z"/>
+  <path fill="#f6f1e6" d="M17 51V29l15-10.6L47 29v22H17Z"/>
+  <path fill="#a3492f" d="M22 51V37c0-5.5 4.5-10 10-10s10 4.5 10 10v14H22Z"/>
+  <path fill="#f6f1e6" d="M27 51V37c0-2.8 2.2-5 5-5s5 2.2 5 5v14H27Z"/>
+  <path fill="#203f39" d="M10 51h44v5H10zM15 23h34v4H15z"/>
+  <path stroke="#203f39" stroke-width="2.8" stroke-linejoin="round" d="M18 34h28M18 43h28M26 29v22M38 29v22"/>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Crossing route mark">
+  <path fill="#f6f1e6" d="M7 46 15 19l13 11 8-18 21 28-7 5H7Z"/>
+  <path fill="#203f39" d="M8 48h48v6H8z"/>
+  <path fill="#a3492f" d="m13 42 12-17 8 7 5-12 13 18-4 3-9-12-5 12-8-8-7 10z"/>
+  <path fill="#203f39" d="m14 36 18-14 18 14-3 4-15-11-15 11z"/>
+  <path fill="#a3492f" d="M23 39h18l-3 6H26z"/>
+  <path fill="#203f39" d="M30 18h4v28h-4z"/>
+</svg>

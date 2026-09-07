@@ -1,0 +1,538 @@
+เสร็จแล้วครับ
+
+เขียนไฟล์ [miss-9b0ef820d5.json](D:/Siwaracafeweb/output/web/takuapa101-v1/data/i18n/en/missing-parts/miss-9b0ef820d5.json) สำเร็จ
+
+ตรวจสอบแล้ว:
+
+- `json.load` ผ่าน
+- คีย์ครบ 45 รายการ
+- UTF-8 ไม่มี BOM
+- ค่าคำแปลไม่มี em-dash/en-dash
+- คีย์ภาษาไทยคงต้นฉบับตรงตัวทุกตัวอักษร
+
+--ERR--
+OpenAI Codex v0.153.4
+--------
+workdir: D:\Siwaracafeweb\output\web\takuapa101-v1
+model: gpt-5.6-luna
+provider: openai
+approval: never
+sandbox: danger-full-access
+reasoning effort: low
+reasoning summaries: none
+session id: 01a07b23-7732-77e3-b01c-d1226c715d43
+--------
+user
+โฟลเดอร์งาน D:\Siwaracafeweb\output\web\takuapa101-v1
+อ่าน `briefs/2026-09-07_english-spec.md` หัวข้อ "กฎการแปล" ให้ครบก่อนลงมือ
+
+แปลข้อความไทยต่อไปนี้เป็นภาษาอังกฤษ · ทั้งหมด 45 รายการ
+ข้อความเหล่านี้มาจากเว็บไกด์เมืองเก่าตะกั่วป่า มีทั้งป้ายสถานะ ปุ่ม หัวข้อ และเนื้อหา
+
+- · ผู้จัดการออนไลน์ · เนื้อหาข่าวอ้างอิงถึงปี 2550 ·
+- ตลาดลานโล่ง
+- · Wongnai · ข้อมูลทั่วไป ·
+- ศูนย์อาหารลานโล่ง
+- · เทศบาลเมืองตะกั่วป่า · คำอธิบายวิดีโอ 1 ก.ย. 2567 ·
+- กั่วป่าโพ้: วันที่บ้านเก่าลุกขึ้นมาเล่าเรื่องตัวเอง · ตะกั่วป่า 101
+- [{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "หน้าแรก", "item": "https://takuapa101.pages.dev/"}, {"@type": "ListItem", "position": 2, "name": "กั่วป่าโพ้: วันที่บ้านเก่าลุกขึ้นมาเล่าเรื่องตัวเอง", "item": "https://takuapa101.pages.dev/stories/kuapapoh/"}]}]
+- เรื่องเล่าตะกั่วป่า · กระทู้เมือง
+- กั่วป่าโพ้ · จดหมายเหตุโครงการ
+- · โครงการกั่วป่าโพ้ · content.json · ส่วน origin, events, openings ·
+- ภาพจากคลังโครงการกั่วป่าโพ้
+- กั่วป่าโพ้ แบรนด์เมืองเก่าตะกั่วป่า
+- ลายกระเบื้องเปอรานากันเมืองเก่า
+- แผ่นเล่าประวัติกั่วป่าโพ้
+- หวุ่ยกุ่น
+- เอกสารเก่าเมืองตะกั่วป่า 1
+- เอกสารเก่าเมืองตะกั่วป่า 2
+- จากทุ่งตึกถึงแม่น้ำตะกั่วป่า: วันที่สายน้ำสร้างเมือง · ตะกั่วป่า 101
+- [{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "หน้าแรก", "item": "https://takuapa101.pages.dev/"}, {"@type": "ListItem", "position": 2, "name": "จากทุ่งตึกถึงแม่น้ำตะกั่วป่า: วันที่สายน้ำสร้างเมือง", "item": "https://takuapa101.pages.dev/stories/water-trade/"}]}]
+- เรื่องเล่าตะกั่วป่า · สายน้ำและการค้า
+- ทุ่งตึกเมืองท่าการค้าโบราณ
+- · กรมศิลปากร · บทความแหล่งโบราณคดีทุ่งตึก ·
+- · สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม (สผ.) · PDF หน้า 11–13, 55–56, 58 ·
+- ฐานข้อมูลแหล่งโบราณคดี: ชุมชนตลาดใหญ่
+- · ศูนย์มานุษยวิทยาสิรินธร · ข้อมูลประวัติศาสตร์ชุมชน ·
+- สะพานเหล็กบุญสูง (โคกขนุน)
+- · ฐานข้อมูลท้องถิ่นภาคใต้ มหาวิทยาลัยสงขลานครินทร์ · หน้าประวัติและภาพรวม ·
+- เอกสารแผนการดำเนินงานด้านสิ่งแวดล้อม พ.ศ.2565
+- · เทศบาลเมืองตะกั่วป่า · ระเบียนโครงการและการจัดการน้ำ ·
+- ข่าวน้ำท่วมตะกั่วป่าและการติดตั้งเครื่องสูบน้ำ
+- · MGR Online · ข่าวภูมิภาค ·
+- ตลาดริมน้ำตะกั่วป่า ร่วมใจประชารัฐ
+- · กรมการค้าภายใน กระทรวงพาณิชย์ · ข้อมูลตลาดต้องชม ·
+- ข่าวเช้า: สะพานเหล็กบุญสูง
+- · NBT2HD · รายการข่าว 30 มกราคม 2569 ·
+- ปฏิทินเทศกาลอาหารทะเล ตลาดริมน้ำตะกั่วป่า
+- · กระทรวงวัฒนธรรม · ปฏิทินกิจกรรมวัฒนธรรม ·
+- ประเพณีตลอดปี · ตะกั่วป่า 101
+- [{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "หน้าแรก", "item": "https://takuapa101.pages.dev/"}, {"@type": "ListItem", "position": 2, "name": "ประเพณีตลอดปี", "item": "https://takuapa101.pages.dev/traditions/"}]}, {"@context": "https://schema.org", "@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": 1, "url": "https://takuapa101.pages.dev/traditions/new-year-alms/"}, {"@type": "ListItem", "position": 2, "url": "https://takuapa101.pages.dev/places/governor-wall/"}, {"@type": "ListItem", "position": 3, "url": "https://takuapa101.pages.dev/traditions/ruler-ceremony/"}, {"@type": "ListItem", "position": 4, "url": "https://takuapa101.pages.dev/places/wat-boromthat/"}, {"@type": "ListItem", "position": 5, "url": "https://takuapa101.pages.dev/traditions/relic-procession/"}, {"@type": "ListItem", "position": 6, "url": "https://takuapa101.pages.dev/places/phra-narai/"}, {"@type": "ListItem", "position": 7, "url": "https://takuapa101.pages.dev/traditions/narai-ceremony/"}, {"@type": "ListItem", "position": 8, "url": "https://takuapa101.pages.dev/places/guan-yu/"}, {"@type": "ListItem", "position": 9, "url": "https://takuapa101.pages.dev/places/pun-thao/"}, {"@type": "ListItem", "position": 10, "url": "https://takuapa101.pages.dev/places/kue-chai/"}, {"@type": "ListItem", "position": 11, "url": "https://takuapa101.pages.dev/places/rong-jae/"}, {"@type": "ListItem", "position": 12, "url": "https://takuapa101.pages.dev/traditions/vegetarian/"}, {"@type": "ListItem", "position": 13, "url": "https://takuapa101.pages.dev/places/wat-khuha/"}, {"@type": "ListItem", "position": 14, "url": "https://takuapa101.pages.dev/places/wat-pathum/"}, {"@type": "ListItem", "position": 15, "url": "https://takuapa101.pages.dev/places/wat-kongkha/"}, {"@type": "ListItem", "position": 16, "url": "https://takuapa101.pages.dev/places/wat-nikorn/"}, {"@type": "ListItem", "position": 17, "url": "https://takuapa101.pages.dev/places/wat-sena/"}, {"@type": "ListItem", "position": 18, "url": "https://takuapa101.pages.dev/traditions/chak-phra/"}, {"@type": "ListItem", "position": 19, "url": "https://takuapa101.pages.dev/places/riverwalk/"}, {"@type": "ListItem", "position": 20, "url": "https://takuapa101.pages.dev/traditions/loy-krathong/"}]}]
+- เรื่องราวของศรัทธาและประเพณีที่อยู่ในปฏิทินของเมือง
+- ประเพณีชักพระ · ตะกั่วป่า 101
+- [{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "หน้าแรก", "item": "https://takuapa101.pages.dev/"}, {"@type": "ListItem", "position": 2, "name": "ประเพณีชักพระ", "item": "https://takuapa101.pages.dev/traditions/chak-phra/"}]}, {"@context": "https://schema.org", "@type": "Event", "name": "ประเพณีชักพระ", "url": "https://takuapa101.pages.dev/traditions/chak-phra/", "image": "https://takuapa101.pages.dev/assets/og/chak-phra.png", "description": "ลากขบวนเรือพระออกจากวัด · ประกวดเรือพระ · การแสดงของแต่ละวัด · สมโภชเรือพระ · การแสดงทางวัฒนธรรม", "location": {"@type": "Place", "name": "ที่ว่าการอำเภอคุระบุรี จังหวัดพังงา (ข้อมูลแหล่งข่าวระบุเช่นนี้ ไม่ใช่ตะกั่วป่า)"}}]
+- ลอยกระทง · ตะกั่วป่า 101
+- [{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "หน้าแรก", "item": "https://takuapa101.pages.dev/"}, {"@type": "ListItem", "position": 2, "name": "ลอยกระทง", "item": "https://takuapa101.pages.dev/traditions/loy-krathong/"}]}, {"@context": "https://schema.org", "@type": "Event", "name": "ลอยกระทง", "url": "https://takuapa101.pages.dev/traditions/loy-krathong/", "image": "https://takuapa101.pages.dev/assets/og/loy-krathong.png", "description": "ลอยกระทง · ประกวดทำกระทง · การแสดงบนเวที · นิทรรศการหรือตกแต่งประดับท่าน้ำ", "location": {"@type": "Place", "name": "คลองตะกั่วป่า ตำบลตะกั่วป่า และบางปีมีจุดที่คลองบางม่วง ตำบลบางม่วง"}}]
+- พิธีบวงสรวงองค์เทวรูปพระนารายณ์และเทพบริวาร · ตะกั่วป่า 101
+
+เขียนไฟล์ `data/i18n/en/missing-parts/miss-9b0ef820d5.json` เป็น JSON object
+คีย์คือข้อความไทยเดิม **เป๊ะตัวต่อตัว** ค่าคือคำแปลอังกฤษ
+```
+{{"ยังไม่ยืนยัน": "Not verified", "ยืนยันแล้ว": "Verified"}}
+```
+
+กฎ:
+- คีย์ต้องเหมือนต้นฉบับทุกตัวอักษร รวมช่องว่างและลูกศร ↗ ห้ามแก้ไข
+- ค่าที่แปลให้คงลูกศร ↗ หรือ · ไว้ถ้าต้นฉบับมี
+- ป้ายสถานะให้สั้น กระชับ เช่น "ยังไม่ยืนยัน" -> "Not verified"
+- ห้ามเพิ่มข้อเท็จจริงที่ต้นฉบับไม่มี · คำกำกับความไม่แน่นอนต้องอยู่ครบ
+- ชื่อวัด ศาลเจ้า ถนน ให้ทับศัพท์ เช่น Wat Kongkha Phimuk, Thanon Si Takua Pa
+- ชื่อหน่วยงานราชการให้เขียนเป็น "ชื่อไทย (English name)"
+- ปีใช้ ค.ศ. พร้อมวงเล็บ พ.ศ. ถ้าต้นฉบับระบุ พ.ศ.
+- ห้าม em-dash และ en-dash · ห้ามคำโฆษณาลอย ๆ
+
+เขียนลง path จริง ห้ามลง scratch · **UTF-8 เท่านั้น**
+เสร็จแล้ว json.load ยืนยันว่าคีย์ครบ 45 รายการ แล้วรายงาน
+
+codex
+ผมจะอ่านหัวข้อ “กฎการแปล” ในไฟล์ brief ให้ครบก่อน จากนั้นจะสร้าง JSON UTF-8 ตามคีย์ต้นฉบับแบบตรงตัว และตรวจด้วย `json.load` พร้อมนับให้ครบ 45 รายการครับ
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'Get-Content -Raw briefs/2026-09-07_english-spec.md' in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 225ms:
+# à¸•à¸°à¸à¸±à¹ˆà¸§à¸›à¹ˆà¸² 101 Â· à¹€à¸§à¸­à¸£à¹Œà¸Šà¸±à¸™à¸ à¸²à¸©à¸²à¸­à¸±à¸‡à¸à¸¤à¸©
+
+à¹‚à¸Ÿà¸¥à¹€à¸”à¸­à¸£à¹Œà¸‡à¸²à¸™ `D:\Siwaracafeweb\output\web\takuapa101-v1`
+static site generator à¸ à¸²à¸©à¸² Python vanilla Â· `build_site.py` + `design.py` + `stories.py` + `seo.py`
+à¹‚à¸”à¹€à¸¡à¸™à¸ˆà¸£à¸´à¸‡ `https://takuapa101.com` Â· à¸•à¸­à¸™à¸™à¸µà¹‰ preview à¸­à¸¢à¸¹à¹ˆà¸—à¸µà¹ˆ `https://takuapa101.pages.dev`
+
+## à¸—à¸³à¹„à¸¡à¸•à¹‰à¸­à¸‡à¸¡à¸µ
+à¹€à¸‚à¸²à¸«à¸¥à¸±à¸à¸­à¸¢à¸¹à¹ˆà¸«à¹ˆà¸²à¸‡à¸•à¸°à¸à¸±à¹ˆà¸§à¸›à¹ˆà¸² 30 à¸à¸¡. à¸¡à¸µà¸™à¸±à¸à¸—à¹ˆà¸­à¸‡à¹€à¸—à¸µà¹ˆà¸¢à¸§à¸¢à¸¸à¹‚à¸£à¸›à¸—à¸±à¹‰à¸‡à¸›à¸µ Â· à¸„à¸³à¸„à¹‰à¸™ `Takua Pa old town`,
+`things to do Takua Pa`, `Takua Pa Sunday market` à¹à¸—à¸šà¹„à¸¡à¹ˆà¸¡à¸µà¹€à¸§à¹‡à¸šà¸—à¸µà¹ˆà¸•à¸­à¸šà¹„à¸”à¹‰à¸ˆà¸£à¸´à¸‡
+à¸™à¸µà¹ˆà¸„à¸·à¸­à¸•à¸¥à¸²à¸”à¸—à¸µà¹ˆà¸§à¹ˆà¸²à¸‡à¸—à¸µà¹ˆà¸ªà¸¸à¸”à¸‚à¸­à¸‡à¹€à¸§à¹‡à¸šà¸™à¸µà¹‰
+
+## à¹‚à¸„à¸£à¸‡à¸—à¸µà¹ˆà¸•à¹‰à¸­à¸‡à¹„à¸”à¹‰
+- à¹„à¸—à¸¢à¸­à¸¢à¸¹à¹ˆà¸—à¸µà¹ˆà¸£à¸²à¸ `/` à¹€à¸«à¸¡à¸·à¸­à¸™à¹€à¸”à¸´à¸¡ Â· à¸­à¸±à¸‡à¸à¸¤à¸©à¸­à¸¢à¸¹à¹ˆà¹ƒà¸•à¹‰ `/en/` (à¹€à¸Šà¹ˆà¸™ `/en/places/tao-ming/`)
+- à¸—à¸¸à¸à¸«à¸™à¹‰à¸²à¸¡à¸µ `<link rel="alternate" hreflang="th">`, `hreflang="en"`, `hreflang="x-default"` à¸Šà¸µà¹‰à¸«à¸™à¹‰à¸²à¹„à¸—à¸¢
+- à¸«à¸™à¹‰à¸²à¸­à¸±à¸‡à¸à¸¤à¸© `<html lang="en">` Â· canonical à¸Šà¸µà¹‰à¸•à¸±à¸§à¹€à¸­à¸‡ Â· sitemap à¸£à¸§à¸¡à¸—à¸±à¹‰à¸‡à¸ªà¸­à¸‡à¸ à¸²à¸©à¸²
+- à¸›à¸¸à¹ˆà¸¡à¸ªà¸¥à¸±à¸šà¸ à¸²à¸©à¸²à¸šà¸™à¸«à¸±à¸§à¹€à¸§à¹‡à¸š (TH / EN) à¹„à¸›à¸«à¸™à¹‰à¸²à¸„à¸¹à¹ˆà¸à¸±à¸™à¹€à¸ªà¸¡à¸­ à¹„à¸¡à¹ˆà¹ƒà¸Šà¹ˆà¸à¸¥à¸±à¸šà¸«à¸™à¹‰à¸²à¹à¸£à¸
+- à¸–à¹‰à¸²à¸«à¸™à¹‰à¸²à¹„à¸«à¸™à¸¢à¸±à¸‡à¹„à¸¡à¹ˆà¸¡à¸µà¸„à¸³à¹à¸›à¸¥ **à¸«à¹‰à¸²à¸¡à¸ªà¸£à¹‰à¸²à¸‡à¸«à¸™à¹‰à¸²à¸­à¸±à¸‡à¸à¸¤à¸©à¹€à¸›à¸¥à¹ˆà¸²** à¹ƒà¸«à¹‰à¸‚à¹‰à¸²à¸¡à¹„à¸›à¹€à¸¥à¸¢ à¹„à¸¡à¹ˆà¸‡à¸±à¹‰à¸™ Google à¹€à¸ˆà¸­à¸«à¸™à¹‰à¸²à¹‚à¸«à¸¥ à¹†
+
+## à¸„à¸³à¹à¸›à¸¥
+à¹€à¸à¹‡à¸šà¹ƒà¸™ `data/i18n/en/` à¹à¸¢à¸à¹„à¸Ÿà¸¥à¹Œ:
+- `ui.json` â€” à¹€à¸¡à¸™à¸¹ à¸›à¸¸à¹ˆà¸¡ à¸«à¸±à¸§à¸‚à¹‰à¸­ section à¸›à¹‰à¸²à¸¢à¸ªà¸–à¸²à¸™à¸° à¸‚à¹‰à¸­à¸„à¸§à¸²à¸¡à¹ƒà¸™à¸•à¸±à¸§à¸à¸£à¸­à¸‡ à¸¯à¸¥à¸¯ (à¸”à¸¶à¸‡à¸ªà¸•à¸£à¸´à¸‡à¸ˆà¸²à¸ design.py, build_site.py, stories.py, trip-page.js, map à¹ƒà¸™ design.js, search.js)
+- `places.json` â€” 27 à¸ªà¸–à¸²à¸™à¸—à¸µà¹ˆ/à¸›à¸£à¸°à¹€à¸žà¸“à¸µ: `name_en`, `lead`, `eras.then/before/now` (headline + body), `highlights`, `getting_there`, `did_you_know`, `visit` labels
+- `stories.json` â€” 5 à¸šà¸—à¸„à¸§à¸²à¸¡: title, dek, lede, sections (heading + paragraphs), pull_quotes, evidence_box
+- `shops.json` â€” à¸„à¸³à¸­à¸˜à¸´à¸šà¸²à¸¢à¸£à¹‰à¸²à¸™ 49 à¸£à¹‰à¸²à¸™ (one_liner) à¹à¸¥à¸°à¸Šà¸·à¹ˆà¸­à¸«à¸¡à¸§à¸”
+
+## à¸à¸Žà¸à¸²à¸£à¹à¸›à¸¥
+1. **à¹à¸›à¸¥à¹€à¸žà¸·à¹ˆà¸­à¸„à¸™à¸­à¹ˆà¸²à¸™à¸ˆà¸£à¸´à¸‡ à¹„à¸¡à¹ˆà¹ƒà¸Šà¹ˆà¹à¸›à¸¥à¸•à¸£à¸‡à¸•à¸±à¸§** Â· à¸Šà¸·à¹ˆà¸­à¹€à¸‰à¸žà¸²à¸°à¹ƒà¸«à¹‰à¸—à¸±à¸šà¸¨à¸±à¸žà¸—à¹Œà¹à¸¥à¹‰à¸§à¸§à¸‡à¹€à¸¥à¹‡à¸šà¸„à¸³à¸­à¸˜à¸´à¸šà¸²à¸¢ à¹€à¸Šà¹ˆà¸™
+   `Wat Boromthat Khiri Khet (the town's relic temple)` Â· `Tao Ming School (the town's first Chinese school)`
+2. à¸Šà¸·à¹ˆà¸­à¸ªà¸–à¸²à¸™à¸—à¸µà¹ˆà¹ƒà¸Šà¹‰à¸£à¸°à¸šà¸šà¸—à¸±à¸šà¸¨à¸±à¸žà¸—à¹Œà¹€à¸”à¸µà¸¢à¸§à¸à¸±à¸™à¸—à¸±à¹‰à¸‡à¹€à¸§à¹‡à¸š Â· à¸—à¸³ `data/i18n/romanisation.json` à¹€à¸›à¹‡à¸™à¸•à¸²à¸£à¸²à¸‡à¸à¸¥à¸²à¸‡
+3. **à¸«à¹‰à¸²à¸¡à¹€à¸žà¸´à¹ˆà¸¡à¸‚à¹‰à¸­à¹€à¸—à¹‡à¸ˆà¸ˆà¸£à¸´à¸‡à¸—à¸µà¹ˆà¹„à¸¡à¹ˆà¸¡à¸µà¹ƒà¸™à¸•à¹‰à¸™à¸‰à¸šà¸±à¸šà¹„à¸—à¸¢** à¹à¸¥à¸°à¸«à¹‰à¸²à¸¡à¸•à¸±à¸”à¸„à¸³à¸à¸³à¸à¸±à¸šà¸„à¸§à¸²à¸¡à¹„à¸¡à¹ˆà¹à¸™à¹ˆà¸™à¸­à¸™à¸—à¸´à¹‰à¸‡
+   `à¸¢à¸±à¸‡à¹„à¸¡à¹ˆà¸¢à¸·à¸™à¸¢à¸±à¸™` à¸•à¹‰à¸­à¸‡à¸à¸¥à¸²à¸¢à¹€à¸›à¹‡à¸™ `not verified` à¹„à¸¡à¹ˆà¹ƒà¸Šà¹ˆà¸«à¸²à¸¢à¹„à¸›
+   `à¸ªà¸±à¸™à¸™à¸´à¸©à¸à¸²à¸™` à¹€à¸›à¹‡à¸™ `suggested, not settled`
+4. à¸­à¸˜à¸´à¸šà¸²à¸¢à¸šà¸£à¸´à¸šà¸—à¸—à¸µà¹ˆà¸„à¸™à¸•à¹ˆà¸²à¸‡à¸Šà¸²à¸•à¸´à¹„à¸¡à¹ˆà¸£à¸¹à¹‰à¹€à¸žà¸´à¹ˆà¸¡à¹„à¸”à¹‰ **à¹€à¸‰à¸žà¸²à¸°à¸—à¸µà¹ˆà¹€à¸›à¹‡à¸™à¸„à¸§à¸²à¸¡à¸£à¸¹à¹‰à¸—à¸±à¹ˆà¸§à¹„à¸›** à¹€à¸Šà¹ˆà¸™ à¸šà¸­à¸à¸§à¹ˆà¸² Loy Krathong à¸„à¸·à¸­
+   à¹€à¸—à¸¨à¸à¸²à¸¥à¸¥à¸­à¸¢à¸à¸£à¸°à¸—à¸‡à¹€à¸”à¸·à¸­à¸™à¸žà¸¤à¸¨à¸ˆà¸´à¸à¸²à¸¢à¸™ Â· à¹à¸•à¹ˆà¸«à¹‰à¸²à¸¡à¹€à¸žà¸´à¹ˆà¸¡à¸‚à¹‰à¸­à¸¡à¸¹à¸¥à¹€à¸‰à¸žà¸²à¸°à¸‚à¸­à¸‡à¸•à¸°à¸à¸±à¹ˆà¸§à¸›à¹ˆà¸²à¸—à¸µà¹ˆà¸•à¹‰à¸™à¸‰à¸šà¸±à¸šà¹„à¸¡à¹ˆà¹„à¸”à¹‰à¸žà¸¹à¸”
+5. à¸«à¸™à¹ˆà¸§à¸¢à¹à¸¥à¸°à¸§à¸±à¸™à¸—à¸µà¹ˆ: à¹ƒà¸Šà¹‰à¸›à¸µ à¸„.à¸¨. à¹ƒà¸™à¸ à¸²à¸©à¸²à¸­à¸±à¸‡à¸à¸¤à¸© à¸žà¸£à¹‰à¸­à¸¡à¸§à¸‡à¹€à¸¥à¹‡à¸š à¸ž.à¸¨. à¸„à¸£à¸±à¹‰à¸‡à¹à¸£à¸à¸—à¸µà¹ˆà¸›à¸£à¸²à¸à¸à¹ƒà¸™à¹à¸•à¹ˆà¸¥à¸°à¸«à¸™à¹‰à¸²
+6. à¹€à¸ªà¸µà¸¢à¸‡à¹€à¸¥à¹ˆà¸²: à¸à¸£à¸°à¸Šà¸±à¸š à¸•à¸£à¸‡à¹„à¸›à¸•à¸£à¸‡à¸¡à¸² à¹à¸šà¸šà¸„à¸¹à¹ˆà¸¡à¸·à¸­à¹€à¸”à¸´à¸™à¸—à¸²à¸‡à¸—à¸µà¹ˆà¸”à¸µ à¹„à¸¡à¹ˆà¹ƒà¸Šà¹ˆà¹‚à¸šà¸£à¸Šà¸±à¸§à¸£à¹Œ à¹„à¸¡à¹ˆà¹ƒà¸Šà¹‰à¸„à¸³à¹‚à¸†à¸©à¸“à¸²à¹€à¸à¸´à¸™à¸ˆà¸£à¸´à¸‡
+   à¸«à¹‰à¸²à¸¡ `hidden gem`, `must-see`, `paradise`, `authentic` à¹à¸šà¸šà¸¥à¸­à¸¢ à¹†
+7. à¸«à¹‰à¸²à¸¡ em-dash à¹à¸¥à¸° en-dash Â· à¹ƒà¸Šà¹‰ `Â·` à¸«à¸£à¸·à¸­à¹€à¸‚à¸µà¸¢à¸™à¹€à¸›à¹‡à¸™à¸›à¸£à¸°à¹‚à¸¢à¸„à¹ƒà¸«à¸¡à¹ˆ
+8. **à¹€à¸‚à¸µà¸¢à¸™à¹„à¸Ÿà¸¥à¹Œà¹€à¸›à¹‡à¸™ UTF-8 à¹€à¸—à¹ˆà¸²à¸™à¸±à¹‰à¸™**
+
+## SEO à¸à¸±à¹ˆà¸‡à¸­à¸±à¸‡à¸à¸¤à¸©
+- title/description à¸•à¹ˆà¸­à¸«à¸™à¹‰à¸²à¹€à¸‚à¸µà¸¢à¸™à¹ƒà¸«à¸¡à¹ˆà¹ƒà¸«à¹‰à¸•à¸£à¸‡à¸„à¸³à¸„à¹‰à¸™à¸­à¸±à¸‡à¸à¸¤à¸© à¹„à¸¡à¹ˆà¹ƒà¸Šà¹ˆà¹à¸›à¸¥ title à¹„à¸—à¸¢à¸•à¸£à¸‡à¸•à¸±à¸§
+- JSON-LD à¸‚à¸­à¸‡à¸«à¸™à¹‰à¸²à¸­à¸±à¸‡à¸à¸¤à¸©à¹ƒà¸Šà¹‰ `inLanguage: "en"` à¹à¸¥à¸°à¸Šà¸·à¹ˆà¸­à¸­à¸±à¸‡à¸à¸¤à¸©
+- à¸„à¸³à¸„à¹‰à¸™à¹€à¸›à¹‰à¸²à¸«à¸¡à¸²à¸¢: `Takua Pa old town`, `Takua Pa Phang Nga`, `things to do Takua Pa`,
+  `Takua Pa Sunday market`, `Khao Lak day trip old town`, `Sino Portuguese Takua Pa`,
+  `Takua Pa temples`, `Takua Pa vegetarian festival`
+
+## à¸•à¸£à¸§à¸ˆà¸à¹ˆà¸­à¸™à¸ˆà¸š
+```
+python build_site.py
+python -c "import glob;print(len(glob.glob('site/en/**/index.html',recursive=True)),'à¸«à¸™à¹‰à¸²à¸­à¸±à¸‡à¸à¸¤à¸©')"
+grep -c hreflang site/index.html
+python validate_site.py
+```
+à¹à¸¥à¹‰à¸§à¹€à¸›à¸´à¸” `/en/`, `/en/places/`, `/en/places/tao-ming/`, `/en/stories/city/` à¸”à¹‰à¸§à¸¢ Playwright
+à¸•à¸£à¸§à¸ˆà¸§à¹ˆà¸²: à¹„à¸¡à¹ˆà¸¡à¸µ console error Â· à¹„à¸¡à¹ˆà¸¡à¸µà¸‚à¹‰à¸­à¸„à¸§à¸²à¸¡à¹„à¸—à¸¢à¸«à¸¥à¸‡à¹ƒà¸™à¸«à¸™à¹‰à¸²à¸­à¸±à¸‡à¸à¸¤à¸© Â· à¸›à¸¸à¹ˆà¸¡à¸ªà¸¥à¸±à¸šà¸ à¸²à¸©à¸²à¹„à¸›à¸«à¸™à¹‰à¸²à¸„à¸¹à¹ˆà¸à¸±à¸™à¸–à¸¹à¸à¸•à¹‰à¸­à¸‡
+
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$b=[System.IO.File]::ReadAllBytes('"'briefs/2026-09-07_english-spec.md'); [Text.Encoding]::UTF8.GetString("'$b)' in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 107ms:
+# ตะกั่วป่า 101 · เวอร์ชันภาษาอังกฤษ
+
+โฟลเดอร์งาน `D:\Siwaracafeweb\output\web\takuapa101-v1`
+static site generator ภาษา Python vanilla · `build_site.py` + `design.py` + `stories.py` + `seo.py`
+โดเมนจริง `https://takuapa101.com` · ตอนนี้ preview อยู่ที่ `https://takuapa101.pages.dev`
+
+## ทำไมต้องมี
+เขาหลักอยู่ห่างตะกั่วป่า 30 กม. มีนักท่องเที่ยวยุโรปทั้งปี · คำค้น `Takua Pa old town`,
+`things to do Takua Pa`, `Takua Pa Sunday market` แทบไม่มีเว็บที่ตอบได้จริง
+นี่คือตลาดที่ว่างที่สุดของเว็บนี้
+
+## โครงที่ต้องได้
+- ไทยอยู่ที่ราก `/` เหมือนเดิม · อังกฤษอยู่ใต้ `/en/` (เช่น `/en/places/tao-ming/`)
+- ทุกหน้ามี `<link rel="alternate" hreflang="th">`, `hreflang="en"`, `hreflang="x-default"` ชี้หน้าไทย
+- หน้าอังกฤษ `<html lang="en">` · canonical ชี้ตัวเอง · sitemap รวมทั้งสองภาษา
+- ปุ่มสลับภาษาบนหัวเว็บ (TH / EN) ไปหน้าคู่กันเสมอ ไม่ใช่กลับหน้าแรก
+- ถ้าหน้าไหนยังไม่มีคำแปล **ห้ามสร้างหน้าอังกฤษเปล่า** ให้ข้ามไปเลย ไม่งั้น Google เจอหน้าโหล ๆ
+
+## คำแปล
+เก็บใน `data/i18n/en/` แยกไฟล์:
+- `ui.json` — เมนู ปุ่ม หัวข้อ section ป้ายสถานะ ข้อความในตัวกรอง ฯลฯ (ดึงสตริงจาก design.py, build_site.py, stories.py, trip-page.js, map ใน design.js, search.js)
+- `places.json` — 27 สถานที่/ประเพณี: `name_en`, `lead`, `eras.then/before/now` (headline + body), `highlights`, `getting_there`, `did_you_know`, `visit` labels
+- `stories.json` — 5 บทความ: title, dek, lede, sections (heading + paragraphs), pull_quotes, evidence_box
+- `shops.json` — คำอธิบายร้าน 49 ร้าน (one_liner) และชื่อหมวด
+
+## กฎการแปล
+1. **แปลเพื่อคนอ่านจริง ไม่ใช่แปลตรงตัว** · ชื่อเฉพาะให้ทับศัพท์แล้ววงเล็บคำอธิบาย เช่น
+   `Wat Boromthat Khiri Khet (the town's relic temple)` · `Tao Ming School (the town's first Chinese school)`
+2. ชื่อสถานที่ใช้ระบบทับศัพท์เดียวกันทั้งเว็บ · ทำ `data/i18n/romanisation.json` เป็นตารางกลาง
+3. **ห้ามเพิ่มข้อเท็จจริงที่ไม่มีในต้นฉบับไทย** และห้ามตัดคำกำกับความไม่แน่นอนทิ้ง
+   `ยังไม่ยืนยัน` ต้องกลายเป็น `not verified` ไม่ใช่หายไป
+   `สันนิษฐาน` เป็น `suggested, not settled`
+4. อธิบายบริบทที่คนต่างชาติไม่รู้เพิ่มได้ **เฉพาะที่เป็นความรู้ทั่วไป** เช่น บอกว่า Loy Krathong คือ
+   เทศกาลลอยกระทงเดือนพฤศจิกายน · แต่ห้ามเพิ่มข้อมูลเฉพาะของตะกั่วป่าที่ต้นฉบับไม่ได้พูด
+5. หน่วยและวันที่: ใช้ปี ค.ศ. ในภาษาอังกฤษ พร้อมวงเล็บ พ.ศ. ครั้งแรกที่ปรากฏในแต่ละหน้า
+6. เสียงเล่า: กระชับ ตรงไปตรงมา แบบคู่มือเดินทางที่ดี ไม่ใช่โบรชัวร์ ไม่ใช้คำโฆษณาเกินจริง
+   ห้าม `hidden gem`, `must-see`, `paradise`, `authentic` แบบลอย ๆ
+7. ห้าม em-dash และ en-dash · ใช้ `·` หรือเขียนเป็นประโยคใหม่
+8. **เขียนไฟล์เป็น UTF-8 เท่านั้น**
+
+## SEO ฝั่งอังกฤษ
+- title/description ต่อหน้าเขียนใหม่ให้ตรงคำค้นอังกฤษ ไม่ใช่แปล title ไทยตรงตัว
+- JSON-LD ของหน้าอังกฤษใช้ `inLanguage: "en"` และชื่ออังกฤษ
+- คำค้นเป้าหมาย: `Takua Pa old town`, `Takua Pa Phang Nga`, `things to do Takua Pa`,
+  `Takua Pa Sunday market`, `Khao Lak day trip old town`, `Sino Portuguese Takua Pa`,
+  `Takua Pa temples`, `Takua Pa vegetarian festival`
+
+## ตรวจก่อนจบ
+```
+python build_site.py
+python -c "import glob;print(len(glob.glob('site/en/**/index.html',recursive=True)),'หน้าอังกฤษ')"
+grep -c hreflang site/index.html
+python validate_site.py
+```
+แล้วเปิด `/en/`, `/en/places/`, `/en/places/tao-ming/`, `/en/stories/city/` ด้วย Playwright
+ตรวจว่า: ไม่มี console error · ไม่มีข้อความไทยหลงในหน้าอังกฤษ · ปุ่มสลับภาษาไปหน้าคู่กันถูกต้อง
+
+
+codex
+อ่านกฎครบแล้วครับ โดยเฉพาะการคงคำกำกับความไม่แน่นอน, ใช้ ค.ศ. พร้อม พ.ศ., ทับศัพท์ชื่อเฉพาะ, คง `·` และห้าม em-dash/en-dash ตอนนี้กำลังเขียนรายการทั้ง 45 รายการลงไฟล์จริงครับ
+apply patch
+patch: completed
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-9b0ef820d5.json
+diff --git a/output/web/takuapa101-v1/data/i18n/en/missing-parts/miss-9b0ef820d5.json b/output/web/takuapa101-v1/data/i18n/en/missing-parts/miss-9b0ef820d5.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..f47e92bb18fc35ad6e1f20a6e982cdefc49b2130
+--- /dev/null
++++ b/output/web/takuapa101-v1/data/i18n/en/missing-parts/miss-9b0ef820d5.json
+@@ -0,0 +1,47 @@
++{
++  "· ผู้จัดการออนไลน์ · เนื้อหาข่าวอ้างอิงถึงปี 2550 ·": "· MGR Online · News content referring to 2007 (B.E. 2550) ·",
++  "ตลาดลานโล่ง": "Lan Loeng Market",
++  "· Wongnai · ข้อมูลทั่วไป ·": "· Wongnai · General information ·",
++  "ศูนย์อาหารลานโล่ง": "Lan Loeng Food Court",
++  "· เทศบาลเมืองตะกั่วป่า · คำอธิบายวิดีโอ 1 ก.ย. 2567 ·": "· Takua Pa Town Municipality (Takua Pa Town Municipality) · Video description, September 1, 2024 (B.E. 2567) ·",
++  "กั่วป่าโพ้: วันที่บ้านเก่าลุกขึ้นมาเล่าเรื่องตัวเอง · ตะกั่วป่า 101": "Kuapapoh: The Day Old Houses Began Telling Their Own Story · Takua Pa 101",
++  "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"หน้าแรก\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"กั่วป่าโพ้: วันที่บ้านเก่าลุกขึ้นมาเล่าเรื่องตัวเอง\", \"item\": \"https://takuapa101.pages.dev/stories/kuapapoh/\"}]}]": "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Kuapapoh: The Day Old Houses Began Telling Their Own Story\", \"item\": \"https://takuapa101.pages.dev/stories/kuapapoh/\"}]}]",
++  "เรื่องเล่าตะกั่วป่า · กระทู้เมือง": "Takua Pa Stories · City Threads",
++  "กั่วป่าโพ้ · จดหมายเหตุโครงการ": "Kuapapoh · Project archive",
++  "· โครงการกั่วป่าโพ้ · content.json · ส่วน origin, events, openings ·": "· Kuapapoh project · content.json · origin, events, and openings sections ·",
++  "ภาพจากคลังโครงการกั่วป่าโพ้": "Images from the Kuapapoh project archive",
++  "กั่วป่าโพ้ แบรนด์เมืองเก่าตะกั่วป่า": "Kuapapoh, the Takua Pa old town brand",
++  "ลายกระเบื้องเปอรานากันเมืองเก่า": "Peranakan tile patterns of the old town",
++  "แผ่นเล่าประวัติกั่วป่าโพ้": "Kuapapoh history panel",
++  "หวุ่ยกุ่น": "Wui Kun",
++  "เอกสารเก่าเมืองตะกั่วป่า 1": "Old Takua Pa town document 1",
++  "เอกสารเก่าเมืองตะกั่วป่า 2": "Old Takua Pa town document 2",
++  "จากทุ่งตึกถึงแม่น้ำตะกั่วป่า: วันที่สายน้ำสร้างเมือง · ตะกั่วป่า 101": "From Thung Tuk to the Takua Pa River: The Day Water Built a Town · Takua Pa 101",
++  "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"หน้าแรก\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"จากทุ่งตึกถึงแม่น้ำตะกั่วป่า: วันที่สายน้ำสร้างเมือง\", \"item\": \"https://takuapa101.pages.dev/stories/water-trade/\"}]}]": "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"From Thung Tuk to the Takua Pa River: The Day Water Built a Town\", \"item\": \"https://takuapa101.pages.dev/stories/water-trade/\"}]}]",
++  "เรื่องเล่าตะกั่วป่า · สายน้ำและการค้า": "Takua Pa Stories · Water and Trade",
++  "ทุ่งตึกเมืองท่าการค้าโบราณ": "Thung Tuk, an ancient trading port",
++  "· กรมศิลปากร · บทความแหล่งโบราณคดีทุ่งตึก ·": "· Fine Arts Department (Fine Arts Department) · Article on the Thung Tuk archaeological site ·",
++  "· สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม (สผ.) · PDF หน้า 11–13, 55–56, 58 ·": "· Office of Natural Resources and Environmental Policy and Planning (ONEP) · PDF pages 11 to 13, 55 to 56, and 58 ·",
++  "ฐานข้อมูลแหล่งโบราณคดี: ชุมชนตลาดใหญ่": "Archaeological site database: Talat Yai Community",
++  "· ศูนย์มานุษยวิทยาสิรินธร · ข้อมูลประวัติศาสตร์ชุมชน ·": "· Princess Maha Chakri Sirindhorn Anthropology Centre (Princess Maha Chakri Sirindhorn Anthropology Centre) · Community history information ·",
++  "สะพานเหล็กบุญสูง (โคกขนุน)": "Bun Sung Iron Bridge (Khok Khanun)",
++  "· ฐานข้อมูลท้องถิ่นภาคใต้ มหาวิทยาลัยสงขลานครินทร์ · หน้าประวัติและภาพรวม ·": "· Southern Thailand Local Database, Prince of Songkla University · History and overview page ·",
++  "เอกสารแผนการดำเนินงานด้านสิ่งแวดล้อม พ.ศ.2565": "Environmental action plan document, 2022 (B.E. 2565)",
++  "· เทศบาลเมืองตะกั่วป่า · ระเบียนโครงการและการจัดการน้ำ ·": "· Takua Pa Town Municipality (Takua Pa Town Municipality) · Project and water management records ·",
++  "ข่าวน้ำท่วมตะกั่วป่าและการติดตั้งเครื่องสูบน้ำ": "News on flooding in Takua Pa and the installation of water pumps",
++  "· MGR Online · ข่าวภูมิภาค ·": "· MGR Online · Regional news ·",
++  "ตลาดริมน้ำตะกั่วป่า ร่วมใจประชารัฐ": "Takua Pa Riverside Market, Ruamjai Pracharat",
++  "· กรมการค้าภายใน กระทรวงพาณิชย์ · ข้อมูลตลาดต้องชม ·": "· Department of Internal Trade, Ministry of Commerce (Department of Internal Trade, Ministry of Commerce) · Talat Tong Chom market information ·",
++  "ข่าวเช้า: สะพานเหล็กบุญสูง": "Morning news: Bun Sung Iron Bridge",
++  "· NBT2HD · รายการข่าว 30 มกราคม 2569 ·": "· NBT2HD · News program, January 30, 2026 (B.E. 2569) ·",
++  "ปฏิทินเทศกาลอาหารทะเล ตลาดริมน้ำตะกั่วป่า": "Seafood festival calendar, Takua Pa Riverside Market",
++  "· กระทรวงวัฒนธรรม · ปฏิทินกิจกรรมวัฒนธรรม ·": "· Ministry of Culture (Ministry of Culture) · Cultural activities calendar ·",
++  "ประเพณีตลอดปี · ตะกั่วป่า 101": "Year-round traditions · Takua Pa 101",
++  "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"หน้าแรก\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"ประเพณีตลอดปี\", \"item\": \"https://takuapa101.pages.dev/traditions/\"}]}, {\"@context\": \"https://schema.org\", \"@type\": \"ItemList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"url\": \"https://takuapa101.pages.dev/traditions/new-year-alms/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"url\": \"https://takuapa101.pages.dev/places/governor-wall/\"}, {\"@type\": \"ListItem\", \"position\": 3, \"url\": \"https://takuapa101.pages.dev/traditions/ruler-ceremony/\"}, {\"@type\": \"ListItem\", \"position\": 4, \"url\": \"https://takuapa101.pages.dev/places/wat-boromthat/\"}, {\"@type\": \"ListItem\", \"position\": 5, \"url\": \"https://takuapa101.pages.dev/traditions/relic-procession/\"}, {\"@type\": \"ListItem\", \"position\": 6, \"url\": \"https://takuapa101.pages.dev/places/phra-narai/\"}, {\"@type\": \"ListItem\", \"position\": 7, \"url\": \"https://takuapa101.pages.dev/traditions/narai-ceremony/\"}, {\"@type\": \"ListItem\", \"position\": 8, \"url\": \"https://takuapa101.pages.dev/places/guan-yu/\"}, {\"@type\": \"ListItem\", \"position\": 9, \"url\": \"https://takuapa101.pages.dev/places/pun-thao/\"}, {\"@type\": \"ListItem\", \"position\": 10, \"url\": \"https://takuapa101.pages.dev/places/kue-chai/\"}, {\"@type\": \"ListItem\", \"position\": 11, \"url\": \"https://takuapa101.pages.dev/places/rong-jae/\"}, {\"@type\": \"ListItem\", \"position\": 12, \"url\": \"https://takuapa101.pages.dev/traditions/vegetarian/\"}, {\"@type\": \"ListItem\", \"position\": 13, \"url\": \"https://takuapa101.pages.dev/places/wat-khuha/\"}, {\"@type\": \"ListItem\", \"position\": 14, \"url\": \"https://takuapa101.pages.dev/places/wat-pathum/\"}, {\"@type\": \"ListItem\", \"position\": 15, \"url\": \"https://takuapa101.pages.dev/places/wat-kongkha/\"}, {\"@type\": \"ListItem\", \"position\": 16, \"url\": \"https://takuapa101.pages.dev/places/wat-nikorn/\"}, {\"@type\": \"ListItem\", \"position\": 17, \"url\": \"https://takuapa101.pages.dev/places/wat-sena/\"}, {\"@type\": \"ListItem\", \"position\": 18, \"url\": \"https://takuapa101.pages.dev/traditions/chak-phra/\"}, {\"@type\": \"ListItem\", \"position\": 19, \"url\": \"https://takuapa101.pages.dev/places/riverwalk/\"}, {\"@type\": \"ListItem\", \"position\": 20, \"url\": \"https://takuapa101.pages.dev/traditions/loy-krathong/\"}]}]": "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Year-round traditions\", \"item\": \"https://takuapa101.pages.dev/traditions/\"}]}, {\"@context\": \"https://schema.org\", \"@type\": \"ItemList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"url\": \"https://takuapa101.pages.dev/traditions/new-year-alms/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"url\": \"https://takuapa101.pages.dev/places/governor-wall/\"}, {\"@type\": \"ListItem\", \"position\": 3, \"url\": \"https://takuapa101.pages.dev/traditions/ruler-ceremony/\"}, {\"@type\": \"ListItem\", \"position\": 4, \"url\": \"https://takuapa101.pages.dev/places/wat-boromthat/\"}, {\"@type\": \"ListItem\", \"position\": 5, \"url\": \"https://takuapa101.pages.dev/traditions/relic-procession/\"}, {\"@type\": \"ListItem\", \"position\": 6, \"url\": \"https://takuapa101.pages.dev/places/phra-narai/\"}, {\"@type\": \"ListItem\", \"position\": 7, \"url\": \"https://takuapa101.pages.dev/traditions/narai-ceremony/\"}, {\"@type\": \"ListItem\", \"position\": 8, \"url\": \"https://takuapa101.pages.dev/places/guan-yu/\"}, {\"@type\": \"ListItem\", \"position\": 9, \"url\": \"https://takuapa101.pages.dev/places/pun-thao/\"}, {\"@type\": \"ListItem\", \"position\": 10, \"url\": \"https://takuapa101.pages.dev/places/kue-chai/\"}, {\"@type\": \"ListItem\", \"position\": 11, \"url\": \"https://takuapa101.pages.dev/places/rong-jae/\"}, {\"@type\": \"ListItem\", \"position\": 12, \"url\": \"https://takuapa101.pages.dev/traditions/vegetarian/\"}, {\"@type\": \"ListItem\", \"position\": 13, \"url\": \"https://takuapa101.pages.dev/places/wat-khuha/\"}, {\"@type\": \"ListItem\", \"position\": 14, \"url\": \"https://takuapa101.pages.dev/places/wat-pathum/\"}, {\"@type\": \"ListItem\", \"position\": 15, \"url\": \"https://takuapa101.pages.dev/places/wat-kongkha/\"}, {\"@type\": \"ListItem\", \"position\": 16, \"url\": \"https://takuapa101.pages.dev/places/wat-nikorn/\"}, {\"@type\": \"ListItem\", \"position\": 17, \"url\": \"https://takuapa101.pages.dev/places/wat-sena/\"}, {\"@type\": \"ListItem\", \"position\": 18, \"url\": \"https://takuapa101.pages.dev/traditions/chak-phra/\"}, {\"@type\": \"ListItem\", \"position\": 19, \"url\": \"https://takuapa101.pages.dev/places/riverwalk/\"}, {\"@type\": \"ListItem\", \"position\": 20, \"url\": \"https://takuapa101.pages.dev/traditions/loy-krathong/\"}]}]",
++  "เรื่องราวของศรัทธาและประเพณีที่อยู่ในปฏิทินของเมือง": "Stories of faith and traditions on the town calendar",
++  "ประเพณีชักพระ · ตะกั่วป่า 101": "Chak Phra Festival · Takua Pa 101",
++  "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"หน้าแรก\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"ประเพณีชักพระ\", \"item\": \"https://takuapa101.pages.dev/traditions/chak-phra/\"}]}, {\"@context\": \"https://schema.org\", \"@type\": \"Event\", \"name\": \"ประเพณีชักพระ\", \"url\": \"https://takuapa101.pages.dev/traditions/chak-phra/\", \"image\": \"https://takuapa101.pages.dev/assets/og/chak-phra.png\", \"description\": \"ลากขบวนเรือพระออกจากวัด · ประกวดเรือพระ · การแสดงของแต่ละวัด · สมโภชเรือพระ · การแสดงทางวัฒนธรรม\", \"location\": {\"@type\": \"Place\", \"name\": \"ที่ว่าการอำเภอคุระบุรี จังหวัดพังงา (ข้อมูลแหล่งข่าวระบุเช่นนี้ ไม่ใช่ตะกั่วป่า)\"}}]": "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Chak Phra Festival\", \"item\": \"https://takuapa101.pages.dev/traditions/chak-phra/\"}]}, {\"@context\": \"https://schema.org\", \"@type\": \"Event\", \"name\": \"Chak Phra Festival\", \"url\": \"https://takuapa101.pages.dev/traditions/chak-phra/\", \"image\": \"https://takuapa101.pages.dev/assets/og/chak-phra.png\", \"description\": \"Pulling a ceremonial boat procession from the temple · ceremonial boat competition · performances by each temple · ceremonial boat celebrations · cultural performances\", \"location\": {\"@type\": \"Place\", \"name\": \"Kuraburi District Office, Phang Nga Province (the source identifies this location, not Takua Pa)\"}}]",
++  "ลอยกระทง · ตะกั่วป่า 101": "Loy Krathong · Takua Pa 101",
++  "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"หน้าแรก\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"ลอยกระทง\", \"item\": \"https://takuapa101.pages.dev/traditions/loy-krathong/\"}]}, {\"@context\": \"https://schema.org\", \"@type\": \"Event\", \"name\": \"ลอยกระทง\", \"url\": \"https://takuapa101.pages.dev/traditions/loy-krathong/\", \"image\": \"https://takuapa101.pages.dev/assets/og/loy-krathong.png\", \"description\": \"ลอยกระทง · ประกวดทำกระทง · การแสดงบนเวที · นิทรรศการหรือตกแต่งประดับท่าน้ำ\", \"location\": {\"@type\": \"Place\", \"name\": \"คลองตะกั่วป่า ตำบลตะกั่วป่า และบางปีมีจุดที่คลองบางม่วง ตำบลบางม่วง\"}}]": "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Loy Krathong\", \"item\": \"https://takuapa101.pages.dev/traditions/loy-krathong/\"}]}, {\"@context\": \"https://schema.org\", \"@type\": \"Event\", \"name\": \"Loy Krathong\", \"url\": \"https://takuapa101.pages.dev/traditions/loy-krathong/\", \"image\": \"https://takuapa101.pages.dev/assets/og/loy-krathong.png\", \"description\": \"Loy Krathong · krathong-making competition · stage performances · exhibitions or riverside decorations\", \"location\": {\"@type\": \"Place\", \"name\": \"Takua Pa Canal in Takua Pa Subdistrict, with some years also having a site at Bang Muang Canal in Bang Muang Subdistrict\"}}]",
++  "พิธีบวงสรวงองค์เทวรูปพระนารายณ์และเทพบริวาร · ตะกั่วป่า 101": "Worship ceremony for the statue of Phra Narai and attendant deities · Takua Pa 101"
++}
+
+diff --git a/output/web/takuapa101-v1/data/i18n/en/missing-parts/miss-9b0ef820d5.json b/output/web/takuapa101-v1/data/i18n/en/missing-parts/miss-9b0ef820d5.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..f47e92bb18fc35ad6e1f20a6e982cdefc49b2130
+--- /dev/null
++++ b/output/web/takuapa101-v1/data/i18n/en/missing-parts/miss-9b0ef820d5.json
+@@ -0,0 +1,47 @@
++{
++  "· ผู้จัดการออนไลน์ · เนื้อหาข่าวอ้างอิงถึงปี 2550 ·": "· MGR Online · News content referring to 2007 (B.E. 2550) ·",
++  "ตลาดลานโล่ง": "Lan Loeng Market",
++  "· Wongnai · ข้อมูลทั่วไป ·": "· Wongnai · General information ·",
++  "ศูนย์อาหารลานโล่ง": "Lan Loeng Food Court",
++  "· เทศบาลเมืองตะกั่วป่า · คำอธิบายวิดีโอ 1 ก.ย. 2567 ·": "· Takua Pa Town Municipality (Takua Pa Town Municipality) · Video description, September 1, 2024 (B.E. 2567) ·",
++  "กั่วป่าโพ้: วันที่บ้านเก่าลุกขึ้นมาเล่าเรื่องตัวเอง · ตะกั่วป่า 101": "Kuapapoh: The Day Old Houses Began Telling Their Own Story · Takua Pa 101",
++  "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"หน้าแรก\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"กั่วป่าโพ้: วันที่บ้านเก่าลุกขึ้นมาเล่าเรื่องตัวเอง\", \"item\": \"https://takuapa101.pages.dev/stories/kuapapoh/\"}]}]": "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Kuapapoh: The Day Old Houses Began Telling Their Own Story\", \"item\": \"https://takuapa101.pages.dev/stories/kuapapoh/\"}]}]",
++  "เรื่องเล่าตะกั่วป่า · กระทู้เมือง": "Takua Pa Stories · City Threads",
++  "กั่วป่าโพ้ · จดหมายเหตุโครงการ": "Kuapapoh · Project archive",
++  "· โครงการกั่วป่าโพ้ · content.json · ส่วน origin, events, openings ·": "· Kuapapoh project · content.json · origin, events, and openings sections ·",
++  "ภาพจากคลังโครงการกั่วป่าโพ้": "Images from the Kuapapoh project archive",
++  "กั่วป่าโพ้ แบรนด์เมืองเก่าตะกั่วป่า": "Kuapapoh, the Takua Pa old town brand",
++  "ลายกระเบื้องเปอรานากันเมืองเก่า": "Peranakan tile patterns of the old town",
++  "แผ่นเล่าประวัติกั่วป่าโพ้": "Kuapapoh history panel",
++  "หวุ่ยกุ่น": "Wui Kun",
++  "เอกสารเก่าเมืองตะกั่วป่า 1": "Old Takua Pa town document 1",
++  "เอกสารเก่าเมืองตะกั่วป่า 2": "Old Takua Pa town document 2",
++  "จากทุ่งตึกถึงแม่น้ำตะกั่วป่า: วันที่สายน้ำสร้างเมือง · ตะกั่วป่า 101": "From Thung Tuk to the Takua Pa River: The Day Water Built a Town · Takua Pa 101",
++  "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"หน้าแรก\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"จากทุ่งตึกถึงแม่น้ำตะกั่วป่า: วันที่สายน้ำสร้างเมือง\", \"item\": \"https://takuapa101.pages.dev/stories/water-trade/\"}]}]": "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"From Thung Tuk to the Takua Pa River: The Day Water Built a Town\", \"item\": \"https://takuapa101.pages.dev/stories/water-trade/\"}]}]",
++  "เรื่องเล่าตะกั่วป่า · สายน้ำและการค้า": "Takua Pa Stories · Water and Trade",
++  "ทุ่งตึกเมืองท่าการค้าโบราณ": "Thung Tuk, an ancient trading port",
++  "· กรมศิลปากร · บทความแหล่งโบราณคดีทุ่งตึก ·": "· Fine Arts Department (Fine Arts Department) · Article on the Thung Tuk archaeological site ·",
++  "· สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม (สผ.) · PDF หน้า 11–13, 55–56, 58 ·": "· Office of Natural Resources and Environmental Policy and Planning (ONEP) · PDF pages 11 to 13, 55 to 56, and 58 ·",
++  "ฐานข้อมูลแหล่งโบราณคดี: ชุมชนตลาดใหญ่": "Archaeological site database: Talat Yai Community",
++  "· ศูนย์มานุษยวิทยาสิรินธร · ข้อมูลประวัติศาสตร์ชุมชน ·": "· Princess Maha Chakri Sirindhorn Anthropology Centre (Princess Maha Chakri Sirindhorn Anthropology Centre) · Community history information ·",
++  "สะพานเหล็กบุญสูง (โคกขนุน)": "Bun Sung Iron Bridge (Khok Khanun)",
++  "· ฐานข้อมูลท้องถิ่นภาคใต้ มหาวิทยาลัยสงขลานครินทร์ · หน้าประวัติและภาพรวม ·": "· Southern Thailand Local Database, Prince of Songkla University · History and overview page ·",
++  "เอกสารแผนการดำเนินงานด้านสิ่งแวดล้อม พ.ศ.2565": "Environmental action plan document, 2022 (B.E. 2565)",
++  "· เทศบาลเมืองตะกั่วป่า · ระเบียนโครงการและการจัดการน้ำ ·": "· Takua Pa Town Municipality (Takua Pa Town Municipality) · Project and water management records ·",
++  "ข่าวน้ำท่วมตะกั่วป่าและการติดตั้งเครื่องสูบน้ำ": "News on flooding in Takua Pa and the installation of water pumps",
++  "· MGR Online · ข่าวภูมิภาค ·": "· MGR Online · Regional news ·",
++  "ตลาดริมน้ำตะกั่วป่า ร่วมใจประชารัฐ": "Takua Pa Riverside Market, Ruamjai Pracharat",
++  "· กรมการค้าภายใน กระทรวงพาณิชย์ · ข้อมูลตลาดต้องชม ·": "· Department of Internal Trade, Ministry of Commerce (Department of Internal Trade, Ministry of Commerce) · Talat Tong Chom market information ·",
++  "ข่าวเช้า: สะพานเหล็กบุญสูง": "Morning news: Bun Sung Iron Bridge",
++  "· NBT2HD · รายการข่าว 30 มกราคม 2569 ·": "· NBT2HD · News program, January 30, 2026 (B.E. 2569) ·",
++  "ปฏิทินเทศกาลอาหารทะเล ตลาดริมน้ำตะกั่วป่า": "Seafood festival calendar, Takua Pa Riverside Market",
++  "· กระทรวงวัฒนธรรม · ปฏิทินกิจกรรมวัฒนธรรม ·": "· Ministry of Culture (Ministry of Culture) · Cultural activities calendar ·",
++  "ประเพณีตลอดปี · ตะกั่วป่า 101": "Year-round traditions · Takua Pa 101",
++  "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"หน้าแรก\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"ประเพณีตลอดปี\", \"item\": \"https://takuapa101.pages.dev/traditions/\"}]}, {\"@context\": \"https://schema.org\", \"@type\": \"ItemList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"url\": \"https://takuapa101.pages.dev/traditions/new-year-alms/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"url\": \"https://takuapa101.pages.dev/places/governor-wall/\"}, {\"@type\": \"ListItem\", \"position\": 3, \"url\": \"https://takuapa101.pages.dev/traditions/ruler-ceremony/\"}, {\"@type\": \"ListItem\", \"position\": 4, \"url\": \"https://takuapa101.pages.dev/places/wat-boromthat/\"}, {\"@type\": \"ListItem\", \"position\": 5, \"url\": \"https://takuapa101.pages.dev/traditions/relic-procession/\"}, {\"@type\": \"ListItem\", \"position\": 6, \"url\": \"https://takuapa101.pages.dev/places/phra-narai/\"}, {\"@type\": \"ListItem\", \"position\": 7, \"url\": \"https://takuapa101.pages.dev/traditions/narai-ceremony/\"}, {\"@type\": \"ListItem\", \"position\": 8, \"url\": \"https://takuapa101.pages.dev/places/guan-yu/\"}, {\"@type\": \"ListItem\", \"position\": 9, \"url\": \"https://takuapa101.pages.dev/places/pun-thao/\"}, {\"@type\": \"ListItem\", \"position\": 10, \"url\": \"https://takuapa101.pages.dev/places/kue-chai/\"}, {\"@type\": \"ListItem\", \"position\": 11, \"url\": \"https://takuapa101.pages.dev/places/rong-jae/\"}, {\"@type\": \"ListItem\", \"position\": 12, \"url\": \"https://takuapa101.pages.dev/traditions/vegetarian/\"}, {\"@type\": \"ListItem\", \"position\": 13, \"url\": \"https://takuapa101.pages.dev/places/wat-khuha/\"}, {\"@type\": \"ListItem\", \"position\": 14, \"url\": \"https://takuapa101.pages.dev/places/wat-pathum/\"}, {\"@type\": \"ListItem\", \"position\": 15, \"url\": \"https://takuapa101.pages.dev/places/wat-kongkha/\"}, {\"@type\": \"ListItem\", \"position\": 16, \"url\": \"https://takuapa101.pages.dev/places/wat-nikorn/\"}, {\"@type\": \"ListItem\", \"position\": 17, \"url\": \"https://takuapa101.pages.dev/places/wat-sena/\"}, {\"@type\": \"ListItem\", \"position\": 18, \"url\": \"https://takuapa101.pages.dev/traditions/chak-phra/\"}, {\"@type\": \"ListItem\", \"position\": 19, \"url\": \"https://takuapa101.pages.dev/places/riverwalk/\"}, {\"@type\": \"ListItem\", \"position\": 20, \"url\": \"https://takuapa101.pages.dev/traditions/loy-krathong/\"}]}]": "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Year-round traditions\", \"item\": \"https://takuapa101.pages.dev/traditions/\"}]}, {\"@context\": \"https://schema.org\", \"@type\": \"ItemList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"url\": \"https://takuapa101.pages.dev/traditions/new-year-alms/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"url\": \"https://takuapa101.pages.dev/places/governor-wall/\"}, {\"@type\": \"ListItem\", \"position\": 3, \"url\": \"https://takuapa101.pages.dev/traditions/ruler-ceremony/\"}, {\"@type\": \"ListItem\", \"position\": 4, \"url\": \"https://takuapa101.pages.dev/places/wat-boromthat/\"}, {\"@type\": \"ListItem\", \"position\": 5, \"url\": \"https://takuapa101.pages.dev/traditions/relic-procession/\"}, {\"@type\": \"ListItem\", \"position\": 6, \"url\": \"https://takuapa101.pages.dev/places/phra-narai/\"}, {\"@type\": \"ListItem\", \"position\": 7, \"url\": \"https://takuapa101.pages.dev/traditions/narai-ceremony/\"}, {\"@type\": \"ListItem\", \"position\": 8, \"url\": \"https://takuapa101.pages.dev/places/guan-yu/\"}, {\"@type\": \"ListItem\", \"position\": 9, \"url\": \"https://takuapa101.pages.dev/places/pun-thao/\"}, {\"@type\": \"ListItem\", \"position\": 10, \"url\": \"https://takuapa101.pages.dev/places/kue-chai/\"}, {\"@type\": \"ListItem\", \"position\": 11, \"url\": \"https://takuapa101.pages.dev/places/rong-jae/\"}, {\"@type\": \"ListItem\", \"position\": 12, \"url\": \"https://takuapa101.pages.dev/traditions/vegetarian/\"}, {\"@type\": \"ListItem\", \"position\": 13, \"url\": \"https://takuapa101.pages.dev/places/wat-khuha/\"}, {\"@type\": \"ListItem\", \"position\": 14, \"url\": \"https://takuapa101.pages.dev/places/wat-pathum/\"}, {\"@type\": \"ListItem\", \"position\": 15, \"url\": \"https://takuapa101.pages.dev/places/wat-kongkha/\"}, {\"@type\": \"ListItem\", \"position\": 16, \"url\": \"https://takuapa101.pages.dev/places/wat-nikorn/\"}, {\"@type\": \"ListItem\", \"position\": 17, \"url\": \"https://takuapa101.pages.dev/places/wat-sena/\"}, {\"@type\": \"ListItem\", \"position\": 18, \"url\": \"https://takuapa101.pages.dev/traditions/chak-phra/\"}, {\"@type\": \"ListItem\", \"position\": 19, \"url\": \"https://takuapa101.pages.dev/places/riverwalk/\"}, {\"@type\": \"ListItem\", \"position\": 20, \"url\": \"https://takuapa101.pages.dev/traditions/loy-krathong/\"}]}]",
++  "เรื่องราวของศรัทธาและประเพณีที่อยู่ในปฏิทินของเมือง": "Stories of faith and traditions on the town calendar",
++  "ประเพณีชักพระ · ตะกั่วป่า 101": "Chak Phra Festival · Takua Pa 101",
++  "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"หน้าแรก\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"ประเพณีชักพระ\", \"item\": \"https://takuapa101.pages.dev/traditions/chak-phra/\"}]}, {\"@context\": \"https://schema.org\", \"@type\": \"Event\", \"name\": \"ประเพณีชักพระ\", \"url\": \"https://takuapa101.pages.dev/traditions/chak-phra/\", \"image\": \"https://takuapa101.pages.dev/assets/og/chak-phra.png\", \"description\": \"ลากขบวนเรือพระออกจากวัด · ประกวดเรือพระ · การแสดงของแต่ละวัด · สมโภชเรือพระ · การแสดงทางวัฒนธรรม\", \"location\": {\"@type\": \"Place\", \"name\": \"ที่ว่าการอำเภอคุระบุรี จังหวัดพังงา (ข้อมูลแหล่งข่าวระบุเช่นนี้ ไม่ใช่ตะกั่วป่า)\"}}]": "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Chak Phra Festival\", \"item\": \"https://takuapa101.pages.dev/traditions/chak-phra/\"}]}, {\"@context\": \"https://schema.org\", \"@type\": \"Event\", \"name\": \"Chak Phra Festival\", \"url\": \"https://takuapa101.pages.dev/traditions/chak-phra/\", \"image\": \"https://takuapa101.pages.dev/assets/og/chak-phra.png\", \"description\": \"Pulling a ceremonial boat procession from the temple · ceremonial boat competition · performances by each temple · ceremonial boat celebrations · cultural performances\", \"location\": {\"@type\": \"Place\", \"name\": \"Kuraburi District Office, Phang Nga Province (the source identifies this location, not Takua Pa)\"}}]",
++  "ลอยกระทง · ตะกั่วป่า 101": "Loy Krathong · Takua Pa 101",
++  "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"หน้าแรก\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"ลอยกระทง\", \"item\": \"https://takuapa101.pages.dev/traditions/loy-krathong/\"}]}, {\"@context\": \"https://schema.org\", \"@type\": \"Event\", \"name\": \"ลอยกระทง\", \"url\": \"https://takuapa101.pages.dev/traditions/loy-krathong/\", \"image\": \"https://takuapa101.pages.dev/assets/og/loy-krathong.png\", \"description\": \"ลอยกระทง · ประกวดทำกระทง · การแสดงบนเวที · นิทรรศการหรือตกแต่งประดับท่าน้ำ\", \"location\": {\"@type\": \"Place\", \"name\": \"คลองตะกั่วป่า ตำบลตะกั่วป่า และบางปีมีจุดที่คลองบางม่วง ตำบลบางม่วง\"}}]": "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Loy Krathong\", \"item\": \"https://takuapa101.pages.dev/traditions/loy-krathong/\"}]}, {\"@context\": \"https://schema.org\", \"@type\": \"Event\", \"name\": \"Loy Krathong\", \"url\": \"https://takuapa101.pages.dev/traditions/loy-krathong/\", \"image\": \"https://takuapa101.pages.dev/assets/og/loy-krathong.png\", \"description\": \"Loy Krathong · krathong-making competition · stage performances · exhibitions or riverside decorations\", \"location\": {\"@type\": \"Place\", \"name\": \"Takua Pa Canal in Takua Pa Subdistrict, with some years also having a site at Bang Muang Canal in Bang Muang Subdistrict\"}}]",
++  "พิธีบวงสรวงองค์เทวรูปพระนารายณ์และเทพบริวาร · ตะกั่วป่า 101": "Worship ceremony for the statue of Phra Narai and attendant deities · Takua Pa 101"
++}
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$p='"'data/i18n/en/missing-parts/miss-9b0ef820d5.json'; "'$o=Get-Content -Raw -Encoding UTF8 $p | ConvertFrom-Json -AsHashtable; $raw=Get-Content -Raw -Encoding UTF8 $p; [pscustomobject]@{json_load='"'ok'; keys="'$o.Count; has_em_dash=$raw.Contains([char]0x2014); has_en_dash=$raw.Contains([char]0x2013); utf8_bom=([IO.File]::ReadAllBytes($p)[0..2] -join '"',')} | Format-List" in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 297ms:
+ConvertFrom-Json : A parameter cannot be found that matches parameter name 'AsHashtable'.
+At line:2 char:112
++ ... ontent -Raw -Encoding UTF8 $p | ConvertFrom-Json -AsHashtable; $raw=G ...
++                                                      ~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [ConvertFrom-Json], ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,Microsoft.PowerShell.Commands.ConvertFromJsonCommand
+ 
+
+
+json_load   : ok
+keys        : 0
+has_em_dash : False
+has_en_dash : True
+utf8_bom    : 123,10,32
+
+
+
+
+diff --git a/output/web/takuapa101-v1/data/i18n/en/missing-parts/miss-9b0ef820d5.json b/output/web/takuapa101-v1/data/i18n/en/missing-parts/miss-9b0ef820d5.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..f47e92bb18fc35ad6e1f20a6e982cdefc49b2130
+--- /dev/null
++++ b/output/web/takuapa101-v1/data/i18n/en/missing-parts/miss-9b0ef820d5.json
+@@ -0,0 +1,47 @@
++{
++  "· ผู้จัดการออนไลน์ · เนื้อหาข่าวอ้างอิงถึงปี 2550 ·": "· MGR Online · News content referring to 2007 (B.E. 2550) ·",
++  "ตลาดลานโล่ง": "Lan Loeng Market",
++  "· Wongnai · ข้อมูลทั่วไป ·": "· Wongnai · General information ·",
++  "ศูนย์อาหารลานโล่ง": "Lan Loeng Food Court",
++  "· เทศบาลเมืองตะกั่วป่า · คำอธิบายวิดีโอ 1 ก.ย. 2567 ·": "· Takua Pa Town Municipality (Takua Pa Town Municipality) · Video description, September 1, 2024 (B.E. 2567) ·",
++  "กั่วป่าโพ้: วันที่บ้านเก่าลุกขึ้นมาเล่าเรื่องตัวเอง · ตะกั่วป่า 101": "Kuapapoh: The Day Old Houses Began Telling Their Own Story · Takua Pa 101",
++  "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"หน้าแรก\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"กั่วป่าโพ้: วันที่บ้านเก่าลุกขึ้นมาเล่าเรื่องตัวเอง\", \"item\": \"https://takuapa101.pages.dev/stories/kuapapoh/\"}]}]": "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Kuapapoh: The Day Old Houses Began Telling Their Own Story\", \"item\": \"https://takuapa101.pages.dev/stories/kuapapoh/\"}]}]",
++  "เรื่องเล่าตะกั่วป่า · กระทู้เมือง": "Takua Pa Stories · City Threads",
++  "กั่วป่าโพ้ · จดหมายเหตุโครงการ": "Kuapapoh · Project archive",
++  "· โครงการกั่วป่าโพ้ · content.json · ส่วน origin, events, openings ·": "· Kuapapoh project · content.json · origin, events, and openings sections ·",
++  "ภาพจากคลังโครงการกั่วป่าโพ้": "Images from the Kuapapoh project archive",
++  "กั่วป่าโพ้ แบรนด์เมืองเก่าตะกั่วป่า": "Kuapapoh, the Takua Pa old town brand",
++  "ลายกระเบื้องเปอรานากันเมืองเก่า": "Peranakan tile patterns of the old town",
++  "แผ่นเล่าประวัติกั่วป่าโพ้": "Kuapapoh history panel",
++  "หวุ่ยกุ่น": "Wui Kun",
++  "เอกสารเก่าเมืองตะกั่วป่า 1": "Old Takua Pa town document 1",
++  "เอกสารเก่าเมืองตะกั่วป่า 2": "Old Takua Pa town document 2",
++  "จากทุ่งตึกถึงแม่น้ำตะกั่วป่า: วันที่สายน้ำสร้างเมือง · ตะกั่วป่า 101": "From Thung Tuk to the Takua Pa River: The Day Water Built a Town · Takua Pa 101",
++  "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"หน้าแรก\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"จากทุ่งตึกถึงแม่น้ำตะกั่วป่า: วันที่สายน้ำสร้างเมือง\", \"item\": \"https://takuapa101.pages.dev/stories/water-trade/\"}]}]": "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"From Thung Tuk to the Takua Pa River: The Day Water Built a Town\", \"item\": \"https://takuapa101.pages.dev/stories/water-trade/\"}]}]",
++  "เรื่องเล่าตะกั่วป่า · สายน้ำและการค้า": "Takua Pa Stories · Water and Trade",
++  "ทุ่งตึกเมืองท่าการค้าโบราณ": "Thung Tuk, an ancient trading port",
++  "· กรมศิลปากร · บทความแหล่งโบราณคดีทุ่งตึก ·": "· Fine Arts Department (Fine Arts Department) · Article on the Thung Tuk archaeological site ·",
++  "· สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม (สผ.) · PDF หน้า 11–13, 55–56, 58 ·": "· Office of Natural Resources and Environmental Policy and Planning (ONEP) · PDF pages 11 to 13, 55 to 56, and 58 ·",
++  "ฐานข้อมูลแหล่งโบราณคดี: ชุมชนตลาดใหญ่": "Archaeological site database: Talat Yai Community",
++  "· ศูนย์มานุษยวิทยาสิรินธร · ข้อมูลประวัติศาสตร์ชุมชน ·": "· Princess Maha Chakri Sirindhorn Anthropology Centre (Princess Maha Chakri Sirindhorn Anthropology Centre) · Community history information ·",
++  "สะพานเหล็กบุญสูง (โคกขนุน)": "Bun Sung Iron Bridge (Khok Khanun)",
++  "· ฐานข้อมูลท้องถิ่นภาคใต้ มหาวิทยาลัยสงขลานครินทร์ · หน้าประวัติและภาพรวม ·": "· Southern Thailand Local Database, Prince of Songkla University · History and overview page ·",
++  "เอกสารแผนการดำเนินงานด้านสิ่งแวดล้อม พ.ศ.2565": "Environmental action plan document, 2022 (B.E. 2565)",
++  "· เทศบาลเมืองตะกั่วป่า · ระเบียนโครงการและการจัดการน้ำ ·": "· Takua Pa Town Municipality (Takua Pa Town Municipality) · Project and water management records ·",
++  "ข่าวน้ำท่วมตะกั่วป่าและการติดตั้งเครื่องสูบน้ำ": "News on flooding in Takua Pa and the installation of water pumps",
++  "· MGR Online · ข่าวภูมิภาค ·": "· MGR Online · Regional news ·",
++  "ตลาดริมน้ำตะกั่วป่า ร่วมใจประชารัฐ": "Takua Pa Riverside Market, Ruamjai Pracharat",
++  "· กรมการค้าภายใน กระทรวงพาณิชย์ · ข้อมูลตลาดต้องชม ·": "· Department of Internal Trade, Ministry of Commerce (Department of Internal Trade, Ministry of Commerce) · Talat Tong Chom market information ·",
++  "ข่าวเช้า: สะพานเหล็กบุญสูง": "Morning news: Bun Sung Iron Bridge",
++  "· NBT2HD · รายการข่าว 30 มกราคม 2569 ·": "· NBT2HD · News program, January 30, 2026 (B.E. 2569) ·",
++  "ปฏิทินเทศกาลอาหารทะเล ตลาดริมน้ำตะกั่วป่า": "Seafood festival calendar, Takua Pa Riverside Market",
++  "· กระทรวงวัฒนธรรม · ปฏิทินกิจกรรมวัฒนธรรม ·": "· Ministry of Culture (Ministry of Culture) · Cultural activities calendar ·",
++  "ประเพณีตลอดปี · ตะกั่วป่า 101": "Year-round traditions · Takua Pa 101",
++  "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"หน้าแรก\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"ประเพณีตลอดปี\", \"item\": \"https://takuapa101.pages.dev/traditions/\"}]}, {\"@context\": \"https://schema.org\", \"@type\": \"ItemList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"url\": \"https://takuapa101.pages.dev/traditions/new-year-alms/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"url\": \"https://takuapa101.pages.dev/places/governor-wall/\"}, {\"@type\": \"ListItem\", \"position\": 3, \"url\": \"https://takuapa101.pages.dev/traditions/ruler-ceremony/\"}, {\"@type\": \"ListItem\", \"position\": 4, \"url\": \"https://takuapa101.pages.dev/places/wat-boromthat/\"}, {\"@type\": \"ListItem\", \"position\": 5, \"url\": \"https://takuapa101.pages.dev/traditions/relic-procession/\"}, {\"@type\": \"ListItem\", \"position\": 6, \"url\": \"https://takuapa101.pages.dev/places/phra-narai/\"}, {\"@type\": \"ListItem\", \"position\": 7, \"url\": \"https://takuapa101.pages.dev/traditions/narai-ceremony/\"}, {\"@type\": \"ListItem\", \"position\": 8, \"url\": \"https://takuapa101.pages.dev/places/guan-yu/\"}, {\"@type\": \"ListItem\", \"position\": 9, \"url\": \"https://takuapa101.pages.dev/places/pun-thao/\"}, {\"@type\": \"ListItem\", \"position\": 10, \"url\": \"https://takuapa101.pages.dev/places/kue-chai/\"}, {\"@type\": \"ListItem\", \"position\": 11, \"url\": \"https://takuapa101.pages.dev/places/rong-jae/\"}, {\"@type\": \"ListItem\", \"position\": 12, \"url\": \"https://takuapa101.pages.dev/traditions/vegetarian/\"}, {\"@type\": \"ListItem\", \"position\": 13, \"url\": \"https://takuapa101.pages.dev/places/wat-khuha/\"}, {\"@type\": \"ListItem\", \"position\": 14, \"url\": \"https://takuapa101.pages.dev/places/wat-pathum/\"}, {\"@type\": \"ListItem\", \"position\": 15, \"url\": \"https://takuapa101.pages.dev/places/wat-kongkha/\"}, {\"@type\": \"ListItem\", \"position\": 16, \"url\": \"https://takuapa101.pages.dev/places/wat-nikorn/\"}, {\"@type\": \"ListItem\", \"position\": 17, \"url\": \"https://takuapa101.pages.dev/places/wat-sena/\"}, {\"@type\": \"ListItem\", \"position\": 18, \"url\": \"https://takuapa101.pages.dev/traditions/chak-phra/\"}, {\"@type\": \"ListItem\", \"position\": 19, \"url\": \"https://takuapa101.pages.dev/places/riverwalk/\"}, {\"@type\": \"ListItem\", \"position\": 20, \"url\": \"https://takuapa101.pages.dev/traditions/loy-krathong/\"}]}]": "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Year-round traditions\", \"item\": \"https://takuapa101.pages.dev/traditions/\"}]}, {\"@context\": \"https://schema.org\", \"@type\": \"ItemList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"url\": \"https://takuapa101.pages.dev/traditions/new-year-alms/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"url\": \"https://takuapa101.pages.dev/places/governor-wall/\"}, {\"@type\": \"ListItem\", \"position\": 3, \"url\": \"https://takuapa101.pages.dev/traditions/ruler-ceremony/\"}, {\"@type\": \"ListItem\", \"position\": 4, \"url\": \"https://takuapa101.pages.dev/places/wat-boromthat/\"}, {\"@type\": \"ListItem\", \"position\": 5, \"url\": \"https://takuapa101.pages.dev/traditions/relic-procession/\"}, {\"@type\": \"ListItem\", \"position\": 6, \"url\": \"https://takuapa101.pages.dev/places/phra-narai/\"}, {\"@type\": \"ListItem\", \"position\": 7, \"url\": \"https://takuapa101.pages.dev/traditions/narai-ceremony/\"}, {\"@type\": \"ListItem\", \"position\": 8, \"url\": \"https://takuapa101.pages.dev/places/guan-yu/\"}, {\"@type\": \"ListItem\", \"position\": 9, \"url\": \"https://takuapa101.pages.dev/places/pun-thao/\"}, {\"@type\": \"ListItem\", \"position\": 10, \"url\": \"https://takuapa101.pages.dev/places/kue-chai/\"}, {\"@type\": \"ListItem\", \"position\": 11, \"url\": \"https://takuapa101.pages.dev/places/rong-jae/\"}, {\"@type\": \"ListItem\", \"position\": 12, \"url\": \"https://takuapa101.pages.dev/traditions/vegetarian/\"}, {\"@type\": \"ListItem\", \"position\": 13, \"url\": \"https://takuapa101.pages.dev/places/wat-khuha/\"}, {\"@type\": \"ListItem\", \"position\": 14, \"url\": \"https://takuapa101.pages.dev/places/wat-pathum/\"}, {\"@type\": \"ListItem\", \"position\": 15, \"url\": \"https://takuapa101.pages.dev/places/wat-kongkha/\"}, {\"@type\": \"ListItem\", \"position\": 16, \"url\": \"https://takuapa101.pages.dev/places/wat-nikorn/\"}, {\"@type\": \"ListItem\", \"position\": 17, \"url\": \"https://takuapa101.pages.dev/places/wat-sena/\"}, {\"@type\": \"ListItem\", \"position\": 18, \"url\": \"https://takuapa101.pages.dev/traditions/chak-phra/\"}, {\"@type\": \"ListItem\", \"position\": 19, \"url\": \"https://takuapa101.pages.dev/places/riverwalk/\"}, {\"@type\": \"ListItem\", \"position\": 20, \"url\": \"https://takuapa101.pages.dev/traditions/loy-krathong/\"}]}]",
++  "เรื่องราวของศรัทธาและประเพณีที่อยู่ในปฏิทินของเมือง": "Stories of faith and traditions on the town calendar",
++  "ประเพณีชักพระ · ตะกั่วป่า 101": "Chak Phra Festival · Takua Pa 101",
++  "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"หน้าแรก\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"ประเพณีชักพระ\", \"item\": \"https://takuapa101.pages.dev/traditions/chak-phra/\"}]}, {\"@context\": \"https://schema.org\", \"@type\": \"Event\", \"name\": \"ประเพณีชักพระ\", \"url\": \"https://takuapa101.pages.dev/traditions/chak-phra/\", \"image\": \"https://takuapa101.pages.dev/assets/og/chak-phra.png\", \"description\": \"ลากขบวนเรือพระออกจากวัด · ประกวดเรือพระ · การแสดงของแต่ละวัด · สมโภชเรือพระ · การแสดงทางวัฒนธรรม\", \"location\": {\"@type\": \"Place\", \"name\": \"ที่ว่าการอำเภอคุระบุรี จังหวัดพังงา (ข้อมูลแหล่งข่าวระบุเช่นนี้ ไม่ใช่ตะกั่วป่า)\"}}]": "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Chak Phra Festival\", \"item\": \"https://takuapa101.pages.dev/traditions/chak-phra/\"}]}, {\"@context\": \"https://schema.org\", \"@type\": \"Event\", \"name\": \"Chak Phra Festival\", \"url\": \"https://takuapa101.pages.dev/traditions/chak-phra/\", \"image\": \"https://takuapa101.pages.dev/assets/og/chak-phra.png\", \"description\": \"Pulling a ceremonial boat procession from the temple · ceremonial boat competition · performances by each temple · ceremonial boat celebrations · cultural performances\", \"location\": {\"@type\": \"Place\", \"name\": \"Kuraburi District Office, Phang Nga Province (the source identifies this location, not Takua Pa)\"}}]",
++  "ลอยกระทง · ตะกั่วป่า 101": "Loy Krathong · Takua Pa 101",
++  "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"หน้าแรก\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"ลอยกระทง\", \"item\": \"https://takuapa101.pages.dev/traditions/loy-krathong/\"}]}, {\"@context\": \"https://schema.org\", \"@type\": \"Event\", \"name\": \"ลอยกระทง\", \"url\": \"https://takuapa101.pages.dev/traditions/loy-krathong/\", \"image\": \"https://takuapa101.pages.dev/assets/og/loy-krathong.png\", \"description\": \"ลอยกระทง · ประกวดทำกระทง · การแสดงบนเวที · นิทรรศการหรือตกแต่งประดับท่าน้ำ\", \"location\": {\"@type\": \"Place\", \"name\": \"คลองตะกั่วป่า ตำบลตะกั่วป่า และบางปีมีจุดที่คลองบางม่วง ตำบลบางม่วง\"}}]": "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Loy Krathong\", \"item\": \"https://takuapa101.pages.dev/traditions/loy-krathong/\"}]}, {\"@context\": \"https://schema.org\", \"@type\": \"Event\", \"name\": \"Loy Krathong\", \"url\": \"https://takuapa101.pages.dev/traditions/loy-krathong/\", \"image\": \"https://takuapa101.pages.dev/assets/og/loy-krathong.png\", \"description\": \"Loy Krathong · krathong-making competition · stage performances · exhibitions or riverside decorations\", \"location\": {\"@type\": \"Place\", \"name\": \"Takua Pa Canal in Takua Pa Subdistrict, with some years also having a site at Bang Muang Canal in Bang Muang Subdistrict\"}}]",
++  "พิธีบวงสรวงองค์เทวรูปพระนารายณ์และเทพบริวาร · ตะกั่วป่า 101": "Worship ceremony for the statue of Phra Narai and attendant deities · Takua Pa 101"
++}
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "python -c \"import json; p='data/i18n/en/missing-parts/miss-9b0ef820d5.json'; raw=open(p,encoding='utf-8').read(); d=json.loads(raw); print('json_load=ok'); print('keys='+str(len(d))); print('utf8_bom='+str(raw.startswith('\\\\ufeff'))); print('translated_values_with_dash='+str(any('—' in v or '–' in v for v in d.values())))\"" in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 174ms:
+json_load=ok
+keys=45
+utf8_bom=False
+translated_values_with_dash=False
+
+diff --git a/output/web/takuapa101-v1/data/i18n/en/missing-parts/miss-9b0ef820d5.json b/output/web/takuapa101-v1/data/i18n/en/missing-parts/miss-9b0ef820d5.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..f47e92bb18fc35ad6e1f20a6e982cdefc49b2130
+--- /dev/null
++++ b/output/web/takuapa101-v1/data/i18n/en/missing-parts/miss-9b0ef820d5.json
+@@ -0,0 +1,47 @@
++{
++  "· ผู้จัดการออนไลน์ · เนื้อหาข่าวอ้างอิงถึงปี 2550 ·": "· MGR Online · News content referring to 2007 (B.E. 2550) ·",
++  "ตลาดลานโล่ง": "Lan Loeng Market",
++  "· Wongnai · ข้อมูลทั่วไป ·": "· Wongnai · General information ·",
++  "ศูนย์อาหารลานโล่ง": "Lan Loeng Food Court",
++  "· เทศบาลเมืองตะกั่วป่า · คำอธิบายวิดีโอ 1 ก.ย. 2567 ·": "· Takua Pa Town Municipality (Takua Pa Town Municipality) · Video description, September 1, 2024 (B.E. 2567) ·",
++  "กั่วป่าโพ้: วันที่บ้านเก่าลุกขึ้นมาเล่าเรื่องตัวเอง · ตะกั่วป่า 101": "Kuapapoh: The Day Old Houses Began Telling Their Own Story · Takua Pa 101",
++  "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"หน้าแรก\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"กั่วป่าโพ้: วันที่บ้านเก่าลุกขึ้นมาเล่าเรื่องตัวเอง\", \"item\": \"https://takuapa101.pages.dev/stories/kuapapoh/\"}]}]": "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Kuapapoh: The Day Old Houses Began Telling Their Own Story\", \"item\": \"https://takuapa101.pages.dev/stories/kuapapoh/\"}]}]",
++  "เรื่องเล่าตะกั่วป่า · กระทู้เมือง": "Takua Pa Stories · City Threads",
++  "กั่วป่าโพ้ · จดหมายเหตุโครงการ": "Kuapapoh · Project archive",
++  "· โครงการกั่วป่าโพ้ · content.json · ส่วน origin, events, openings ·": "· Kuapapoh project · content.json · origin, events, and openings sections ·",
++  "ภาพจากคลังโครงการกั่วป่าโพ้": "Images from the Kuapapoh project archive",
++  "กั่วป่าโพ้ แบรนด์เมืองเก่าตะกั่วป่า": "Kuapapoh, the Takua Pa old town brand",
++  "ลายกระเบื้องเปอรานากันเมืองเก่า": "Peranakan tile patterns of the old town",
++  "แผ่นเล่าประวัติกั่วป่าโพ้": "Kuapapoh history panel",
++  "หวุ่ยกุ่น": "Wui Kun",
++  "เอกสารเก่าเมืองตะกั่วป่า 1": "Old Takua Pa town document 1",
++  "เอกสารเก่าเมืองตะกั่วป่า 2": "Old Takua Pa town document 2",
++  "จากทุ่งตึกถึงแม่น้ำตะกั่วป่า: วันที่สายน้ำสร้างเมือง · ตะกั่วป่า 101": "From Thung Tuk to the Takua Pa River: The Day Water Built a Town · Takua Pa 101",
++  "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"หน้าแรก\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"จากทุ่งตึกถึงแม่น้ำตะกั่วป่า: วันที่สายน้ำสร้างเมือง\", \"item\": \"https://takuapa101.pages.dev/stories/water-trade/\"}]}]": "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"From Thung Tuk to the Takua Pa River: The Day Water Built a Town\", \"item\": \"https://takuapa101.pages.dev/stories/water-trade/\"}]}]",
++  "เรื่องเล่าตะกั่วป่า · สายน้ำและการค้า": "Takua Pa Stories · Water and Trade",
++  "ทุ่งตึกเมืองท่าการค้าโบราณ": "Thung Tuk, an ancient trading port",
++  "· กรมศิลปากร · บทความแหล่งโบราณคดีทุ่งตึก ·": "· Fine Arts Department (Fine Arts Department) · Article on the Thung Tuk archaeological site ·",
++  "· สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม (สผ.) · PDF หน้า 11–13, 55–56, 58 ·": "· Office of Natural Resources and Environmental Policy and Planning (ONEP) · PDF pages 11 to 13, 55 to 56, and 58 ·",
++  "ฐานข้อมูลแหล่งโบราณคดี: ชุมชนตลาดใหญ่": "Archaeological site database: Talat Yai Community",
++  "· ศูนย์มานุษยวิทยาสิรินธร · ข้อมูลประวัติศาสตร์ชุมชน ·": "· Princess Maha Chakri Sirindhorn Anthropology Centre (Princess Maha Chakri Sirindhorn Anthropology Centre) · Community history information ·",
++  "สะพานเหล็กบุญสูง (โคกขนุน)": "Bun Sung Iron Bridge (Khok Khanun)",
++  "· ฐานข้อมูลท้องถิ่นภาคใต้ มหาวิทยาลัยสงขลานครินทร์ · หน้าประวัติและภาพรวม ·": "· Southern Thailand Local Database, Prince of Songkla University · History and overview page ·",
++  "เอกสารแผนการดำเนินงานด้านสิ่งแวดล้อม พ.ศ.2565": "Environmental action plan document, 2022 (B.E. 2565)",
++  "· เทศบาลเมืองตะกั่วป่า · ระเบียนโครงการและการจัดการน้ำ ·": "· Takua Pa Town Municipality (Takua Pa Town Municipality) · Project and water management records ·",
++  "ข่าวน้ำท่วมตะกั่วป่าและการติดตั้งเครื่องสูบน้ำ": "News on flooding in Takua Pa and the installation of water pumps",
++  "· MGR Online · ข่าวภูมิภาค ·": "· MGR Online · Regional news ·",
++  "ตลาดริมน้ำตะกั่วป่า ร่วมใจประชารัฐ": "Takua Pa Riverside Market, Ruamjai Pracharat",
++  "· กรมการค้าภายใน กระทรวงพาณิชย์ · ข้อมูลตลาดต้องชม ·": "· Department of Internal Trade, Ministry of Commerce (Department of Internal Trade, Ministry of Commerce) · Talat Tong Chom market information ·",
++  "ข่าวเช้า: สะพานเหล็กบุญสูง": "Morning news: Bun Sung Iron Bridge",
++  "· NBT2HD · รายการข่าว 30 มกราคม 2569 ·": "· NBT2HD · News program, January 30, 2026 (B.E. 2569) ·",
++  "ปฏิทินเทศกาลอาหารทะเล ตลาดริมน้ำตะกั่วป่า": "Seafood festival calendar, Takua Pa Riverside Market",
++  "· กระทรวงวัฒนธรรม · ปฏิทินกิจกรรมวัฒนธรรม ·": "· Ministry of Culture (Ministry of Culture) · Cultural activities calendar ·",
++  "ประเพณีตลอดปี · ตะกั่วป่า 101": "Year-round traditions · Takua Pa 101",
++  "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"หน้าแรก\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"ประเพณีตลอดปี\", \"item\": \"https://takuapa101.pages.dev/traditions/\"}]}, {\"@context\": \"https://schema.org\", \"@type\": \"ItemList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"url\": \"https://takuapa101.pages.dev/traditions/new-year-alms/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"url\": \"https://takuapa101.pages.dev/places/governor-wall/\"}, {\"@type\": \"ListItem\", \"position\": 3, \"url\": \"https://takuapa101.pages.dev/traditions/ruler-ceremony/\"}, {\"@type\": \"ListItem\", \"position\": 4, \"url\": \"https://takuapa101.pages.dev/places/wat-boromthat/\"}, {\"@type\": \"ListItem\", \"position\": 5, \"url\": \"https://takuapa101.pages.dev/traditions/relic-procession/\"}, {\"@type\": \"ListItem\", \"position\": 6, \"url\": \"https://takuapa101.pages.dev/places/phra-narai/\"}, {\"@type\": \"ListItem\", \"position\": 7, \"url\": \"https://takuapa101.pages.dev/traditions/narai-ceremony/\"}, {\"@type\": \"ListItem\", \"position\": 8, \"url\": \"https://takuapa101.pages.dev/places/guan-yu/\"}, {\"@type\": \"ListItem\", \"position\": 9, \"url\": \"https://takuapa101.pages.dev/places/pun-thao/\"}, {\"@type\": \"ListItem\", \"position\": 10, \"url\": \"https://takuapa101.pages.dev/places/kue-chai/\"}, {\"@type\": \"ListItem\", \"position\": 11, \"url\": \"https://takuapa101.pages.dev/places/rong-jae/\"}, {\"@type\": \"ListItem\", \"position\": 12, \"url\": \"https://takuapa101.pages.dev/traditions/vegetarian/\"}, {\"@type\": \"ListItem\", \"position\": 13, \"url\": \"https://takuapa101.pages.dev/places/wat-khuha/\"}, {\"@type\": \"ListItem\", \"position\": 14, \"url\": \"https://takuapa101.pages.dev/places/wat-pathum/\"}, {\"@type\": \"ListItem\", \"position\": 15, \"url\": \"https://takuapa101.pages.dev/places/wat-kongkha/\"}, {\"@type\": \"ListItem\", \"position\": 16, \"url\": \"https://takuapa101.pages.dev/places/wat-nikorn/\"}, {\"@type\": \"ListItem\", \"position\": 17, \"url\": \"https://takuapa101.pages.dev/places/wat-sena/\"}, {\"@type\": \"ListItem\", \"position\": 18, \"url\": \"https://takuapa101.pages.dev/traditions/chak-phra/\"}, {\"@type\": \"ListItem\", \"position\": 19, \"url\": \"https://takuapa101.pages.dev/places/riverwalk/\"}, {\"@type\": \"ListItem\", \"position\": 20, \"url\": \"https://takuapa101.pages.dev/traditions/loy-krathong/\"}]}]": "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Year-round traditions\", \"item\": \"https://takuapa101.pages.dev/traditions/\"}]}, {\"@context\": \"https://schema.org\", \"@type\": \"ItemList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"url\": \"https://takuapa101.pages.dev/traditions/new-year-alms/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"url\": \"https://takuapa101.pages.dev/places/governor-wall/\"}, {\"@type\": \"ListItem\", \"position\": 3, \"url\": \"https://takuapa101.pages.dev/traditions/ruler-ceremony/\"}, {\"@type\": \"ListItem\", \"position\": 4, \"url\": \"https://takuapa101.pages.dev/places/wat-boromthat/\"}, {\"@type\": \"ListItem\", \"position\": 5, \"url\": \"https://takuapa101.pages.dev/traditions/relic-procession/\"}, {\"@type\": \"ListItem\", \"position\": 6, \"url\": \"https://takuapa101.pages.dev/places/phra-narai/\"}, {\"@type\": \"ListItem\", \"position\": 7, \"url\": \"https://takuapa101.pages.dev/traditions/narai-ceremony/\"}, {\"@type\": \"ListItem\", \"position\": 8, \"url\": \"https://takuapa101.pages.dev/places/guan-yu/\"}, {\"@type\": \"ListItem\", \"position\": 9, \"url\": \"https://takuapa101.pages.dev/places/pun-thao/\"}, {\"@type\": \"ListItem\", \"position\": 10, \"url\": \"https://takuapa101.pages.dev/places/kue-chai/\"}, {\"@type\": \"ListItem\", \"position\": 11, \"url\": \"https://takuapa101.pages.dev/places/rong-jae/\"}, {\"@type\": \"ListItem\", \"position\": 12, \"url\": \"https://takuapa101.pages.dev/traditions/vegetarian/\"}, {\"@type\": \"ListItem\", \"position\": 13, \"url\": \"https://takuapa101.pages.dev/places/wat-khuha/\"}, {\"@type\": \"ListItem\", \"position\": 14, \"url\": \"https://takuapa101.pages.dev/places/wat-pathum/\"}, {\"@type\": \"ListItem\", \"position\": 15, \"url\": \"https://takuapa101.pages.dev/places/wat-kongkha/\"}, {\"@type\": \"ListItem\", \"position\": 16, \"url\": \"https://takuapa101.pages.dev/places/wat-nikorn/\"}, {\"@type\": \"ListItem\", \"position\": 17, \"url\": \"https://takuapa101.pages.dev/places/wat-sena/\"}, {\"@type\": \"ListItem\", \"position\": 18, \"url\": \"https://takuapa101.pages.dev/traditions/chak-phra/\"}, {\"@type\": \"ListItem\", \"position\": 19, \"url\": \"https://takuapa101.pages.dev/places/riverwalk/\"}, {\"@type\": \"ListItem\", \"position\": 20, \"url\": \"https://takuapa101.pages.dev/traditions/loy-krathong/\"}]}]",
++  "เรื่องราวของศรัทธาและประเพณีที่อยู่ในปฏิทินของเมือง": "Stories of faith and traditions on the town calendar",
++  "ประเพณีชักพระ · ตะกั่วป่า 101": "Chak Phra Festival · Takua Pa 101",
++  "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"หน้าแรก\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"ประเพณีชักพระ\", \"item\": \"https://takuapa101.pages.dev/traditions/chak-phra/\"}]}, {\"@context\": \"https://schema.org\", \"@type\": \"Event\", \"name\": \"ประเพณีชักพระ\", \"url\": \"https://takuapa101.pages.dev/traditions/chak-phra/\", \"image\": \"https://takuapa101.pages.dev/assets/og/chak-phra.png\", \"description\": \"ลากขบวนเรือพระออกจากวัด · ประกวดเรือพระ · การแสดงของแต่ละวัด · สมโภชเรือพระ · การแสดงทางวัฒนธรรม\", \"location\": {\"@type\": \"Place\", \"name\": \"ที่ว่าการอำเภอคุระบุรี จังหวัดพังงา (ข้อมูลแหล่งข่าวระบุเช่นนี้ ไม่ใช่ตะกั่วป่า)\"}}]": "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Chak Phra Festival\", \"item\": \"https://takuapa101.pages.dev/traditions/chak-phra/\"}]}, {\"@context\": \"https://schema.org\", \"@type\": \"Event\", \"name\": \"Chak Phra Festival\", \"url\": \"https://takuapa101.pages.dev/traditions/chak-phra/\", \"image\": \"https://takuapa101.pages.dev/assets/og/chak-phra.png\", \"description\": \"Pulling a ceremonial boat procession from the temple · ceremonial boat competition · performances by each temple · ceremonial boat celebrations · cultural performances\", \"location\": {\"@type\": \"Place\", \"name\": \"Kuraburi District Office, Phang Nga Province (the source identifies this location, not Takua Pa)\"}}]",
++  "ลอยกระทง · ตะกั่วป่า 101": "Loy Krathong · Takua Pa 101",
++  "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"หน้าแรก\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"ลอยกระทง\", \"item\": \"https://takuapa101.pages.dev/traditions/loy-krathong/\"}]}, {\"@context\": \"https://schema.org\", \"@type\": \"Event\", \"name\": \"ลอยกระทง\", \"url\": \"https://takuapa101.pages.dev/traditions/loy-krathong/\", \"image\": \"https://takuapa101.pages.dev/assets/og/loy-krathong.png\", \"description\": \"ลอยกระทง · ประกวดทำกระทง · การแสดงบนเวที · นิทรรศการหรือตกแต่งประดับท่าน้ำ\", \"location\": {\"@type\": \"Place\", \"name\": \"คลองตะกั่วป่า ตำบลตะกั่วป่า และบางปีมีจุดที่คลองบางม่วง ตำบลบางม่วง\"}}]": "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Loy Krathong\", \"item\": \"https://takuapa101.pages.dev/traditions/loy-krathong/\"}]}, {\"@context\": \"https://schema.org\", \"@type\": \"Event\", \"name\": \"Loy Krathong\", \"url\": \"https://takuapa101.pages.dev/traditions/loy-krathong/\", \"image\": \"https://takuapa101.pages.dev/assets/og/loy-krathong.png\", \"description\": \"Loy Krathong · krathong-making competition · stage performances · exhibitions or riverside decorations\", \"location\": {\"@type\": \"Place\", \"name\": \"Takua Pa Canal in Takua Pa Subdistrict, with some years also having a site at Bang Muang Canal in Bang Muang Subdistrict\"}}]",
++  "พิธีบวงสรวงองค์เทวรูปพระนารายณ์และเทพบริวาร · ตะกั่วป่า 101": "Worship ceremony for the statue of Phra Narai and attendant deities · Takua Pa 101"
++}
+
+codex
+เสร็จแล้วครับ
+
+เขียนไฟล์ [miss-9b0ef820d5.json](D:/Siwaracafeweb/output/web/takuapa101-v1/data/i18n/en/missing-parts/miss-9b0ef820d5.json) สำเร็จ
+
+ตรวจสอบแล้ว:
+
+- `json.load` ผ่าน
+- คีย์ครบ 45 รายการ
+- UTF-8 ไม่มี BOM
+- ค่าคำแปลไม่มี em-dash/en-dash
+- คีย์ภาษาไทยคงต้นฉบับตรงตัวทุกตัวอักษร
+diff --git a/output/web/takuapa101-v1/data/i18n/en/missing-parts/miss-9b0ef820d5.json b/output/web/takuapa101-v1/data/i18n/en/missing-parts/miss-9b0ef820d5.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..f47e92bb18fc35ad6e1f20a6e982cdefc49b2130
+--- /dev/null
++++ b/output/web/takuapa101-v1/data/i18n/en/missing-parts/miss-9b0ef820d5.json
+@@ -0,0 +1,47 @@
++{
++  "· ผู้จัดการออนไลน์ · เนื้อหาข่าวอ้างอิงถึงปี 2550 ·": "· MGR Online · News content referring to 2007 (B.E. 2550) ·",
++  "ตลาดลานโล่ง": "Lan Loeng Market",
++  "· Wongnai · ข้อมูลทั่วไป ·": "· Wongnai · General information ·",
++  "ศูนย์อาหารลานโล่ง": "Lan Loeng Food Court",
++  "· เทศบาลเมืองตะกั่วป่า · คำอธิบายวิดีโอ 1 ก.ย. 2567 ·": "· Takua Pa Town Municipality (Takua Pa Town Municipality) · Video description, September 1, 2024 (B.E. 2567) ·",
++  "กั่วป่าโพ้: วันที่บ้านเก่าลุกขึ้นมาเล่าเรื่องตัวเอง · ตะกั่วป่า 101": "Kuapapoh: The Day Old Houses Began Telling Their Own Story · Takua Pa 101",
++  "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"หน้าแรก\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"กั่วป่าโพ้: วันที่บ้านเก่าลุกขึ้นมาเล่าเรื่องตัวเอง\", \"item\": \"https://takuapa101.pages.dev/stories/kuapapoh/\"}]}]": "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Kuapapoh: The Day Old Houses Began Telling Their Own Story\", \"item\": \"https://takuapa101.pages.dev/stories/kuapapoh/\"}]}]",
++  "เรื่องเล่าตะกั่วป่า · กระทู้เมือง": "Takua Pa Stories · City Threads",
++  "กั่วป่าโพ้ · จดหมายเหตุโครงการ": "Kuapapoh · Project archive",
++  "· โครงการกั่วป่าโพ้ · content.json · ส่วน origin, events, openings ·": "· Kuapapoh project · content.json · origin, events, and openings sections ·",
++  "ภาพจากคลังโครงการกั่วป่าโพ้": "Images from the Kuapapoh project archive",
++  "กั่วป่าโพ้ แบรนด์เมืองเก่าตะกั่วป่า": "Kuapapoh, the Takua Pa old town brand",
++  "ลายกระเบื้องเปอรานากันเมืองเก่า": "Peranakan tile patterns of the old town",
++  "แผ่นเล่าประวัติกั่วป่าโพ้": "Kuapapoh history panel",
++  "หวุ่ยกุ่น": "Wui Kun",
++  "เอกสารเก่าเมืองตะกั่วป่า 1": "Old Takua Pa town document 1",
++  "เอกสารเก่าเมืองตะกั่วป่า 2": "Old Takua Pa town document 2",
++  "จากทุ่งตึกถึงแม่น้ำตะกั่วป่า: วันที่สายน้ำสร้างเมือง · ตะกั่วป่า 101": "From Thung Tuk to the Takua Pa River: The Day Water Built a Town · Takua Pa 101",
++  "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"หน้าแรก\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"จากทุ่งตึกถึงแม่น้ำตะกั่วป่า: วันที่สายน้ำสร้างเมือง\", \"item\": \"https://takuapa101.pages.dev/stories/water-trade/\"}]}]": "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"From Thung Tuk to the Takua Pa River: The Day Water Built a Town\", \"item\": \"https://takuapa101.pages.dev/stories/water-trade/\"}]}]",
++  "เรื่องเล่าตะกั่วป่า · สายน้ำและการค้า": "Takua Pa Stories · Water and Trade",
++  "ทุ่งตึกเมืองท่าการค้าโบราณ": "Thung Tuk, an ancient trading port",
++  "· กรมศิลปากร · บทความแหล่งโบราณคดีทุ่งตึก ·": "· Fine Arts Department (Fine Arts Department) · Article on the Thung Tuk archaeological site ·",
++  "· สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม (สผ.) · PDF หน้า 11–13, 55–56, 58 ·": "· Office of Natural Resources and Environmental Policy and Planning (ONEP) · PDF pages 11 to 13, 55 to 56, and 58 ·",
++  "ฐานข้อมูลแหล่งโบราณคดี: ชุมชนตลาดใหญ่": "Archaeological site database: Talat Yai Community",
++  "· ศูนย์มานุษยวิทยาสิรินธร · ข้อมูลประวัติศาสตร์ชุมชน ·": "· Princess Maha Chakri Sirindhorn Anthropology Centre (Princess Maha Chakri Sirindhorn Anthropology Centre) · Community history information ·",
++  "สะพานเหล็กบุญสูง (โคกขนุน)": "Bun Sung Iron Bridge (Khok Khanun)",
++  "· ฐานข้อมูลท้องถิ่นภาคใต้ มหาวิทยาลัยสงขลานครินทร์ · หน้าประวัติและภาพรวม ·": "· Southern Thailand Local Database, Prince of Songkla University · History and overview page ·",
++  "เอกสารแผนการดำเนินงานด้านสิ่งแวดล้อม พ.ศ.2565": "Environmental action plan document, 2022 (B.E. 2565)",
++  "· เทศบาลเมืองตะกั่วป่า · ระเบียนโครงการและการจัดการน้ำ ·": "· Takua Pa Town Municipality (Takua Pa Town Municipality) · Project and water management records ·",
++  "ข่าวน้ำท่วมตะกั่วป่าและการติดตั้งเครื่องสูบน้ำ": "News on flooding in Takua Pa and the installation of water pumps",
++  "· MGR Online · ข่าวภูมิภาค ·": "· MGR Online · Regional news ·",
++  "ตลาดริมน้ำตะกั่วป่า ร่วมใจประชารัฐ": "Takua Pa Riverside Market, Ruamjai Pracharat",
++  "· กรมการค้าภายใน กระทรวงพาณิชย์ · ข้อมูลตลาดต้องชม ·": "· Department of Internal Trade, Ministry of Commerce (Department of Internal Trade, Ministry of Commerce) · Talat Tong Chom market information ·",
++  "ข่าวเช้า: สะพานเหล็กบุญสูง": "Morning news: Bun Sung Iron Bridge",
++  "· NBT2HD · รายการข่าว 30 มกราคม 2569 ·": "· NBT2HD · News program, January 30, 2026 (B.E. 2569) ·",
++  "ปฏิทินเทศกาลอาหารทะเล ตลาดริมน้ำตะกั่วป่า": "Seafood festival calendar, Takua Pa Riverside Market",
++  "· กระทรวงวัฒนธรรม · ปฏิทินกิจกรรมวัฒนธรรม ·": "· Ministry of Culture (Ministry of Culture) · Cultural activities calendar ·",
++  "ประเพณีตลอดปี · ตะกั่วป่า 101": "Year-round traditions · Takua Pa 101",
++  "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"หน้าแรก\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"ประเพณีตลอดปี\", \"item\": \"https://takuapa101.pages.dev/traditions/\"}]}, {\"@context\": \"https://schema.org\", \"@type\": \"ItemList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"url\": \"https://takuapa101.pages.dev/traditions/new-year-alms/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"url\": \"https://takuapa101.pages.dev/places/governor-wall/\"}, {\"@type\": \"ListItem\", \"position\": 3, \"url\": \"https://takuapa101.pages.dev/traditions/ruler-ceremony/\"}, {\"@type\": \"ListItem\", \"position\": 4, \"url\": \"https://takuapa101.pages.dev/places/wat-boromthat/\"}, {\"@type\": \"ListItem\", \"position\": 5, \"url\": \"https://takuapa101.pages.dev/traditions/relic-procession/\"}, {\"@type\": \"ListItem\", \"position\": 6, \"url\": \"https://takuapa101.pages.dev/places/phra-narai/\"}, {\"@type\": \"ListItem\", \"position\": 7, \"url\": \"https://takuapa101.pages.dev/traditions/narai-ceremony/\"}, {\"@type\": \"ListItem\", \"position\": 8, \"url\": \"https://takuapa101.pages.dev/places/guan-yu/\"}, {\"@type\": \"ListItem\", \"position\": 9, \"url\": \"https://takuapa101.pages.dev/places/pun-thao/\"}, {\"@type\": \"ListItem\", \"position\": 10, \"url\": \"https://takuapa101.pages.dev/places/kue-chai/\"}, {\"@type\": \"ListItem\", \"position\": 11, \"url\": \"https://takuapa101.pages.dev/places/rong-jae/\"}, {\"@type\": \"ListItem\", \"position\": 12, \"url\": \"https://takuapa101.pages.dev/traditions/vegetarian/\"}, {\"@type\": \"ListItem\", \"position\": 13, \"url\": \"https://takuapa101.pages.dev/places/wat-khuha/\"}, {\"@type\": \"ListItem\", \"position\": 14, \"url\": \"https://takuapa101.pages.dev/places/wat-pathum/\"}, {\"@type\": \"ListItem\", \"position\": 15, \"url\": \"https://takuapa101.pages.dev/places/wat-kongkha/\"}, {\"@type\": \"ListItem\", \"position\": 16, \"url\": \"https://takuapa101.pages.dev/places/wat-nikorn/\"}, {\"@type\": \"ListItem\", \"position\": 17, \"url\": \"https://takuapa101.pages.dev/places/wat-sena/\"}, {\"@type\": \"ListItem\", \"position\": 18, \"url\": \"https://takuapa101.pages.dev/traditions/chak-phra/\"}, {\"@type\": \"ListItem\", \"position\": 19, \"url\": \"https://takuapa101.pages.dev/places/riverwalk/\"}, {\"@type\": \"ListItem\", \"position\": 20, \"url\": \"https://takuapa101.pages.dev/traditions/loy-krathong/\"}]}]": "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Year-round traditions\", \"item\": \"https://takuapa101.pages.dev/traditions/\"}]}, {\"@context\": \"https://schema.org\", \"@type\": \"ItemList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"url\": \"https://takuapa101.pages.dev/traditions/new-year-alms/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"url\": \"https://takuapa101.pages.dev/places/governor-wall/\"}, {\"@type\": \"ListItem\", \"position\": 3, \"url\": \"https://takuapa101.pages.dev/traditions/ruler-ceremony/\"}, {\"@type\": \"ListItem\", \"position\": 4, \"url\": \"https://takuapa101.pages.dev/places/wat-boromthat/\"}, {\"@type\": \"ListItem\", \"position\": 5, \"url\": \"https://takuapa101.pages.dev/traditions/relic-procession/\"}, {\"@type\": \"ListItem\", \"position\": 6, \"url\": \"https://takuapa101.pages.dev/places/phra-narai/\"}, {\"@type\": \"ListItem\", \"position\": 7, \"url\": \"https://takuapa101.pages.dev/traditions/narai-ceremony/\"}, {\"@type\": \"ListItem\", \"position\": 8, \"url\": \"https://takuapa101.pages.dev/places/guan-yu/\"}, {\"@type\": \"ListItem\", \"position\": 9, \"url\": \"https://takuapa101.pages.dev/places/pun-thao/\"}, {\"@type\": \"ListItem\", \"position\": 10, \"url\": \"https://takuapa101.pages.dev/places/kue-chai/\"}, {\"@type\": \"ListItem\", \"position\": 11, \"url\": \"https://takuapa101.pages.dev/places/rong-jae/\"}, {\"@type\": \"ListItem\", \"position\": 12, \"url\": \"https://takuapa101.pages.dev/traditions/vegetarian/\"}, {\"@type\": \"ListItem\", \"position\": 13, \"url\": \"https://takuapa101.pages.dev/places/wat-khuha/\"}, {\"@type\": \"ListItem\", \"position\": 14, \"url\": \"https://takuapa101.pages.dev/places/wat-pathum/\"}, {\"@type\": \"ListItem\", \"position\": 15, \"url\": \"https://takuapa101.pages.dev/places/wat-kongkha/\"}, {\"@type\": \"ListItem\", \"position\": 16, \"url\": \"https://takuapa101.pages.dev/places/wat-nikorn/\"}, {\"@type\": \"ListItem\", \"position\": 17, \"url\": \"https://takuapa101.pages.dev/places/wat-sena/\"}, {\"@type\": \"ListItem\", \"position\": 18, \"url\": \"https://takuapa101.pages.dev/traditions/chak-phra/\"}, {\"@type\": \"ListItem\", \"position\": 19, \"url\": \"https://takuapa101.pages.dev/places/riverwalk/\"}, {\"@type\": \"ListItem\", \"position\": 20, \"url\": \"https://takuapa101.pages.dev/traditions/loy-krathong/\"}]}]",
++  "เรื่องราวของศรัทธาและประเพณีที่อยู่ในปฏิทินของเมือง": "Stories of faith and traditions on the town calendar",
++  "ประเพณีชักพระ · ตะกั่วป่า 101": "Chak Phra Festival · Takua Pa 101",
++  "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"หน้าแรก\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"ประเพณีชักพระ\", \"item\": \"https://takuapa101.pages.dev/traditions/chak-phra/\"}]}, {\"@context\": \"https://schema.org\", \"@type\": \"Event\", \"name\": \"ประเพณีชักพระ\", \"url\": \"https://takuapa101.pages.dev/traditions/chak-phra/\", \"image\": \"https://takuapa101.pages.dev/assets/og/chak-phra.png\", \"description\": \"ลากขบวนเรือพระออกจากวัด · ประกวดเรือพระ · การแสดงของแต่ละวัด · สมโภชเรือพระ · การแสดงทางวัฒนธรรม\", \"location\": {\"@type\": \"Place\", \"name\": \"ที่ว่าการอำเภอคุระบุรี จังหวัดพังงา (ข้อมูลแหล่งข่าวระบุเช่นนี้ ไม่ใช่ตะกั่วป่า)\"}}]": "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Chak Phra Festival\", \"item\": \"https://takuapa101.pages.dev/traditions/chak-phra/\"}]}, {\"@context\": \"https://schema.org\", \"@type\": \"Event\", \"name\": \"Chak Phra Festival\", \"url\": \"https://takuapa101.pages.dev/traditions/chak-phra/\", \"image\": \"https://takuapa101.pages.dev/assets/og/chak-phra.png\", \"description\": \"Pulling a ceremonial boat procession from the temple · ceremonial boat competition · performances by each temple · ceremonial boat celebrations · cultural performances\", \"location\": {\"@type\": \"Place\", \"name\": \"Kuraburi District Office, Phang Nga Province (the source identifies this location, not Takua Pa)\"}}]",
++  "ลอยกระทง · ตะกั่วป่า 101": "Loy Krathong · Takua Pa 101",
++  "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"หน้าแรก\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"ลอยกระทง\", \"item\": \"https://takuapa101.pages.dev/traditions/loy-krathong/\"}]}, {\"@context\": \"https://schema.org\", \"@type\": \"Event\", \"name\": \"ลอยกระทง\", \"url\": \"https://takuapa101.pages.dev/traditions/loy-krathong/\", \"image\": \"https://takuapa101.pages.dev/assets/og/loy-krathong.png\", \"description\": \"ลอยกระทง · ประกวดทำกระทง · การแสดงบนเวที · นิทรรศการหรือตกแต่งประดับท่าน้ำ\", \"location\": {\"@type\": \"Place\", \"name\": \"คลองตะกั่วป่า ตำบลตะกั่วป่า และบางปีมีจุดที่คลองบางม่วง ตำบลบางม่วง\"}}]": "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://takuapa101.pages.dev/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Loy Krathong\", \"item\": \"https://takuapa101.pages.dev/traditions/loy-krathong/\"}]}, {\"@context\": \"https://schema.org\", \"@type\": \"Event\", \"name\": \"Loy Krathong\", \"url\": \"https://takuapa101.pages.dev/traditions/loy-krathong/\", \"image\": \"https://takuapa101.pages.dev/assets/og/loy-krathong.png\", \"description\": \"Loy Krathong · krathong-making competition · stage performances · exhibitions or riverside decorations\", \"location\": {\"@type\": \"Place\", \"name\": \"Takua Pa Canal in Takua Pa Subdistrict, with some years also having a site at Bang Muang Canal in Bang Muang Subdistrict\"}}]",
++  "พิธีบวงสรวงองค์เทวรูปพระนารายณ์และเทพบริวาร · ตะกั่วป่า 101": "Worship ceremony for the statue of Phra Narai and attendant deities · Takua Pa 101"
++}
+
+tokens used
+31,464

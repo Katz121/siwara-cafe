@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <title>Shophouse row and carved balcony mark</title>
+  <path fill="#203f39" d="M8 53V23h48v30H8Z"/>
+  <path fill="#e8a931" d="M13 28h38v20H13z"/>
+  <path fill="#e8a931" d="M8 18h48v7H8zM17 11h30l9 8H8l9-8Z"/>
+  <path fill="#203f39" d="M18 29h8v19h-8zM38 29h8v19h-8z"/>
+  <path fill="#a3492f" d="M28 48V36c0-2.8 1.8-5 4-5s4 2.2 4 5v12h-8Z"/>
+  <path stroke="#203f39" stroke-width="2.8" stroke-linecap="round" d="M13 34h38M13 41h38M13 48h38"/>
+  <path stroke="#203f39" stroke-width="2.8" stroke-linecap="round" d="M12 53h40"/>
+</svg>

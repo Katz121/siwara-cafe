@@ -10,6 +10,8 @@ sys.stdout.reconfigure(encoding='utf-8')
 AGY = r"C:\Users\siwat\AppData\Local\agy\bin\agy.cmd"
 if not os.path.exists(AGY):
     AGY = shutil.which("agy") or "agy"
+CODEX = shutil.which("codex") or shutil.which("codex.cmd") or "codex"
+RUNNER = os.environ.get("LOGO_RUNNER", "codex")
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 PROJECT = os.path.dirname(HERE)
@@ -29,10 +31,15 @@ def run(prefix, count, direction):
                   .replace("{COUNT}", str(count))
                   .replace("{PREFIX}", prefix)
                   .replace("{DIRECTION}", direction))
-    p = subprocess.run(
-        [AGY, "--dangerously-skip-permissions", "--model", "gemini-3.1-pro-high", "-p", prompt],
-        cwd=PROJECT, capture_output=True, text=True, encoding="utf-8",
-        errors="replace", timeout=3000)
+    if RUNNER == "codex":
+        argv = [CODEX, "exec", "-m", "gpt-5.6-luna", "--skip-git-repo-check",
+                "--dangerously-bypass-approvals-and-sandbox", "-"]
+        stdin = prompt
+    else:
+        argv = [AGY, "--dangerously-skip-permissions", "--model", "gemini-3.1-pro-high", "-p", prompt]
+        stdin = None
+    p = subprocess.run(argv, input=stdin, cwd=PROJECT, capture_output=True, text=True,
+                       encoding="utf-8", errors="replace", timeout=3000)
     open(os.path.join(MARKS, prefix + ".log"), "w", encoding="utf-8").write(
         (p.stdout or "") + "\n--ERR--\n" + (p.stderr or ""))
     made = [f for f in os.listdir(MARKS) if f.startswith(prefix + "-") and f.endswith(".svg")]
