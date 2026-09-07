@@ -43,6 +43,7 @@ def pic(id, eager=False):
  return f'<img src="/assets/{id}.webp" alt="{esc(byid[id]["name_th"])}" width="{w}" height="{h}" loading="{"eager" if eager else "lazy"}">'
 def source(): return f'<aside class="source"><h2>ที่มาของข้อมูล</h2><p>เรียบเรียงจาก<a href="{SOURCE}">แผ่นพับเทศบาลเมืองตะกั่วป่า</a> · สกัดข้อมูล 6 กันยายน 2569 เอกสารไม่ระบุวันที่เผยแพร่ เวลาเปิด สถานะร้าน และกำหนดงานปัจจุบันยังไม่ได้ยืนยัน ควรตรวจสอบกับสถานที่ก่อนเดินทาง</p></aside>'
 nav=[('places','สถานที่'),('map','แผนที่'),('traditions','ประเพณี'),('eat','กินและของฝาก'),('routes','เส้นทางเดิน'),('trip','ทริปของคุณ'),('about','เกี่ยวกับ')]
+nav.insert(1, ('news', 'ความเคลื่อนไหว'))
 nav.insert(0, ("stories", "เรื่องเล่าตะกั่วป่า"))
 def page(path,title,desc,body,record=None):
  body = design.transform(path, body, globals(), record)
@@ -98,11 +99,67 @@ page('/about/','ข้อมูลนี้มาจากไหน','ที่�
 page('/trip/','ทริปของคุณ','เลือกจุดหมายในเมืองเก่าตะกั่วป่า แล้วจัดเป็นเส้นทางเดินของคุณเอง','<div id="trip-app"></div><noscript><p>ต้องเปิด JavaScript เพื่อใช้งานจัดทริป หรือเลือกดู<a href="/places/">สถานที่ทั้งหมด</a>และ<a href="/map/">แผนที่</a></p></noscript>')
 (OUT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join(f'<url><loc>{esc(BASE+p)}</loc><lastmod>{date.today().isoformat()}</lastmod></url>' for p in PAGES)+'</urlset>',encoding='utf-8')
 (OUT/'robots.txt').write_text('User-agent: *\nAllow: /\nSitemap: '+BASE+'/sitemap.xml\n',encoding='utf-8')
+
+def render_news():
+    news_data = json.loads((DATA/'news-feed.json').read_text(encoding='utf-8'))
+    places = sorted(list(set(n['place_name'] for n in news_data if n.get('place_name'))))
+    years = sorted(list(set(n.get('date','')[:4] for n in news_data if n.get('date'))), reverse=True)
+    
+    tabs = '<button type="button" data-news-filter="all" aria-pressed="true">ทั้งหมด</button>'
+    for p in places: tabs += f'<button type="button" data-news-filter="{esc(p)}" aria-pressed="false">{esc(p)}</button>'
+    for y in years: tabs += f'<button type="button" data-news-filter="{y}" aria-pressed="false">ปี {int(y)+543}</button>'
+    
+    items_html = ''
+    jsonld_items = []
+    
+    for i, n in enumerate(news_data):
+        d = n.get('date', '')
+        d_th = ''
+        y = d[:4] if d else ''
+        if d:
+            try:
+                yx, m, dd = d.split('-')
+                months = ['ม.ค.', 'ก.พ.', 'มี.ค.', 'เม.ย.', 'พ.ค.', 'มิ.ย.', 'ก.ค.', 'ส.ค.', 'ก.ย.', 'ต.ค.', 'พ.ย.', 'ธ.ค.']
+                d_th = f'{int(dd)} {months[int(m)-1]} {int(yx)+543}'
+            except:
+                pass
+                
+        place_link = f'<a href="{esc(n["place_url"])}">{esc(n["place_name"])}</a>' if n.get("place_url") else ''
+        title = esc(n.get("title_th", ""))
+        summary = esc(n.get("summary_th", ""))
+        outlet = esc(n.get("outlet", ""))
+        url_link = esc(n.get("url", ""))
+        link = f'<a class="news-out" href="{url_link}" target="_blank" rel="noopener">อ่านข่าวต้นทาง ↗</a>' if url_link else ''
+        
+        items_html += f'<article class="news-item" data-place="{esc(n.get("place_name",""))}" data-year="{y}"><time datetime="{d}">{d_th}</time><div class="news-content"><h2>{title}</h2><p>{summary}</p><div class="news-meta">{place_link}{" · " if place_link and outlet else ""}{outlet}</div>{link}</div></article>'
+        
+        jsonld_items.append({
+            "@type": "ListItem",
+            "position": i + 1,
+            "item": {
+                "@type": "NewsArticle",
+                "headline": title,
+                "datePublished": d,
+                "url": url_link
+            }
+        })
+        
+    jsonld = {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "itemListElement": jsonld_items
+    }
+    
+    html = f'<div class="news-page"><div class="intro"><a class="eyebrow" href="/">ตะกั่วป่า 101 / คู่มือเมืองเก่า</a><h1>ความเคลื่อนไหวของเมือง</h1><p class="lead">ข่าวสารและกิจกรรมที่เกิดขึ้นในเมืองเก่าตะกั่วป่า</p></div><div class="news-filters" role="group" aria-label="กรองข่าวสาร">{tabs}</div><div class="news-list-full">{items_html}</div></div><script type="application/ld+json">{json.dumps(jsonld, ensure_ascii=False).replace("</", "<\\\\/")}</script>'
+    return html
+
+page('/news/','ความเคลื่อนไหวของเมือง','ข่าวสารและกิจกรรมในเมืองเก่าตะกั่วป่า',render_news())
+
 stories.write_audit()
 page('/stories/','เรื่องเล่าตะกั่วป่า','บทความประวัติศาสตร์และวัฒนธรรมตะกั่วป่าจากแหล่งข้อมูลทางการ แยกระดับหลักฐานชัดเจน',stories.index({'byid': byid}))
-for story in stories.STORIES:
- page(story['route'], story['title'], story['dek'], stories.article(story, {'byid': byid}))
-page(stories.KUAPAPOH['route'], stories.KUAPAPOH['title'], stories.KUAPAPOH['dek'], stories.article(stories.KUAPAPOH, {'byid': byid}))
+for story in stories.get_all_stories():
+ route = story.get('route') or f"/stories/{story['id']}/"
+ page(route, story['title'], story['dek'], stories.article(story, {'byid': byid}))
 (OUT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join(f'<url><loc>{esc(BASE+p)}</loc><lastmod>{date.today().isoformat()}</lastmod></url>' for p in PAGES)+'</urlset>',encoding='utf-8')
 for name in ['NotoSerifThai','IBMPlexSansThaiLooped-Regular','CormorantGaramond']:
  target=OUT/f'assets/{name}.woff2'

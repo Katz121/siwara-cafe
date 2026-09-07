@@ -1,0 +1,239 @@
+{
+ "events": [
+  {
+   "id": "new-year-alms",
+   "name_th": "ตักบาตรยามรุ่ง รับอรุณปีใหม่",
+   "months": [
+    1
+   ],
+   "months_note_th": "มกราคม (ตามลักษณะกิจกรรมวันขึ้นปีใหม่ที่พบในเอกสาร) แต่ไม่พบกำหนดการของชื่องานนี้โดยตรง",
+   "certainty": "approximate",
+   "lunar_th": null,
+   "venue_th": "มีหลักฐานระบุเพียงบริเวณริมท่าน้ำ; ไม่พบชื่อสถานที่แน่ชัด",
+   "activities_th": [
+    "ทำบุญตักบาตรอาหารแห้ง"
+   ],
+   "url": "/takuapa/traditions/#new-year-alms",
+   "image": null,
+   "sources": [
+    "https://www.takuapacity.go.th/files/com_strategy/2022-12_231dcd9d5169573.pdf"
+   ]
+  },
+  {
+   "id": "narai-ceremony",
+   "name_th": "พิธีบวงสรวงองค์เทวรูปพระนารายณ์และเทพบริวาร",
+   "months": [
+    3,
+    4
+   ],
+   "months_note_th": "มีนาคม–เมษายน (ยืนยันเฉพาะงานปี 2566: 27 มีนาคม–5 เมษายน)",
+   "certainty": "stated",
+   "lunar_th": null,
+   "venue_th": "สวนสาธารณะอุทยานพระนารายณ์ / บริเวณสนามหน้าอำเภอ ถนนสวนพระนารายณ์",
+   "activities_th": [
+    "พิธีบวงสรวงตามพิธีพราหมณ์โบราณ",
+    "การแสดงชุดพื้นเมือง",
+    "จำหน่ายสินค้า OTOP และอาหารท้องถิ่น",
+    "การแข่งขันนกกรงหัวจุก"
+   ],
+   "url": "/takuapa/traditions/#narai-ceremony",
+   "image": null,
+   "sources": [
+    "https://www.thaipr.net/travel/3321904",
+    "https://m-culture.in.th/album/120992/%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%AA%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%B0%E0%B8%AD%E0%B8%B8%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%99%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%นารายณ์"
+   ]
+  },
+  {
+   "id": "ruler-ceremony",
+   "name_th": "พิธีบวงสรวงเจ้าเมืองตะกั่วป่า",
+   "months": [
+    3
+   ],
+   "months_note_th": "มีนาคมในปีที่มีโครงการที่พบหลักฐาน (พ.ศ. 2569)",
+   "certainty": "stated",
+   "lunar_th": null,
+   "venue_th": "จวนเจ้าเมืองตะกั่วป่า ถนนอุดมธารา ตำบลตะกั่วป่า",
+   "activities_th": [
+    "พิธีบวงสรวงเจ้าเมืองตะกั่วป่า",
+    "พิธีเจริญพระพุทธมนต์",
+    "การแสดงศิลปวัฒนธรรม",
+    "จำหน่ายขนมพื้นบ้าน อาหารพื้นเมือง และสินค้าโอทอป"
+   ],
+   "url": "/takuapa/traditions/#ruler-ceremony",
+   "image": null,
+   "sources": [
+    "https://radiothailand.prd.go.th/th/content/category/detail/id/9/iid/481052"
+   ]
+  },
+  {
+   "id": "vegetarian",
+   "name_th": "ประเพณีกินผัก (เจี๊ยะกิ๊วอ๋องฉ่าย)",
+   "months": [
+    10
+   ],
+   "months_note_th": "ตุลาคมโดยทั่วไป",
+   "certainty": "approximate",
+   "lunar_th": "วันขึ้น 1–9 ค่ำ เดือน 9 ของจีน",
+   "venue_th": "ศาลเจ้าต่าง ๆ และถนนศรีตะกั่วป่า/ย่านเมืองเก่าตะกั่วป่า",
+   "activities_th": [
+    "ยกเสาโกเต้งและจุดตะเกียง 9 ดวง",
+    "พิธีซ่งเก้ง",
+    "พิธีทรงเจ้า",
+    "พิธีลุยไฟ",
+    "พิธีสะเดาะเคราะห์",
+    "ขบวนแห่พระรอบเมือง",
+    "จำหน่ายอาหารเจ"
+   ],
+   "url": "/takuapa/traditions/#vegetarian",
+   "image": null,
+   "sources": [
+    "https://api.tat.or.th/upload/live/multimedia/9121/TPhangnga.pdf",
+    "https://www.thailandplus.tv/archives/864741",
+    "https://www.dailynews.co.th/news/1541477/"
+   ]
+  },
+  {
+   "id": "loy-krathong",
+   "name_th": "ลอยกระทง",
+   "months": [
+    11
+   ],
+   "months_note_th": "โดยทั่วไปอยู่ในเดือนพฤศจิกายน แต่วันจริงเปลี่ยนตามปฏิทินจันทรคติและประกาศท้องถิ่น",
+   "certainty": "approximate",
+   "lunar_th": "วันเพ็ญ เดือน 12 ตามคติประเพณีไทย; ไม่พบประกาศเฉพาะของตะกั่วป่าสำหรับทุกปี",
+   "venue_th": "คลองตะกั่วป่า ตำบลตะกั่วป่า และบางปีมีจุดที่คลองบางม่วง ตำบลบางม่วง",
+   "activities_th": [
+    "ลอยกระทง",
+    "ประกวดทำกระทง",
+    "การแสดงบนเวที",
+    "นิทรรศการหรือตกแต่งประดับท่าน้ำ"
+   ],
+   "url": "/takuapa/traditions/#loy-krathong",
+   "image": null,
+   "sources": [
+    "https://www.takuapacity.go.th/files/com_strategy/2022-12_231dcd9d5169573.pdf",
+    "https://newweb.dmcr.go.th/detailAll/81026/nws/258"
+   ]
+  },
+  {
+   "id": "chak-phra",
+   "name_th": "ประเพณีชักพระ",
+   "months": [
+    10,
+    11
+   ],
+   "months_note_th": "โดยทั่วไปอยู่ราวเดือนตุลาคม-พฤศจิกายน ขึ้นกับวันออกพรรษา",
+   "certainty": "approximate",
+   "lunar_th": "วันแรม 1 ค่ำ เดือน 11 (หลังวันออกพรรษา 1 วัน)",
+   "venue_th": "ที่ว่าการอำเภอคุระบุรี จังหวัดพังงา (ข้อมูลแหล่งข่าวระบุเช่นนี้ ไม่ใช่ตะกั่วป่า)",
+   "activities_th": [
+    "ลากขบวนเรือพระออกจากวัด",
+    "ประกวดเรือพระ",
+    "การแสดงของแต่ละวัด",
+    "สมโภชเรือพระ",
+    "การแสดงทางวัฒนธรรม"
+   ],
+   "url": "/takuapa/traditions/#chak-phra",
+   "image": null,
+   "sources": [
+    "https://api.tat.or.th/upload/live/multimedia/9121/TPhangnga.pdf",
+    "https://www.thailandplus.tv/archives/755868"
+   ]
+  },
+  {
+   "id": "relic-procession",
+   "name_th": "ขบวนแห่อัญเชิญพระบรมสารีริกธาตุขึ้นเขาพระบาท",
+   "months": [],
+   "months_note_th": "ไม่ระบุเดือนสุริยคติแน่นอน; จัดในวันมาฆบูชาของทุกปี",
+   "certainty": "approximate",
+   "lunar_th": "วันมาฆบูชา (ขึ้น 15 ค่ำ เดือน 3 ตามจันทรคติไทย โดยปีอธิกมาสอาจต่างกัน)",
+   "venue_th": "วัดพระธาตุคีรีเขต (วัดลุ่ม) และภูเขาพระพุทธบาท เมืองเก่าตะกั่วป่า",
+   "activities_th": [
+    "สมโภชพระบรมสารีริกธาตุ",
+    "แห่พระบรมสารีริกธาตุขึ้นสู่ยอดเขาพระบาท",
+    "สักการะพระบรมธาตุเจดีย์"
+   ],
+   "url": "/takuapa/traditions/#relic-procession",
+   "image": null,
+   "sources": [
+    "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf",
+    "https://www.dailynews.co.th/news/4366578/"
+   ]
+  }
+ ],
+ "calendar": [
+  {
+   "month": 1,
+   "name_th": "มกราคม",
+   "events": [
+    "new-year-alms"
+   ]
+  },
+  {
+   "month": 2,
+   "name_th": "กุมภาพันธ์",
+   "events": []
+  },
+  {
+   "month": 3,
+   "name_th": "มีนาคม",
+   "events": [
+    "narai-ceremony",
+    "ruler-ceremony"
+   ]
+  },
+  {
+   "month": 4,
+   "name_th": "เมษายน",
+   "events": [
+    "narai-ceremony"
+   ]
+  },
+  {
+   "month": 5,
+   "name_th": "พฤษภาคม",
+   "events": []
+  },
+  {
+   "month": 6,
+   "name_th": "มิถุนายน",
+   "events": []
+  },
+  {
+   "month": 7,
+   "name_th": "กรกฎาคม",
+   "events": []
+  },
+  {
+   "month": 8,
+   "name_th": "สิงหาคม",
+   "events": []
+  },
+  {
+   "month": 9,
+   "name_th": "กันยายน",
+   "events": []
+  },
+  {
+   "month": 10,
+   "name_th": "ตุลาคม",
+   "events": [
+    "vegetarian",
+    "chak-phra"
+   ]
+  },
+  {
+   "month": 11,
+   "name_th": "พฤศจิกายน",
+   "events": [
+    "loy-krathong",
+    "chak-phra"
+   ]
+  },
+  {
+   "month": 12,
+   "name_th": "ธันวาคม",
+   "events": []
+  }
+ ]
+}

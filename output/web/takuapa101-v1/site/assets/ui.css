@@ -1,0 +1,37 @@
+/* ============ Search overlay + mobile tab bar ============ */
+.searchbox{position:fixed;inset:0;z-index:900;display:flex;align-items:flex-start;justify-content:center}
+.searchbox[hidden]{display:none!important}
+.searchbox-backdrop{position:absolute;inset:0;background:rgba(24,36,32,.52);backdrop-filter:blur(3px)}
+.searchbox-panel{position:relative;width:min(620px,92vw);margin-top:12vh;background:#fffdf7;border:1px solid rgba(32,63,57,.2);border-radius:18px;box-shadow:0 30px 70px -30px rgba(20,36,31,.75);padding:18px 18px 14px}
+.searchbox-panel input{width:100%;box-sizing:border-box;font:inherit;font-size:1.06rem;padding:13px 15px;border:1px solid rgba(32,63,57,.28);border-radius:12px;background:#f6f1e6;color:#1d2b25}
+.searchbox-panel input:focus-visible{outline:2px solid #203f39;outline-offset:2px}
+.searchbox-status{margin:10px 2px 6px;font-size:.8rem;color:#6b7a70}
+.searchbox-results{list-style:none;margin:0;padding:0;max-height:46vh;overflow:auto}
+.searchbox-results li a{display:flex;align-items:baseline;justify-content:space-between;gap:14px;padding:11px 12px;border-radius:10px;text-decoration:none;color:inherit;min-height:44px;box-sizing:border-box}
+.searchbox-results li.is-active a{background:#eae2cd}
+.sr-name{font-size:.97rem;line-height:1.45}
+.sr-kind{flex:0 0 auto;font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:#8a7a5e}
+.searchbox-hint{margin:10px 2px 0;font-size:.74rem;color:#8a9791}
+body.searchbox-open{overflow:hidden}
+
+/* Header actions */
+.header-tools{display:flex;align-items:center;gap:8px}
+.icon-button{position:relative;display:grid;place-items:center;width:42px;height:42px;border:1px solid rgba(32,63,57,.24);border-radius:11px;background:transparent;color:inherit;cursor:pointer;text-decoration:none}
+.icon-button:hover,.icon-button:focus-visible{border-color:rgba(32,63,57,.5);background:rgba(32,63,57,.05)}
+.icon-button .ib-glyph{font-size:1rem;line-height:1}
+.icon-button .qs-badge{top:-6px;right:-6px}
+
+/* Mobile tab bar */
+.tabbar{display:none}
+@media (max-width:900px){
+  .tabbar{position:fixed;left:0;right:0;bottom:0;z-index:800;display:grid;grid-template-columns:repeat(4,1fr);
+    background:#fffdf7;border-top:1px solid rgba(32,63,57,.18);padding:6px 4px calc(6px + env(safe-area-inset-bottom));
+    box-shadow:0 -8px 22px -18px rgba(20,36,31,.7)}
+  .tabbar a,.tabbar button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;
+    min-height:52px;border:0;background:transparent;color:#3c4a43;font:inherit;font-size:.72rem;text-decoration:none;cursor:pointer;position:relative}
+  .tabbar [aria-current="page"]{color:#203f39;font-weight:700}
+  .tabbar .tb-glyph{font-size:1.08rem;line-height:1}
+  .tabbar .qs-badge{top:2px;right:calc(50% - 22px);position:absolute}
+  body{padding-bottom:70px}
+}
+@media (prefers-reduced-motion:reduce){.searchbox-backdrop{backdrop-filter:none}}

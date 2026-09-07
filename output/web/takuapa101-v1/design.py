@@ -242,10 +242,18 @@ def city_feed(ctx, limit_news=8):
 def shell(path, html):
     html=html.replace('/assets/site.css','/assets/design.css').replace('/assets/site.js','/assets/design.js')
     html=html.replace('<body>',f'<body class="{"home" if path=="/" else "inner-page"}">')
-    html=re.sub(r'<header class="nav">.*?</header>',lambda m:m.group().replace('class="nav"','class="site-header"').replace('<a class="brand" href="/">ตะกั่วป่า <span>101</span></a>','<a class="brand" href="/" aria-label="ตะกั่วป่า 101 หน้าแรก"><span class="brand-mark">๑๐๑</span><span>ตะกั่วป่า<small>TAKUA PA FIELD NOTES</small></span></a>').replace('</nav>','</nav><a class="header-map" href="/map/">เปิดแผนที่ ↗</a>'),html,count=1)
+    html=re.sub(r'<header class="nav">.*?</header>',lambda m:m.group().replace('class="nav"','class="site-header"').replace('<a class="brand" href="/">ตะกั่วป่า <span>101</span></a>','<a class="brand" href="/" aria-label="ตะกั่วป่า 101 หน้าแรก"><span class="brand-mark">๑๐๑</span><span>ตะกั่วป่า<small>TAKUA PA FIELD NOTES</small></span></a>').replace('</nav>','</nav><div class="header-tools"><button class="icon-button" type="button" data-open-search aria-label="ค้นหาในเว็บไซต์ (กด Ctrl+K)"><span class="ib-glyph" aria-hidden="true">⌕</span></button><a class="icon-button" href="/trip/" aria-label="ทริปของคุณ"><span class="ib-glyph" aria-hidden="true">◫</span><span class="qs-badge" data-trip-count hidden>0</span></a><a class="header-map" href="/map/">เปิดแผนที่ ↗</a></div>'),html,count=1)
     footer='<footer class="site-footer"><div class="footer-top"><a href="/" class="footer-name">ตะกั่วป่า <em>101</em></a><p>เมืองหนึ่งเมือง<br>มีเรื่องให้ค่อย ๆ รู้จัก</p><a class="round-link" href="#main" aria-label="กลับขึ้นด้านบน">↑</a></div><div class="footer-bottom"><a href="https://siwaracafe.com/">จัดทำโดยบ้านศิวรา ตะกั่วป่า</a><span>คู่มือเมืองเก่า · จังหวัดพังงา</span><a href="https://www.takuapacity.go.th/pdf/travel-preview.pdf">แผ่นพับต้นทาง ↗</a></div></footer>'
     html=re.sub(r'<footer>.*?</footer>',lambda m:footer,html,count=1)
     if path == '/map/':
         html=html.replace('</head>', '<style>@import url("https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/5.6.1/maplibre-gl.css");</style>\n<script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/5.6.1/maplibre-gl.js"></script>\n</head>')
-    html=html.replace('</head>','<meta name="theme-color" content="#203f39"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"></head>')
+    tabs = [('/', 'หน้าแรก', '⌂'), ('/map/', 'แผนที่', '◈'), ('/eat/', 'กินอะไร', '◉'), ('/trip/', 'ทริป', '◫')]
+    bar = '<nav class="tabbar" aria-label="เมนูด่วน">'
+    for href, label, glyph in tabs:
+        cur = ' aria-current="page"' if href == path else ''
+        badge = '<span class="qs-badge" data-trip-count hidden>0</span>' if href == '/trip/' else ''
+        bar += f'<a href="{href}"{cur}><span class="tb-glyph" aria-hidden="true">{glyph}</span>{label}{badge}</a>'
+    bar += '</nav>'
+    html = html.replace('</body>', bar + '</body>')
+    html = html.replace('</head>', '<link rel="stylesheet" href="/assets/ui.css"><script src="/assets/trip.js" defer></script><script src="/assets/search.js" defer></script><meta name="theme-color" content="#203f39"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"></head>')
     return html

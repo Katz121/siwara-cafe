@@ -6,6 +6,8 @@ shown to readers instead of being silently flattened into a definitive claim.
 from html import escape
 from pathlib import Path
 import json
+import glob
+import os
 
 ROOT = Path(__file__).parent
 AUDIT_DIR = ROOT / "research" / "2026-09-07-history"
@@ -66,6 +68,25 @@ KUAPAPOH = {"id": "kuapapoh", "group": "กระทู้เมือง", "tit
     ("งานที่ผ่านมาและสิ่งที่ยังต้องตรวจซ้ำ", "หน้าโครงการบันทึกกิจกรรมเปิดพื้นที่ของบ้าน 78, 109 และ 305 รวมถึงเวิร์กช็อปและนิทรรศการ แต่ไม่ได้เป็นปฏิทินราชการย้อนหลังที่ยืนยันจำนวนผู้เข้าร่วมหรือผลกระทบทางเศรษฐกิจ · เว็บไซต์จึงไม่เติมตัวเลข วันเวลา หรือสถานะการจัดงานที่ไม่มีหลักฐาน"),
 ]}
 
+def get_all_stories():
+    stories_dict = {s['id']: s for s in STORIES + [KUAPAPOH]}
+    for fp in glob.glob(os.path.join(ROOT, 'data', 'stories', '*.json')):
+        try:
+            sd = json.load(open(fp, encoding='utf-8'))
+            if 'id' in sd:
+                stories_dict[sd['id']] = sd
+        except Exception:
+            pass
+    order = ['city', 'architecture', 'water-trade', 'food-people', 'kuapapoh']
+    result = []
+    for o in order:
+        if o in stories_dict:
+            result.append(stories_dict[o])
+            del stories_dict[o]
+    for _, v in stories_dict.items():
+        result.append(v)
+    return result
+
 def _source_list(ids):
     return '<ol class="story-sources">' + ''.join(f'<li><a href="{escape(SOURCES[i]["url"])}" rel="noopener">{escape(SOURCES[i]["title"])}</a> · {escape(SOURCES[i]["publisher"])} · {escape(SOURCES[i]["locator"])}</li>' for i in ids) + '</ol>'
 
@@ -73,12 +94,113 @@ def _place_links(ids, ctx):
     return '<div class="story-place-links">' + ''.join(f'<a href="/places/{i}/">{escape(ctx["byid"][i]["name_th"])}</a>' for i in ids if i in ctx['byid']) + '</div>'
 
 def article(story, ctx):
-    sections = ''.join(f'<section><span class="chapter">หลักฐานช่วงที่ {i:02d}</span><h2>{escape(h)}</h2><p>{escape(p)}</p></section>' for i, (h, p) in enumerate(story['sections'], 1))
-    return f'<div class="story-article"><div class="breadcrumbs"><a href="/">หน้าแรก</a><span>/</span><a href="/stories/">เรื่องเล่าตะกั่วป่า</a><span>/</span><span>{escape(story["group"])}</span></div><header class="story-hero"><span class="eyebrow">เรื่องเล่าตะกั่วป่า · {escape(story["group"])}</span><h1>{escape(story["title"])}</h1><p class="lead">{escape(story["dek"])}</p><p class="story-meta">ปรับปรุง 7 กันยายน 2569 · เรียบเรียงจากเอกสารทางการ · ระดับหลักฐาน: มีทั้งข้อเท็จจริงและข้อสันนิษฐาน</p></header><article class="story-prose">{sections}<aside class="evidence-note"><strong>อ่านอย่างมีหลักฐาน</strong><p>ข้อความนี้สรุปจากแหล่งที่ระบุด้านล่าง หากเป็นคำว่า “เชื่อมโยง”, “สันนิษฐาน” หรือ “ยังไม่มีข้อยุติ” เว็บไซต์คงคำกำกับไว้เพื่อไม่ทำให้ข้อสันนิษฐานกลายเป็นข้อเท็จจริง</p></aside><h2>สถานที่ที่อ่านต่อได้</h2>{_place_links(story['places'], ctx)}<h2>แหล่งข้อมูลของบทความ</h2>{_source_list(story['sources'])}</article></div>'
+    is_new = 'lede' in story
+    if not is_new:
+        sections = ''.join(f'<section><span class="chapter">หลักฐานช่วงที่ {i:02d}</span><h2>{escape(h)}</h2><p>{escape(p)}</p></section>' for i, (h, p) in enumerate(story['sections'], 1))
+        return f'<div class="story-article"><div class="breadcrumbs"><a href="/">หน้าแรก</a><span>/</span><a href="/stories/">เรื่องเล่าตะกั่วป่า</a><span>/</span><span>{escape(story["group"])}</span></div><header class="story-hero"><span class="eyebrow">เรื่องเล่าตะกั่วป่า · {escape(story["group"])}</span><h1>{escape(story["title"])}</h1><p class="lead">{escape(story["dek"])}</p><p class="story-meta">ปรับปรุง 7 กันยายน 2569 · เรียบเรียงจากเอกสารทางการ · ระดับหลักฐาน: มีทั้งข้อเท็จจริงและข้อสันนิษฐาน</p></header><article class="story-prose">{sections}<aside class="evidence-note"><strong>อ่านอย่างมีหลักฐาน</strong><p>ข้อความนี้สรุปจากแหล่งที่ระบุด้านล่าง หากเป็นคำว่า “เชื่อมโยง”, “สันนิษฐาน” หรือ “ยังไม่มีข้อยุติ” เว็บไซต์คงคำกำกับไว้เพื่อไม่ทำให้ข้อสันนิษฐานกลายเป็นข้อเท็จจริง</p></aside><h2>สถานที่ที่อ่านต่อได้</h2>{_place_links(story["places"], ctx)}<h2>แหล่งข้อมูลของบทความ</h2>{_source_list(story["sources"])}</article></div>'
+
+    meta = f'<p class="story-meta">ปรับปรุงเมื่อ {escape(story.get("updated", ""))} · เวลาอ่าน {story.get("reading_minutes", 0)} นาที</p>'
+    header = f'<header class="story-hero-v2"><div class="breadcrumbs"><a href="/">หน้าแรก</a><span>/</span><a href="/stories/">เรื่องเล่าตะกั่วป่า</a><span>/</span><span>{escape(story.get("group", ""))}</span></div><span class="eyebrow">เรื่องเล่าตะกั่วป่า · {escape(story.get("group", ""))}</span><h1>{escape(story.get("title", ""))}</h1><p class="lead">{escape(story.get("dek", ""))}</p>{meta}</header>'
+    
+    hero_html = ''
+    hp = story.get("hero_photo")
+    if hp:
+        hero_html = f'<figure class="hero-photo-v2"><img src="{escape(hp["file"])}" alt="{escape(hp.get("caption_th",""))}" loading="eager"><figcaption><span>{escape(hp.get("caption_th",""))}</span><span class="credit">{escape(hp.get("credit",""))}</span></figcaption></figure>'
+    
+    lede_html = '<div class="story-lede-v2">' + ''.join(f'<p>{escape(p)}</p>' for p in story.get("lede", [])) + '</div>'
+    
+    toc_links = []
+    sections_html = ''
+    pull_quotes = story.get("pull_quotes", [])
+    
+    for i, sec in enumerate(story.get("sections", [])):
+        h_id = f'section-{i}'
+        h2 = sec.get("heading_th", "")
+        toc_links.append(f'<li><a href="#{h_id}">{escape(h2)}</a></li>')
+        
+        sec_content = f'<h2 id="{h_id}">{escape(h2)}</h2>'
+        
+        sp = sec.get("photo")
+        if sp:
+            sec_content += f'<figure class="section-photo-v2"><img src="{escape(sp["file"])}" alt="{escape(sp.get("caption_th",""))}" loading="lazy"><figcaption><span>{escape(sp.get("caption_th",""))}</span><span class="credit">{escape(sp.get("credit",""))}</span></figcaption></figure>'
+        
+        for p in sec.get("paragraphs", []):
+            sec_content += f'<p>{escape(p)}</p>'
+            
+        flags_html = ''
+        for flag in sec.get("flags", []):
+            kind = flag.get("kind", "")
+            cls = "flag-unverified" if kind == "unverified" else ("flag-disputed" if kind == "disputed" else "")
+            flags_html += f'<span class="story-flag-v2 {cls}">{escape(flag.get("text_th",""))}</span>'
+        if flags_html:
+            sec_content += f'<div class="story-flags-v2">{flags_html}</div>'
+            
+        sections_html += f'<section class="story-section-v2">{sec_content}</section>'
+        
+        if i < len(pull_quotes):
+            sections_html += f'<blockquote class="pull-quote-v2"><p>{escape(pull_quotes[i])}</p></blockquote>'
+
+    toc_html = f'<nav class="story-toc-v2 scrollspy" id="story-toc"><h2>เนื้อหาในบทความ</h2><ul class="scrollspy-nav">{"".join(toc_links)}</ul></nav>'
+    
+    ev = story.get("evidence_box")
+    ev_html = ''
+    if ev:
+        items = ''
+        for it in ev.get("items", []):
+            st = it.get("status", "")
+            items += f'<li><div class="ev-claim">{escape(it.get("claim_th",""))}</div><div class="ev-status {escape(st.lower())}">{escape(st)}</div><div class="ev-explain">{escape(it.get("explain_th",""))} <a href="{escape(it.get("source_url",""))}" target="_blank" rel="noopener">อ้างอิง ↗</a></div></li>'
+        ev_html = f'<aside class="evidence-box-v2"><h3>{escape(ev.get("heading_th",""))}</h3><ul class="ev-items-v2">{items}</ul></aside>'
+
+    places_html = ''
+    if story.get("places"):
+        cards = ''
+        for pid in story["places"]:
+            if pid in ctx["byid"]:
+                pr = ctx["byid"][pid]
+                pic_html = ctx["pic"](pid) if "pic" in ctx else ""
+                cards += f'<div class="place-card-mini">{pic_html}<div><h4>{escape(pr["name_th"])}</h4><button class="button button-outline" data-trip-add="{escape(pid)}">เพิ่มลงทริป</button></div></div>'
+        places_html = f'<section class="story-places-v2"><h2>ไปดูของจริงได้ที่ไหน</h2><div class="mini-cards-v2">{cards}</div></section>'
+
+    unknowns = story.get("unknowns", [])
+    un_html = ''
+    if unknowns:
+        lis = ''.join(f'<li>{escape(u)}</li>' for u in unknowns)
+        un_html = f'<details class="unknowns-box-v2"><summary>ข้อมูลที่ยังหาไม่เจอ</summary><ul>{lis}</ul></details>'
+
+    sources = story.get("sources", [])
+    src_lis = ''
+    for s in sources:
+        if isinstance(s, dict):
+            src_lis += f'<li><cite>{escape(s.get("title",""))}</cite> · {escape(s.get("publisher",""))} · {escape(s.get("locator",""))} · <a href="{escape(s.get("url",""))}" target="_blank" rel="noopener">ดูแหล่งที่มา</a> (เข้าถึง {escape(s.get("accessed",""))})</li>'
+        else:
+            if s in SOURCES:
+                src = SOURCES[s]
+                src_lis += f'<li><cite>{escape(src["title"])}</cite> · {escape(src["publisher"])} · {escape(src["locator"])} · <a href="{escape(src["url"])}" target="_blank" rel="noopener">ดูแหล่งที่มา</a></li>'
+    sources_html = f'<section class="story-sources-v2"><h2>แหล่งข้อมูล</h2><ol>{src_lis}</ol></section>'
+
+    return f'<div class="story-article-v2">{header}{hero_html}<div class="story-layout-v2"><div class="story-main-v2">{lede_html}{sections_html}{places_html}{un_html}{sources_html}</div><div class="story-sidebar-v2">{ev_html}{toc_html}</div></div></div>'
 
 def index(ctx):
-    cards = ''.join(f'<article class="story-card"><span class="chapter">{escape(s["group"])}</span><h2><a href="{s["route"]}">{escape(s["title"])}</a></h2><p>{escape(s["dek"])}</p><a class="text-link" href="{s["route"]}">เปิดเรื่องนี้ ↗</a></article>' for s in STORIES+[KUAPAPOH])
-    return f'<div class="stories-index"><div class="intro"><a class="eyebrow" href="/">ตะกั่วป่า 101 / คู่มือเมืองเก่า</a><h1>เรื่องเล่าตะกั่วป่า</h1><p class="lead">สี่มุมมองสำหรับอ่านเมืองผ่านแหล่งข้อมูล · รู้จักเมือง บ้านเก่าและสถาปัตยกรรม สายน้ำและการค้า ผู้คนและรสชาติ</p></div><div class="story-grid">{cards}</div><aside class="source"><h2>วิธีอ่านหน้านี้</h2><p>บทความเรียบเรียงจากเอกสารราชการและฐานข้อมูลสถาบันการศึกษา พร้อมแยกระดับหลักฐานในแต่ละเรื่อง · ข้อมูลร้าน เวลาเปิด และกำหนดการควรตรวจสอบกับผู้ให้บริการก่อนเดินทาง</p></aside></div>'
+    cards = ''
+    for i, s in enumerate(get_all_stories()):
+        is_new = 'reading_minutes' in s
+        route = s.get('route', f'/stories/{s["id"]}/')
+        mins = f'<span class="story-mins">{s["reading_minutes"]} นาที</span>' if is_new else ''
+        photo = ''
+        if is_new and s.get("hero_photo"):
+            photo = f'<img src="{escape(s["hero_photo"]["file"])}" alt="" loading="lazy">'
+        else:
+            for pid in s.get("places", []):
+                if os.path.exists(f"site/assets/{pid}.webp"):
+                    photo = f'<img src="/assets/{pid}.webp" alt="" loading="lazy">'
+                    break
+        photo_html = f'<div class="card-art-v2">{photo}</div>' if photo else ''
+        cls = "story-card-v2"
+        if i == 0:
+            cls += " story-card-v2-lead"
+            
+        cards += f'<article class="{cls}"><a href="{route}">{photo_html}<div class="card-content-v2"><span class="chapter">{escape(s["group"])}</span><h2>{escape(s["title"])}</h2><p>{escape(s["dek"])}</p><div class="card-meta-v2">{mins}<span class="text-link">เปิดเรื่องนี้ ↗</span></div></div></a></article>'
+    return f'<div class="stories-index-v2"><div class="intro"><a class="eyebrow" href="/">ตะกั่วป่า 101 / คู่มือเมืองเก่า</a><h1>เรื่องเล่าตะกั่วป่า</h1><p class="lead">สี่มุมมองสำหรับอ่านเมืองผ่านแหล่งข้อมูล · รู้จักเมือง บ้านเก่าและสถาปัตยกรรม สายน้ำและการค้า ผู้คนและรสชาติ</p></div><div class="story-grid-v2">{cards}</div><aside class="source"><h2>วิธีอ่านหน้านี้</h2><p>บทความเรียบเรียงจากเอกสารราชการและฐานข้อมูลสถาบันการศึกษา พร้อมแยกระดับหลักฐานในแต่ละเรื่อง · ข้อมูลร้าน เวลาเปิด และกำหนดการควรตรวจสอบกับผู้ให้บริการก่อนเดินทาง</p></aside></div>'
 
 def write_audit():
     claims = []

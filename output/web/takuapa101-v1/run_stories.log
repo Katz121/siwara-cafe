@@ -1,2 +1,6 @@
   architecture: OK 27578B
   food-people: skip(exists)
+  water-trade: OK 30357B
+  city: OK 25593B
+  kuapapoh: OK 23302B
+done
