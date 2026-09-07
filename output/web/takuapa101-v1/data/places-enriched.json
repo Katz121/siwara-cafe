@@ -10200,7 +10200,14 @@
   "brochure_facts": [
    "เอกสารแนะนำศูนย์อาหารที่รวมอาหารหลายประเภท"
   ],
-  "geo": null,
+  "geo": {
+   "lat": 8.8675924,
+   "lng": 98.3420033,
+   "confidence": "medium",
+   "source_name": "OpenStreetMap · ตลาดลานโล่ง",
+   "source_url": "https://nominatim.openstreetmap.org/ui/search.html?q=%E0%B8%95%E0%B8%A5%E0%B8%B2%E0%B8%94%E0%B8%A5%E0%B8%B2%E0%B8%99%E0%B9%82%E0%B8%A5%E0%B9%88%E0%B8%87",
+   "note_th": "จับคู่กับตลาดลานโล่ง ถนนอนามัย ต.บางนายสี · ชื่อในเอกสารกับใน OSM ไม่ตรงกันเป๊ะ"
+  },
   "address": {
    "line_th": null,
    "subdistrict": null,

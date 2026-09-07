@@ -25,6 +25,18 @@
       "kicker": "รายละเอียดเล็กที่ชวนให้หยุดมอง"
     },
     {
+      "id": "wat-pathum",
+      "name_th": "วัดปทุมธารา (วัดหน้าเมือง)",
+      "name_en": "Wat Pathum Thara",
+      "category": "temple",
+      "lat": 8.8282064,
+      "lng": 98.3667554,
+      "confidence": "medium",
+      "url": "/takuapa/places/wat-pathum/",
+      "image": "/takuapa/assets/wat-pathum.webp",
+      "kicker": "จากวัดเก่าสู่เรื่องเส้นทางน้ำ"
+    },
+    {
       "id": "wat-kongkha",
       "name_th": "วัดคงคาภิมุข (วัดคงคา)",
       "name_en": "Wat Kongkha Phimuk",
@@ -239,16 +251,21 @@
       "url": "/takuapa/traditions/",
       "image": "/takuapa/assets/relic-procession.webp",
       "kicker": "ประเพณีที่เชื่อมการเดินทางและการสักการะ"
+    },
+    {
+      "id": "food-center",
+      "name_th": "ศูนย์อาหารลานโล่งตะกั่วป่า",
+      "name_en": "Food Center",
+      "category": "food_center",
+      "lat": 8.8675924,
+      "lng": 98.3420033,
+      "confidence": "medium",
+      "url": "/takuapa/places/food-center/",
+      "image": "/takuapa/assets/food-center.webp",
+      "kicker": "ใช้เป็นหัวข้อค้นต่อเรื่องอาหารในเมือง"
     }
   ],
   "unlocated": [
-    {
-      "id": "wat-pathum",
-      "name_th": "วัดปทุมธารา (วัดหน้าเมือง)",
-      "category": "temple",
-      "address": "ถนนหน้าเมือง ชุมชนตลาดใหญ่",
-      "url": "/takuapa/places/wat-pathum/"
-    },
     {
       "id": "rong-jae",
       "name_th": "โรงเจในสวน",
@@ -283,13 +300,6 @@
       "category": "tradition",
       "address": null,
       "url": "/takuapa/traditions/"
-    },
-    {
-      "id": "food-center",
-      "name_th": "ศูนย์อาหารลานโล่งตะกั่วป่า",
-      "category": "food_center",
-      "address": null,
-      "url": "/takuapa/places/food-center/"
     }
   ]
 }

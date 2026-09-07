@@ -84,3 +84,27 @@ a.shop-src:hover{color:#a3492f}
   .site-header{position:relative}
   .nav-toggle{display:grid}
 }
+
+/* ============ Touch targets ============ */
+/* Standalone action links need a real tap area on a phone. Links inside running
+   text are left alone: padding them out would break the line rhythm, and
+   inline links are exempt from the minimum target size anyway. */
+@media (max-width:900px){
+  a.text-link,
+  a.news-out,
+  a.shop-nav,
+  a.index-link,
+  .story-place-links a,
+  .route-jumps a,
+  .card-go{
+    display:inline-flex;align-items:center;min-height:44px;
+  }
+  a.shop-src{display:inline-flex;align-items:center;min-height:36px}
+  .maplibregl-ctrl button{width:36px;height:36px}
+}
+@media (max-width:900px){
+  /* Place names sit inside the news meta line, so they get a taller hit area
+     without becoming block elements that would break the sentence. */
+  .news-meta a{display:inline-block;padding:6px 0;line-height:1.4}
+  .news-row{padding:16px 0}
+}
