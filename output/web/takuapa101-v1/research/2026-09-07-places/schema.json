@@ -1,0 +1,28 @@
+{
+  "id": "string",
+  "name_th": "string",
+  "name_en": "string หรือ null",
+  "aka": ["ชื่ออื่นที่คนเรียก"],
+  "geo": {"lat": 0.0, "lng": 0.0, "confidence": "high|medium|low", "source_url": "", "source_name": ""},
+  "address": {"line_th": "", "subdistrict": "", "district": "ตะกั่วป่า", "province": "พังงา", "postcode": "", "source_url": ""},
+  "contact": {"phone": null, "facebook": null, "website": null, "line": null, "source_url": null},
+  "visit": {
+    "opening_hours_th": null, "opening_hours_status": "CONFIRMED|UNVERIFIED|UNKNOWN",
+    "admission_fee_th": null, "admission_status": "CONFIRMED|UNVERIFIED|UNKNOWN",
+    "best_time_th": null, "duration_minutes": null,
+    "parking_th": null, "restroom": null, "wheelchair_th": null,
+    "dress_code_th": null, "source_urls": []
+  },
+  "getting_there": [{"from": "ตัวเมืองตะกั่วป่า|ภูเก็ต|เขาหลัก|สนามบิน", "text_th": "", "distance_km": null, "source_url": ""}],
+  "history": [{"claim_th": "", "status": "CONFIRMED|UNVERIFIED|DISPUTED", "quote": "", "source_name": "", "source_url": "", "year_be": null, "year_ce": null}],
+  "highlights": [{"title_th": "", "detail_th": "", "source_url": ""}],
+  "festival": {"months_th": null, "lunar_calendar_th": null, "activities_th": [], "venue_th": null, "source_urls": []},
+  "nearby": [{"name_th": "", "walk_minutes": null, "source_url": ""}],
+  "photos": [{"url": "", "caption_th": "", "source_name": "", "license_note_th": "ไม่ทราบสิทธิ์การใช้งาน"}],
+  "seo_keywords_th": [],
+  "seo_keywords_en": [],
+  "unknowns": ["สิ่งที่หาไม่เจอ พร้อมเหตุผลสั้น ๆ"],
+  "sources": [{"name": "", "url": "", "type": "official|academic|news|map|wiki|blog|review", "accessed": "2026-09-07"}],
+  "researched_by": "codex gpt-5.6-luna",
+  "researched_on": "2026-09-07"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "relic-procession",
+  "name_th": "ขบวนแห่อัญเชิญพระบรมสารีริกธาตุขึ้นเขาพระบาท",
+  "name_en": null,
+  "aka": ["ประเพณีแห่พระบรมสารีริกธาตุ", "งานวันมาฆบูชา วัดพระธาตุคีรีเขต", "วัดลุ่ม"],
+  "geo": {"lat": 8.8336680169, "lng": 98.3563150443, "confidence": "high", "source_url": "https://culturalenvi.onep.go.th/site/detail/4413", "source_name": "กองจัดการสิ่งแวดล้อมธรรมชาติและศิลปกรรม สผ."},
+  "address": {"line_th": "ถนนกลั่นแก้ว บริเวณเมืองเก่าตะกั่วป่า", "subdistrict": "ตะกั่วป่า", "district": "ตะกั่วป่า", "province": "พังงา", "postcode": null, "source_url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf"},
+  "contact": {"phone": null, "facebook": null, "website": null, "line": null, "source_url": null},
+  "visit": {
+    "opening_hours_th": null,
+    "opening_hours_status": "UNKNOWN",
+    "admission_fee_th": null,
+    "admission_status": "UNKNOWN",
+    "best_time_th": "วันมาฆบูชา ซึ่งเป็นช่วงจัดประเพณีประจำปี แต่วันตามปฏิทินสุริยคติเปลี่ยนทุกปี",
+    "duration_minutes": null,
+    "parking_th": null,
+    "restroom": null,
+    "wheelchair_th": null,
+    "dress_code_th": "แต่งกายสุภาพและปฏิบัติตามธรรมเนียมวัด",
+    "source_urls": ["https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf"]
+  },
+  "getting_there": [
+    {"from": "ตัวเมืองตะกั่วป่า", "text_th": "ไปยังวัดพระธาตุคีรีเขต (วัดลุ่ม) บนถนนกลั่นแก้วในย่านเมืองเก่าตะกั่วป่า จากนั้นติดตามเส้นทางขบวนขึ้นภูเขาพระพุทธบาทในวันงาน", "distance_km": null, "source_url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf"},
+    {"from": "ภูเก็ต", "text_th": null, "distance_km": null, "source_url": ""},
+    {"from": "เขาหลัก", "text_th": null, "distance_km": null, "source_url": ""},
+    {"from": "สนามบิน", "text_th": null, "distance_km": null, "source_url": ""}
+  ],
+  "history": [
+    {"claim_th": "พระบรมสารีริกธาตุประดิษฐานอยู่ที่วัดพระธาตุคีรีเขต และมีการสร้างพระบรมธาตุเจดีย์บนภูเขาพระพุทธบาทเพื่อเป็นที่ประดิษฐาน", "status": "CONFIRMED", "quote": "มีการก่อสร้างพระบรมธาตุเจดีย์บนภูเขาพระพุทธบาท", "source_name": "เทศบาลเมืองตะกั่วป่า", "source_url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf", "year_be": null, "year_ce": null},
+    {"claim_th": "ขบวนแห่พระบรมสารีริกธาตุเป็นประเพณีประจำปีในวันมาฆบูชา", "status": "CONFIRMED", "quote": "มีประเพณีแห่พระบรมสารีริกธาตุเป็นประเพณีประจำปีในวันมาฆะบูชา", "source_name": "เทศบาลเมืองตะกั่วป่า", "source_url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf", "year_be": null, "year_ce": null},
+    {"claim_th": "วัดพระธาตุคีรีเขตมีชื่อที่ชาวบ้านเรียกว่า วัดลุ่ม และมีฐานเจดีย์โบราณเป็นองค์ประกอบสำคัญ", "status": "CONFIRMED", "quote": "ชาวบ้านมักเรียก วัดลุ่ม", "source_name": "กองจัดการสิ่งแวดล้อมธรรมชาติและศิลปกรรม สผ.", "source_url": "https://culturalenvi.onep.go.th/site/detail/4413", "year_be": null, "year_ce": null}
+  ],
+  "highlights": [
+    {"title_th": "พระบรมธาตุเจดีย์บนเขาพระบาท", "detail_th": "เป็นจุดหมายของการอัญเชิญพระบรมสารีริกธาตุขึ้นเขาในวันมาฆบูชา", "source_url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf"},
+    {"title_th": "อุโบสถโบราณ", "detail_th": "วัดมีอุโบสถโบราณเคียงกับอุโบสถหลังใหม่ และเป็นศิลปะแบบท้องถิ่นภาคใต้", "source_url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf"},
+    {"title_th": "ฐานเจดีย์โบราณกับต้นไทร", "detail_th": "ฐานเจดีย์เป็นโบราณสถานสำคัญ และมีต้นไทรขนาดใหญ่งอกขึ้นบนฐาน", "source_url": "https://culturalenvi.onep.go.th/site/detail/4413"},
+    {"title_th": "รอยพระพุทธบาทจำลอง", "detail_th": "ภายในวัดมีรอยพระพุทธบาทจำลองตามข้อมูลเทศบาล", "source_url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf"}
+  ],
+  "festival": {"months_th": "ไม่ระบุเดือนสุริยคติแน่นอน; จัดในวันมาฆบูชาของทุกปี", "lunar_calendar_th": "วันมาฆบูชา (ขึ้น 15 ค่ำ เดือน 3 ตามจันทรคติไทย โดยปีอธิกมาสอาจต่างกัน)", "activities_th": ["สมโภชพระบรมสารีริกธาตุ", "แห่พระบรมสารีริกธาตุขึ้นสู่ยอดเขาพระบาท", "สักการะพระบรมธาตุเจดีย์"], "venue_th": "วัดพระธาตุคีรีเขต (วัดลุ่ม) และภูเขาพระพุทธบาท เมืองเก่าตะกั่วป่า", "source_urls": ["https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf", "https://www.dailynews.co.th/news/4366578/"]},
+  "nearby": [],
+  "photos": [],
+  "seo_keywords_th": ["ขบวนแห่พระบรมสารีริกธาตุ ตะกั่วป่า", "เขาพระบาท ตะกั่วป่า", "วัดพระธาตุคีรีเขต", "วัดลุ่ม ตะกั่วป่า", "มาฆบูชา ตะกั่วป่า", "ประเพณีตะกั่วป่า", "พระบรมธาตุเจดีย์ ตะกั่วป่า", "เมืองเก่าตะกั่วป่า"],
+  "seo_keywords_en": ["relic procession Takua Pa", "Phra That Khiri Khet Temple", "Khao Phra Bat Takua Pa", "Makha Bucha Takua Pa"],
+  "unknowns": ["ไม่พบชื่ออังกฤษทางการของประเพณี", "ไม่พบเวลาทำการของวัดหรือเวลาขบวนที่ยืนยันได้", "ไม่พบค่าเข้าชม เบอร์โทรศัพท์ เพจเฟซบุ๊ก เว็บไซต์ และ LINE ทางการ", "ไม่พบรหัสไปรษณีย์ที่ระบุในแหล่งที่อ่านได้", "ไม่พบระยะทางที่ยืนยันได้จากภูเก็ต เขาหลัก หรือสนามบิน", "ไม่พบข้อมูลยืนยันเรื่องผู้สร้าง ปีสร้างพระบรมธาตุเจดีย์ บทบาทในยุคเหมืองแร่ดีบุก หรือการขึ้นทะเบียนโบราณสถานของวัด/เจดีย์แห่งนี้", "ไม่พบข้อมูลยืนยันเรื่องที่จอดรถ ห้องน้ำ และการรองรับรถเข็น/ผู้สูงอายุ", "ไม่พบสถานที่ใกล้เคียงที่ระบุระยะเดินได้จากแหล่งที่อ่านได้", "ไม่พบลิงก์รูปภาพทางการที่มีเงื่อนไขลิขสิทธิ์ชัดเจน"],
+  "sources": [
+    {"name": "กองจัดการสิ่งแวดล้อมธรรมชาติและศิลปกรรม สผ. — วัดพระธาตุคีรีเขต", "url": "https://culturalenvi.onep.go.th/site/detail/4413", "type": "official", "accessed": "2026-09-07"},
+    {"name": "เทศบาลเมืองตะกั่วป่า — แผนการดำเนินงานด้านสิ่งแวดล้อม", "url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf", "type": "official", "accessed": "2026-09-07"},
+    {"name": "เดลินิวส์ — ชวนร่วมแห่ขบวนราชรถอัญเชิญพระบรมสารีริกธาตุ", "url": "https://www.dailynews.co.th/news/4366578/", "type": "news", "accessed": "2026-09-07"},
+    {"name": "ศูนย์มานุษยวิทยาสิรินธร — เมืองตะกั่วป่า", "url": "https://wikicommunity.sac.or.th/community/951", "type": "academic", "accessed": "2026-09-07"}
+  ],
+  "researched_by": "codex gpt-5.6-luna",
+  "researched_on": "2026-09-07"
+}

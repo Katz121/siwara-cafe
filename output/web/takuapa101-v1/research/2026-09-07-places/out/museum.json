@@ -1,0 +1,214 @@
+{
+  "id": "museum",
+  "name_th": "พิพิธภัณฑ์เสนานุชรังสรรค์ชุมชนตะกั่วป่า",
+  "name_en": "Takua Pa Community Museum",
+  "aka": [
+    "พิพิธภัณฑ์ชุมชนตะกั่วป่า",
+    "พิพิธภัณฑ์บ้านตะกั่วป่า"
+  ],
+  "geo": {
+    "lat": 8.8302299579,
+    "lng": 98.3624509671,
+    "confidence": "high",
+    "source_url": "https://culturalenvi.onep.go.th/site/detail/4412",
+    "source_name": "สิ่งแวดล้อมศิลปกรรมอันควรอนุรักษ์ (ONEP)"
+  },
+  "address": {
+    "line_th": "ภายในวัดเสนานุชรังสรรค์ ย่านตลาดเก่า",
+    "subdistrict": "ตะกั่วป่า",
+    "district": "ตะกั่วป่า",
+    "province": "พังงา",
+    "postcode": "82110",
+    "source_url": "https://www.50amfh.org/userfiles/file/News/Thai%20temple%20name%20list/south/Phangnga.pdf"
+  },
+  "contact": {
+    "phone": null,
+    "facebook": null,
+    "website": null,
+    "line": null,
+    "source_url": null
+  },
+  "visit": {
+    "opening_hours_th": null,
+    "opening_hours_status": "UNKNOWN",
+    "admission_fee_th": null,
+    "admission_status": "UNKNOWN",
+    "best_time_th": "ช่วงเย็นวันอาทิตย์เหมาะกับการเที่ยวต่อบนถนนวัฒนธรรมเมืองเก่าตะกั่วป่า",
+    "duration_minutes": null,
+    "parking_th": null,
+    "restroom": null,
+    "wheelchair_th": null,
+    "dress_code_th": "ควรแต่งกายสุภาพเมื่อเข้าพื้นที่วัด",
+    "source_urls": [
+      "https://mgronline.com/south/detail/9610000016873",
+      "https://www.gplace.com/960255"
+    ]
+  },
+  "getting_there": [],
+  "history": [
+    {
+      "claim_th": "พิพิธภัณฑ์ชุมชนตะกั่วป่าเป็นอาคารสองชั้นภายในวัดเสนานุชรังสรรค์ และรวบรวมเครื่องใช้กับอุปกรณ์ที่สะท้อนวิถีชีวิตคนตะกั่วป่า รวมถึงของจากยุคเหมืองแร่",
+      "status": "CONFIRMED",
+      "quote": "พิพิธภัณฑ์ชุมชนตะกั่วป่าเป็นอาคารลักษณะสองชั้น",
+      "source_name": "วารสารปาริชาต มหาวิทยาลัยทักษิณ",
+      "source_url": "https://so05.tci-thaijo.org/index.php/parichartjournal/article/download/219292/168797/871014",
+      "year_be": null,
+      "year_ce": null
+    },
+    {
+      "claim_th": "วัดเสนานุชรังสรรค์สร้างโดยพระยาเสนานุชิต (นุช) และอุโบสถมีอิทธิพลทางสถาปัตยกรรมจากจีน",
+      "status": "CONFIRMED",
+      "quote": "พระยาเสนานุชิต (นุช) เป็นผู้สร้างขึ้น",
+      "source_name": "สิ่งแวดล้อมศิลปกรรมอันควรอนุรักษ์ (ONEP)",
+      "source_url": "https://culturalenvi.onep.go.th/site/detail/4412",
+      "year_be": null,
+      "year_ce": null
+    },
+    {
+      "claim_th": "วัดเสนานุชรังสรรค์มีทะเบียนวัดระบุวันตั้งวัด พ.ศ. 2390",
+      "status": "CONFIRMED",
+      "quote": "วันที่ตั้งวัด 2390",
+      "source_name": "รายงานทะเบียนวัดจังหวัดพังงา",
+      "source_url": "https://www.50amfh.org/userfiles/file/News/Thai%20temple%20name%20list/south/Phangnga.pdf",
+      "year_be": 2390,
+      "year_ce": 1847
+    },
+    {
+      "claim_th": "อุโบสถวัดได้รับการขึ้นทะเบียนเป็นโบราณสถานโดยกรมศิลปากร แต่แหล่งที่อ่านได้ไม่ระบุปีในข้อความที่ค้นพบ",
+      "status": "CONFIRMED",
+      "quote": "ได้รับการขึ้นทะเบียนโดยกรมศิลปากร",
+      "source_name": "สิ่งแวดล้อมศิลปกรรมอันควรอนุรักษ์ (ONEP)",
+      "source_url": "https://culturalenvi.onep.go.th/site/detail/4412",
+      "year_be": null,
+      "year_ce": null
+    }
+  ],
+  "highlights": [
+    {
+      "title_th": "อาคารพิพิธภัณฑ์สองชั้น",
+      "detail_th": "ตัวพิพิธภัณฑ์ชุมชนตั้งอยู่ภายในวัดเสนานุชรังสรรค์",
+      "source_url": "https://so05.tci-thaijo.org/index.php/parichartjournal/article/download/219292/168797/871014"
+    },
+    {
+      "title_th": "ของใช้และอุปกรณ์ยุคเหมืองแร่",
+      "detail_th": "จัดเก็บสิ่งของจากยุคทำเหมืองและของหายากที่สะท้อนวิถีชีวิตท้องถิ่น",
+      "source_url": "https://so05.tci-thaijo.org/index.php/parichartjournal/article/download/219292/168797/871014"
+    },
+    {
+      "title_th": "อุโบสถอิทธิพลจีน",
+      "detail_th": "อุโบสถขนาดใหญ่มีรูปแบบได้รับอิทธิพลจากสถาปัตยกรรมจีน",
+      "source_url": "https://culturalenvi.onep.go.th/site/detail/4412"
+    },
+    {
+      "title_th": "บริบทเมืองเก่าตะกั่วป่า",
+      "detail_th": "อยู่ในชุมชนเมืองเก่าที่มีอาคารชิโน-โปรตุกีสและมรดกจากยุคเหมืองแร่",
+      "source_url": "https://wikicommunity.sac.or.th/community/951"
+    }
+  ],
+  "festival": {
+    "months_th": null,
+    "lunar_calendar_th": null,
+    "activities_th": [],
+    "venue_th": null,
+    "source_urls": []
+  },
+  "nearby": [
+    {
+      "name_th": "ศาลเจ้าซิ่นใช่ตึ๋ง",
+      "walk_minutes": null,
+      "source_url": "https://mapcarta.com/N7619565714"
+    },
+    {
+      "name_th": "ศาลเจ้ากู่ใช่ตึ๋ง",
+      "walk_minutes": null,
+      "source_url": "https://mapcarta.com/N7619565714"
+    },
+    {
+      "name_th": "บ้านขุนอินทร์",
+      "walk_minutes": null,
+      "source_url": "https://www.lovethailand.org/travel/en/68-Phang-Nga/7957-Khun-In-House.html"
+    },
+    {
+      "name_th": "กำแพงจวนเจ้าเมืองตะกั่วป่า",
+      "walk_minutes": null,
+      "source_url": "https://archaeology.sac.or.th/archaeology/874"
+    }
+  ],
+  "photos": [],
+  "seo_keywords_th": [
+    "พิพิธภัณฑ์เสนานุชรังสรรค์",
+    "พิพิธภัณฑ์ชุมชนตะกั่วป่า",
+    "พิพิธภัณฑ์บ้านตะกั่วป่า",
+    "วัดเสนานุชรังสรรค์",
+    "วัดใหม่กำแพง",
+    "เมืองเก่าตะกั่วป่า",
+    "พิพิธภัณฑ์ยุคเหมืองแร่ตะกั่วป่า",
+    "ของเก่าตะกั่วป่า",
+    "สถานที่ท่องเที่ยวตะกั่วป่า"
+  ],
+  "seo_keywords_en": [
+    "Takua Pa Community Museum",
+    "Takua Pa Museum",
+    "Wat Sena Nucharangsan",
+    "Takua Pa old town museum",
+    "Phang Nga local museum",
+    "tin mining museum Takua Pa",
+    "Takua Pa cultural heritage",
+    "Sena Nucharangsan temple"
+  ],
+  "unknowns": [
+    "ไม่พบเวลาเปิด-ปิดของพิพิธภัณฑ์โดยตรง",
+    "ไม่พบค่าเข้าชมที่ยืนยันได้สำหรับพิพิธภัณฑ์",
+    "ไม่พบเบอร์โทร เพจเฟซบุ๊ก เว็บไซต์ หรือ LINE ของพิพิธภัณฑ์โดยตรง",
+    "ไม่พบระยะทางและเส้นทางจากตัวเมืองตะกั่วป่า ภูเก็ต เขาหลัก หรือสนามบิน",
+    "ไม่พบข้อมูลยืนยันปีสร้าง ผู้ก่อตั้ง และรายละเอียดการขึ้นทะเบียนของตัวพิพิธภัณฑ์เอง",
+    "ไม่พบข้อมูลยืนยันที่จอดรถ ห้องน้ำ หรือการรองรับรถเข็น",
+    "ไม่พบภาพถ่ายทางการที่ยืนยันสิทธิ์การใช้งาน"
+  ],
+  "sources": [
+    {
+      "name": "สิ่งแวดล้อมศิลปกรรมอันควรอนุรักษ์ (ONEP)",
+      "url": "https://culturalenvi.onep.go.th/site/detail/4412",
+      "type": "official",
+      "accessed": "2026-09-07"
+    },
+    {
+      "name": "วารสารปาริชาต มหาวิทยาลัยทักษิณ",
+      "url": "https://so05.tci-thaijo.org/index.php/parichartjournal/article/download/219292/168797/871014",
+      "type": "academic",
+      "accessed": "2026-09-07"
+    },
+    {
+      "name": "ฐานข้อมูลชุมชน ศูนย์มานุษยวิทยาสิรินธร",
+      "url": "https://wikicommunity.sac.or.th/community/951",
+      "type": "academic",
+      "accessed": "2026-09-07"
+    },
+    {
+      "name": "Mapcarta / OpenStreetMap",
+      "url": "https://mapcarta.com/N7619565714",
+      "type": "map",
+      "accessed": "2026-09-07"
+    },
+    {
+      "name": "รายงานทะเบียนวัดจังหวัดพังงา",
+      "url": "https://www.50amfh.org/userfiles/file/News/Thai%20temple%20name%20list/south/Phangnga.pdf",
+      "type": "official",
+      "accessed": "2026-09-07"
+    },
+    {
+      "name": "กรมโบราณคดี ศูนย์มานุษยวิทยาสิรินธร",
+      "url": "https://archaeology.sac.or.th/archaeology/874",
+      "type": "academic",
+      "accessed": "2026-09-07"
+    },
+    {
+      "name": "MGR Online",
+      "url": "https://mgronline.com/south/detail/9610000016873",
+      "type": "news",
+      "accessed": "2026-09-07"
+    }
+  ],
+  "researched_by": "codex gpt-5.6-luna",
+  "researched_on": "2026-09-07"
+}

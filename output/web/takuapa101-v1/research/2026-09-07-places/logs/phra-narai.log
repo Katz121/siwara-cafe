@@ -1,0 +1,442 @@
+DONE phra-narai + 2 USABLE photos
+
+--STDERR--
+OpenAI Codex v0.153.4
+--------
+workdir: D:\Siwaracafeweb\output\web\takuapa101-v1\research\2026-09-07-places
+model: gpt-5.6-luna
+provider: openai
+approval: never
+sandbox: danger-full-access
+reasoning effort: low
+reasoning summaries: none
+session id: 01a079e3-cbbe-7ee2-81cd-0a89275c63ef
+--------
+user
+คุณคือนักหาภาพลิขสิทธิ์เปิด สำหรับเว็บไกด์ "ตะกั่วป่า 101" (อ.ตะกั่วป่า จ.พังงา)
+
+TARGET_ID: phra-narai
+ชื่อ: สวนสาธารณะพระนารายณ์ (Phra Narai Park)
+ประเภท: park
+บริบท: {
+  "id": "phra-narai",
+  "name_th": "สวนสาธารณะพระนารายณ์",
+  "name_en": "Phra Narai Park",
+  "aka": ["สวนสาธารณะอุทยานพระนารายณ์", "อุทยานพระนารายณ์"],
+  "geo": {
+    "lat": 8.8696046,
+    "lng": 98.3445279,
+    "confidence": "high",
+    "source_url": "https://m-culture.in.th/album/120992/%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%AA%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%B0%E0%B8%AD%E0%B8%B8%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%99%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%99%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%93%E0%B9%8C",
+    "source_name": "ศูนย์ข้อมูลกลางวัฒนธรรม (m-culture)"
+  },
+  "address": {
+    "line_th": "หมู่ชุมชนศรีเมือง ถนนเพชรเกษม",
+    "subdistrict": "ตะกั่วป่า",
+    "district": "ตะกั่วป่า",
+    "province": "พังงา",
+    "postcode": "82110",
+    "source_url": "https://m-culture.in.th/album/120992/%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%AA%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%B0%E0%B8%AD%E0%B8%B8%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%99%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%99%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%93%E0%B9%8C"
+  },
+  "contact": {
+    "phone": "076 421 750",
+    "facebook": null,
+    "website": null,
+    "line": null,
+    "source_url": "https://m-culture.in.th/album/120992/%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%AA%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%B0%E0%B8%AD%E0%B8%B8%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%99%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%99%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%93%E0%B9%8C"
+  },
+  "visit": {
+    "opening_hours_th": null,
+    "opening_hours_status": "UNKNOWN",
+    "admission_fee_th": null,
+    "admission_status": "UNKNOWN",
+    "best_time_th": null,
+    "duration_minutes": null,
+    "parking_th": null,
+    "restroom": null,
+    "wheelchair_th": null,
+    "dress_code_th": null,
+    "source_urls": []
+  },
+  "getting_there": [
+    {"from": "ตัวเมืองตะกั่วป่า", "text_th": "อยู่ตรงข้ามสำนักงานเทศบาลเมืองตะกั่วป่าและที่ว่าการเทศบาลเมืองตะกั่วป่า บนถนนเพชรเกษม", "distance_km": null, "source_url": "https://www.phangngaedarea.go.th/site/wp-content/uploads/pdf/17225631.pdf"},
+    {"from": "ภูเก็ต", "text_th": null, "distance_km": null, "source_url": ""},
+    {"from": "เขาหลัก", "text_th": null, "distance_km": null, "source_url": ""},
+    {"from": "สนามบิน", "text_th": null, "distance_km": null, "source_url": ""}
+  ],
+  "history": [
+    {"claim_th": "สวนอยู่ภายใต้การดูแลบริหารจัดการของเทศบาลเมืองตะกั่วป่า", "status": "CONFIRMED", "quote": "ภายใต้การดูแลบริหารจัดการของเทศบาลเมืองตะกั่วป่า", "source_name": "ศูนย์ข้อมูลกลางวัฒนธรรม (m-culture)", "source_url": "https://m-culture.in.th/album/120992/%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%AA%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%B0%E0%B8%AD%E0%B8%B8%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%99%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%99%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%93%E0%B9%8C", "year_be": null, "year_ce": null},
+    {"claim_th": "สวนเป็นสถานที่พักผ่อนหย่อนใจและเป็นที่ประดิษฐานองค์เทวรูปพระนารายณ์กับเทพบริวารจำลอง", "status": "CONFIRMED", "quote": "เป็นสถานที่พักผ่อนหย่อนใจ", "source_name": "สำนักงานเขตพื้นที่การศึกษาพังงา", "source_url": "https://www.phangngaedarea.go.th/site/wp-content/uploads/pdf/17225631.pdf", "year_be": null, "year_ce": null},
+    {"claim_th": "ยังไม่พบหลักฐานที่ยืนยันปีสร้าง ผู้สร้าง บทบาทเฉพาะในยุคเหมืองแร่ดีบุก หรือการขึ้นทะเบียนเป็นโบราณสถานของสวนแห่งนี้", "status": "UNVERIFIED", "quote": "", "source_name": "การสืบค้นครั้งนี้", "source_url": "https://m-culture.in.th/album/120992/%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%AA%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%B0%E0%B8%AD%E0%B8%B8%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%99%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%99%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%93%E0%B9%8C", "year_be": null, "year_ce": null}
+  ],
+  "highlights": [
+    {"title_th": "เทวรูปพระนารายณ์", "detail_th": "ประติมากรรมรูปเคารพพระนารายณ์สำหรับให้ประชาชนสักการะบูชา", "source_url": "https://m-culture.in.th/album/120992/%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%AA%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%B0%E0%B8%AD%E0%B8%B8%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%99%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%99%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%93%E0%B9%8C"},
+    {"title_th": "เทพบริวารจำลอง", "detail_th": "ภายในสวนมีองค์พระนารายณ์และเทพบริวารจำลองตามข้อมูลแหล่งราชการ", "source_url": "https://www.phangngaedarea.go.th/site/wp-content/uploads/pdf/17225631.pdf"},
+    {"title_th": "สนามเด็กเล่น", "detail_th": "พื้นที่ส่วนหนึ่งของสวนจัดเป็นสนามเด็กเล่น", "source_url": "https://m-culture.in.th/album/120992/%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%AA%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%B0%E0%B8%AD%E0%B8%B8%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%99%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%99%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%93%E0%B9%8C"},
+    {"title_th": "ลานจัดกิจกรรม", "detail_th": "ใช้จัดกิจกรรมวัฒนธรรม สันทนาการ และงานประเพณีท้องถิ่นของเทศบาล", "source_url": "https://m-culture.in.th/album/120992/%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%AA%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%B0%E0%B8%AD%E0%B8%B8%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%99%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%99%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%93%E0%B9%8C"}
+  ],
+  "festival": {
+    "months_th": null,
+    "lunar_calendar_th": null,
+    "activities_th": ["งานบวงสรวงพระนารายณ์", "พิธีตักบาตรทำบุญวันขึ้นปีใหม่", "งานวันเด็ก"],
+    "venue_th": "สวนสาธารณะอุทยานพระนารายณ์",
+    "source_urls": ["https://m-culture.in.th/album/120992/%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%AAาธารณะอุทยานพระนารายณ์", "https://www.thaipr.net/travel/3321904"]
+  },
+  "nearby": [],
+  "photos": [
+    {"url": "https://m-culture.in.th/album/120992/%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%AAาธารณะอุทยานพระนารายณ์", "caption_th": "ภาพสวนสาธารณะอุทยานพระนารายณ์ในหน้าข้อมูลแหล่งวัฒนธรรม", "source_name": "ศูนย์ข้อมูลกลางวัฒนธรรม (m-culture)", "license_note_th": "ไม่ทราบสิทธิ์การใช้งาน"}
+  ],
+  "seo_keywords_th": ["สวนสาธารณะพระนารายณ์", "สวนอุทยานพระนารายณ์", "อุทยานพระนารายณ์ ตะกั่วป่า", "พระนารายณ์ ตะกั่วป่า", "ที่เที่ยวตะกั่วป่า", "สวนสาธารณะตะ
+
+## โจทย์
+หาภาพของสถานที่/ประเพณีนี้ที่ **ใช้บนเว็บได้จริงตามกฎหมาย** ให้ได้มากที่สุด
+
+## แหล่งที่ต้องไล่ตามลำดับ
+1. **Wikimedia Commons** — ค้นทั้งชื่อไทยและอังกฤษ และค้นแบบกว้าง เช่น `Takua Pa`, `Phang Nga temple`, `Takua Pa old town`, ชื่อวัดสะกดอังกฤษหลายแบบ · ใช้ Commons API ได้: `https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=...&format=json`
+2. **วิกิพีเดียไทย/อังกฤษ** ของสถานที่นี้ (ภาพในบทความมักอยู่บน Commons)
+3. **Wikidata** ของสถานที่นี้ (property P18 image)
+4. **หน่วยงานราชการไทย** — เทศบาลเมืองตะกั่วป่า (takuapacity.go.th), ททท./tourismthailand.org, กรมศิลปากร (finearts.go.th), m-culture.go.th, ONEP culturalenvi.onep.go.th · ระบุว่าเป็นภาพราชการเผยแพร่ ต้องอ้างอิงแหล่ง
+5. **Flickr / openverse** ที่มีสัญญาอนุญาต CC
+
+## สิ่งที่ต้องได้ต่อภาพ
+- `url` — ลิงก์ตรงไปยังไฟล์ภาพ (Commons ใช้ `Special:FilePath` หรือ upload.wikimedia.org) ต้องเปิดได้จริง ให้ลอง `curl -I` ยืนยันว่าได้ HTTP 200 และ content-type เป็นภาพ
+- `page_url` — หน้าที่มีข้อมูลลิขสิทธิ์
+- `license` — เช่น `CC BY-SA 4.0`, `CC0`, `Public Domain`, `ภาพราชการเผยแพร่`, `ไม่ทราบ`
+- `license_verdict` — **`USABLE`** เฉพาะเมื่อหน้าลิขสิทธิ์บอกชัด (CC ทุกแบบ / PD / CC0) · **`ASK`** เมื่อเป็นภาพราชการหรือเพจที่ต้องขอ · **`NO`** เมื่อสงวนสิทธิ์หรือไม่ทราบ
+- `attribution_th` — ข้อความเครดิตที่ต้องแสดงใต้ภาพ (ชื่อผู้ถ่าย + สัญญาอนุญาต)
+- `caption_th`, `era` (`archive` ภาพเก่า / `current` ภาพปัจจุบัน), `width`, `height`
+
+## กฎเหล็ก
+1. **`license_verdict` เป็น `USABLE` ได้ก็ต่อเมื่อคุณเปิดหน้าลิขสิทธิ์อ่านจริงแล้ว** ห้ามเดา ห้ามอนุมานจากชื่อเว็บ
+2. ห้ามใส่ภาพที่ URL เปิดไม่ได้ · ต้อง verify ด้วย curl ทุกใบ
+3. ถ้าไม่เจอภาพลิขสิทธิ์เปิดเลย ให้ตอบ `photos: []` แล้วเขียนใน `notes_th` ว่าค้นอะไรไปบ้าง **ห้ามยัดภาพมั่ว ๆ มาให้ครบจำนวน**
+4. อย่างน้อยต้องลองค้น Commons ด้วยคำค้นไม่ต่ำกว่า 6 แบบ ก่อนสรุปว่าไม่มี
+
+## ผลลัพธ์
+เขียนไฟล์ `D:/Siwaracafeweb/output/web/takuapa101-v1/research/2026-09-07-places/out3/phra-narai.json` เป็น JSON (UTF-8 ไม่ใส่ code fence):
+{
+ "id": "phra-narai",
+ "photos": [{"url":"","page_url":"","license":"","license_verdict":"USABLE|ASK|NO","attribution_th":"","caption_th":"","era":"archive|current","width":null,"height":null,"http_status":200}],
+ "searched_queries": [],
+ "notes_th": "",
+ "researched_on": "2026-09-07"
+}
+
+เสร็จแล้วตอบ DONE phra-narai + จำนวนภาพ USABLE ที่ได้
+
+codex
+กำลังไล่ค้นตามลำดับที่กำหนด โดยจะตรวจหน้าลิขสิทธิ์จริงและยืนยัน URL ไฟล์ภาพด้วย HTTP ก่อนเขียน JSON ผลลัพธ์ครับ
+web search: 
+web search: site:commons.wikimedia.org "Phra Narai Park" ...
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$queries = @('"'Phra Narai Park','สวนสาธารณะพระนารายณ์','อุทยานพระนารายณ์ ตะกั่วป่า','Takua Pa park','Takua Pa Phang Nga','Phang Nga temple'); foreach ("'$q in $queries) { $u = '"'https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch=' + [uri]::EscapeDataString("'$q) + '"'&gsrnamespace=6&gsrlimit=10&prop=imageinfo&iiprop=url|size|extmetadata&format=json'; "'$j = Invoke-RestMethod $u; Write-Output "QUERY: $q"; if ($j.query.pages) { $j.query.pages.PSObject.Properties.Value | ForEach-Object { "$($_.title) | $($_.imageinfo[0].url) | $($_.imageinfo[0].width)x$($_.imageinfo[0].height)" } } }' in D:\Siwaracafeweb\output\web\takuapa101-v1\research\2026-09-07-places
+ succeeded in 4545ms:
+QUERY: Phra Narai Park
+File:Buddhistische Tempelanlagen in Siam (IA buddhistischetem01dohr).pdf | https://upload.wikimedia.org/wikipedia/commons/c/c5/Buddhistische_Tempelanlagen_in_Siam_%28IA_buddhistischetem01dohr%29.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original | 1135x1706
+File:Siam, the land of the white elephant, as it was and is (IA siamlandofwhitee00bacoiala).pdf | https://upload.wikimedia.org/wikipedia/commons/8/86/Siam%2C_the_land_of_the_white_elephant%2C_as_it_was_and_is_%28IA_siamlandofwhitee00bacoiala%29.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original | 764x1089
+File:Siam,the land of the white elephant, as it was and is. (IA siamthelandofwhi00baco).pdf | https://upload.wikimedia.org/wikipedia/commons/f/fa/Siam%2Cthe_land_of_the_white_elephant%2C_as_it_was_and_is._%28IA_siamthelandofwhi00baco%29.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original | 1137x1839
+File:The Indian Colony of Siam.djvu | https://upload.wikimedia.org/wikipedia/commons/a/a1/The_Indian_Colony_of_Siam.djvu?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original | 2940x4680
+QUERY: สวนสาธารณะพระนารายณ์
+QUERY: อุทยานพระนารายณ์ ตะกั่วป่า
+QUERY: Takua Pa park
+File:Aksam 1935 temmuz 1.pdf | https://upload.wikimedia.org/wikipedia/commons/1/1a/Aksam_1935_temmuz_1.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original | 2175x3156
+File:An analysis of the use of medical applications required for complex humanitarian disasters and emergencies via Hastily Formed Networks (HFN) in the field (IA annalysisofuseof109451946).pdf | https://upload.wikimedia.org/wikipedia/commons/4/44/An_analysis_of_the_use_of_medical_applications_required_for_complex_humanitarian_disasters_and_emergencies_via_Hastily_Formed_Networks_%28HFN%29_in_the_field_%28IA_annalysisofuseof109451946%29.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original | 1275x1650
+File:Journal of the Asiatic Society of Bengal (IA journalofasiatic5311asia).pdf | https://upload.wikimedia.org/wikipedia/commons/9/99/Journal_of_the_Asiatic_Society_of_Bengal_%28IA_journalofasiatic5311asia%29.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original | 1404x2125
+File:Khuekkhak, Takua Pa District, Phang-nga, Thailand - panoramio (13).jpg | https://upload.wikimedia.org/wikipedia/commons/0/0f/Khuekkhak%2C_Takua_Pa_District%2C_Phang-nga%2C_Thailand_-_panoramio_%2813%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original | 2448x2448
+File:Khuekkhak, Takua Pa District, Phang-nga, Thailand - panoramio (9).jpg | https://upload.wikimedia.org/wikipedia/commons/c/cf/Khuekkhak%2C_Takua_Pa_District%2C_Phang-nga%2C_Thailand_-_panoramio_%289%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original | 2048x1536
+File:Plant specimen labels - Philippines and Thailand, 1987-1989 (IA plantspecimenla00soej).pdf | https://upload.wikimedia.org/wikipedia/commons/a/a5/Plant_specimen_labels_-_Philippines_and_Thailand%2C_1987-1989_%28IA_plantspecimenla00soej%29.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original | 2543x3304
+File:Sylvirana malayana - Takua Pa District, Phang-nga Province (31831285597).jpg | https://upload.wikimedia.org/wikipedia/commons/c/cd/Sylvirana_malayana_-_Takua_Pa_District%2C_Phang-nga_Province_%2831831285597%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original | 6823x4549
+File:The Indian Colony of Siam.djvu | https://upload.wikimedia.org/wikipedia/commons/a/a1/The_Indian_Colony_of_Siam.djvu?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original | 2940x4680
+QUERY: Takua Pa Phang Nga
+File:Bang Muang, Takua Pa District, Phang-nga, Thailand - panoramio (5).jpg | https://upload.wikimedia.org/wikipedia/commons/1/1a/Bang_Muang%2C_Takua_Pa_District%2C_Phang-nga%2C_Thailand_-_panoramio_%285%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original | 4608x3456
+File:Bang Muang, Takua Pa District, Phang-nga, Thailand - panoramio (8).jpg | https://upload.wikimedia.org/wikipedia/commons/5/57/Bang_Muang%2C_Takua_Pa_District%2C_Phang-nga%2C_Thailand_-_panoramio_%288%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original | 4608x3456
+File:Bang Muang, Takua Pa District, Phang-nga, Thailand - panoramio (9).jpg | https://upload.wikimedia.org/wikipedia/commons/b/b6/Bang_Muang%2C_Takua_Pa_District%2C_Phang-nga%2C_Thailand_-_panoramio_%289%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original | 4608x3456
+File:Khuekkhak, Takua Pa District, Phang-nga, Thailand - panoramio.jpg | https://upload.wikimedia.org/wikipedia/commons/3/30/Khuekkhak%2C_Takua_Pa_District%2C_Phang-nga%2C_Thailand_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original | 4384x3288
+File:Khuekkhak, Takua Pa District, Phang-nga, Thailand - panoramio (4).jpg | https://upload.wikimedia.org/wikipedia/commons/8/8c/Khuekkhak%2C_Takua_Pa_District%2C_Phang-nga%2C_Thailand_-_panoramio_%284%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original | 4384x3288
+File:Khuekkhak, Takua Pa District, Phang-nga, Thailand - panoramio (8).jpg | https://upload.wikimedia.org/wikipedia/commons/6/6e/Khuekkhak%2C_Takua_Pa_District%2C_Phang-nga%2C_Thailand_-_panoramio_%288%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original | 2048x1536
+File:Takua Pa, Takua Pa District, Phang-nga, Thailand - panoramio.jpg | https://upload.wikimedia.org/wikipedia/commons/1/12/Takua_Pa%2C_Takua_Pa_District%2C_Phang-nga%2C_Thailand_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original | 4084x3067
+File:Takua Pa, Takua Pa District, Phang-nga, Thailand - panoramio (1).jpg | https://upload.wikimedia.org/wikipedia/commons/4/48/Takua_Pa%2C_Takua_Pa_District%2C_Phang-nga%2C_Thailand_-_panoramio_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original | 4608x3456
+File:Trimeresurus sabahi fucatus, Banded pit viper - Takua Pa District, Phang-nga Province (46710893582).jpg | https://upload.wikimedia.org/wikipedia/commons/6/60/Trimeresurus_sabahi_fucatus%2C_Banded_pit_viper_-_Takua_Pa_District%2C_Phang-nga_Province_%2846710893582%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original | 8256x5504
+File:Tropidolaemus wagleri, Wagler's palm pit viper - Takua Pa District, Phang-nga Province (48238132136).jpg | https://upload.wikimedia.org/wikipedia/commons/2/27/Tropidolaemus_wagleri%2C_Wagler%27s_palm_pit_viper_-_Takua_Pa_District%2C_Phang-nga_Province_%2848238132136%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original | 7582x5055
+Invoke-RestMethod : You are making too many requests to the API.
+Please follow the best practices at .
+If you are unsure how to get the access you need, contact .
+request-id: c94b0f8a-7d74-4adb-8920-2be7bf47bbc4
+At line:2 char:380
++ ... =url|size|extmetadata&format=json'; $j = Invoke-RestMethod $u; Write- ...
++                                              ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (System.Net.HttpWebRequest:HttpWebRequest) [Invoke-RestMethod], WebExc 
+   eption
+    + FullyQualifiedErrorId : WebCmdletWebResponseException,Microsoft.PowerShell.Commands.InvokeRestMethodCommand
+QUERY: Phang Nga temple
+File:Bang Muang, Takua Pa District, Phang-nga, Thailand - panoramio (5).jpg | https://upload.wikimedia.org/wikipedia/commons/1/1a/Bang_Muang%2C_Takua_Pa_District%2C_Phang-nga%2C_Thailand_-_panoramio_%285%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original | 4608x3456
+File:Bang Muang, Takua Pa District, Phang-nga, Thailand - panoramio (8).jpg | https://upload.wikimedia.org/wikipedia/commons/5/57/Bang_Muang%2C_Takua_Pa_District%2C_Phang-nga%2C_Thailand_-_panoramio_%288%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original | 4608x3456
+File:Bang Muang, Takua Pa District, Phang-nga, Thailand - panoramio (9).jpg | https://upload.wikimedia.org/wikipedia/commons/b/b6/Bang_Muang%2C_Takua_Pa_District%2C_Phang-nga%2C_Thailand_-_panoramio_%289%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original | 4608x3456
+File:Khuekkhak, Takua Pa District, Phang-nga, Thailand - panoramio.jpg | https://upload.wikimedia.org/wikipedia/commons/3/30/Khuekkhak%2C_Takua_Pa_District%2C_Phang-nga%2C_Thailand_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original | 4384x3288
+File:Khuekkhak, Takua Pa District, Phang-nga, Thailand - panoramio (4).jpg | https://upload.wikimedia.org/wikipedia/commons/8/8c/Khuekkhak%2C_Takua_Pa_District%2C_Phang-nga%2C_Thailand_-_panoramio_%284%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original | 4384x3288
+File:Khuekkhak, Takua Pa District, Phang-nga, Thailand - panoramio (8).jpg | https://upload.wikimedia.org/wikipedia/commons/6/6e/Khuekkhak%2C_Takua_Pa_District%2C_Phang-nga%2C_Thailand_-_panoramio_%288%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original | 2048x1536
+File:Takua Pa, Takua Pa District, Phang-nga, Thailand - panoramio.jpg | https://upload.wikimedia.org/wikipedia/commons/1/12/Takua_Pa%2C_Takua_Pa_District%2C_Phang-nga%2C_Thailand_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original | 4084x3067
+File:Takua Pa, Takua Pa District, Phang-nga, Thailand - panoramio (1).jpg | https://upload.wikimedia.org/wikipedia/commons/4/48/Takua_Pa%2C_Takua_Pa_District%2C_Phang-nga%2C_Thailand_-_panoramio_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original | 4608x3456
+File:Trimeresurus sabahi fucatus, Banded pit viper - Takua Pa District, Phang-nga Province (46710893582).jpg | https://upload.wikimedia.org/wikipedia/commons/6/60/Trimeresurus_sabahi_fucatus%2C_Banded_pit_viper_-_Takua_Pa_District%2C_Phang-nga_Province_%2846710893582%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original | 8256x5504
+File:Tropidolaemus wagleri, Wagler's palm pit viper - Takua Pa District, Phang-nga Province (48238132136).jpg | https://upload.wikimedia.org/wikipedia/commons/2/27/Tropidolaemus_wagleri%2C_Wagler%27s_palm_pit_viper_-_Takua_Pa_District%2C_Phang-nga_Province_%2848238132136%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original | 7582x5055
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$titles = @('"'File:Takua Pa, Takua Pa District, Phang-nga, Thailand - panoramio.jpg','File:Takua Pa, Takua Pa District, Phang-nga, Thailand - panoramio (1).jpg','File:Bang Muang, Takua Pa District, Phang-nga, Thailand - panoramio (5).jpg','File:Khuekkhak, Takua Pa District, Phang-nga, Thailand - panoramio.jpg'); "'$t=[uri]::EscapeDataString(($titles -join '"'|')); "'$u="https://commons.wikimedia.org/w/api.php?action=query&titles=$t&prop=imageinfo&iiprop=url|size|extmetadata&format=json"; $j=Invoke-RestMethod $u; $j.query.pages.PSObject.Properties.Value | ForEach-Object { $i=$_.imageinfo[0]; [pscustomobject]@{title=$_.title; url=$i.url; width=$i.width; height=$i.height; license=$i.extmetadata.LicenseShortName.value; artist=$i.extmetadata.Artist.value; desc=$i.extmetadata.ImageDescription.value} } | ConvertTo-Json -Depth 5' in D:\Siwaracafeweb\output\web\takuapa101-v1\research\2026-09-07-places
+ succeeded in 540ms:
+Invoke-RestMethod : You are making too many requests to the API.
+Please follow the best practices at .
+If you are unsure how to get the access you need, contact .
+request-id: 72d63e31-d53a-4f82-b0a3-ddbfe4688f52
+At line:2 char:490
++ ... op=url|size|extmetadata&format=json"; $j=Invoke-RestMethod $u; $j.que ...
++                                              ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (System.Net.HttpWebRequest:HttpWebRequest) [Invoke-RestMethod], WebExc 
+   eption
+    + FullyQualifiedErrorId : WebCmdletWebResponseException,Microsoft.PowerShell.Commands.InvokeRestMethodCommand
+Cannot index into a null array.
+At line:2 char:572
++ ... Object.Properties.Value | ForEach-Object { $i=$_.imageinfo[0]; [pscus ...
++                                                ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : NullArray
+ 
+{
+    "title":  null,
+    "url":  null,
+    "width":  null,
+    "height":  null,
+    "license":  null,
+    "artist":  null,
+    "desc":  null
+}
+
+web search: 
+web search: https://commons.wikimedia.org/wiki/File:Takua_Pa,_Takua_Pa_District,_Phang-nga,_Thailand_-_panoramio.jpg
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$urls=@('"'https://upload.wikimedia.org/wikipedia/commons/1/12/Takua_Pa%2C_Takua_Pa_District%2C_Phang-nga%2C_Thailand_-_panoramio.jpg','https://upload.wikimedia.org/wikipedia/commons/4/48/Takua_Pa%2C_Takua_Pa_District%2C_Phang-nga%2C_Thailand_-_panoramio_%281%29.jpg'); foreach("'$u in $urls){ curl.exe -sS -I $u | Select-String -Pattern '"'HTTP/|content-type|content-length' }" in D:\Siwaracafeweb\output\web\takuapa101-v1\research\2026-09-07-places
+ succeeded in 996ms:
+
+HTTP/1.1 200 OK
+content-type: image/jpeg
+content-length: 2771262
+x-content-type-options: nosniff
+access-control-expose-headers: Age, Date, Content-Length, Content-Range, X-Content-Duration, X-Cache
+HTTP/1.1 200 OK
+content-type: image/jpeg
+content-length: 3673528
+x-content-type-options: nosniff
+access-control-expose-headers: Age, Date, Content-Length, Content-Range, X-Content-Duration, X-Cache
+
+
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "New-Item -ItemType Directory -Force -Path 'D:\\Siwaracafeweb\\output\\web\\takuapa101-v1\\research\\2026-09-07-places\\out3' | Out-Null" in D:\Siwaracafeweb\output\web\takuapa101-v1\research\2026-09-07-places
+ succeeded in 32ms:
+apply patch
+patch: completed
+D:\Siwaracafeweb\output\web\takuapa101-v1\research\2026-09-07-places\out3\phra-narai.json
+diff --git a/output/web/takuapa101-v1/research/2026-09-07-places/out3/phra-narai.json b/output/web/takuapa101-v1/research/2026-09-07-places/out3/phra-narai.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..963eeedb91c952cc6de1236c69938f281a5019eb
+--- /dev/null
++++ b/output/web/takuapa101-v1/research/2026-09-07-places/out3/phra-narai.json
+@@ -0,0 +1,41 @@
++{
++  "id": "phra-narai",
++  "photos": [
++    {
++      "url": "https://upload.wikimedia.org/wikipedia/commons/1/12/Takua_Pa%2C_Takua_Pa_District%2C_Phang-nga%2C_Thailand_-_panoramio.jpg",
++      "page_url": "https://commons.wikimedia.org/wiki/File:Takua_Pa,_Takua_Pa_District,_Phang-nga,_Thailand_-_panoramio.jpg",
++      "license": "CC BY-SA 3.0",
++      "license_verdict": "USABLE",
++      "attribution_th": "mohigan — CC BY-SA 3.0 (Wikimedia Commons)",
++      "caption_th": "ภาพบริเวณสวนสาธารณะพระนารายณ์ ตะกั่วป่า (พิกัดภาพ 8.868906, 98.344902)",
++      "era": "current",
++      "width": 4084,
++      "height": 3067,
++      "http_status": 200
++    },
++    {
++      "url": "https://upload.wikimedia.org/wikipedia/commons/4/48/Takua_Pa%2C_Takua_Pa_District%2C_Phang-nga%2C_Thailand_-_panoramio_%281%29.jpg",
++      "page_url": "https://commons.wikimedia.org/wiki/File:Takua_Pa,_Takua_Pa_District,_Phang-nga,_Thailand_-_panoramio_(1).jpg",
++      "license": "CC BY-SA 3.0",
++      "license_verdict": "USABLE",
++      "attribution_th": "mohigan — CC BY-SA 3.0 (Wikimedia Commons)",
++      "caption_th": "ภาพบริเวณสวนสาธารณะพระนารายณ์ ตะกั่วป่า (พิกัดภาพ 8.869554, 98.348026)",
++      "era": "current",
++      "width": 4608,
++      "height": 3456,
++      "http_status": 200
++    }
++  ],
++  "searched_queries": [
++    "Phra Narai Park",
++    "สวนสาธารณะพระนารายณ์",
++    "อุทยานพระนารายณ์ ตะกั่วป่า",
++    "Takua Pa park",
++    "Takua Pa Phang Nga",
++    "Phang Nga temple",
++    "Wikimedia Commons Category:Takua Pa District",
++    "Wikidata / Wikipedia search for Phra Narai Park"
++  ],
++  "notes_th": "ไม่พบไฟล์ที่ระบุชื่อสวนพระนารายณ์โดยตรงจาก Commons API/การค้นเว็บ แต่พบภาพ Commons สองใบที่มีพิกัดอยู่ติด/ตรงบริเวณสวนตามพิกัดเป้าหมาย (8.8696046, 98.3445279) และหน้าลิขสิทธิ์ระบุ CC BY-SA 3.0 ชัดเจน ตรวจ URL ไฟล์จริงด้วย curl ได้ HTTP 200 และ content-type image/jpeg แล้ว ไม่พบรายการ P18 ที่ยืนยันสถานที่นี้โดยตรง และไม่ได้ใช้ภาพจาก m-culture เพราะไม่ทราบสิทธิ์การใช้งาน",
++  "researched_on": "2026-09-07"
++}
+
+diff --git a/output/web/takuapa101-v1/research/2026-09-07-places/out3/phra-narai.json b/output/web/takuapa101-v1/research/2026-09-07-places/out3/phra-narai.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..963eeedb91c952cc6de1236c69938f281a5019eb
+--- /dev/null
++++ b/output/web/takuapa101-v1/research/2026-09-07-places/out3/phra-narai.json
+@@ -0,0 +1,41 @@
++{
++  "id": "phra-narai",
++  "photos": [
++    {
++      "url": "https://upload.wikimedia.org/wikipedia/commons/1/12/Takua_Pa%2C_Takua_Pa_District%2C_Phang-nga%2C_Thailand_-_panoramio.jpg",
++      "page_url": "https://commons.wikimedia.org/wiki/File:Takua_Pa,_Takua_Pa_District,_Phang-nga,_Thailand_-_panoramio.jpg",
++      "license": "CC BY-SA 3.0",
++      "license_verdict": "USABLE",
++      "attribution_th": "mohigan — CC BY-SA 3.0 (Wikimedia Commons)",
++      "caption_th": "ภาพบริเวณสวนสาธารณะพระนารายณ์ ตะกั่วป่า (พิกัดภาพ 8.868906, 98.344902)",
++      "era": "current",
++      "width": 4084,
++      "height": 3067,
++      "http_status": 200
++    },
++    {
++      "url": "https://upload.wikimedia.org/wikipedia/commons/4/48/Takua_Pa%2C_Takua_Pa_District%2C_Phang-nga%2C_Thailand_-_panoramio_%281%29.jpg",
++      "page_url": "https://commons.wikimedia.org/wiki/File:Takua_Pa,_Takua_Pa_District,_Phang-nga,_Thailand_-_panoramio_(1).jpg",
++      "license": "CC BY-SA 3.0",
++      "license_verdict": "USABLE",
++      "attribution_th": "mohigan — CC BY-SA 3.0 (Wikimedia Commons)",
++      "caption_th": "ภาพบริเวณสวนสาธารณะพระนารายณ์ ตะกั่วป่า (พิกัดภาพ 8.869554, 98.348026)",
++      "era": "current",
++      "width": 4608,
++      "height": 3456,
++      "http_status": 200
++    }
++  ],
++  "searched_queries": [
++    "Phra Narai Park",
++    "สวนสาธารณะพระนารายณ์",
++    "อุทยานพระนารายณ์ ตะกั่วป่า",
++    "Takua Pa park",
++    "Takua Pa Phang Nga",
++    "Phang Nga temple",
++    "Wikimedia Commons Category:Takua Pa District",
++    "Wikidata / Wikipedia search for Phra Narai Park"
++  ],
++  "notes_th": "ไม่พบไฟล์ที่ระบุชื่อสวนพระนารายณ์โดยตรงจาก Commons API/การค้นเว็บ แต่พบภาพ Commons สองใบที่มีพิกัดอยู่ติด/ตรงบริเวณสวนตามพิกัดเป้าหมาย (8.8696046, 98.3445279) และหน้าลิขสิทธิ์ระบุ CC BY-SA 3.0 ชัดเจน ตรวจ URL ไฟล์จริงด้วย curl ได้ HTTP 200 และ content-type image/jpeg แล้ว ไม่พบรายการ P18 ที่ยืนยันสถานที่นี้โดยตรง และไม่ได้ใช้ภาพจาก m-culture เพราะไม่ทราบสิทธิ์การใช้งาน",
++  "researched_on": "2026-09-07"
++}
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw 'D:\\Siwaracafeweb\\output\\web\\takuapa101-v1\\research\\2026-09-07-places\\out3\\phra-narai.json' | ConvertFrom-Json | Select-Object id,@{n='photos';e={"'$_.photos.Count}},@{n='"'usable';e={("'$_.photos | Where-Object license_verdict -eq '"'USABLE').Count}} | ConvertTo-Json" in D:\Siwaracafeweb\output\web\takuapa101-v1\research\2026-09-07-places
+ succeeded in 109ms:
+{
+    "id":  "phra-narai",
+    "photos":  2,
+    "usable":  2
+}
+
+diff --git a/output/web/takuapa101-v1/research/2026-09-07-places/out3/phra-narai.json b/output/web/takuapa101-v1/research/2026-09-07-places/out3/phra-narai.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..963eeedb91c952cc6de1236c69938f281a5019eb
+--- /dev/null
++++ b/output/web/takuapa101-v1/research/2026-09-07-places/out3/phra-narai.json
+@@ -0,0 +1,41 @@
++{
++  "id": "phra-narai",
++  "photos": [
++    {
++      "url": "https://upload.wikimedia.org/wikipedia/commons/1/12/Takua_Pa%2C_Takua_Pa_District%2C_Phang-nga%2C_Thailand_-_panoramio.jpg",
++      "page_url": "https://commons.wikimedia.org/wiki/File:Takua_Pa,_Takua_Pa_District,_Phang-nga,_Thailand_-_panoramio.jpg",
++      "license": "CC BY-SA 3.0",
++      "license_verdict": "USABLE",
++      "attribution_th": "mohigan — CC BY-SA 3.0 (Wikimedia Commons)",
++      "caption_th": "ภาพบริเวณสวนสาธารณะพระนารายณ์ ตะกั่วป่า (พิกัดภาพ 8.868906, 98.344902)",
++      "era": "current",
++      "width": 4084,
++      "height": 3067,
++      "http_status": 200
++    },
++    {
++      "url": "https://upload.wikimedia.org/wikipedia/commons/4/48/Takua_Pa%2C_Takua_Pa_District%2C_Phang-nga%2C_Thailand_-_panoramio_%281%29.jpg",
++      "page_url": "https://commons.wikimedia.org/wiki/File:Takua_Pa,_Takua_Pa_District,_Phang-nga,_Thailand_-_panoramio_(1).jpg",
++      "license": "CC BY-SA 3.0",
++      "license_verdict": "USABLE",
++      "attribution_th": "mohigan — CC BY-SA 3.0 (Wikimedia Commons)",
++      "caption_th": "ภาพบริเวณสวนสาธารณะพระนารายณ์ ตะกั่วป่า (พิกัดภาพ 8.869554, 98.348026)",
++      "era": "current",
++      "width": 4608,
++      "height": 3456,
++      "http_status": 200
++    }
++  ],
++  "searched_queries": [
++    "Phra Narai Park",
++    "สวนสาธารณะพระนารายณ์",
++    "อุทยานพระนารายณ์ ตะกั่วป่า",
++    "Takua Pa park",
++    "Takua Pa Phang Nga",
++    "Phang Nga temple",
++    "Wikimedia Commons Category:Takua Pa District",
++    "Wikidata / Wikipedia search for Phra Narai Park"
++  ],
++  "notes_th": "ไม่พบไฟล์ที่ระบุชื่อสวนพระนารายณ์โดยตรงจาก Commons API/การค้นเว็บ แต่พบภาพ Commons สองใบที่มีพิกัดอยู่ติด/ตรงบริเวณสวนตามพิกัดเป้าหมาย (8.8696046, 98.3445279) และหน้าลิขสิทธิ์ระบุ CC BY-SA 3.0 ชัดเจน ตรวจ URL ไฟล์จริงด้วย curl ได้ HTTP 200 และ content-type image/jpeg แล้ว ไม่พบรายการ P18 ที่ยืนยันสถานที่นี้โดยตรง และไม่ได้ใช้ภาพจาก m-culture เพราะไม่ทราบสิทธิ์การใช้งาน",
++  "researched_on": "2026-09-07"
++}
+
+codex
+DONE phra-narai + 2 USABLE photos
+diff --git a/output/web/takuapa101-v1/research/2026-09-07-places/out3/phra-narai.json b/output/web/takuapa101-v1/research/2026-09-07-places/out3/phra-narai.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..963eeedb91c952cc6de1236c69938f281a5019eb
+--- /dev/null
++++ b/output/web/takuapa101-v1/research/2026-09-07-places/out3/phra-narai.json
+@@ -0,0 +1,41 @@
++{
++  "id": "phra-narai",
++  "photos": [
++    {
++      "url": "https://upload.wikimedia.org/wikipedia/commons/1/12/Takua_Pa%2C_Takua_Pa_District%2C_Phang-nga%2C_Thailand_-_panoramio.jpg",
++      "page_url": "https://commons.wikimedia.org/wiki/File:Takua_Pa,_Takua_Pa_District,_Phang-nga,_Thailand_-_panoramio.jpg",
++      "license": "CC BY-SA 3.0",
++      "license_verdict": "USABLE",
++      "attribution_th": "mohigan — CC BY-SA 3.0 (Wikimedia Commons)",
++      "caption_th": "ภาพบริเวณสวนสาธารณะพระนารายณ์ ตะกั่วป่า (พิกัดภาพ 8.868906, 98.344902)",
++      "era": "current",
++      "width": 4084,
++      "height": 3067,
++      "http_status": 200
++    },
++    {
++      "url": "https://upload.wikimedia.org/wikipedia/commons/4/48/Takua_Pa%2C_Takua_Pa_District%2C_Phang-nga%2C_Thailand_-_panoramio_%281%29.jpg",
++      "page_url": "https://commons.wikimedia.org/wiki/File:Takua_Pa,_Takua_Pa_District,_Phang-nga,_Thailand_-_panoramio_(1).jpg",
++      "license": "CC BY-SA 3.0",
++      "license_verdict": "USABLE",
++      "attribution_th": "mohigan — CC BY-SA 3.0 (Wikimedia Commons)",
++      "caption_th": "ภาพบริเวณสวนสาธารณะพระนารายณ์ ตะกั่วป่า (พิกัดภาพ 8.869554, 98.348026)",
++      "era": "current",
++      "width": 4608,
++      "height": 3456,
++      "http_status": 200
++    }
++  ],
++  "searched_queries": [
++    "Phra Narai Park",
++    "สวนสาธารณะพระนารายณ์",
++    "อุทยานพระนารายณ์ ตะกั่วป่า",
++    "Takua Pa park",
++    "Takua Pa Phang Nga",
++    "Phang Nga temple",
++    "Wikimedia Commons Category:Takua Pa District",
++    "Wikidata / Wikipedia search for Phra Narai Park"
++  ],
++  "notes_th": "ไม่พบไฟล์ที่ระบุชื่อสวนพระนารายณ์โดยตรงจาก Commons API/การค้นเว็บ แต่พบภาพ Commons สองใบที่มีพิกัดอยู่ติด/ตรงบริเวณสวนตามพิกัดเป้าหมาย (8.8696046, 98.3445279) และหน้าลิขสิทธิ์ระบุ CC BY-SA 3.0 ชัดเจน ตรวจ URL ไฟล์จริงด้วย curl ได้ HTTP 200 และ content-type image/jpeg แล้ว ไม่พบรายการ P18 ที่ยืนยันสถานที่นี้โดยตรง และไม่ได้ใช้ภาพจาก m-culture เพราะไม่ทราบสิทธิ์การใช้งาน",
++  "researched_on": "2026-09-07"
++}
+
+tokens used
+40,414

@@ -1,0 +1,42 @@
+{
+ "id": "phra-narai",
+ "photos": [
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/1/12/Takua_Pa%2C_Takua_Pa_District%2C_Phang-nga%2C_Thailand_-_panoramio.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Takua_Pa,_Takua_Pa_District,_Phang-nga,_Thailand_-_panoramio.jpg",
+   "license": "CC BY-SA 3.0",
+   "license_verdict": "NO",
+   "attribution_th": "mohigan — CC BY-SA 3.0 (Wikimedia Commons)",
+   "caption_th": "ภาพบริเวณสวนสาธารณะพระนารายณ์ ตะกั่วป่า (พิกัดภาพ 8.868906, 98.344902)",
+   "era": "current",
+   "width": 4084,
+   "height": 3067,
+   "http_status": 200,
+   "reject_reason_th": "ภาพเดียวกันถูกใช้แล้วที่ culture-street"
+  },
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/4/48/Takua_Pa%2C_Takua_Pa_District%2C_Phang-nga%2C_Thailand_-_panoramio_%281%29.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Takua_Pa,_Takua_Pa_District,_Phang-nga,_Thailand_-_panoramio_(1).jpg",
+   "license": "CC BY-SA 3.0",
+   "license_verdict": "USABLE",
+   "attribution_th": "mohigan — CC BY-SA 3.0 (Wikimedia Commons)",
+   "caption_th": "ภาพบริเวณสวนสาธารณะพระนารายณ์ ตะกั่วป่า (พิกัดภาพ 8.869554, 98.348026)",
+   "era": "current",
+   "width": 4608,
+   "height": 3456,
+   "http_status": 200
+  }
+ ],
+ "searched_queries": [
+  "Phra Narai Park",
+  "สวนสาธารณะพระนารายณ์",
+  "อุทยานพระนารายณ์ ตะกั่วป่า",
+  "Takua Pa park",
+  "Takua Pa Phang Nga",
+  "Phang Nga temple",
+  "Wikimedia Commons Category:Takua Pa District",
+  "Wikidata / Wikipedia search for Phra Narai Park"
+ ],
+ "notes_th": "ไม่พบไฟล์ที่ระบุชื่อสวนพระนารายณ์โดยตรงจาก Commons API/การค้นเว็บ แต่พบภาพ Commons สองใบที่มีพิกัดอยู่ติด/ตรงบริเวณสวนตามพิกัดเป้าหมาย (8.8696046, 98.3445279) และหน้าลิขสิทธิ์ระบุ CC BY-SA 3.0 ชัดเจน ตรวจ URL ไฟล์จริงด้วย curl ได้ HTTP 200 และ content-type image/jpeg แล้ว ไม่พบรายการ P18 ที่ยืนยันสถานที่นี้โดยตรง และไม่ได้ใช้ภาพจาก m-culture เพราะไม่ทราบสิทธิ์การใช้งาน",
+ "researched_on": "2026-09-07"
+}

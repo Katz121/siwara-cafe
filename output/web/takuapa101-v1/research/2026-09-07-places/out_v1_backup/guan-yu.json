@@ -1,0 +1,54 @@
+{
+  "id": "guan-yu",
+  "name_th": "ศาลเจ้าพ่อกวนอู ซิ่นไช่ตึ๋ง",
+  "name_en": "Guan Yu / Sin Chai Tung Shrine",
+  "aka": ["ศาลเจ้าซินใช่ตึ๋ง", "ศาลเจ้าซิ่นใช่ตึ๋ง", "อ๊ามใต้", "โรงพระตลาดใต้"],
+  "geo": {"lat": null, "lng": null, "confidence": "low", "source_url": "", "source_name": ""},
+  "address": {"line_th": "ถนนศรีตะกั่วป่า ชุมชนตลาดใหญ่", "subdistrict": "ตะกั่วป่า", "district": "ตะกั่วป่า", "province": "พังงา", "postcode": "82110", "source_url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf"},
+  "contact": {"phone": null, "facebook": "https://www.facebook.com/%E0%B8%A8%E0%B8%B2%E0%B8%A5%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%B2%E0%B8%9E%E0%B9%88%E0%B8%AD%E0%B8%81%E0%B8%A7%E0%B8%99%E0%B8%AD%E0%B8%B9%E0%B8%8B%E0%B8%B4%E0%B8%99%E0%B9%84%E0%B8%8A%E0%B9%88%E0%B8%95%E0%B8%B6%E0%B9%8B%E0%B8%87-", "website": null, "line": null, "source_url": "https://www.gplace.com/972712"},
+  "visit": {
+    "opening_hours_th": null, "opening_hours_status": "UNKNOWN", "admission_fee_th": null, "admission_status": "UNKNOWN", "best_time_th": "หากต้องการชมบรรยากาศถนนสายวัฒนธรรม แหล่งข้อมูลเทศบาลระบุว่าจัดวันอาทิตย์ช่วงพฤศจิกายน–พฤษภาคม เวลา 15.00–20.00 น.; ไม่ใช่เวลาเปิดศาลโดยตรง", "duration_minutes": null, "parking_th": null, "restroom": null, "wheelchair_th": null, "dress_code_th": "ควรแต่งกายสุภาพและปฏิบัติตามกฎของศาลเจ้า", "source_urls": ["https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf", "https://www.gplace.com/972712"]
+  },
+  "getting_there": [
+    {"from": "ตัวเมืองตะกั่วป่า", "text_th": "ใช้ทางหลวงหมายเลข 4 ถึงแยกเทศบาลเมืองตะกั่วป่า เลี้ยวเข้าถนนบำรุงราษฎร์ประมาณ 7 กิโลเมตร ผ่านสถานีตำรวจภูธรตลาดใหญ่ เลี้ยวขวาที่สัญญาณไฟแล้วเลี้ยวซ้ายเข้าสู่ถนนสายวัฒนธรรม โดยศาลอยู่บริเวณสามแยกทางเข้า", "distance_km": null, "source_url": "https://www.thetrippacker.com/th/review/location/6487"},
+    {"from": "ภูเก็ต", "text_th": "ไม่พบระยะทางหรือเส้นทางเฉพาะจากภูเก็ตที่แหล่งข้อมูลที่อ่านได้ระบุไว้", "distance_km": null, "source_url": ""},
+    {"from": "เขาหลัก", "text_th": "ไม่พบระยะทางหรือเส้นทางเฉพาะจากเขาหลักที่แหล่งข้อมูลที่อ่านได้ระบุไว้", "distance_km": null, "source_url": ""},
+    {"from": "สนามบิน", "text_th": "ไม่พบสนามบินต้นทางและเส้นทางเฉพาะที่แหล่งข้อมูลที่อ่านได้ระบุไว้", "distance_km": null, "source_url": ""}
+  ],
+  "history": [
+    {"claim_th": "ศาลเจ้ามีอายุนับร้อยปี และเกิดจากความศรัทธาของชาวจีนเชื้อสายฮกเกี้ยนในเมืองตะกั่วป่า", "status": "CONFIRMED", "quote": "เกิดขึ้นจากความศรัทธาของชาวจีนเชื้อสายฮกเกี้ยน", "source_name": "เทศบาลเมืองตะกั่วป่า", "source_url": "https://www.takuacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf", "year_be": null, "year_ce": null},
+    {"claim_th": "ศาลเป็นที่ประดิษฐานเทพเจ้ากวนอูและเจ้าแม่กวนอิม และเป็นต้นกำเนิดเทศกาลกินผักตะกั่วป่า", "status": "CONFIRMED", "quote": "เป็นศาลเจ้าที่เป็นต้นกําเนิดแห่งเทศกาลกินผักตะกั่วป่า", "source_name": "เทศบาลเมืองตะกั่วป่า", "source_url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf", "year_be": null, "year_ce": null},
+    {"claim_th": "เอกสารขอบเขตเมืองเก่าระบุว่าศาลสร้างขึ้นภายหลังศาลเจ้าอื่นในพื้นที่ และเป็นที่นิยมขอพรเรื่องเสี่ยงโชค ค้าขาย และเรื่องทั่วไป", "status": "CONFIRMED", "quote": "เป็นศาลเจ้าที่สร้างทีหลัง แต่ได้รับความนิยมมาก", "source_name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม", "source_url": "https://nced.onep.go.th/opendata/2568/oldtown36_announce/takuapa.pdf", "year_be": null, "year_ce": null},
+    {"claim_th": "มีแหล่งข้อมูลท้องถิ่นระบุอายุประมาณ 170 ปี แต่เป็นบล็อกท่องเที่ยว จึงยังไม่ยืนยันเป็นข้อเท็จจริงทางประวัติศาสตร์", "status": "UNVERIFIED", "quote": "มีอายุประมาณ 170 ปีแล้วค่ะ", "source_name": "บล็อก amonrat2018", "source_url": "https://amonrat2018.blogspot.com/2018/08/blog-post.html", "year_be": 2381, "year_ce": 1838}
+  ],
+  "highlights": [
+    {"title_th": "องค์กวนอูและเจ้าแม่กวนอิม", "detail_th": "เป็นสิ่งศักดิ์สิทธิ์หลักที่เอกสารเทศบาลระบุว่าประดิษฐานอยู่ภายในศาล", "source_url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf"},
+    {"title_th": "บรรยากาศศาลเจ้าจีนในย่านเมืองเก่า", "detail_th": "ศาลตั้งอยู่บนถนนศรีตะกั่วป่า ชุมชนตลาดใหญ่ และเป็นจุดเริ่มต้นเส้นทางถนนสายวัฒนธรรม", "source_url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf"},
+    {"title_th": "จุดชมพิธีแห่พระ", "detail_th": "ข่าวระบุว่าบริเวณหน้าศาลเป็นจุดสำคัญของขบวนอิ้วเก้งในเทศกาลถือศีลกินผัก", "source_url": "https://www.topnews.co.th/news/1368822"},
+    {"title_th": "ตึกเก่าชิโน-โปรตุกีสโดยรอบ", "detail_th": "ถนนสายวัฒนธรรมโดยรอบมีตึกเก่าสไตล์ชิโน-โปรตุกีสและวิถีชีวิตชุมชนเมืองเก่า", "source_url": "https://www.thetrippacker.com/th/review/location/6487"}
+  ],
+  "festival": {"months_th": "ไม่ระบุเดือนแน่นอน; เทศกาลถือศีลกินผักจัดเป็นประจำทุกปีตามปฏิทินจีน", "lunar_calendar_th": null, "activities_th": ["พิธีอิ้วเก้งหรือแห่พระรอบเมือง", "ขบวนม้าทรง", "จุดประทัดและตั้งโต๊ะรับขบวน"], "venue_th": "ถนนศรีตะกั่วป่าและบริเวณหน้าศาล", "source_urls": ["https://www.topnews.co.th/news/1368822", "https://www.sanook.com/news/1884122/", "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf"]},
+  "nearby": [
+    {"name_th": "เมืองเก่าตะกั่วป่า", "walk_minutes": 1, "source_url": "https://www.gplace.com/972712"},
+    {"name_th": "ตึกขุนอินทร์", "walk_minutes": 3, "source_url": "https://www.gplace.com/972712"},
+    {"name_th": "จวนเจ้าเมืองตะกั่วป่า", "walk_minutes": 5, "source_url": "https://www.gplace.com/972712"},
+    {"name_th": "วัดเสนานุชรังสรรค์", "walk_minutes": 6, "source_url": "https://www.gplace.com/972712"},
+    {"name_th": "วัดคีรีเขต", "walk_minutes": 10, "source_url": "https://www.gplace.com/972712"}
+  ],
+  "photos": [],
+  "seo_keywords_th": ["ศาลเจ้าพ่อกวนอู ตะกั่วป่า", "ศาลเจ้าซิ่นไช่ตึ๋ง", "ศาลเจ้าซินใช่ตึ๋ง", "อ๊ามใต้ ตะกั่วป่า", "โรงพระตลาดใต้", "ศาลเจ้าจีนตะกั่วป่า", "เทศกาลกินผักตะกั่วป่า", "อิ้วเก้ง ตะกั่วป่า", "เมืองเก่าตะกั่วป่า", "ถนนศรีตะกั่วป่า"],
+  "seo_keywords_en": ["Guan Yu Shrine Takua Pa", "Sin Chai Tung Shrine", "Guan Wu Shrine Phang Nga", "Chinese shrine Takua Pa", "Takua Pa Old Town shrine", "Vegetarian Festival Takua Pa", "Iew Keng Takua Pa", "Phang Nga Chinese temple"],
+  "unknowns": ["ไม่พบพิกัด lat/lng ที่ผูกกับศาลนี้โดยตรงจากแหล่งแผนที่ที่เปิดอ่านได้ จึงไม่เดา", "ไม่พบเวลาเปิด-ปิดของศาลโดยตรง", "ไม่พบค่าเข้าชม เบอร์โทร เว็บไซต์ทางการ LINE ที่ยืนยันได้", "ไม่พบที่อยู่เลขที่/รหัสไปรษณีย์จากแหล่งทางการ; รหัส 82110 มาจากรายการสถานที่ของ Gplace", "ไม่พบข้อมูลผู้สร้าง ปีสร้างที่ยืนยันได้ และหลักฐานการขึ้นทะเบียนโบราณสถานของศาล", "ไม่พบข้อมูลที่ยืนยันได้เรื่องที่จอดรถ ห้องน้ำ และการเข้าถึงรถเข็น", "ไม่พบลิงก์รูปภาพทางการที่ระบุสิทธิ์การใช้งาน"],
+  "sources": [
+    {"name": "เทศบาลเมืองตะกั่วป่า แผนการดำเนินงานด้านสิ่งแวดล้อม", "url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf", "type": "official", "accessed": "2026-09-07"},
+    {"name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม โครงการกำหนดขอบเขตพื้นที่เมืองเก่า", "url": "https://nced.onep.go.th/opendata/2568/oldtown36_announce/takuapa.pdf", "type": "official", "accessed": "2026-09-07"},
+    {"name": "Gplace ศาลเจ้าพ่อกวนอู ซินใช่ตึ๋ง", "url": "https://www.gplace.com/972712", "type": "map", "accessed": "2026-09-07"},
+    {"name": "theTripPacker ถนนคนเดินตะกั่วป่า", "url": "https://www.thetrippacker.com/th/review/location/6487", "type": "review", "accessed": "2026-09-07"},
+    {"name": "TOPNEWS พิธีอิ้วเก้ง ตะกั่วป่า", "url": "https://www.topnews.co.th/news/1368822", "type": "news", "accessed": "2026-09-07"},
+    {"name": "Sanook ศาลเจ้าพ่อกวนอูพังงาม้าทรงโชว์อิทธิฤทธิ์", "url": "https://www.sanook.com/news/1884122/", "type": "news", "accessed": "2026-09-07"},
+    {"name": "Thai-tour ศาลเจ้าพ่อกวนอู ตะกั่วป่า", "url": "https://www.thai-tour.com/place/4211", "type": "blog", "accessed": "2026-09-07"},
+    {"name": "บล็อก amonrat2018", "url": "https://amonrat2018.blogspot.com/2018/08/blog-post.html", "type": "blog", "accessed": "2026-09-07"}
+  ],
+  "researched_by": "codex gpt-5.6-luna",
+  "researched_on": "2026-09-07"
+}

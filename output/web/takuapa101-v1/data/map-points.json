@@ -1,0 +1,122 @@
+[
+  {
+    "id": "wat-boromthat",
+    "x": 280,
+    "y": 1027,
+    "confidence": "from_source_map"
+  },
+  {
+    "id": "wat-khuha",
+    "x": null,
+    "y": null,
+    "confidence": "not_on_source_map"
+  },
+  {
+    "id": "wat-pathum",
+    "x": 742,
+    "y": 1027,
+    "confidence": "from_source_map"
+  },
+  {
+    "id": "wat-kongkha",
+    "x": 472,
+    "y": 609,
+    "confidence": "from_source_map"
+  },
+  {
+    "id": "wat-nikorn",
+    "x": null,
+    "y": null,
+    "confidence": "not_on_source_map"
+  },
+  {
+    "id": "wat-sena",
+    "x": 411,
+    "y": 898,
+    "confidence": "from_source_map"
+  },
+  {
+    "id": "museum",
+    "x": null,
+    "y": null,
+    "confidence": "not_on_source_map"
+  },
+  {
+    "id": "guan-yu",
+    "x": 556,
+    "y": 930,
+    "confidence": "from_source_map"
+  },
+  {
+    "id": "pun-thao",
+    "x": 838,
+    "y": 637,
+    "confidence": "from_source_map"
+  },
+  {
+    "id": "kue-chai",
+    "x": 553,
+    "y": 1002,
+    "confidence": "from_source_map"
+  },
+  {
+    "id": "rong-jae",
+    "x": null,
+    "y": null,
+    "confidence": "not_on_source_map"
+  },
+  {
+    "id": "phra-narai",
+    "x": 413,
+    "y": 261,
+    "confidence": "from_source_map"
+  },
+  {
+    "id": "thung-phra",
+    "x": 838,
+    "y": 786,
+    "confidence": "from_source_map"
+  },
+  {
+    "id": "riverwalk",
+    "x": null,
+    "y": null,
+    "confidence": "not_on_source_map"
+  },
+  {
+    "id": "culture-street",
+    "x": null,
+    "y": null,
+    "confidence": "not_on_source_map"
+  },
+  {
+    "id": "iron-bridge",
+    "x": 519,
+    "y": 480,
+    "confidence": "from_source_map"
+  },
+  {
+    "id": "governor-wall",
+    "x": 692,
+    "y": 775,
+    "confidence": "from_source_map"
+  },
+  {
+    "id": "khun-in",
+    "x": 503,
+    "y": 766,
+    "confidence": "from_source_map"
+  },
+  {
+    "id": "tao-ming",
+    "x": 597,
+    "y": 552,
+    "confidence": "from_source_map"
+  },
+  {
+    "id": "food-center",
+    "x": 493,
+    "y": 283,
+    "confidence": "from_source_map"
+  }
+]

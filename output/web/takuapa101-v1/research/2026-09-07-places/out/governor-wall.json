@@ -1,0 +1,54 @@
+{
+  "id": "governor-wall",
+  "name_th": "กำแพงจวนเจ้าเมืองตะกั่วป่า",
+  "name_en": "Governor’s Residence Wall",
+  "aka": ["กำแพงค่าย", "จวนเจ้าเมืองตะกั่วป่า", "กำแพงเมืองเก่า", "กำแพงจวนเจ้าเมือง"],
+  "geo": {"lat": 8.830904, "lng": 98.366634, "confidence": "high", "source_url": "https://archaeology.sac.or.th/archaeology/874", "source_name": "ฐานข้อมูลแหล่งโบราณคดีที่สำคัญในประเทศไทย (ศูนย์มานุษยวิทยาสิรินธร)"},
+  "address": {"line_th": "ถนนอุดมธารา", "subdistrict": "ตะกั่วป่า", "district": "ตะกั่วป่า", "province": "พังงา", "postcode": "", "source_url": "https://archaeology.sac.or.th/archaeology/874"},
+  "contact": {"phone": null, "facebook": null, "website": null, "line": null, "source_url": null},
+  "visit": {
+    "opening_hours_th": "เข้าชมได้ทุกวัน (ไม่ระบุเวลา)",
+    "opening_hours_status": "CONFIRMED",
+    "admission_fee_th": "ไม่เสียค่าเข้าชม",
+    "admission_status": "CONFIRMED",
+    "best_time_th": null,
+    "duration_minutes": null,
+    "parking_th": null,
+    "restroom": null,
+    "wheelchair_th": null,
+    "dress_code_th": null,
+    "source_urls": ["https://archaeology.sac.or.th/archaeology/874"]
+  },
+  "getting_there": [
+    {"from": "ตัวเมืองตะกั่วป่า", "text_th": "จากที่ทำการเทศบาลเมืองตะกั่วป่า ใช้ถนนราษฎร์บำรุง เลี้ยวขวาเข้าถนนมนตรี 2 แล้วเลี้ยวซ้ายเข้าถนนศรีตะกั่วป่า ตรงประมาณ 260 เมตร พบโบราณสถานอยู่ทางซ้ายมือ", "distance_km": null, "source_url": "https://archaeology.sac.or.th/archaeology/874"},
+    {"from": "ภูเก็ต", "text_th": "ไม่พบเส้นทางและระยะทางเฉพาะจากภูเก็ตในแหล่งที่อ่านแล้ว", "distance_km": null, "source_url": "https://archaeology.sac.or.th/archaeology/874"},
+    {"from": "เขาหลัก", "text_th": "ไม่พบเส้นทางและระยะทางเฉพาะจากเขาหลักในแหล่งที่อ่านแล้ว", "distance_km": null, "source_url": "https://archaeology.sac.or.th/archaeology/874"},
+    {"from": "สนามบิน", "text_th": "ไม่พบสนามบินต้นทางที่ระบุและระยะทางในแหล่งที่อ่านแล้ว", "distance_km": null, "source_url": "https://archaeology.sac.or.th/archaeology/874"}
+  ],
+  "history": [
+    {"claim_th": "แหล่งนี้มีอายุทางโบราณคดีอยู่ในช่วง พ.ศ. 2383–2424 (ค.ศ. 1840–1881)", "status": "CONFIRMED", "quote": "พ.ศ. 2383 – 2424", "source_name": "ฐานข้อมูลแหล่งโบราณคดีที่สำคัญในประเทศไทย", "source_url": "https://archaeology.sac.or.th/archaeology/874", "year_be": null, "year_ce": null},
+    {"claim_th": "สันนิษฐานว่าสร้างในสมัยพระยาเสนานุชิต (นุช ณ นคร) เจ้าเมืองตะกั่วป่า เพื่อเป็นกำแพงล้อมรอบจวนและป้องกันศัตรู", "status": "CONFIRMED", "quote": "สร้างล้อมรอบจวนที่พัก เป็นลักษณะของกำแพงค่ายป้องกันศัตรู", "source_name": "ฐานข้อมูลแหล่งโบราณคดีที่สำคัญในประเทศไทย", "source_url": "https://archaeology.sac.or.th/archaeology/874", "year_be": null, "year_ce": null},
+    {"claim_th": "เกี่ยวข้องกับความขัดแย้งของกลุ่มชาวจีนในเมืองตะกั่วป่าซึ่งเชื่อมโยงกับผลประโยชน์เหมืองแร่ดีบุก และใช้เป็นที่หลบภัยของชาวเมือง", "status": "CONFIRMED", "quote": "ขัดผลประโยชน์ในการทำเหมืองแร่ดีบุก", "source_name": "ฐานข้อมูลแหล่งโบราณคดีที่สำคัญในประเทศไทย", "source_url": "https://archaeology.sac.or.th/archaeology/874", "year_be": null, "year_ce": null},
+    {"claim_th": "พระบาทสมเด็จพระจุลจอมเกล้าเจ้าอยู่หัวเสด็จตะกั่วป่าและทอดพระเนตรจวนเจ้าเมืองเมื่อวันที่ 28 พฤษภาคม ร.ศ. 109 (พ.ศ. 2433/ค.ศ. 1890)", "status": "CONFIRMED", "quote": "ทอดพระเนตรจวนเจ้าเมืองตะกั่วป่าแห่งนี้ด้วย", "source_name": "ฐานข้อมูลแหล่งโบราณคดีที่สำคัญในประเทศไทย", "source_url": "https://archaeology.sac.or.th/archaeology/874", "year_be": 2433, "year_ce": 1890},
+    {"claim_th": "กำแพงเป็นผังสี่เหลี่ยมผืนผ้า ก่อด้วยปูนผสมกรวดทรายซ้อนเป็นชั้น ฐานกว้างกว่าตัวกำแพง และส่วนที่สมบูรณ์สูงประมาณ 5 เมตร", "status": "CONFIRMED", "quote": "กำแพงรูปสี่เหลี่ยมผืนผ้า", "source_name": "ฐานข้อมูลแหล่งโบราณคดีที่สำคัญในประเทศไทย", "source_url": "https://archaeology.sac.or.th/archaeology/874", "year_be": null, "year_ce": null},
+    {"claim_th": "ภายในแบ่งเป็น 3 ส่วน ได้แก่ วังหน้า ห้องโถง และวังหลัง มีประตูเชื่อมถึงกัน", "status": "CONFIRMED", "quote": "ภายในกำแพงแบ่งเป็น 3 ส่วน", "source_name": "ฐานข้อมูลแหล่งโบราณคดีที่สำคัญในประเทศไทย", "source_url": "https://archaeology.sac.or.th/archaeology/874", "year_be": null, "year_ce": null},
+    {"claim_th": "กรมศิลปากรขุดแต่งและขุดค้นใน พ.ศ. 2542 พบเครื่องถ้วยจีนสมัยราชวงศ์ชิง เครื่องถ้วยยุโรป และหลักฐานอื่น ๆ", "status": "CONFIRMED", "quote": "การขุดแต่งและขุดค้นทางโบราณคดีของกรมศิลปากร เมื่อ พ.ศ.2542", "source_name": "ฐานข้อมูลแหล่งโบราณคดีที่สำคัญในประเทศไทย", "source_url": "https://archaeology.sac.or.th/archaeology/874", "year_be": 2542, "year_ce": 1999},
+    {"claim_th": "ขึ้นทะเบียนโบราณสถานและกำหนดเขตที่ดินโบราณสถานตามประกาศในราชกิจจานุเบกษา เล่ม 113 ตอนพิเศษ 50 ง วันที่ 18 ธันวาคม พ.ศ. 2539", "status": "CONFIRMED", "quote": "ขึ้นทะเบียนของกรมศิลปากร", "source_name": "ฐานข้อมูลแหล่งโบราณคดีที่สำคัญในประเทศไทย", "source_url": "https://archaeology.sac.or.th/archaeology/874", "year_be": 2539, "year_ce": 1996}
+  ],
+  "highlights": [
+    {"title_th": "แนวกำแพงโบราณ", "detail_th": "ชมกำแพงส่วนที่ยังสมบูรณ์ สูงประมาณ 5 เมตร และส่วนที่ชำรุดตามกาลเวลา", "source_url": "https://archaeology.sac.or.th/archaeology/874"},
+    {"title_th": "ผัง 3 ส่วน", "detail_th": "สังเกตการแบ่งพื้นที่เป็นวังหน้า ห้องโถง และวังหลัง พร้อมช่องประตูเชื่อม", "source_url": "https://archaeology.sac.or.th/archaeology/874"},
+    {"title_th": "เทคนิคก่อสร้าง", "detail_th": "เห็นชั้นวัสดุปูนผสมกรวดทรายและฐานกำแพงที่กว้างกว่าตัวกำแพง", "source_url": "https://archaeology.sac.or.th/archaeology/874"},
+    {"title_th": "ป้ายข้อมูล", "detail_th": "ด้านหน้ามีป้ายข้อมูลประวัติจากกรมศิลปากรและการท่องเที่ยวแห่งประเทศไทย", "source_url": "https://archaeology.sac.or.th/archaeology/874"},
+    {"title_th": "บริบทเมืองเก่า", "detail_th": "อยู่ริมถนนอุดมธารา ฝั่งตะวันตกของแม่น้ำตะกั่วป่า และใกล้วัดหน้าเมือง", "source_url": "https://archaeology.sac.or.th/archaeology/874"}
+  ],
+  "festival": {"months_th": "ประมาณพฤศจิกายน–เมษายน (ถนนสายวัฒนธรรม)", "lunar_calendar_th": null, "activities_th": ["พิธีทำบุญเลี้ยงพระจวนเจ้าเมืองตะกั่วป่า", "การแสดงศิลปวัฒนธรรม", "ทำขนมพื้นบ้านและอาหารพื้นเมือง", "สาธิตวิถีชีวิตและภูมิปัญญาท้องถิ่น", "นิทรรศการภาพถ่าย"], "venue_th": "บริเวณจวนเจ้าเมืองและถนนศรีตะกั่วป่าหรือตลาดเก่า", "source_urls": ["https://archaeology.sac.or.th/archaeology/874"]},
+  "nearby": [{"name_th": "วัดหน้าเมือง", "walk_minutes": null, "source_url": "https://archaeology.sac.or.th/archaeology/874"}, {"name_th": "ตลาดเก่าตะกั่วป่า", "walk_minutes": null, "source_url": "https://archaeology.sac.or.th/archaeology/874"}, {"name_th": "ตึกขุนอินทร์", "walk_minutes": null, "source_url": "https://archaeology.sac.or.th/archaeology/874"}],
+  "photos": [],
+  "seo_keywords_th": ["กำแพงจวนเจ้าเมืองตะกั่วป่า", "กำแพงค่ายตะกั่วป่า", "กำแพงเมืองเก่าตะกั่วป่า", "จวนเจ้าเมืองตะกั่วป่า", "เมืองเก่าตะกั่วป่า", "โบราณสถานตะกั่วป่า", "เที่ยวตะกั่วป่า", "ประวัติตะกั่วป่า", "เหมืองแร่ดีบุกตะกั่วป่า", "ถนนอุดมธารา", "ตะกั่วป่าเมืองเก่าเล่าความหลัง"],
+  "seo_keywords_en": ["Takuapa Governor's Residence Wall", "Takua Pa old town wall", "Takuapa historic wall", "Takua Pa heritage site", "Takuapa old town", "Phang Nga heritage", "tin mining history Takuapa", "Governor's Residence Takuapa"],
+  "unknowns": ["ไม่พบรหัสไปรษณีย์ที่ระบุเฉพาะสถานที่จากแหล่งที่อ่านแล้ว", "ไม่พบเวลาเปิด–ปิดที่แน่นอน แหล่งทางการระบุเพียงเข้าชมได้ทุกวัน", "ไม่พบเบอร์โทรศัพท์ เพจเฟซบุ๊ก เว็บไซต์ หรือ LINE ของสถานที่โดยตรง", "ไม่พบค่าใช้จ่ายด้านที่จอดรถ ห้องน้ำ และข้อมูลการเข้าถึงสำหรับผู้สูงอายุ/รถเข็น", "ไม่พบข้อมูลยืนยันว่าเป็นสถาปัตยกรรมชิโน-โปรตุกีสโดยตรงของกำแพง", "ไม่พบระยะทาง/เวลาเดินทางจากภูเก็ต เขาหลัก หรือสนามบิน", "ไม่พบภาพที่สามารถยืนยันสิทธิ์การใช้งานได้ จึงไม่ใส่ลิงก์รูปภาพ"],
+  "sources": [{"name": "ฐานข้อมูลแหล่งโบราณคดีที่สำคัญในประเทศไทย: กำแพงจวนเจ้าเมืองตะกั่วป่า", "url": "https://archaeology.sac.or.th/archaeology/874", "type": "academic", "accessed": "2026-09-07"}, {"name": "เมืองตะกั่วป่า — ศูนย์ข้อมูลชุมชน ศมส.", "url": "https://wikicommunity.sac.or.th/community/1549", "type": "academic", "accessed": "2026-09-07"}, {"name": "แหล่งศิลปกรรมอันควรอนุรักษ์: ตะกั่วป่า", "url": "https://culturalenvi.onep.go.th/site/detail/4428", "type": "official", "accessed": "2026-09-07"}],
+  "researched_by": "codex gpt-5.6-luna",
+  "researched_on": "2026-09-07"
+}

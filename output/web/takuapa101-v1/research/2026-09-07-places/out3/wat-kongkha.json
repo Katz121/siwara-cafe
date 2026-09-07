@@ -1,0 +1,32 @@
+{
+  "id": "wat-kongkha",
+  "photos": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/3c/%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%84%E0%B8%87%E0%B8%84%E0%B8%B22563_%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%84%E0%B8%87%E0%B8%84%E0%B8%B22563_%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_verdict": "USABLE",
+      "attribution_th": "Chefboy.noodle — CC BY-SA 4.0 (ผ่าน Wikimedia Commons)",
+      "caption_th": "วัดคงคาภิมุข (วัดคงคา) จังหวัดพังงา",
+      "era": "current",
+      "width": 4160,
+      "height": 3120,
+      "http_status": 200
+    }
+  ],
+  "searched_queries": [
+    "site:commons.wikimedia.org Wat Kongkha Phimuk",
+    "site:commons.wikimedia.org วัดคงคาภิมุข",
+    "site:commons.wikimedia.org Wat Khongkha Takua Pa",
+    "site:commons.wikimedia.org Takua Pa Phang Nga temple",
+    "site:commons.wikimedia.org Takua Pa old town",
+    "site:commons.wikimedia.org Phang Nga temple",
+    "วัดคงคาพิมุข site:th.wikipedia.org",
+    "Wat Khongkha Phimuk site:en.wikipedia.org",
+    "Wat Khongkha Phimuk site:wikidata.org",
+    "Wat Khongkha Phimuk site:flickr.com",
+    "Wat Khongkha Phimuk site:openverse.org"
+  ],
+  "notes_th": "พบภาพตรงสถานที่ 1 ภาพบน Wikimedia Commons หน้าไฟล์ระบุชัดว่าเป็นภาพของอนุสรณ์สถานไทย รหัสกรมศิลปากร 0005107 และอนุญาต CC BY-SA 4.0; Wikidata และวิกิพีเดียไทยชี้ไปยังภาพเดียวกัน. ตรวจ URL ไฟล์ด้วย curl -L -I ได้ HTTP 200 และ content-type image/jpeg. ผลค้น Flickr ที่ตรงชื่อพบหน้าเจ้าของภาพแต่ไม่พบใบอนุญาต CC ที่ชัดเจน จึงไม่ใส่เป็น USABLE. ไม่พบภาพเพิ่มเติมที่ยืนยันใบอนุญาตเปิดจากแหล่งราชการหรือ Openverse.",
+  "researched_on": "2026-09-07"
+}

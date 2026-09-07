@@ -1,0 +1,206 @@
+{
+  "research_date": "2026-09-07",
+  "category": "ผู้คนและรสชาติ",
+  "safe_article_angle": "เต้าส้อและครัวบาบ๋า · อ่านตะกั่วป่าผ่านอาหารและชุมชน",
+  "scope": "Documented Baba-Peranakan food heritage with explicit Takua Pa inclusion; Takua Pa tao sor; cultural market. Not interviews, a store ranking, or proof every regional Baba dish originated or is currently sold in Takua Pa.",
+  "confidence": "High for official registry inclusion, published pastry descriptions and dated FDA award; medium for general cultural synthesis; current schedules and founders unknown.",
+  "sources": [
+    {
+      "id": "food-dcp-2013",
+      "title": "มรดกภูมิปัญญาทางวัฒนธรรมของชาติ พ.ศ. 2556 · อาหารบาบ๋า",
+      "publisher": "กรมส่งเสริมวัฒนธรรม กระทรวงวัฒนธรรม",
+      "url": "https://book.culture.go.th/newbook/ich/ich2013.pdf",
+      "accessed_at": "2026-09-07",
+      "publication_date": "2013-09-03",
+      "locator": "Printed p.7 (PDF p.16) registration list; printed p.124 (PDF p.133) อาหารบาบ๋า, by นายแพทย์โกศล แตงอุทัย; publication imprint PDF p.3",
+      "short_evidence": "ตะกั่วป่า(พังงา)",
+      "evidence_summary": "2013 registry lists Baba food and explicitly includes Takua Pa in communities maintaining the tradition. Describes family transmission and regional ceremonial foods.",
+      "source_type": "Primary national cultural registry",
+      "access_note": "Web open failed, but direct HTTPS request returned 200 and PDF text was inspected locally; retained ich2013.pdf."
+    },
+    {
+      "id": "food-fda-2025",
+      "title": "อย. ลงพื้นที่พังงา ให้กำลังใจผู้ประกอบการ ดันสินค้าคุณภาพดีสู่ตลาดโลก",
+      "publisher": "สำนักงานคณะกรรมการอาหารและยา",
+      "url": "https://dis.fda.moph.go.th/detail-newsUpdate?id=3271",
+      "accessed_at": "2026-09-07",
+      "publication_date": "2025-08-20",
+      "locator": "Final product-detail paragraph beginning ทั้งนี้; web lines 173-174",
+      "short_evidence": "ใช้สูตรแป้ง 2 ชั้นแบบดั้งเดิม",
+      "evidence_summary": "FDA reports its own Aug 18–19, 2025 visit; identifies Tuang Rat's tao sor as Takua Pa local pastry and its salted-egg salty filling product as a 2025 Quality Award recipient.",
+      "source_type": "First-party agency visit and award report"
+    },
+    {
+      "id": "food-mots-2018",
+      "title": "ของดีจังหวัดพังงา",
+      "publisher": "สำนักงานการท่องเที่ยวและกีฬาจังหวัดพังงา",
+      "url": "https://phangnga.mots.go.th/news/369",
+      "accessed_at": "2026-09-07",
+      "publication_date": "2018-05-24",
+      "locator": "Body paragraph, item ขนมเต้าส้อตะกั่วป่า; web line 17",
+      "short_evidence": "ขนมเต้าส้อตะกั่วป่า",
+      "evidence_summary": "Provincial tourism office describes tao sor as a local souvenir and OTOP item, smaller than khanom pia, with sesame on top.",
+      "source_type": "Official provincial tourism description; institutional secondary"
+    },
+    {
+      "id": "food-dit-market",
+      "title": "ถนนวัฒนธรรมเมืองเก่าตะกั่วป่า",
+      "publisher": "กรมการค้าภายใน กระทรวงพาณิชย์",
+      "url": "https://www.dit.go.th/th/market/2383/ภาคใต/พ-งงา/ถนนว-ฒนธรรมเม-องเก-าตะก-วป-า/",
+      "accessed_at": "2026-09-07",
+      "publication_date": "2025-08-31",
+      "locator": "ประวัติความเป็นมา paragraph; ข้อมูลทั่วไป; web lines 137–151",
+      "short_evidence": "ขนมพื้นบ้าน อาหารพื้นเมือง",
+      "evidence_summary": "Government market record identifies Sri Takua Pa and Udom Thara roads and local food, crafts and cultural activities. Sunday 14–20 listing and 17 Dec 2017 foundation/promotion dates are not assumed to prove current timetable or earliest cultural street origin.",
+      "source_type": "Primary government promoted-market directory"
+    }
+  ],
+  "claims": [
+    {
+      "id": "food-c01",
+      "place_id": null,
+      "text_th": "อาหารบาบ๋าปรากฏในบัญชีขึ้นทะเบียนมรดกภูมิปัญญาทางวัฒนธรรมของชาติ ประจำปี 2556",
+      "source_ids": [
+        "food-dcp-2013"
+      ],
+      "status": "supported",
+      "rationale": "Direct national registration list; do not mislabel UNESCO listing.",
+      "locator": "Printed p.7 / PDF p.16"
+    },
+    {
+      "id": "food-c02",
+      "place_id": null,
+      "text_th": "เอกสารกรมส่งเสริมวัฒนธรรมระบุตะกั่วป่า จังหวัดพังงา เป็นหนึ่งในชุมชนบาบ๋า-เพอรานากันชายฝั่งอันดามันที่รักษาวัฒนธรรมอาหารนี้",
+      "source_ids": [
+        "food-dcp-2013"
+      ],
+      "status": "supported",
+      "rationale": "Explicit place inclusion, historically dated to 2013 rather than present-day survey.",
+      "locator": "Printed p.124 / PDF p.133, final paragraph"
+    },
+    {
+      "id": "food-c03",
+      "place_id": null,
+      "text_th": "ในคำอธิบายของกรมส่งเสริมวัฒนธรรม อาหารบาบ๋าเชื่อมโยงกับครอบครัวลูกหลานชาวจีนโพ้นทะเลที่เข้ามาทำเหมืองดีบุกและสมรสกับคนท้องถิ่นฝั่งอันดามัน",
+      "source_ids": [
+        "food-dcp-2013"
+      ],
+      "status": "supported",
+      "rationale": "Attributed regional definition, not assertion about all residents or a single origin date.",
+      "locator": "Printed p.124 / PDF p.133, opening paragraph"
+    },
+    {
+      "id": "food-c04",
+      "place_id": null,
+      "text_th": "เอกสารดังกล่าวอธิบายว่าความรู้ทำอาหารบาบ๋ามักส่งต่อภายในครอบครัว จึงเป็นทั้งเรื่องรสชาติและการสืบทอดความรู้ระหว่างรุ่น",
+      "source_ids": [
+        "food-dcp-2013"
+      ],
+      "status": "supported",
+      "rationale": "Paraphrases the document's family transmission mechanism; no invented family quote.",
+      "locator": "Printed p.124 / PDF p.133, final paragraph"
+    },
+    {
+      "id": "food-c05",
+      "place_id": null,
+      "text_th": "เต้าส้อตะกั่วป่าได้รับการกล่าวถึงโดยสำนักงานการท่องเที่ยวและกีฬาจังหวัดพังงาว่าเป็นของฝากและสินค้าโอทอป ลักษณะคล้ายขนมเปี๊ยะแต่ขนาดเล็กกว่า",
+      "source_ids": [
+        "food-mots-2018",
+        "food-fda-2025"
+      ],
+      "status": "supported",
+      "rationale": "MOTS supports descriptive shape/OTOP/souvenir; FDA independently confirms Takua Pa local identity, not the OTOP detail.",
+      "locator": "MOTS body item เต้าส้อ; FDA final product-detail paragraph"
+    },
+    {
+      "id": "food-c06",
+      "place_id": null,
+      "text_th": "ข่าวการลงพื้นที่ของ อย. ในเดือนสิงหาคม 2568 บันทึกว่าร้านตวงรัตน์สืบทอดการทำเต้าส้อโดยใช้แป้งสองชั้นแบบดั้งเดิม",
+      "source_ids": [
+        "food-fda-2025"
+      ],
+      "status": "supported",
+      "rationale": "Dated named example from first-party visit, not claim all makers use identical recipe.",
+      "locator": "Web line 173"
+    },
+    {
+      "id": "food-c07",
+      "place_id": null,
+      "text_th": "อย. ระบุว่าขนมเต้าส้อไส้เค็มไข่เค็มของร้านตวงรัตน์ได้รับรางวัล อย. ควอลิตี้ อวอร์ด ปี 2568 สาขาผลิตภัณฑ์สุขภาพดีเด่น ประเภทส่งเสริมเศรษฐกิจฐานราก",
+      "source_ids": [
+        "food-fda-2025"
+      ],
+      "status": "supported",
+      "rationale": "Award issuer states exact named product, year and category; not general endorsement of all products or health claims.",
+      "locator": "Web lines 173–174"
+    },
+    {
+      "id": "food-c08",
+      "place_id": null,
+      "text_th": "กรมการค้าภายในระบุถนนวัฒนธรรมเมืองเก่าตะกั่วป่าไว้บริเวณถนนศรีตะกั่วป่าและถนนอุดมธารา",
+      "source_ids": [
+        "food-dit-market"
+      ],
+      "status": "supported",
+      "rationale": "Direct location in government market record.",
+      "locator": "ประวัติความเป็นมา"
+    },
+    {
+      "id": "food-c09",
+      "place_id": null,
+      "text_th": "รายการตลาดของกรมการค้าภายในบันทึกทั้งขนมพื้นบ้าน อาหารพื้นเมือง งานหัตถกรรม และกิจกรรมศิลปวัฒนธรรม จึงใช้ตลาดเป็นจุดเริ่มอ่านวิถีชีวิตของเมืองผ่านอาหารได้",
+      "source_ids": [
+        "food-dit-market"
+      ],
+      "status": "supported",
+      "rationale": "First clause directly supported; final clause is clearly editorial reading suggestion, not historical finding.",
+      "locator": "ประวัติความเป็นมา"
+    },
+    {
+      "id": "food-c10",
+      "place_id": null,
+      "text_th": "ขนมเต้าส้อถือกำเนิดในตะกั่วป่าและมีสูตรต้นตำรับหนึ่งเดียว",
+      "source_ids": [],
+      "status": "unverified",
+      "rationale": "No primary origin or exclusivity evidence found. Do not publish.",
+      "locator": null
+    },
+    {
+      "id": "food-c11",
+      "place_id": null,
+      "text_th": "ทุกบ้านตะกั่วป่าทำหมูฮ้อง โอต้าว และขนมเต่าแดงแบบเดียวกัน",
+      "source_ids": [],
+      "status": "unverified",
+      "rationale": "Regional heritage dish list cannot establish universal local practice or identical recipes. Do not publish.",
+      "locator": null
+    },
+    {
+      "id": "food-c12",
+      "place_id": null,
+      "text_th": "ถนนวัฒนธรรมเปิดทุกวันอาทิตย์ตลอดปี เวลา 14.00–20.00 น. ในปัจจุบัน",
+      "source_ids": [
+        "food-dit-market"
+      ],
+      "status": "unverified",
+      "rationale": "2025 directory lists Sunday hours, but does not verify current seasonal/event cancellation status. Check organizer before operational recommendation.",
+      "locator": "ข้อมูลทั่วไป"
+    }
+  ],
+  "contradictions_and_gaps": [
+    "No confirmed substantive contradiction in selected food claims. Independence is at institutional-document level, not two sources for every single claim.",
+    "Do not turn 17 Dec 2017 market directory foundation/promotion field into definitive first-ever cultural market date without historical organizer records.",
+    "SAC community article https://wikicommunity.sac.or.th/community/951 is useful discovery/context but cites mixed theses, commercial travel and blogs. Not selected as primary evidence for chronology or Baba food origin.",
+    "No maker interviewed; no claim of site visit, tasting, family recipe age, current price, stock or availability.",
+    "Regional DCP examples of ceremonial foods are not evidence of Takua Pa-specific practice without further local field material.",
+    "Potential article should interleave 9 limited supported claims with editorial questions and useful navigation, not pad length with unverified origin legends."
+  ],
+  "recommended_article_structure": [
+    "Opening: food as an entry into a living city, with explicit Takua Pa membership in Baba heritage network.",
+    "National registry context and family transmission; distinguish regional context from local observations.",
+    "Tao sor section: verified description and dated first-party Tuang Rat example without invented maker quotes.",
+    "Market section: verified road location and cultural/food mix, link to map and food directory.",
+    "Reader action: ask maker about filling and recipe, request photo permission, confirm market timetable with organizer; label suggestions as suggestions.",
+    "Sources and editorial note: research date, documentary basis, no interviews yet."
+  ],
+  "copyright_note": "Evidence snippets deliberately very short; final article should paraphrase concisely, cite direct sources, and stay within source-specific summarization budgets."
+}

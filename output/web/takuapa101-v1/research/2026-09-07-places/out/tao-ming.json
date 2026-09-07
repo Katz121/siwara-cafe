@@ -1,0 +1,42 @@
+{
+  "id": "tao-ming",
+  "name_th": "โรงเรียนเต้าหมิง",
+  "name_en": "Tao Ming School",
+  "aka": ["อาคารโรงเรียนเต้าหมิง", "โรงเรียนราษฎร์โต๊ะเบ๋ง", "โต๊ะเบ๋ง"],
+  "geo": {"lat": 8.8338139717, "lng": 98.3649490347, "confidence": "high", "source_url": "https://culturalenvi.onep.go.th/site/detail/4420", "source_name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม"},
+  "address": {"line_th": "ถนนศรีตะกั่วป่า (ไม่พบเลขที่อาคารจากแหล่งที่อ่านได้)", "subdistrict": "ตะกั่วป่า", "district": "ตะกั่วป่า", "province": "พังงา", "postcode": null, "source_url": "https://culturalenvi.onep.go.th/site/detail/4420"},
+  "contact": {"phone": null, "facebook": null, "website": null, "line": null, "source_url": null},
+  "visit": {"opening_hours_th": null, "opening_hours_status": "UNKNOWN", "admission_fee_th": null, "admission_status": "UNKNOWN", "best_time_th": "เหมาะกับการชมอาคารและย่านเมืองเก่าในช่วงกลางวัน แต่ไม่พบคำแนะนำเวลาอย่างเป็นทางการ", "duration_minutes": null, "parking_th": null, "restroom": null, "wheelchair_th": null, "dress_code_th": null, "source_urls": ["https://culturalenvi.onep.go.th/site/detail/4420", "https://www.muangboranjournal.com/post/Takuapa_Naver_Ending_Stories"]},
+  "getting_there": [
+    {"from": "ตัวเมืองตะกั่วป่า", "text_th": "อยู่ในเขตชุมชนเมืองเก่าตะกั่วป่า บริเวณถนนศรีตะกั่วป่า; ใช้แผนที่นำทางไปยังพิกัดที่ระบุ", "distance_km": null, "source_url": "https://culturalenvi.onep.go.th/site/detail/4420"},
+    {"from": "ภูเก็ต", "text_th": "ไม่พบเส้นทางหรือระยะทางที่ระบุเฉพาะเจาะจงจากแหล่งที่ตรวจสอบได้", "distance_km": null, "source_url": "https://culturalenvi.onep.go.th/site/detail/4420"},
+    {"from": "เขาหลัก", "text_th": "ไม่พบเส้นทางหรือระยะทางที่ระบุเฉพาะเจาะจงจากแหล่งที่ตรวจสอบได้", "distance_km": null, "source_url": "https://culturalenvi.onep.go.th/site/detail/4420"},
+    {"from": "สนามบิน", "text_th": "ไม่พบเส้นทางหรือระยะทางที่ระบุเฉพาะเจาะจงจากแหล่งที่ตรวจสอบได้", "distance_km": null, "source_url": "https://culturalenvi.onep.go.th/site/detail/4420"}
+  ],
+  "history": [
+    {"claim_th": "อาคารสร้างขึ้นใน พ.ศ. 2465", "status": "CONFIRMED", "quote": "สร้างขึ้นเมื่อ ปี พ.ศ. 2465", "source_name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม", "source_url": "https://culturalenvi.onep.go.th/site/detail/4420", "year_be": 2465, "year_ce": 1922},
+    {"claim_th": "โรงเรียนเริ่มขอตั้งเป็นโรงเรียนราษฎร์ใน พ.ศ. 2463 และเดิมใช้ชื่อโต๊ะเบ๋ง ตามสำเนียงฮกเกี้ยน", "status": "CONFIRMED", "quote": "แจ้งความจำนงขอตั้งเป็นโรงเรียนราษฎร์ขึ้น ตั้งแต่ปี พ.ศ. 2463", "source_name": "เมืองโบราณ", "source_url": "https://www.muangboranjournal.com/post/Takuapa_Naver_Ending_Stories", "year_be": 2463, "year_ce": 1920},
+    {"claim_th": "ก่อตั้งจากเงินเรี่ยไรของเศรษฐีเหมืองแร่ดีบุกและพ่อค้าชาวจีน เพื่อให้บุตรหลานในเมืองตะกั่วป่าเรียนระดับประถมศึกษา", "status": "CONFIRMED", "quote": "สร้างโดยการเรี่ยไรเงินทุน จากเศรษฐีเหมืองแร่และพ่อค้าชาวจีน", "source_name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม", "source_url": "https://culturalenvi.onep.go.th/site/detail/4420", "year_be": null, "year_ce": null},
+    {"claim_th": "อาคารเป็นชิโน-โปรตุกีสประยุกต์ หลังคามุงสังกะสี และสร้างโดยช่างฝีมือชาวจีน", "status": "CONFIRMED", "quote": "รูปทรงชิโนโปรตุกีสประยุกต์", "source_name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม", "source_url": "https://culturalenvi.onep.go.th/site/detail/4420", "year_be": 2465, "year_ce": 1922},
+    {"claim_th": "โรงเรียนเลิกกิจการแล้ว เหลืออาคารอยู่ในความดูแลของมูลนิธิโรงเรียนเต้าหมิง ตะกั่วป่า", "status": "CONFIRMED", "quote": "ปัจจุบันโรงเรียนได้ถูกยกเลิกไปแล้ว", "source_name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม", "source_url": "https://culturalenvi.onep.go.th/site/detail/4420", "year_be": null, "year_ce": null}
+  ],
+  "highlights": [
+    {"title_th": "อาคารสีเหลืองเก่าแก่", "detail_th": "อาคารโรงเรียนประวัติศาสตร์ที่ยังคงเหลืออยู่ในย่านเมืองเก่า", "source_url": "https://readme.me/p/51787"},
+    {"title_th": "รูปแบบชิโน-โปรตุกีสประยุกต์", "detail_th": "สังเกตรูปทรงอาคารและหลังคามุงสังกะสีซึ่งระบุโดยหน่วยงานอนุรักษ์", "source_url": "https://culturalenvi.onep.go.th/site/detail/4420"},
+    {"title_th": "ร่องรอยการศึกษาภาษาจีน", "detail_th": "เป็นหลักฐานของการจัดการศึกษาโดยชุมชนชาวจีนในเมืองเหมืองแร่ตะกั่วป่า", "source_url": "https://wikicommunity.sac.or.th/community/951"}
+  ],
+  "festival": {"months_th": null, "lunar_calendar_th": null, "activities_th": [], "venue_th": null, "source_urls": []},
+  "nearby": [{"name_th": "ชุมชนเมืองเก่าตะกั่วป่า/ตลาดใหญ่", "walk_minutes": null, "source_url": "https://wikicommunity.sac.or.th/community/951"}],
+  "photos": [],
+  "seo_keywords_th": ["โรงเรียนเต้าหมิง", "อาคารเต้าหมิง", "โต๊ะเบ๋ง", "เมืองเก่าตะกั่วป่า", "ที่เที่ยวตะกั่วป่า", "โรงเรียนจีนตะกั่วป่า", "ชิโนโปรตุกีสตะกั่วป่า", "มรดกวัฒนธรรมตะกั่วป่า", "พังงาเมืองเก่า"],
+  "seo_keywords_en": ["Tao Ming School", "Tao Ming School Takuapa", "Takuapa old town", "Chinese school Takuapa", "Sino-Portuguese Takuapa", "Phang Nga heritage", "Takuapa cultural heritage", "Tao Ming School Thailand"],
+  "unknowns": ["ไม่พบเลขที่อาคารและรหัสไปรษณีย์จากแหล่งที่อ่านได้", "ไม่พบเวลาเปิด-ปิดที่เป็นทางการ", "ไม่พบค่าเข้าชม", "ไม่พบเบอร์โทรศัพท์ เพจเฟซบุ๊ก เว็บไซต์ หรือ LINE ทางการ", "ไม่พบข้อมูลยืนยันที่จอดรถ ห้องน้ำ และการเข้าถึงสำหรับรถเข็น/ผู้สูงอายุ", "ไม่พบข้อมูลการขึ้นทะเบียนเป็นโบราณสถานของกรมศิลปากร", "ไม่พบข้อมูลผู้สร้างเป็นรายบุคคล", "ไม่พบเทศกาลที่จัด ณ โรงเรียนโดยตรง", "ไม่พบลิงก์รูปภาพทางการที่ระบุสิทธิ์การใช้งาน"],
+  "sources": [
+    {"name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม: อาคารโรงเรียนเต้าหมิง", "url": "https://culturalenvi.onep.go.th/site/detail/4420", "type": "official", "accessed": "2026-09-07"},
+    {"name": "ศูนย์มานุษยวิทยาสิรินธร: เมืองตะกั่วป่า", "url": "https://wikicommunity.sac.or.th/community/951", "type": "academic", "accessed": "2026-09-07"},
+    {"name": "เมืองโบราณ: ตะกั่วป่าเมืองเก่ากับเรื่องเล่าไม่รู้จบ", "url": "https://www.muangboranjournal.com/post/Takuapa_Naver_Ending_Stories", "type": "blog", "accessed": "2026-09-07"},
+    {"name": "Readme.me: Hello Phang.Nga", "url": "https://readme.me/p/51787", "type": "blog", "accessed": "2026-09-07"}
+  ],
+  "researched_by": "codex gpt-5.6-luna",
+  "researched_on": "2026-09-07"
+}

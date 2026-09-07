@@ -1,0 +1,41 @@
+{
+  "id": "culture-street",
+  "photos": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/1/12/Takua_Pa%2C_Takua_Pa_District%2C_Phang-nga%2C_Thailand_-_panoramio.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Takua_Pa,_Takua_Pa_District,_Phang-nga,_Thailand_-_panoramio.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_verdict": "USABLE",
+      "attribution_th": "mohigan — CC BY-SA 3.0 (Wikimedia Commons)",
+      "caption_th": "บรรยากาศเมืองตะกั่วป่า จังหวัดพังงา",
+      "era": "current",
+      "width": 4084,
+      "height": 3067,
+      "http_status": 200
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Phetkasem_Road_Tambon_Khuekkhak%2C_Amphoe_Takua_Pa%2C_Chang_Wat_Phang-nga_82190%2C_Thailand_-_panoramio.jpg",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Phetkasem_Road_Tambon_Khuekkhak,_Amphoe_Takua_Pa,_Chang_Wat_Phang-nga_82190,_Thailand_-_panoramio.jpg",
+      "license": "CC BY 3.0",
+      "license_verdict": "USABLE",
+      "attribution_th": "Dirk Enthoven — CC BY 3.0 (Wikimedia Commons)",
+      "caption_th": "ถนนเพชรเกษมในอำเภอตะกั่วป่า จังหวัดพังงา",
+      "era": "current",
+      "width": 2048,
+      "height": 1536,
+      "http_status": 200
+    }
+  ],
+  "searched_queries": [
+    "Takua Pa",
+    "ตะกั่วป่า",
+    "Takua Pa old town",
+    "Takua Pa Culture Street",
+    "Phang Nga temple",
+    "Takua Pa street",
+    "Takua Pa Sino Portuguese",
+    "ถนนวัฒนธรรมเมืองเก่าตะกั่วป่า"
+  ],
+  "notes_th": "ค้น Wikimedia Commons ด้วยคำค้น 8 แบบทั้งไทย/อังกฤษ, ตรวจหมวด Takua Pa District และค้นเว็บเพิ่มเติมใน Flickr/Openverse/เว็บ ททท. พบภาพที่ตรงกับถนนสายวัฒนธรรม/ย่านเมืองเก่าโดยตรงแต่ไม่พบใบอนุญาตเปิดที่ระบุชัด จึงไม่นำมาเป็น USABLE; ภาพ Commons 2 ใบนี้เป็นภาพในอำเภอตะกั่วป่าและมีใบอนุญาต CC ระบุบนหน้าภาพจริง URL ไฟล์ตรวจด้วย curl ได้ HTTP 200 และ content-type image/jpeg.",
+  "researched_on": "2026-09-07"
+}

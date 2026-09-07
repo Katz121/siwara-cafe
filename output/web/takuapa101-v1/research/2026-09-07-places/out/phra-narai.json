@@ -1,0 +1,81 @@
+{
+  "id": "phra-narai",
+  "name_th": "สวนสาธารณะพระนารายณ์",
+  "name_en": "Phra Narai Park",
+  "aka": ["สวนสาธารณะอุทยานพระนารายณ์", "อุทยานพระนารายณ์"],
+  "geo": {
+    "lat": 8.8696046,
+    "lng": 98.3445279,
+    "confidence": "high",
+    "source_url": "https://m-culture.in.th/album/120992/%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%AA%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%B0%E0%B8%AD%E0%B8%B8%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%99%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%99%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%93%E0%B9%8C",
+    "source_name": "ศูนย์ข้อมูลกลางวัฒนธรรม (m-culture)"
+  },
+  "address": {
+    "line_th": "หมู่ชุมชนศรีเมือง ถนนเพชรเกษม",
+    "subdistrict": "ตะกั่วป่า",
+    "district": "ตะกั่วป่า",
+    "province": "พังงา",
+    "postcode": "82110",
+    "source_url": "https://m-culture.in.th/album/120992/%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%AA%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%B0%E0%B8%AD%E0%B8%B8%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%99%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%99%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%93%E0%B9%8C"
+  },
+  "contact": {
+    "phone": "076 421 750",
+    "facebook": null,
+    "website": null,
+    "line": null,
+    "source_url": "https://m-culture.in.th/album/120992/%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%AA%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%B0%E0%B8%AD%E0%B8%B8%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%99%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%99%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%93%E0%B9%8C"
+  },
+  "visit": {
+    "opening_hours_th": null,
+    "opening_hours_status": "UNKNOWN",
+    "admission_fee_th": null,
+    "admission_status": "UNKNOWN",
+    "best_time_th": null,
+    "duration_minutes": null,
+    "parking_th": null,
+    "restroom": null,
+    "wheelchair_th": null,
+    "dress_code_th": null,
+    "source_urls": []
+  },
+  "getting_there": [
+    {"from": "ตัวเมืองตะกั่วป่า", "text_th": "อยู่ตรงข้ามสำนักงานเทศบาลเมืองตะกั่วป่าและที่ว่าการเทศบาลเมืองตะกั่วป่า บนถนนเพชรเกษม", "distance_km": null, "source_url": "https://www.phangngaedarea.go.th/site/wp-content/uploads/pdf/17225631.pdf"},
+    {"from": "ภูเก็ต", "text_th": null, "distance_km": null, "source_url": ""},
+    {"from": "เขาหลัก", "text_th": null, "distance_km": null, "source_url": ""},
+    {"from": "สนามบิน", "text_th": null, "distance_km": null, "source_url": ""}
+  ],
+  "history": [
+    {"claim_th": "สวนอยู่ภายใต้การดูแลบริหารจัดการของเทศบาลเมืองตะกั่วป่า", "status": "CONFIRMED", "quote": "ภายใต้การดูแลบริหารจัดการของเทศบาลเมืองตะกั่วป่า", "source_name": "ศูนย์ข้อมูลกลางวัฒนธรรม (m-culture)", "source_url": "https://m-culture.in.th/album/120992/%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%AA%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%B0%E0%B8%AD%E0%B8%B8%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%99%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%99%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%93%E0%B9%8C", "year_be": null, "year_ce": null},
+    {"claim_th": "สวนเป็นสถานที่พักผ่อนหย่อนใจและเป็นที่ประดิษฐานองค์เทวรูปพระนารายณ์กับเทพบริวารจำลอง", "status": "CONFIRMED", "quote": "เป็นสถานที่พักผ่อนหย่อนใจ", "source_name": "สำนักงานเขตพื้นที่การศึกษาพังงา", "source_url": "https://www.phangngaedarea.go.th/site/wp-content/uploads/pdf/17225631.pdf", "year_be": null, "year_ce": null},
+    {"claim_th": "ยังไม่พบหลักฐานที่ยืนยันปีสร้าง ผู้สร้าง บทบาทเฉพาะในยุคเหมืองแร่ดีบุก หรือการขึ้นทะเบียนเป็นโบราณสถานของสวนแห่งนี้", "status": "UNVERIFIED", "quote": "", "source_name": "การสืบค้นครั้งนี้", "source_url": "https://m-culture.in.th/album/120992/%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%AA%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%B0%E0%B8%AD%E0%B8%B8%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%99%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%99%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%93%E0%B9%8C", "year_be": null, "year_ce": null}
+  ],
+  "highlights": [
+    {"title_th": "เทวรูปพระนารายณ์", "detail_th": "ประติมากรรมรูปเคารพพระนารายณ์สำหรับให้ประชาชนสักการะบูชา", "source_url": "https://m-culture.in.th/album/120992/%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%AA%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%B0%E0%B8%AD%E0%B8%B8%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%99%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%99%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%93%E0%B9%8C"},
+    {"title_th": "เทพบริวารจำลอง", "detail_th": "ภายในสวนมีองค์พระนารายณ์และเทพบริวารจำลองตามข้อมูลแหล่งราชการ", "source_url": "https://www.phangngaedarea.go.th/site/wp-content/uploads/pdf/17225631.pdf"},
+    {"title_th": "สนามเด็กเล่น", "detail_th": "พื้นที่ส่วนหนึ่งของสวนจัดเป็นสนามเด็กเล่น", "source_url": "https://m-culture.in.th/album/120992/%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%AA%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%B0%E0%B8%AD%E0%B8%B8%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%99%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%99%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%93%E0%B9%8C"},
+    {"title_th": "ลานจัดกิจกรรม", "detail_th": "ใช้จัดกิจกรรมวัฒนธรรม สันทนาการ และงานประเพณีท้องถิ่นของเทศบาล", "source_url": "https://m-culture.in.th/album/120992/%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%AA%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%B0%E0%B8%AD%E0%B8%B8%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%99%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%99%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%93%E0%B9%8C"}
+  ],
+  "festival": {
+    "months_th": null,
+    "lunar_calendar_th": null,
+    "activities_th": ["งานบวงสรวงพระนารายณ์", "พิธีตักบาตรทำบุญวันขึ้นปีใหม่", "งานวันเด็ก"],
+    "venue_th": "สวนสาธารณะอุทยานพระนารายณ์",
+    "source_urls": ["https://m-culture.in.th/album/120992/%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%AAาธารณะอุทยานพระนารายณ์", "https://www.thaipr.net/travel/3321904"]
+  },
+  "nearby": [],
+  "photos": [
+    {"url": "https://m-culture.in.th/album/120992/%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%AAาธารณะอุทยานพระนารายณ์", "caption_th": "ภาพสวนสาธารณะอุทยานพระนารายณ์ในหน้าข้อมูลแหล่งวัฒนธรรม", "source_name": "ศูนย์ข้อมูลกลางวัฒนธรรม (m-culture)", "license_note_th": "ไม่ทราบสิทธิ์การใช้งาน"}
+  ],
+  "seo_keywords_th": ["สวนสาธารณะพระนารายณ์", "สวนอุทยานพระนารายณ์", "อุทยานพระนารายณ์ ตะกั่วป่า", "พระนารายณ์ ตะกั่วป่า", "ที่เที่ยวตะกั่วป่า", "สวนสาธารณะตะกั่วป่า", "งานบวงสรวงพระนารายณ์", "ของดีเมืองตะกั่วป่า", "เที่ยวเมืองเก่าตะกั่วป่า"],
+  "seo_keywords_en": ["Phra Narai Park", "Phra Narai Park Takuapa", "Takuapa attractions", "Takua Pa park", "Phang Nga cultural sites"],
+  "unknowns": ["ไม่พบเวลาเปิด-ปิดที่เผยแพร่และยืนยันได้", "ไม่พบข้อมูลค่าเข้าชม", "ไม่พบเพจเฟซบุ๊กหรือเว็บไซต์เฉพาะของสวนที่ยืนยันได้", "ไม่พบข้อมูลที่จอดรถ ห้องน้ำ หรือทางเข้าถึงสำหรับรถเข็น/ผู้สูงอายุ", "ไม่พบระยะทางที่ยืนยันได้จากภูเก็ต เขาหลัก หรือสนามบิน", "ไม่พบข้อมูลปีสร้างและผู้สร้าง", "ไม่พบหลักฐานยืนยันบทบาทของสวนในยุคเหมืองแร่ดีบุก", "ไม่พบหลักฐานยืนยันสถาปัตยกรรมชิโน-โปรตุกีส/จีนของสวน", "ไม่พบหลักฐานการขึ้นทะเบียนสวนเป็นโบราณสถาน", "ไม่พบสถานที่ใกล้เคียงที่มีระยะเดินถึงยืนยันได้", "ไม่พบเดือนจัดงานหรือข้อมูลปฏิทินจันทรคติที่ยืนยันได้"],
+  "sources": [
+    {"name": "ศูนย์ข้อมูลกลางวัฒนธรรม (m-culture)", "url": "https://m-culture.in.th/album/120992/%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%AAาธารณะอุทยานพระนารายณ์", "type": "official", "accessed": "2026-09-07"},
+    {"name": "สำนักงานเขตพื้นที่การศึกษาพังงา", "url": "https://www.phangngaedarea.go.th/site/wp-content/uploads/pdf/17225631.pdf", "type": "official", "accessed": "2026-09-07"},
+    {"name": "เทศบาลเมืองตะกั่วป่า", "url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf", "type": "official", "accessed": "2026-09-07"},
+    {"name": "ThaiPR.NET", "url": "https://www.thaipr.net/travel/3321904", "type": "news", "accessed": "2026-09-07"},
+    {"name": "MGR Online", "url": "https://mgronline.com/south/detail/9550000099132", "type": "news", "accessed": "2026-09-07"}
+  ],
+  "researched_by": "codex gpt-5.6-luna",
+  "researched_on": "2026-09-07"
+}

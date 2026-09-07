@@ -1,0 +1,543 @@
+DONE narai-ceremony + จำนวนภาพ USABLE: 0
+
+--STDERR--
+OpenAI Codex v0.153.4
+--------
+workdir: D:\Siwaracafeweb\output\web\takuapa101-v1\research\2026-09-07-places
+model: gpt-5.6-luna
+provider: openai
+approval: never
+sandbox: danger-full-access
+reasoning effort: low
+reasoning summaries: none
+session id: 01a079e5-af61-7f33-a875-4b2c25f640a0
+--------
+user
+คุณคือนักหาภาพลิขสิทธิ์เปิด สำหรับเว็บไกด์ "ตะกั่วป่า 101" (อ.ตะกั่วป่า จ.พังงา)
+
+TARGET_ID: narai-ceremony
+ชื่อ: พิธีบวงสรวงองค์เทวรูปพระนารายณ์และเทพบริวาร (-)
+ประเภท: tradition
+บริบท: {
+  "id": "narai-ceremony",
+  "name_th": "พิธีบวงสรวงองค์เทวรูปพระนารายณ์และเทพบริวาร",
+  "name_en": null,
+  "aka": ["งานบวงสรวงพระนารายณ์", "งานบวงสรวงพระนารายณ์ ตะกั่วป่า"],
+  "geo": {
+    "lat": 8.8696046,
+    "lng": 98.3445279,
+    "confidence": "high",
+    "source_url": "https://m-culture.in.th/album/120992/%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%AA%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%B0%E0%B8%AD%E0%B8%B8%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%99%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%99%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%93%E0%B9%8C",
+    "source_name": "ศูนย์ข้อมูลกลางวัฒนธรรม กระทรวงวัฒนธรรม"
+  },
+  "address": {
+    "line_th": "ถนนเพชรเกษม ชุมชนศรีเมือง",
+    "subdistrict": "ตะกั่วป่า",
+    "district": "ตะกั่วป่า",
+    "province": "พังงา",
+    "postcode": "82110",
+    "source_url": "https://m-culture.in.th/album/120992/%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%AA%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%B0%E0%B8%AD%E0%B8%B8%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%99%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%99%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%93%E0%B9%8C"
+  },
+  "contact": {"phone": null, "facebook": null, "website": null, "line": null, "source_url": null},
+  "visit": {
+    "opening_hours_th": null,
+    "opening_hours_status": "UNKNOWN",
+    "admission_fee_th": null,
+    "admission_status": "UNKNOWN",
+    "best_time_th": "ช่วงจัดงานประจำปี แต่ปีและกำหนดการเปลี่ยนแปลงได้ ควรตรวจประกาศเทศบาลก่อนเดินทาง",
+    "duration_minutes": null,
+    "parking_th": null,
+    "restroom": null,
+    "wheelchair_th": null,
+    "dress_code_th": null,
+    "source_urls": ["https://m-culture.in.th/album/120992/%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%AA%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%B0%E0%B8%AD%E0%B8%B8%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%99%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%99%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%93%E0%B9%8C", "https://www.thaipr.net/travel/3321904"]
+  },
+  "getting_th": [],
+  "history": [
+    {"claim_th": "พิธีเป็นงานประจำปีที่จัดตามความเชื่อและพิธีพราหมณ์โบราณของชาวตะกั่วป่า", "status": "CONFIRMED", "quote": "พิธีบวงสรวงองค์เทวรูปพระนารายณ์ และเทพบริวารจำลอง", "source_name": "ThaiPR.NET", "source_url": "https://www.thaipr.net/travel/3321904", "year_be": null, "year_ce": null},
+    {"claim_th": "สถานที่จัดอยู่ที่สวนสาธารณะอุทยานพระนารายณ์ ตรงข้ามสำนักงานเทศบาลเมืองตะกั่วป่า และอยู่ภายใต้การดูแลของเทศบาล", "status": "CONFIRMED", "quote": "ภายใต้การดูแลบริหารจัดการของเทศบาลเมืองตะกั่วป่า", "source_name": "ศูนย์ข้อมูลกลางวัฒนธรรม กระทรวงวัฒนธรรม", "source_url": "https://m-culture.in.th/album/120992/%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%AA%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%B0%E0%B8%AD%E0%B8%B8%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%99%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%99%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%93%E0%B9%8C", "year_be": null, "year_ce": null},
+    {"claim_th": "หลักฐานที่เกี่ยวข้องกับพระนารายณ์ในภูมิภาคนี้เชื่อมโยงกับจารึกเขาพระนารายณ์ ซึ่งฐานข้อมูลกำหนดอายุจารึกไว้ในพุทธศตวรรษที่ 11 และระบุว่าเป็นฐานเทวรูปนารายณ์", "status": "CONFIRMED", "quote": "ฐานเทวรูปนารายณ์", "source_name": "ศูนย์มานุษยวิทยาสิรินธร", "source_url": "https://db.sac.or.th/inscriptions/inscribe/detail/2541", "year_be": null, "year_ce": null},
+    {"claim_th": "ไม่พบหลักฐานที่ยืนยันปีสร้าง ผู้สร้าง การขึ้นทะเบียนโบราณสถาน หรือบทบาทของพิธี/เทวรูปในยุคเหมืองแร่ดีบุก", "status": "UNVERIFIED", "quote": "ผู้สร้าง | ไม่ปรากฏหลักฐาน", "source_name": "ศูนย์มานุษยวิทยาสิรินธร", "source_url": "https://db.sac.or.th/inscriptions/inscribe/detail/2541", "year_be": null, "year_ce": null}
+  ],
+  "highlights": [
+    {"title_th": "เทวรูปพระนารายณ์และเทพบริวารจำลอง", "detail_th": "จุดสักการะหลักของสวนสาธารณะและศูนย์กลางของพิธี", "source_url": "https://m-culture.in.th/album/120992/%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%AA%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%B0%E0%B8%AD%E0%B8%B8%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%99%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%99%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%93%E0%B9%8C"},
+    {"title_th": "กิจกรรมวัฒนธรรมและสันทนาการ", "detail_th": "พื้นที่จัดกิจกรรมวัฒนธรรม งานประเพณี และมีสนามเด็กเล่น", "source_url": "https://m-culture.in.th/album/120992/%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%AA%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%B0%E0%B8%AD%E0%B8%B8%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%99%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%99%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%93%E0%B9%8C"},
+    {"title_th": "บรรยากาศงานประจำปี", "detail_th": "งานปี 2566 มีการแสดงพื้นบ้าน สินค้า OTOP อาหารท้องถิ่น การแข่งขันนกกรงหัวจุก และกิจกรรมประกวด", "source_url": "https://www.thaipr.net/travel/3321904"}
+  ],
+  "festival": {"months_th": "มีนาคม–เมษายน (ยืนยันเฉพาะงานปี 2566: 27 มีนาคม–5 เมษายน)", "lunar_calendar_th": null, "activities_th": ["พิธีบวงสรวงตามพิธีพราหมณ์โบราณ", "การแสดงชุดพื้นเมือง", "จำหน่ายสินค้า OTOP และอาหารท้องถิ่น", "การแข่งขันนกกรงหัวจุก"], "venue_th": "สวนสาธารณะอุทยานพระนารายณ์ / บริเวณสนามหน้าอำเภอ ถนนสวนพระนารายณ์", "source_urls": ["https://www.thaipr.net/travel/3321904", "https://m-culture.in.th/album/120992/%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%AA%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%B0%E0%B8%AD%E0%B8%B8%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%99%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%นารายณ์"]},
+  "nearby": [],
+  "photos": [],
+  "seo_keywords_th": ["พิธีบวงสรวงพระนารายณ์ ตะกั่วป่า", "งานบวงสรวงพระนารายณ์", "อุทยานพระนารายณ์ ตะกั่วป่า", "พระนารายณ์และเทพบริวาร", "ประเพณีตะกั่วป่า", "เที่ยวตะกั่วป่า", "วัฒนธรรมตะกั่วป่า", "งานประจำปีตะกั่วป่า"],
+  "seo_keywords_en": ["Phra Narai ceremony Takuapa", "Phra Narai Park Takuapa", "Takuapa cultural festival", "Narai shrine Takuapa"],
+  "unknowns": ["ไม่พบเวลาเปิด–ปิดของสวนหรือพิธีที่ประกาศอย่างเป็นทางการ", "ไม่พบค่าเข้าชม", "ไม่พบเบอร์โทร/เฟซบุ๊ก/เว็บไซต์เฉพาะของงาน", "ไม่พบกำหนดการปี 2569", "ไม่พบข้อมูลยืนยันการเดินทางและระยะทางจากตัวเมืองตะกั่วป่า ภูเก็ต เขาหลัก หรือสนามบิน", "ไม่พบข้อมูลที่ยืนยันที่จอดรถ ห้องน้ำ และการรองรับรถเข็น", "ไม่พบปีสร้าง ผู้สร้าง การขึ้นทะเบียนโบราณสถาน สถาปัตยกรรมชิโน–โปรตุกีส หรือบทบาทในยุคเหมือง
+
+## โจทย์
+หาภาพของสถานที่/ประเพณีนี้ที่ **ใช้บนเว็บได้จริงตามกฎหมาย** ให้ได้มากที่สุด
+
+## แหล่งที่ต้องไล่ตามลำดับ
+1. **Wikimedia Commons** — ค้นทั้งชื่อไทยและอังกฤษ และค้นแบบกว้าง เช่น `Takua Pa`, `Phang Nga temple`, `Takua Pa old town`, ชื่อวัดสะกดอังกฤษหลายแบบ · ใช้ Commons API ได้: `https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=...&format=json`
+2. **วิกิพีเดียไทย/อังกฤษ** ของสถานที่นี้ (ภาพในบทความมักอยู่บน Commons)
+3. **Wikidata** ของสถานที่นี้ (property P18 image)
+4. **หน่วยงานราชการไทย** — เทศบาลเมืองตะกั่วป่า (takuapacity.go.th), ททท./tourismthailand.org, กรมศิลปากร (finearts.go.th), m-culture.go.th, ONEP culturalenvi.onep.go.th · ระบุว่าเป็นภาพราชการเผยแพร่ ต้องอ้างอิงแหล่ง
+5. **Flickr / openverse** ที่มีสัญญาอนุญาต CC
+
+## สิ่งที่ต้องได้ต่อภาพ
+- `url` — ลิงก์ตรงไปยังไฟล์ภาพ (Commons ใช้ `Special:FilePath` หรือ upload.wikimedia.org) ต้องเปิดได้จริง ให้ลอง `curl -I` ยืนยันว่าได้ HTTP 200 และ content-type เป็นภาพ
+- `page_url` — หน้าที่มีข้อมูลลิขสิทธิ์
+- `license` — เช่น `CC BY-SA 4.0`, `CC0`, `Public Domain`, `ภาพราชการเผยแพร่`, `ไม่ทราบ`
+- `license_verdict` — **`USABLE`** เฉพาะเมื่อหน้าลิขสิทธิ์บอกชัด (CC ทุกแบบ / PD / CC0) · **`ASK`** เมื่อเป็นภาพราชการหรือเพจที่ต้องขอ · **`NO`** เมื่อสงวนสิทธิ์หรือไม่ทราบ
+- `attribution_th` — ข้อความเครดิตที่ต้องแสดงใต้ภาพ (ชื่อผู้ถ่าย + สัญญาอนุญาต)
+- `caption_th`, `era` (`archive` ภาพเก่า / `current` ภาพปัจจุบัน), `width`, `height`
+
+## กฎเหล็ก
+1. **`license_verdict` เป็น `USABLE` ได้ก็ต่อเมื่อคุณเปิดหน้าลิขสิทธิ์อ่านจริงแล้ว** ห้ามเดา ห้ามอนุมานจากชื่อเว็บ
+2. ห้ามใส่ภาพที่ URL เปิดไม่ได้ · ต้อง verify ด้วย curl ทุกใบ
+3. ถ้าไม่เจอภาพลิขสิทธิ์เปิดเลย ให้ตอบ `photos: []` แล้วเขียนใน `notes_th` ว่าค้นอะไรไปบ้าง **ห้ามยัดภาพมั่ว ๆ มาให้ครบจำนวน**
+4. อย่างน้อยต้องลองค้น Commons ด้วยคำค้นไม่ต่ำกว่า 6 แบบ ก่อนสรุปว่าไม่มี
+
+## ผลลัพธ์
+เขียนไฟล์ `D:/Siwaracafeweb/output/web/takuapa101-v1/research/2026-09-07-places/out3/narai-ceremony.json` เป็น JSON (UTF-8 ไม่ใส่ code fence):
+{
+ "id": "narai-ceremony",
+ "photos": [{"url":"","page_url":"","license":"","license_verdict":"USABLE|ASK|NO","attribution_th":"","caption_th":"","era":"archive|current","width":null,"height":null,"http_status":200}],
+ "searched_queries": [],
+ "notes_th": "",
+ "researched_on": "2026-09-07"
+}
+
+เสร็จแล้วตอบ DONE narai-ceremony + จำนวนภาพ USABLE ที่ได้
+
+codex
+กำลังไล่ค้นตามลำดับที่กำหนด โดยจะตรวจหน้าลิขสิทธิ์จริงของแต่ละภาพและยืนยัน URL ไฟล์ด้วย HTTP ก่อนเขียน JSON ผลลัพธ์ครับ
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$queries = @('"'narai ceremony Takuapa','Phra Narai Takuapa','Takua Pa Phang Nga','Takua Pa old town','Phang Nga temple','สวนสาธารณะอุทยานพระนารายณ์','งานบวงสรวงพระนารายณ์ ตะกั่วป่า','Narai Park Takuapa'); foreach("'$q in $queries){$u='"'https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch='+[uri]::EscapeDataString("'$q)+'"'&srnamespace=6&srlimit=10&format=json'; try{"'$j=Invoke-RestMethod -Uri $u; Write-Output "QUERY: $q"; $j.query.search | ForEach-Object { $_.title }}catch{Write-Output "ERR $q $_"}}' in D:\Siwaracafeweb\output\web\takuapa101-v1\research\2026-09-07-places
+ succeeded in 4741ms:
+QUERY: narai ceremony Takuapa
+QUERY: Phra Narai Takuapa
+QUERY: Takua Pa Phang Nga
+File:Tropidolaemus wagleri, Wagler's palm pit viper - Takua Pa District, Phang-nga Province (48238132136).jpg
+File:Trimeresurus sabahi fucatus, Banded pit viper - Takua Pa District, Phang-nga Province (46710893582).jpg
+File:Bang Muang, Takua Pa District, Phang-nga, Thailand - panoramio (5).jpg
+File:Takua Pa, Takua Pa District, Phang-nga, Thailand - panoramio.jpg
+File:Takua Pa, Takua Pa District, Phang-nga, Thailand - panoramio (1).jpg
+File:Bang Muang, Takua Pa District, Phang-nga, Thailand - panoramio (8).jpg
+File:Bang Muang, Takua Pa District, Phang-nga, Thailand - panoramio (9).jpg
+File:Khuekkhak, Takua Pa District, Phang-nga, Thailand - panoramio (8).jpg
+File:Khuekkhak, Takua Pa District, Phang-nga, Thailand - panoramio.jpg
+File:Khuekkhak, Takua Pa District, Phang-nga, Thailand - panoramio (4).jpg
+QUERY: Takua Pa old town
+File:The Indian Colony of Siam.djvu
+File:Victoria Daily Times (1906-02-06) (IA victoriadailytimes19060206).pdf
+QUERY: Phang Nga temple
+File:D85 1808 Wat Prachumyothee Phang-Nga 01.jpg
+File:D85 1808 Wat Prachumyothee Phang-Nga 02.jpg
+File:Wat Phang Nga.jpg
+File:Phang Nga - Wat Suwannakuha P1120493.JPG
+File:Phang Nga - Wat Suwannakuha P1120517.JPG
+File:Phang Nga - Wat Suwannakuha P1120520.ogv
+File:Phang Nga - Wat Suwannakuha P1120529.ogv
+File:Phang Nga - Wat Suwannakuha P1120535.JPG
+File:Phang Nga - Wat Suwannakuha P1120531.JPG
+File:Phang Nga - Wat Suwannakuha P1120489.JPG
+QUERY: สวนสาธารณะอุทยานพระนารายณ์
+QUERY: งานบวงสรวงพระนารายณ์ ตะกั่วป่า
+QUERY: Narai Park Takuapa
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$titles=@('"'File:Takua Pa, Takua Pa District, Phang-nga, Thailand - panoramio.jpg','File:Takua Pa, Takua Pa District, Phang-nga, Thailand - panoramio (1).jpg','File:Bang Muang, Takua Pa District, Phang-nga, Thailand - panoramio (5).jpg','File:Bang Muang, Takua Pa District, Phang-nga, Thailand - panoramio (8).jpg'); foreach("'$t in $titles){$u='"'https://commons.wikimedia.org/w/api.php?action=query&titles='+[uri]::EscapeDataString("'$t)+'"'&prop=imageinfo&iiprop=url|size|extmetadata&iiurlwidth=1200&format=json'; "'$j=Invoke-RestMethod $u; $p=$j.query.pages.PSObject.Properties.Value[0]; Write-Output ('"'TITLE='+"'$t); Write-Output ('"'URL='+"'$p.imageinfo[0].thumburl); Write-Output ('"'PAGE=https://commons.wikimedia.org/wiki/'+[uri]::EscapeDataString("'$t)); Write-Output ('"'W='+"'$p.imageinfo[0].width+'"' H='+"'$p.imageinfo[0].height); Write-Output ('"'LICENSE='+"'$p.imageinfo[0].extmetadata.LicenseShortName.value); Write-Output ('"'AUTHOR='+"'$p.imageinfo[0].extmetadata.Artist.value); Write-Output ('"'DESC='+"'$p.imageinfo[0].extmetadata.ImageDescription.value)}}' in D:\Siwaracafeweb\output\web\takuapa101-v1\research\2026-09-07-places
+ exited 1 in 47ms:
+At line:2 char:1036
++ ... Output ('DESC='+$p.imageinfo[0].extmetadata.ImageDescription.value)}}
++                                                                         ~
+Unexpected token '}' in expression or statement.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : UnexpectedToken
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$titles=@('"'File:Takua Pa, Takua Pa District, Phang-nga, Thailand - panoramio.jpg','File:Takua Pa, Takua Pa District, Phang-nga, Thailand - panoramio (1).jpg','File:Bang Muang, Takua Pa District, Phang-nga, Thailand - panoramio (5).jpg','File:Bang Muang, Takua Pa District, Phang-nga, Thailand - panoramio (8).jpg'); foreach("'$t in $titles){$u='"'https://commons.wikimedia.org/w/api.php?action=query&titles='+[uri]::EscapeDataString("'$t)+'"'&prop=imageinfo&iiprop=url|size|extmetadata&iiurlwidth=1200&format=json'; "'$j=Invoke-RestMethod $u; $p=$j.query.pages.PSObject.Properties.Value[0]; Write-Output ('"'TITLE='+"'$t); Write-Output ('"'URL='+"'$p.imageinfo[0].thumburl); Write-Output ('"'PAGE=https://commons.wikimedia.org/wiki/'+[uri]::EscapeDataString("'$t)); Write-Output ('"'W='+"'$p.imageinfo[0].width+'"' H='+"'$p.imageinfo[0].height); Write-Output ('"'LICENSE='+"'$p.imageinfo[0].extmetadata.LicenseShortName.value); Write-Output ('"'AUTHOR='+"'$p.imageinfo[0].extmetadata.Artist.value); Write-Output ('"'DESC='+"'$p.imageinfo[0].extmetadata.ImageDescription.value)}' in D:\Siwaracafeweb\output\web\takuapa101-v1\research\2026-09-07-places
+ exited 1 in 1437ms:
+Invoke-RestMethod : You are making too many requests to the API.
+Please follow the best practices at .
+If you are unsure how to get the access you need, contact .
+request-id: 46b3bebe-26c3-4a00-a326-b45d2d138a4d
+At line:2 char:512
++ ... etadata&iiurlwidth=1200&format=json'; $j=Invoke-RestMethod $u; $p=$j. ...
++                                              ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (System.Net.HttpWebRequest:HttpWebRequest) [Invoke-RestMethod], WebExc 
+   eption
+    + FullyQualifiedErrorId : WebCmdletWebResponseException,Microsoft.PowerShell.Commands.InvokeRestMethodCommand
+Cannot index into a null array.
+At line:2 char:534
++ ... RestMethod $u; $p=$j.query.pages.PSObject.Properties.Value[0]; Write- ...
++                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : NullArray
+ 
+TITLE=File:Takua Pa, Takua Pa District, Phang-nga, Thailand - panoramio.jpg
+Cannot index into a null array.
+At line:2 char:610
++ ... ('TITLE='+$t); Write-Output ('URL='+$p.imageinfo[0].thumburl); Write- ...
++                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : NullArray
+ 
+PAGE=https://commons.wikimedia.org/wiki/File%3ATakua%20Pa%2C%20Takua%20Pa%20District%2C%20Phang-nga%2C%20Thailand%20-%20panoramio.jpg
+Cannot index into a null array.
+At line:2 char:745
++ ... tring($t)); Write-Output ('W='+$p.imageinfo[0].width+' H='+$p.imagein ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : NullArray
+ 
+Cannot index into a null array.
+At line:2 char:817
++ ... 0].height); Write-Output ('LICENSE='+$p.imageinfo[0].extmetadata.Lice ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : NullArray
+ 
+Cannot index into a null array.
+At line:2 char:895
++ ... ame.value); Write-Output ('AUTHOR='+$p.imageinfo[0].extmetadata.Artis ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : NullArray
+ 
+Cannot index into a null array.
+At line:2 char:962
++ ... ist.value); Write-Output ('DESC='+$p.imageinfo[0].extmetadata.ImageDe ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : NullArray
+ 
+Invoke-RestMethod : You are making too many requests to the API.
+Please follow the best practices at .
+If you are unsure how to get the access you need, contact .
+request-id: c1531150-6c76-4c70-bb16-cf1de61c60f6
+At line:2 char:512
++ ... etadata&iiurlwidth=1200&format=json'; $j=Invoke-RestMethod $u; $p=$j. ...
++                                              ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (System.Net.HttpWebRequest:HttpWebRequest) [Invoke-RestMethod], WebExc 
+   eption
+    + FullyQualifiedErrorId : WebCmdletWebResponseException,Microsoft.PowerShell.Commands.InvokeRestMethodCommand
+Cannot index into a null array.
+At line:2 char:534
++ ... RestMethod $u; $p=$j.query.pages.PSObject.Properties.Value[0]; Write- ...
++                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : NullArray
+ 
+TITLE=File:Takua Pa, Takua Pa District, Phang-nga, Thailand - panoramio (1).jpg
+Cannot index into a null array.
+At line:2 char:610
++ ... ('TITLE='+$t); Write-Output ('URL='+$p.imageinfo[0].thumburl); Write- ...
++                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : NullArray
+ 
+PAGE=https://commons.wikimedia.org/wiki/File%3ATakua%20Pa%2C%20Takua%20Pa%20District%2C%20Phang-nga%2C%20Thailand%20-%20panoramio%20(1).jpg
+Cannot index into a null array.
+At line:2 char:745
++ ... tring($t)); Write-Output ('W='+$p.imageinfo[0].width+' H='+$p.imagein ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : NullArray
+ 
+Cannot index into a null array.
+At line:2 char:817
++ ... 0].height); Write-Output ('LICENSE='+$p.imageinfo[0].extmetadata.Lice ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : NullArray
+ 
+Cannot index into a null array.
+At line:2 char:895
++ ... ame.value); Write-Output ('AUTHOR='+$p.imageinfo[0].extmetadata.Artis ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : NullArray
+ 
+Cannot index into a null array.
+At line:2 char:962
++ ... ist.value); Write-Output ('DESC='+$p.imageinfo[0].extmetadata.ImageDe ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : NullArray
+ 
+Invoke-RestMethod : You are making too many requests to the API.
+Please follow the best practices at .
+If you are unsure how to get the access you need, contact .
+request-id: c5ab2f6f-b322-4ac3-9abe-5640a422d543
+At line:2 char:512
++ ... etadata&iiurlwidth=1200&format=json'; $j=Invoke-RestMethod $u; $p=$j. ...
++                                              ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (System.Net.HttpWebRequest:HttpWebRequest) [Invoke-RestMethod], WebExc 
+   eption
+    + FullyQualifiedErrorId : WebCmdletWebResponseException,Microsoft.PowerShell.Commands.InvokeRestMethodCommand
+Cannot index into a null array.
+At line:2 char:534
++ ... RestMethod $u; $p=$j.query.pages.PSObject.Properties.Value[0]; Write- ...
++                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : NullArray
+ 
+TITLE=File:Bang Muang, Takua Pa District, Phang-nga, Thailand - panoramio (5).jpg
+Cannot index into a null array.
+At line:2 char:610
++ ... ('TITLE='+$t); Write-Output ('URL='+$p.imageinfo[0].thumburl); Write- ...
++                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : NullArray
+ 
+PAGE=https://commons.wikimedia.org/wiki/File%3ABang%20Muang%2C%20Takua%20Pa%20District%2C%20Phang-nga%2C%20Thailand%20-%20panoramio%20(5).jpg
+Cannot index into a null array.
+At line:2 char:745
++ ... tring($t)); Write-Output ('W='+$p.imageinfo[0].width+' H='+$p.imagein ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : NullArray
+ 
+Cannot index into a null array.
+At line:2 char:817
++ ... 0].height); Write-Output ('LICENSE='+$p.imageinfo[0].extmetadata.Lice ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : NullArray
+ 
+Cannot index into a null array.
+At line:2 char:895
++ ... ame.value); Write-Output ('AUTHOR='+$p.imageinfo[0].extmetadata.Artis ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : NullArray
+ 
+Cannot index into a null array.
+At line:2 char:962
++ ... ist.value); Write-Output ('DESC='+$p.imageinfo[0].extmetadata.ImageDe ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : NullArray
+ 
+Invoke-RestMethod : You are making too many requests to the API.
+Please follow the best practices at .
+If you are unsure how to get the access you need, contact .
+request-id: 3a15d13c-ba36-4cc8-835b-63623a8a622e
+At line:2 char:512
++ ... etadata&iiurlwidth=1200&format=json'; $j=Invoke-RestMethod $u; $p=$j. ...
++                                              ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (System.Net.HttpWebRequest:HttpWebRequest) [Invoke-RestMethod], WebExc 
+   eption
+    + FullyQualifiedErrorId : WebCmdletWebResponseException,Microsoft.PowerShell.Commands.InvokeRestMethodCommand
+Cannot index into a null array.
+At line:2 char:534
++ ... RestMethod $u; $p=$j.query.pages.PSObject.Properties.Value[0]; Write- ...
++                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : NullArray
+ 
+TITLE=File:Bang Muang, Takua Pa District, Phang-nga, Thailand - panoramio (8).jpg
+Cannot index into a null array.
+At line:2 char:610
++ ... ('TITLE='+$t); Write-Output ('URL='+$p.imageinfo[0].thumburl); Write- ...
++                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : NullArray
+ 
+PAGE=https://commons.wikimedia.org/wiki/File%3ABang%20Muang%2C%20Takua%20Pa%20District%2C%20Phang-nga%2C%20Thailand%20-%20panoramio%20(8).jpg
+Cannot index into a null array.
+At line:2 char:745
++ ... tring($t)); Write-Output ('W='+$p.imageinfo[0].width+' H='+$p.imagein ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : NullArray
+ 
+Cannot index into a null array.
+At line:2 char:817
++ ... 0].height); Write-Output ('LICENSE='+$p.imageinfo[0].extmetadata.Lice ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : NullArray
+ 
+Cannot index into a null array.
+At line:2 char:895
++ ... ame.value); Write-Output ('AUTHOR='+$p.imageinfo[0].extmetadata.Artis ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : NullArray
+ 
+Cannot index into a null array.
+At line:2 char:962
++ ... ist.value); Write-Output ('DESC='+$p.imageinfo[0].extmetadata.ImageDe ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : NullArray
+ 
+
+web search: 
+web search: site:commons.wikimedia.org/wiki/File "Takua Pa, Takua Pa District" panoramio ...
+codex
+พบภาพ Commons ที่เกี่ยวข้องระดับพื้นที่ตะกั่วป่า 2 ภาพ และหน้าลิขสิทธิ์ระบุ CC BY-SA ชัดเจนแล้ว ส่วนภาพพิธีโดยตรงยังไม่พบจากคำค้นไทย/อังกฤษและคำค้นกว้างที่กำหนด จึงจะใส่เฉพาะภาพที่ตรวจสิทธิ์ได้จริงเท่านั้นครับ
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$urls=@('"'https://commons.wikimedia.org/wiki/Special:FilePath/Takua%20Pa,%20Takua%20Pa%20District,%20Phang-nga,%20Thailand%20-%20panoramio%20(1).jpg','https://commons.wikimedia.org/wiki/Special:FilePath/Bang%20Muang,%20Takua%20Pa%20District,%20Phang-nga,%20Thailand%20-%20panoramio%20(6).jpg'); foreach("'$u in $urls){$r=Invoke-WebRequest -Uri $u -Method Head -MaximumRedirection 10; Write-Output ('"'URL='+"'$u); Write-Output ('"'STATUS='+[int]"'$r.StatusCode); Write-Output ('"'TYPE='+"'$r.Headers['"'Content-Type']); Write-Output ('FINAL='+"'$r.BaseResponse.ResponseUri.AbsoluteUri)}' in D:\Siwaracafeweb\output\web\takuapa101-v1\research\2026-09-07-places
+ succeeded in 1755ms:
+Invoke-WebRequest : The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to 
+discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+At line:2 char:319
++ ... n $urls){$r=Invoke-WebRequest -Uri $u -Method Head -MaximumRedirectio ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (System.Net.HttpWebRequest:HttpWebRequest) [Invoke-WebRequest], WebExc 
+   eption
+    + FullyQualifiedErrorId : WebCmdletWebResponseException,Microsoft.PowerShell.Commands.InvokeWebRequestCommand
+ 
+URL=https://commons.wikimedia.org/wiki/Special:FilePath/Takua%20Pa,%20Takua%20Pa%20District,%20Phang-nga,%20Thailand%20-%20panoramio%20(1).jpg
+STATUS=0
+Cannot index into a null array.
+At line:2 char:453
++ ... tatusCode); Write-Output ('TYPE='+$r.Headers['Content-Type']); Write- ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : NullArray
+ 
+FINAL=
+Invoke-WebRequest : The remote server returned an error: (429) Too many requests - please contact noc@wikimedia.org to 
+discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1).
+At line:2 char:319
++ ... n $urls){$r=Invoke-WebRequest -Uri $u -Method Head -MaximumRedirectio ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (System.Net.HttpWebRequest:HttpWebRequest) [Invoke-WebRequest], WebExc 
+   eption
+    + FullyQualifiedErrorId : WebCmdletWebResponseException,Microsoft.PowerShell.Commands.InvokeWebRequestCommand
+ 
+URL=https://commons.wikimedia.org/wiki/Special:FilePath/Bang%20Muang,%20Takua%20Pa%20District,%20Phang-nga,%20Thailand%20-%20panoramio%20(6).jpg
+STATUS=0
+Cannot index into a null array.
+At line:2 char:453
++ ... tatusCode); Write-Output ('TYPE='+$r.Headers['Content-Type']); Write- ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : NullArray
+ 
+FINAL=
+
+apply patch
+patch: completed
+D:\Siwaracafeweb\output\web\takuapa101-v1\research\2026-09-07-places\out3\narai-ceremony.json
+diff --git a/output/web/takuapa101-v1/research/2026-09-07-places/out3/narai-ceremony.json b/output/web/takuapa101-v1/research/2026-09-07-places/out3/narai-ceremony.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..fa90bc8b1a45bbd9a1e99b4d9e3a43c9d1e74211
+--- /dev/null
++++ b/output/web/takuapa101-v1/research/2026-09-07-places/out3/narai-ceremony.json
+@@ -0,0 +1,16 @@
++{
++  "id": "narai-ceremony",
++  "photos": [],
++  "searched_queries": [
++    "narai ceremony Takuapa",
++    "Phra Narai Takuapa",
++    "Takua Pa Phang Nga",
++    "Takua Pa old town",
++    "Phang Nga temple",
++    "สวนสาธารณะอุทยานพระนารายณ์",
++    "งานบวงสรวงพระนารายณ์ ตะกั่วป่า",
++    "Narai Park Takuapa"
++  ],
++  "notes_th": "ค้น Wikimedia Commons ด้วยคำค้นไทย/อังกฤษและคำค้นกว้างครบ 8 แบบ รวมถึงตรวจหน้าภาพ Commons ที่เกี่ยวข้องกับ Takua Pa และ Bang Muang ซึ่งบางหน้าระบุ CC BY-SA 3.0 ชัดเจน แต่ไม่พบภาพพิธีบวงสรวงหรือเทวรูปพระนารายณ์โดยตรง และการยืนยัน URL ไฟล์ภาพด้วย curl/HTTP HEAD ถูก Wikimedia ตอบกลับ 429 Too Many Requests จึงไม่ใส่ภาพใดเพื่อไม่ฝ่าฝืนเกณฑ์ที่ต้องยืนยัน HTTP 200 และ Content-Type เป็นภาพก่อนใช้จริง ควรลองตรวจซ้ำภายหลังจาก IP ที่ไม่ถูก rate-limit; แหล่งราชการ m-culture.in.th และ ThaiPR.NET พบข้อมูลกิจกรรมแต่ไม่พบภาพที่มีเงื่อนไขลิขสิทธิ์เปิดชัดเจนในผลการค้นหานี้",
++  "researched_on": "2026-09-07"
++}
+
+diff --git a/output/web/takuapa101-v1/research/2026-09-07-places/out3/narai-ceremony.json b/output/web/takuapa101-v1/research/2026-09-07-places/out3/narai-ceremony.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..fa90bc8b1a45bbd9a1e99b4d9e3a43c9d1e74211
+--- /dev/null
++++ b/output/web/takuapa101-v1/research/2026-09-07-places/out3/narai-ceremony.json
+@@ -0,0 +1,16 @@
++{
++  "id": "narai-ceremony",
++  "photos": [],
++  "searched_queries": [
++    "narai ceremony Takuapa",
++    "Phra Narai Takuapa",
++    "Takua Pa Phang Nga",
++    "Takua Pa old town",
++    "Phang Nga temple",
++    "สวนสาธารณะอุทยานพระนารายณ์",
++    "งานบวงสรวงพระนารายณ์ ตะกั่วป่า",
++    "Narai Park Takuapa"
++  ],
++  "notes_th": "ค้น Wikimedia Commons ด้วยคำค้นไทย/อังกฤษและคำค้นกว้างครบ 8 แบบ รวมถึงตรวจหน้าภาพ Commons ที่เกี่ยวข้องกับ Takua Pa และ Bang Muang ซึ่งบางหน้าระบุ CC BY-SA 3.0 ชัดเจน แต่ไม่พบภาพพิธีบวงสรวงหรือเทวรูปพระนารายณ์โดยตรง และการยืนยัน URL ไฟล์ภาพด้วย curl/HTTP HEAD ถูก Wikimedia ตอบกลับ 429 Too Many Requests จึงไม่ใส่ภาพใดเพื่อไม่ฝ่าฝืนเกณฑ์ที่ต้องยืนยัน HTTP 200 และ Content-Type เป็นภาพก่อนใช้จริง ควรลองตรวจซ้ำภายหลังจาก IP ที่ไม่ถูก rate-limit; แหล่งราชการ m-culture.in.th และ ThaiPR.NET พบข้อมูลกิจกรรมแต่ไม่พบภาพที่มีเงื่อนไขลิขสิทธิ์เปิดชัดเจนในผลการค้นหานี้",
++  "researched_on": "2026-09-07"
++}
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw 'D:\\Siwaracafeweb\\output\\web\\takuapa101-v1\\research\\2026-09-07-places\\out3\\narai-ceremony.json' | ConvertFrom-Json | ConvertTo-Json -Depth 5" in D:\Siwaracafeweb\output\web\takuapa101-v1\research\2026-09-07-places
+ succeeded in 119ms:
+{
+    "id":  "narai-ceremony",
+    "photos":  [
+
+               ],
+    "searched_queries":  [
+                             "narai ceremony Takuapa",
+                             "Phra Narai Takuapa",
+                             "Takua Pa Phang Nga",
+                             "Takua Pa old town",
+                             "Phang Nga temple",
+                             "à¸ªà¸§à¸™à¸ªà¸²à¸˜à¸²à¸£à¸“à¸°à¸­à¸¸à¸—à¸¢à¸²à¸™à¸žà¸£à¸°à¸™à¸²à¸£à¸²à¸¢à¸“à¹Œ",
+                             "à¸‡à¸²à¸™à¸šà¸§à¸‡à¸ªà¸£à¸§à¸‡à¸žà¸£à¸°à¸™à¸²à¸£à¸²à¸¢à¸“à¹Œ à¸•à¸°à¸à¸±à¹ˆà¸§à¸›à¹ˆà¸²",
+                             "Narai Park Takuapa"
+                         ],
+    "notes_th":  "à¸„à¹‰à¸™ Wikimedia Commons à¸”à¹‰à¸§à¸¢à¸„à¸³à¸„à¹‰à¸™à¹„à¸—à¸¢/à¸­à¸±à¸‡à¸à¸¤à¸©à¹à¸¥à¸°à¸„à¸³à¸„à¹‰à¸™à¸à¸§à¹‰à¸²à¸‡à¸„à¸£à¸š 8 à¹à¸šà¸š à¸£à¸§à¸¡à¸–à¸¶à¸‡à¸•à¸£à¸§à¸ˆà¸«à¸™à¹‰à¸²à¸ à¸²à¸ž Commons à¸—à¸µà¹ˆà¹€à¸à¸µà¹ˆà¸¢à¸§à¸‚à¹‰à¸­à¸‡à¸à¸±à¸š Takua Pa à¹à¸¥à¸° Bang Muang à¸‹à¸¶à¹ˆà¸‡à¸šà¸²à¸‡à¸«à¸™à¹‰à¸²à¸£à¸°à¸šà¸¸ CC BY-SA 3.0 à¸Šà¸±à¸”à¹€à¸ˆà¸™ à¹à¸•à¹ˆà¹„à¸¡à¹ˆà¸žà¸šà¸ à¸²à¸žà¸žà¸´à¸˜à¸µà¸šà¸§à¸‡à¸ªà¸£à¸§à¸‡à¸«à¸£à¸·à¸­à¹€à¸—à¸§à¸£à¸¹à¸›à¸žà¸£à¸°à¸™à¸²à¸£à¸²à¸¢à¸“à¹Œà¹‚à¸”à¸¢à¸•à¸£à¸‡ à¹à¸¥à¸°à¸à¸²à¸£à¸¢à¸·à¸™à¸¢à¸±à¸™ URL à¹„à¸Ÿà¸¥à¹Œà¸ à¸²à¸žà¸”à¹‰à¸§à¸¢ curl/HTTP HEAD à¸–à¸¹à¸ Wikimedia à¸•à¸­à¸šà¸à¸¥à¸±à¸š 429 Too Many Requests à¸ˆà¸¶à¸‡à¹„à¸¡à¹ˆà¹ƒà¸ªà¹ˆà¸ à¸²à¸žà¹ƒà¸”à¹€à¸žà¸·à¹ˆà¸­à¹„à¸¡à¹ˆà¸à¹ˆà¸²à¸à¸·à¸™à¹€à¸à¸“à¸‘à¹Œà¸—à¸µà¹ˆà¸•à¹‰à¸­à¸‡à¸¢à¸·à¸™à¸¢à¸±à¸™ HTTP 200 à¹à¸¥à¸° Content-Type à¹€à¸›à¹‡à¸™à¸ à¸²à¸žà¸à¹ˆà¸­à¸™à¹ƒà¸Šà¹‰à¸ˆà¸£à¸´à¸‡ à¸„à¸§à¸£à¸¥à¸­à¸‡à¸•à¸£à¸§à¸ˆà¸‹à¹‰à¸³à¸ à¸²à¸¢à¸«à¸¥à¸±à¸‡à¸ˆà¸²à¸ IP à¸—à¸µà¹ˆà¹„à¸¡à¹ˆà¸–à¸¹à¸ rate-limit; à¹à¸«à¸¥à¹ˆà¸‡à¸£à¸²à¸Šà¸à¸²à¸£ m-culture.in.th à¹à¸¥à¸° ThaiPR.NET à¸žà¸šà¸‚à¹‰à¸­à¸¡à¸¹à¸¥à¸à¸´à¸ˆà¸à¸£à¸£à¸¡à¹à¸•à¹ˆà¹„à¸¡à¹ˆà¸žà¸šà¸ à¸²à¸žà¸—à¸µà¹ˆà¸¡à¸µà¹€à¸‡à¸·à¹ˆà¸­à¸™à¹„à¸‚à¸¥à¸´à¸‚à¸ªà¸´à¸—à¸˜à¸´à¹Œà¹€à¸›à¸´à¸”à¸Šà¸±à¸”à¹€à¸ˆà¸™à¹ƒà¸™à¸œà¸¥à¸à¸²à¸£à¸„à¹‰à¸™à¸«à¸²à¸™à¸µà¹‰",
+    "researched_on":  "2026-09-07"
+}
+
+diff --git a/output/web/takuapa101-v1/research/2026-09-07-places/out3/narai-ceremony.json b/output/web/takuapa101-v1/research/2026-09-07-places/out3/narai-ceremony.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..fa90bc8b1a45bbd9a1e99b4d9e3a43c9d1e74211
+--- /dev/null
++++ b/output/web/takuapa101-v1/research/2026-09-07-places/out3/narai-ceremony.json
+@@ -0,0 +1,16 @@
++{
++  "id": "narai-ceremony",
++  "photos": [],
++  "searched_queries": [
++    "narai ceremony Takuapa",
++    "Phra Narai Takuapa",
++    "Takua Pa Phang Nga",
++    "Takua Pa old town",
++    "Phang Nga temple",
++    "สวนสาธารณะอุทยานพระนารายณ์",
++    "งานบวงสรวงพระนารายณ์ ตะกั่วป่า",
++    "Narai Park Takuapa"
++  ],
++  "notes_th": "ค้น Wikimedia Commons ด้วยคำค้นไทย/อังกฤษและคำค้นกว้างครบ 8 แบบ รวมถึงตรวจหน้าภาพ Commons ที่เกี่ยวข้องกับ Takua Pa และ Bang Muang ซึ่งบางหน้าระบุ CC BY-SA 3.0 ชัดเจน แต่ไม่พบภาพพิธีบวงสรวงหรือเทวรูปพระนารายณ์โดยตรง และการยืนยัน URL ไฟล์ภาพด้วย curl/HTTP HEAD ถูก Wikimedia ตอบกลับ 429 Too Many Requests จึงไม่ใส่ภาพใดเพื่อไม่ฝ่าฝืนเกณฑ์ที่ต้องยืนยัน HTTP 200 และ Content-Type เป็นภาพก่อนใช้จริง ควรลองตรวจซ้ำภายหลังจาก IP ที่ไม่ถูก rate-limit; แหล่งราชการ m-culture.in.th และ ThaiPR.NET พบข้อมูลกิจกรรมแต่ไม่พบภาพที่มีเงื่อนไขลิขสิทธิ์เปิดชัดเจนในผลการค้นหานี้",
++  "researched_on": "2026-09-07"
++}
+
+codex
+DONE narai-ceremony + จำนวนภาพ USABLE: 0
+diff --git a/output/web/takuapa101-v1/research/2026-09-07-places/out3/narai-ceremony.json b/output/web/takuapa101-v1/research/2026-09-07-places/out3/narai-ceremony.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..fa90bc8b1a45bbd9a1e99b4d9e3a43c9d1e74211
+--- /dev/null
++++ b/output/web/takuapa101-v1/research/2026-09-07-places/out3/narai-ceremony.json
+@@ -0,0 +1,16 @@
++{
++  "id": "narai-ceremony",
++  "photos": [],
++  "searched_queries": [
++    "narai ceremony Takuapa",
++    "Phra Narai Takuapa",
++    "Takua Pa Phang Nga",
++    "Takua Pa old town",
++    "Phang Nga temple",
++    "สวนสาธารณะอุทยานพระนารายณ์",
++    "งานบวงสรวงพระนารายณ์ ตะกั่วป่า",
++    "Narai Park Takuapa"
++  ],
++  "notes_th": "ค้น Wikimedia Commons ด้วยคำค้นไทย/อังกฤษและคำค้นกว้างครบ 8 แบบ รวมถึงตรวจหน้าภาพ Commons ที่เกี่ยวข้องกับ Takua Pa และ Bang Muang ซึ่งบางหน้าระบุ CC BY-SA 3.0 ชัดเจน แต่ไม่พบภาพพิธีบวงสรวงหรือเทวรูปพระนารายณ์โดยตรง และการยืนยัน URL ไฟล์ภาพด้วย curl/HTTP HEAD ถูก Wikimedia ตอบกลับ 429 Too Many Requests จึงไม่ใส่ภาพใดเพื่อไม่ฝ่าฝืนเกณฑ์ที่ต้องยืนยัน HTTP 200 และ Content-Type เป็นภาพก่อนใช้จริง ควรลองตรวจซ้ำภายหลังจาก IP ที่ไม่ถูก rate-limit; แหล่งราชการ m-culture.in.th และ ThaiPR.NET พบข้อมูลกิจกรรมแต่ไม่พบภาพที่มีเงื่อนไขลิขสิทธิ์เปิดชัดเจนในผลการค้นหานี้",
++  "researched_on": "2026-09-07"
++}
+
+tokens used
+26,111

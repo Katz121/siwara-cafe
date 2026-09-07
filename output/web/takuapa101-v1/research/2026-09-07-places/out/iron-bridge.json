@@ -1,0 +1,54 @@
+{
+  "id": "iron-bridge",
+  "name_th": "สะพานเหล็กบุญสูง",
+  "name_en": "Boon Soong Iron Bridge",
+  "aka": ["สะพานเหล็กโคกขนุน", "พานเหล็กบุญสูง", "สะพานเหล็กโคกขนุน (พานเหล็กบุญสูง)"],
+  "geo": {"lat": 8.8531719567, "lng": 98.3540239936, "confidence": "high", "source_url": "https://culturalenvi.onep.go.th/site/detail/4421", "source_name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม"},
+  "address": {"line_th": "ถนนราษฎร์บำรุง บ้านโคกขนุน", "subdistrict": "บางนายสี", "district": "ตะกั่วป่า", "province": "พังงา", "postcode": "82110", "source_url": "https://travel.trueid.net/detail/BmRGGWx9g1P7"},
+  "contact": {"phone": null, "facebook": null, "website": null, "line": null, "source_url": "https://travel.trueid.net/detail/BmRGGWx9g1P7"},
+  "visit": {
+    "opening_hours_th": "เข้าชมได้ตลอดทั้งวัน (ข้อมูลจากแหล่งท่องเที่ยวรอง)",
+    "opening_hours_status": "UNVERIFIED",
+    "admission_fee_th": null,
+    "admission_status": "UNKNOWN",
+    "best_time_th": "เช้าหรือเย็นเพื่อหลีกเลี่ยงอากาศร้อน (ข้อเสนอแนะจากรีวิว ไม่ใช่เวลาทางการ)",
+    "duration_minutes": null,
+    "parking_th": "มีข้อมูลจากรีวิวว่าจอดริมถนนได้และมีพื้นที่จำกัด แต่ไม่มีข้อมูลทางการยืนยัน",
+    "restroom": null,
+    "wheelchair_th": null,
+    "dress_code_th": null,
+    "source_urls": ["https://travel.trueid.net/detail/BmRGGWx9g1P7", "https://www.wongnai.com/attractions/583288JQ-%E0%B8%9E%E0%B8%B2%E0%B8%99%E0%B9%80%E0%B8%AB%E0%B8%A5%E0%B9%87%E0%B8%81-%E0%B8%9A%E0%B8%B8%E0%B8%8D%E0%B8%AA%E0%B8%B9%E0%B8%87"]
+  },
+  "getting_there": [
+    {"from": "ตัวเมืองตะกั่วป่า", "text_th": "เดินทางตามถนนราษฎร์บำรุงไปทางเมืองเก่าตะกั่วป่า สะพานอยู่ด้านซ้ายมือ ห่างจากตัวเมืองประมาณ 2 กิโลเมตร", "distance_km": 2.0, "source_url": "https://travel.trueid.net/detail/BmRGGWx9g1P7"}
+  ],
+  "history": [
+    {"claim_th": "พ.ศ. 2511 มีการนำเหล็กจากเรือขุดแร่มาสร้างสะพานเหล็กโคกขนุน ความยาวกว่า 200 เมตร ข้ามแม่น้ำตะกั่วป่า", "status": "CONFIRMED", "quote": "พ.ศ. ๒๕๑๑ ก็ได้มีการนำเหล็กจากเรือขุดแร่ มาสร้างเป็นสะพานเหล็กโคกขนุน", "source_name": "ฐานข้อมูลท้องถิ่นภาคใต้ มหาวิทยาลัยสงขลานครินทร์", "source_url": "https://clib.psu.ac.th/southerninfo/content/1/de645890", "year_be": 2511, "year_ce": 1968},
+    {"claim_th": "ผู้ริเริ่มคือ นายจุติ บุญสูง เจ้าของกิจการบริษัทเรือขุดแร่จุติบุญสูง จำกัด ซึ่งก่อตั้งบริษัทใน พ.ศ. 2503", "status": "CONFIRMED", "quote": "นายจุติ บุญสูง เจ้าของกิจการบริษัท ประธานบริษัทเรือขุดแร่", "source_name": "ฐานข้อมูลท้องถิ่นภาคใต้ มหาวิทยาลัยสงขลานครินทร์", "source_url": "https://clib.psu.ac.th/southerninfo/content/1/de645890", "year_be": 2503, "year_ce": 1960},
+    {"claim_th": "สะพานสร้างเพื่อแก้ปัญหาการเดินทางของคนงานและชาวบ้านระหว่างตลาดเก่ากับบริษัทเรือขุดแร่ โดยเดิมใช้เรือแจวข้ามคลองตะกั่วป่า และใช้เป็นทางเดิน ขี่จักรยาน และขนสินค้า", "status": "CONFIRMED", "quote": "จึงได้คิดสร้างสะพานไม้ขึ้นเพื่อให้คนงานได้เดินข้ามและขี่จักรยานผ่านไปมาได้", "source_name": "ฐานข้อมูลท้องถิ่นภาคใต้ มหาวิทยาลัยสงขลานครินทร์", "source_url": "https://clib.psu.ac.th/southerninfo/content/1/de645890", "year_be": null, "year_ce": null},
+    {"claim_th": "แหล่งข้อมูลของรัฐจัดสะพานเหล็กโคกขนุนเป็นแหล่งศิลปกรรมอันควรอนุรักษ์ และระบุว่ายังมองเห็นโรงขุดแร่เก่าที่ไม่ได้ใช้งานแล้วเมื่อเดินข้ามสะพาน", "status": "CONFIRMED", "quote": "ยังสามารถเห็นโรงขุดแร่เก่าที่ยังคงสภาพเดิมไว้อยู่แม้จะไม่ได้ใช้งานแล้ว", "source_name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม", "source_url": "https://culturalenvi.onep.go.th/site/detail/4421", "year_be": null, "year_ce": null},
+    {"claim_th": "ยังไม่พบหลักฐานจากแหล่งที่ตรวจสอบว่ามีการขึ้นทะเบียนเป็นโบราณสถานโดยกรมศิลปากร", "status": "UNVERIFIED", "quote": "ไม่มีข้อมูลการขึ้นทะเบียนในหน้าข้อมูลที่ตรวจสอบ", "source_name": "การตรวจสอบแหล่งข้อมูลที่ค้นพบ", "source_url": "https://culturalenvi.onep.go.th/site/detail/4421", "year_be": null, "year_ce": null}
+  ],
+  "highlights": [
+    {"title_th": "โครงสร้างเหล็กยาวประมาณ 200 เมตร", "detail_th": "สะพานทอดข้ามแม่น้ำตะกั่วป่าและเชื่อมพื้นที่ถนนหลักกับบริเวณโรงขุดแร่เก่า", "source_url": "https://culturalenvi.onep.go.th/site/detail/4421"},
+    {"title_th": "ร่องรอยอุตสาหกรรมเหมืองแร่", "detail_th": "ใช้เหล็กจากเรือขุดแร่ที่ไม่ใช้งานแล้ว และปลายทางยังมองเห็นโรงขุดแร่เก่า", "source_url": "https://culturalenvi.onep.go.th/site/detail/4421"},
+    {"title_th": "วิวทุ่งและแนวเขา", "detail_th": "จากสะพานเห็นทุ่งสีเขียว ต้นไม้ และทิวเขา เหมาะกับการชมวิวและถ่ายภาพ", "source_url": "https://travel.trueid.net/detail/BmRGGWx9g1P7"},
+    {"title_th": "ทางสัญจรของชุมชน", "detail_th": "สะพานยังเป็นเส้นทางที่ชาวบ้านใช้สัญจร จึงควรระวังยานพาหนะขณะเดินชม", "source_url": "https://clib.psu.ac.th/southerninfo/content/1/de645890"}
+  ],
+  "festival": {"months_th": null, "lunar_calendar_th": null, "activities_th": [], "venue_th": null, "source_urls": []},
+  "nearby": [],
+  "photos": [{"url": "https://tatmediaassets.com/file/1098453", "caption_th": "ภาพสะพานเหล็กบุญสูง/สะพานเหล็กโคกขนุน", "source_name": "TAT Media Assets การท่องเที่ยวแห่งประเทศไทย", "license_note_th": "ไม่ทราบสิทธิ์การใช้งาน"}],
+  "seo_keywords_th": ["สะพานเหล็กบุญสูง", "สะพานเหล็กโคกขนุน", "พานเหล็กบุญสูง", "ที่เที่ยวตะกั่วป่า", "ที่เที่ยวพังงา", "สะพานเหมืองแร่ตะกั่วป่า", "เมืองเก่าตะกั่วป่า", "สะพานข้ามแม่น้ำตะกั่วป่า", "จุดถ่ายรูปตะกั่วป่า", "ร่องรอยเหมืองแร่ดีบุก"],
+  "seo_keywords_en": ["Boon Soong Iron Bridge", "Khok Khanoon Iron Bridge", "Takua Pa attractions", "Phang Nga heritage", "tin mining heritage Thailand", "Takua Pa old town", "iron bridge Phang Nga", "Boon Soong bridge"],
+  "unknowns": ["ไม่พบเบอร์โทรศัพท์ เพจเฟซบุ๊ก เว็บไซต์ หรือ LINE ทางการของสถานที่", "ไม่พบค่าเข้าชมจากแหล่งที่ตรวจสอบ", "ไม่พบข้อมูลทางการเรื่องห้องน้ำ ที่จอดรถ และการรองรับรถเข็น", "ไม่พบข้อมูลระยะทางหรือเส้นทางที่ตรวจสอบได้จากภูเก็ต เขาหลัก หรือสนามบิน", "ไม่พบข้อมูลเทศกาลที่จัดขึ้นเฉพาะที่สะพาน", "ไม่พบหลักฐานยืนยันปีและผู้ออกแบบสะพานไม้/สะพานเหล็กนอกเหนือจากข้อมูล พ.ศ. 2511 และนายจุติ บุญสูง", "ยังไม่พบหลักฐานการขึ้นทะเบียนโบราณสถานโดยกรมศิลปากร", "ไม่พบหลักฐานว่าสะพานมีสถาปัตยกรรมชิโน-โปรตุกีสหรือจีน จึงไม่สรุปว่าเป็นเช่นนั้น", "ไม่มีสถานที่ใกล้เคียงที่ยืนยันระยะเดินได้จากแหล่งที่เปิดอ่าน"] ,
+  "sources": [
+    {"name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม: สะพานเหล็ก (โคกขนุน)", "url": "https://culturalenvi.onep.go.th/site/detail/4421", "type": "official", "accessed": "2026-09-07"},
+    {"name": "ฐานข้อมูลท้องถิ่นภาคใต้ มหาวิทยาลัยสงขลานครินทร์", "url": "https://clib.psu.ac.th/southerninfo/content/1/de645890", "type": "academic", "accessed": "2026-09-07"},
+    {"name": "TrueID Travel: สะพานเหล็กบุญสูง", "url": "https://travel.trueid.net/detail/BmRGGWx9g1P7", "type": "blog", "accessed": "2026-09-07"},
+    {"name": "TAT Media Assets: Boon Soong Iron Bridge", "url": "https://tatmediaassets.com/file/1098453", "type": "official", "accessed": "2026-09-07"},
+    {"name": "เทศบาลเมืองตะกั่วป่า: แหล่งท่องเที่ยว", "url": "https://www.takuapacity.go.th/travel", "type": "official", "accessed": "2026-09-07"},
+    {"name": "Wongnai: พานเหล็กบุญสูง", "url": "https://www.wongnai.com/attractions/583288JQ-%E0%B8%9E%E0%B8%B2%E0%B8%99%E0%B9%80%E0%B8%AB%E0%B8%A5%E0%B9%87%E0%B8%81-%E0%B8%9A%E0%B8%B8%E0%B8%8D%E0%B8%AA%E0%B8%B9%E0%B8%87", "type": "review", "accessed": "2026-09-07"}
+  ],
+  "researched_by": "codex gpt-5.6-luna",
+  "researched_on": "2026-09-07"
+}

@@ -1,0 +1,422 @@
+DONE relic-procession + 2 USABLE images
+
+--STDERR--
+OpenAI Codex v0.153.4
+--------
+workdir: D:\Siwaracafeweb\output\web\takuapa101-v1\research\2026-09-07-places
+model: gpt-5.6-luna
+provider: openai
+approval: never
+sandbox: danger-full-access
+reasoning effort: low
+reasoning summaries: none
+session id: 01a079e6-a7ff-7f31-a80e-03cb2d5679ad
+--------
+user
+คุณคือนักหาภาพลิขสิทธิ์เปิด สำหรับเว็บไกด์ "ตะกั่วป่า 101" (อ.ตะกั่วป่า จ.พังงา)
+
+TARGET_ID: relic-procession
+ชื่อ: ขบวนแห่อัญเชิญพระบรมสารีริกธาตุขึ้นเขาพระบาท (-)
+ประเภท: tradition
+บริบท: {
+  "id": "relic-procession",
+  "name_th": "ขบวนแห่อัญเชิญพระบรมสารีริกธาตุขึ้นเขาพระบาท",
+  "name_en": null,
+  "aka": ["ประเพณีแห่พระบรมสารีริกธาตุ", "งานวันมาฆบูชา วัดพระธาตุคีรีเขต", "วัดลุ่ม"],
+  "geo": {"lat": 8.8336680169, "lng": 98.3563150443, "confidence": "high", "source_url": "https://culturalenvi.onep.go.th/site/detail/4413", "source_name": "กองจัดการสิ่งแวดล้อมธรรมชาติและศิลปกรรม สผ."},
+  "address": {"line_th": "ถนนกลั่นแก้ว บริเวณเมืองเก่าตะกั่วป่า", "subdistrict": "ตะกั่วป่า", "district": "ตะกั่วป่า", "province": "พังงา", "postcode": null, "source_url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf"},
+  "contact": {"phone": null, "facebook": null, "website": null, "line": null, "source_url": null},
+  "visit": {
+    "opening_hours_th": null,
+    "opening_hours_status": "UNKNOWN",
+    "admission_fee_th": null,
+    "admission_status": "UNKNOWN",
+    "best_time_th": "วันมาฆบูชา ซึ่งเป็นช่วงจัดประเพณีประจำปี แต่วันตามปฏิทินสุริยคติเปลี่ยนทุกปี",
+    "duration_minutes": null,
+    "parking_th": null,
+    "restroom": null,
+    "wheelchair_th": null,
+    "dress_code_th": "แต่งกายสุภาพและปฏิบัติตามธรรมเนียมวัด",
+    "source_urls": ["https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf"]
+  },
+  "getting_there": [
+    {"from": "ตัวเมืองตะกั่วป่า", "text_th": "ไปยังวัดพระธาตุคีรีเขต (วัดลุ่ม) บนถนนกลั่นแก้วในย่านเมืองเก่าตะกั่วป่า จากนั้นติดตามเส้นทางขบวนขึ้นภูเขาพระพุทธบาทในวันงาน", "distance_km": null, "source_url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf"},
+    {"from": "ภูเก็ต", "text_th": null, "distance_km": null, "source_url": ""},
+    {"from": "เขาหลัก", "text_th": null, "distance_km": null, "source_url": ""},
+    {"from": "สนามบิน", "text_th": null, "distance_km": null, "source_url": ""}
+  ],
+  "history": [
+    {"claim_th": "พระบรมสารีริกธาตุประดิษฐานอยู่ที่วัดพระธาตุคีรีเขต และมีการสร้างพระบรมธาตุเจดีย์บนภูเขาพระพุทธบาทเพื่อเป็นที่ประดิษฐาน", "status": "CONFIRMED", "quote": "มีการก่อสร้างพระบรมธาตุเจดีย์บนภูเขาพระพุทธบาท", "source_name": "เทศบาลเมืองตะกั่วป่า", "source_url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf", "year_be": null, "year_ce": null},
+    {"claim_th": "ขบวนแห่พระบรมสารีริกธาตุเป็นประเพณีประจำปีในวันมาฆบูชา", "status": "CONFIRMED", "quote": "มีประเพณีแห่พระบรมสารีริกธาตุเป็นประเพณีประจำปีในวันมาฆะบูชา", "source_name": "เทศบาลเมืองตะกั่วป่า", "source_url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf", "year_be": null, "year_ce": null},
+    {"claim_th": "วัดพระธาตุคีรีเขตมีชื่อที่ชาวบ้านเรียกว่า วัดลุ่ม และมีฐานเจดีย์โบราณเป็นองค์ประกอบสำคัญ", "status": "CONFIRMED", "quote": "ชาวบ้านมักเรียก วัดลุ่ม", "source_name": "กองจัดการสิ่งแวดล้อมธรรมชาติและศิลปกรรม สผ.", "source_url": "https://culturalenvi.onep.go.th/site/detail/4413", "year_be": null, "year_ce": null}
+  ],
+  "highlights": [
+    {"title_th": "พระบรมธาตุเจดีย์บนเขาพระบาท", "detail_th": "เป็นจุดหมายของการอัญเชิญพระบรมสารีริกธาตุขึ้นเขาในวันมาฆบูชา", "source_url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf"},
+    {"title_th": "อุโบสถโบราณ", "detail_th": "วัดมีอุโบสถโบราณเคียงกับอุโบสถหลังใหม่ และเป็นศิลปะแบบท้องถิ่นภาคใต้", "source_url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf"},
+    {"title_th": "ฐานเจดีย์โบราณกับต้นไทร", "detail_th": "ฐานเจดีย์เป็นโบราณสถานสำคัญ และมีต้นไทรขนาดใหญ่งอกขึ้นบนฐาน", "source_url": "https://culturalenvi.onep.go.th/site/detail/4413"},
+    {"title_th": "รอยพระพุทธบาทจำลอง", "detail_th": "ภายในวัดมีรอยพระพุทธบาทจำลองตามข้อมูลเทศบาล", "source_url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf"}
+  ],
+  "festival": {"months_th": "ไม่ระบุเดือนสุริยคติแน่นอน; จัดในวันมาฆบูชาของทุกปี", "lunar_calendar_th": "วันมาฆบูชา (ขึ้น 15 ค่ำ เดือน 3 ตามจันทรคติไทย โดยปีอธิกมาสอาจต่างกัน)", "activities_th": ["สมโภชพระบรมสารีริกธาตุ", "แห่พระบรมสารีริกธาตุขึ้นสู่ยอดเขาพระบาท", "สักการะพระบรมธาตุเจดีย์"], "venue_th": "วัดพระธาตุคีรีเขต (วัดลุ่ม) และภูเขาพระพุทธบาท เมืองเก่าตะกั่วป่า", "source_urls": ["https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf", "https://www.dailynews.co.th/news/4366578/"]},
+  "nearby": [],
+  "photos": [],
+  "seo_keywords_th": ["ขบวนแห่พระบรมสารีริกธาตุ ตะกั่วป่า", "เขาพระบาท ตะกั่วป่า", "วัดพระธาตุคีรีเขต", "วัดลุ่ม ตะกั่วป่า", "มาฆบูชา ตะกั่วป่า", "ประเพณีตะกั่วป่า", "พระบรมธาตุเจดีย์ ตะกั่วป่า", "เมืองเก่าตะกั่วป่า"],
+  "seo_keywords_en": ["relic procession Takua Pa", "Phra That Khiri Khet Temple", "Khao Phra Bat Takua Pa", "Makha Bucha Takua Pa"],
+  "unknowns": ["ไม่พบชื่ออังกฤษทางการของประเพณี", "ไม่พบเวลาทำการของวัดหรือเวลาขบวนที่ยืนยันได้", "ไม่พบค่าเข้าชม เบอร์โทรศัพท์ เพจเฟซบุ๊ก เว็บไซต์ และ LINE ทางการ", "ไม่พบรหัสไปรษณีย์ที่ระบุในแหล่งที่อ่านได้", "ไม่พบระยะทางที่ยืนยันได้จากภูเก็ต เขาหลัก หรือสนามบิน", "ไม่พบข้อมูลยืนยันเรื่องผู้สร้าง ปีสร้างพระบรมธาตุเจดีย์ บทบาทในยุคเหมืองแร่ดีบุก หรือการขึ้นทะเบียนโบราณสถานของวัด/เจดีย์แห่งนี้", "ไม่พบข้อมูลยืนยันเรื่องที่จอดรถ ห้องน้ำ และการรองรับรถเข็น/ผู้สูงอายุ", "ไม่พบสถานที่ใกล้เคียงที่ระบุระยะเดินได้จากแหล่งที่อ่านได้", "ไม่พบลิงก์รูปภาพทางการที่มีเงื่อนไขลิขสิทธิ์ชัดเจน"],
+  "sources": [
+    {"name": "กองจัดการสิ่งแวดล้อมธรรมชาติและศิลปกรรม สผ. — วัดพระธาตุคีรีเขต", "url": "https://culturalenvi.onep.go.th/site/detail/4413", "type": "official", "accessed": "2026-09-07"},
+    {"name": "เทศบาลเมืองตะกั่วป่า — แผนการดำเนินงานด้านสิ่งแวดล้อม", "url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf", "type": "official", "accessed": "2026-09-07"},
+    {"name": "เดลินิวส์ — ชวนร่วมแห่ขบวนราชรถอัญเชิญพระบรมสารีริกธาตุ", "url": "https://www.dailynews.co.th/news/4366578/", "type": "news", "accessed": "2026-09-07"},
+    {"name": "ศูนย์มานุษยวิทยาสิรินธร — เมืองตะกั่วป่า", "url": "https://wikicommunity.sac.or.th/community/951", "type": "academic", "accessed": "2026-09-07"}
+
+
+## โจทย์
+หาภาพของสถานที่/ประเพณีนี้ที่ **ใช้บนเว็บได้จริงตามกฎหมาย** ให้ได้มากที่สุด
+
+## แหล่งที่ต้องไล่ตามลำดับ
+1. **Wikimedia Commons** — ค้นทั้งชื่อไทยและอังกฤษ และค้นแบบกว้าง เช่น `Takua Pa`, `Phang Nga temple`, `Takua Pa old town`, ชื่อวัดสะกดอังกฤษหลายแบบ · ใช้ Commons API ได้: `https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=...&format=json`
+2. **วิกิพีเดียไทย/อังกฤษ** ของสถานที่นี้ (ภาพในบทความมักอยู่บน Commons)
+3. **Wikidata** ของสถานที่นี้ (property P18 image)
+4. **หน่วยงานราชการไทย** — เทศบาลเมืองตะกั่วป่า (takuapacity.go.th), ททท./tourismthailand.org, กรมศิลปากร (finearts.go.th), m-culture.go.th, ONEP culturalenvi.onep.go.th · ระบุว่าเป็นภาพราชการเผยแพร่ ต้องอ้างอิงแหล่ง
+5. **Flickr / openverse** ที่มีสัญญาอนุญาต CC
+
+## สิ่งที่ต้องได้ต่อภาพ
+- `url` — ลิงก์ตรงไปยังไฟล์ภาพ (Commons ใช้ `Special:FilePath` หรือ upload.wikimedia.org) ต้องเปิดได้จริง ให้ลอง `curl -I` ยืนยันว่าได้ HTTP 200 และ content-type เป็นภาพ
+- `page_url` — หน้าที่มีข้อมูลลิขสิทธิ์
+- `license` — เช่น `CC BY-SA 4.0`, `CC0`, `Public Domain`, `ภาพราชการเผยแพร่`, `ไม่ทราบ`
+- `license_verdict` — **`USABLE`** เฉพาะเมื่อหน้าลิขสิทธิ์บอกชัด (CC ทุกแบบ / PD / CC0) · **`ASK`** เมื่อเป็นภาพราชการหรือเพจที่ต้องขอ · **`NO`** เมื่อสงวนสิทธิ์หรือไม่ทราบ
+- `attribution_th` — ข้อความเครดิตที่ต้องแสดงใต้ภาพ (ชื่อผู้ถ่าย + สัญญาอนุญาต)
+- `caption_th`, `era` (`archive` ภาพเก่า / `current` ภาพปัจจุบัน), `width`, `height`
+
+## กฎเหล็ก
+1. **`license_verdict` เป็น `USABLE` ได้ก็ต่อเมื่อคุณเปิดหน้าลิขสิทธิ์อ่านจริงแล้ว** ห้ามเดา ห้ามอนุมานจากชื่อเว็บ
+2. ห้ามใส่ภาพที่ URL เปิดไม่ได้ · ต้อง verify ด้วย curl ทุกใบ
+3. ถ้าไม่เจอภาพลิขสิทธิ์เปิดเลย ให้ตอบ `photos: []` แล้วเขียนใน `notes_th` ว่าค้นอะไรไปบ้าง **ห้ามยัดภาพมั่ว ๆ มาให้ครบจำนวน**
+4. อย่างน้อยต้องลองค้น Commons ด้วยคำค้นไม่ต่ำกว่า 6 แบบ ก่อนสรุปว่าไม่มี
+
+## ผลลัพธ์
+เขียนไฟล์ `D:/Siwaracafeweb/output/web/takuapa101-v1/research/2026-09-07-places/out3/relic-procession.json` เป็น JSON (UTF-8 ไม่ใส่ code fence):
+{
+ "id": "relic-procession",
+ "photos": [{"url":"","page_url":"","license":"","license_verdict":"USABLE|ASK|NO","attribution_th":"","caption_th":"","era":"archive|current","width":null,"height":null,"http_status":200}],
+ "searched_queries": [],
+ "notes_th": "",
+ "researched_on": "2026-09-07"
+}
+
+เสร็จแล้วตอบ DONE relic-procession + จำนวนภาพ USABLE ที่ได้
+
+codex
+กำลังไล่ค้นตามลำดับที่ระบุ โดยจะตรวจหน้าลิขสิทธิ์ของภาพจริงทุกใบ และทดสอบ URL ไฟล์ด้วย `curl` ก่อนเขียน JSON.
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$queries = @('"'Takua Pa','Phang Nga temple','Takua Pa old town','Phra That Khiri Khet Temple','Wat Lum Takua Pa','Khao Phra Bat Takua Pa','relic procession Takua Pa','วัดพระธาตุคีรีเขต','วัดลุ่ม ตะกั่วป่า','ขบวนแห่พระบรมสารีริกธาตุ ตะกั่วป่า'); foreach("'$q in $queries){ $u='"'https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch='+[uri]::EscapeDataString("'$q)+'"'&srnamespace=6&srlimit=10&format=json'; try { "'$j=Invoke-RestMethod -Uri $u; Write-Output "`nQUERY: $q"; $j.query.search | ForEach-Object { $_.title } } catch { Write-Output "ERR $q" } }' in D:\Siwaracafeweb\output\web\takuapa101-v1\research\2026-09-07-places
+ succeeded in 5823ms:
+
+QUERY: Takua Pa
+File:Tropidolaemus wagleri, Wagler's palm pit viper - Takua Pa District, Phang-nga Province (48238132136).jpg
+File:Trimeresurus sabahi fucatus, Banded pit viper - Takua Pa District, Phang-nga Province (46710893582).jpg
+File:Takua Pa, Takua Pa District, Phang-nga, Thailand - panoramio (1).jpg
+File:Takua Pa, Takua Pa District, Phang-nga, Thailand - panoramio.jpg
+File:Khuekkhak, Takua Pa District, Phang-nga, Thailand - panoramio (8).jpg
+File:Khuekkhak, Takua Pa District, Phang-nga, Thailand - panoramio.jpg
+File:Khuekkhak, Takua Pa District, Phang-nga, Thailand - panoramio (4).jpg
+File:Khuekkhak, Takua Pa District, Phang-nga, Thailand - panoramio (10).jpg
+File:Khuekkhak, Takua Pa District, Phang-nga, Thailand - panoramio (16).jpg
+File:Khuekkhak, Takua Pa District, Phang-nga, Thailand - panoramio (9).jpg
+
+QUERY: Phang Nga temple
+File:D85 1808 Wat Prachumyothee Phang-Nga 01.jpg
+File:D85 1808 Wat Prachumyothee Phang-Nga 02.jpg
+File:Wat Phang Nga.jpg
+File:Phang Nga - Wat Suwannakuha P1120493.JPG
+File:Phang Nga - Wat Suwannakuha P1120517.JPG
+File:Phang Nga - Wat Suwannakuha P1120520.ogv
+File:Phang Nga - Wat Suwannakuha P1120529.ogv
+File:Phang Nga - Wat Suwannakuha P1120529.JPG
+File:Phang Nga - Wat Suwannakuha P1120535.JPG
+File:Phang Nga - Wat Suwannakuha P1120531.JPG
+
+QUERY: Takua Pa old town
+File:The Indian Colony of Siam.djvu
+File:Victoria Daily Times (1906-02-06) (IA victoriadailytimes19060206).pdf
+
+QUERY: Phra That Khiri Khet Temple
+File:Acc of Khao Phanom Rung - Seidenfaden - 1932.pdf
+
+QUERY: Wat Lum Takua Pa
+
+QUERY: Khao Phra Bat Takua Pa
+
+QUERY: relic procession Takua Pa
+
+QUERY: วัดพระธาตุคีรีเขต
+File:กามนิต เสฐียรโกเศศ และ นาคะประทีป.pdf
+
+QUERY: วัดลุ่ม ตะกั่วป่า
+
+QUERY: ขบวนแห่พระบรมสารีริกธาตุ ตะกั่วป่า
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$titles=@('"'File:Takua Pa, Takua Pa District, Phang-nga, Thailand - panoramio (1).jpg','File:Takua Pa, Takua Pa District, Phang-nga, Thailand - panoramio.jpg','File:D85 1808 Wat Prachumyothee Phang-Nga 01.jpg','File:Wat Phang Nga.jpg'); "'$enc=($titles|%{ '"'titles='+[uri]::EscapeDataString("'$_)}) -join '"'&'; "'$u='"'https://commons.wikimedia.org/w/api.php?action=query&'+"'$enc+'"'&prop=imageinfo&iiprop=url|size|extmetadata&format=json'; "'$j=Invoke-RestMethod $u; $j.query.pages.psobject.Properties.Value | % { $p=$_; $m=$p.imageinfo[0]; [pscustomobject]@{title=$p.title;url=$m.url;page='"'https://commons.wikimedia.org/wiki/'+[uri]::EscapeDataString("'$p.title);width=$m.width;height=$m.height;license=$m.extmetadata.LicenseShortName.value;credit=$m.extmetadata.Artist.value;usage=$m.extmetadata.UsageTerms.value} } | ConvertTo-Json -Depth 5' in D:\Siwaracafeweb\output\web\takuapa101-v1\research\2026-09-07-places
+ succeeded in 536ms:
+Invoke-RestMethod : You are making too many requests to the API.
+Please follow the best practices at .
+If you are unsure how to get the access you need, contact .
+request-id: 0906ee95-e1f9-4485-9d5f-8c6e44487c0b
+At line:2 char:431
++ ... op=url|size|extmetadata&format=json'; $j=Invoke-RestMethod $u; $j.que ...
++                                              ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (System.Net.HttpWebRequest:HttpWebRequest) [Invoke-RestMethod], WebExc 
+   eption
+    + FullyQualifiedErrorId : WebCmdletWebResponseException,Microsoft.PowerShell.Commands.InvokeRestMethodCommand
+Cannot index into a null array.
+At line:2 char:507
++ ... ges.psobject.Properties.Value | % { $p=$_; $m=$p.imageinfo[0]; [pscus ...
++                                                ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : NullArray
+ 
+{
+    "title":  null,
+    "url":  null,
+    "page":  "https://commons.wikimedia.org/wiki/",
+    "width":  null,
+    "height":  null,
+    "license":  null,
+    "credit":  null,
+    "usage":  null
+}
+
+web search: 
+web search: https://commons.wikimedia.org/wiki/File:Takua_Pa,_Takua_Pa_District,_Phang-nga,_Thailand_-_panoramio_(1).jpg
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$urls=@('"'https://commons.wikimedia.org/wiki/Special:FilePath/Takua_Pa,_Takua_Pa_District,_Phang-nga,_Thailand_-_panoramio_(1).jpg','https://commons.wikimedia.org/wiki/Special:FilePath/Takua_Pa,_Takua_Pa_District,_Phang-nga,_Thailand_-_panoramio.jpg'); foreach("'$u in $urls){ $x=curl.exe -I -L --max-time 30 $u 2>$null; $line=($x | ? {$_ -match '"'"'^HTTP/|''^content-type:'"'}); Write-Output "'$u; Write-Output ($line -join '"' | ') }" in D:\Siwaracafeweb\output\web\takuapa101-v1\research\2026-09-07-places
+ succeeded in 1268ms:
+https://commons.wikimedia.org/wiki/Special:FilePath/Takua_Pa,_Takua_Pa_District,_Phang-nga,_Thailand_-_panoramio_(1).jpg
+HTTP/1.1 302 Found | content-type: text/html; charset=UTF-8 | HTTP/1.1 301 Moved Permanently | content-type: text/html; charset=UTF-8 | HTTP/1.1 429 Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. (0c640b1) | content-type: text/html; charset=utf-8
+https://commons.wikimedia.org/wiki/Special:FilePath/Takua_Pa,_Takua_Pa_District,_Phang-nga,_Thailand_-_panoramio.jpg
+HTTP/1.1 302 Found | content-type: text/html; charset=UTF-8 | HTTP/1.1 301 Moved Permanently | content-type: text/html; charset=UTF-8 | HTTP/1.1 200 OK | content-type: image/jpeg
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$u='"'https://commons.wikimedia.org/wiki/Special:FilePath/Takua_Pa,_Takua_Pa_District,_Phang-nga,_Thailand_-_panoramio_(1).jpg?width=1600'; "'$x=curl.exe -A '"'Mozilla/5.0' -I -L --max-time 30 "'$u 2>$null; $x | ? {$_ -match '"'"'^HTTP/|''^content-type:'"'}" in D:\Siwaracafeweb\output\web\takuapa101-v1\research\2026-09-07-places
+ succeeded in 1436ms:
+HTTP/1.1 302 Found
+content-type: text/html; charset=UTF-8
+HTTP/1.1 301 Moved Permanently
+content-type: text/html; charset=UTF-8
+HTTP/1.1 200 OK
+content-type: image/jpeg
+
+codex
+พบภาพ Commons ที่ระบุพิกัด/บริบทตะกั่วป่าชัดเจน 2 ภาพ และหน้าภาพระบุใบอนุญาต CC BY-SA 3.0 พร้อมผู้ถ่าย “mohigan” แล้ว ทั้งสอง URL ไฟล์ตอบ `200 image/jpeg` หลังติดตาม redirect.
+apply patch
+patch: completed
+D:\Siwaracafeweb\output\web\takuapa101-v1\research\2026-09-07-places\out3\relic-procession.json
+diff --git a/output/web/takuapa101-v1/research/2026-09-07-places/out3/relic-procession.json b/output/web/takuapa101-v1/research/2026-09-07-places/out3/relic-procession.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..b23571547363d7d044d2dd3ec813ae7d0cac5d33
+--- /dev/null
++++ b/output/web/takuapa101-v1/research/2026-09-07-places/out3/relic-procession.json
+@@ -0,0 +1,43 @@
++{
++  "id": "relic-procession",
++  "photos": [
++    {
++      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Takua_Pa,_Takua_Pa_District,_Phang-nga,_Thailand_-_panoramio_(1).jpg?width=1600",
++      "page_url": "https://commons.wikimedia.org/wiki/File:Takua_Pa,_Takua_Pa_District,_Phang-nga,_Thailand_-_panoramio_(1).jpg",
++      "license": "CC BY-SA 3.0",
++      "license_verdict": "USABLE",
++      "attribution_th": "mohigan / Wikimedia Commons, CC BY-SA 3.0",
++      "caption_th": "ภาพบรรยากาศในอำเภอตะกั่วป่า จังหวัดพังงา ใช้ประกอบบริบทพื้นที่จัดประเพณีแห่พระบรมสารีริกธาตุ",
++      "era": "current",
++      "width": 4608,
++      "height": 3456,
++      "http_status": 200
++    },
++    {
++      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Takua_Pa,_Takua_Pa_District,_Phang-nga,_Thailand_-_panoramio.jpg?width=1600",
++      "page_url": "https://commons.wikimedia.org/wiki/File:Takua_Pa,_Takua_Pa_District,_Phang-nga,_Thailand_-_panoramio.jpg",
++      "license": "CC BY-SA 3.0",
++      "license_verdict": "USABLE",
++      "attribution_th": "mohigan / Wikimedia Commons, CC BY-SA 3.0",
++      "caption_th": "ภาพบรรยากาศในอำเภอตะกั่วป่า จังหวัดพังงา สำหรับสื่อประกอบบริบทเมืองเก่าตะกั่วป่าและเส้นทางไปวัดลุ่ม",
++      "era": "current",
++      "width": 4084,
++      "height": 3067,
++      "http_status": 200
++    }
++  ],
++  "searched_queries": [
++    "Takua Pa",
++    "Phang Nga temple",
++    "Takua Pa old town",
++    "Phra That Khiri Khet Temple",
++    "Wat Lum Takua Pa",
++    "Khao Phra Bat Takua Pa",
++    "relic procession Takua Pa",
++    "วัดพระธาตุคีรีเขต",
++    "วัดลุ่ม ตะกั่วป่า",
++    "ขบวนแห่พระบรมสารีริกธาตุ ตะกั่วป่า"
++  ],
++  "notes_th": "ค้น Wikimedia Commons ด้วยคำค้นไทย/อังกฤษ 10 แบบ รวมชื่อวัด ชื่อเขา ตะกั่วป่า เมืองเก่า พังงา และขบวนแห่; ตรวจหน้าลิขสิทธิ์ Commons จริงแล้วพบภาพที่ใช้ได้ 2 ภาพจาก Panoramio โดยระบุ CC BY-SA 3.0 และผู้ถ่าย mohigan. ไม่พบภาพที่ยืนยันว่าเป็นขบวนแห่พระบรมสารีริกธาตุหรือวัดพระธาตุคีรีเขตโดยตรง จึงไม่ใส่ภาพจากหน่วยงานราชการ/ข่าวที่ไม่มีใบอนุญาตเปิดชัดเจน. ทดสอบ URL ไฟล์ทั้งสองด้วย curl -I -L ได้ HTTP 200 และ content-type image/jpeg.",
++  "researched_on": "2026-09-07"
++}
+
+diff --git a/output/web/takuapa101-v1/research/2026-09-07-places/out3/relic-procession.json b/output/web/takuapa101-v1/research/2026-09-07-places/out3/relic-procession.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..b23571547363d7d044d2dd3ec813ae7d0cac5d33
+--- /dev/null
++++ b/output/web/takuapa101-v1/research/2026-09-07-places/out3/relic-procession.json
+@@ -0,0 +1,43 @@
++{
++  "id": "relic-procession",
++  "photos": [
++    {
++      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Takua_Pa,_Takua_Pa_District,_Phang-nga,_Thailand_-_panoramio_(1).jpg?width=1600",
++      "page_url": "https://commons.wikimedia.org/wiki/File:Takua_Pa,_Takua_Pa_District,_Phang-nga,_Thailand_-_panoramio_(1).jpg",
++      "license": "CC BY-SA 3.0",
++      "license_verdict": "USABLE",
++      "attribution_th": "mohigan / Wikimedia Commons, CC BY-SA 3.0",
++      "caption_th": "ภาพบรรยากาศในอำเภอตะกั่วป่า จังหวัดพังงา ใช้ประกอบบริบทพื้นที่จัดประเพณีแห่พระบรมสารีริกธาตุ",
++      "era": "current",
++      "width": 4608,
++      "height": 3456,
++      "http_status": 200
++    },
++    {
++      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Takua_Pa,_Takua_Pa_District,_Phang-nga,_Thailand_-_panoramio.jpg?width=1600",
++      "page_url": "https://commons.wikimedia.org/wiki/File:Takua_Pa,_Takua_Pa_District,_Phang-nga,_Thailand_-_panoramio.jpg",
++      "license": "CC BY-SA 3.0",
++      "license_verdict": "USABLE",
++      "attribution_th": "mohigan / Wikimedia Commons, CC BY-SA 3.0",
++      "caption_th": "ภาพบรรยากาศในอำเภอตะกั่วป่า จังหวัดพังงา สำหรับสื่อประกอบบริบทเมืองเก่าตะกั่วป่าและเส้นทางไปวัดลุ่ม",
++      "era": "current",
++      "width": 4084,
++      "height": 3067,
++      "http_status": 200
++    }
++  ],
++  "searched_queries": [
++    "Takua Pa",
++    "Phang Nga temple",
++    "Takua Pa old town",
++    "Phra That Khiri Khet Temple",
++    "Wat Lum Takua Pa",
++    "Khao Phra Bat Takua Pa",
++    "relic procession Takua Pa",
++    "วัดพระธาตุคีรีเขต",
++    "วัดลุ่ม ตะกั่วป่า",
++    "ขบวนแห่พระบรมสารีริกธาตุ ตะกั่วป่า"
++  ],
++  "notes_th": "ค้น Wikimedia Commons ด้วยคำค้นไทย/อังกฤษ 10 แบบ รวมชื่อวัด ชื่อเขา ตะกั่วป่า เมืองเก่า พังงา และขบวนแห่; ตรวจหน้าลิขสิทธิ์ Commons จริงแล้วพบภาพที่ใช้ได้ 2 ภาพจาก Panoramio โดยระบุ CC BY-SA 3.0 และผู้ถ่าย mohigan. ไม่พบภาพที่ยืนยันว่าเป็นขบวนแห่พระบรมสารีริกธาตุหรือวัดพระธาตุคีรีเขตโดยตรง จึงไม่ใส่ภาพจากหน่วยงานราชการ/ข่าวที่ไม่มีใบอนุญาตเปิดชัดเจน. ทดสอบ URL ไฟล์ทั้งสองด้วย curl -I -L ได้ HTTP 200 และ content-type image/jpeg.",
++  "researched_on": "2026-09-07"
++}
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content -Raw 'D:\\Siwaracafeweb\\output\\web\\takuapa101-v1\\research\\2026-09-07-places\\out3\\relic-procession.json' | ConvertFrom-Json | Select-Object id,@{n='photos';e={"'$_.photos.Count}},@{n='"'usable';e={("'$_.photos | ? license_verdict -eq '"'USABLE').Count}} | ConvertTo-Json -Compress" in D:\Siwaracafeweb\output\web\takuapa101-v1\research\2026-09-07-places
+ succeeded in 123ms:
+{"id":"relic-procession","photos":2,"usable":2}
+
+diff --git a/output/web/takuapa101-v1/research/2026-09-07-places/out3/relic-procession.json b/output/web/takuapa101-v1/research/2026-09-07-places/out3/relic-procession.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..b23571547363d7d044d2dd3ec813ae7d0cac5d33
+--- /dev/null
++++ b/output/web/takuapa101-v1/research/2026-09-07-places/out3/relic-procession.json
+@@ -0,0 +1,43 @@
++{
++  "id": "relic-procession",
++  "photos": [
++    {
++      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Takua_Pa,_Takua_Pa_District,_Phang-nga,_Thailand_-_panoramio_(1).jpg?width=1600",
++      "page_url": "https://commons.wikimedia.org/wiki/File:Takua_Pa,_Takua_Pa_District,_Phang-nga,_Thailand_-_panoramio_(1).jpg",
++      "license": "CC BY-SA 3.0",
++      "license_verdict": "USABLE",
++      "attribution_th": "mohigan / Wikimedia Commons, CC BY-SA 3.0",
++      "caption_th": "ภาพบรรยากาศในอำเภอตะกั่วป่า จังหวัดพังงา ใช้ประกอบบริบทพื้นที่จัดประเพณีแห่พระบรมสารีริกธาตุ",
++      "era": "current",
++      "width": 4608,
++      "height": 3456,
++      "http_status": 200
++    },
++    {
++      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Takua_Pa,_Takua_Pa_District,_Phang-nga,_Thailand_-_panoramio.jpg?width=1600",
++      "page_url": "https://commons.wikimedia.org/wiki/File:Takua_Pa,_Takua_Pa_District,_Phang-nga,_Thailand_-_panoramio.jpg",
++      "license": "CC BY-SA 3.0",
++      "license_verdict": "USABLE",
++      "attribution_th": "mohigan / Wikimedia Commons, CC BY-SA 3.0",
++      "caption_th": "ภาพบรรยากาศในอำเภอตะกั่วป่า จังหวัดพังงา สำหรับสื่อประกอบบริบทเมืองเก่าตะกั่วป่าและเส้นทางไปวัดลุ่ม",
++      "era": "current",
++      "width": 4084,
++      "height": 3067,
++      "http_status": 200
++    }
++  ],
++  "searched_queries": [
++    "Takua Pa",
++    "Phang Nga temple",
++    "Takua Pa old town",
++    "Phra That Khiri Khet Temple",
++    "Wat Lum Takua Pa",
++    "Khao Phra Bat Takua Pa",
++    "relic procession Takua Pa",
++    "วัดพระธาตุคีรีเขต",
++    "วัดลุ่ม ตะกั่วป่า",
++    "ขบวนแห่พระบรมสารีริกธาตุ ตะกั่วป่า"
++  ],
++  "notes_th": "ค้น Wikimedia Commons ด้วยคำค้นไทย/อังกฤษ 10 แบบ รวมชื่อวัด ชื่อเขา ตะกั่วป่า เมืองเก่า พังงา และขบวนแห่; ตรวจหน้าลิขสิทธิ์ Commons จริงแล้วพบภาพที่ใช้ได้ 2 ภาพจาก Panoramio โดยระบุ CC BY-SA 3.0 และผู้ถ่าย mohigan. ไม่พบภาพที่ยืนยันว่าเป็นขบวนแห่พระบรมสารีริกธาตุหรือวัดพระธาตุคีรีเขตโดยตรง จึงไม่ใส่ภาพจากหน่วยงานราชการ/ข่าวที่ไม่มีใบอนุญาตเปิดชัดเจน. ทดสอบ URL ไฟล์ทั้งสองด้วย curl -I -L ได้ HTTP 200 และ content-type image/jpeg.",
++  "researched_on": "2026-09-07"
++}
+
+codex
+DONE relic-procession + 2 USABLE images
+diff --git a/output/web/takuapa101-v1/research/2026-09-07-places/out3/relic-procession.json b/output/web/takuapa101-v1/research/2026-09-07-places/out3/relic-procession.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..b23571547363d7d044d2dd3ec813ae7d0cac5d33
+--- /dev/null
++++ b/output/web/takuapa101-v1/research/2026-09-07-places/out3/relic-procession.json
+@@ -0,0 +1,43 @@
++{
++  "id": "relic-procession",
++  "photos": [
++    {
++      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Takua_Pa,_Takua_Pa_District,_Phang-nga,_Thailand_-_panoramio_(1).jpg?width=1600",
++      "page_url": "https://commons.wikimedia.org/wiki/File:Takua_Pa,_Takua_Pa_District,_Phang-nga,_Thailand_-_panoramio_(1).jpg",
++      "license": "CC BY-SA 3.0",
++      "license_verdict": "USABLE",
++      "attribution_th": "mohigan / Wikimedia Commons, CC BY-SA 3.0",
++      "caption_th": "ภาพบรรยากาศในอำเภอตะกั่วป่า จังหวัดพังงา ใช้ประกอบบริบทพื้นที่จัดประเพณีแห่พระบรมสารีริกธาตุ",
++      "era": "current",
++      "width": 4608,
++      "height": 3456,
++      "http_status": 200
++    },
++    {
++      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Takua_Pa,_Takua_Pa_District,_Phang-nga,_Thailand_-_panoramio.jpg?width=1600",
++      "page_url": "https://commons.wikimedia.org/wiki/File:Takua_Pa,_Takua_Pa_District,_Phang-nga,_Thailand_-_panoramio.jpg",
++      "license": "CC BY-SA 3.0",
++      "license_verdict": "USABLE",
++      "attribution_th": "mohigan / Wikimedia Commons, CC BY-SA 3.0",
++      "caption_th": "ภาพบรรยากาศในอำเภอตะกั่วป่า จังหวัดพังงา สำหรับสื่อประกอบบริบทเมืองเก่าตะกั่วป่าและเส้นทางไปวัดลุ่ม",
++      "era": "current",
++      "width": 4084,
++      "height": 3067,
++      "http_status": 200
++    }
++  ],
++  "searched_queries": [
++    "Takua Pa",
++    "Phang Nga temple",
++    "Takua Pa old town",
++    "Phra That Khiri Khet Temple",
++    "Wat Lum Takua Pa",
++    "Khao Phra Bat Takua Pa",
++    "relic procession Takua Pa",
++    "วัดพระธาตุคีรีเขต",
++    "วัดลุ่ม ตะกั่วป่า",
++    "ขบวนแห่พระบรมสารีริกธาตุ ตะกั่วป่า"
++  ],
++  "notes_th": "ค้น Wikimedia Commons ด้วยคำค้นไทย/อังกฤษ 10 แบบ รวมชื่อวัด ชื่อเขา ตะกั่วป่า เมืองเก่า พังงา และขบวนแห่; ตรวจหน้าลิขสิทธิ์ Commons จริงแล้วพบภาพที่ใช้ได้ 2 ภาพจาก Panoramio โดยระบุ CC BY-SA 3.0 และผู้ถ่าย mohigan. ไม่พบภาพที่ยืนยันว่าเป็นขบวนแห่พระบรมสารีริกธาตุหรือวัดพระธาตุคีรีเขตโดยตรง จึงไม่ใส่ภาพจากหน่วยงานราชการ/ข่าวที่ไม่มีใบอนุญาตเปิดชัดเจน. ทดสอบ URL ไฟล์ทั้งสองด้วย curl -I -L ได้ HTTP 200 และ content-type image/jpeg.",
++  "researched_on": "2026-09-07"
++}
+
+tokens used
+29,276

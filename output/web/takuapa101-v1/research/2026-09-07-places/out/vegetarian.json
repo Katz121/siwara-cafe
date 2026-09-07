@@ -1,0 +1,43 @@
+{
+  "id": "vegetarian",
+  "name_th": "ประเพณีกินผัก (เจี๊ยะกิ๊วอ๋องฉ่าย)",
+  "name_en": null,
+  "aka": ["ประเพณีถือศีลกินผักตะกั่วป่า", "เทศกาลกินผักเมืองเก่าตะกั่วป่า", "กินเจตะกั่วป่า"],
+  "geo": {"lat": null, "lng": null, "confidence": "low", "source_url": "", "source_name": ""},
+  "address": {"line_th": "ถนนศรีตะกั่วป่าและพื้นที่ชุมชนตลาดใหญ่ เมืองเก่าตะกั่วป่า", "subdistrict": "ตำบลตะกั่วป่า", "district": "ตะกั่วป่า", "province": "พังงา", "postcode": null, "source_url": "https://www.dailynews.co.th/news/1541477/"},
+  "contact": {"phone": null, "facebook": null, "website": null, "line": null, "source_url": null},
+  "visit": {
+    "opening_hours_th": null, "opening_hours_status": "UNKNOWN",
+    "admission_fee_th": null, "admission_status": "UNKNOWN",
+    "best_time_th": "ช่วงเทศกาลกินผัก ซึ่งโดยทั่วไปอยู่ในเดือนตุลาคม ตามวันขึ้น 1–9 ค่ำ เดือน 9 ของจีน", "duration_minutes": null,
+    "parking_th": null, "restroom": null, "wheelchair_th": null, "dress_code_th": "ผู้ร่วมพิธีนิยมแต่งกายชุดขาว", "source_urls": ["https://api.tat.or.th/upload/live/multimedia/9121/TPhangnga.pdf", "https://www.thailandplus.tv/archives/864741"]
+  },
+  "getting_there": [],
+  "history": [
+    {"claim_th": "ชาวอำเภอตะกั่วป่าถือศีลกินผักสืบต่อกันมานานกว่าร้อยปี", "status": "CONFIRMED", "quote": "มีการถือศีลกินผักมากว่าร้อยปี", "source_name": "Thailand Plus News", "source_url": "https://www.thailandplus.tv/archives/864741", "year_be": null, "year_ce": null},
+    {"claim_th": "ประเพณีมุ่งให้ผู้ร่วมงานถือศีล งดอาหารคาว และละเว้นการเบียดเบียนสัตว์", "status": "CONFIRMED", "quote": "คิดดี พูดดี ทำดี", "source_name": "เดลินิวส์", "source_url": "https://www.dailynews.co.th/news/1541477/", "year_be": null, "year_ce": null},
+    {"claim_th": "แหล่งข้อมูลท้องถิ่นระบุความเชื่อมโยงของประเพณีกับชุมชนจีนฮกเกี้ยนและการสืบทอดในเมืองตะกั่วป่า", "status": "UNVERIFIED", "quote": "คนจีนที่อยู่ในจังหวัดภูเก็ตเรียกกันว่า เจี๊ยะฉ่าย", "source_name": "สภาวัฒนธรรมตำบลตะกั่วป่า", "source_url": "https://anyflip.com/tshcu/hnol/basic", "year_be": null, "year_ce": null},
+    {"claim_th": "ยังไม่พบหลักฐานทางการที่ระบุปีเริ่มประเพณี ผู้ก่อตั้ง บทบาทเฉพาะในยุคเหมืองแร่ สถาปัตยกรรม หรือการขึ้นทะเบียนโบราณสถานของตัวประเพณี", "status": "CONFIRMED", "quote": "", "source_name": "การตรวจค้นแหล่งข้อมูลที่เผยแพร่", "source_url": "https://calendar.m-culture.go.th/event_list/all/2160", "year_be": null, "year_ce": null}
+  ],
+  "highlights": [
+    {"title_th": "เสาโกเต้งและตะเกียง 9 ดวง", "detail_th": "พิธียกเสาโกเต้งและจุดตะเกียง 9 ดวงเป็นสัญลักษณ์เริ่มเทศกาล", "source_url": "https://www.thailandplus.tv/archives/864741"},
+    {"title_th": "ขบวนแห่พระรอบเมือง", "detail_th": "ขบวนแห่พระและขบวนพืชผักผลไม้เคลื่อนผ่านถนนในเมืองตะกั่วป่า", "source_url": "https://www.thailandplus.tv/archives/864741"},
+    {"title_th": "พิธีกรรมกินผัก", "detail_th": "มีพิธีซ่งเก้ง โก้ยเฉ่งอิ๋ว ทรงเจ้า ลุยไฟ บวงสรวงดาว และสะเดาะเคราะห์", "source_url": "https://www.dailynews.co.th/news/1541477/"},
+    {"title_th": "อาหารเจและกิจกรรมชุมชน", "detail_th": "งานมีซุ้มอาหารเจและกิจกรรมอิ่มบุญอิ่มเจในย่านถนนศรีตะกั่วป่า", "source_url": "https://www.dailynews.co.th/news/1541477/"}
+  ],
+  "festival": {"months_th": "ตุลาคมโดยทั่วไป", "lunar_calendar_th": "วันขึ้น 1–9 ค่ำ เดือน 9 ของจีน", "activities_th": ["ยกเสาโกเต้งและจุดตะเกียง 9 ดวง", "พิธีซ่งเก้ง", "พิธีทรงเจ้า", "พิธีลุยไฟ", "พิธีสะเดาะเคราะห์", "ขบวนแห่พระรอบเมือง", "จำหน่ายอาหารเจ"], "venue_th": "ศาลเจ้าต่าง ๆ และถนนศรีตะกั่วป่า/ย่านเมืองเก่าตะกั่วป่า", "source_urls": ["https://api.tat.or.th/upload/live/multimedia/9121/TPhangnga.pdf", "https://www.thailandplus.tv/archives/864741", "https://www.dailynews.co.th/news/1541477/"]},
+  "nearby": [],
+  "photos": [],
+  "seo_keywords_th": ["ประเพณีกินผักตะกั่วป่า", "เจี๊ยะกิ๊วอ๋องฉ่าย", "กินเจตะกั่วป่า", "เทศกาลกินผักพังงา", "ถือศีลกินผักเมืองเก่าตะกั่วป่า", "เสาโกเต้งตะกั่วป่า", "ขบวนแห่พระตะกั่วป่า", "กินเจเมืองเก่าตะกั่วป่า"],
+  "seo_keywords_en": ["Takua Pa Vegetarian Festival", "Takuapa vegetarian festival", "Phang Nga vegetarian festival", "Nine Emperor Gods Takua Pa", "Thai Chinese vegetarian festival"],
+  "unknowns": ["ไม่พบพิกัด GPS เฉพาะ เนื่องจากเป็นประเพณีที่จัดหลายศาลเจ้าและพื้นที่ ไม่ใช่จุดเดียว", "ไม่พบเวลาเปิด-ปิด ค่าเข้าชม เบอร์โทร เพจ เว็บไซต์ หรือ LINE เฉพาะของประเพณี", "ไม่พบรหัสไปรษณีย์ที่ระบุในแหล่งที่อ่าน", "ไม่พบข้อมูลยืนยันเรื่องที่จอดรถ ห้องน้ำ การเข้าถึงรถเข็น และระยะทางเดินถึงสถานที่ใกล้เคียง", "ไม่พบหลักฐานทางการ/วิชาการที่ระบุปีสร้าง ผู้สร้าง บทบาทยุคเหมืองแร่ การขึ้นทะเบียนโบราณสถาน หรือสถาปัตยกรรมของตัวประเพณี", "ไม่พบลิงก์รูปภาพทางการที่ยืนยันสิทธิ์การใช้งาน"] ,
+  "sources": [
+    {"name": "การท่องเที่ยวแห่งประเทศไทย ภาคใต้", "url": "https://api.tat.or.th/upload/live/multimedia/9121/TPhangnga.pdf", "type": "official", "accessed": "2026-09-07"},
+    {"name": "ศูนย์ข้อมูลกลางวัฒนธรรม กระทรวงวัฒนธรรม", "url": "https://calendar.m-culture.go.th/event_list/all/2160", "type": "official", "accessed": "2026-09-07"},
+    {"name": "Thailand Plus News", "url": "https://www.thailandplus.tv/archives/864741", "type": "news", "accessed": "2026-09-07"},
+    {"name": "เดลินิวส์", "url": "https://www.dailynews.co.th/news/1541477/", "type": "news", "accessed": "2026-09-07"},
+    {"name": "สภาวัฒนธรรมตำบลตะกั่วป่า", "url": "https://anyflip.com/tshcu/hnol/basic", "type": "blog", "accessed": "2026-09-07"}
+  ],
+  "researched_by": "codex gpt-5.6-luna",
+  "researched_on": "2026-09-07"
+}

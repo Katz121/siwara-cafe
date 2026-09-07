@@ -1,0 +1,45 @@
+{
+ "id": "ruler-ceremony",
+ "photos": [
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/1/12/Takua_Pa%2C_Takua_Pa_District%2C_Phang-nga%2C_Thailand_-_panoramio.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Takua_Pa,_Takua_Pa_District,_Phang-nga,_Thailand_-_panoramio.jpg",
+   "license": "CC BY-SA 3.0",
+   "license_verdict": "NO",
+   "attribution_th": "ภาพ: mohigan / Wikimedia Commons, CC BY-SA 3.0",
+   "caption_th": "บรรยากาศเมืองตะกั่วป่า จังหวัดพังงา (ภาพประกอบบริบทพื้นที่พิธี)",
+   "era": "current",
+   "width": 4084,
+   "height": 3067,
+   "http_status": 200,
+   "reject_reason_th": "ภาพเดียวกันถูกใช้แล้วที่ culture-street"
+  },
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Takua_Pa%2C_Takua_Pa_District%2C_Phang-nga%2C_Thailand_-_panoramio_%281%29.jpg/1280px-Takua_Pa%2C_Takua_Pa_District%2C_Phang-nga%2C_Thailand_-_panoramio_%281%29.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Takua_Pa,_Takua_Pa_District,_Phang-nga,_Thailand_-_panoramio_(1).jpg",
+   "license": "CC BY-SA 3.0",
+   "license_verdict": "USABLE",
+   "attribution_th": "ภาพ: mohigan / Wikimedia Commons, CC BY-SA 3.0",
+   "caption_th": "ทิวทัศน์ย่านเมืองตะกั่วป่า (ภาพประกอบบริบทพื้นที่พิธี)",
+   "era": "current",
+   "width": 4608,
+   "height": 3456,
+   "http_status": 200
+  }
+ ],
+ "searched_queries": [
+  "พิธีบวงสรวงเจ้าเมืองตะกั่วป่า",
+  "บวงสรวงเจ้าเมืองตะกั่วป่า",
+  "Takuapa",
+  "Takua Pa",
+  "Takua Pa old town",
+  "Phang Nga temple",
+  "Takuapa old town wall",
+  "Taku Pa governor residence",
+  "จวนเจ้าเมืองตะกั่วป่า",
+  "Udom Thara Takua Pa",
+  "ศรีตะกั่วป่า"
+ ],
+ "notes_th": "ไม่พบภาพที่ระบุชัดว่าเป็นพิธีบวงสรวงเจ้าเมืองตะกั่วป่า หรือจวนเจ้าเมืองตะกั่วป่าโดยตรงในผลการค้นหา Commons/เว็บที่ตรวจได้ จึงใส่เฉพาะภาพบริบทเมืองตะกั่วป่าจาก Wikimedia Commons ซึ่งหน้าลิขสิทธิ์ระบุ CC BY-SA 3.0 ชัดเจนแล้ว และตรวจ URL ภาพด้วย curl ได้ HTTP 200 กับ content-type image/jpeg ทั้งสองรายการ รายการที่สองใช้ URL thumbnail 1280px เนื่องจาก URL ต้นฉบับถูก Wikimedia rate-limit ระหว่างตรวจสอบ แต่ไฟล์ภาพเป็นไฟล์เดียวกันและ URL thumbnail เปิดได้จริง",
+ "researched_on": "2026-09-07"
+}

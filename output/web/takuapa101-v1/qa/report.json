@@ -1,0 +1,14 @@
+{
+  "pages": 34,
+  "screenshots": [
+    "home-desktop.png",
+    "place-desktop.png",
+    "map-desktop.png",
+    "eat-desktop.png",
+    "home-mobile.png",
+    "place-mobile.png",
+    "map-mobile.png",
+    "eat-mobile.png"
+  ],
+  "errors": []
+}

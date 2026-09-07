@@ -1,0 +1,127 @@
+{
+  "id": "wat-sena",
+  "name_th": "วัดเสนานุชรังสรรค์ (วัดใหม่)",
+  "name_en": "Wat Sena Nuch Rangsan",
+  "aka": ["วัดใหม่", "วัดใหม่กำแพง", "วัดใหม่กำแพงแลง"],
+  "geo": {
+    "lat": 8.8302299579,
+    "lng": 98.3624509671,
+    "confidence": "high",
+    "source_url": "https://culturalenvi.onep.go.th/site/detail/4412",
+    "source_name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม (ONEP)"
+  },
+  "address": {
+    "line_th": "ตลาดเก่า ตำบลตะกั่วป่า",
+    "subdistrict": "ตะกั่วป่า",
+    "district": "ตะกั่วป่า",
+    "province": "พังงา",
+    "postcode": null,
+    "source_url": "https://www.50amfh.org/userfiles/file/News/Thai%20temple%20name%20list/south/Phangnga.pdf"
+  },
+  "contact": {
+    "phone": null,
+    "facebook": null,
+    "website": null,
+    "line": null,
+    "source_url": null
+  },
+  "visit": {
+    "opening_hours_th": null,
+    "opening_hours_status": "UNKNOWN",
+    "admission_fee_th": null,
+    "admission_status": "UNKNOWN",
+    "best_time_th": null,
+    "duration_minutes": null,
+    "parking_th": null,
+    "restroom": null,
+    "wheelchair_th": null,
+    "dress_code_th": null,
+    "source_urls": []
+  },
+  "getting_there": [
+    {"from": "ตัวเมืองตะกั่วป่า", "text_th": null, "distance_km": null, "source_url": ""},
+    {"from": "ภูเก็ต", "text_th": null, "distance_km": null, "source_url": ""},
+    {"from": "เขาหลัก", "text_th": null, "distance_km": null, "source_url": ""},
+    {"from": "สนามบิน", "text_th": null, "distance_km": null, "source_url": ""}
+  ],
+  "history": [
+    {
+      "claim_th": "วัดก่อตั้งใน พ.ศ. 2390 (ค.ศ. 1847) โดยพระยาเสนานุชิต (นุช ณ นคร) ผู้ปกครองเมืองตะกั่วป่า",
+      "status": "CONFIRMED",
+      "quote": "created by Phraya Senanuchit ... in 1847",
+      "source_name": "Phuketindex / ข้อมูลท่องเที่ยวที่อ้างอิง ททท.",
+      "source_url": "https://live.phuketindex.com/tat-phangnga-6049.html",
+      "year_be": 2390,
+      "year_ce": 1847
+    },
+    {
+      "claim_th": "ทะเบียนวัดระบุวันตั้งวัดเป็น พ.ศ. 2390 และเป็นวัดราษฎร์มหานิกาย",
+      "status": "CONFIRMED",
+      "quote": "เสนานุชรังสรรค์ ... 2390 2449",
+      "source_name": "รายงานทะเบียนวัดจังหวัดพังงา",
+      "source_url": "https://www.50amfh.org/userfiles/file/News/Thai%20temple%20name%20list/south/Phangnga.pdf",
+      "year_be": 2390,
+      "year_ce": 1847
+    },
+    {
+      "claim_th": "อุโบสถมีสถาปัตยกรรมได้รับอิทธิพลจากแบบจีน และวัดได้รับการขึ้นทะเบียนเป็นโบราณสถานโดยกรมศิลปากรใน พ.ศ. 2539",
+      "status": "CONFIRMED",
+      "quote": "สถาปัตยกรรมที่ได้รับอิทธิพลจากแบบของจีน",
+      "source_name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม (ONEP)",
+      "source_url": "https://culturalenvi.onep.go.th/site/detail/4412",
+      "year_be": 2539,
+      "year_ce": 1996
+    },
+    {
+      "claim_th": "แหล่งข้อมูลท่องเที่ยวระบุว่าวัดเคยเป็นสถานที่ประกอบพิธีถือน้ำพระพิพัฒน์สัตยา และมีพิพิธภัณฑ์จัดแสดงโบราณวัตถุ รวมถึงธรรมาสน์ไม้ที่มีอักษรพระปรมาภิไธยย่อ จปร.",
+      "status": "UNVERIFIED",
+      "quote": "A museum at the temple displays many antiques",
+      "source_name": "Phuketindex / ข้อมูลท่องเที่ยวที่อ้างอิง ททท.",
+      "source_url": "https://live.phuketindex.com/tat-phangnga-6049.html",
+      "year_be": null,
+      "year_ce": null
+    },
+    {
+      "claim_th": "ยังไม่พบหลักฐานที่ยืนยันบทบาทของวัดโดยตรงในกิจการเหมืองแร่ดีบุก",
+      "status": "UNVERIFIED",
+      "quote": "",
+      "source_name": "การสืบค้นครั้งนี้",
+      "source_url": "https://culturalenvi.onep.go.th/site/detail/4412",
+      "year_be": null,
+      "year_ce": null
+    }
+  ],
+  "highlights": [
+    {"title_th": "อุโบสถอิทธิพลจีน", "detail_th": "ชมอุโบสถขนาดใหญ่ที่ฐานข้อมูล ONEP ระบุว่าได้รับอิทธิพลจากสถาปัตยกรรมจีน", "source_url": "https://culturalenvi.onep.go.th/site/detail/4412"},
+    {"title_th": "พิพิธภัณฑ์และโบราณวัตถุ", "detail_th": "แหล่งท่องเที่ยวระบุว่ามีพิพิธภัณฑ์จัดแสดงโบราณวัตถุ รวมถึงธรรมาสน์ไม้ที่มีอักษร จปร. แต่ควรตรวจสอบการเปิดชมหน้างาน", "source_url": "https://live.phuketindex.com/tat-phangnga-6049.html"},
+    {"title_th": "ร่องรอยโบราณสถาน", "detail_th": "ชมพื้นที่วัดที่ได้รับการขึ้นทะเบียนโบราณสถาน พ.ศ. 2539", "source_url": "https://culturalenvi.onep.go.th/site/detail/4412"},
+    {"title_th": "ภูมิทัศน์เมืองเก่าตะกั่วป่า", "detail_th": "วัดตั้งอยู่ในตำบลตะกั่วป่าและเป็นหนึ่งในสถานที่สำคัญของย่านเมืองเก่า", "source_url": "https://tatmediaassets.com/file/1097577"}
+  ],
+  "festival": {"months_th": null, "lunar_calendar_th": null, "activities_th": [], "venue_th": null, "source_urls": []},
+  "nearby": [],
+  "photos": [
+    {"url": "https://tatmediaassets.com/file/1097577", "caption_th": "ภาพวัดเสนานุชรังสรรค์ หรือวัดใหม่กำแพง", "source_name": "TAT Media Assets / การท่องเที่ยวแห่งประเทศไทย", "license_note_th": "ไม่ทราบสิทธิ์การใช้งาน"}
+  ],
+  "seo_keywords_th": ["วัดเสนานุชรังสรรค์", "วัดใหม่ ตะกั่วป่า", "วัดใหม่กำแพง", "วัดใหม่กำแพงแลง", "วัดโบราณตะกั่วป่า", "วัดจีนตะกั่วป่า", "อุโบสถวัดเสนานุชรังสรรค์", "เมืองเก่าตะกั่วป่า", "โบราณสถานพังงา", "เที่ยวตะกั่วป่า"],
+  "seo_keywords_en": ["Wat Sena Nuch Rangsan", "Wat Mai Kampang", "Wat Mai Kamphaeng", "Takuapa old town temple", "ancient temple in Takuapa", "Phang Nga historic temple", "Chinese-influenced temple Thailand", "Takuapa cultural heritage"],
+  "unknowns": [
+    "ไม่พบรหัสไปรษณีย์ของจุดวัดจากแหล่งที่อ่านได้โดยตรง",
+    "ไม่พบเวลาเปิด-ปิดที่ยืนยันได้",
+    "ไม่พบค่าเข้าชมที่ยืนยันได้",
+    "ไม่พบเบอร์โทร เพจเฟซบุ๊ก เว็บไซต์ หรือ LINE ทางการที่ยืนยันได้",
+    "ไม่พบข้อมูลยืนยันที่จอดรถ ห้องน้ำ ทางลาด/การเข้าถึงรถเข็น และข้อกำหนดการแต่งกาย",
+    "ไม่พบระยะทางหรือเส้นทางที่ยืนยันได้จากตัวเมืองตะกั่วป่า ภูเก็ต เขาหลัก และสนามบิน",
+    "ไม่พบหลักฐานยืนยันบทบาทของวัดในยุคเหมืองแร่ดีบุก",
+    "ไม่พบเทศกาลประจำวัดหรือช่วงเวลาที่ควรไปที่ระบุเฉพาะวัด",
+    "ไม่พบสถานที่ใกล้เคียงที่ยืนยันระยะเดินถึงได้",
+    "ภาพจาก TAT Media Assets มีแหล่งที่มา แต่ไม่ทราบสิทธิ์การใช้งานซ้ำ"
+  ],
+  "sources": [
+    {"name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม (ONEP) – แหล่งศิลปกรรมอันควรอนุรักษ์", "url": "https://culturalenvi.onep.go.th/site/detail/4412", "type": "official", "accessed": "2026-09-07"},
+    {"name": "รายงานทะเบียนวัดจังหวัดพังงา", "url": "https://www.50amfh.org/userfiles/file/News/Thai%20temple%20name%20list/south/Phangnga.pdf", "type": "official", "accessed": "2026-09-07"},
+    {"name": "Phuketindex – Phang Nga’s Eight Shrines and Eight Temples", "url": "https://live.phuketindex.com/tat-phangnga-6049.html", "type": "blog", "accessed": "2026-09-07"},
+    {"name": "TAT Media Assets – Wat Sena Nucharangsan", "url": "https://tatmediaassets.com/file/1097577", "type": "official", "accessed": "2026-09-07"}
+  ],
+  "researched_by": "codex gpt-5.6-luna",
+  "researched_on": "2026-09-07"
+}

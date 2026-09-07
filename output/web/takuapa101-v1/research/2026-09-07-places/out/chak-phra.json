@@ -1,0 +1,47 @@
+{
+  "id": "chak-phra",
+  "name_th": "ประเพณีชักพระ",
+  "name_en": null,
+  "aka": ["ประเพณีลากพระ"],
+  "geo": {"lat": null, "lng": null, "confidence": "low", "source_url": "", "source_name": ""},
+  "address": {"line_th": "", "subdistrict": "", "district": "ตะกั่วป่า", "province": "พังงา", "postcode": "", "source_url": ""},
+  "contact": {"phone": null, "facebook": null, "website": null, "line": null, "source_url": null},
+  "visit": {
+    "opening_hours_th": null,
+    "opening_hours_status": "UNKNOWN",
+    "admission_fee_th": null,
+    "admission_status": "UNKNOWN",
+    "best_time_th": "วันแรม 1 ค่ำ เดือน 11 หรือวันรุ่งขึ้นหลังวันออกพรรษา แต่วันจัดจริงอาจเปลี่ยนตามประกาศของพื้นที่",
+    "duration_minutes": null,
+    "parking_th": null,
+    "restroom": null,
+    "wheelchair_th": null,
+    "dress_code_th": null,
+    "source_urls": ["https://www.prd.go.th/th/content/page/index/id/510255", "https://api.tat.or.th/upload/live/multimedia/9121/TPhangnga.pdf"]
+  },
+  "getting_there": [],
+  "history": [
+    {"claim_th": "ประเพณีชักพระมีอีกชื่อว่า ประเพณีลากพระ และมีรากคติจากการต้อนรับพระพุทธเจ้าหลังเสด็จกลับจากสวรรค์ชั้นดาวดึงส์", "status": "CONFIRMED", "quote": "ประเพณีชักพระ หรือที่เรียกอีกชื่อหนึ่งว่า ประเพณีลากพระ", "source_name": "กรมประชาสัมพันธ์", "source_url": "https://www.prd.go.th/th/content/page/index/id/510255", "year_be": null, "year_ce": null},
+    {"claim_th": "ในอำเภอคุระบุรี จังหวัดพังงา ประเพณีนี้สืบทอดมาเป็นเวลาช้านาน และใช้การลากเรือพระจากชุมชนเข้าร่วมพิธีสมโภช", "status": "CONFIRMED", "quote": "ประชาชนในแต่ละตำบลได้ช่วยกันลากเรือพระจากชุมชนของตนเอง", "source_name": "Thailand Plus Online", "source_url": "https://www.thailandplus.tv/archives/755868", "year_be": 2566, "year_ce": 2023},
+    {"claim_th": "ไม่พบหลักฐานที่ยืนยันปีเริ่มต้น ผู้สร้าง บทบาทเฉพาะในยุคเหมืองแร่ดีบุก สถาปัตยกรรมชิโน-โปรตุกีส หรือการขึ้นทะเบียนโบราณสถาน เพราะประเพณีเป็นกิจกรรมพิธีกรรม ไม่ใช่อาคารโบราณสถาน", "status": "UNVERIFIED", "quote": "", "source_name": "การสืบค้นแหล่งข้อมูลที่เปิดอ่านได้", "source_url": "https://www.thailandplus.tv/archives/755868", "year_be": null, "year_ce": null}
+  ],
+  "highlights": [
+    {"title_th": "เรือพระ/พนมพระ", "detail_th": "ชมขบวนเรือพระหรือพนมพระที่ตกแต่งบนยานพาหนะและลากออกจากวัด", "source_url": "https://api.tat.or.th/upload/live/multimedia/9121/TPhangnga.pdf"},
+    {"title_th": "การประกวดเรือพระ", "detail_th": "กิจกรรมประกวดเรือพระเป็นส่วนหนึ่งของงานที่ ททท. ระบุไว้สำหรับอำเภอคุระบุรี", "source_url": "https://api.tat.or.th/upload/live/multimedia/9121/TPhangnga.pdf"},
+    {"title_th": "พิธีสมโภชและการแสดงวัฒนธรรม", "detail_th": "มีพิธีสมโภชเรือพระ การแสดงของแต่ละวัด และการแสดงทางวัฒนธรรม", "source_url": "https://api.tat.or.th/upload/live/multimedia/9121/TPhangnga.pdf"},
+    {"title_th": "แรงศรัทธาของชุมชน", "detail_th": "ผู้คนจากหลายชุมชนร่วมกันลากเรือพระและทำกิจกรรมหลังวันออกพรรษา", "source_url": "https://www.thailandplus.tv/archives/755868"}
+  ],
+  "festival": {"months_th": "โดยทั่วไปอยู่ราวเดือนตุลาคม-พฤศจิกายน ขึ้นกับวันออกพรรษา", "lunar_calendar_th": "วันแรม 1 ค่ำ เดือน 11 (หลังวันออกพรรษา 1 วัน)", "activities_th": ["ลากขบวนเรือพระออกจากวัด", "ประกวดเรือพระ", "การแสดงของแต่ละวัด", "สมโภชเรือพระ", "การแสดงทางวัฒนธรรม"], "venue_th": "ที่ว่าการอำเภอคุระบุรี จังหวัดพังงา (ข้อมูลแหล่งข่าวระบุเช่นนี้ ไม่ใช่ตะกั่วป่า)", "source_urls": ["https://api.tat.or.th/upload/live/multimedia/9121/TPhangnga.pdf", "https://www.thailandplus.tv/archives/755868"]},
+  "nearby": [],
+  "photos": [],
+  "seo_keywords_th": ["ประเพณีชักพระ", "ประเพณีลากพระ", "ชักพระพังงา", "ชักพระคุระบุรี", "เรือพระพังงา", "พนมพระ", "วันแรม 1 ค่ำ เดือน 11", "งานชักพระภาคใต้", "ประเพณีออกพรรษา"],
+  "seo_keywords_en": ["Chak Phra Festival", "ลากพระ Thailand", "Phang Nga Chak Phra", "Khura Buri Chak Phra", "Southern Thailand Buddhist festival"],
+  "unknowns": ["ไม่พบพิกัด GPS ที่ยืนยันได้สำหรับกิจกรรมนี้ เพราะเป็นงานที่จัดตามเทศกาลและไม่ได้มีจุดถาวรในตะกั่วป่า", "ไม่พบที่อยู่ ตำบล รหัสไปรษณีย์ เบอร์โทร เพจ เว็บไซต์ หรือ LINE ของสถานที่ในตะกั่วป่า", "ไม่พบเวลาเปิด-ปิด ค่าเข้าชม ระยะเวลาเข้าชม ที่จอดรถ ห้องน้ำ หรือข้อมูลรถเข็นที่ยืนยันได้", "ไม่พบเส้นทางระยะทางจากตัวเมืองตะกั่วป่า ภูเก็ต เขาหลัก หรือสนามบินที่เป็นข้อมูลเฉพาะของงาน", "ไม่พบหลักฐานปีที่สร้าง ผู้สร้าง บทบาทในยุคเหมืองแร่ดีบุก สถาปัตยกรรมชิโน-โปรตุกีส หรือการขึ้นทะเบียนโบราณสถาน", "ไม่พบลิงก์รูปภาพทางการที่มีข้อมูลสิทธิ์การใช้งานชัดเจน", "แหล่งข้อมูลที่พบระบุสถานที่จัดในอำเภอคุระบุรี จึงไม่ควรสรุปว่าเป็นกิจกรรมประจำอำเภอตะกั่วป่า"],
+  "sources": [
+    {"name": "กรมประชาสัมพันธ์: ประเพณีชักพระ / ลากพระ", "url": "https://www.prd.go.th/th/content/page/index/id/510255", "type": "official", "accessed": "2026-09-07"},
+    {"name": "Thailand Plus Online: งานสืบสานอนุรักษ์ประเพณีชักพระ พ.ศ. 2566", "url": "https://www.thailandplus.tv/archives/755868", "type": "news", "accessed": "2026-09-07"},
+    {"name": "การท่องเที่ยวแห่งประเทศไทย: คู่มือท่องเที่ยวจังหวัดพังงา", "url": "https://api.tat.or.th/upload/live/multimedia/9121/TPhangnga.pdf", "type": "official", "accessed": "2026-09-07"}
+  ],
+  "researched_by": "codex gpt-5.6-luna",
+  "researched_on": "2026-09-07"
+}

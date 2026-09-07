@@ -1,0 +1,85 @@
+{
+  "id": "wat-kongkha",
+  "name_th": "วัดคงคาภิมุข (วัดคงคา)",
+  "name_en": "Wat Kongkha Phimuk",
+  "aka": ["วัดคงคา", "วัดคงคาพิมุข"],
+  "geo": {
+    "lat": 8.840837,
+    "lng": 98.362899,
+    "confidence": "high",
+    "source_url": "https://archaeology.sac.or.th/archaeology/881",
+    "source_name": "ฐานข้อมูลแหล่งโบราณคดีที่สำคัญในประเทศไทย (ศมส.)"
+  },
+  "address": {
+    "line_th": "ถนนราษฎร์บำรุง",
+    "subdistrict": "ตะกั่วป่า",
+    "district": "ตะกั่วป่า",
+    "province": "พังงา",
+    "postcode": null,
+    "source_url": "https://archaeology.sac.or.th/archaeology/881"
+  },
+  "contact": {
+    "phone": "076-421-479",
+    "facebook": null,
+    "website": null,
+    "line": null,
+    "source_url": "https://archaeology.sac.or.th/archaeology/881"
+  },
+  "visit": {
+    "opening_hours_th": null,
+    "opening_hours_status": "UNKNOWN",
+    "admission_fee_th": null,
+    "admission_status": "UNKNOWN",
+    "best_time_th": null,
+    "duration_minutes": null,
+    "parking_th": null,
+    "restroom": null,
+    "wheelchair_th": "ข้อมูล OpenStreetMap ที่แสดงผ่าน Mapcarta ระบุแท็ก wheelchair=yes แต่ยังไม่พบรายละเอียดสภาพทางลาดหรือสิ่งอำนวยความสะดวกจากแหล่งทางการ",
+    "dress_code_th": null,
+    "source_urls": ["https://archaeology.sac.or.th/archaeology/881", "https://mapcarta.com/29028704"]
+  },
+  "getting_there": [
+    {
+      "from": "ตัวเมืองตะกั่วป่า",
+      "text_th": "จากที่ทำการเทศบาลเมืองตะกั่วป่าไปทางตะวันตกตามถนนเพชรเกษม/ทางหลวงหมายเลข 4 ราว 5 กิโลเมตร เลี้ยวซ้ายเข้าถนนราษฎร์บำรุง ตรงต่อประมาณ 280 เมตร แล้วเลี้ยวซ้ายตามทาง จะพบวัดอยู่ด้านขวามือ",
+      "distance_km": 5.28,
+      "source_url": "https://archaeology.sac.or.th/archaeology/881"
+    },
+    {"from":"ภูเก็ต","text_th":null,"distance_km":null,"source_url":""},
+    {"from":"เขาหลัก","text_th":null,"distance_km":null,"source_url":""},
+    {"from":"สนามบิน","text_th":null,"distance_km":null,"source_url":""}
+  ],
+  "history": [
+    {"claim_th":"แหล่งข้อมูล ONEP ระบุว่าวัดสร้างเมื่อ พ.ศ. 2305 และเดิมชื่อวัดคงคา","status":"DISPUTED","quote":"สร้างเมื่อปี พ.ศ. 2305 เดิมชื่อวัดคงคา","source_name":"สิ่งแวดล้อมศิลปกรรม (ONEP)","source_url":"https://culturalenvi.onep.go.th/site/detail/4417","year_be":2305,"year_ce":1762},
+    {"claim_th":"ประวัติวัดที่บันทึกในฐานข้อมูลโบราณคดีระบุว่าอุโบสถสร้าง พ.ศ. 2479 เดิมชื่อวัดคงคา และเปลี่ยนชื่อเป็นวัดคงคาพิมุขใน พ.ศ. 2483","status":"DISPUTED","quote":"อุโบสถของวัดสร้างขึ้นเมื่อ พ.ศ. 2479","source_name":"ฐานข้อมูลแหล่งโบราณคดีที่สำคัญในประเทศไทย (ศมส.)","source_url":"https://archaeology.sac.or.th/archaeology/881","year_be":2479,"year_ce":1936},
+    {"claim_th":"อุโบสถและเจดีย์เป็นโบราณสถานที่ยังใช้งานอยู่ และวัดเป็นสถานปฏิบัติธรรมประจำจังหวัดพังงาแห่งที่ 1","status":"CONFIRMED","quote":"อุโบสถและเจดีย์ของวัดคงคาพิมุขเป็นโบราณสถานที่ยังใช้งานอยู่","source_name":"ฐานข้อมูลแหล่งโบราณคดีที่สำคัญในประเทศไทย (ศมส.)","source_url":"https://archaeology.sac.or.th/archaeology/881","year_be":null,"year_ce":null},
+    {"claim_th":"กรมศิลปากรประกาศขึ้นทะเบียนโบราณสถานและกำหนดเขตที่ดินในราชกิจจานุเบกษาเมื่อ 18 ธันวาคม พ.ศ. 2539","status":"CONFIRMED","quote":"เล่ม 113 ตอนพิเศษ 50ง วันที่ 18 ธันวาคม พ.ศ. 2539","source_name":"ฐานข้อมูลแหล่งโบราณคดีที่สำคัญในประเทศไทย (ศมส.)","source_url":"https://archaeology.sac.or.th/archaeology/881","year_be":2539,"year_ce":1996},
+    {"claim_th":"อุโบสถเป็นอาคารก่ออิฐถือปูนผังสี่เหลี่ยมผืนผ้า หันหน้าไปทางทิศตะวันออก มีลวดลายปูนปั้นและเครื่องบนแบบไทยภาคใต้","status":"CONFIRMED","quote":"ลักษณะเป็นอาคารก่ออิฐถือปูน ผังรูปสี่เหลี่ยมผืนผ้า","source_name":"ฐานข้อมูลแหล่งโบราณคดีที่สำคัญในประเทศไทย (ศมส.)","source_url":"https://archaeology.sac.or.th/archaeology/881","year_be":null,"year_ce":null}
+  ],
+  "highlights": [
+    {"title_th":"อุโบสถโบราณสถาน","detail_th":"ชมอาคารก่ออิฐถือปูน หน้าบันและซุ้มประตูหน้าต่างประดับปูนปั้น รวมถึงภาพพระพุทธรูปและลวดลายพันธุ์พฤกษา","source_url":"https://archaeology.sac.or.th/archaeology/881"},
+    {"title_th":"เจดีย์","detail_th":"เป็นหนึ่งในโบราณสถานสำคัญภายในวัดและยังอยู่ในวัดที่มีการใช้งาน","source_url":"https://archaeology.sac.or.th/archaeology/881"},
+    {"title_th":"บรรยากาศริมคลองตะกั่วป่า","detail_th":"วัดตั้งอยู่ริมฝั่งคลองตะกั่วป่าด้านตะวันตก โดยคลองอยู่ทางทิศตะวันออกของวัด","source_url":"https://archaeology.sac.or.th/archaeology/881"},
+    {"title_th":"รายละเอียดปูนปั้นหน้าบัน","detail_th":"ด้านหน้ามีเจดีย์ พระพุทธรูปปางถวายเนตรและปางอุ้มบาตร ส่วนด้านหลังมีธรรมจักรและพระพุทธรูปปางนาคปรก","source_url":"https://archaeology.sac.or.th/archaeology/881"}
+  ],
+  "festival": {"months_th":null,"lunar_calendar_th":null,"activities_th":["ปฏิบัติธรรมเฉลิมพระเกียรติ","สวดมนต์ข้ามปี","บวชชีพราหมณ์เพื่อถวายเป็นพระราชกุศล","บวชสามเณรภาคฤดูร้อน"],"venue_th":"วัดคงคาภิมุข","source_urls":["https://archaeology.sac.or.th/archaeology/881"]},
+  "nearby": [
+    {"name_th":"อาคารสมชายอันดามัน","walk_minutes":null,"source_url":"https://mapcarta.com/29028704"},
+    {"name_th":"ร้านค้าซูเปอร์มาร์เก็ตกานดา","walk_minutes":null,"source_url":"https://mapcarta.com/29028704"}
+  ],
+  "photos": [
+    {"url":"https://tatmediaassets.com/file/1097442","caption_th":"ภาพวัดคงคาภิมุข","source_name":"TAT Media Assets / การท่องเที่ยวแห่งประเทศไทย","license_note_th":"ไม่ทราบสิทธิ์การใช้งาน"}
+  ],
+  "seo_keywords_th":["วัดคงคาภิมุข","วัดคงคา ตะกั่วป่า","วัดคงคาพิมุข","โบราณสถานตะกั่วป่า","อุโบสถปักษ์ใต้ พังงา","วัดเก่าเมืองตะกั่วป่า","เที่ยวเมืองเก่าตะกั่วป่า","วัดริมคลองตะกั่วป่า","เจดีย์วัดคงคาภิมุข"],
+  "seo_keywords_en":["Wat Kongkha Phimuk","Wat Khongkha Takua Pa","Khongkha Phimuk Temple","Takua Pa ancient temple","Phang Nga temple","old town Takua Pa temple"],
+  "unknowns":["ไม่พบเวลาเปิด-ปิดที่เผยแพร่และยืนยันได้","ไม่พบข้อมูลค่าเข้าชม","ไม่พบเพจเฟซบุ๊ก เว็บไซต์ หรือ LINE ที่ยืนยันว่าเป็นของวัด","ไม่พบรหัสไปรษณีย์ที่ยืนยันตรงกับวัดจากแหล่งหลัก","ไม่พบข้อมูลเส้นทางและระยะทางที่ตรวจสอบได้จากภูเก็ต เขาหลัก หรือสนามบิน","ไม่พบข้อมูลที่ยืนยันบทบาทของวัดในยุคเหมืองแร่ดีบุก","ไม่พบหลักฐานยืนยันสถาปัตยกรรมชิโน-โปรตุกีส/จีน","ไม่พบข้อมูลที่ยืนยันที่จอดรถ ห้องน้ำ และช่วงเวลาที่ควรไป","ไม่พบเดือนหรือปฏิทินจันทรคติของเทศกาล","ไม่พบเวลาเดินถึงของสถานที่ใกล้เคียง"],
+  "sources":[
+    {"name":"ฐานข้อมูลแหล่งโบราณคดีที่สำคัญในประเทศไทย (ศมส.)","url":"https://archaeology.sac.or.th/archaeology/881","type":"academic","accessed":"2026-09-07"},
+    {"name":"สิ่งแวดล้อมศิลปกรรม (ONEP)","url":"https://culturalenvi.onep.go.th/site/detail/4417","type":"official","accessed":"2026-09-07"},
+    {"name":"Mapcarta (ข้อมูลจาก OpenStreetMap)","url":"https://mapcarta.com/29028704","type":"map","accessed":"2026-09-07"},
+    {"name":"TAT Media Assets","url":"https://tatmediaassets.com/file/1097442","type":"official","accessed":"2026-09-07"},
+    {"name":"ไทยแลนด์ เยลโล่เพจเจส","url":"https://www.yellowpages.co.th/profile/%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%84%E0%B8%87%E0%B8%84%E0%B8%B2%E0%B8%A0%E0%B8%B4%E0%B8%A1%E0%B8%B8%E0%B8%82-nabHw5","type":"review","accessed":"2026-09-07"}
+  ],
+  "researched_by":"codex gpt-5.6-luna",
+  "researched_on":"2026-09-07"
+}

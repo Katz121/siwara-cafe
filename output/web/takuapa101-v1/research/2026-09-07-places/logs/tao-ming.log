@@ -1,0 +1,285 @@
+DONE tao-ming + 0 ภาพ USABLE
+
+บันทึกไฟล์แล้ว: [tao-ming.json](D:/Siwaracafeweb/output/web/takuapa101-v1/research/2026-09-07-places/out3/tao-ming.json)
+
+--STDERR--
+OpenAI Codex v0.153.4
+--------
+workdir: D:\Siwaracafeweb\output\web\takuapa101-v1\research\2026-09-07-places
+model: gpt-5.6-luna
+provider: openai
+approval: never
+sandbox: danger-full-access
+reasoning effort: low
+reasoning summaries: none
+session id: 01a079e5-1d3c-7f00-985f-fac5a5096c17
+--------
+user
+คุณคือนักหาภาพลิขสิทธิ์เปิด สำหรับเว็บไกด์ "ตะกั่วป่า 101" (อ.ตะกั่วป่า จ.พังงา)
+
+TARGET_ID: tao-ming
+ชื่อ: โรงเรียนเต้าหมิง (Tao Ming School)
+ประเภท: heritage
+บริบท: {
+  "id": "tao-ming",
+  "name_th": "โรงเรียนเต้าหมิง",
+  "name_en": "Tao Ming School",
+  "aka": ["อาคารโรงเรียนเต้าหมิง", "โรงเรียนราษฎร์โต๊ะเบ๋ง", "โต๊ะเบ๋ง"],
+  "geo": {"lat": 8.8338139717, "lng": 98.3649490347, "confidence": "high", "source_url": "https://culturalenvi.onep.go.th/site/detail/4420", "source_name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม"},
+  "address": {"line_th": "ถนนศรีตะกั่วป่า (ไม่พบเลขที่อาคารจากแหล่งที่อ่านได้)", "subdistrict": "ตะกั่วป่า", "district": "ตะกั่วป่า", "province": "พังงา", "postcode": null, "source_url": "https://culturalenvi.onep.go.th/site/detail/4420"},
+  "contact": {"phone": null, "facebook": null, "website": null, "line": null, "source_url": null},
+  "visit": {"opening_hours_th": null, "opening_hours_status": "UNKNOWN", "admission_fee_th": null, "admission_status": "UNKNOWN", "best_time_th": "เหมาะกับการชมอาคารและย่านเมืองเก่าในช่วงกลางวัน แต่ไม่พบคำแนะนำเวลาอย่างเป็นทางการ", "duration_minutes": null, "parking_th": null, "restroom": null, "wheelchair_th": null, "dress_code_th": null, "source_urls": ["https://culturalenvi.onep.go.th/site/detail/4420", "https://www.muangboranjournal.com/post/Takuapa_Naver_Ending_Stories"]},
+  "getting_there": [
+    {"from": "ตัวเมืองตะกั่วป่า", "text_th": "อยู่ในเขตชุมชนเมืองเก่าตะกั่วป่า บริเวณถนนศรีตะกั่วป่า; ใช้แผนที่นำทางไปยังพิกัดที่ระบุ", "distance_km": null, "source_url": "https://culturalenvi.onep.go.th/site/detail/4420"},
+    {"from": "ภูเก็ต", "text_th": "ไม่พบเส้นทางหรือระยะทางที่ระบุเฉพาะเจาะจงจากแหล่งที่ตรวจสอบได้", "distance_km": null, "source_url": "https://culturalenvi.onep.go.th/site/detail/4420"},
+    {"from": "เขาหลัก", "text_th": "ไม่พบเส้นทางหรือระยะทางที่ระบุเฉพาะเจาะจงจากแหล่งที่ตรวจสอบได้", "distance_km": null, "source_url": "https://culturalenvi.onep.go.th/site/detail/4420"},
+    {"from": "สนามบิน", "text_th": "ไม่พบเส้นทางหรือระยะทางที่ระบุเฉพาะเจาะจงจากแหล่งที่ตรวจสอบได้", "distance_km": null, "source_url": "https://culturalenvi.onep.go.th/site/detail/4420"}
+  ],
+  "history": [
+    {"claim_th": "อาคารสร้างขึ้นใน พ.ศ. 2465", "status": "CONFIRMED", "quote": "สร้างขึ้นเมื่อ ปี พ.ศ. 2465", "source_name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม", "source_url": "https://culturalenvi.onep.go.th/site/detail/4420", "year_be": 2465, "year_ce": 1922},
+    {"claim_th": "โรงเรียนเริ่มขอตั้งเป็นโรงเรียนราษฎร์ใน พ.ศ. 2463 และเดิมใช้ชื่อโต๊ะเบ๋ง ตามสำเนียงฮกเกี้ยน", "status": "CONFIRMED", "quote": "แจ้งความจำนงขอตั้งเป็นโรงเรียนราษฎร์ขึ้น ตั้งแต่ปี พ.ศ. 2463", "source_name": "เมืองโบราณ", "source_url": "https://www.muangboranjournal.com/post/Takuapa_Naver_Ending_Stories", "year_be": 2463, "year_ce": 1920},
+    {"claim_th": "ก่อตั้งจากเงินเรี่ยไรของเศรษฐีเหมืองแร่ดีบุกและพ่อค้าชาวจีน เพื่อให้บุตรหลานในเมืองตะกั่วป่าเรียนระดับประถมศึกษา", "status": "CONFIRMED", "quote": "สร้างโดยการเรี่ยไรเงินทุน จากเศรษฐีเหมืองแร่และพ่อค้าชาวจีน", "source_name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม", "source_url": "https://culturalenvi.onep.go.th/site/detail/4420", "year_be": null, "year_ce": null},
+    {"claim_th": "อาคารเป็นชิโน-โปรตุกีสประยุกต์ หลังคามุงสังกะสี และสร้างโดยช่างฝีมือชาวจีน", "status": "CONFIRMED", "quote": "รูปทรงชิโนโปรตุกีสประยุกต์", "source_name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม", "source_url": "https://culturalenvi.onep.go.th/site/detail/4420", "year_be": 2465, "year_ce": 1922},
+    {"claim_th": "โรงเรียนเลิกกิจการแล้ว เหลืออาคารอยู่ในความดูแลของมูลนิธิโรงเรียนเต้าหมิง ตะกั่วป่า", "status": "CONFIRMED", "quote": "ปัจจุบันโรงเรียนได้ถูกยกเลิกไปแล้ว", "source_name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม", "source_url": "https://culturalenvi.onep.go.th/site/detail/4420", "year_be": null, "year_ce": null}
+  ],
+  "highlights": [
+    {"title_th": "อาคารสีเหลืองเก่าแก่", "detail_th": "อาคารโรงเรียนประวัติศาสตร์ที่ยังคงเหลืออยู่ในย่านเมืองเก่า", "source_url": "https://readme.me/p/51787"},
+    {"title_th": "รูปแบบชิโน-โปรตุกีสประยุกต์", "detail_th": "สังเกตรูปทรงอาคารและหลังคามุงสังกะสีซึ่งระบุโดยหน่วยงานอนุรักษ์", "source_url": "https://culturalenvi.onep.go.th/site/detail/4420"},
+    {"title_th": "ร่องรอยการศึกษาภาษาจีน", "detail_th": "เป็นหลักฐานของการจัดการศึกษาโดยชุมชนชาวจีนในเมืองเหมืองแร่ตะกั่วป่า", "source_url": "https://wikicommunity.sac.or.th/community/951"}
+  ],
+  "festival": {"months_th": null, "lunar_calendar_th": null, "activities_th": [], "venue_th": null, "source_urls": []},
+  "nearby": [{"name_th": "ชุมชนเมืองเก่าตะกั่วป่า/ตลาดใหญ่", "walk_minutes": null, "source_url": "https://wikicommunity.sac.or.th/community/951"}],
+  "photos": [],
+  "seo_keywords_th": ["โรงเรียนเต้าหมิง", "อาคารเต้าหมิง", "โต๊ะเบ๋ง", "เมืองเก่าตะกั่วป่า", "ที่เที่ยวตะกั่วป่า", "โรงเรียนจีนตะกั่วป่า", "ชิโนโปรตุกีสตะกั่วป่า", "มรดกวัฒนธรรมตะกั่วป่า", "พังงาเมืองเก่า"],
+  "seo_keywords_en": ["Tao Ming School", "Tao Ming School Takuapa", "Takuapa old town", "Chinese school Takuapa", "Sino-Portuguese Takuapa", "Phang Nga heritage", "Takuapa cultural heritage", "Tao Ming School Thailand"],
+  "unknowns": ["ไม่พบเลขที่อาคารและรหัสไปรษณีย์จากแหล่งที่อ่านได้", "ไม่พบเวลาเปิด-ปิดที่เป็นทางการ", "ไม่พบค่าเข้าชม", "ไม่พบเบอร์โทรศัพท์ เพจเฟซบุ๊ก เว็บไซต์ หรือ LINE ทางการ", "ไม่พบข้อมูลยืนยันที่จอดรถ ห้องน้ำ และการเข้าถึงสำหรับรถเข็น/ผู้สูงอายุ", "ไม่พบข้อมูลการขึ้นทะเบียนเป็นโบราณสถานของกรมศิลปากร", "ไม่พบข้อมูลผู้สร้างเป็นรายบุคคล", "ไม่พบเทศกาลที่จัด ณ โรงเรียนโดยตรง", "ไม่พบลิงก์รูปภาพทางการที่ระบุสิทธิ์การใช้งาน"],
+  "sources": [
+    {"name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม: อาคารโรงเรียนเต้าหมิง", "url": "https://culturalenvi.onep.go.th/site/detail/4420", "type": "official", "accessed": "2026-09-07"},
+    {"name": "ศูนย์มานุษยวิทยาสิรินธร: เมืองตะกั่วป่า", "url": "https://wikicommunity.sac.or.th/community/951", "type": "academic", "accessed": "2026-09-07"},
+    {"name": "เมืองโบราณ: ตะกั่วป่าเมืองเก่ากับเรื่องเล่าไม่รู้จบ", "url": "https://www.muangboranjournal.com/post/Takuapa_Naver_Ending_Stories", "type": "blog", "accessed": "2026-09-07
+
+## โจทย์
+หาภาพของสถานที่/ประเพณีนี้ที่ **ใช้บนเว็บได้จริงตามกฎหมาย** ให้ได้มากที่สุด
+
+## แหล่งที่ต้องไล่ตามลำดับ
+1. **Wikimedia Commons** — ค้นทั้งชื่อไทยและอังกฤษ และค้นแบบกว้าง เช่น `Takua Pa`, `Phang Nga temple`, `Takua Pa old town`, ชื่อวัดสะกดอังกฤษหลายแบบ · ใช้ Commons API ได้: `https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=...&format=json`
+2. **วิกิพีเดียไทย/อังกฤษ** ของสถานที่นี้ (ภาพในบทความมักอยู่บน Commons)
+3. **Wikidata** ของสถานที่นี้ (property P18 image)
+4. **หน่วยงานราชการไทย** — เทศบาลเมืองตะกั่วป่า (takuapacity.go.th), ททท./tourismthailand.org, กรมศิลปากร (finearts.go.th), m-culture.go.th, ONEP culturalenvi.onep.go.th · ระบุว่าเป็นภาพราชการเผยแพร่ ต้องอ้างอิงแหล่ง
+5. **Flickr / openverse** ที่มีสัญญาอนุญาต CC
+
+## สิ่งที่ต้องได้ต่อภาพ
+- `url` — ลิงก์ตรงไปยังไฟล์ภาพ (Commons ใช้ `Special:FilePath` หรือ upload.wikimedia.org) ต้องเปิดได้จริง ให้ลอง `curl -I` ยืนยันว่าได้ HTTP 200 และ content-type เป็นภาพ
+- `page_url` — หน้าที่มีข้อมูลลิขสิทธิ์
+- `license` — เช่น `CC BY-SA 4.0`, `CC0`, `Public Domain`, `ภาพราชการเผยแพร่`, `ไม่ทราบ`
+- `license_verdict` — **`USABLE`** เฉพาะเมื่อหน้าลิขสิทธิ์บอกชัด (CC ทุกแบบ / PD / CC0) · **`ASK`** เมื่อเป็นภาพราชการหรือเพจที่ต้องขอ · **`NO`** เมื่อสงวนสิทธิ์หรือไม่ทราบ
+- `attribution_th` — ข้อความเครดิตที่ต้องแสดงใต้ภาพ (ชื่อผู้ถ่าย + สัญญาอนุญาต)
+- `caption_th`, `era` (`archive` ภาพเก่า / `current` ภาพปัจจุบัน), `width`, `height`
+
+## กฎเหล็ก
+1. **`license_verdict` เป็น `USABLE` ได้ก็ต่อเมื่อคุณเปิดหน้าลิขสิทธิ์อ่านจริงแล้ว** ห้ามเดา ห้ามอนุมานจากชื่อเว็บ
+2. ห้ามใส่ภาพที่ URL เปิดไม่ได้ · ต้อง verify ด้วย curl ทุกใบ
+3. ถ้าไม่เจอภาพลิขสิทธิ์เปิดเลย ให้ตอบ `photos: []` แล้วเขียนใน `notes_th` ว่าค้นอะไรไปบ้าง **ห้ามยัดภาพมั่ว ๆ มาให้ครบจำนวน**
+4. อย่างน้อยต้องลองค้น Commons ด้วยคำค้นไม่ต่ำกว่า 6 แบบ ก่อนสรุปว่าไม่มี
+
+## ผลลัพธ์
+เขียนไฟล์ `D:/Siwaracafeweb/output/web/takuapa101-v1/research/2026-09-07-places/out3/tao-ming.json` เป็น JSON (UTF-8 ไม่ใส่ code fence):
+{
+ "id": "tao-ming",
+ "photos": [{"url":"","page_url":"","license":"","license_verdict":"USABLE|ASK|NO","attribution_th":"","caption_th":"","era":"archive|current","width":null,"height":null,"http_status":200}],
+ "searched_queries": [],
+ "notes_th": "",
+ "researched_on": "2026-09-07"
+}
+
+เสร็จแล้วตอบ DONE tao-ming + จำนวนภาพ USABLE ที่ได้
+
+codex
+กำลังไล่ค้นตามลำดับที่กำหนด โดยจะตรวจหน้าลิขสิทธิ์จริงและทดสอบ URL ไฟล์ภาพด้วย HTTP ก่อนบันทึก JSON เท่านั้นครับ
+web search: 
+web search: site:commons.wikimedia.org Tao Ming School Takuapa ...
+web search: 
+web search: "โรงเรียนเต้าหมิง" ภาพ ...
+web search: 
+web search: 
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$u='"'https://tatmediaassets.com/file/1099396'; "'$x=(Invoke-WebRequest -Uri $u).Content; $x | Select-String -Pattern '"'https?["'^"'"'' ]+\\.(jpg|jpeg|png)["'^"'"'' ]*|1099396|image' -AllMatches | ForEach-Object { "'$_.Matches.Value } | Select-Object -First 30' in D:\Siwaracafeweb\output\web\takuapa101-v1\research\2026-09-07-places
+ succeeded in 547ms:
+Invoke-WebRequest : Object reference not set to an instance of an object.
+At line:2 char:51
++ ... tmediaassets.com/file/1099396'; $x=(Invoke-WebRequest -Uri $u).Conten ...
++                                         ~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Invoke-WebRequest], NullReferenceException
+    + FullyQualifiedErrorId : System.NullReferenceException,Microsoft.PowerShell.Commands.InvokeWebRequestCommand
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "curl.exe -L -s https://tatmediaassets.com/file/1099396 | Select-String -Pattern 'https?["'^"'"'' ]+\\.(jpg|jpeg|png)["'^"'"'' ]*|1099396' -AllMatches | ForEach-Object { "'$_.Matches.Value } | Select-Object -First 40' in D:\Siwaracafeweb\output\web\takuapa101-v1\research\2026-09-07-places
+ exited 1 in 113ms:
+web search: 
+web search: "Phang-nga-Tao Ming School (โรงเรียนเต้าหมิง) 200003BS.jpg" ...
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'curl.exe -L -I https://tatmediaassets.com/file/1099396' in D:\Siwaracafeweb\output\web\takuapa101-v1\research\2026-09-07-places
+ exited 1 in 69ms:
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0   0     0   0     0     0     0  --:--:-- --:--:-- --:--:--     0
+  0     0   0     0   0     0     0     0  --:--:-- --:--:-- --:--:--     0
+curl: (35) schannel: next InitializeSecurityContext failed: CRYPT_E_NO_REVOCATION_CHECK (0x80092012) - The revocation function was unable to check revocation for the certificate.
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'curl.exe -k -L -I https://tatmediaassets.com/file/1099396' in D:\Siwaracafeweb\output\web\takuapa101-v1\research\2026-09-07-places
+ succeeded in 279ms:
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0   0     0   0     0     0     0  --:--:-- --:--:-- --:--:--     0
+  0     0   0     0   0     0     0     0  --:--:-- --:--:-- --:--:--     0
+  0     0   0     0   0     0     0     0  --:--:-- --:--:-- --:--:--     0HTTP/1.1 200 OK
+Date: Mon, 07 Sep 2026 03:25:19 GMT
+Content-Type: text/html; charset=utf-8
+Connection: keep-alive
+Server: cloudflare
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+vary: Accept-Encoding
+x-served-by: tatmediaassets.com
+cf-cache-status: DYNAMIC
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=b8ZyECON8MXjx6yhEnsoc5HAod1LlCPWC0O49%2FSa2n40nDXeF74%2B1kCYV%2FD9WiMrJhUcq%2BTOZ8Fl7NuqbjBaISPqmE4bfq4CTeF%2FE9o2yN3W8U21AAnaJMRjHQqC9xSIvgikWiqehh7QFsrGGGuRX3c%3D"}]}
+CF-RAY: a3729b016a571d33-BKK
+alt-svc: h3=":443"; ma=86400
+
+
+
+mcp: cua_repl/js started
+mcp: cua_repl/js (completed)
+codex
+พบภาพตรงจากคลังสื่อ ททท. 1 รายการ แต่หน้าระบุ “Request” และ “© 2025 TAT. All rights reserved.” จึงไม่เข้าเกณฑ์ USABLE; ผมจะไม่ใส่เป็นภาพใช้งานได้โดยพลการ และกำลังบันทึกผลเป็น `photos: []` พร้อมหลักฐานการค้นหาและเหตุผลไว้ใน `notes_th` ครับ
+apply patch
+patch: completed
+D:\Siwaracafeweb\output\web\takuapa101-v1\research\2026-09-07-places\out3\tao-ming.json
+diff --git a/output/web/takuapa101-v1/research/2026-09-07-places/out3/tao-ming.json b/output/web/takuapa101-v1/research/2026-09-07-places/out3/tao-ming.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..c5748c08ec8b72e595ba375334ba58e8540bf9f9
+--- /dev/null
++++ b/output/web/takuapa101-v1/research/2026-09-07-places/out3/tao-ming.json
+@@ -0,0 +1,20 @@
++{
++  "id": "tao-ming",
++  "photos": [],
++  "searched_queries": [
++    "site:commons.wikimedia.org Tao Ming School Takuapa",
++    "site:commons.wikimedia.org โรงเรียนเต้าหมิง",
++    "site:commons.wikimedia.org Takua Pa old town",
++    "site:commons.wikimedia.org Takua Pa Phang Nga",
++    "site:commons.wikimedia.org โต๊ะเบ๋ง ตะกั่วป่า",
++    "site:commons.wikimedia.org Takuapa old town school",
++    "โรงเรียนเต้าหมิง ภาพ",
++    "Tao Ming School Thailand",
++    "โต๊ะเบ๋ง ตะกั่วป่า รูป",
++    "อาคารโรงเรียนเต้าหมิง",
++    "site:readme.me โรงเรียนเต้าหมิง",
++    "site:flickr.com Takua Pa old town"
++  ],
++  "notes_th": "ไม่พบภาพที่ยืนยันสัญญาอนุญาตแบบเปิดและนำไปใช้บนเว็บได้ทันทีจาก Commons, Wikipedia/Wikidata, Flickr หรือ Openverse ในการค้นครั้งนี้. Commons พบเฉพาะภาพ/หมวดหมู่ทั่วไปของอำเภอตะกั่วป่า ไม่ใช่โรงเรียนเต้าหมิงโดยตรง และหน้าที่พบมีทั้งแผนที่หรือสถานที่อื่น. แหล่งตรงที่สุดคือคลังสื่อ ททท. ภาพชื่อ Phang-nga-Tao Ming School (โรงเรียนเต้าหมิง) 200003BS.jpg, file ID 1099396, https://tatmediaassets.com/file/1099396 ซึ่งระบุผู้ถ่าย นายพัทธ์รวินทร์ วาณิชย์สถาพร, ขนาด 6720x4480 และมีปุ่ม Request แต่หน้าเดียวกันระบุ © 2025 TAT. All rights reserved.; ไม่มีใบอนุญาต CC/CC0/สาธารณสมบัติ จึงจัดเป็น ASK และไม่ใส่ใน photos ตามกฎเหล็ก. ONEP ระบุหน้าแหล่งศิลปกรรมว่าไม่มีรูปภาพ. ภาพจาก Readme.me, Flickr และเว็บไซต์ท่องเที่ยวอื่นไม่พบใบอนุญาตเปิดที่ชัดเจน จึงไม่ผ่านเกณฑ์ USABLE. ควรขอสิทธิ์จาก ททท. ก่อนใช้ภาพ file ID 1099396.",
++  "researched_on": "2026-09-07"
++}
+
+diff --git a/output/web/takuapa101-v1/research/2026-09-07-places/out3/tao-ming.json b/output/web/takuapa101-v1/research/2026-09-07-places/out3/tao-ming.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..c5748c08ec8b72e595ba375334ba58e8540bf9f9
+--- /dev/null
++++ b/output/web/takuapa101-v1/research/2026-09-07-places/out3/tao-ming.json
+@@ -0,0 +1,20 @@
++{
++  "id": "tao-ming",
++  "photos": [],
++  "searched_queries": [
++    "site:commons.wikimedia.org Tao Ming School Takuapa",
++    "site:commons.wikimedia.org โรงเรียนเต้าหมิง",
++    "site:commons.wikimedia.org Takua Pa old town",
++    "site:commons.wikimedia.org Takua Pa Phang Nga",
++    "site:commons.wikimedia.org โต๊ะเบ๋ง ตะกั่วป่า",
++    "site:commons.wikimedia.org Takuapa old town school",
++    "โรงเรียนเต้าหมิง ภาพ",
++    "Tao Ming School Thailand",
++    "โต๊ะเบ๋ง ตะกั่วป่า รูป",
++    "อาคารโรงเรียนเต้าหมิง",
++    "site:readme.me โรงเรียนเต้าหมิง",
++    "site:flickr.com Takua Pa old town"
++  ],
++  "notes_th": "ไม่พบภาพที่ยืนยันสัญญาอนุญาตแบบเปิดและนำไปใช้บนเว็บได้ทันทีจาก Commons, Wikipedia/Wikidata, Flickr หรือ Openverse ในการค้นครั้งนี้. Commons พบเฉพาะภาพ/หมวดหมู่ทั่วไปของอำเภอตะกั่วป่า ไม่ใช่โรงเรียนเต้าหมิงโดยตรง และหน้าที่พบมีทั้งแผนที่หรือสถานที่อื่น. แหล่งตรงที่สุดคือคลังสื่อ ททท. ภาพชื่อ Phang-nga-Tao Ming School (โรงเรียนเต้าหมิง) 200003BS.jpg, file ID 1099396, https://tatmediaassets.com/file/1099396 ซึ่งระบุผู้ถ่าย นายพัทธ์รวินทร์ วาณิชย์สถาพร, ขนาด 6720x4480 และมีปุ่ม Request แต่หน้าเดียวกันระบุ © 2025 TAT. All rights reserved.; ไม่มีใบอนุญาต CC/CC0/สาธารณสมบัติ จึงจัดเป็น ASK และไม่ใส่ใน photos ตามกฎเหล็ก. ONEP ระบุหน้าแหล่งศิลปกรรมว่าไม่มีรูปภาพ. ภาพจาก Readme.me, Flickr และเว็บไซต์ท่องเที่ยวอื่นไม่พบใบอนุญาตเปิดที่ชัดเจน จึงไม่ผ่านเกณฑ์ USABLE. ควรขอสิทธิ์จาก ททท. ก่อนใช้ภาพ file ID 1099396.",
++  "researched_on": "2026-09-07"
++}
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$p='"'D:\\Siwaracafeweb\\output\\web\\takuapa101-v1\\research\\2026-09-07-places\\out3\\tao-ming.json'; Get-Content -Raw -LiteralPath "'$p | ConvertFrom-Json | Out-Null; Write-Output '"'JSON_OK'; Get-Item -LiteralPath "'$p | Select-Object FullName,Length' in D:\Siwaracafeweb\output\web\takuapa101-v1\research\2026-09-07-places
+ succeeded in 101ms:
+JSON_OK
+
+FullName                                                                                Length
+--------                                                                                ------
+D:\Siwaracafeweb\output\web\takuapa101-v1\research\2026-09-07-places\out3\tao-ming.json   2682
+
+
+
+diff --git a/output/web/takuapa101-v1/research/2026-09-07-places/out3/tao-ming.json b/output/web/takuapa101-v1/research/2026-09-07-places/out3/tao-ming.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..c5748c08ec8b72e595ba375334ba58e8540bf9f9
+--- /dev/null
++++ b/output/web/takuapa101-v1/research/2026-09-07-places/out3/tao-ming.json
+@@ -0,0 +1,20 @@
++{
++  "id": "tao-ming",
++  "photos": [],
++  "searched_queries": [
++    "site:commons.wikimedia.org Tao Ming School Takuapa",
++    "site:commons.wikimedia.org โรงเรียนเต้าหมิง",
++    "site:commons.wikimedia.org Takua Pa old town",
++    "site:commons.wikimedia.org Takua Pa Phang Nga",
++    "site:commons.wikimedia.org โต๊ะเบ๋ง ตะกั่วป่า",
++    "site:commons.wikimedia.org Takuapa old town school",
++    "โรงเรียนเต้าหมิง ภาพ",
++    "Tao Ming School Thailand",
++    "โต๊ะเบ๋ง ตะกั่วป่า รูป",
++    "อาคารโรงเรียนเต้าหมิง",
++    "site:readme.me โรงเรียนเต้าหมิง",
++    "site:flickr.com Takua Pa old town"
++  ],
++  "notes_th": "ไม่พบภาพที่ยืนยันสัญญาอนุญาตแบบเปิดและนำไปใช้บนเว็บได้ทันทีจาก Commons, Wikipedia/Wikidata, Flickr หรือ Openverse ในการค้นครั้งนี้. Commons พบเฉพาะภาพ/หมวดหมู่ทั่วไปของอำเภอตะกั่วป่า ไม่ใช่โรงเรียนเต้าหมิงโดยตรง และหน้าที่พบมีทั้งแผนที่หรือสถานที่อื่น. แหล่งตรงที่สุดคือคลังสื่อ ททท. ภาพชื่อ Phang-nga-Tao Ming School (โรงเรียนเต้าหมิง) 200003BS.jpg, file ID 1099396, https://tatmediaassets.com/file/1099396 ซึ่งระบุผู้ถ่าย นายพัทธ์รวินทร์ วาณิชย์สถาพร, ขนาด 6720x4480 และมีปุ่ม Request แต่หน้าเดียวกันระบุ © 2025 TAT. All rights reserved.; ไม่มีใบอนุญาต CC/CC0/สาธารณสมบัติ จึงจัดเป็น ASK และไม่ใส่ใน photos ตามกฎเหล็ก. ONEP ระบุหน้าแหล่งศิลปกรรมว่าไม่มีรูปภาพ. ภาพจาก Readme.me, Flickr และเว็บไซต์ท่องเที่ยวอื่นไม่พบใบอนุญาตเปิดที่ชัดเจน จึงไม่ผ่านเกณฑ์ USABLE. ควรขอสิทธิ์จาก ททท. ก่อนใช้ภาพ file ID 1099396.",
++  "researched_on": "2026-09-07"
++}
+
+codex
+DONE tao-ming + 0 ภาพ USABLE
+
+บันทึกไฟล์แล้ว: [tao-ming.json](D:/Siwaracafeweb/output/web/takuapa101-v1/research/2026-09-07-places/out3/tao-ming.json)
+diff --git a/output/web/takuapa101-v1/research/2026-09-07-places/out3/tao-ming.json b/output/web/takuapa101-v1/research/2026-09-07-places/out3/tao-ming.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..c5748c08ec8b72e595ba375334ba58e8540bf9f9
+--- /dev/null
++++ b/output/web/takuapa101-v1/research/2026-09-07-places/out3/tao-ming.json
+@@ -0,0 +1,20 @@
++{
++  "id": "tao-ming",
++  "photos": [],
++  "searched_queries": [
++    "site:commons.wikimedia.org Tao Ming School Takuapa",
++    "site:commons.wikimedia.org โรงเรียนเต้าหมิง",
++    "site:commons.wikimedia.org Takua Pa old town",
++    "site:commons.wikimedia.org Takua Pa Phang Nga",
++    "site:commons.wikimedia.org โต๊ะเบ๋ง ตะกั่วป่า",
++    "site:commons.wikimedia.org Takuapa old town school",
++    "โรงเรียนเต้าหมิง ภาพ",
++    "Tao Ming School Thailand",
++    "โต๊ะเบ๋ง ตะกั่วป่า รูป",
++    "อาคารโรงเรียนเต้าหมิง",
++    "site:readme.me โรงเรียนเต้าหมิง",
++    "site:flickr.com Takua Pa old town"
++  ],
++  "notes_th": "ไม่พบภาพที่ยืนยันสัญญาอนุญาตแบบเปิดและนำไปใช้บนเว็บได้ทันทีจาก Commons, Wikipedia/Wikidata, Flickr หรือ Openverse ในการค้นครั้งนี้. Commons พบเฉพาะภาพ/หมวดหมู่ทั่วไปของอำเภอตะกั่วป่า ไม่ใช่โรงเรียนเต้าหมิงโดยตรง และหน้าที่พบมีทั้งแผนที่หรือสถานที่อื่น. แหล่งตรงที่สุดคือคลังสื่อ ททท. ภาพชื่อ Phang-nga-Tao Ming School (โรงเรียนเต้าหมิง) 200003BS.jpg, file ID 1099396, https://tatmediaassets.com/file/1099396 ซึ่งระบุผู้ถ่าย นายพัทธ์รวินทร์ วาณิชย์สถาพร, ขนาด 6720x4480 และมีปุ่ม Request แต่หน้าเดียวกันระบุ © 2025 TAT. All rights reserved.; ไม่มีใบอนุญาต CC/CC0/สาธารณสมบัติ จึงจัดเป็น ASK และไม่ใส่ใน photos ตามกฎเหล็ก. ONEP ระบุหน้าแหล่งศิลปกรรมว่าไม่มีรูปภาพ. ภาพจาก Readme.me, Flickr และเว็บไซต์ท่องเที่ยวอื่นไม่พบใบอนุญาตเปิดที่ชัดเจน จึงไม่ผ่านเกณฑ์ USABLE. ควรขอสิทธิ์จาก ททท. ก่อนใช้ภาพ file ID 1099396.",
++  "researched_on": "2026-09-07"
++}
+
+tokens used
+46,316

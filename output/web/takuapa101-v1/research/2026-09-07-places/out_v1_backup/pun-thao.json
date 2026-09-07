@@ -1,0 +1,51 @@
+{
+  "id": "pun-thao",
+  "name_th": "ศาลเจ้าปุนเถ่ากงอ๊า",
+  "name_en": "Pun Thao Kong A Shrine",
+  "aka": ["ศาลเจ้าบุ่นเท่าก๋งอ้าม", "ศาลเจ้าบุ่นเท่าก๋งอำ", "ศาลเจ้าปุนเท่กงอำ"],
+  "geo": {"lat": null, "lng": null, "confidence": "low", "source_url": "", "source_name": ""},
+  "address": {"line_th": "ถนนอุดมธารา บริเวณท่าเรือเก่า (จับเส/จับเซ้)", "subdistrict": "ตะกั่วป่า", "district": "ตะกั่วป่า", "province": "พังงา", "postcode": null, "source_url": "https://wikicommunity.sac.or.th/community/1527"},
+  "contact": {"phone": null, "facebook": null, "website": null, "line": null, "source_url": null},
+  "visit": {
+    "opening_hours_th": null,
+    "opening_hours_status": "UNKNOWN",
+    "admission_fee_th": null,
+    "admission_status": "UNKNOWN",
+    "best_time_th": "ช่วงถนนสายวัฒนธรรมเมืองเก่า ซึ่งจัดวันอาทิตย์ในเดือนพฤศจิกายน-พฤษภาคม (เป็นข้อมูลของย่าน ไม่ใช่เวลาทำการศาลเจ้าโดยตรง)",
+    "duration_minutes": null,
+    "parking_th": null,
+    "restroom": null,
+    "wheelchair_th": null,
+    "dress_code_th": "ไม่พบข้อกำหนดเฉพาะของศาลเจ้า; ควรแต่งกายสุภาพเมื่อเข้าสักการะ",
+    "source_urls": ["https://wikicommunity.sac.or.th/community/1527"]
+  },
+  "getting_there": [
+    {"from": "ตัวเมืองตะกั่วป่า", "text_th": "มุ่งไปยังย่านชุมชนตลาดใหญ่และถนนอุดมธารา บริเวณท่าเรือเก่า; ไม่พบระยะทางหรือเส้นทางนำทางเฉพาะที่ตรวจสอบได้", "distance_km": null, "source_url": "https://wikicommunity.sac.or.th/community/1527"},
+    {"from": "ภูเก็ต", "text_th": null, "distance_km": null, "source_url": ""},
+    {"from": "เขาหลัก", "text_th": null, "distance_km": null, "source_url": ""},
+    {"from": "สนามบิน", "text_th": null, "distance_km": null, "source_url": ""}
+  ],
+  "history": [
+    {"claim_th": "เป็นศาลเจ้าแห่งแรกของเมืองตะกั่วป่า", "status": "CONFIRMED", "quote": "ศาลเจ้าแห่งแรกของเมืองตะกั่วป่า", "source_name": "ศูนย์มานุษยวิทยาสิรินธร (องค์การมหาชน) – วิถีชุมชนตลาดใหญ่", "source_url": "https://wikicommunity.sac.or.th/community/1527", "year_be": null, "year_ce": null},
+    {"claim_th": "ตั้งอยู่บริเวณท่าเรือเก่า ซึ่งคนตะกั่วป่าเรียกว่าจับเสหรือจับเซ้ และคำดังกล่าวเป็นภาษาจีนฮกเกี้ยนหมายถึงท่าเรือ", "status": "CONFIRMED", "quote": "ตั้งอยู่บริเวณท่าเรือเก่าในอดีต", "source_name": "ศูนย์มานุษยวิทยาสิรินธร (องค์การมหาชน) – วิถีชุมชนตลาดใหญ่", "source_url": "https://wikicommunity.sac.or.th/community/1527", "year_be": null, "year_ce": null},
+    {"claim_th": "เกี่ยวข้องกับชุมชนชาวจีนที่อพยพเข้ามาทำเหมืองแร่ โดยมีทั้งชาวจีนฮกเกี้ยน ไหหลำ และกวางตุ้ง", "status": "CONFIRMED", "quote": "ชาวจีนที่อพยพเข้ามาทำเหมืองแร่", "source_name": "ศูนย์มานุษยวิทยาสิรินธร (องค์การมหาชน) – วิถีชุมชนตลาดใหญ่", "source_url": "https://wikicommunity.sac.or.th/community/1527", "year_be": null, "year_ce": null},
+    {"claim_th": "ภายในศาลเจ้ามีกระถางธูปที่รัชกาลที่ 6 ทรงประธาน", "status": "CONFIRMED", "quote": "มีกระถางธูปที่รัชกาลที่ 6 ทรงประธาน", "source_name": "ศูนย์มานุษยวิทยาสิรินธร (องค์การมหาชน) – วิถีชุมชนตลาดใหญ่", "source_url": "https://wikicommunity.sac.or.th/community/1527", "year_be": null, "year_ce": null}
+  ],
+  "highlights": [
+    {"title_th": "กระถางธูปพระราชทาน", "detail_th": "มีการบันทึกว่าภายในศาลเจ้ามีกระถางธูปที่รัชกาลที่ 6 ทรงประธาน", "source_url": "https://wikicommunity.sac.or.th/community/1527"},
+    {"title_th": "ร่องรอยท่าเรือเก่าจับเส", "detail_th": "ศาลเจ้าอยู่ในบริบทท่าเรือเก่าของเมืองตะกั่วป่า ซึ่งเป็นจุดเชื่อมโยงการค้าทางน้ำในย่านตลาดใหญ่", "source_url": "https://wikicommunity.sac.or.th/community/1527"},
+    {"title_th": "ย่านเมืองเก่าและตึกแถวชิโน-โปรตุกีส", "detail_th": "ถนนอุดมธาราอยู่ในชุมชนตลาดใหญ่ที่มีอาคารเก่าและตึกแถวชิโน-โปรตุกีสหนาแน่น; ข้อมูลนี้เป็นบริบทโดยรอบ ไม่ใช่การยืนยันรูปแบบตัวศาลเจ้า", "source_url": "https://wikicommunity.sac.or.th/community/1527"}
+  ],
+  "festival": {"months_th": "พฤศจิกายน-พฤษภาคม (ถนนสายวัฒนธรรมของย่านจัดทุกวันอาทิตย์)", "lunar_calendar_th": null, "activities_th": ["ไม่พบกำหนดการหรือกิจกรรมเฉพาะของศาลเจ้าในแหล่งที่ตรวจสอบได้"], "venue_th": null, "source_urls": ["https://wikicommunity.sac.or.th/community/1527"]},
+  "nearby": [],
+  "photos": [],
+  "seo_keywords_th": ["ศาลเจ้าปุนเถ่ากงอ๊า", "ศาลเจ้าบุ่นเท่าก๋งอ้าม", "ศาลเจ้าปุนเท่กง ตะกั่วป่า", "ศาลเจ้าจับเส", "ศาลเจ้าท่าเรือเก่าตะกั่วป่า", "ศาลเจ้าจีนตะกั่วป่า", "เมืองเก่าตะกั่วป่า", "ถนนอุดมธารา", "ศาลเจ้าแร่ดีบุกตะกั่วป่า"],
+  "seo_keywords_en": ["Pun Thao Kong A Shrine", "Pun Thao Kong Shrine Takuapa", "Chinese shrine Takuapa", "Old port Takuapa shrine", "Takuapa Old Town", "Udom Thara Road shrine", "Phang Nga Chinese shrine", "Takuapa culture"],
+  "unknowns": ["ไม่พบพิกัด GPS หรือรายการสถานที่บน Google Maps/OpenStreetMap/Mapcarta/Wikidata ที่ยืนยันตัวศาลเจ้าได้", "ไม่พบเลขที่บ้าน ตำบลในระดับที่ละเอียดกว่านี้ และรหัสไปรษณีย์เฉพาะสถานที่", "ไม่พบเวลาเปิด-ปิด ค่าเข้าชม เบอร์โทรศัพท์ เพจเฟซบุ๊ก เว็บไซต์ หรือ LINE ที่ยืนยันได้", "ไม่พบข้อมูลผู้สร้างและปีที่สร้าง", "ไม่พบหลักฐานว่าตัวศาลเจ้าเป็นสถาปัตยกรรมชิโน-โปรตุกีส", "ไม่พบหลักฐานการขึ้นทะเบียนโบราณสถาน", "ไม่พบข้อมูลการเข้าถึงสำหรับผู้สูงอายุ/รถเข็น ที่จอดรถ ห้องน้ำ และระยะทางจากภูเก็ต เขาหลัก หรือสนามบิน", "ไม่พบภาพถ่ายทางการพร้อม URL และเงื่อนไขลิขสิทธิ์", "ไม่พบรายละเอียดเทศกาลเฉพาะของศาลเจ้า; แหล่งที่พบกล่าวถึงเทศกาลของย่านหรือศาลเจ้าอื่น"],
+  "sources": [
+    {"name": "ศูนย์มานุษยวิทยาสิรินธร (องค์การมหาชน) – วิถีชุมชนตลาดใหญ่", "url": "https://wikicommunity.sac.or.th/community/1527", "type": "academic", "accessed": "2026-09-07"},
+    {"name": "เทศบาลเมืองตะกั่วป่า – แผนการดำเนินงานด้านสิ่งแวดล้อม", "url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf", "type": "official", "accessed": "2026-09-07"}
+  ],
+  "researched_by": "codex gpt-5.6-luna",
+  "researched_on": "2026-09-07"
+}

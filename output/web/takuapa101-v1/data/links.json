@@ -1,0 +1,34 @@
+{
+  "narai-ceremony": [
+    "phra-narai"
+  ],
+  "vegetarian": [
+    "guan-yu",
+    "pun-thao",
+    "kue-chai",
+    "rong-jae"
+  ],
+  "relic-procession": [
+    "wat-boromthat"
+  ],
+  "chak-phra": [
+    "wat-boromthat",
+    "wat-khuha",
+    "wat-pathum",
+    "wat-kongkha",
+    "wat-nikorn",
+    "wat-sena"
+  ],
+  "loy-krathong": [
+    "riverwalk"
+  ],
+  "ruler-ceremony": [
+    "governor-wall"
+  ],
+  "culture-street": [
+    "tao-ming",
+    "khun-in",
+    "iron-bridge",
+    "food-center"
+  ]
+}

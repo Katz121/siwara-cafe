@@ -1,0 +1,48 @@
+{
+  "id": "new-year-alms",
+  "name_th": "ตักบาตรยามรุ่ง รับอรุณปีใหม่",
+  "name_en": null,
+  "aka": ["ทำบุญตักบาตรวันขึ้นปีใหม่", "ตักบาตรวันขึ้นปีใหม่ ตะกั่วป่า"],
+  "geo": {"lat": null, "lng": null, "confidence": "low", "source_url": "", "source_name": ""},
+  "address": {"line_th": null, "subdistrict": null, "district": "ตะกั่วป่า", "province": "พังงา", "postcode": null, "source_url": null},
+  "contact": {"phone": null, "facebook": null, "website": null, "line": null, "source_url": null},
+  "visit": {
+    "opening_hours_th": null,
+    "opening_hours_status": "UNKNOWN",
+    "admission_fee_th": null,
+    "admission_status": "UNKNOWN",
+    "best_time_th": "หากจัดตามรูปแบบกิจกรรมวันขึ้นปีใหม่ ควรติดตามประกาศของหน่วยงานท้องถิ่นก่อนเดินทาง เพราะไม่พบกำหนดการของชื่องานนี้โดยตรง",
+    "duration_minutes": null,
+    "parking_th": null,
+    "restroom": null,
+    "wheelchair_th": null,
+    "dress_code_th": null,
+    "source_urls": ["https://www.takuapacity.go.th/files/com_strategy/2022-12_231dcd9d5169573.pdf", "https://www.khukkhak.go.th/storage/uploads/502-%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%8A%E0%B8%B8%E0%B8%A1%E0%B8%AA%E0%B8%A0%E0%B8%B2%E0%B9%80%E0%B8%97%E0%B8%A8%E0%B8%9A%E0%B8%B2%E0%B8%A5%E0%B8%95%E0%B8%B3%E0%B8%9A%E0%B8%A5%E0%B8%84%E0%B8%B6%E0%B8%81%E0%B8%84%E0%B8%B1%E0%B8%81%20%E0%B8%AA%E0%B8%A1%E0%B8%B1%E0%B8%8D%20%E0%B8%AA%E0%B8%A1%E0%B8%B1%E0%B8%A2ที่%204%20ประจำปี%202563.pdf"]
+  },
+  "getting_there": [],
+  "history": [
+    {"claim_th": "เอกสารติดตามแผนพัฒนาเทศบาลเมืองตะกั่วป่าระบุโครงการจัดงานวันขึ้นปีใหม่ ซึ่งมีกิจกรรมทำบุญตักบาตรอาหารแห้งบริเวณริมท่าน้ำ", "status": "CONFIRMED", "quote": "กิจกรรมการทำบุญตักบาตรอาหารแห้ง บริเวณริมท่าน้ำ", "source_name": "เทศบาลเมืองตะกั่วป่า", "source_url": "https://www.takuapacity.go.th/files/com_strategy/2022-12_231dcd9d5169573.pdf", "year_be": null, "year_ce": null},
+    {"claim_th": "การจัดตักบาตรวันขึ้นปีใหม่ในพื้นที่อำเภอตะกั่วป่าถูกหารือให้งดในปี 2564 เนื่องจากสถานการณ์โควิด-19", "status": "CONFIRMED", "quote": "งดกิจกรรมวันขึ้นปีใหม่ ในการตักบาตรที่อำเภอตะกั่วป่า", "source_name": "รายงานการประชุมสภาเทศบาลตำบลคึกคัก", "source_url": "https://www.khukkhak.go.th/storage/uploads/502-%E0%B8%A3%E0%B8%B2%E0%B8%A2งานการประชุมสภาเทศบาลตำบลคึกคัก%20สมัยสามัญ%20ประจำปี%202563.pdf", "year_be": 2564, "year_ce": 2021},
+    {"claim_th": "ไม่พบหลักฐานที่ระบุปีเริ่มจัด ผู้ริเริ่ม ความเชื่อเฉพาะ หรือความเชื่อมโยงกับยุคเหมืองแร่ดีบุกของชื่อกิจกรรมนี้โดยตรง", "status": "UNVERIFIED", "quote": "", "source_name": "การสืบค้นแหล่งข้อมูลออนไลน์", "source_url": "https://www.takuapacity.go.th/", "year_be": null, "year_ce": null}
+  ],
+  "highlights": [
+    {"title_th": "ตักบาตรอาหารแห้ง", "detail_th": "เอกสารเทศบาลเมืองตะกั่วป่าระบุว่ากิจกรรมวันขึ้นปีใหม่มีการทำบุญตักบาตรอาหารแห้ง แต่ไม่ได้ระบุรายละเอียดขบวนหรือจำนวนพระสงฆ์", "source_url": "https://www.takuapacity.go.th/files/com_strategy/2022-12_231dcd9d5169573.pdf"},
+    {"title_th": "ริมท่าน้ำ", "detail_th": "จุดจัดที่พบในเอกสารเทศบาลคือบริเวณริมท่าน้ำ; ยังไม่พบชื่อท่าน้ำหรือพิกัดที่ยืนยันได้", "source_url": "https://www.takuapacity.go.th/files/com_strategy/2022-12_231dcd9d5169573.pdf"},
+    {"title_th": "กิจกรรมที่เปลี่ยนแปลงตามปี", "detail_th": "หลักฐานข่าวยืนยันว่าพื้นที่ตะกั่วป่ามีกิจกรรมตักบาตรในงานปีใหม่ไทย/สงกรานต์ แต่ไม่ควรถือเป็นกำหนดการของงานชื่อเป้าหมายโดยตรง", "source_url": "https://www.topnews.co.th/news/1546452"}
+  ],
+  "festival": {"months_th": "มกราคม (ตามลักษณะกิจกรรมวันขึ้นปีใหม่ที่พบในเอกสาร) แต่ไม่พบกำหนดการของชื่องานนี้โดยตรง", "lunar_calendar_th": null, "activities_th": ["ทำบุญตักบาตรอาหารแห้ง"], "venue_th": "มีหลักฐานระบุเพียงบริเวณริมท่าน้ำ; ไม่พบชื่อสถานที่แน่ชัด", "source_urls": ["https://www.takuapacity.go.th/files/com_strategy/2022-12_231dcd9d5169573.pdf"]},
+  "nearby": [],
+  "photos": [],
+  "seo_keywords_th": ["ตักบาตรยามรุ่ง ตะกั่วป่า", "รับอรุณปีใหม่ ตะกั่วป่า", "ตักบาตรวันขึ้นปีใหม่ ตะกั่วป่า", "ทำบุญปีใหม่ ตะกั่วป่า", "ประเพณีตะกั่วป่า", "กิจกรรมปีใหม่ พังงา", "ตักบาตรริมท่าน้ำ ตะกั่วป่า", "วัฒนธรรมตะกั่วป่า"],
+  "seo_keywords_en": ["Takuapa New Year alms", "Takuapa morning alms", "New Year tradition Takuapa", "Phang Nga New Year ceremony"],
+  "unknowns": ["ไม่พบพิกัด GPS ของจุดจัดงานที่ยืนยันได้", "ไม่พบที่อยู่ระดับถนน ตำบล และรหัสไปรษณีย์ของงานนี้โดยตรง", "ไม่พบเวลาเริ่ม-สิ้นสุด ค่าเข้าชม ระยะเวลากิจกรรม ที่จอดรถ ห้องน้ำ หรือข้อมูลรถเข็น", "ไม่พบเบอร์โทร เพจเฟซบุ๊ก เว็บไซต์ หรือ LINE เฉพาะกิจกรรม", "ไม่พบเส้นทางและระยะทางจากตัวเมืองตะกั่วป่า ภูเก็ต เขาหลัก หรือสนามบินที่อ้างอิงจุดจัดงานแน่นอนได้", "ไม่พบหลักฐานเฉพาะชื่อกิจกรรมเกี่ยวกับปีที่สร้าง ผู้สร้าง บทบาทในยุคเหมืองแร่ดีบุก สถาปัตยกรรม หรือการขึ้นทะเบียนโบราณสถาน", "ไม่พบภาพทางการที่ระบุสิทธิ์การใช้งานได้ จึงไม่ใส่ลิงก์ภาพ", "ไม่พบรายชื่อสถานที่ใกล้เคียงที่เดินถึงได้จากจุดจัดงานที่ยืนยันแล้ว"],
+  "sources": [
+    {"name": "เทศบาลเมืองตะกั่วป่า: เอกสารติดตามแผนพัฒนาเทศบาล", "url": "https://www.takuapacity.go.th/files/com_strategy/2022-12_231dcd9d5169573.pdf", "type": "official", "accessed": "2026-09-07"},
+    {"name": "รายงานการประชุมสภาเทศบาลตำบลคึกคัก", "url": "https://www.khukkhak.go.th/storage/uploads/502-%E0%B8%A3%E0%B8%B2%E0%B8%A2งานการประชุมสภาเทศบาลตำบลคึกคัก%20สมัยสามัญ%20ประจำปี%202563.pdf", "type": "official", "accessed": "2026-09-07"},
+    {"name": "TOPNEWS: พังงาจัดใหญ่ สืบสานสงกรานต์ ตักบาตรเมืองเก่าตะกั่วป่า", "url": "https://www.topnews.co.th/news/1546452", "type": "news", "accessed": "2026-09-07"},
+    {"name": "ไทยโพสต์: สงกรานต์ชุ่มฉ่ำ 5 ภาคทั่วไทย", "url": "https://www.thaipost.net/news-update/768576/", "type": "news", "accessed": "2026-09-07"},
+    {"name": "INN News: ชาวบ้านบางสัก-ตะกั่วป่าทำบุญลอยเรือรับปีใหม่", "url": "https://www.innews.news/news.php?n=32283", "type": "news", "accessed": "2026-09-07"}
+  ],
+  "researched_by": "codex gpt-5.6-luna",
+  "researched_on": "2026-09-07"
+}

@@ -1,0 +1,75 @@
+{
+  "id": "khun-in",
+  "name_th": "บ้านขุนอินทร์",
+  "name_en": "Khun In House",
+  "aka": ["ตึกขุนอินทร์", "บ้านขุนอินทร์", "ตึกขุนอินทร์ (Khun Intra Building)"],
+  "geo": {
+    "lat": 8.8307319975,
+    "lng": 98.3633399749,
+    "confidence": "high",
+    "source_url": "https://culturalenvi.onep.go.th/site/detail/4423",
+    "source_name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม: แหล่งศิลปกรรมอันควรอนุรักษ์"
+  },
+  "address": {
+    "line_th": "ใกล้สี่แยกหมอพิทักษ์",
+    "subdistrict": "บางไทร",
+    "district": "ตะกั่วป่า",
+    "province": "พังงา",
+    "postcode": "82110",
+    "source_url": "https://www.gplace.com/960254"
+  },
+  "contact": {"phone": null, "facebook": null, "website": null, "line": null, "source_url": null},
+  "visit": {
+    "opening_hours_th": null,
+    "opening_hours_status": "UNKNOWN",
+    "admission_fee_th": null,
+    "admission_status": "UNKNOWN",
+    "best_time_th": null,
+    "duration_minutes": null,
+    "parking_th": null,
+    "restroom": null,
+    "wheelchair_th": null,
+    "dress_code_th": null,
+    "source_urls": ["https://www.gplace.com/960254"]
+  },
+  "getting_there": [
+    {"from": "ตัวเมืองตะกั่วป่า", "text_th": "ตั้งอยู่ในย่านเมืองเก่าตะกั่วป่า ใกล้สี่แยกหมอพิทักษ์; แหล่งที่เปิดอ่านไม่ระบุเส้นทางหรือระยะทางจากจุดเริ่มต้นอย่างเป็นทางการ", "distance_km": null, "source_url": "https://www.gplace.com/960254"},
+    {"from": "ภูเก็ต", "text_th": null, "distance_km": null, "source_url": ""},
+    {"from": "เขาหลัก", "text_th": null, "distance_km": null, "source_url": ""},
+    {"from": "สนามบิน", "text_th": null, "distance_km": null, "source_url": ""}
+  ],
+  "history": [
+    {"claim_th": "เป็นบ้านพักอาศัยของ ร.อ.ท. ขุนอินทรคีรี (ช้อย ณ นคร)", "status": "CONFIRMED", "quote": "บ้านโบราณอยู่อาศัยของ ร.อ.ท. ขุนอินทรคีรี (ช้อย ณ นคร)", "source_name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม", "source_url": "https://culturalenvi.onep.go.th/site/detail/4423", "year_be": null, "year_ce": null},
+    {"claim_th": "อาคารเป็นสถาปัตยกรรมชิโนโปรตุกีสแบบประยุกต์ สร้างโดยช่างชาวจีน และมีสองชั้น", "status": "UNVERIFIED", "quote": "อาคารสองชั้น สถาปัตยกรรมชิโนโปรตุกีสแบบประยุกต์ที่สร้างโดยช่างชาวจีน", "source_name": "Gplace", "source_url": "https://www.gplace.com/960254", "year_be": null, "year_ce": null},
+    {"claim_th": "มีแหล่งข้อมูลท้องถิ่นระบุว่าสร้างขึ้นประมาณ พ.ศ. 2460", "status": "UNVERIFIED", "quote": "สร้างขึ้นประมาณ พ.ศ.2460", "source_name": "Gplace", "source_url": "https://www.gplace.com/960254", "year_be": 2460, "year_ce": 1917},
+    {"claim_th": "มีแหล่งข้อมูลหนึ่งระบุที่ตั้งตำบลตะกั่วป่า ขณะที่อีกแหล่งระบุว่าตำบลบางไทร จึงยังยืนยันตำบลไม่ได้", "status": "DISPUTED", "quote": "ตำบลตะกั่วป่า" , "source_name": "ONEP และ Gplace", "source_url": "https://culturalenvi.onep.go.th/site/detail/4423", "year_be": null, "year_ce": null},
+    {"claim_th": "แหล่งข้อมูลการท่องเที่ยวของชุมชนจัดบ้านขุนอินทร์ไว้ในกลุ่มโบราณสถาน/อาคารเก่าของเมืองตะกั่วป่า", "status": "CONFIRMED", "quote": "บ้านขุนอินทร์ ถนนสายวัฒนธรรม", "source_name": "ศูนย์มานุษยวิทยาสิรินธร (ฐานข้อมูลชุมชน)", "source_url": "https://wikicommunity.sac.or.th/community/951", "year_be": null, "year_ce": null}
+  ],
+  "highlights": [
+    {"title_th": "อาคารสองชั้น", "detail_th": "รูปทรงอาคารสองชั้นเป็นองค์ประกอบที่เห็นได้จากภายนอก", "source_url": "https://www.gplace.com/960254"},
+    {"title_th": "ชิโนโปรตุกีสแบบประยุกต์", "detail_th": "การผสมศิลปะตะวันตกและตะวันออกในรูปแบบชิโนโปรตุกีสประยุกต์", "source_url": "https://tatmediaassets.com/file/1097133"},
+    {"title_th": "บ้านประวัติศาสตร์ของขุนอินทรคีรี", "detail_th": "เป็นบ้านพักอาศัยของบุคคลสำคัญที่ฐานข้อมูล ONEP ระบุชื่อไว้", "source_url": "https://culturalenvi.onep.go.th/site/detail/4423"},
+    {"title_th": "บริบทเมืองเก่าตะกั่วป่า", "detail_th": "อยู่ในย่านเมืองเก่าที่มีอาคารและแหล่งวัฒนธรรมหลายแห่ง", "source_url": "https://wikicommunity.sac.or.th/community/951"}
+  ],
+  "festival": {"months_th": null, "lunar_calendar_th": null, "activities_th": [], "venue_th": null, "source_urls": []},
+  "nearby": [
+    {"name_th": "วัดเสนานุชรังสรรค์", "walk_minutes": null, "source_url": "https://www.gplace.com/960254"},
+    {"name_th": "เมืองเก่าตะกั่วป่า", "walk_minutes": null, "source_url": "https://www.gplace.com/960254"},
+    {"name_th": "จวนเจ้าเมืองตะกั่วป่า", "walk_minutes": null, "source_url": "https://www.gplace.com/960254"},
+    {"name_th": "วัดคีรีเขต", "walk_minutes": null, "source_url": "https://www.gplace.com/960254"}
+  ],
+  "photos": [
+    {"url": "https://tatmediaassets.com/file/1097133", "caption_th": "ภาพตึกขุนอินทร์/บ้านขุนอินทร์", "source_name": "TAT Media Assets", "license_note_th": "ไม่ทราบสิทธิ์การใช้งาน"}
+  ],
+  "seo_keywords_th": ["บ้านขุนอินทร์", "ตึกขุนอินทร์", "บ้านขุนอินทร์ ตะกั่วป่า", "ตึกขุนอินทร์ พังงา", "เมืองเก่าตะกั่วป่า", "ชิโนโปรตุกีส ตะกั่วป่า", "โบราณสถานตะกั่วป่า", "เที่ยวตะกั่วป่า", "ขุนอินทรคีรี"],
+  "seo_keywords_en": ["Khun In House", "Khun Intra Building", "Khun In House Takua Pa", "Sino-Portuguese Takua Pa", "Takua Pa heritage", "Takua Pa old town"],
+  "unknowns": ["เวลาเปิด-ปิดที่แน่นอน: แหล่งข้อมูลระบุเพียงว่าไม่ทราบเวลาเปิดปิด", "ค่าเข้าชม", "เบอร์โทรศัพท์ เพจเฟซบุ๊ก เว็บไซต์ และ LINE ทางการ", "เส้นทางและระยะทางจากภูเก็ต เขาหลัก และสนามบิน", "ปีสร้างและผู้สร้างที่ยืนยันจากแหล่งทางการ/วิชาการ", "บทบาทเฉพาะของบ้านหลังนี้ในยุคเหมืองแร่ดีบุก", "การขึ้นทะเบียนเป็นโบราณสถานของกรมศิลปากร", "ที่จอดรถ ห้องน้ำ และการเข้าถึงสำหรับผู้สูงอายุ/รถเข็น", "เทศกาลหรือกิจกรรมที่จัด ณ บ้านขุนอินทร์โดยตรง", "ระยะเวลาเดินถึงของสถานที่ใกล้เคียง"],
+  "sources": [
+    {"name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม: ตึกขุนอินทร์", "url": "https://culturalenvi.onep.go.th/site/detail/4423", "type": "official", "accessed": "2026-09-07"},
+    {"name": "การท่องเที่ยวแห่งประเทศไทย: TAT Media Assets", "url": "https://tatmediaassets.com/file/1097133", "type": "official", "accessed": "2026-09-07"},
+    {"name": "ศูนย์มานุษยวิทยาสิรินธร: เมืองตะกั่วป่า", "url": "https://wikicommunity.sac.or.th/community/951", "type": "academic", "accessed": "2026-09-07"},
+    {"name": "Gplace: ตึกขุนอินทร์ ตะกั่วป่า พังงา", "url": "https://www.gplace.com/960254", "type": "blog", "accessed": "2026-09-07"}
+  ],
+  "researched_by": "codex gpt-5.6-luna",
+  "researched_on": "2026-09-07"
+}

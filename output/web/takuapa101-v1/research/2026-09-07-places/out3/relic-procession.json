@@ -1,0 +1,43 @@
+{
+  "id": "relic-procession",
+  "photos": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Takua_Pa,_Takua_Pa_District,_Phang-nga,_Thailand_-_panoramio_(1).jpg?width=1600",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Takua_Pa,_Takua_Pa_District,_Phang-nga,_Thailand_-_panoramio_(1).jpg",
+      "license": "CC BY-SA 3.0",
+      "license_verdict": "USABLE",
+      "attribution_th": "mohigan / Wikimedia Commons, CC BY-SA 3.0",
+      "caption_th": "ภาพบรรยากาศในอำเภอตะกั่วป่า จังหวัดพังงา ใช้ประกอบบริบทพื้นที่จัดประเพณีแห่พระบรมสารีริกธาตุ",
+      "era": "current",
+      "width": 4608,
+      "height": 3456,
+      "http_status": 200
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Takua_Pa,_Takua_Pa_District,_Phang-nga,_Thailand_-_panoramio.jpg?width=1600",
+      "page_url": "https://commons.wikimedia.org/wiki/File:Takua_Pa,_Takua_Pa_District,_Phang-nga,_Thailand_-_panoramio.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_verdict": "USABLE",
+      "attribution_th": "mohigan / Wikimedia Commons, CC BY-SA 3.0",
+      "caption_th": "ภาพบรรยากาศในอำเภอตะกั่วป่า จังหวัดพังงา สำหรับสื่อประกอบบริบทเมืองเก่าตะกั่วป่าและเส้นทางไปวัดลุ่ม",
+      "era": "current",
+      "width": 4084,
+      "height": 3067,
+      "http_status": 200
+    }
+  ],
+  "searched_queries": [
+    "Takua Pa",
+    "Phang Nga temple",
+    "Takua Pa old town",
+    "Phra That Khiri Khet Temple",
+    "Wat Lum Takua Pa",
+    "Khao Phra Bat Takua Pa",
+    "relic procession Takua Pa",
+    "วัดพระธาตุคีรีเขต",
+    "วัดลุ่ม ตะกั่วป่า",
+    "ขบวนแห่พระบรมสารีริกธาตุ ตะกั่วป่า"
+  ],
+  "notes_th": "ค้น Wikimedia Commons ด้วยคำค้นไทย/อังกฤษ 10 แบบ รวมชื่อวัด ชื่อเขา ตะกั่วป่า เมืองเก่า พังงา และขบวนแห่; ตรวจหน้าลิขสิทธิ์ Commons จริงแล้วพบภาพที่ใช้ได้ 2 ภาพจาก Panoramio โดยระบุ CC BY-SA 3.0 และผู้ถ่าย mohigan. ไม่พบภาพที่ยืนยันว่าเป็นขบวนแห่พระบรมสารีริกธาตุหรือวัดพระธาตุคีรีเขตโดยตรง จึงไม่ใส่ภาพจากหน่วยงานราชการ/ข่าวที่ไม่มีใบอนุญาตเปิดชัดเจน. ทดสอบ URL ไฟล์ทั้งสองด้วย curl -I -L ได้ HTTP 200 และ content-type image/jpeg.",
+  "researched_on": "2026-09-07"
+}

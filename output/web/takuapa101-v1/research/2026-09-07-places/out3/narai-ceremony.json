@@ -1,0 +1,16 @@
+{
+  "id": "narai-ceremony",
+  "photos": [],
+  "searched_queries": [
+    "narai ceremony Takuapa",
+    "Phra Narai Takuapa",
+    "Takua Pa Phang Nga",
+    "Takua Pa old town",
+    "Phang Nga temple",
+    "สวนสาธารณะอุทยานพระนารายณ์",
+    "งานบวงสรวงพระนารายณ์ ตะกั่วป่า",
+    "Narai Park Takuapa"
+  ],
+  "notes_th": "ค้น Wikimedia Commons ด้วยคำค้นไทย/อังกฤษและคำค้นกว้างครบ 8 แบบ รวมถึงตรวจหน้าภาพ Commons ที่เกี่ยวข้องกับ Takua Pa และ Bang Muang ซึ่งบางหน้าระบุ CC BY-SA 3.0 ชัดเจน แต่ไม่พบภาพพิธีบวงสรวงหรือเทวรูปพระนารายณ์โดยตรง และการยืนยัน URL ไฟล์ภาพด้วย curl/HTTP HEAD ถูก Wikimedia ตอบกลับ 429 Too Many Requests จึงไม่ใส่ภาพใดเพื่อไม่ฝ่าฝืนเกณฑ์ที่ต้องยืนยัน HTTP 200 และ Content-Type เป็นภาพก่อนใช้จริง ควรลองตรวจซ้ำภายหลังจาก IP ที่ไม่ถูก rate-limit; แหล่งราชการ m-culture.in.th และ ThaiPR.NET พบข้อมูลกิจกรรมแต่ไม่พบภาพที่มีเงื่อนไขลิขสิทธิ์เปิดชัดเจนในผลการค้นหานี้",
+  "researched_on": "2026-09-07"
+}

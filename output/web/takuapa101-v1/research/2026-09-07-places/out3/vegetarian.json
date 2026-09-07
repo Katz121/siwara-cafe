@@ -1,0 +1,47 @@
+{
+ "id": "vegetarian",
+ "photos": [
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Takua_Pa%2C_Takua_Pa_District%2C_Phang-nga%2C_Thailand_-_panoramio_%281%29.jpg/1280px-Takua_Pa%2C_Takua_Pa_District%2C_Phang-nga%2C_Thailand_-_panoramio_%281%29.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Takua_Pa,_Takua_Pa_District,_Phang-nga,_Thailand_-_panoramio_(1).jpg",
+   "license": "CC BY-SA 3.0",
+   "license_verdict": "NO",
+   "attribution_th": "mohigan / Wikimedia Commons, CC BY-SA 3.0",
+   "caption_th": "ภาพบริบทเมืองตะกั่วป่า อำเภอตะกั่วป่า จังหวัดพังงา (ไม่ใช่ภาพพิธีกินผักโดยตรง)",
+   "era": "current",
+   "width": 1280,
+   "height": 960,
+   "http_status": 200,
+   "reject_reason_th": "ภาพเดียวกันถูกใช้แล้วที่ ruler-ceremony"
+  },
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/1/12/Takua_Pa%2C_Takua_Pa_District%2C_Phang-nga%2C_Thailand_-_panoramio.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Takua_Pa,_Takua_Pa_District,_Phang-nga,_Thailand_-_panoramio.jpg",
+   "license": "CC BY-SA 3.0",
+   "license_verdict": "NO",
+   "attribution_th": "mohigan / Wikimedia Commons, CC BY-SA 3.0",
+   "caption_th": "ภาพเมืองตะกั่วป่า อำเภอตะกั่วป่า จังหวัดพังงา ใช้เป็นภาพบริบทประเพณี (ไม่ใช่ภาพพิธีโดยตรง)",
+   "era": "current",
+   "width": 4084,
+   "height": 3067,
+   "http_status": 200,
+   "reject_reason_th": "ภาพเดียวกันถูกใช้แล้วที่ culture-street"
+  }
+ ],
+ "searched_queries": [
+  "Takua Pa",
+  "Takuapa",
+  "Phang Nga temple",
+  "Takua Pa old town",
+  "ตะกั่วป่า",
+  "กินเจ ตะกั่วป่า",
+  "Takua Pa Vegetarian Festival",
+  "Nine Emperor Gods Takua Pa",
+  "site:commons.wikimedia.org กินเจ ตะกั่วป่า",
+  "site:commons.wikimedia.org Vegetarian Festival Thailand",
+  "site:commons.wikimedia.org Nine Emperor Gods Festival Thailand",
+  "site:commons.wikimedia.org Takua Pa festival"
+ ],
+ "notes_th": "ค้น Wikimedia Commons ด้วยคำค้นอย่างน้อย 12 แบบ รวมชื่อไทย/อังกฤษ ชื่ออำเภอ เมืองเก่า วัดพังงา และเทศกาลกินผัก; ตรวจหมวด Takua Pa District และหน้าลิขสิทธิ์ไฟล์จริงแล้ว พบภาพที่ระบุพื้นที่ตะกั่วป่าและมีใบอนุญาต CC BY-SA 3.0 จำนวน 2 ภาพ แต่ยังไม่พบภาพที่ยืนยันว่าเป็นพิธีกินผักตะกั่วป่าโดยตรง. แหล่งวิกิพีเดีย/วิกิดาตาและการค้นเว็บไม่พบภาพตรงพร้อมใบอนุญาตเปิดที่ยืนยันได้. URL ภาพทั้งสองตรวจด้วย curl แล้วได้ HTTP 200 และ content-type image/jpeg; ภาพแรกใช้ thumbnail 1280px เนื่องจากการเรียกไฟล์ต้นฉบับถูก Wikimedia จำกัดชั่วคราว.",
+ "researched_on": "2026-09-07"
+}

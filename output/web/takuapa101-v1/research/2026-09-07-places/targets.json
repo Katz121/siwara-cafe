@@ -1,0 +1,272 @@
+[
+ {
+  "id": "wat-boromthat",
+  "type": "place",
+  "category": "temple",
+  "name_th": "วัดบรมธาตุคีรีเขต (วัดลุ่ม)",
+  "name_en": "Wat Boromthat Khiri Khet",
+  "brochure_facts": [
+   "มีพระบรมสารีริกธาตุประดิษฐานอยู่ และเป็นสถานที่สำคัญทางศรัทธา"
+  ]
+ },
+ {
+  "id": "wat-khuha",
+  "type": "place",
+  "category": "temple",
+  "name_th": "วัดคุหาภิมุข (วัดควนถ้ำ)",
+  "name_en": "Wat Khuha Phimuk",
+  "brochure_facts": [
+   "เอกสารกล่าวถึงอุโบสถขนาดเล็กและลักษณะสถาปัตยกรรม"
+  ]
+ },
+ {
+  "id": "wat-pathum",
+  "type": "place",
+  "category": "temple",
+  "name_th": "วัดปทุมธารา (วัดหน้าเมือง)",
+  "name_en": "Wat Pathum Thara",
+  "brochure_facts": [
+   "โบสถ์เก่าและเรื่องการขนส่งทางน้ำเชื่อมสถานที่นี้กับประวัติการค้าของเมือง"
+  ]
+ },
+ {
+  "id": "wat-kongkha",
+  "type": "place",
+  "category": "temple",
+  "name_th": "วัดคงคาภิมุข (วัดคงคา)",
+  "name_en": "Wat Kongkha Phimuk",
+  "brochure_facts": [
+   "มีอุโบสถแบบปักษ์ใต้ซึ่งเอกสารระบุว่าเป็นโบราณสถาน"
+  ]
+ },
+ {
+  "id": "wat-nikorn",
+  "type": "place",
+  "category": "temple",
+  "name_th": "วัดนิกรวราราม (วัดย่านยาว)",
+  "name_en": "Wat Nikornwararam",
+  "brochure_facts": [
+   "เอกสารเชื่อมวัดกับชุมชนและเหตุการณ์สึนามิ พ.ศ. 2547"
+  ]
+ },
+ {
+  "id": "wat-sena",
+  "type": "place",
+  "category": "temple",
+  "name_th": "วัดเสนานุชรังสรรค์ (วัดใหม่)",
+  "name_en": "Wat Sena Nuch Rangsan",
+  "brochure_facts": [
+   "สถาปัตยกรรมอุโบสถมีองค์ประกอบจีนและสะท้อนวัฒนธรรมไทย-จีน"
+  ]
+ },
+ {
+  "id": "museum",
+  "type": "place",
+  "category": "museum",
+  "name_th": "พิพิธภัณฑ์เสนานุชรังสรรค์ชุมชนตะกั่วป่า",
+  "name_en": "Takua Pa Community Museum",
+  "brochure_facts": [
+   "รวบรวมเรื่องศาสนา ศิลปะ และการค้าของท้องถิ่น"
+  ]
+ },
+ {
+  "id": "guan-yu",
+  "type": "place",
+  "category": "shrine",
+  "name_th": "ศาลเจ้าพ่อกวนอู ซิ่นไช่ตึ๋ง",
+  "name_en": "Guan Yu / Sin Chai Tung Shrine",
+  "brochure_facts": [
+   "ศาลเจ้าที่สัมพันธ์กับความเชื่อในเทพกวนอูและชุมชนการค้า"
+  ]
+ },
+ {
+  "id": "pun-thao",
+  "type": "place",
+  "category": "shrine",
+  "name_th": "ศาลเจ้าปุนเถ่ากงอ๊า",
+  "name_en": "Pun Thao Kong A Shrine",
+  "brochure_facts": [
+   "เอกสารกล่าวถึงศาลเจ้าในย่านท่าเรือเก่าของตะกั่วป่า"
+  ]
+ },
+ {
+  "id": "kue-chai",
+  "type": "place",
+  "category": "shrine",
+  "name_th": "ศาลเจ้ากู่ใช่ตึ๋ง",
+  "name_en": "Kue Chai Tung Shrine",
+  "brochure_facts": [
+   "เอกสารกล่าวถึงการขอพรด้านสุขภาพและโชคลาภ"
+  ]
+ },
+ {
+  "id": "rong-jae",
+  "type": "place",
+  "category": "shrine",
+  "name_th": "โรงเจในสวน",
+  "name_en": "The Shrine in the Garden",
+  "brochure_facts": [
+   "สถานที่ที่เอกสารเชื่อมกับประเพณีจีนและการสืบทอดวัฒนธรรม"
+  ]
+ },
+ {
+  "id": "phra-narai",
+  "type": "place",
+  "category": "park",
+  "name_th": "สวนสาธารณะพระนารายณ์",
+  "name_en": "Phra Narai Park",
+  "brochure_facts": [
+   "สวนในพื้นที่เทศบาลที่มีเรื่องราวเกี่ยวกับองค์พระนารายณ์"
+  ]
+ },
+ {
+  "id": "thung-phra",
+  "type": "place",
+  "category": "park",
+  "name_th": "สวนสาธารณะทุ่งพระโพธิ์",
+  "name_en": "Thung Phra Pho Park",
+  "brochure_facts": [
+   "เอกสารกล่าวถึงซากหม้อไอน้ำเรือกลไฟซึ่งโยงกับการค้าในอดีต"
+  ]
+ },
+ {
+  "id": "riverwalk",
+  "type": "place",
+  "category": "market",
+  "name_th": "ตลาดริมน้ำตะกั่วป่า",
+  "name_en": "Takuapa Riverwalk",
+  "brochure_facts": [
+   "พื้นที่ตลาดริมแม่น้ำที่มีสินค้าและอาหารท้องถิ่น"
+  ]
+ },
+ {
+  "id": "culture-street",
+  "type": "place",
+  "category": "street",
+  "name_th": "ถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า",
+  "name_en": "Takua Pa Culture Street",
+  "brochure_facts": [
+   "ย่านถนนคนเดินที่เชื่อมอาคารเก่า อาหาร และวิถีท้องถิ่น"
+  ]
+ },
+ {
+  "id": "iron-bridge",
+  "type": "place",
+  "category": "heritage",
+  "name_th": "สะพานเหล็กบุญสูง",
+  "name_en": "Boon Soong Iron Bridge",
+  "brochure_facts": [
+   "สะพานมีความเกี่ยวข้องกับการเดินทางและการขนส่งในยุคเหมืองแร่"
+  ]
+ },
+ {
+  "id": "governor-wall",
+  "type": "place",
+  "category": "heritage",
+  "name_th": "กำแพงจวนเจ้าเมืองตะกั่วป่า",
+  "name_en": "Governor’s Residence Wall",
+  "brochure_facts": [
+   "กำแพงเก่าเชื่อมกับประวัติการปกครองและความขัดแย้งในอดีต"
+  ]
+ },
+ {
+  "id": "khun-in",
+  "type": "place",
+  "category": "heritage",
+  "name_th": "บ้านขุนอินทร์",
+  "name_en": "Khun In House",
+  "brochure_facts": [
+   "บ้านที่เอกสารอธิบายว่ามีสถาปัตยกรรมชิโน-ยูโรเปียนและสะท้อนความรุ่งเรืองในอดีต"
+  ]
+ },
+ {
+  "id": "tao-ming",
+  "type": "place",
+  "category": "heritage",
+  "name_th": "โรงเรียนเต้าหมิง",
+  "name_en": "Tao Ming School",
+  "brochure_facts": [
+   "เกิดจากความร่วมมือของชาวจีนในตะกั่วป่าเพื่อการเรียนภาษาและวัฒนธรรมจีน"
+  ]
+ },
+ {
+  "id": "new-year-alms",
+  "type": "event",
+  "category": "tradition",
+  "name_th": "ตักบาตรยามรุ่ง รับอรุณปีใหม่",
+  "name_en": "",
+  "brochure_facts": [
+   "เป็นกิจกรรมที่ปรากฏในหมวดกิจกรรมและประเพณีของเอกสาร"
+  ]
+ },
+ {
+  "id": "narai-ceremony",
+  "type": "event",
+  "category": "tradition",
+  "name_th": "พิธีบวงสรวงองค์เทวรูปพระนารายณ์และเทพบริวาร",
+  "name_en": "",
+  "brochure_facts": [
+   "เป็นกิจกรรมที่ปรากฏในหมวดกิจกรรมและประเพณีของเอกสาร"
+  ]
+ },
+ {
+  "id": "ruler-ceremony",
+  "type": "event",
+  "category": "tradition",
+  "name_th": "พิธีบวงสรวงเจ้าเมืองตะกั่วป่า",
+  "name_en": "",
+  "brochure_facts": [
+   "เป็นกิจกรรมที่ปรากฏในหมวดกิจกรรมและประเพณีของเอกสาร"
+  ]
+ },
+ {
+  "id": "vegetarian",
+  "type": "event",
+  "category": "tradition",
+  "name_th": "ประเพณีกินผัก (เจี๊ยะกิ๊วอ๋องฉ่าย)",
+  "name_en": "",
+  "brochure_facts": [
+   "เป็นกิจกรรมที่ปรากฏในหมวดกิจกรรมและประเพณีของเอกสาร"
+  ]
+ },
+ {
+  "id": "loy-krathong",
+  "type": "event",
+  "category": "tradition",
+  "name_th": "ลอยกระทง",
+  "name_en": "",
+  "brochure_facts": [
+   "เป็นกิจกรรมที่ปรากฏในหมวดกิจกรรมและประเพณีของเอกสาร"
+  ]
+ },
+ {
+  "id": "chak-phra",
+  "type": "event",
+  "category": "tradition",
+  "name_th": "ประเพณีชักพระ",
+  "name_en": "",
+  "brochure_facts": [
+   "เป็นกิจกรรมที่ปรากฏในหมวดกิจกรรมและประเพณีของเอกสาร"
+  ]
+ },
+ {
+  "id": "relic-procession",
+  "type": "event",
+  "category": "tradition",
+  "name_th": "ขบวนแห่อัญเชิญพระบรมสารีริกธาตุขึ้นเขาพระบาท",
+  "name_en": "",
+  "brochure_facts": [
+   "เป็นกิจกรรมที่ปรากฏในหมวดกิจกรรมและประเพณีของเอกสาร"
+  ]
+ },
+ {
+  "id": "food-center",
+  "type": "place",
+  "category": "food_center",
+  "name_th": "ศูนย์อาหารลานโล่งตะกั่วป่า",
+  "name_en": "Food Center",
+  "brochure_facts": [
+   "เอกสารแนะนำศูนย์อาหารที่รวมอาหารหลายประเภท"
+  ]
+ }
+]

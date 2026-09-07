@@ -1,0 +1,60 @@
+{
+  "id": "riverwalk",
+  "name_th": "ตลาดริมน้ำตะกั่วป่า",
+  "name_en": "Takuapa Riverwalk",
+  "aka": ["ตลาดริมน้ำตะกั่วป่าร่วมใจประชารัฐ", "ตลาดท่าน้ำศรีเมือง", "ตลาดวันเสาร์ตะกั่วป่า"],
+  "geo": {"lat": 8.87157, "lng": 98.35091, "confidence": "medium", "source_url": "https://mapcarta.com/W816145865", "source_name": "Mapcarta (ข้อมูล OpenStreetMap)"},
+  "address": {"line_th": "ถนนศรีตะกั่วป่า/ถนนริมคลอง ข้างวัดย่านยาว", "subdistrict": "ตะกั่วป่า", "district": "ตะกั่วป่า", "province": "พังงา", "postcode": "82110", "source_url": "https://www.gplace.com/960259"},
+  "contact": {"phone": null, "facebook": null, "website": null, "line": null, "source_url": null},
+  "visit": {
+    "opening_hours_th": "วันเสาร์ 15:00–20:00 น.",
+    "opening_hours_status": "UNVERIFIED",
+    "admission_fee_th": "ไม่มีค่าธรรมเนียมการเข้าชม",
+    "admission_status": "UNVERIFIED",
+    "best_time_th": "ช่วงบ่ายถึงเย็นวันเสาร์ โดยตลาดเริ่มคึกคักราว 16:00 น.",
+    "duration_minutes": 20,
+    "parking_th": null,
+    "restroom": null,
+    "wheelchair_th": null,
+    "dress_code_th": null,
+    "source_urls": ["https://www.dit.go.th/FILE/CONTENT_FILE/256202181736250948974.pdf", "https://www.thai-tour.com/place/phangnga/takuapa/4206", "https://www.gplace.com/960259", "https://wanderlog.com/place/details/11412806/takuapa-river-market"]
+  },
+  "getting_there": [
+    {"from": "ตัวเมืองตะกั่วป่า", "text_th": "เดินทางไปย่านริมน้ำ/ถนนศรีตะกั่วป่า บริเวณข้างวัดย่านยาว; แหล่งข้อมูลระบุว่าสามารถใช้รถรับจ้างท้องถิ่นหรือมอเตอร์ไซค์รับจ้างจากสถานีขนส่งตะกั่วป่าได้", "distance_km": null, "source_url": "https://www.gplace.com/960259"},
+    {"from": "ภูเก็ต", "text_th": "ไม่พบเส้นทางหรือระยะทางเฉพาะตลาดจากแหล่งที่อ่านได้", "distance_km": null, "source_url": "https://www.gplace.com/960259"},
+    {"from": "เขาหลัก", "text_th": "ไม่พบเส้นทางหรือระยะทางเฉพาะตลาดจากแหล่งที่อ่านได้", "distance_km": null, "source_url": "https://www.gplace.com/960259"},
+    {"from": "สนามบิน", "text_th": "ไม่พบเส้นทางหรือระยะทางเฉพาะตลาดจากแหล่งที่อ่านได้", "distance_km": null, "source_url": "https://www.gplace.com/960259"}
+  ],
+  "history": [
+    {"claim_th": "ตลาดมีชื่อในโครงการตลาดประชารัฐต้องชมว่า ‘ตลาดริมน้ำตะกั่วป่า ร่วมใจประชารัฐ’ และตั้งอยู่ถนนริมคลองข้างวัดย่านยาว", "status": "CONFIRMED", "quote": "ถนนริมคลอง (ข้างวัดย่านยาว)", "source_name": "กรมการค้าภายใน", "source_url": "https://www.dit.go.th/FILE/CONTENT_FILE/256202181736250948974.pdf", "year_be": 2562, "year_ce": 2019},
+    {"claim_th": "แหล่งท่องเที่ยวออนไลน์ระบุว่าตลาดเชื่อมโยงการท่องเที่ยวทางน้ำและการล่องเรือชมสองฝั่งแม่น้ำตะกั่วป่า", "status": "UNVERIFIED", "quote": "ล่องเรือชมทิวทัศน์สองฝั่งแม่น้ำตะกั่วป่า", "source_name": "Thai-tour", "source_url": "https://www.thai-tour.com/place/phangnga/takuapa/4206", "year_be": null, "year_ce": null},
+    {"claim_th": "ย่านตลาดใหญ่/เมืองเก่าตะกั่วป่าเป็นศูนย์กลางการค้าในยุคเหมืองแร่ และมีอาคารชิโน-โปรตุกีส แต่ยังไม่พบหลักฐานว่าตลาดริมน้ำเองสร้างในปีใดหรือขึ้นทะเบียนโบราณสถาน", "status": "CONFIRMED", "quote": "ศูนย์กลางการค้าในยุคเหมืองแร่", "source_name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม", "source_url": "https://culturalenvi.onep.go.th/index.php/site/detail/4431", "year_be": null, "year_ce": null}
+  ],
+  "highlights": [
+    {"title_th": "อาหารและขนมพื้นบ้าน", "detail_th": "มีแผงจำหน่ายขนมพื้นบ้าน อาหารพื้นเมือง สินค้าโอทอป และของดีเมืองตะกั่วป่า", "source_url": "https://www.thai-tour.com/place/phangnga/takuapa/4206"},
+    {"title_th": "บรรยากาศริมคลอง", "detail_th": "ตลาดตั้งอยู่ติดแนวคลอง/แม่น้ำตะกั่วป่า เหมาะกับการชมวิวริมน้ำและถ่ายภาพ", "source_url": "https://www.gplace.com/960259"},
+    {"title_th": "การแสดงและดนตรี", "detail_th": "รีวิวผู้ใช้ระบุว่ามีดนตรีสดโดยนักเรียนในบางช่วง", "source_url": "https://wanderlog.com/place/details/11412806/takuapa-river-market"},
+    {"title_th": "เชื่อมย่านเมืองเก่า", "detail_th": "อยู่ใกล้ย่านเมืองเก่าตะกั่วป่าและอาคารชิโน-โปรตุกีสของชุมชนตลาดใหญ่", "source_url": "https://wikicommunity.sac.or.th/community/1527"}
+  ],
+  "festival": {"months_th": null, "lunar_calendar_th": null, "activities_th": [], "venue_th": null, "source_urls": []},
+  "nearby": [
+    {"name_th": "วัดย่านยาว (วัดนิกรวราราม)", "walk_minutes": null, "source_url": "https://www.dit.go.th/FILE/CONTENT_FILE/256202181736250948974.pdf"},
+    {"name_th": "ย่านเมืองเก่าตะกั่วป่า/ชุมชนตลาดใหญ่", "walk_minutes": null, "source_url": "https://wikicommunity.sac.or.th/community/1527"},
+    {"name_th": "สถานีขนส่งตะกั่วป่า", "walk_minutes": null, "source_url": "https://mapcarta.com/W816145865"}
+  ],
+  "photos": [],
+  "seo_keywords_th": ["ตลาดริมน้ำตะกั่วป่า", "ตลาดท่าน้ำศรีเมือง", "ตลาดวันเสาร์ตะกั่วป่า", "ตลาดตะกั่วป่า", "ของกินตะกั่วป่า", "อาหารพื้นเมืองตะกั่วป่า", "เมืองเก่าตะกั่วป่า", "ตลาดริมคลองพังงา", "เที่ยวตะกั่วป่า", "ตลาดประชารัฐตะกั่วป่า"],
+  "seo_keywords_en": ["Takuapa Riverwalk", "Takuapa riverside market", "Takuapa Saturday market", "Takua Pa market", "old town Takuapa market", "Phang Nga local market", "Takuapa street food", "Takuapa old town"],
+  "unknowns": ["ไม่พบพิกัดที่ติดป้ายชื่อเฉพาะตลาดริมน้ำ จึงใช้พิกัดตลาด/พื้นที่ใกล้เคียงจาก OpenStreetMap ผ่าน Mapcarta", "ไม่พบเบอร์โทรศัพท์ เพจเฟซบุ๊ก เว็บไซต์ หรือ LINE ทางการของตลาด", "ไม่พบหลักฐานยืนยันปีสร้าง ผู้สร้าง หรือการขึ้นทะเบียนโบราณสถานของตลาด", "ไม่พบข้อมูลยืนยันที่จอดรถ ห้องน้ำ การเข้าถึงสำหรับผู้สูงอายุ/รถเข็น และการแต่งกาย", "ไม่พบเทศกาลเฉพาะตลาดที่ยืนยันได้", "ไม่พบลิงก์รูปภาพทางการที่ระบุสิทธิ์การใช้งาน"],
+  "sources": [
+    {"name": "กรมการค้าภายใน กระทรวงพาณิชย์", "url": "https://www.dit.go.th/FILE/CONTENT_FILE/256202181736250948974.pdf", "type": "official", "accessed": "2026-09-07"},
+    {"name": "Mapcarta (ข้อมูล OpenStreetMap)", "url": "https://mapcarta.com/W816145865", "type": "map", "accessed": "2026-09-07"},
+    {"name": "Thai-tour", "url": "https://www.thai-tour.com/place/phangnga/takuapa/4206", "type": "blog", "accessed": "2026-09-07"},
+    {"name": "Gplace", "url": "https://www.gplace.com/960259", "type": "blog", "accessed": "2026-09-07"},
+    {"name": "ศูนย์มานุษยวิทยาสิรินธร: ชุมชนตลาดใหญ่", "url": "https://wikicommunity.sac.or.th/community/1527", "type": "academic", "accessed": "2026-09-07"},
+    {"name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม", "url": "https://culturalenvi.onep.go.th/index.php/site/detail/4431", "type": "official", "accessed": "2026-09-07"},
+    {"name": "Wanderlog", "url": "https://wanderlog.com/place/details/11412806/takuapa-river-market", "type": "review", "accessed": "2026-09-07"}
+  ],
+  "researched_by": "codex gpt-5.6-luna",
+  "researched_on": "2026-09-07"
+}

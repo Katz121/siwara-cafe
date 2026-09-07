@@ -1,0 +1,55 @@
+{
+  "id": "ruler-ceremony",
+  "name_th": "พิธีบวงสรวงเจ้าเมืองตะกั่วป่า",
+  "name_en": null,
+  "aka": ["พิธีบูชาสักการะเจ้าเมืองตะกั่วป่า"],
+  "geo": {"lat": 8.830904, "lng": 98.366634, "confidence": "high", "source_url": "https://archaeology.sac.or.th/archaeology/874", "source_name": "ศูนย์มานุษยวิทยาสิรินธร (องค์การมหาชน)"},
+  "address": {"line_th": "ถนนอุดมธารา", "subdistrict": "ตะกั่วป่า", "district": "ตะกั่วป่า", "province": "พังงา", "postcode": "82110", "source_url": "https://radiothailand.prd.go.th/th/content/category/detail/id/9/iid/481052"},
+  "contact": {"phone": null, "facebook": null, "website": null, "line": null, "source_url": null},
+  "visit": {
+    "opening_hours_th": "เข้าชมพื้นที่โบราณสถานได้ทุกวัน; ไม่พบเวลาสำหรับตัวพิธี",
+    "opening_hours_status": "CONFIRMED",
+    "admission_fee_th": "ไม่เสียค่าเข้าชมพื้นที่โบราณสถาน",
+    "admission_status": "CONFIRMED",
+    "best_time_th": "ช่วงเช้าของวันที่มีการจัดพิธี; วันจัดเปลี่ยนตามโครงการประจำปี",
+    "duration_minutes": null,
+    "parking_th": null,
+    "restroom": null,
+    "wheelchair_th": null,
+    "dress_code_th": null,
+    "source_urls": ["https://archaeology.sac.or.th/archaeology/874", "https://radiothailand.prd.go.th/th/content/category/detail/id/9/iid/481052"]
+  },
+  "getting_there": [
+    {"from": "ตัวเมืองตะกั่วป่า", "text_th": "จากที่ทำการเทศบาลเมืองตะกั่วป่า ไปตามถนนราษฎร์บำรุง เลี้ยวขวาถนนมนตรี 2 แล้วเลี้ยวซ้ายถนนศรีตะกั่วป่า ตรงประมาณ 260 เมตร พบพื้นที่ทางซ้ายมือ", "distance_km": null, "source_url": "https://archaeology.sac.or.th/archaeology/874"},
+    {"from": "ภูเก็ต", "text_th": "ไม่พบเส้นทางเฉพาะจากภูเก็ตในแหล่งข้อมูลที่อ่านได้", "distance_km": null, "source_url": "https://archaeology.sac.or.th/archaeology/874"},
+    {"from": "เขาหลัก", "text_th": "ไม่พบเส้นทางเฉพาะจากเขาหลักในแหล่งข้อมูลที่อ่านได้", "distance_km": null, "source_url": "https://archaeology.sac.or.th/archaeology/874"},
+    {"from": "สนามบิน", "text_th": "ไม่พบเส้นทางจากสนามบินในแหล่งข้อมูลที่อ่านได้", "distance_km": null, "source_url": "https://archaeology.sac.or.th/archaeology/874"}
+  ],
+  "history": [
+    {"claim_th": "พิธีบวงสรวงเป็นกิจกรรมภาคเช้าของงานส่งเสริมการท่องเที่ยว ‘จากตะโกลา สู่ตะกั่วป่า’ ครั้งที่ 12 และจัดที่จวนเจ้าเมืองตะกั่วป่าในวันที่ 3 มีนาคม 2569", "status": "CONFIRMED", "quote": "ภาคเช้า พิธีบวงสรวงเจ้าเมืองตะกั่วป่า", "source_name": "กรมประชาสัมพันธ์", "source_url": "https://radiothailand.prd.go.th/th/content/category/detail/id/9/iid/481052", "year_be": 2569, "year_ce": 2026},
+    {"claim_th": "ฐานข้อมูลโบราณคดีระบุว่าทุกปีเทศบาลเมืองตะกั่วป่าร่วมกับชุมชนจัดพิธีทำบุญเลี้ยงพระที่จวนเจ้าเมือง ซึ่งเป็นบริบทของพิธีรำลึกสถานที่", "status": "CONFIRMED", "quote": "ในทุกปีเทศบาลเมืองตะกั่วป่าร่วมกับชุมชนในเขตเทศบาลจัดงาน", "source_name": "ศูนย์มานุษยวิทยาสิรินธร (องค์การมหาชน)", "source_url": "https://archaeology.sac.or.th/archaeology/874", "year_be": null, "year_ce": null},
+    {"claim_th": "จวนเจ้าเมืองเดิมตั้งอยู่ใกล้วัดหน้าเมืองในพื้นที่ตลาดใหญ่ และเมืองตะกั่วป่าเฟื่องฟูจากการขุดแร่ โดยเฉพาะตั้งแต่รัชกาลที่ 5", "status": "CONFIRMED", "quote": "เมืองตะกั่วป่ามีความเจริญรุ่งเรืองสูงสุดจากการขุดหาแร่", "source_name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม", "source_url": "https://culturalenvi.onep.go.th/site/detail/4428", "year_be": null, "year_ce": null},
+    {"claim_th": "กำแพงจวนเจ้าเมืองได้รับการประกาศขึ้นทะเบียนโบราณสถานในราชกิจจานุเบกษาเมื่อ 18 ธันวาคม 2539", "status": "CONFIRMED", "quote": "ประกาศขึ้นทะเบียนโบราณสถานและกำหนดเขตที่ดินโบราณสถาน", "source_name": "ศูนย์มานุษยวิทยาสิรินธร (องค์การมหาชน)", "source_url": "https://archaeology.sac.or.th/archaeology/874", "year_be": 2539, "year_ce": 1996},
+    {"claim_th": "กำแพงเป็นโครงสร้างสี่เหลี่ยมผืนผ้า แบ่งพื้นที่เป็นวังหน้า ห้องโถง และวังหลัง; แหล่งข้อมูลไม่ได้ยืนยันสถาปัตยกรรมชิโน-โปรตุกีสของตัวกำแพง", "status": "CONFIRMED", "quote": "ภายในกำแพงแบ่งเป็น 3 ส่วน", "source_name": "ศูนย์มานุษยวิทยาสิรินธร (องค์การมหาชน)", "source_url": "https://archaeology.sac.or.th/archaeology/874", "year_be": null, "year_ce": null}
+  ],
+  "highlights": [
+    {"title_th": "กำแพงโบราณ", "detail_th": "กำแพงส่วนที่สมบูรณ์สูงประมาณ 5 เมตร", "source_url": "https://archaeology.sac.or.th/archaeology/874"},
+    {"title_th": "ผังสามส่วน", "detail_th": "มองเห็นการแบ่งพื้นที่เป็นวังหน้า ห้องโถง และวังหลัง พร้อมช่องประตูเชื่อม", "source_url": "https://archaeology.sac.or.th/archaeology/874"},
+    {"title_th": "ป้ายข้อมูล", "detail_th": "ด้านหน้ามีป้ายประวัติโบราณสถานจากกรมศิลปากรและ ททท.", "source_url": "https://archaeology.sac.or.th/archaeology/874"},
+    {"title_th": "บรรยากาศเมืองเก่า", "detail_th": "อยู่ในย่านเมืองเก่าตะกั่วป่า ใกล้ถนนศรีตะกั่วป่าและตลาดเก่า", "source_url": "https://archaeology.sac.or.th/archaeology/874"}
+  ],
+  "festival": {"months_th": "มีนาคมในปีที่มีโครงการที่พบหลักฐาน (พ.ศ. 2569)", "lunar_calendar_th": null, "activities_th": ["พิธีบวงสรวงเจ้าเมืองตะกั่วป่า", "พิธีเจริญพระพุทธมนต์", "การแสดงศิลปวัฒนธรรม", "จำหน่ายขนมพื้นบ้าน อาหารพื้นเมือง และสินค้าโอทอป"], "venue_th": "จวนเจ้าเมืองตะกั่วป่า ถนนอุดมธารา ตำบลตะกั่วป่า", "source_urls": ["https://radiothailand.prd.go.th/th/content/category/detail/id/9/iid/481052"]},
+  "nearby": [{"name_th": "ตลาดเก่าตะกั่วป่า/ถนนศรีตะกั่วป่า", "walk_minutes": null, "source_url": "https://archaeology.sac.or.th/archaeology/874"}, {"name_th": "ตึกขุนอินทร์", "walk_minutes": null, "source_url": "https://archaeology.sac.or.th/archaeology/874"}],
+  "photos": [],
+  "seo_keywords_th": ["พิธีบวงสรวงเจ้าเมืองตะกั่วป่า", "บวงสรวงเจ้าเมืองตะกั่วป่า", "จวนเจ้าเมืองตะกั่วป่า", "กำแพงจวนเจ้าเมืองตะกั่วป่า", "จากตะโกลา สู่ตะกั่วป่า", "เมืองเก่าตะกั่วป่า", "ประเพณีตะกั่วป่า", "เที่ยวตะกั่วป่า", "ถนนอุดมธารา", "พิธีทำบุญจวนเจ้าเมือง"],
+  "seo_keywords_en": ["Takuapa ruler ceremony", "Takuapa governor residence", "Takuapa old town", "Takuapa old town wall", "Phang Nga cultural festival", "From Takola to Takuapa"],
+  "unknowns": ["ไม่พบชื่อภาษาอังกฤษทางการ", "ไม่พบเบอร์โทรศัพท์ เพจเฟซบุ๊ก เว็บไซต์ หรือ LINE เฉพาะพิธี", "ไม่พบเวลาเปิด-ปิดของตัวพิธี; มีเพียงข้อมูลว่าโบราณสถานเข้าชมได้ทุกวัน", "ไม่พบค่าใช้จ่ายเข้าร่วมพิธีโดยตรง", "ไม่พบข้อมูลยืนยันที่จอดรถ ห้องน้ำ หรือการรองรับรถเข็น", "ไม่พบระยะทางจากภูเก็ต เขาหลัก หรือสนามบินที่มีแหล่งอ้างอิงอ่านได้", "ไม่พบปฏิทินจันทรคติและกำหนดการประจำปีที่ตายตัว", "ไม่พบภาพถ่ายทางการที่มี URL ไฟล์ภาพและเงื่อนไขลิขสิทธิ์ชัดเจน", "ไม่พบปีสร้างและผู้สร้างจวนที่ยืนยันได้จากแหล่งทางการที่อ่านได้"],
+  "sources": [
+    {"name": "ศูนย์มานุษยวิทยาสิรินธร: กำแพงจวนเจ้าเมืองตะกั่วป่า", "url": "https://archaeology.sac.or.th/archaeology/874", "type": "official", "accessed": "2026-09-07"},
+    {"name": "กรมประชาสัมพันธ์: จากตะโกลา สู่ตะกั่วป่า ครั้งที่ 12", "url": "https://radiothailand.prd.go.th/th/content/category/detail/id/9/iid/481052", "type": "news", "accessed": "2026-09-07"},
+    {"name": "สผ.: แหล่งศิลปกรรมอันควรอนุรักษ์ เมืองตะกั่วป่า", "url": "https://culturalenvi.onep.go.th/site/detail/4428", "type": "official", "accessed": "2026-09-07"},
+    {"name": "เทศบาลเมืองตะกั่วป่า: แหล่งท่องเที่ยว", "url": "https://www.takuapacity.go.th/travel", "type": "official", "accessed": "2026-09-07"}
+  ],
+  "researched_by": "codex gpt-5.6-luna",
+  "researched_on": "2026-09-07"
+}

@@ -1,0 +1,43 @@
+{
+ "id": "chak-phra",
+ "photos": [
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Chak_Phra_Festival_Boat_-_Surat_Thani.jpg/1280px-Chak_Phra_Festival_Boat_-_Surat_Thani.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Chak_Phra_Festival_Boat_-_Surat_Thani.jpg",
+   "license": "CC BY-SA 4.0",
+   "license_verdict": "NO",
+   "attribution_th": "AjarnRichard — CC BY-SA 4.0 (Wikimedia Commons)",
+   "caption_th": "เรือพระในประเพณีชักพระ ชุมชนแข่งขันเรือพระที่ตกแต่งสวยงาม (สุราษฎร์ธานี)",
+   "era": "archive",
+   "width": 3648,
+   "height": 2736,
+   "http_status": 200,
+   "reject_reason_th": "ไม่ใช่ภาพตะกั่วป่า/พังงา เป็นภาพจากพื้นที่อื่น"
+  },
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Chak_Phra_Festival_Boat_1_-_Surat_Thani.jpg/1280px-Chak_Phra_Festival_Boat_1_-_Surat_Thani.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Chak_Phra_Festival_Boat_1_-_Surat_Thani.jpg",
+   "license": "CC BY-SA 4.0",
+   "license_verdict": "NO",
+   "attribution_th": "AjarnRichard — CC BY-SA 4.0 (Wikimedia Commons)",
+   "caption_th": "เรือพระในงานประเพณีชักพระ (สุราษฎร์ธานี)",
+   "era": "archive",
+   "width": 6000,
+   "height": 4000,
+   "http_status": 200,
+   "reject_reason_th": "ไม่ใช่ภาพตะกั่วป่า/พังงา เป็นภาพจากพื้นที่อื่น"
+  }
+ ],
+ "searched_queries": [
+  "ประเพณีชักพระ",
+  "ชักพระ พังงา",
+  "ลากพระ พังงา",
+  "Chak Phra Festival",
+  "Takua Pa",
+  "Phang Nga temple",
+  "Takua Pa old town",
+  "Phang Nga Chak Phra"
+ ],
+ "notes_th": "ค้น Wikimedia Commons ด้วยคำค้น 8 แบบ ครอบคลุมชื่อไทย/อังกฤษและคำค้นกว้างตามที่กำหนด รวมทั้งตรวจหมวด Chak phra และหน้าลิขสิทธิ์รายไฟล์แล้ว ไม่พบภาพที่ยืนยันว่าเป็นกิจกรรมในอำเภอตะกั่วป่าโดยตรง ภาพที่ผ่านเกณฑ์เป็นภาพประเพณีชักพระจากสุราษฎร์ธานี ใช้เป็นภาพประกอบลักษณะประเพณีได้ แต่ห้ามบรรยายว่าเป็นภาพจากตะกั่วป่า. ตรวจ URL ภาพแบบ thumbnail ด้วย curl ได้ HTTP 200 และ content-type image/jpeg สำหรับทั้ง 2 รายการ. พบไฟล์ Ruea Phra Bok (Land Monk Boat), Central Nakhon Si เป็น CC0 แต่การตรวจ URL ถูก Wikimedia ตอบ 429 จึงไม่นำเข้าผลลัพธ์ตามกฎเหล็ก.",
+ "researched_on": "2026-09-07"
+}

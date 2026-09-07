@@ -1,0 +1,55 @@
+{
+  "id": "loy-krathong",
+  "name_th": "ลอยกระทง",
+  "name_en": null,
+  "aka": ["ประเพณีลอยกระทง", "งานประเพณีลอยกระทงเมืองตะกั่วป่า"],
+  "geo": {"lat": null, "lng": null, "confidence": "low", "source_url": "https://newweb.dmcr.go.th/detailAll/81026/nws/258", "source_name": "กรมทรัพยากรทางทะเลและชายฝั่ง"},
+  "address": {"line_th": "บริเวณคลองตะกั่วป่า และจุดจัดงานตามที่องค์กรปกครองส่วนท้องถิ่นกำหนด", "subdistrict": null, "district": "ตะกั่วป่า", "province": "พังงา", "postcode": null, "source_url": "https://newweb.dmcr.go.th/detailAll/81026/nws/258"},
+  "contact": {"phone": null, "facebook": null, "website": null, "line": null, "source_url": null},
+  "visit": {
+    "opening_hours_th": null,
+    "opening_hours_status": "UNKNOWN",
+    "admission_fee_th": null,
+    "admission_status": "UNKNOWN",
+    "best_time_th": "ช่วงเทศกาลลอยกระทง โดยวันจัดงานเปลี่ยนตามปฏิทินจันทรคติและประกาศของท้องถิ่น",
+    "duration_minutes": null,
+    "parking_th": null,
+    "restroom": null,
+    "wheelchair_th": null,
+    "dress_code_th": null,
+    "source_urls": ["https://www.takuapacity.go.th/files/com_strategy/2022-12_231dcd9d5169573.pdf", "https://newweb.dmcr.go.th/detailAll/81026/nws/258"]
+  },
+  "getting_there": [
+    {"from": "ตัวเมืองตะกั่วป่า", "text_th": "แหล่งข้อมูลระบุจุดกิจกรรมที่คลองตะกั่วป่าในเขตตำบลตะกั่วป่า แต่ไม่ได้ให้เส้นทางหรือระยะทางเฉพาะจุด", "distance_km": null, "source_url": "https://newweb.dmcr.go.th/detailAll/81026/nws/258"},
+    {"from": "ภูเก็ต", "text_th": "ยังไม่พบแหล่งที่อ่านได้ซึ่งระบุเส้นทางไปยังจุดจัดงานลอยกระทงในตะกั่วป่าโดยตรง", "distance_km": null, "source_url": "https://newweb.dmcr.go.th/detailAll/81026/nws/258"},
+    {"from": "เขาหลัก", "text_th": "ยังไม่พบแหล่งที่อ่านได้ซึ่งระบุเส้นทางไปยังจุดจัดงานลอยกระทงในตะกั่วป่าโดยตรง", "distance_km": null, "source_url": "https://newweb.dmcr.go.th/detailAll/81026/nws/258"},
+    {"from": "สนามบิน", "text_th": "ยังไม่พบแหล่งที่อ่านได้ซึ่งระบุเส้นทางจากสนามบินไปยังจุดจัดงานโดยตรง", "distance_km": null, "source_url": "https://newweb.dmcr.go.th/detailAll/81026/nws/258"}
+  ],
+  "history": [
+    {"claim_th": "เทศบาลเมืองตะกั่วป่าบรรจุการจัดงานประเพณีลอยกระทงไว้ในแผนงานด้านศาสนา วัฒนธรรมและนันทนาการ", "status": "CONFIRMED", "quote": "จัดงานประเพณีลอยกระทง", "source_name": "เทศบาลเมืองตะกั่วป่า", "source_url": "https://www.takuapacity.go.th/files/com_strategy/2022-12_231dcd9d5169573.pdf", "year_be": null, "year_ce": null},
+    {"claim_th": "เอกสารเทศบาลระบุกิจกรรมประกวดทำกระทง การแสดงบนเวที และการจัดนิทรรศการหรือตกแต่งประดับท่าน้ำ", "status": "CONFIRMED", "quote": "กิจกรรมประกวดการทำกระทง", "source_name": "เทศบาลเมืองตะกั่วป่า", "source_url": "https://www.takuapacity.go.th/files/com_strategy/2022-12_231dcd9d5169573.pdf", "year_be": null, "year_ce": null},
+    {"claim_th": "ในปี 2568 มีการจัดกิจกรรมลอยกระทงที่คลองตะกั่วป่า ตำบลตะกั่วป่า และที่คลองบางม่วง ตำบลบางม่วง โดยมีประชาชนร่วมงานจำนวนมาก", "status": "CONFIRMED", "quote": "ประชาชนมาร่วมลอยกระทงจำนวนมาก", "source_name": "กรมทรัพยากรทางทะเลและชายฝั่ง", "source_url": "https://newweb.dmcr.go.th/detailAll/81026/nws/258", "year_be": 2568, "year_ce": 2025},
+    {"claim_th": "ชุมชนตลาดใหญ่ในเมืองตะกั่วป่ามีกิจกรรมลอยกระทงเป็นประจำ เนื่องจากอยู่ใกล้แหล่งน้ำ", "status": "UNVERIFIED", "quote": "งานลอยกระทง ... เกิดกิจกรรมนี้ขึ้นทุกปี", "source_name": "ศูนย์มานุษยวิทยาสิรินธร: ชุมชนตลาดใหญ่", "source_url": "https://wikicommunity.sac.or.th/community/1527", "year_be": null, "year_ce": null}
+  ],
+  "highlights": [
+    {"title_th": "ลอยกระทงริมคลอง", "detail_th": "เห็นพื้นที่ริมน้ำและกิจกรรมลอยกระทงบริเวณคลองตะกั่วป่าหรือจุดที่ท้องถิ่นประกาศจัดงาน", "source_url": "https://newweb.dmcr.go.th/detailAll/81026/nws/258"},
+    {"title_th": "ประกวดทำกระทง", "detail_th": "เอกสารแผนงานเทศบาลระบุกิจกรรมประกวดการทำกระทง", "source_url": "https://www.takuapacity.go.th/files/com_strategy/2022-12_231dcd9d5169573.pdf"},
+    {"title_th": "การแสดงบนเวที", "detail_th": "เอกสารแผนงานเทศบาลระบุการแสดงบนเวทีเป็นส่วนหนึ่งของงาน", "source_url": "https://www.takuapacity.go.th/files/com_strategy/2022-12_231dcd9d5169573.pdf"},
+    {"title_th": "การประดับตกแต่งท่าน้ำ", "detail_th": "เอกสารแผนงานเทศบาลระบุการจัดนิทรรศการหรือตกแต่งประดับท่าน้ำ", "source_url": "https://www.takuapacity.go.th/files/com_strategy/2022-12_231dcd9d5169573.pdf"}
+  ],
+  "festival": {"months_th": "โดยทั่วไปอยู่ในเดือนพฤศจิกายน แต่วันจริงเปลี่ยนตามปฏิทินจันทรคติและประกาศท้องถิ่น", "lunar_calendar_th": "วันเพ็ญ เดือน 12 ตามคติประเพณีไทย; ไม่พบประกาศเฉพาะของตะกั่วป่าสำหรับทุกปี", "activities_th": ["ลอยกระทง", "ประกวดทำกระทง", "การแสดงบนเวที", "นิทรรศการหรือตกแต่งประดับท่าน้ำ"], "venue_th": "คลองตะกั่วป่า ตำบลตะกั่วป่า และบางปีมีจุดที่คลองบางม่วง ตำบลบางม่วง", "source_urls": ["https://www.takuapacity.go.th/files/com_strategy/2022-12_231dcd9d5169573.pdf", "https://newweb.dmcr.go.th/detailAll/81026/nws/258"]},
+  "nearby": [],
+  "photos": [],
+  "seo_keywords_th": ["ลอยกระทง ตะกั่วป่า", "ลอยกระทง พังงา", "ประเพณีลอยกระทงตะกั่วป่า", "งานลอยกระทงคลองตะกั่วป่า", "ลอยกระทงเมืองเก่าตะกั่วป่า", "ลอยกระทงบางม่วง", "เทศกาลลอยกระทงพังงา", "กิจกรรมลอยกระทงตะกั่วป่า"],
+  "seo_keywords_en": ["Loy Krathong Takua Pa", "Loy Krathong Phang Nga", "Takua Pa floating lantern festival", "Takua Pa canal Loy Krathong"],
+  "unknowns": ["ไม่พบพิกัด GPS ของจุดจัดงานที่แน่นอน เพราะกิจกรรมจัดตามจุดริมน้ำและอาจเปลี่ยนตามประกาศรายปี", "ไม่พบที่อยู่เลขที่ ถนนย่อย ตำบล และรหัสไปรษณีย์ของจุดจัดงานเดียว", "ไม่พบเวลาเปิด-ปิด ค่าเข้าชม เบอร์โทร เพจ Facebook เว็บไซต์ หรือ LINE เฉพาะงาน", "ไม่พบระยะทางและรายละเอียดเส้นทางจากตัวเมืองตะกั่วป่า ภูเก็ต เขาหลัก หรือสนามบินที่อ้างอิงจุดจัดงานโดยตรง", "ไม่พบหลักฐานเฉพาะว่าประเพณีนี้มีปีที่สร้าง ผู้สร้าง บทบาทในยุคเหมืองแร่ดีบุก สถาปัตยกรรมชิโน-โปรตุกีส หรือการขึ้นทะเบียนโบราณสถาน", "ไม่พบข้อมูลยืนยันเรื่องที่จอดรถ ห้องน้ำ และการเข้าถึงสำหรับผู้สูงอายุหรือรถเข็น", "ไม่พบสถานที่ใกล้เคียงที่ยืนยันได้ว่าเดินถึงจากจุดจัดงาน", "ไม่พบลิงก์รูปภาพทางการของงานที่อ่านและยืนยันสิทธิ์การใช้งานได้"],
+  "sources": [
+    {"name": "เทศบาลเมืองตะกั่วป่า", "url": "https://www.takuapacity.go.th/files/com_strategy/2022-12_231dcd9d5169573.pdf", "type": "official", "accessed": "2026-09-07"},
+    {"name": "กรมทรัพยากรทางทะเลและชายฝั่ง", "url": "https://newweb.dmcr.go.th/detailAll/81026/nws/258", "type": "official", "accessed": "2026-09-07"},
+    {"name": "ศูนย์มานุษยวิทยาสิรินธร: ชุมชนตลาดใหญ่", "url": "https://wikicommunity.sac.or.th/community/1527", "type": "academic", "accessed": "2026-09-07"},
+    {"name": "สยามรัฐ", "url": "https://siamrath.co.th/n/580947", "type": "news", "accessed": "2026-09-07"},
+    {"name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม: เมืองเก่าตะกั่วป่า", "url": "https://culturalenvi.onep.go.th/site/detail/4428", "type": "official", "accessed": "2026-09-07"}
+  ],
+  "researched_by": "codex gpt-5.6-luna",
+  "researched_on": "2026-09-07"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "khun-in",
+  "photos": [
+    {
+      "url": "https://storage.googleapis.com/tat-prod-thumbnail-small/1097133.jpg",
+      "page_url": "https://tatmediaassets.com/file/1097133",
+      "license": "สงวนสิทธิ์โดยการท่องเที่ยวแห่งประเทศไทย (© Tourism Authority of Thailand, 2022)",
+      "license_verdict": "ASK",
+      "attribution_th": "ภาพ: นายพัทธ์รวินทร์ วาณิชย์สถาพร / Mr. Patrawain Vanichstaporn; แหล่งภาพ: TAT Media Assets; ใช้เมื่อได้รับอนุญาตจาก ททท.",
+      "caption_th": "ภาพตึกขุนอินทร์/บ้านขุนอินทร์ อำเภอตะกั่วป่า จังหวัดพังงา",
+      "era": "current",
+      "width": 6720,
+      "height": 4480,
+      "http_status": 200
+    }
+  ],
+  "searched_queries": [
+    "Khun In House",
+    "บ้านขุนอินทร์",
+    "Khun Intra Building",
+    "Takua Pa",
+    "Takua Pa old town",
+    "Phang Nga temple",
+    "ตะกั่วป่า เมืองเก่า",
+    "Takua Pa heritage",
+    "Commons geosearch รอบพิกัด 8.830732, 98.363340",
+    "Wikipedia ไทย/อังกฤษ และ Wikidata P18 สำหรับบ้านขุนอินทร์/Khun In House",
+    "TAT Media Assets: ตึกขุนอินทร์",
+    "ONEP culturalenvi: ตึกขุนอินทร์"
+  ],
+  "notes_th": "ไม่พบภาพตรงบ้านขุนอินทร์ที่มีใบอนุญาตเปิดชัดเจน (CC BY/CC BY-SA/CC0/PD) จากการค้น Wikimedia Commons ด้วยคำค้นอย่างน้อย 8 แบบ รวมถึงการค้นแบบกว้างและ geosearch รอบพิกัดสถานที่; ไม่พบรายการภาพตรงสถานที่จากวิกิพีเดียหรือ Wikidata P18 และไม่พบภาพ CC ที่ยืนยันได้จากแหล่งค้นต่อเนื่อง. พบภาพตรงสถานที่ 1 ภาพจาก TAT Media Assets หน้า https://tatmediaassets.com/file/1097133 ซึ่งหน้าระบุผู้ผลิตภาพและข้อมูลลิขสิทธิ์ © Tourism Authority of Thailand, 2022 และท้ายหน้าระบุ All rights reserved จึงจัดเป็น ASK ต้องขออนุญาตก่อนใช้. ตรวจ URL ไฟล์ภาพแล้วด้วย curl ได้ HTTP 200 และ Content-Type image/jpeg; ขนาดภาพตาม metadata หน้า TAT คือ 6720 x 4480. ภาพ TAT ที่พบไม่ควรนับเป็นภาพใช้ได้ทันทีตามกฎหมาย. ค้นแหล่งราชการ ONEP, TAT, Gplace และฐานข้อมูลชุมชน SAC เพื่อเทียบข้อมูลสถานที่และสิทธิ์ภาพแล้ว. เส้นทางไฟล์ภาพที่เก็บในผลลัพธ์เป็น thumbnail ของระบบ TAT; การดาวน์โหลดไฟล์ต้นฉบับต้องดำเนินการผ่านระบบ/การอนุญาตของ TAT.",
+  "researched_on": "2026-09-07"
+}

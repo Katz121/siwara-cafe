@@ -1,0 +1,71 @@
+{
+  "id": "thung-phra",
+  "name_th": "สวนสาธารณะทุ่งพระโพธิ์",
+  "name_en": "Thung Phra Pho Park",
+  "aka": ["สวนสาธารณะทุ่งพระโพธิ์", "Thung Phra Pho Public Park"],
+  "geo": {
+    "lat": 8.8293,
+    "lng": 98.36792,
+    "confidence": "medium",
+    "source_url": "https://mapcarta.com/W815944528",
+    "source_name": "Mapcarta (ข้อมูลจาก OpenStreetMap/Wikidata/Wikimedia Commons)"
+  },
+  "address": {
+    "line_th": null,
+    "subdistrict": "ตลาดใหญ่",
+    "district": "ตะกั่วป่า",
+    "province": "พังงา",
+    "postcode": "82110",
+    "source_url": "https://www.shutter.run/7cf42/"
+  },
+  "contact": {"phone": null, "facebook": null, "website": null, "line": null, "source_url": null},
+  "visit": {
+    "opening_hours_th": null,
+    "opening_hours_status": "UNKNOWN",
+    "admission_fee_th": null,
+    "admission_status": "UNKNOWN",
+    "best_time_th": null,
+    "duration_minutes": null,
+    "parking_th": null,
+    "restroom": null,
+    "wheelchair_th": null,
+    "dress_code_th": null,
+    "source_urls": ["https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf"]
+  },
+  "getting_there": [
+    {"from": "ตัวเมืองตะกั่วป่า", "text_th": "อยู่ในเขตเมืองตะกั่วป่า ใกล้วัดหน้าม่วงและกำแพงเมืองเก่า; ใช้แผนที่นำทางไปยังพิกัดที่ระบุ", "distance_km": null, "source_url": "https://mapcarta.com/W815944528"},
+    {"from": "ภูเก็ต", "text_th": "ไม่พบแหล่งที่อ่านได้ซึ่งระบุเส้นทางและระยะทางเฉพาะมายังสวนแห่งนี้", "distance_km": null, "source_url": "https://mapcarta.com/W815944528"},
+    {"from": "เขาหลัก", "text_th": "ไม่พบแหล่งที่อ่านได้ซึ่งระบุเส้นทางและระยะทางเฉพาะมายังสวนแห่งนี้", "distance_km": null, "source_url": "https://mapcarta.com/W815944528"},
+    {"from": "สนามบิน", "text_th": "ไม่พบแหล่งที่อ่านได้ซึ่งระบุเส้นทางและระยะทางเฉพาะมายังสวนแห่งนี้", "distance_km": null, "source_url": "https://mapcarta.com/W815944528"}
+  ],
+  "history": [
+    {"claim_th": "สวนสาธารณะทุ่งพระโพธิ์อยู่ในพื้นที่เมืองเก่าตะกั่วป่าที่อยู่ภายใต้ขอบเขตการควบคุมการก่อสร้างตามเทศบัญญัติ", "status": "CONFIRMED", "quote": "สวนสาธารณะทุ่งพระโพธิ์", "source_name": "ราชกิจจานุเบกษา", "source_url": "https://download.asa.or.th/03media/04law/cba/mb/mb56-png.pdf", "year_be": 2556, "year_ce": 2013},
+    {"claim_th": "เอกสารแผนงานของเทศบาลระบุว่าสวนแห่งนี้มีสวนสุขภาพและสนามเด็กเล่น", "status": "CONFIRMED", "quote": "มีสวนสุขภาพ และสนามเด็กเล่น", "source_name": "เทศบาลเมืองตะกั่วป่า", "source_url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf", "year_be": null, "year_ce": null},
+    {"claim_th": "ไม่พบหลักฐานออนไลน์ที่ยืนยันปีสร้าง ผู้สร้าง บทบาทในยุคเหมืองแร่ดีบุก สถาปัตยกรรมเฉพาะ หรือการขึ้นทะเบียนโบราณสถานของสวน", "status": "UNVERIFIED", "quote": "", "source_name": "การค้นแหล่งข้อมูลที่เปิดอ่านได้", "source_url": "https://www.takuapacity.go.th/travel", "year_be": null, "year_ce": null}
+  ],
+  "highlights": [
+    {"title_th": "สวนสุขภาพ", "detail_th": "เอกสารเทศบาลระบุว่าพื้นที่สวนสาธารณะเทศบาล ซึ่งรวมทุ่งพระโพธิ์ มีสวนสุขภาพ", "source_url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf"},
+    {"title_th": "สนามเด็กเล่น", "detail_th": "เอกสารเทศบาลระบุว่าพื้นที่สวนสาธารณะเทศบาลมีสนามเด็กเล่น", "source_url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf"},
+    {"title_th": "ตำแหน่งในย่านเมืองเก่า", "detail_th": "อยู่ใกล้กำแพงเมืองเก่าและวัดหน้าม่วงตามข้อมูลแผนที่", "source_url": "https://mapcarta.com/W815944528"}
+  ],
+  "festival": {"months_th": "พฤศจิกายนโดยทั่วไป", "lunar_calendar_th": "วันเพ็ญเดือน 12", "activities_th": ["ประกวดกระทง", "ประกวดธิดานพมาศ", "การแสดงบนเวที", "แสง สี เสียง มหรสพ และการละเล่นพื้นบ้าน"], "venue_th": "สวนสาธารณะทุ่งพระโพธิ์", "source_urls": ["https://nced.onep.go.th/opendata/2568/oldtown36_announce/takuapa.pdf"]},
+  "nearby": [
+    {"name_th": "วัดหน้าม่วง", "walk_minutes": 3, "source_url": "https://mapcarta.com/W815944528"},
+    {"name_th": "กำแพงเมืองเก่า", "walk_minutes": 3, "source_url": "https://mapcarta.com/W815944528"},
+    {"name_th": "ศาลเจ้าบุ่งเต่ากง", "walk_minutes": 4, "source_url": "https://mapcarta.com/W815944528"}
+  ],
+  "photos": [],
+  "seo_keywords_th": ["สวนสาธารณะทุ่งพระโพธิ์", "ทุ่งพระโพธิ์ ตะกั่วป่า", "สวนทุ่งพระโพธิ์ พังงา", "ที่เที่ยวตะกั่วป่า", "เมืองเก่าตะกั่วป่า", "ลอยกระทงทุ่งพระโพธิ์", "สวนสุขภาพตะกั่วป่า", "สนามเด็กเล่นตะกั่วป่า"],
+  "seo_keywords_en": ["Thung Phra Pho Park", "Thung Phra Pho Public Park", "Takua Pa park", "Takua Pa old town", "Phang Nga parks"],
+  "unknowns": ["เวลาเปิด-ปิด: ไม่พบประกาศทางการที่ระบุ", "ค่าเข้าชม: ไม่พบข้อมูล", "เบอร์โทร เพจเฟซบุ๊ก เว็บไซต์ และ LINE เฉพาะสวน: ไม่พบ", "ที่อยู่เลขที่/ถนนและการยืนยันรหัสไปรษณีย์เฉพาะจุด: ไม่พบแหล่งปฐมภูมิ", "ปีสร้างและผู้สร้าง: ไม่พบ", "เรื่องซากหม้อไอน้ำเรือกลไฟและความเชื่อมโยงการค้า: พบในข้อมูลตั้งต้นของผู้ใช้เท่านั้น จึงไม่นำมาอ้างเป็นหลักฐาน", "รายละเอียดการเข้าถึงด้วยรถเข็น ที่จอดรถ ห้องน้ำ และเวลาที่เหมาะสม: ไม่พบ", "ไม่พบภาพถ่ายทางการที่ยืนยันสิทธิ์การใช้งาน"],
+  "sources": [
+    {"name": "Mapcarta / OpenStreetMap", "url": "https://mapcarta.com/W815944528", "type": "map", "accessed": "2026-09-07"},
+    {"name": "ราชกิจจานุเบกษา เทศบัญญัติควบคุมอาคารเมืองเก่าตะกั่วป่า", "url": "https://download.asa.or.th/03media/04law/cba/mb/mb56-png.pdf", "type": "official", "accessed": "2026-09-07"},
+    {"name": "เทศบาลเมืองตะกั่วป่า แผนการดำเนินงานด้านสิ่งแวดล้อม", "url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf", "type": "official", "accessed": "2026-09-07"},
+    {"name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม โครงการกำหนดขอบเขตพื้นที่เมืองเก่า", "url": "https://nced.onep.go.th/opendata/2568/oldtown36_announce/takuapa.pdf", "type": "official", "accessed": "2026-09-07"},
+    {"name": "วิทยาลัยการอาชีพตะกั่วป่า", "url": "https://tapc.ac.th/news-detail_137_2191", "type": "official", "accessed": "2026-09-07"},
+    {"name": "MGR Online", "url": "https://mgronline.com/south/detail/9560000124259", "type": "news", "accessed": "2026-09-07"}
+  ],
+  "researched_by": "codex gpt-5.6-luna",
+  "researched_on": "2026-09-07"
+}

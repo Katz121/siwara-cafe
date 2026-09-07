@@ -1,0 +1,121 @@
+{
+  "id": "rong-jae",
+  "name_th": "โรงเจในสวน",
+  "name_en": "The Shrine in the Garden",
+  "aka": ["ศาลเจ้าเซ้งเหล่งเก้ง", "อ๊ามในสวน"],
+  "geo": {
+    "lat": null,
+    "lng": null,
+    "confidence": "low",
+    "source_url": "",
+    "source_name": ""
+  },
+  "address": {
+    "line_th": "ซอยโรงพระ ถนนราษฎร์บำรุง",
+    "subdistrict": "ตะกั่วป่า",
+    "district": "ตะกั่วป่า",
+    "province": "พังงา",
+    "postcode": null,
+    "source_url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf"
+  },
+  "contact": {
+    "phone": null,
+    "facebook": null,
+    "website": null,
+    "line": null,
+    "source_url": null
+  },
+  "visit": {
+    "opening_hours_th": null,
+    "opening_hours_status": "UNKNOWN",
+    "admission_fee_th": null,
+    "admission_status": "UNKNOWN",
+    "best_time_th": "ช่วงเทศกาลกินเจ หากต้องการสัมผัสกิจกรรมและอาหารเจของชุมชน แต่ไม่พบกำหนดการเฉพาะของสถานที่",
+    "duration_minutes": null,
+    "parking_th": null,
+    "restroom": null,
+    "wheelchair_th": null,
+    "dress_code_th": null,
+    "source_urls": [
+      "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf",
+      "https://roijang.com/phangnga/%E0%B9%82%E0%B8%81%E0%B8%AA%E0%B8%B8%E0%B9%89%E0%B8%A2-%E0%B8%82%E0%B8%99%E0%B8%A1%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%ป่า-%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2-2023-12-6/"
+    ]
+  },
+  "getting_there": [],
+  "history": [
+    {
+      "claim_th": "ศาลเจ้าเซ้งเหล่งเก้ง หรือโรงเจในสวน เป็นศาลเจ้าเก่าแก่นับร้อยปี ก่อตั้งโดยนายส้อ เทียนเส้ง ชาวจีนจากโพ้นทะเล",
+      "status": "CONFIRMED",
+      "quote": "ศาลเจ้าเก่าแก่นับร้อยปีก่อตั้งโดยนาย ส้อ เทียนเส้ง",
+      "source_name": "เทศบาลเมืองตะกั่วป่า",
+      "source_url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf",
+      "year_be": null,
+      "year_ce": null
+    },
+    {
+      "claim_th": "หลังสร้างเสร็จ มีการอัญเชิญพระเฉ่งจุ้ยจ้อซือ หรือเจ้าพ่อหยาดน้ําค้าง ซึ่งนำมาจากประเทศจีนมาประดิษฐานที่ศาล และมีความเชื่อเรื่องการรักษาตามแบบจีนโบราณ",
+      "status": "CONFIRMED",
+      "quote": "อัญเชิญพระเฉ่งจุ้ยจ้อซือ หรือเจ้าพ่อหยาดน้ําค้าง",
+      "source_name": "เทศบาลเมืองตะกั่วป่า",
+      "source_url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf",
+      "year_be": null,
+      "year_ce": null
+    }
+  ],
+  "highlights": [
+    {
+      "title_th": "ศาลเจ้าเซ้งเหล่งเก้ง",
+      "detail_th": "ชื่อศาลเจ้าที่เทศบาลระบุคู่กับโรงเจในสวน",
+      "source_url": "https://www.takuacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf"
+    },
+    {
+      "title_th": "พระเฉ่งจุ้ยจ้อซือ",
+      "detail_th": "องค์เทพที่แหล่งเทศบาลระบุว่าอัญเชิญมาจากประเทศจีน",
+      "source_url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf"
+    },
+    {
+      "title_th": "บรรยากาศช่วงเทศกาลกินเจ",
+      "detail_th": "มีแหล่งท่องเที่ยวท้องถิ่นระบุว่ามีการขายขนมโกสุ้ยที่โรงเจในสวนปีละครั้งในช่วงเทศกาลกินเจ",
+      "source_url": "https://roijang.com/phangnga/%E0%B9%82%E0%B8%81%E0%B8%AA%E0%B8%B8%E0%B9%89%E0%B8%A2-%E0%B8%82%E0%B8%99%E0%B8%A1%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8ั่ว%E0%B8%ป่า-%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2-2023-12-6/"
+    }
+  ],
+  "festival": {
+    "months_th": null,
+    "lunar_calendar_th": null,
+    "activities_th": ["ถือศีลกินเจ", "จำหน่ายอาหารและขนมเจของชุมชน"],
+    "venue_th": "โรงเจในสวน",
+    "source_urls": [
+      "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf",
+      "https://roijang.com/phangnga/%E0%B9%82%E0%B8%81%E0%B8%AA%E0%B8%B8%E0%B9%89%E0%B8%A2-%E0%B8%82%E0%B8%99%E0%B8%A1%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87%E0%B8%ตะ%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%ป่า-%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2-2023-12-6/"
+    ]
+  },
+  "nearby": [],
+  "photos": [],
+  "seo_keywords_th": ["โรงเจในสวน", "อ๊ามในสวน", "ศาลเจ้าเซ้งเหล่งเก้ง", "โรงเจ ตะกั่วป่า", "ศาลเจ้าจีน ตะกั่วป่า", "เทศกาลกินเจ ตะกั่วป่า", "พระเฉ่งจุ้ยจ้อซือ", "เที่ยวเมืองเก่าตะกั่วป่า"],
+  "seo_keywords_en": ["Rong Jae Nai Suan", "The Shrine in the Garden", "Seng Leng Keng Shrine", "Takuapa Chinese shrine", "Takuapa vegetarian festival"],
+  "unknowns": [
+    "ไม่พบพิกัด GPS หรือหน้ารายการแผนที่เฉพาะของโรงเจในสวนที่เปิดอ่านและยืนยันได้",
+    "ไม่พบรหัสไปรษณีย์เฉพาะของสถานที่",
+    "ไม่พบเวลาเปิด-ปิด ค่าเข้าชม เบอร์โทรศัพท์ เพจเฟซบุ๊ก เว็บไซต์ หรือ LINE ที่ยืนยันได้",
+    "ไม่พบข้อมูลยืนยันปีที่ก่อสร้างเป็น พ.ศ./ค.ศ. ผู้สร้างในรายละเอียดมากกว่าชื่อที่ปรากฏในเอกสารเทศบาล",
+    "ไม่พบหลักฐานว่าได้รับการขึ้นทะเบียนเป็นโบราณสถาน",
+    "ไม่พบหลักฐานเฉพาะสถานที่เกี่ยวกับบทบาทในยุคเหมืองแร่ดีบุก สถาปัตยกรรมชิโน-โปรตุกีส/จีน การเดินทางพร้อมระยะทาง สิ่งอำนวยความสะดวก การเข้าถึงสำหรับรถเข็น ที่จอดรถ ห้องน้ำ และสถานที่ใกล้เคียงที่เดินถึงได้",
+    "ไม่พบลิงก์รูปภาพทางการของสถานที่"
+  ],
+  "sources": [
+    {
+      "name": "เทศบาลเมืองตะกั่วป่า: แผนการดำเนินงานด้านสิ่งแวดล้อม",
+      "url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf",
+      "type": "official",
+      "accessed": "2026-09-07"
+    },
+    {
+      "name": "หรอยจัง พังงา: โกสุ้ย ขนมพื้นเมืองตะกั่วป่า",
+      "url": "https://roijang.com/phangnga/%E0%B9%82%E0%B8%ก%E0%B8%aa%E0%B8%B8%E0%B9%89%E0%B8%A2-%E0%B8%82%E0%B8%99%E0%B8%A1%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%ป่า-%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2-2023-12-6/",
+      "type": "blog",
+      "accessed": "2026-09-07"
+    }
+  ],
+  "researched_by": "codex gpt-5.6-luna",
+  "researched_on": "2026-09-07"
+}

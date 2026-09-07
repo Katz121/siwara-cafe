@@ -1,0 +1,51 @@
+{
+  "id": "wat-pathum",
+  "name_th": "วัดปทุมธารา (วัดหน้าเมือง)",
+  "name_en": "Wat Pathum Thara",
+  "aka": ["วัดหน้าเมือง", "อุโบสถบ้านหน้าเมือง"],
+  "geo": {"lat": null, "lng": null, "confidence": "low", "source_url": null, "source_name": null},
+  "address": {"line_th": "ถนนอุดมธารา/ถนนหน้าเมือง ชุมชนตลาดใหญ่", "subdistrict": "ตะกั่วป่า", "district": "ตะกั่วป่า", "province": "พังงา", "postcode": "82110", "source_url": "https://www.lovethailand.org/travel/th/68-%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2/7958-%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87.html"},
+  "contact": {"phone": null, "facebook": null, "website": null, "line": null, "source_url": null},
+  "visit": {
+    "opening_hours_th": "ทุกวัน 08.00–17.00 น.", "opening_hours_status": "UNVERIFIED",
+    "admission_fee_th": null, "admission_status": "UNKNOWN",
+    "best_time_th": "ไม่พบคำแนะนำเฉพาะจากแหล่งทางการ; หากต้องการเดินชมเมืองเก่า ถนนสายวัฒนธรรมจัดวันอาทิตย์ช่วงพฤศจิกายน–พฤษภาคม เวลา 15.00–20.00 น.",
+    "duration_minutes": null, "parking_th": null, "restroom": null, "wheelchair_th": null,
+    "dress_code_th": "ไม่พบระเบียบเฉพาะ; เป็นศาสนสถาน ควรแต่งกายสุภาพ", "source_urls": ["https://www.lovethailand.org/travel/th/68-%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2/7958-%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2%E0%B9%80%E0%B8%A1%E0%B8%Bือง.html", "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf"]
+  },
+  "getting_there": [
+    {"from": "ตัวเมืองตะกั่วป่า", "text_th": "เข้าสู่ย่านเมืองเก่าชุมชนตลาดใหญ่ตามถนนอุดมธารา/ถนนหน้าเมือง; ไม่พบระยะทางหรือรายละเอียดเส้นทางที่เป็นทางการ", "distance_km": null, "source_url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf"},
+    {"from": "ภูเก็ต", "text_th": "ไม่พบเส้นทางเฉพาะจากภูเก็ตที่มีแหล่งอ้างอิงอ่านยืนยันได้", "distance_km": null, "source_url": null},
+    {"from": "เขาหลัก", "text_th": "ไม่พบเส้นทางเฉพาะจากเขาหลักที่มีแหล่งอ้างอิงอ่านยืนยันได้", "distance_km": null, "source_url": null},
+    {"from": "สนามบิน", "text_th": "ไม่พบสนามบินต้นทางและเส้นทางเฉพาะที่มีแหล่งอ้างอิงอ่านยืนยันได้", "distance_km": null, "source_url": null}
+  ],
+  "history": [
+    {"claim_th": "อุโบสถมีรูปแบบศิลปะปักษ์ใต้และใช้เสาไม้เป็นแกน", "status": "CONFIRMED", "quote": "รูปแบบศิลปะปักษ์ใต้ เสาไม้เป็นแกน", "source_name": "ศูนย์มานุษยวิทยาสิรินธร: ชุมชนตลาดใหญ่", "source_url": "https://wikicommunity.sac.or.th/community/1527", "year_be": null, "year_ce": null},
+    {"claim_th": "กรมศิลปากรขึ้นทะเบียนอุโบสถเป็นโบราณสถานใน พ.ศ. 2478", "status": "CONFIRMED", "quote": "ขึ้นทะเบียนเป็นโบราณสถานเมื่อปี พ.ศ. 2478", "source_name": "ศูนย์มานุษยวิทยาสิรินธร: ชุมชนตลาดใหญ่", "source_url": "https://wikicommunity.sac.or.th/community/1527", "year_be": 2478, "year_ce": 1935},
+    {"claim_th": "ชุมชนเล่าว่าสร้างโดยท่านท้าว ธิดาพระยาตะกั่วป่า (ม่วง) ใน พ.ศ. 2320", "status": "UNVERIFIED", "quote": "เล่ากันว่าวัดหน้าเมืองแห่งนี้สร้างขึ้นโดยท่านท้าว", "source_name": "เทศบาลเมืองตะกั่วป่า", "source_url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf", "year_be": 2320, "year_ce": 1777},
+    {"claim_th": "บริเวณวัดมีหม้อสตีมไอน้ำจากเรือกลไฟ ซึ่งเชื่อมโยงกับการขนส่งสินค้าและแร่ในลำน้ำตะกั่วป่า", "status": "CONFIRMED", "quote": "หม้อสตีมไอน้ำเรือกลไฟ ... ใช้ ... ขนส่งสินค้า", "source_name": "ศูนย์มานุษยวิทยาสิรินธร: ชุมชนตลาดใหญ่", "source_url": "https://wikicommunity.sac.or.th/community/1527", "year_be": 2410, "year_ce": 1867},
+    {"claim_th": "ยังไม่พบหลักฐานเฉพาะที่ยืนยันว่าอุโบสถมีสถาปัตยกรรมชิโน-โปรตุกีส หรือมีบทบาทโดยตรงในกิจการเหมืองแร่ดีบุก", "status": "UNVERIFIED", "quote": "", "source_name": "ผลการตรวจแหล่งข้อมูลที่อ่านได้", "source_url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf", "year_be": null, "year_ce": null}
+  ],
+  "highlights": [
+    {"title_th": "อุโบสถเก่า", "detail_th": "อาคารโบราณสถานรูปแบบศิลปะปักษ์ใต้ ใช้เสาไม้เป็นแกน", "source_url": "https://wikicommunity.sac.or.th/community/1527"},
+    {"title_th": "หม้อสตีมไอน้ำเรือกลไฟ", "detail_th": "ชิ้นส่วนเรือกลไฟที่สะท้อนการขนส่งสินค้าและแร่ทางลำน้ำในอดีต", "source_url": "https://wikicommunity.sac.or.th/community/1527"},
+    {"title_th": "พระพุทธรูปในอุโบสถเก่า", "detail_th": "งานวิจัยชุมชนระบุว่าพบพระพุทธรูปจำนวนมากประดิษฐานอยู่ภายใน", "source_url": "https://so05.tci-thaijo.org/index.php/parichartjournal/article/download/219292/168797"},
+    {"title_th": "ทำเลเมืองเก่าริมเส้นทางประวัติศาสตร์", "detail_th": "อยู่ในชุมชนตลาดใหญ่ ใกล้แหล่งเมืองเก่าและกำแพงจวนเจ้าเมือง", "source_url": "https://archaeology.sac.or.th/archaeology/874"}
+  ],
+  "festival": {"months_th": null, "lunar_calendar_th": null, "activities_th": [], "venue_th": null, "source_urls": []},
+  "nearby": [{"name_th": "กำแพงจวนเจ้าเมืองตะกั่วป่า", "walk_minutes": null, "source_url": "https://archaeology.sac.or.th/archaeology/874"}, {"name_th": "ถนนสายวัฒนธรรมเมืองตะกั่วป่า", "walk_minutes": null, "source_url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf"}],
+  "photos": [],
+  "seo_keywords_th": ["วัดปทุมธารา", "วัดหน้าเมือง", "วัดหน้าเมืองตะกั่วป่า", "อุโบสถวัดหน้าเมือง", "โบราณสถานตะกั่วป่า", "เมืองเก่าตะกั่วป่า", "หม้อสตีมไอน้ำตะกั่วป่า", "เที่ยวตะกั่วป่า", "วัดเก่าพังงา", "ถนนอุดมธารา"],
+  "seo_keywords_en": ["Wat Pathum Thara", "Wat Na Mueang", "Wat Na Muang Takuapa", "Takuapa old town temple", "historic temple Phang Nga", "Takuapa cultural heritage", "Takuapa tin mining history", "steam boiler Takuapa"],
+  "unknowns": ["ไม่พบพิกัด lat/lng จากแหล่งแผนที่ที่เปิดอ่านยืนยันได้", "ไม่พบเบอร์โทรศัพท์ เพจเฟซบุ๊ก เว็บไซต์ หรือ LINE ทางการ", "ไม่พบค่าเข้าชม ที่จอดรถ ห้องน้ำ และข้อมูลการเข้าถึงสำหรับรถเข็น", "ไม่พบเทศกาลหรือพิธีกรรมที่จัดเฉพาะวัดนี้", "ไม่พบระยะทางและเส้นทางที่มีหลักฐานเฉพาะจากภูเก็ต เขาหลัก หรือสนามบิน", "ไม่พบลิงก์รูปภาพทางการพร้อมข้อมูลสิทธิ์การใช้งาน", "ไม่พบหลักฐานเฉพาะเรื่องผู้สร้างที่ยืนยันได้ทางวิชาการหรือเอกสารกรมศิลปากร; ข้อมูลผู้สร้าง/ปีสร้างเป็นคำบอกเล่าชุมชน"],
+  "sources": [
+    {"name": "เทศบาลเมืองตะกั่วป่า: แผนการดำเนินงานด้านสิ่งแวดล้อม", "url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf", "type": "official", "accessed": "2026-09-07"},
+    {"name": "ศูนย์มานุษยวิทยาสิรินธร: ชุมชนตลาดใหญ่", "url": "https://wikicommunity.sac.or.th/community/1527", "type": "academic", "accessed": "2026-09-07"},
+    {"name": "มหาวิทยาลัยทักษิณ: วารสารปาริชาต", "url": "https://so05.tci-thaijo.org/index.php/parichartjournal/article/download/219292/168797", "type": "academic", "accessed": "2026-09-07"},
+    {"name": "สำนักงานปลัดกระทรวงการท่องเที่ยวและกีฬา: Thailand Tourism Directory", "url": "https://thailandtourismdirectory.go.th/attraction/21764", "type": "official", "accessed": "2026-09-07"},
+    {"name": "LoveThailand: วัดหน้าเมือง", "url": "https://www.lovethailand.org/travel/th/68-%E0%B8%9E%E0%Bังงา/7958-%E0%B8%A7%E0%B8%Bัดหน้าเมือง.html", "type": "blog", "accessed": "2026-09-07"},
+    {"name": "ฐานข้อมูลแหล่งโบราณคดีสำคัญ: กำแพงจวนเจ้าเมืองตะกั่วป่า", "url": "https://archaeology.sac.or.th/archaeology/874", "type": "academic", "accessed": "2026-09-07"}
+  ],
+  "researched_by": "codex gpt-5.6-luna",
+  "researched_on": "2026-09-07"
+}

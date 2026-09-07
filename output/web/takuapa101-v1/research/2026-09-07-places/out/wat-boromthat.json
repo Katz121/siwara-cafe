@@ -1,0 +1,50 @@
+{
+  "id": "wat-boromthat",
+  "name_th": "วัดบรมธาตุคีรีเขต (วัดลุ่ม)",
+  "name_en": "Wat Boromthat Khiri Khet",
+  "aka": ["วัดพระธาตุคีรีเขต", "วัดคีรีเขต", "วัดลุ่ม"],
+  "geo": {"lat": 8.8336680169, "lng": 98.3563150443, "confidence": "high", "source_url": "https://culturalenvi.onep.go.th/site/detail/4413", "source_name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม"},
+  "address": {"line_th": "ถนนกลั่นแก้ว ย่านตลาดเก่า (บริเวณซอยคีรีเขต)", "subdistrict": "ตะกั่วป่า", "district": "ตะกั่วป่า", "province": "พังงา", "postcode": "82110", "source_url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf"},
+  "contact": {"phone": null, "facebook": null, "website": null, "line": null, "source_url": null},
+  "visit": {
+    "opening_hours_th": "ทุกวัน 08.00–17.00 น.", "opening_hours_status": "UNVERIFIED",
+    "admission_fee_th": "ไม่เสียค่าเข้าชม", "admission_status": "UNVERIFIED",
+    "best_time_th": "ช่วงเช้าหรือช่วงบ่ายแก่ (ข้อมูลจากแหล่งท่องเที่ยวรอง)", "duration_minutes": null,
+    "parking_th": null, "restroom": null, "wheelchair_th": null,
+    "dress_code_th": "แต่งกายสุภาพเมื่อเข้าสักการะศาสนสถาน", "source_urls": ["https://www.lovethailand.org/travel/th/68-%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2/7959-%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%98%E0%B8%B2%E0%B8%95%E0%B8%B8%E0%B8%84%E0%B8%B5%E0%B8%A3%E0%B8%B5%E0%B9%80%E0%B8%82%E0%B8%95-%28%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%A5%E0%B8%B8%E0%B9%88%E0%B8%A1%29.html"]
+  },
+  "getting_there": [
+    {"from": "ตัวเมืองตะกั่วป่า", "text_th": "มุ่งสู่ย่านเมืองเก่าตะกั่วป่า แล้วเข้าถนนกลั่นแก้ว/ซอยคีรีเขต", "distance_km": null, "source_url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf"},
+    {"from": "ภูเก็ต", "text_th": "เดินทางเข้าตัวอำเภอตะกั่วป่าก่อน แล้วต่อรถท้องถิ่นหรือรถยนต์เข้าสู่ย่านเมืองเก่า", "distance_km": null, "source_url": "https://www.lovethailand.org/travel/th/68-%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2/7959-%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%98%E0%B8%B2%E0%B8%95%E0%B8%B8%E0%B8%84%E0%B8%B5%E0%B8%A3%E0%B8%B5%E0%B9%80%E0%B8%82%E0%B8%95-%28%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%A5%E0%B8%B8%E0%B9%88%E0%B8%A1%29.html"},
+    {"from": "เขาหลัก", "text_th": "ไม่พบระยะทางหรือเส้นทางเฉพาะที่ยืนยันได้จากแหล่งที่อ่าน", "distance_km": null, "source_url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf"}
+  ],
+  "history": [
+    {"claim_th": "เดิมเป็นที่พักสงฆ์ของพระฝ่ายอรัญวาสี และมีอายุประมาณ 200 ปี", "status": "CONFIRMED", "quote": "เป็นเพียงที่พักสงฆ์ของฝ่ายอรัญวาสี", "source_name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม", "source_url": "https://culturalenvi.onep.go.th/site/detail/4413", "year_be": null, "year_ce": null},
+    {"claim_th": "ชาวบ้านเรียกวัดนี้ว่า ‘วัดลุ่ม’ เพราะตั้งอยู่ในพื้นที่ลาดลุ่ม", "status": "CONFIRMED", "quote": "ชาวบ้านมักเรียก วัดลุ่ม", "source_name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม", "source_url": "https://culturalenvi.onep.go.th/site/detail/4413", "year_be": null, "year_ce": null},
+    {"claim_th": "มีฐานเจดีย์โบราณและต้นไทรขนาดใหญ่งอกขึ้นบนฐาน", "status": "CONFIRMED", "quote": "ฐานเจดีย์ มีไม้ไทรต้นใหญ่งอกขึ้นบนฐาน", "source_name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม", "source_url": "https://culturalenvi.onep.go.th/site/detail/4413", "year_be": null, "year_ce": null},
+    {"claim_th": "มีรอยพระพุทธบาทจำลอง พ่อท่านแก่นรัก และพระพุทธรูปหินหยก", "status": "CONFIRMED", "quote": "ภายในมีรอยพระพุทธบาทจําลอง พ่อท่านแก่นรักศักดิ์สิทธิ์", "source_name": "เทศบาลเมืองตะกั่วป่า", "source_url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf", "year_be": null, "year_ce": null},
+    {"claim_th": "มีประเพณีแห่พระบรมสารีริกธาตุเป็นประจำปีในวันมาฆบูชา", "status": "CONFIRMED", "quote": "จะมีประเพณีแห่พระบรมสารีริกธาตุเป็นประเพณีประจําปีในวันมาฆะบูชา", "source_name": "เทศบาลเมืองตะกั่วป่า", "source_url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf", "year_be": null, "year_ce": null},
+    {"claim_th": "ข้อมูลแหล่งท่องเที่ยวรองระบุว่าอุโบสถคงรูปศิลปะรัตนโกสินทร์ตอนต้น", "status": "UNVERIFIED", "quote": "retains the early Rattanakosin art", "source_name": "Visit Andaman Local", "source_url": "https://visitandamanlocal.com/provinces/destinations/detail.php?id=95", "year_be": null, "year_ce": null}
+  ],
+  "highlights": [
+    {"title_th": "ฐานเจดีย์โบราณกับต้นไทร", "detail_th": "ฐานเจดีย์โบราณที่มีต้นไทรใหญ่ขึ้นอยู่บนฐาน", "source_url": "https://culturalenvi.onep.go.th/site/detail/4413"},
+    {"title_th": "พระบรมสารีริกธาตุ", "detail_th": "เป็นศูนย์รวมศรัทธาสำคัญของชุมชนตามข้อมูลเทศบาล", "source_url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf"},
+    {"title_th": "รอยพระพุทธบาทจำลอง", "detail_th": "ประดิษฐานอยู่ภายในวัด", "source_url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf"},
+    {"title_th": "พ่อท่านแก่นรัก", "detail_th": "สิ่งศักดิ์สิทธิ์ที่เทศบาลระบุว่าเป็นจุดสักการะภายในวัด", "source_url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf"},
+    {"title_th": "พระพุทธรูปหินหยก", "detail_th": "อยู่ด้านหลังพระประธานตามเอกสารเทศบาล", "source_url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf"}
+  ],
+  "festival": {"months_th": "ไม่ระบุเดือนแน่นอน; จัดในวันมาฆบูชา", "lunar_calendar_th": "วันมาฆบูชา", "activities_th": ["แห่พระบรมสารีริกธาตุ"], "venue_th": "วัดพระธาตุคีรีเขตและพื้นที่เมืองเก่าตะกั่วป่า", "source_urls": ["https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf"]},
+  "nearby": [],
+  "photos": [],
+  "seo_keywords_th": ["วัดลุ่ม ตะกั่วป่า", "วัดพระธาตุคีรีเขต", "วัดบรมธาตุคีรีเขต", "พระบรมสารีริกธาตุ ตะกั่วป่า", "วัดเก่าตะกั่วป่า", "เมืองเก่าตะกั่วป่า", "รอยพระพุทธบาทจำลอง ตะกั่วป่า", "พ่อท่านแก่นรัก"],
+  "seo_keywords_en": ["Wat Boromthat Khiri Khet", "Wat Lum Takuapa", "Khiri Khet Temple", "Takuapa old town temple", "Phang Nga temple"],
+  "unknowns": ["ไม่พบเบอร์โทรศัพท์ เพจเฟซบุ๊ก เว็บไซต์ หรือ LINE ที่ยืนยันเป็นช่องทางของวัด", "ไม่พบข้อมูลยืนยันเรื่องผู้สร้างและปีสร้างที่แน่นอน", "ไม่พบหลักฐานยืนยันบทบาทของวัดในยุคเหมืองแร่ดีบุกโดยตรง", "ไม่พบหลักฐานยืนยันการขึ้นทะเบียนโบราณสถานของวัดนี้; เอกสารเทศบาลกล่าวถึงการขึ้นทะเบียนของวัดอื่น", "ไม่พบข้อมูลยืนยันที่จอดรถ ห้องน้ำ และการเข้าถึงสำหรับรถเข็น", "ไม่พบระยะทางจากภูเก็ต เขาหลัก สนามบิน หรือตัวเมืองตะกั่วป่าที่เชื่อถือได้", "ไม่พบลิงก์รูปภาพทางการที่ระบุสิทธิ์การใช้งาน"],
+  "sources": [
+    {"name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม: แหล่งศิลปกรรมอันควรอนุรักษ์", "url": "https://culturalenvi.onep.go.th/site/detail/4413", "type": "official", "accessed": "2026-09-07"},
+    {"name": "เทศบาลเมืองตะกั่วป่า: แผนการดำเนินงานด้านสิ่งแวดล้อม", "url": "https://www.takuapacity.go.th/files/com_news_formdoc/2021-08_35dfd0d7b952500.pdf", "type": "official", "accessed": "2026-09-07"},
+    {"name": "Visit Andaman Local: Takuapa destinations", "url": "https://visitandamanlocal.com/provinces/destinations/detail.php?id=95", "type": "blog", "accessed": "2026-09-07"},
+    {"name": "Love Thailand: วัดพระธาตุคีรีเขต (วัดลุ่ม)", "url": "https://www.lovethailand.org/travel/th/68-%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2/7959-%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%98%E0%B8%B2%E0%B8%95%E0%B8%B8%E0%B8%84%E0%B8%B5%E0%B8%A3%E0%B8%B5%E0%B9%80%E0%B8%82%E0%B8%95-%28%E0%B8%A7%E0%B8%Bัด%E0%B8%A5%E0%B8%B8%E0%B9%88%E0%B8%A1%29.html", "type": "blog", "accessed": "2026-09-07"}
+  ],
+  "researched_by": "codex gpt-5.6-luna",
+  "researched_on": "2026-09-07"
+}

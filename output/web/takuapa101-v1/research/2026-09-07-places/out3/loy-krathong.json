@@ -1,0 +1,56 @@
+{
+ "id": "loy-krathong",
+ "photos": [
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Loy_Krathong_A_Celebration_of_Light_and_Renewal.jpg/1280px-Loy_Krathong_A_Celebration_of_Light_and_Renewal.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Loy_Krathong_A_Celebration_of_Light_and_Renewal.jpg",
+   "license": "CC BY-SA 4.0",
+   "license_verdict": "NO",
+   "attribution_th": "Rockybgonzales — CC BY-SA 4.0 (Wikimedia Commons)",
+   "caption_th": "กระทงลอยในเทศกาลลอยกระทงยามค่ำคืน",
+   "era": "current",
+   "width": 1280,
+   "height": 853,
+   "http_status": 200,
+   "reject_reason_th": "ไม่ใช่ภาพตะกั่วป่า/พังงา เป็นภาพจากพื้นที่อื่น"
+  },
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Thai_people_setting_their_candle-lit_krathongs_in_the_Ping_river_at_night_during_Loy_Krathong_2015-69.jpg/960px-Thai_people_setting_their_candle-lit_krathongs_in_the_Ping_river_at_night_during_Loy_Krathong_2015-69.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:Thai_people_setting_their_candle-lit_krathongs_in_the_Ping_river_at_night_during_Loy_Krathong_2015-69.jpg",
+   "license": "CC BY 2.0",
+   "license_verdict": "NO",
+   "attribution_th": "John Shedrick — CC BY 2.0 (Wikimedia Commons)",
+   "caption_th": "ผู้คนกำลังลอยกระทงที่จุดเทียนในแม่น้ำปิงช่วงเทศกาลลอยกระทง",
+   "era": "archive",
+   "width": 823,
+   "height": 960,
+   "http_status": 200,
+   "reject_reason_th": "ไม่ใช่ภาพตะกั่วป่า/พังงา เป็นภาพจากพื้นที่อื่น"
+  },
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/LK_loy_krathong_yi_peng_san_sai.jpg/960px-LK_loy_krathong_yi_peng_san_sai.jpg",
+   "page_url": "https://commons.wikimedia.org/wiki/File:LK_loy_krathong_yi_peng_san_sai.jpg",
+   "license": "CC BY-SA 3.0",
+   "license_verdict": "NO",
+   "attribution_th": "Takeaway — CC BY-SA 3.0 (Wikimedia Commons)",
+   "caption_th": "บรรยากาศโคมลอยในงานยี่เป็งที่จังหวัดเชียงใหม่ (ภาพประกอบเทศกาล ไม่ใช่ตะกั่วป่า)",
+   "era": "archive",
+   "width": 1024,
+   "height": 959,
+   "http_status": 200,
+   "reject_reason_th": "ไม่ใช่ภาพตะกั่วป่า/พังงา เป็นภาพจากพื้นที่อื่น"
+  }
+ ],
+ "searched_queries": [
+  "ลอยกระทง ตะกั่วป่า",
+  "Loy Krathong Takua Pa",
+  "Takua Pa",
+  "Phang Nga temple",
+  "Takua Pa old town",
+  "Takua Pa festival",
+  "Loy Krathong Phang Nga",
+  "Takua Pa canal"
+ ],
+ "notes_th": "ค้น Wikimedia Commons ครบ 8 คำค้นทั้งไทย/อังกฤษและคำค้นกว้างแล้ว รวมถึงตรวจหน้าลิขสิทธิ์ของภาพที่เลือกจริง พบภาพลอยกระทงที่ใช้ได้ตาม CC 3 ใบ แต่ไม่พบภาพที่ยืนยันได้ว่าถ่ายในงานลอยกระทงตะกั่วป่าโดยตรง จึงระบุคำบรรยายตามสถานที่จริงของภาพและเตือนเมื่อเป็นภาพประกอบต่างพื้นที่; URL ที่บันทึกเป็น thumbnail ของ upload.wikimedia.org และตรวจด้วย curl ได้ HTTP 200, content-type image/jpeg.",
+ "researched_on": "2026-09-07"
+}

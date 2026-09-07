@@ -1,0 +1,2267 @@
+{
+  "schema_version": 1,
+  "title": "Siwara / Takua Pa reusable source library",
+  "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+  "source_sha256": "0986d48a507c0137359fc47d36dd78080c782db8f2388ebc6643f461906aec78",
+  "source_pages": 2,
+  "extracted_on": "2026-09-06",
+  "record_count": 86,
+  "scope": "All descriptive place/event entries and the three business directories; map panels retained separately. No claim that opening times, merchant status, map pins or event dates are current.",
+  "rights_note_internal": "Brochure is a source reference, not a documented blanket license. Generated artwork provenance is retained separately. Source crops are not clean standalone photographs.",
+  "records": [
+    {
+      "id": "wat-boromthat",
+      "type": "place",
+      "category": "temple",
+      "name_th": "วัดบรมธาตุคีรีเขต (วัดลุ่ม)",
+      "name_en": "Wat Boromthat Khiri Khet",
+      "facts_paraphrased": [
+        "มีพระบรมสารีริกธาตุประดิษฐานอยู่ และเป็นสถานที่สำคัญทางศรัทธา"
+      ],
+      "editorial_angle": "มองเมืองผ่านเจดีย์และศรัทธาของผู้คน",
+      "source_page": 2,
+      "source_bbox_normalized": [
+        0.018,
+        0.078,
+        0.324,
+        0.275
+      ],
+      "source_panel": "source/panels/wat-boromthat.png",
+      "source_image": "source/images/wat-boromthat.png",
+      "source_details": {
+        "built_be": 2436
+      },
+      "verification": "read_from_supplied_official_brochure",
+      "image_status": "crop_from_flattened_page; may contain original layout elements; reference only",
+      "reuse_ideas": [
+        "การ์ดสถานที่",
+        "คำอธิบายบนเว็บ",
+        "ชุดเล่าเมือง",
+        "โปสการ์ด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "new individual illustration and card ready",
+      "card_file": "collections/2026-09-06_individual-places-v6/2026-09-06_wat-boromthat.png",
+      "new_illustration_file": "generated/2026-09-06_wat-boromthat-ivory-v1.png",
+      "illustration_basis": "source/images/wat-boromthat.png; standalone image generated with built-in imagegen"
+    },
+    {
+      "id": "wat-khuha",
+      "type": "place",
+      "category": "temple",
+      "name_th": "วัดคุหาภิมุข (วัดควนถ้ำ)",
+      "name_en": "Wat Khuha Phimuk",
+      "facts_paraphrased": [
+        "เอกสารกล่าวถึงอุโบสถขนาดเล็กและลักษณะสถาปัตยกรรม"
+      ],
+      "editorial_angle": "รายละเอียดเล็กที่ชวนให้หยุดมอง",
+      "source_page": 2,
+      "source_bbox_normalized": [
+        0.177,
+        0.081,
+        0.328,
+        0.294
+      ],
+      "source_panel": "source/panels/wat-khuha.png",
+      "source_image": "source/images/wat-khuha.png",
+      "source_details": {
+        "built_be": 2513,
+        "source_superlative": "เอกสารระบุว่าอุโบสถเล็กที่สุดในไทย; ต้องตรวจเทียบก่อนใช้เป็นคำโฆษณา"
+      },
+      "verification": "read_from_supplied_official_brochure",
+      "image_status": "crop_from_flattened_page; may contain original layout elements; reference only",
+      "reuse_ideas": [
+        "การ์ดสถานที่",
+        "คำอธิบายบนเว็บ",
+        "ชุดเล่าเมือง",
+        "โปสการ์ด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "new individual illustration and card ready",
+      "card_file": "collections/2026-09-06_individual-places-v6/2026-09-06_wat-khuha.png",
+      "new_illustration_file": "generated/2026-09-06_wat-khuha-ivory-v1.png",
+      "illustration_basis": "source/images/wat-khuha.png; standalone image generated with built-in imagegen"
+    },
+    {
+      "id": "wat-pathum",
+      "type": "place",
+      "category": "temple",
+      "name_th": "วัดปทุมธารา (วัดหน้าเมือง)",
+      "name_en": "Wat Pathum Thara",
+      "facts_paraphrased": [
+        "โบสถ์เก่าและเรื่องการขนส่งทางน้ำเชื่อมสถานที่นี้กับประวัติการค้าของเมือง"
+      ],
+      "editorial_angle": "จากวัดเก่าสู่เรื่องเส้นทางน้ำ",
+      "source_page": 2,
+      "source_bbox_normalized": [
+        0.018,
+        0.276,
+        0.327,
+        0.47
+      ],
+      "source_panel": "source/panels/wat-pathum.png",
+      "source_image": "source/images/wat-pathum.png",
+      "source_details": {},
+      "verification": "read_from_supplied_official_brochure",
+      "image_status": "crop_from_flattened_page; may contain original layout elements; reference only",
+      "reuse_ideas": [
+        "การ์ดสถานที่",
+        "คำอธิบายบนเว็บ",
+        "ชุดเล่าเมือง",
+        "โปสการ์ด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "new individual illustration and card ready",
+      "card_file": "collections/2026-09-06_individual-places-v6/2026-09-06_wat-pathum.png",
+      "new_illustration_file": "generated/2026-09-06_wat-pathum-ivory-v1.png",
+      "illustration_basis": "source/images/wat-pathum.png; standalone image generated with built-in imagegen"
+    },
+    {
+      "id": "wat-kongkha",
+      "type": "place",
+      "category": "temple",
+      "name_th": "วัดคงคาภิมุข (วัดคงคา)",
+      "name_en": "Wat Kongkha Phimuk",
+      "facts_paraphrased": [
+        "มีอุโบสถแบบปักษ์ใต้ซึ่งเอกสารระบุว่าเป็นโบราณสถาน"
+      ],
+      "editorial_angle": "สังเกตเส้นสายอุโบสถภาคใต้",
+      "source_page": 2,
+      "source_bbox_normalized": [
+        0.177,
+        0.282,
+        0.328,
+        0.499
+      ],
+      "source_panel": "source/panels/wat-kongkha.png",
+      "source_image": "source/images/wat-kongkha.png",
+      "source_details": {
+        "built_be": 2305
+      },
+      "verification": "read_from_supplied_official_brochure",
+      "image_status": "crop_from_flattened_page; may contain original layout elements; reference only",
+      "reuse_ideas": [
+        "การ์ดสถานที่",
+        "คำอธิบายบนเว็บ",
+        "ชุดเล่าเมือง",
+        "โปสการ์ด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "new individual illustration and card ready",
+      "card_file": "collections/2026-09-06_individual-places-v6/2026-09-06_wat-kongkha.png",
+      "new_illustration_file": "generated/2026-09-06_wat-kongkha-ivory-v1.png",
+      "illustration_basis": "source/images/wat-kongkha.png; standalone image generated with built-in imagegen"
+    },
+    {
+      "id": "wat-nikorn",
+      "type": "place",
+      "category": "temple",
+      "name_th": "วัดนิกรวราราม (วัดย่านยาว)",
+      "name_en": "Wat Nikornwararam",
+      "facts_paraphrased": [
+        "เอกสารเชื่อมวัดกับชุมชนและเหตุการณ์สึนามิ พ.ศ. 2547"
+      ],
+      "editorial_angle": "เล่าเรื่องสถานที่ผ่านบทบาทต่อชุมชน",
+      "source_page": 2,
+      "source_bbox_normalized": [
+        0.018,
+        0.463,
+        0.325,
+        0.667
+      ],
+      "source_panel": "source/panels/wat-nikorn.png",
+      "source_image": "source/images/wat-nikorn.png",
+      "source_details": {
+        "built_be": 2336,
+        "historical_event_be": 2547
+      },
+      "verification": "read_from_supplied_official_brochure",
+      "image_status": "crop_from_flattened_page; may contain original layout elements; reference only",
+      "reuse_ideas": [
+        "การ์ดสถานที่",
+        "คำอธิบายบนเว็บ",
+        "ชุดเล่าเมือง",
+        "โปสการ์ด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "new individual illustration and card ready",
+      "card_file": "collections/2026-09-06_individual-places-v6/2026-09-06_wat-nikorn.png",
+      "new_illustration_file": "generated/2026-09-06_wat-nikorn-ivory-v1.png",
+      "illustration_basis": "source/images/wat-nikorn.png; standalone image generated with built-in imagegen"
+    },
+    {
+      "id": "wat-sena",
+      "type": "place",
+      "category": "temple",
+      "name_th": "วัดเสนานุชรังสรรค์ (วัดใหม่)",
+      "name_en": "Wat Sena Nuch Rangsan",
+      "facts_paraphrased": [
+        "สถาปัตยกรรมอุโบสถมีองค์ประกอบจีนและสะท้อนวัฒนธรรมไทย-จีน"
+      ],
+      "editorial_angle": "ชวนมองสิ่งที่ไทยกับจีนอยู่ร่วมกัน",
+      "source_page": 2,
+      "source_bbox_normalized": [
+        0.177,
+        0.494,
+        0.328,
+        0.724
+      ],
+      "source_panel": "source/panels/wat-sena.png",
+      "source_image": "source/images/wat-sena.png",
+      "source_details": {
+        "founder_as_printed": "พระยาเสนานุชิต"
+      },
+      "verification": "read_from_supplied_official_brochure",
+      "image_status": "crop_from_flattened_page; may contain original layout elements; reference only",
+      "reuse_ideas": [
+        "การ์ดสถานที่",
+        "คำอธิบายบนเว็บ",
+        "ชุดเล่าเมือง",
+        "โปสการ์ด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "new individual illustration and card ready",
+      "card_file": "collections/2026-09-06_individual-places-v6/2026-09-06_wat-sena.png",
+      "new_illustration_file": "generated/2026-09-06_wat-sena-ivory-v1.png",
+      "illustration_basis": "source/images/wat-sena.png; standalone image generated with built-in imagegen"
+    },
+    {
+      "id": "museum",
+      "type": "place",
+      "category": "museum",
+      "name_th": "พิพิธภัณฑ์เสนานุชรังสรรค์ชุมชนตะกั่วป่า",
+      "name_en": "Takua Pa Community Museum",
+      "facts_paraphrased": [
+        "รวบรวมเรื่องศาสนา ศิลปะ และการค้าของท้องถิ่น"
+      ],
+      "editorial_angle": "ต่อเรื่องจากบ้านเก่าสู่ความทรงจำของเมือง",
+      "source_page": 2,
+      "source_bbox_normalized": [
+        0.018,
+        0.674,
+        0.328,
+        0.977
+      ],
+      "source_panel": "source/panels/museum.png",
+      "source_image": "source/images/museum.png",
+      "source_details": {},
+      "verification": "read_from_supplied_official_brochure",
+      "image_status": "crop_from_flattened_page; may contain original layout elements; reference only",
+      "reuse_ideas": [
+        "การ์ดสถานที่",
+        "คำอธิบายบนเว็บ",
+        "ชุดเล่าเมือง",
+        "โปสการ์ด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "new individual illustration and card ready",
+      "card_file": "collections/2026-09-06_individual-places-v6/2026-09-06_museum.png",
+      "new_illustration_file": "generated/2026-09-06_museum-ivory-v1.png",
+      "illustration_basis": "source/images/museum.png; standalone image generated with built-in imagegen"
+    },
+    {
+      "id": "guan-yu",
+      "type": "place",
+      "category": "shrine",
+      "name_th": "ศาลเจ้าพ่อกวนอู ซิ่นไช่ตึ๋ง",
+      "name_en": "Guan Yu / Sin Chai Tung Shrine",
+      "facts_paraphrased": [
+        "ศาลเจ้าที่สัมพันธ์กับความเชื่อในเทพกวนอูและชุมชนการค้า"
+      ],
+      "editorial_angle": "ประตูสีแดงกับเรื่องศรัทธาของเมือง",
+      "source_page": 2,
+      "source_bbox_normalized": [
+        0.501,
+        0.019,
+        0.733,
+        0.142
+      ],
+      "source_panel": "source/panels/guan-yu.png",
+      "source_image": "source/images/guan-yu.png",
+      "source_details": {
+        "built_be": 2386
+      },
+      "verification": "read_from_supplied_official_brochure",
+      "image_status": "crop_from_flattened_page; may contain original layout elements; reference only",
+      "reuse_ideas": [
+        "การ์ดสถานที่",
+        "คำอธิบายบนเว็บ",
+        "ชุดเล่าเมือง",
+        "โปสการ์ด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "new individual illustration and card ready",
+      "card_file": "collections/2026-09-06_individual-places-v6/2026-09-06_guan-yu.png",
+      "illustration_basis": "source/images/guan-yu.png; standalone image generated with built-in imagegen",
+      "new_illustration_file": "generated/2026-09-06_guan-yu-ivory-v1.png"
+    },
+    {
+      "id": "pun-thao",
+      "type": "place",
+      "category": "shrine",
+      "name_th": "ศาลเจ้าปุนเถ่ากงอ๊า",
+      "name_en": "Pun Thao Kong A Shrine",
+      "facts_paraphrased": [
+        "เอกสารกล่าวถึงศาลเจ้าในย่านท่าเรือเก่าของตะกั่วป่า"
+      ],
+      "editorial_angle": "เชื่อมศรัทธากับย่านท่าเรือ",
+      "source_page": 2,
+      "source_bbox_normalized": [
+        0.737,
+        0.019,
+        0.993,
+        0.12
+      ],
+      "source_panel": "source/panels/pun-thao.png",
+      "source_image": "source/images/pun-thao-user-corrected-v2.png",
+      "source_details": {
+        "built_be": 2319,
+        "name_check": "ชื่อไทยถอดตามหัวข้อในเอกสาร ควรตรวจป้ายจริงก่อนทำป้ายสถานที่"
+      },
+      "verification": "read_from_supplied_official_brochure",
+      "image_status": "crop_from_flattened_page; may contain original layout elements; reference only",
+      "reuse_ideas": [
+        "การ์ดสถานที่",
+        "คำอธิบายบนเว็บ",
+        "ชุดเล่าเมือง",
+        "โปสการ์ด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "new individual illustration and card ready",
+      "card_file": "collections/2026-09-06_individual-places-v6/2026-09-06_pun-thao.png",
+      "new_illustration_file": "generated/2026-09-06_pun-thao-corrected-v2.png",
+      "illustration_basis": "source/images/pun-thao-user-corrected-v2.png; standalone image generated with built-in imagegen",
+      "image_identity_correction": "User explicitly corrected swapped image identities. Original text panel preserved as archival evidence; corrected photo mapping overrides initial crop label."
+    },
+    {
+      "id": "kue-chai",
+      "type": "place",
+      "category": "shrine",
+      "name_th": "ศาลเจ้ากู่ใช่ตึ๋ง",
+      "name_en": "Kue Chai Tung Shrine",
+      "facts_paraphrased": [
+        "เอกสารกล่าวถึงการขอพรด้านสุขภาพและโชคลาภ"
+      ],
+      "editorial_angle": "เล่าวัฒนธรรมการสักการะผ่านรายละเอียดศาลเจ้า",
+      "source_page": 2,
+      "source_bbox_normalized": [
+        0.501,
+        0.119,
+        0.733,
+        0.223
+      ],
+      "source_panel": "source/panels/kue-chai.png",
+      "source_image": "source/images/kue-chai.png",
+      "source_details": {
+        "name_check": "ชื่อไทยควรตรวจป้ายจริงก่อนเผยแพร่เป็นชื่อทางการ"
+      },
+      "verification": "read_from_supplied_official_brochure",
+      "image_status": "crop_from_flattened_page; may contain original layout elements; reference only",
+      "reuse_ideas": [
+        "การ์ดสถานที่",
+        "คำอธิบายบนเว็บ",
+        "ชุดเล่าเมือง",
+        "โปสการ์ด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "new individual illustration and card ready",
+      "card_file": "collections/2026-09-06_individual-places-v6/2026-09-06_kue-chai.png",
+      "new_illustration_file": "generated/2026-09-06_kue-chai-ivory-v1.png",
+      "illustration_basis": "source/images/kue-chai.png; standalone image generated with built-in imagegen"
+    },
+    {
+      "id": "rong-jae",
+      "type": "place",
+      "category": "shrine",
+      "name_th": "โรงเจในสวน",
+      "name_en": "The Shrine in the Garden",
+      "facts_paraphrased": [
+        "สถานที่ที่เอกสารเชื่อมกับประเพณีจีนและการสืบทอดวัฒนธรรม"
+      ],
+      "editorial_angle": "พื้นที่ของความเชื่อที่คนในชุมชนดูแลร่วมกัน",
+      "source_page": 2,
+      "source_bbox_normalized": [
+        0.737,
+        0.12,
+        0.991,
+        0.223
+      ],
+      "source_panel": "source/panels/rong-jae.png",
+      "source_image": "source/images/rong-jae-user-corrected-v2.png",
+      "source_details": {},
+      "verification": "read_from_supplied_official_brochure",
+      "image_status": "crop_from_flattened_page; may contain original layout elements; reference only",
+      "reuse_ideas": [
+        "การ์ดสถานที่",
+        "คำอธิบายบนเว็บ",
+        "ชุดเล่าเมือง",
+        "โปสการ์ด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "new individual illustration and card ready",
+      "card_file": "collections/2026-09-06_individual-places-v6/2026-09-06_rong-jae.png",
+      "new_illustration_file": "generated/2026-09-06_rong-jae-corrected-v2.png",
+      "illustration_basis": "source/images/rong-jae-user-corrected-v2.png; standalone image generated with built-in imagegen",
+      "image_identity_correction": "User explicitly corrected swapped image identities. Original text panel preserved as archival evidence; corrected photo mapping overrides initial crop label."
+    },
+    {
+      "id": "phra-narai",
+      "type": "place",
+      "category": "park",
+      "name_th": "สวนสาธารณะพระนารายณ์",
+      "name_en": "Phra Narai Park",
+      "facts_paraphrased": [
+        "สวนในพื้นที่เทศบาลที่มีเรื่องราวเกี่ยวกับองค์พระนารายณ์"
+      ],
+      "editorial_angle": "พักในสวนแล้วต่อเรื่องประวัติเมือง",
+      "source_page": 2,
+      "source_bbox_normalized": [
+        0.34,
+        0.227,
+        0.496,
+        0.486
+      ],
+      "source_panel": "source/panels/phra-narai.png",
+      "source_image": "source/images/phra-narai.png",
+      "source_details": {},
+      "verification": "read_from_supplied_official_brochure",
+      "image_status": "crop_from_flattened_page; may contain original layout elements; reference only",
+      "reuse_ideas": [
+        "การ์ดสถานที่",
+        "คำอธิบายบนเว็บ",
+        "ชุดเล่าเมือง",
+        "โปสการ์ด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "new individual illustration and card ready",
+      "card_file": "collections/2026-09-06_individual-places-v6/2026-09-06_phra-narai.png",
+      "new_illustration_file": "generated/2026-09-06_phra-narai-ivory-v1.png",
+      "illustration_basis": "source/images/phra-narai.png; standalone image generated with built-in imagegen"
+    },
+    {
+      "id": "thung-phra",
+      "type": "place",
+      "category": "park",
+      "name_th": "สวนสาธารณะทุ่งพระโพธิ์",
+      "name_en": "Thung Phra Pho Park",
+      "facts_paraphrased": [
+        "เอกสารกล่าวถึงซากหม้อไอน้ำเรือกลไฟซึ่งโยงกับการค้าในอดีต"
+      ],
+      "editorial_angle": "วัตถุหนึ่งชิ้นเล่าเรื่องเมืองท่า",
+      "source_page": 2,
+      "source_bbox_normalized": [
+        0.501,
+        0.227,
+        0.662,
+        0.486
+      ],
+      "source_panel": "source/panels/thung-phra.png",
+      "source_image": "source/images/thung-phra.png",
+      "source_details": {},
+      "verification": "read_from_supplied_official_brochure",
+      "image_status": "crop_from_flattened_page; may contain original layout elements; reference only",
+      "reuse_ideas": [
+        "การ์ดสถานที่",
+        "คำอธิบายบนเว็บ",
+        "ชุดเล่าเมือง",
+        "โปสการ์ด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "new individual illustration and card ready",
+      "card_file": "collections/2026-09-06_individual-places-v6/2026-09-06_thung-phra.png",
+      "new_illustration_file": "generated/2026-09-06_thung-phra-ivory-v1.png",
+      "illustration_basis": "source/images/thung-phra.png; standalone image generated with built-in imagegen"
+    },
+    {
+      "id": "riverwalk",
+      "type": "place",
+      "category": "market",
+      "name_th": "ตลาดริมน้ำตะกั่วป่า",
+      "name_en": "Takuapa Riverwalk",
+      "facts_paraphrased": [
+        "พื้นที่ตลาดริมแม่น้ำที่มีสินค้าและอาหารท้องถิ่น"
+      ],
+      "editorial_angle": "เดินดูวิถีเมืองผ่านอาหารและแม่น้ำ",
+      "source_page": 2,
+      "source_bbox_normalized": [
+        0.669,
+        0.227,
+        0.831,
+        0.486
+      ],
+      "source_panel": "source/panels/riverwalk.png",
+      "source_image": "source/images/riverwalk.png",
+      "source_details": {
+        "source_schedule": "วันเสาร์ 15:00-20:00; เอกสารมีข้อความช่วงธันวาคม-เมษายน",
+        "current_status": "ยังไม่ตรวจยืนยันกำหนดปัจจุบัน"
+      },
+      "verification": "read_from_supplied_official_brochure",
+      "image_status": "crop_from_flattened_page; may contain original layout elements; reference only",
+      "reuse_ideas": [
+        "การ์ดสถานที่",
+        "คำอธิบายบนเว็บ",
+        "ชุดเล่าเมือง",
+        "โปสการ์ด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "new individual illustration and card ready",
+      "card_file": "collections/2026-09-06_individual-places-v6/2026-09-06_riverwalk.png",
+      "new_illustration_file": "generated/2026-09-06_riverwalk-ivory-v1.png",
+      "illustration_basis": "source/images/riverwalk.png; standalone image generated with built-in imagegen"
+    },
+    {
+      "id": "culture-street",
+      "type": "place",
+      "category": "street",
+      "name_th": "ถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า",
+      "name_en": "Takua Pa Culture Street",
+      "facts_paraphrased": [
+        "ย่านถนนคนเดินที่เชื่อมอาคารเก่า อาหาร และวิถีท้องถิ่น"
+      ],
+      "editorial_angle": "อ่านหน้าต่าง ป้ายร้าน และชีวิตบนถนน",
+      "source_page": 2,
+      "source_bbox_normalized": [
+        0.837,
+        0.227,
+        0.992,
+        0.486
+      ],
+      "source_panel": "source/panels/culture-street.png",
+      "source_image": "source/images/culture-street.png",
+      "source_details": {
+        "source_schedule": "วันอาทิตย์ 15:00-20:00; เอกสารมีข้อความช่วงธันวาคม-เมษายน",
+        "current_status": "ยังไม่ตรวจยืนยันกำหนดปัจจุบัน"
+      },
+      "verification": "read_from_supplied_official_brochure",
+      "image_status": "crop_from_flattened_page; may contain original layout elements; reference only",
+      "reuse_ideas": [
+        "การ์ดสถานที่",
+        "คำอธิบายบนเว็บ",
+        "ชุดเล่าเมือง",
+        "โปสการ์ด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "new individual illustration and card ready",
+      "card_file": "collections/2026-09-06_individual-places-v6/2026-09-06_culture-street.png",
+      "new_illustration_file": "generated/2026-09-06_culture-street-ivory-v1.png",
+      "illustration_basis": "source/images/culture-street.png; standalone image generated with built-in imagegen"
+    },
+    {
+      "id": "iron-bridge",
+      "type": "place",
+      "category": "heritage",
+      "name_th": "สะพานเหล็กบุญสูง",
+      "name_en": "Boon Soong Iron Bridge",
+      "facts_paraphrased": [
+        "สะพานมีความเกี่ยวข้องกับการเดินทางและการขนส่งในยุคเหมืองแร่"
+      ],
+      "editorial_angle": "มองโครงเหล็กแล้วนึกถึงการเดินทางของคนทำเหมือง",
+      "source_page": 2,
+      "source_bbox_normalized": [
+        0.34,
+        0.497,
+        0.497,
+        0.772
+      ],
+      "source_panel": "source/panels/iron-bridge.png",
+      "source_image": "source/images/iron-bridge.png",
+      "source_details": {},
+      "verification": "read_from_supplied_official_brochure",
+      "image_status": "crop_from_flattened_page; may contain original layout elements; reference only",
+      "reuse_ideas": [
+        "การ์ดสถานที่",
+        "คำอธิบายบนเว็บ",
+        "ชุดเล่าเมือง",
+        "โปสการ์ด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "new individual illustration and card ready",
+      "card_file": "collections/2026-09-06_individual-places-v6/2026-09-06_iron-bridge.png",
+      "illustration_basis": "source/images/iron-bridge.png; standalone image generated with built-in imagegen",
+      "new_illustration_file": "generated/2026-09-06_iron-bridge-ivory-v1.png"
+    },
+    {
+      "id": "governor-wall",
+      "type": "place",
+      "category": "heritage",
+      "name_th": "กำแพงจวนเจ้าเมืองตะกั่วป่า",
+      "name_en": "Governor’s Residence Wall",
+      "facts_paraphrased": [
+        "กำแพงเก่าเชื่อมกับประวัติการปกครองและความขัดแย้งในอดีต"
+      ],
+      "editorial_angle": "ร่องรอยบนกำแพงที่เล่าเรื่องเมือง",
+      "source_page": 2,
+      "source_bbox_normalized": [
+        0.502,
+        0.497,
+        0.665,
+        0.772
+      ],
+      "source_panel": "source/panels/governor-wall.png",
+      "source_image": "source/images/governor-wall.png",
+      "source_details": {
+        "source_built_be_range": [
+          2383,
+          2424
+        ],
+        "date_check": "เก็บช่วงปีตามเอกสาร ยังไม่ตีความว่าเป็นช่วงก่อสร้างต่อเนื่อง"
+      },
+      "verification": "read_from_supplied_official_brochure",
+      "image_status": "crop_from_flattened_page; may contain original layout elements; reference only",
+      "reuse_ideas": [
+        "การ์ดสถานที่",
+        "คำอธิบายบนเว็บ",
+        "ชุดเล่าเมือง",
+        "โปสการ์ด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "new individual illustration and card ready",
+      "card_file": "collections/2026-09-06_individual-places-v6/2026-09-06_governor-wall.png",
+      "new_illustration_file": "generated/2026-09-06_governor-wall-ivory-v1.png",
+      "illustration_basis": "source/images/governor-wall.png; standalone image generated with built-in imagegen"
+    },
+    {
+      "id": "khun-in",
+      "type": "place",
+      "category": "heritage",
+      "name_th": "บ้านขุนอินทร์",
+      "name_en": "Khun In House",
+      "facts_paraphrased": [
+        "บ้านที่เอกสารอธิบายว่ามีสถาปัตยกรรมชิโน-ยูโรเปียนและสะท้อนความรุ่งเรืองในอดีต"
+      ],
+      "editorial_angle": "หน้าต่างและระเบียงเป็นทางเข้าเรื่องประวัติบ้าน",
+      "source_page": 2,
+      "source_bbox_normalized": [
+        0.67,
+        0.497,
+        0.832,
+        0.772
+      ],
+      "source_panel": "source/panels/khun-in.png",
+      "source_image": "source/images/khun-in.png",
+      "source_details": {
+        "built_be": 2460
+      },
+      "verification": "read_from_supplied_official_brochure",
+      "image_status": "crop_from_flattened_page; may contain original layout elements; reference only",
+      "reuse_ideas": [
+        "การ์ดสถานที่",
+        "คำอธิบายบนเว็บ",
+        "ชุดเล่าเมือง",
+        "โปสการ์ด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "new individual illustration and card ready",
+      "card_file": "collections/2026-09-06_individual-places-v6/2026-09-06_khun-in.png",
+      "illustration_basis": "source/images/khun-in.png; standalone image generated with built-in imagegen",
+      "new_illustration_file": "generated/2026-09-06_khun-in-ivory-v1.png"
+    },
+    {
+      "id": "tao-ming",
+      "type": "place",
+      "category": "heritage",
+      "name_th": "โรงเรียนเต้าหมิง",
+      "name_en": "Tao Ming School",
+      "facts_paraphrased": [
+        "เกิดจากความร่วมมือของชาวจีนในตะกั่วป่าเพื่อการเรียนภาษาและวัฒนธรรมจีน"
+      ],
+      "editorial_angle": "อาคารโรงเรียนเล่าเรื่องการส่งต่อวัฒนธรรม",
+      "source_page": 2,
+      "source_bbox_normalized": [
+        0.838,
+        0.497,
+        0.992,
+        0.772
+      ],
+      "source_panel": "source/panels/tao-ming.png",
+      "source_image": "source/images/tao-ming.png",
+      "source_details": {
+        "built_be": 2465
+      },
+      "verification": "read_from_supplied_official_brochure",
+      "image_status": "crop_from_flattened_page; may contain original layout elements; reference only",
+      "reuse_ideas": [
+        "การ์ดสถานที่",
+        "คำอธิบายบนเว็บ",
+        "ชุดเล่าเมือง",
+        "โปสการ์ด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "new individual illustration and card ready",
+      "card_file": "collections/2026-09-06_individual-places-v6/2026-09-06_tao-ming.png",
+      "illustration_basis": "source/images/tao-ming-user-fullfront.webp; standalone image generated with built-in imagegen",
+      "new_illustration_file": "generated/2026-09-06_tao-ming-fullfront-v3.png",
+      "new_illustration_transparent": false
+    },
+    {
+      "id": "new-year-alms",
+      "type": "event",
+      "category": "tradition",
+      "name_th": "ตักบาตรยามรุ่ง รับอรุณปีใหม่",
+      "facts_paraphrased": [
+        "เป็นกิจกรรมที่ปรากฏในหมวดกิจกรรมและประเพณีของเอกสาร"
+      ],
+      "source_page": 2,
+      "source_bbox_normalized": [
+        0.332,
+        0.815,
+        0.565,
+        0.985
+      ],
+      "source_panel": "source/panels/new-year-alms.png",
+      "source_period": "January 1",
+      "current_schedule_verified": false,
+      "editorial_angle": "กิจกรรมทำบุญรับต้นปี",
+      "reuse_ideas": [
+        "ปฏิทินเนื้อหา",
+        "บทความวัฒนธรรม",
+        "ชุดภาพตามฤดูกาล"
+      ],
+      "verification": "event listed in supplied brochure; current schedule needs separate confirmation",
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "narai-ceremony",
+      "type": "event",
+      "category": "tradition",
+      "name_th": "พิธีบวงสรวงองค์เทวรูปพระนารายณ์และเทพบริวาร",
+      "facts_paraphrased": [
+        "เป็นกิจกรรมที่ปรากฏในหมวดกิจกรรมและประเพณีของเอกสาร"
+      ],
+      "source_page": 2,
+      "source_bbox_normalized": [
+        0.465,
+        0.785,
+        0.665,
+        0.891
+      ],
+      "source_panel": "source/panels/narai-ceremony.png",
+      "source_period": "March-April",
+      "current_schedule_verified": false,
+      "editorial_angle": "เรื่องความเชื่อและความสัมพันธ์กับพื้นที่",
+      "reuse_ideas": [
+        "ปฏิทินเนื้อหา",
+        "บทความวัฒนธรรม",
+        "ชุดภาพตามฤดูกาล"
+      ],
+      "verification": "event listed in supplied brochure; current schedule needs separate confirmation",
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "ruler-ceremony",
+      "type": "event",
+      "category": "tradition",
+      "name_th": "พิธีบวงสรวงเจ้าเมืองตะกั่วป่า",
+      "facts_paraphrased": [
+        "เป็นกิจกรรมที่ปรากฏในหมวดกิจกรรมและประเพณีของเอกสาร"
+      ],
+      "source_page": 2,
+      "source_bbox_normalized": [
+        0.663,
+        0.785,
+        0.829,
+        0.891
+      ],
+      "source_panel": "source/panels/ruler-ceremony.png",
+      "source_period": "February",
+      "current_schedule_verified": false,
+      "editorial_angle": "เรื่องการรำลึกถึงผู้ปกครองเมือง",
+      "reuse_ideas": [
+        "ปฏิทินเนื้อหา",
+        "บทความวัฒนธรรม",
+        "ชุดภาพตามฤดูกาล"
+      ],
+      "verification": "event listed in supplied brochure; current schedule needs separate confirmation",
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "vegetarian",
+      "type": "event",
+      "category": "tradition",
+      "name_th": "ประเพณีกินผัก (เจี๊ยะกิ๊วอ๋องฉ่าย)",
+      "facts_paraphrased": [
+        "เป็นกิจกรรมที่ปรากฏในหมวดกิจกรรมและประเพณีของเอกสาร"
+      ],
+      "source_page": 2,
+      "source_bbox_normalized": [
+        0.826,
+        0.785,
+        0.992,
+        0.891
+      ],
+      "source_panel": "source/panels/vegetarian.png",
+      "source_period": "Chinese lunar month 9, days 1-9; usually September-October",
+      "current_schedule_verified": false,
+      "editorial_angle": "วิถีอาหารและประเพณีของชุมชน",
+      "reuse_ideas": [
+        "ปฏิทินเนื้อหา",
+        "บทความวัฒนธรรม",
+        "ชุดภาพตามฤดูกาล"
+      ],
+      "verification": "event listed in supplied brochure; current schedule needs separate confirmation",
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "loy-krathong",
+      "type": "event",
+      "category": "tradition",
+      "name_th": "ลอยกระทง",
+      "facts_paraphrased": [
+        "เป็นกิจกรรมที่ปรากฏในหมวดกิจกรรมและประเพณีของเอกสาร"
+      ],
+      "source_page": 2,
+      "source_bbox_normalized": [
+        0.478,
+        0.888,
+        0.672,
+        0.985
+      ],
+      "source_panel": "source/panels/loy-krathong.png",
+      "source_period": "Full moon of Thai lunar month 12; brochure mentions November",
+      "current_schedule_verified": false,
+      "editorial_angle": "มองเมืองผ่านกิจกรรมริมน้ำ",
+      "reuse_ideas": [
+        "ปฏิทินเนื้อหา",
+        "บทความวัฒนธรรม",
+        "ชุดภาพตามฤดูกาล"
+      ],
+      "verification": "event listed in supplied brochure; current schedule needs separate confirmation",
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "chak-phra",
+      "type": "event",
+      "category": "tradition",
+      "name_th": "ประเพณีชักพระ",
+      "facts_paraphrased": [
+        "เป็นกิจกรรมที่ปรากฏในหมวดกิจกรรมและประเพณีของเอกสาร"
+      ],
+      "source_page": 2,
+      "source_bbox_normalized": [
+        0.673,
+        0.89,
+        0.833,
+        0.985
+      ],
+      "source_panel": "source/panels/chak-phra.png",
+      "source_period": "Day after Buddhist Lent ends",
+      "current_schedule_verified": false,
+      "editorial_angle": "งานชุมชนที่เชื่อมศรัทธากับขบวนแห่",
+      "reuse_ideas": [
+        "ปฏิทินเนื้อหา",
+        "บทความวัฒนธรรม",
+        "ชุดภาพตามฤดูกาล"
+      ],
+      "verification": "event listed in supplied brochure; current schedule needs separate confirmation",
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "relic-procession",
+      "type": "event",
+      "category": "tradition",
+      "name_th": "ขบวนแห่อัญเชิญพระบรมสารีริกธาตุขึ้นเขาพระบาท",
+      "facts_paraphrased": [
+        "เป็นกิจกรรมที่ปรากฏในหมวดกิจกรรมและประเพณีของเอกสาร"
+      ],
+      "source_page": 2,
+      "source_bbox_normalized": [
+        0.834,
+        0.89,
+        0.992,
+        0.985
+      ],
+      "source_panel": "source/panels/relic-procession.png",
+      "source_period": "Makha Bucha Day",
+      "current_schedule_verified": false,
+      "editorial_angle": "ประเพณีที่เชื่อมการเดินทางและการสักการะ",
+      "reuse_ideas": [
+        "ปฏิทินเนื้อหา",
+        "บทความวัฒนธรรม",
+        "ชุดภาพตามฤดูกาล"
+      ],
+      "verification": "event listed in supplied brochure; current schedule needs separate confirmation",
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "restaurant-01",
+      "type": "business_directory",
+      "category": "restaurant",
+      "source_list_number": 1,
+      "name_th": "ฮกกี่เหลา",
+      "name_en_as_printed": "Hokkilao",
+      "source_page": 1,
+      "source_panel": "source/restaurants.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "restaurant-02",
+      "type": "business_directory",
+      "category": "restaurant",
+      "source_list_number": 2,
+      "name_th": "ร้านหลกอั้น",
+      "name_en_as_printed": "Lok An",
+      "source_page": 1,
+      "source_panel": "source/restaurants.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "restaurant-03",
+      "type": "business_directory",
+      "category": "restaurant",
+      "source_list_number": 3,
+      "name_th": "ข้าวมันไก่ป้าสุ",
+      "name_en_as_printed": "Pa Su Chicken Rice",
+      "source_page": 1,
+      "source_panel": "source/restaurants.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "restaurant-04",
+      "type": "business_directory",
+      "category": "restaurant",
+      "source_list_number": 4,
+      "name_th": "ฟู่เย็นตาโฟกลางซอย",
+      "name_en_as_printed": "Fu Yen Ta Fo Klang Soi",
+      "source_page": 1,
+      "source_panel": "source/restaurants.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "restaurant-05",
+      "type": "business_directory",
+      "category": "restaurant",
+      "source_list_number": 5,
+      "name_th": "บังดีน อาหารไทยมุสลิม",
+      "name_en_as_printed": "Bang Deen",
+      "source_page": 1,
+      "source_panel": "source/restaurants.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "restaurant-06",
+      "type": "business_directory",
+      "category": "restaurant",
+      "source_list_number": 6,
+      "name_th": "ร้านเจ๊อู๋ ข้าวมันไก่ ตะกั่วป่า",
+      "name_en_as_printed": "U Chicken Rice Takuapa",
+      "source_page": 1,
+      "source_panel": "source/restaurants.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "restaurant-07",
+      "type": "business_directory",
+      "category": "restaurant",
+      "source_list_number": 7,
+      "name_th": "ก๋วยเตี๋ยวหมูเทวดา",
+      "name_en_as_printed": "Tavada Pork Noodles",
+      "source_page": 1,
+      "source_panel": "source/restaurants.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "restaurant-08",
+      "type": "business_directory",
+      "category": "restaurant",
+      "source_list_number": 8,
+      "name_th": "บ่าวโอม ติ่มซำ",
+      "name_en_as_printed": "Bao Om Dim Sum",
+      "source_page": 1,
+      "source_panel": "source/restaurants.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "restaurant-09",
+      "type": "business_directory",
+      "category": "restaurant",
+      "source_list_number": 9,
+      "name_th": "ข้าวมันไก่ต้นโพธิ์",
+      "name_en_as_printed": "Ton Phor Chicken Rice",
+      "source_page": 1,
+      "source_panel": "source/restaurants.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "restaurant-10",
+      "type": "business_directory",
+      "category": "restaurant",
+      "source_list_number": 10,
+      "name_th": "กะไหล บะหมี่เกี๊ยวโบราณ",
+      "name_en_as_printed": "Khalai Noodle",
+      "source_page": 1,
+      "source_panel": "source/restaurants.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "restaurant-11",
+      "type": "business_directory",
+      "category": "restaurant",
+      "source_list_number": 11,
+      "name_th": "บะหมี่พังงา - ตลาดขวาง สาขาตะกั่วป่า",
+      "name_en_as_printed": "Noodle Phang Nga - Talad Kwang",
+      "source_page": 1,
+      "source_panel": "source/restaurants.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "restaurant-12",
+      "type": "business_directory",
+      "category": "restaurant",
+      "source_list_number": 12,
+      "name_th": "กาแฟชาย ตะกั่วป่า",
+      "name_en_as_printed": "Kafae Chai Takuapa",
+      "source_page": 1,
+      "source_panel": "source/restaurants.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "restaurant-13",
+      "type": "business_directory",
+      "category": "restaurant",
+      "source_list_number": 13,
+      "name_th": "โกคุ้น ข้าวมันไก่",
+      "name_en_as_printed": "Gokun Chicken Rice",
+      "source_page": 1,
+      "source_panel": "source/restaurants.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "restaurant-14",
+      "type": "business_directory",
+      "category": "restaurant",
+      "source_list_number": 14,
+      "name_th": "จิ้นคัง ติ่มซำ",
+      "name_en_as_printed": "Jin Kang Dim Sum",
+      "source_page": 1,
+      "source_panel": "source/restaurants.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "restaurant-15",
+      "type": "business_directory",
+      "category": "restaurant",
+      "source_list_number": 15,
+      "name_th": "ป้าดาหมี่ฮกเกี้ยน",
+      "name_en_as_printed": "Hokkien Noodle Pa Da",
+      "source_page": 1,
+      "source_panel": "source/restaurants.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "restaurant-16",
+      "type": "business_directory",
+      "category": "restaurant",
+      "source_list_number": 16,
+      "name_th": "หมี่ป้าเปรม",
+      "name_en_as_printed": "Pa Prem Noodle",
+      "source_page": 1,
+      "source_panel": "source/restaurants.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "restaurant-17",
+      "type": "business_directory",
+      "category": "restaurant",
+      "source_list_number": 17,
+      "name_th": "ไส้กรอกตะกั่วป่า",
+      "name_en_as_printed": "Takuapa Sausage",
+      "source_page": 1,
+      "source_panel": "source/restaurants.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "restaurant-18",
+      "type": "business_directory",
+      "category": "restaurant",
+      "source_list_number": 18,
+      "name_th": "สะเต๊ะ ทุ่งพระโพธิ์",
+      "name_en_as_printed": "Thung Phra Po Satay",
+      "source_page": 1,
+      "source_panel": "source/restaurants.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "restaurant-19",
+      "type": "business_directory",
+      "category": "restaurant",
+      "source_list_number": 19,
+      "name_th": "สะเต๊ะตะกั่วป่า",
+      "name_en_as_printed": "Takuapa Satay",
+      "source_page": 1,
+      "source_panel": "source/restaurants.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "restaurant-20",
+      "type": "business_directory",
+      "category": "restaurant",
+      "source_list_number": 20,
+      "name_th": "มุมเด็กเส้น",
+      "name_en_as_printed": "Mum Dek Sen Noodles",
+      "source_page": 1,
+      "source_panel": "source/restaurants.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "restaurant-21",
+      "type": "business_directory",
+      "category": "restaurant",
+      "source_list_number": 21,
+      "name_th": "ขนมจีนป้าน้อย",
+      "name_en_as_printed": "Noi Thai Rice Noodles",
+      "source_page": 1,
+      "source_panel": "source/restaurants.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "restaurant-22",
+      "type": "business_directory",
+      "category": "restaurant",
+      "source_list_number": 22,
+      "name_th": "ส้มตำ หัวถนน",
+      "name_en_as_printed": "Somtam Hua Thanon",
+      "source_page": 1,
+      "source_panel": "source/restaurants.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "restaurant-23",
+      "type": "business_directory",
+      "category": "restaurant",
+      "source_list_number": 23,
+      "name_th": "จี้เก้ ผัดไทหัวถนน",
+      "name_en_as_printed": "Ji Kae Pad Thai Hua Thanon",
+      "source_page": 1,
+      "source_panel": "source/restaurants.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "restaurant-24",
+      "type": "business_directory",
+      "category": "restaurant",
+      "source_list_number": 24,
+      "name_th": "ป้าแก้วอาหารตามสั่ง",
+      "name_en_as_printed": "Kaew Made to Order Food",
+      "source_page": 1,
+      "source_panel": "source/restaurants.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "restaurant-25",
+      "type": "business_directory",
+      "category": "restaurant",
+      "source_list_number": 25,
+      "name_th": "ชานนท์กาแฟโบราณ ติ่มซำ",
+      "name_en_as_printed": "Chanon Coffee Dim Sum",
+      "source_page": 1,
+      "source_panel": "source/restaurants.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "restaurant-26",
+      "type": "business_directory",
+      "category": "restaurant",
+      "source_list_number": 26,
+      "name_th": "ร้านมุมน้ำเงิน",
+      "name_en_as_printed": "Blue Corner Shop",
+      "source_page": 1,
+      "source_panel": "source/restaurants.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "restaurant-27",
+      "type": "business_directory",
+      "category": "restaurant",
+      "source_list_number": 27,
+      "name_th": "ไอติมทอด ณ ตะกั่วป่า",
+      "name_en_as_printed": "Fried Ice Cream at Takuapa",
+      "source_page": 1,
+      "source_panel": "source/restaurants.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "restaurant-28",
+      "type": "business_directory",
+      "category": "restaurant",
+      "source_list_number": 28,
+      "name_th": "โรตีบังลา",
+      "name_en_as_printed": "Bangla Roti",
+      "source_page": 1,
+      "source_panel": "source/restaurants.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "restaurant-29",
+      "type": "business_directory",
+      "category": "restaurant",
+      "source_list_number": 29,
+      "name_th": "ครัวอีสานใต้",
+      "name_en_as_printed": "Southern Isaan Kitchen",
+      "source_page": 1,
+      "source_panel": "source/restaurants.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "restaurant-30",
+      "type": "business_directory",
+      "category": "restaurant",
+      "source_list_number": 30,
+      "name_th": "ข้าวขาหมูจี้หญิง",
+      "name_en_as_printed": "Ying Stewed Pork Legs with Rice",
+      "source_page": 1,
+      "source_panel": "source/restaurants.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "restaurant-31",
+      "type": "business_directory",
+      "category": "restaurant",
+      "source_list_number": 31,
+      "name_th": "ข้าวมันไก่โกก่วน 2",
+      "name_en_as_printed": "Ko Kuan 2 Chicken Rice",
+      "source_page": 1,
+      "source_panel": "source/restaurants.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "restaurant-32",
+      "type": "business_directory",
+      "category": "restaurant",
+      "source_list_number": 32,
+      "name_th": "ครัวริมทุ่ง",
+      "name_en_as_printed": "Khrua Rim Thung",
+      "source_page": 1,
+      "source_panel": "source/restaurants.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "drink_shop-01",
+      "type": "business_directory",
+      "category": "drink_shop",
+      "source_list_number": 1,
+      "name_th": "กอคอฟฟี่ ตะกั่วป่า",
+      "name_en_as_printed": "KOR Coffee",
+      "source_page": 1,
+      "source_panel": "source/drinks.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "drink_shop-02",
+      "type": "business_directory",
+      "category": "drink_shop",
+      "source_list_number": 2,
+      "name_th": "กฤษณวารี specialty coffee",
+      "name_en_as_printed": "KrisnaWaree Specialty Coffee",
+      "source_page": 1,
+      "source_panel": "source/drinks.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "drink_shop-03",
+      "type": "business_directory",
+      "category": "drink_shop",
+      "source_list_number": 3,
+      "name_th": "Bless U Cafe",
+      "name_en_as_printed": "Bless U Cafe",
+      "source_page": 1,
+      "source_panel": "source/drinks.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "drink_shop-04",
+      "type": "business_directory",
+      "category": "drink_shop",
+      "source_list_number": 4,
+      "name_th": "Mali Cafe",
+      "name_en_as_printed": "Mali Cafe",
+      "source_page": 1,
+      "source_panel": "source/drinks.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "drink_shop-05",
+      "type": "business_directory",
+      "category": "drink_shop",
+      "source_list_number": 5,
+      "name_th": "A Hunger Cafe",
+      "name_en_as_printed": "A Hunger Cafe",
+      "source_page": 1,
+      "source_panel": "source/drinks.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "drink_shop-06",
+      "type": "business_directory",
+      "category": "drink_shop",
+      "source_list_number": 6,
+      "name_th": "Saraan Ice Cream Homemade",
+      "name_en_as_printed": "Saraan Ice Cream Homemade",
+      "source_page": 1,
+      "source_panel": "source/drinks.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "drink_shop-07",
+      "type": "business_directory",
+      "category": "drink_shop",
+      "source_list_number": 7,
+      "name_th": "DREDGER Cafe",
+      "name_en_as_printed": "DREDGER Cafe",
+      "source_page": 1,
+      "source_panel": "source/drinks.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "drink_shop-08",
+      "type": "business_directory",
+      "category": "drink_shop",
+      "source_list_number": 8,
+      "name_th": "ดอกกาแฟ ณ ตะโกลา",
+      "name_en_as_printed": "Dokkafae at Takola",
+      "source_page": 1,
+      "source_panel": "source/drinks.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "drink_shop-09",
+      "type": "business_directory",
+      "category": "drink_shop",
+      "source_list_number": 9,
+      "name_th": "MAMA’S OVEN",
+      "name_en_as_printed": "MAMA’S OVEN",
+      "source_page": 1,
+      "source_panel": "source/drinks.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "drink_shop-10",
+      "type": "business_directory",
+      "category": "drink_shop",
+      "source_list_number": 10,
+      "name_th": "โอวเล้ง ตะกั่วป่า",
+      "name_en_as_printed": "Oh Leng Takuapa",
+      "source_page": 1,
+      "source_panel": "source/drinks.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "drink_shop-11",
+      "type": "business_directory",
+      "category": "drink_shop",
+      "source_list_number": 11,
+      "name_th": "โกปี้ กั่วป่า",
+      "name_en_as_printed": "Kopi Kuapa",
+      "source_page": 1,
+      "source_panel": "source/drinks.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "drink_shop-12",
+      "type": "business_directory",
+      "category": "drink_shop",
+      "source_list_number": 12,
+      "name_th": "BAN KHANOM WAN NO.77",
+      "name_en_as_printed": "BAN KHANOM WAN NO.77",
+      "source_page": 1,
+      "source_panel": "source/drinks.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "drink_shop-13",
+      "type": "business_directory",
+      "category": "drink_shop",
+      "source_list_number": 13,
+      "name_th": "เถียนมี่",
+      "name_en_as_printed": "Tianmi Takuapa",
+      "source_page": 1,
+      "source_panel": "source/drinks.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "drink_shop-14",
+      "type": "business_directory",
+      "category": "drink_shop",
+      "source_list_number": 14,
+      "name_th": "ซีนคา",
+      "name_en_as_printed": "Seen Cafe at Takuapa",
+      "source_page": 1,
+      "source_panel": "source/drinks.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "drink_shop-15",
+      "type": "business_directory",
+      "category": "drink_shop",
+      "source_list_number": 15,
+      "name_th": "กาแฟโบราณป้าอี๊ด",
+      "name_en_as_printed": "Eid Coffee",
+      "source_page": 1,
+      "source_panel": "source/drinks.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "drink_shop-16",
+      "type": "business_directory",
+      "category": "drink_shop",
+      "source_list_number": 16,
+      "name_th": "กาแฟโก๊ติ - จี้มุ้ย",
+      "name_en_as_printed": "Koti-Ji Mui Coffee",
+      "source_page": 1,
+      "source_panel": "source/drinks.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "drink_shop-17",
+      "type": "business_directory",
+      "category": "drink_shop",
+      "source_list_number": 17,
+      "name_th": "ฟินน์ คอฟฟี่",
+      "name_en_as_printed": "Finn Coffee",
+      "source_page": 1,
+      "source_panel": "source/drinks.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "drink_shop-18",
+      "type": "business_directory",
+      "category": "drink_shop",
+      "source_list_number": 18,
+      "name_th": "ฟีโน่กาแฟ",
+      "name_en_as_printed": "Fino Coffee",
+      "source_page": 1,
+      "source_panel": "source/drinks.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "drink_shop-19",
+      "type": "business_directory",
+      "category": "drink_shop",
+      "source_list_number": 19,
+      "name_th": "ร้านกาแฟมาลี",
+      "name_en_as_printed": "Malee Coffee",
+      "source_page": 1,
+      "source_panel": "source/drinks.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "souvenir_shop-01",
+      "type": "business_directory",
+      "category": "souvenir_shop",
+      "source_list_number": 1,
+      "name_th": "เต้าส้อตวงรัตน์",
+      "name_en_as_printed": "Tuang Rat Tao So",
+      "source_page": 1,
+      "source_panel": "source/souvenirs.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "souvenir_shop-02",
+      "type": "business_directory",
+      "category": "souvenir_shop",
+      "source_list_number": 2,
+      "name_th": "เต้าส้อนันทวัน",
+      "name_en_as_printed": "Nan Thawan Tao So",
+      "source_page": 1,
+      "source_panel": "source/souvenirs.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "souvenir_shop-03",
+      "type": "business_directory",
+      "category": "souvenir_shop",
+      "source_list_number": 3,
+      "name_th": "เต้าส้อแม่อารี",
+      "name_en_as_printed": "Ari Tao So",
+      "source_page": 1,
+      "source_panel": "source/souvenirs.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "souvenir_shop-04",
+      "type": "business_directory",
+      "category": "souvenir_shop",
+      "source_list_number": 4,
+      "name_th": "ขนมผิงลูกแม่แบบ",
+      "name_en_as_printed": "Khanom Phing Luk Maebaep",
+      "source_page": 1,
+      "source_panel": "source/souvenirs.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "souvenir_shop-05",
+      "type": "business_directory",
+      "category": "souvenir_shop",
+      "source_list_number": 5,
+      "name_th": "เต้าส้อเจ๊หยี่",
+      "name_en_as_printed": "Tao So Je Yi",
+      "source_page": 1,
+      "source_panel": "source/souvenirs.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "souvenir_shop-06",
+      "type": "business_directory",
+      "category": "souvenir_shop",
+      "source_list_number": 6,
+      "name_th": "เต้าส้อป้าแอ๋ว",
+      "name_en_as_printed": "Aew Tao So",
+      "source_page": 1,
+      "source_panel": "source/souvenirs.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "souvenir_shop-07",
+      "type": "business_directory",
+      "category": "souvenir_shop",
+      "source_list_number": 7,
+      "name_th": "สิริพร",
+      "name_en_as_printed": "Siriporn",
+      "source_page": 1,
+      "source_panel": "source/souvenirs.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "souvenir_shop-08",
+      "type": "business_directory",
+      "category": "souvenir_shop",
+      "source_list_number": 8,
+      "name_th": "วุ้นกะทิมะพร้าวอ่อน เอสโซ่-ตะกั่วป่า",
+      "name_en_as_printed": "Wun Kati Ma Praow On Esso-Takuapa",
+      "source_page": 1,
+      "source_panel": "source/souvenirs.png",
+      "verification": "visually transcribed directory; current business status unverified",
+      "current_status_verified": false,
+      "photo_match_verified": false,
+      "reuse_ideas": [
+        "รายชื่อเพื่อค้นต่อ",
+        "รายการตรวจสอบก่อนทำแผนที่",
+        "บทความรวมร้านหลังตรวจข้อมูลล่าสุด"
+      ],
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "extracted; not yet illustrated"
+    },
+    {
+      "id": "food-center",
+      "type": "place",
+      "category": "food_center",
+      "name_th": "ศูนย์อาหารลานโล่งตะกั่วป่า",
+      "name_en": "Food Center",
+      "facts_paraphrased": [
+        "เอกสารแนะนำศูนย์อาหารที่รวมอาหารหลายประเภท"
+      ],
+      "source_page": 1,
+      "source_panel": "source/panels/food-center.png",
+      "source_details": {
+        "source_hours": "07:00-20:00",
+        "current_hours_verified": false
+      },
+      "editorial_angle": "ใช้เป็นหัวข้อค้นต่อเรื่องอาหารในเมือง",
+      "source_url": "https://www.takuapacity.go.th/pdf/travel-preview.pdf",
+      "source_publication_date": "not identified in brochure",
+      "extracted_on": "2026-09-06",
+      "production_status": "new individual illustration and card ready",
+      "card_file": "collections/2026-09-06_individual-places-v6/2026-09-06_food-center.png",
+      "new_illustration_file": "generated/2026-09-06_food-center-ivory-v1.png",
+      "illustration_basis": "source/panels/food-center.png; standalone image generated with built-in imagegen"
+    }
+  ]
+}

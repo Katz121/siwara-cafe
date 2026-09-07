@@ -1,0 +1,60 @@
+{
+  "id": "narai-ceremony",
+  "name_th": "พิธีบวงสรวงองค์เทวรูปพระนารายณ์และเทพบริวาร",
+  "name_en": null,
+  "aka": ["งานบวงสรวงพระนารายณ์", "งานบวงสรวงพระนารายณ์ ตะกั่วป่า"],
+  "geo": {
+    "lat": 8.8696046,
+    "lng": 98.3445279,
+    "confidence": "high",
+    "source_url": "https://m-culture.in.th/album/120992/%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%AA%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%B0%E0%B8%AD%E0%B8%B8%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%99%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%99%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%93%E0%B9%8C",
+    "source_name": "ศูนย์ข้อมูลกลางวัฒนธรรม กระทรวงวัฒนธรรม"
+  },
+  "address": {
+    "line_th": "ถนนเพชรเกษม ชุมชนศรีเมือง",
+    "subdistrict": "ตะกั่วป่า",
+    "district": "ตะกั่วป่า",
+    "province": "พังงา",
+    "postcode": "82110",
+    "source_url": "https://m-culture.in.th/album/120992/%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%AA%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%B0%E0%B8%AD%E0%B8%B8%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%99%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%99%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%93%E0%B9%8C"
+  },
+  "contact": {"phone": null, "facebook": null, "website": null, "line": null, "source_url": null},
+  "visit": {
+    "opening_hours_th": null,
+    "opening_hours_status": "UNKNOWN",
+    "admission_fee_th": null,
+    "admission_status": "UNKNOWN",
+    "best_time_th": "ช่วงจัดงานประจำปี แต่ปีและกำหนดการเปลี่ยนแปลงได้ ควรตรวจประกาศเทศบาลก่อนเดินทาง",
+    "duration_minutes": null,
+    "parking_th": null,
+    "restroom": null,
+    "wheelchair_th": null,
+    "dress_code_th": null,
+    "source_urls": ["https://m-culture.in.th/album/120992/%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%AA%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%B0%E0%B8%AD%E0%B8%B8%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%99%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%99%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%93%E0%B9%8C", "https://www.thaipr.net/travel/3321904"]
+  },
+  "getting_th": [],
+  "history": [
+    {"claim_th": "พิธีเป็นงานประจำปีที่จัดตามความเชื่อและพิธีพราหมณ์โบราณของชาวตะกั่วป่า", "status": "CONFIRMED", "quote": "พิธีบวงสรวงองค์เทวรูปพระนารายณ์ และเทพบริวารจำลอง", "source_name": "ThaiPR.NET", "source_url": "https://www.thaipr.net/travel/3321904", "year_be": null, "year_ce": null},
+    {"claim_th": "สถานที่จัดอยู่ที่สวนสาธารณะอุทยานพระนารายณ์ ตรงข้ามสำนักงานเทศบาลเมืองตะกั่วป่า และอยู่ภายใต้การดูแลของเทศบาล", "status": "CONFIRMED", "quote": "ภายใต้การดูแลบริหารจัดการของเทศบาลเมืองตะกั่วป่า", "source_name": "ศูนย์ข้อมูลกลางวัฒนธรรม กระทรวงวัฒนธรรม", "source_url": "https://m-culture.in.th/album/120992/%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%AA%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%B0%E0%B8%AD%E0%B8%B8%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%99%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%99%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%93%E0%B9%8C", "year_be": null, "year_ce": null},
+    {"claim_th": "หลักฐานที่เกี่ยวข้องกับพระนารายณ์ในภูมิภาคนี้เชื่อมโยงกับจารึกเขาพระนารายณ์ ซึ่งฐานข้อมูลกำหนดอายุจารึกไว้ในพุทธศตวรรษที่ 11 และระบุว่าเป็นฐานเทวรูปนารายณ์", "status": "CONFIRMED", "quote": "ฐานเทวรูปนารายณ์", "source_name": "ศูนย์มานุษยวิทยาสิรินธร", "source_url": "https://db.sac.or.th/inscriptions/inscribe/detail/2541", "year_be": null, "year_ce": null},
+    {"claim_th": "ไม่พบหลักฐานที่ยืนยันปีสร้าง ผู้สร้าง การขึ้นทะเบียนโบราณสถาน หรือบทบาทของพิธี/เทวรูปในยุคเหมืองแร่ดีบุก", "status": "UNVERIFIED", "quote": "ผู้สร้าง | ไม่ปรากฏหลักฐาน", "source_name": "ศูนย์มานุษยวิทยาสิรินธร", "source_url": "https://db.sac.or.th/inscriptions/inscribe/detail/2541", "year_be": null, "year_ce": null}
+  ],
+  "highlights": [
+    {"title_th": "เทวรูปพระนารายณ์และเทพบริวารจำลอง", "detail_th": "จุดสักการะหลักของสวนสาธารณะและศูนย์กลางของพิธี", "source_url": "https://m-culture.in.th/album/120992/%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%AA%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%B0%E0%B8%AD%E0%B8%B8%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%99%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%99%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%93%E0%B9%8C"},
+    {"title_th": "กิจกรรมวัฒนธรรมและสันทนาการ", "detail_th": "พื้นที่จัดกิจกรรมวัฒนธรรม งานประเพณี และมีสนามเด็กเล่น", "source_url": "https://m-culture.in.th/album/120992/%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%AA%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%B0%E0%B8%AD%E0%B8%B8%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%99%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%99%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%93%E0%B9%8C"},
+    {"title_th": "บรรยากาศงานประจำปี", "detail_th": "งานปี 2566 มีการแสดงพื้นบ้าน สินค้า OTOP อาหารท้องถิ่น การแข่งขันนกกรงหัวจุก และกิจกรรมประกวด", "source_url": "https://www.thaipr.net/travel/3321904"}
+  ],
+  "festival": {"months_th": "มีนาคม–เมษายน (ยืนยันเฉพาะงานปี 2566: 27 มีนาคม–5 เมษายน)", "lunar_calendar_th": null, "activities_th": ["พิธีบวงสรวงตามพิธีพราหมณ์โบราณ", "การแสดงชุดพื้นเมือง", "จำหน่ายสินค้า OTOP และอาหารท้องถิ่น", "การแข่งขันนกกรงหัวจุก"], "venue_th": "สวนสาธารณะอุทยานพระนารายณ์ / บริเวณสนามหน้าอำเภอ ถนนสวนพระนารายณ์", "source_urls": ["https://www.thaipr.net/travel/3321904", "https://m-culture.in.th/album/120992/%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%AA%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%B0%E0%B8%AD%E0%B8%B8%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%99%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%นารายณ์"]},
+  "nearby": [],
+  "photos": [],
+  "seo_keywords_th": ["พิธีบวงสรวงพระนารายณ์ ตะกั่วป่า", "งานบวงสรวงพระนารายณ์", "อุทยานพระนารายณ์ ตะกั่วป่า", "พระนารายณ์และเทพบริวาร", "ประเพณีตะกั่วป่า", "เที่ยวตะกั่วป่า", "วัฒนธรรมตะกั่วป่า", "งานประจำปีตะกั่วป่า"],
+  "seo_keywords_en": ["Phra Narai ceremony Takuapa", "Phra Narai Park Takuapa", "Takuapa cultural festival", "Narai shrine Takuapa"],
+  "unknowns": ["ไม่พบเวลาเปิด–ปิดของสวนหรือพิธีที่ประกาศอย่างเป็นทางการ", "ไม่พบค่าเข้าชม", "ไม่พบเบอร์โทร/เฟซบุ๊ก/เว็บไซต์เฉพาะของงาน", "ไม่พบกำหนดการปี 2569", "ไม่พบข้อมูลยืนยันการเดินทางและระยะทางจากตัวเมืองตะกั่วป่า ภูเก็ต เขาหลัก หรือสนามบิน", "ไม่พบข้อมูลที่ยืนยันที่จอดรถ ห้องน้ำ และการรองรับรถเข็น", "ไม่พบปีสร้าง ผู้สร้าง การขึ้นทะเบียนโบราณสถาน สถาปัตยกรรมชิโน–โปรตุกีส หรือบทบาทในยุคเหมืองแร่ดีบุกของสถานที่จัด", "ไม่พบลิงก์ภาพทางการที่ระบุสิทธิ์การใช้งาน"],
+  "sources": [
+    {"name": "ศูนย์ข้อมูลกลางวัฒนธรรม กระทรวงวัฒนธรรม", "url": "https://m-culture.in.th/album/120992/%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%AA%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%B0%E0%B8%AD%E0%B8%B8%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%99%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%99%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%93%E0%B9%8C", "type": "official", "accessed": "2026-09-07"},
+    {"name": "ThaiPR.NET", "url": "https://www.thaipr.net/travel/3321904", "type": "news", "accessed": "2026-09-07"},
+    {"name": "ศูนย์มานุษยวิทยาสิรินธร ฐานข้อมูลจารึกในประเทศไทย", "url": "https://db.sac.or.th/inscriptions/inscribe/detail/2541", "type": "academic", "accessed": "2026-09-07"}
+  ],
+  "researched_by": "codex gpt-5.6-luna",
+  "researched_on": "2026-09-07"
+}

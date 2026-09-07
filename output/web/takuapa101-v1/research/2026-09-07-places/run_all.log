@@ -1,0 +1,29 @@
+targets=27 model=gpt-5.6-luna workers=6
+  wat-nikorn: OK 80s
+  wat-sena: OK 86s
+  wat-khuha: OK 89s
+  wat-kongkha: OK 92s
+  wat-boromthat: OK 108s
+  wat-pathum: OK 108s
+  kue-chai: OK 87s
+  guan-yu: OK 116s
+  pun-thao: OK 116s
+  museum: OK 142s
+  rong-jae: OK 140s
+  thung-phra: OK 89s
+  khun-in: skip(exists)
+  riverwalk: OK 92s
+  phra-narai: OK 209s
+  iron-bridge: OK 98s
+  culture-street: OK 128s
+  tao-ming: OK 80s
+  governor-wall: OK 105s
+  new-year-alms: OK 94s
+  ruler-ceremony: OK 98s
+  vegetarian: OK 90s
+  chak-phra: OK 79s
+  loy-krathong: OK 94s
+  narai-ceremony: OK 163s
+  relic-procession: OK 97s
+  food-center: OK 79s
+done

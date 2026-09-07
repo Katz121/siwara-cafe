@@ -1,0 +1,154 @@
+{
+  "id": "wat-khuha",
+  "name_th": "วัดคุหาภิมุข (วัดควนถ้ำ)",
+  "name_en": "Wat Khuha Phimuk",
+  "aka": ["วัดควนถ้ำ"],
+  "geo": {
+    "lat": 8.831526975,
+    "lng": 98.367913006,
+    "confidence": "high",
+    "source_url": "https://culturalenvi.onep.go.th/site/detail/4415",
+    "source_name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม (สผ.)"
+  },
+  "address": {
+    "line_th": null,
+    "subdistrict": "ตะกั่วป่า",
+    "district": "ตะกั่วป่า",
+    "province": "พังงา",
+    "postcode": null,
+    "source_url": "https://culturalenvi.onep.go.th/site/detail/4415"
+  },
+  "contact": {
+    "phone": null,
+    "facebook": null,
+    "website": null,
+    "line": null,
+    "source_url": null
+  },
+  "visit": {
+    "opening_hours_th": null,
+    "opening_hours_status": "UNKNOWN",
+    "admission_fee_th": null,
+    "admission_status": "UNKNOWN",
+    "best_time_th": null,
+    "duration_minutes": null,
+    "parking_th": null,
+    "restroom": null,
+    "wheelchair_th": null,
+    "dress_code_th": null,
+    "source_urls": ["https://culturalenvi.onep.go.th/site/detail/4415"]
+  },
+  "getting_there": [],
+  "history": [
+    {
+      "claim_th": "อุโบสถของวัดสร้างขึ้นเมื่อ พ.ศ. 2513 โดยนางฮวดบี",
+      "status": "CONFIRMED",
+      "quote": "สร้างขึ้นเมื่อ พ.ศ.2513 โดยนางฮวดบี",
+      "source_name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม (สผ.)",
+      "source_url": "https://culturalenvi.onep.go.th/site/detail/4415",
+      "year_be": 2513,
+      "year_ce": 1970
+    },
+    {
+      "claim_th": "ฐานข้อมูล สผ. จัดวัดแห่งนี้อยู่ในประเภทวัด วัดร้าง ศาสนสถาน และระบุว่าอุโบสถมีขนาดเล็กที่สุดในประเทศไทย",
+      "status": "CONFIRMED",
+      "quote": "อุโบสถที่มีขนาดเล็กที่สุดในประเทศไทย",
+      "source_name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม (สผ.)",
+      "source_url": "https://culturalenvi.onep.go.th/site/detail/4415",
+      "year_be": null,
+      "year_ce": null
+    },
+    {
+      "claim_th": "ยังไม่พบหลักฐานที่ยืนยันปีเริ่มสร้างวัด ผู้สร้างวัดในภาพรวม บทบาทในยุคเหมืองแร่ดีบุก ลักษณะชิโน-โปรตุกีส/จีน หรือการขึ้นทะเบียนโบราณสถาน",
+      "status": "UNVERIFIED",
+      "quote": "",
+      "source_name": "การสืบค้นแหล่งข้อมูลที่เปิดอ่านได้",
+      "source_url": "https://culturalenvi.onep.go.th/site/detail/4415",
+      "year_be": null,
+      "year_ce": null
+    }
+  ],
+  "highlights": [
+    {
+      "title_th": "อุโบสถขนาดเล็ก",
+      "detail_th": "ฐานข้อมูล สผ. ระบุว่าเป็นอุโบสถที่มีขนาดเล็กที่สุดในประเทศไทย",
+      "source_url": "https://culturalenvi.onep.go.th/site/detail/4415"
+    },
+    {
+      "title_th": "พระพุทธรูปหินแกะสลัก",
+      "detail_th": "ภายในอุโบสถมีพระพุทธรูปหินแกะสลักเป็นภาพนูนต่ำ",
+      "source_url": "https://culturalenvi.onep.go.th/site/detail/4415"
+    },
+    {
+      "title_th": "จารึกหลังอุโบสถ",
+      "detail_th": "ด้านหลังอุโบสถมีอักขระจารึก",
+      "source_url": "https://culturalenvi.onep.go.th/site/detail/4415"
+    },
+    {
+      "title_th": "ใบเสมารูปพระพุทธรูป",
+      "detail_th": "ใบเสมาโดยรอบทำเป็นรูปพระพุทธรูปปางต่าง ๆ",
+      "source_url": "https://culturalenvi.onep.go.th/site/detail/4415"
+    },
+    {
+      "title_th": "รูปปั้นฤๅษีโบราณ",
+      "detail_th": "ด้านหน้าวัดมีรูปปั้นฤๅษีโบราณตั้งอยู่",
+      "source_url": "https://culturalenvi.onep.go.th/site/detail/4415"
+    }
+  ],
+  "festival": {
+    "months_th": null,
+    "lunar_calendar_th": null,
+    "activities_th": [],
+    "venue_th": null,
+    "source_urls": []
+  },
+  "nearby": [],
+  "photos": [],
+  "seo_keywords_th": [
+    "วัดคุหาภิมุข",
+    "วัดควนถ้ำ",
+    "วัดคุหาภิมุข ตะกั่วป่า",
+    "วัดควนถ้ำ พังงา",
+    "อุโบสถเล็กที่สุดในประเทศไทย",
+    "ที่เที่ยวตะกั่วป่า",
+    "วัดเก่าตะกั่วป่า",
+    "สถานที่ท่องเที่ยววัฒนธรรมพังงา"
+  ],
+  "seo_keywords_en": [
+    "Wat Khuha Phimuk",
+    "Wat Khuha Phimuk Takua Pa",
+    "Wat Khuan Tham Phang Nga",
+    "smallest ubosot in Thailand",
+    "Takua Pa temple",
+    "cultural attractions Takua Pa",
+    "Phang Nga temples",
+    "Khuha Phimuk Temple"
+  ],
+  "unknowns": [
+    "ไม่พบเลขที่บ้าน ถนน และรหัสไปรษณีย์จากแหล่งที่เปิดอ่านได้",
+    "ไม่พบเวลาเปิด-ปิด ค่าเข้าชม และระยะเวลาแนะนำในการเยี่ยมชม",
+    "ไม่พบเบอร์โทรศัพท์ เพจเฟซบุ๊ก เว็บไซต์ หรือ LINE ของวัด",
+    "ไม่พบข้อมูลยืนยันวิธีเดินทางและระยะทางจากตัวเมืองตะกั่วป่า ภูเก็ต เขาหลัก หรือสนามบิน",
+    "ไม่พบข้อมูลยืนยันที่จอดรถ ห้องน้ำ และการเข้าถึงสำหรับผู้สูงอายุ/รถเข็น",
+    "ไม่พบเทศกาลหรือประเพณีที่เชื่อมโยงกับวัดจากแหล่งที่เปิดอ่านได้",
+    "ไม่พบสถานที่ใกล้เคียงที่ยืนยันระยะเดินถึงได้",
+    "ไม่พบลิงก์รูปภาพทางการของสถานที่",
+    "ยังไม่พบแหล่งทางการหรือวิชาการที่ยืนยันบทบาทในยุคเหมืองแร่ดีบุก สถาปัตยกรรมชิโน-โปรตุกีส/จีน หรือการขึ้นทะเบียนโบราณสถาน"
+  ],
+  "sources": [
+    {
+      "name": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม (สผ.) — แหล่งศิลปกรรมอันควรอนุรักษ์",
+      "url": "https://culturalenvi.onep.go.th/site/detail/4415",
+      "type": "official",
+      "accessed": "2026-09-07"
+    },
+    {
+      "name": "สำนักงานพระพุทธศาสนาแห่งชาติ — ข้อมูลทะเบียนศาสนสมบัติกลางและวัดร้างทั่วประเทศ",
+      "url": "https://onab.go.th/th/file/get/file/2021111871cc998239d7c8b8d77aa76b771a377b151224.pdf",
+      "type": "official",
+      "accessed": "2026-09-07"
+    }
+  ],
+  "researched_by": "codex gpt-5.6-luna",
+  "researched_on": "2026-09-07"
+}
