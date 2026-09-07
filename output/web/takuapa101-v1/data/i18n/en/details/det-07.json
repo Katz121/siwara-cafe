@@ -1,0 +1,184 @@
+{
+  "tao-ming": {
+    "history": [
+      {
+        "claim": "The building was constructed in 1922 (2465 BE).",
+        "quote": "built in the year 2465 BE"
+      },
+      {
+        "claim": "The school applied to be a private school in 1920 and was originally named Toh Beng in the Hokkien dialect.",
+        "quote": "expressed intent to establish as a private school since the year 2463 BE"
+      },
+      {
+        "claim": "It was founded with donations from tin mining tycoons and Chinese merchants to provide primary education for children in Takua Pa.",
+        "quote": "built by raising funds from mining tycoons and Chinese merchants"
+      },
+      {
+        "claim": "The building features applied Sino-Portuguese architecture with a corrugated zinc roof and was built by Chinese craftsmen.",
+        "quote": "applied Sino-Portuguese style"
+      },
+      {
+        "claim": "The school has ceased operations. The remaining building is under the care of the Tao Ming Takua Pa School Foundation.",
+        "quote": "the school is currently dissolved"
+      }
+    ],
+    "timeline": [
+      {
+        "title": "Application for Toh Beng Private School",
+        "detail": "The Chinese school, initially operated informally by private individuals, applied for private school status following the Private Schools Act of 1918."
+      },
+      {
+        "title": "Construction of Tao Ming School Building",
+        "detail": "The applied Sino-Portuguese building was constructed with donations from tin mining tycoons and Chinese merchants to provide primary and Chinese language education for children in Takua Pa."
+      },
+      {
+        "title": "Decline of the Mining Town",
+        "detail": "Local sources state that tin mines began to gradually close during this decade, reducing the town's vibrancy. However, this is not a verified year for the school's closure."
+      },
+      {
+        "title": "Municipality Releases Promotional Video",
+        "detail": "Takua Pa Municipality published a video introducing the Tao Ming School building as an old town tourist attraction."
+      },
+      {
+        "title": "Old Town Storytelling Event at Tao Ming School",
+        "detail": "Press releases indicated the Old Town Storytelling event took place at Tao Ming School, Takua Pa. However, full details from primary news sources are not verified."
+      },
+      {
+        "title": "School Closes and Foundation Takes Over",
+        "detail": "The exact year of closure is not verified. Official sources state the remaining building is under the care of the Tao Ming Takua Pa School Foundation."
+      }
+    ],
+    "news": [
+      {
+        "title": "Old Town Storytelling Event at Tao Ming School, Takua Pa",
+        "summary": "Press releases reported a full day of activities hosted at Tao Ming School."
+      }
+    ],
+    "nearby": [
+      {
+        "name": "Takua Pa Old Town Community / Talat Yai (Big Market)"
+      }
+    ],
+    "visit": {
+      "best_time": "Suitable for viewing the building and the old town area during the day, though there are no official recommended hours.",
+      "parking": null,
+      "wheelchair": null,
+      "dress_code": null,
+      "opening_hours": null,
+      "admission_fee": null
+    },
+    "address_line": "Sri Takua Pa Road (building number is not verified from available sources)"
+  },
+  "new-year-alms": {
+    "history": [
+      {
+        "claim": "A development plan monitoring document from Takua Pa Municipality mentions a New Year event featuring a dry food alms giving activity along the riverbank.",
+        "quote": "dry food alms giving activity along the riverbank"
+      },
+      {
+        "claim": "The New Year alms giving in Takua Pa district was discussed to be canceled in 2021 (2564 BE) due to the COVID-19 situation.",
+        "quote": "cancel New Year activities for alms giving in Takua Pa district"
+      },
+      {
+        "claim": "There is no verified evidence stating the starting year, founders, specific beliefs, or direct links between this named event and the tin mining era.",
+        "quote": ""
+      }
+    ],
+    "timeline": [
+      {
+        "title": "Local Discussion to Cancel New Year Alms During COVID-19",
+        "detail": "Meeting reports note a discussion to cancel New Year activities and alms giving in Takua Pa district."
+      },
+      {
+        "title": "Municipal Document Confirms Riverbank Alms Format",
+        "detail": "A municipal monitoring plan details a New Year event with dry food alms giving by the riverbank. The specific pier name or location is not verified."
+      },
+      {
+        "title": "Alms Giving at Takua Pa Old Town Songkran",
+        "detail": "News reports mention dry food alms giving on the Takua Pa Old Town cultural street. This is evidence of Thai New Year activities in the area, but it is not directly linked to the January 1st event schedule."
+      },
+      {
+        "title": "Starting Year Not Verified",
+        "detail": "There is no verified evidence identifying the founders, the reasons for starting the event, or the original ceremonial format for this named activity."
+      }
+    ],
+    "news": [
+      {
+        "title": "Phang Nga Hosts Grand Songkran, Alms Giving in Takua Pa Old Town for Thai New Year Blessings",
+        "summary": "News reported a dry food alms giving ceremony on the cultural street of Takua Pa Old Town, along with ongoing cultural activities."
+      },
+      {
+        "title": "Takua Pa Blooms! Retracing Old Town Charm at Takuapa Oldtown Songkran Festival 2026",
+        "summary": "News described the 4th Old Town Songkran event and morning alms giving activities."
+      }
+    ],
+    "nearby": [],
+    "visit": {
+      "best_time": "If organized as a New Year activity, you should check local government announcements before traveling, as specific schedules for this named event are not verified.",
+      "parking": null,
+      "wheelchair": null,
+      "dress_code": null,
+      "opening_hours": null,
+      "admission_fee": null
+    },
+    "address_line": null
+  },
+  "narai-ceremony": {
+    "history": [
+      {
+        "claim": "The ceremony is an annual event held according to local beliefs and ancient Brahmin rituals of Takua Pa residents.",
+        "quote": "worship ceremony for the replica statue of Phra Narai and accompanying deities"
+      },
+      {
+        "claim": "The event takes place at Phra Narai Public Park, opposite the Takua Pa Town Municipality Office, and is managed by the municipality.",
+        "quote": "under the care and management of Takua Pa Town Municipality"
+      },
+      {
+        "claim": "Evidence related to Phra Narai (Vishnu) in this region links to the Khao Phra Narai inscription. Databases date the inscription to the 6th century CE (11th century BE) and identify it as a base for a Narai statue.",
+        "quote": "base of a Narai statue"
+      },
+      {
+        "claim": "There is no verified evidence for the construction year, founders, historical registration, or the role of the ceremony or statue during the tin mining era.",
+        "quote": "Founder | no evidence appears"
+      }
+    ],
+    "timeline": [
+      {
+        "title": "Phra Narai Worship Ceremony in 2023 (2566 BE)",
+        "detail": "A worship ceremony was held for the replica statues of Phra Narai and accompanying deities, alongside cultural activities and a community market."
+      },
+      {
+        "title": "Status in 2026",
+        "detail": "No verified schedules or restoration projects for 2026 have been found in available sources. The location continues to be documented as a municipal public park."
+      },
+      {
+        "title": "Inscription and Statue Base of Phra Narai in Takua Pa Region",
+        "detail": "The Khao Phra Narai inscription dates back to the 6th century CE and serves as evidence of Brahmin-Hindu religion. However, it is not verified evidence for the construction of the current park or ceremony."
+      },
+      {
+        "title": "Takua Pa as a Port and Mining Town",
+        "detail": "The town has a history of maritime trade and later grew from tin mining, which brought an influx of Chinese laborers. However, there is no verified evidence directly linking this period to the ceremony."
+      },
+      {
+        "title": "Phra Narai Park as a Municipal Public Space",
+        "detail": "Cultural data states the park is located opposite the Takua Pa Town Municipality Office and is managed by the municipality. It is used for cultural events and recreation."
+      }
+    ],
+    "news": [
+      {
+        "title": "Phra Narai Worship Ceremony, an Identity of Takua Pa Residents",
+        "summary": "Reported the annual 2023 event held from March 27 to April 5, featuring worship ceremonies for replica statues and various cultural activities."
+      }
+    ],
+    "nearby": [],
+    "visit": {
+      "best_time": "During the annual event period. However, dates and schedules may vary, so you should check municipal announcements before traveling.",
+      "parking": null,
+      "wheelchair": null,
+      "dress_code": null,
+      "opening_hours": null,
+      "admission_fee": null
+    },
+    "address_line": "Phet Kasem Road, Sri Mueang Community"
+  }
+}

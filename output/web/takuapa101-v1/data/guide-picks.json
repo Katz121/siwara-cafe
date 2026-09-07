@@ -1,0 +1,314 @@
+[
+ {
+  "id": "guide-lad-yai",
+  "name_th": "หลาดใหญ่ ถนนคนเดินสายวัฒนธรรมเมืองเก่า",
+  "name_en": "Lad Yai Old Town Walking Street",
+  "category": "attraction",
+  "guide_group": "attraction",
+  "label_th": "เที่ยวเมืองเก่า",
+  "one_liner_th": "ถนนคนเดินสายประวัติศาสตร์สุดคลาสสิก ปิดถนนศรีตะกั่วป่าให้คนท้องถิ่นนำอาหารโบราณ ขนมพื้นบ้าน และงานคราฟต์มาเปิดแผงขายใต้แสงไฟชิโนโปรตุกีส",
+  "menu_th": "เต้าคั่วโบราณ, ขนมเต่า (อังกู๊), เบือทอดกุ้งสด, ขนมครกโบราณ",
+  "tip_th": "เปิดเฉพาะวันอาทิตย์! แนะนำมาช่วง 17:00 น. แสงแดดส้มกำลังสวย ถ่ายรูปตึกเก่าคลาสสิกมาก",
+  "hours_th": "เฉพาะวันอาทิตย์ 15:30 – 20:30 น.",
+  "distance_th": "~0.7 กม. จากศิวรา",
+  "image": "/assets/guide/guide-lad-yai.jpg",
+  "google_maps_url": "https://maps.google.com/?q=%E0%B8%AB%E0%B8%A5%E0%B8%B2%E0%B8%94%E0%B9%83%E0%B8%AB%E0%B8%8D%E0%B9%88%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2",
+  "status": "open",
+  "provenance": "siwara-guide",
+  "sources": [
+   {
+    "name": "คู่มือกินเที่ยวตะกั่วป่า โดยศิวรา คาเฟ่",
+    "url": "https://siwaracafe.com/guide",
+    "accessed": "2026-09-07"
+   }
+  ]
+ },
+ {
+  "id": "guide-bang-deen",
+  "name_th": "ร้านบังดีน ข้าวหมกไก่ & โรตีแกง (Michelin Guide)",
+  "name_en": "Bang Deen Michelin Roti & Biryani",
+  "category": "restaurant",
+  "guide_group": "dining",
+  "label_th": "อาหารเช้า / มิชลิน",
+  "one_liner_th": "ร้านอาหารเช้ามุสลิมชื่อดังการันตีมิชลินไกด์ ข้าวหมกหอมนุ่มกลิ่นเครื่องเทศ เสิร์ฟคู่น้ำจิ้มรสจัดจ้าน และโรตีแป้งนุ่มแกงมัสมั่นไก่",
+  "menu_th": "ข้าวหมกไก่เครื่องเทศสูตรเด็ด, โรตีแกงมัสมั่นไก่, มะตะบะไก่, ชาชักร้อน",
+  "tip_th": "แป้งโรตีนวดสดทอดกรอบนุ่ม แนะนำสั่งโรตีแกงมัสมั่นคู่กับชาชักร้อน อร่อยเข้ากันมาก",
+  "hours_th": "06:00 – 13:30 น. (ทุกวัน)",
+  "distance_th": "~2.8 กม. จากศิวรา",
+  "image": "/assets/guide/guide-bang-deen.jpg",
+  "google_maps_url": "https://maps.google.com/?q=%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%9A%E0%B8%B1%E0%B8%87%E0%B8%94%E0%B8%B5%E0%B8%99%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2",
+  "status": "open",
+  "provenance": "siwara-guide",
+  "sources": [
+   {
+    "name": "คู่มือกินเที่ยวตะกั่วป่า โดยศิวรา คาเฟ่",
+    "url": "https://siwaracafe.com/guide",
+    "accessed": "2026-09-07"
+   }
+  ]
+ },
+ {
+  "id": "guide-mee-talad-khwang",
+  "name_th": "บะหมี่พังงา ตลาดขวาง",
+  "name_en": "Mee Phang Nga (Talad Khwang)",
+  "category": "restaurant",
+  "guide_group": "dining",
+  "label_th": "บะหมี่ฮกเกี้ยน / ตำนาน",
+  "one_liner_th": "บะหมี่ไข่เส้นทำเองเหนียวนุ่มสูตรฮกเกี้ยนโบราณ คลุกเคล้าน้ำมันหอมเจียวและกากหมูกรอบชิ้นโต รสชาติกลมกล่อมนุ่มนวล",
+  "menu_th": "บะหมี่ฮกเกี้ยนเส้นทำเอง, บะหมี่เกี๊ยวแห้งต้มยำ, กากหมูกรอบเจียวหอม",
+  "tip_th": "แนะนำสั่ง \"บะหมี่แห้งต้มยำพิเศษกากหมู\" คลุกเคล้าให้เข้ากัน อร่อยฟินไม่ต้องปรุงเพิ่ม",
+  "hours_th": "09:00 – 15:30 น. (หยุดวันอังคาร)",
+  "distance_th": "~0.6 กม. จากศิวรา",
+  "image": "/assets/guide/guide-mee-talad-khwang.jpg",
+  "google_maps_url": "https://maps.google.com/?q=%E0%B8%9A%E0%B8%B0%E0%B8%AB%E0%B8%A1%E0%B8%B5%E0%B9%88%E0%B8%95%E0%B8%A5%E0%B8%B2%E0%B8%94%E0%B8%82%E0%B8%A7%E0%B8%B2%E0%B8%87",
+  "status": "open",
+  "provenance": "siwara-guide",
+  "sources": [
+   {
+    "name": "คู่มือกินเที่ยวตะกั่วป่า โดยศิวรา คาเฟ่",
+    "url": "https://siwaracafe.com/guide",
+    "accessed": "2026-09-07"
+   }
+  ]
+ },
+ {
+  "id": "guide-moo-satay-kruaew",
+  "name_th": "ขนมจีนหมูสะเต๊ะครูแอ๋ว (ทุ่งพระโพธิ์)",
+  "name_en": "Kru Aew Satay & Khanom Jeen",
+  "category": "restaurant",
+  "guide_group": "dining",
+  "label_th": "สตรีทฟู้ด / ขนมจีน",
+  "one_liner_th": "ร้านลับย่านทุ่งพระโพธิ์ หมูสะเต๊ะเตาถ่านเนื้อนุ่มชุ่มฉ่ำหมักเครื่องเทศเข้าเนื้อ ย่างร้อนๆ ทานคู่กับขนมจีนน้ำยาปักษ์ใต้รสจัดจ้าน",
+  "menu_th": "หมูสะเต๊ะเตาถ่านสูตรครูแอ๋ว, ขนมจีนน้ำยาปู/ไตปลา, น้ำจิ้มถั่วลิสงเข้มข้น",
+  "tip_th": "หมูสะเต๊ะย่างสดใหม่ไม้ต่อไม้ แนะนำสั่งชุดใหญ่ 20-30 ไม้ ทานคู่กับขนมจีนเข้ากันสุดๆ",
+  "hours_th": "12:00 – 18:00 น. (หยุดวันพฤหัสบดี)",
+  "distance_th": "~2.4 กม. จากศิวรา",
+  "image": "/assets/guide/guide-moo-satay-kruaew.jpg",
+  "google_maps_url": "https://maps.google.com/?q=%E0%B8%AB%E0%B8%A1%E0%B8%B9%E0%B8%AA%E0%B8%B0%E0%B9%80%E0%B8%95%E0%B9%8A%E0%B8%B0%E0%B8%84%E0%B8%A3%E0%B8%B9%E0%B9%81%E0%B8%AD%E0%B9%8B%E0%B8%A7",
+  "status": "open",
+  "provenance": "siwara-guide",
+  "sources": [
+   {
+    "name": "คู่มือกินเที่ยวตะกั่วป่า โดยศิวรา คาเฟ่",
+    "url": "https://siwaracafe.com/guide",
+    "accessed": "2026-09-07"
+   }
+  ]
+ },
+ {
+  "id": "guide-pa-da-hokkien",
+  "name_th": "ป้าดา หมี่ฮกเกี้ยน (ถนนศรีตะกั่วป่า)",
+  "name_en": "Pa Da Hokkien Fried Noodles",
+  "category": "restaurant",
+  "guide_group": "dining",
+  "label_th": "หมี่ผัดโบราณ",
+  "one_liner_th": "ร้านหมี่ฮกเกี้ยนเจ้าเก่าแก่คู่ถนนศรีตะกั่วป่า เส้นบะหมี่เหนียวนุ่มผัดหอมกลิ่นกระทะไหม้ ใส่ซีฟู้ดแน่นๆ และไข่เยิ้มคลุกเคล้า",
+  "menu_th": "หมี่ฮกเกี้ยนผัดขลุกขลิกใส่ไข่, หมี่สั่วกุ้งสด, บะหมี่เกี๊ยวหมูแดง",
+  "tip_th": "แนะนำสั่ง \"หมี่ฮกเกี้ยนผัดไข่เยิ้ม\" เจาะไข่แดงแล้วคลุกกับเส้นร้อนๆ นัวเข้มข้นมาก",
+  "hours_th": "07:00 – 17:00 น. (ทุกวัน)",
+  "distance_th": "~0.7 กม. จากศิวรา",
+  "image": "/assets/guide/guide-pa-da-hokkien.jpg",
+  "google_maps_url": "https://maps.google.com/?q=%E0%B8%9B%E0%B9%89%E0%B8%B2%E0%B8%94%E0%B8%B2%E0%B8%AB%E0%B8%A1%E0%B8%B5%E0%B9%88%E0%B8%AE%E0%B8%81%E0%B9%80%E0%B8%81%E0%B8%B5%E0%B9%89%E0%B8%A2%E0%B8%99",
+  "status": "open",
+  "provenance": "siwara-guide",
+  "sources": [
+   {
+    "name": "คู่มือกินเที่ยวตะกั่วป่า โดยศิวรา คาเฟ่",
+    "url": "https://siwaracafe.com/guide",
+    "accessed": "2026-09-07"
+   }
+  ]
+ },
+ {
+  "id": "guide-pu-dam",
+  "name_th": "ร้านปูดำ (บางนายสี)",
+  "name_en": "Pu Dam Restaurant (Bang Nai Si)",
+  "category": "restaurant",
+  "guide_group": "dining",
+  "label_th": "ซีฟู้ด / อาหารใต้",
+  "one_liner_th": "ร้านลับริมคลองป่าชายเลนย่านบางนายสี การันตีปูดำสดๆ จากธรรมชาติเนื้อแน่นหวานเจี๊ยบ ปรุงรสมือพื้นบ้านรสจัดจ้านถึงเครื่อง",
+  "menu_th": "ปูดำไข่นึ่งเนื้อแน่น, แกงส้มปูดำหน่อไม้ดอง, ข้าวผัดปู, กุ้งผัดซอสมะขาม",
+  "tip_th": "ปูดำนึ่งและข้าวผัดปูคือเมนูห้ามพลาด แนะนำโทรเช็กของสดหรือไปก่อนช่วงค่ำ",
+  "hours_th": "10:00 – 21:00 น. (ทุกวัน)",
+  "distance_th": "~3.2 กม. จากศิวรา",
+  "image": "/assets/guide/guide-pu-dam.jpg",
+  "google_maps_url": "https://maps.google.com/?q=%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%9B%E0%B8%B9%E0%B8%94%E0%B8%B3%20%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%99%E0%B8%B2%E0%B8%A2%E0%B8%AA%E0%B8%B5",
+  "status": "open",
+  "provenance": "siwara-guide",
+  "sources": [
+   {
+    "name": "คู่มือกินเที่ยวตะกั่วป่า โดยศิวรา คาเฟ่",
+    "url": "https://siwaracafe.com/guide",
+    "accessed": "2026-09-07"
+   }
+  ]
+ },
+ {
+  "id": "guide-jae-ouan",
+  "name_th": "เจ๊อ้วน ทะเลสด (บ้านน้ำเค็ม)",
+  "name_en": "Jae Ouan Fresh Seafood (Nam Khem)",
+  "category": "restaurant",
+  "guide_group": "dining",
+  "label_th": "ซีฟู้ดริมทะเล",
+  "one_liner_th": "ร้านอาหารทะเลสดขึ้นชื่อย่านบ้านน้ำเค็ม วัตถุดิบสดใหม่ส่งตรงจากเรือประมงทุกวัน น้ำจิ้มซีฟู้ดมะนาวแท้รสจัดจ้าน บรรยากาศมื้อเย็นริมทะเล",
+  "menu_th": "กุ้งลายเสือเผา/ทอดกระเทียม, ต้มยำซีฟู้ดน้ำใส, ปูม้านึ่งแกะพร้อมทาน, หอยชักตีนลวก",
+  "tip_th": "เหมาะมากสำหรับมื้อเย็น กุ้งลายเสือตัวโตเนื้อเด้งหวานเจี๊ยบทานคู่น้ำจิ้มซีฟู้ดรสแซ่บ",
+  "hours_th": "10:30 – 21:30 น. (ทุกวัน)",
+  "distance_th": "~11.5 กม. จากศิวรา",
+  "image": "/assets/guide/guide-jae-ouan.jpg",
+  "google_maps_url": "https://maps.google.com/?q=%E0%B9%80%E0%B8%88%E0%B9%8A%E0%B8%AD%E0%B9%89%E0%B8%A7%E0%B8%99%20%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B9%80%E0%B8%84%E0%B9%87%E0%B8%A1",
+  "status": "open",
+  "provenance": "siwara-guide",
+  "sources": [
+   {
+    "name": "คู่มือกินเที่ยวตะกั่วป่า โดยศิวรา คาเฟ่",
+    "url": "https://siwaracafe.com/guide",
+    "accessed": "2026-09-07"
+   }
+  ]
+ },
+ {
+  "id": "guide-kae-padthai",
+  "name_th": "เก๋ ผัดไทย (ตลาดเก่าตะกั่วป่า)",
+  "name_en": "Kae Pad Thai (Old Market)",
+  "category": "restaurant",
+  "guide_group": "dining",
+  "label_th": "ผัดไทย / มื้อค่ำ",
+  "one_liner_th": "ร้านผัดไทยยอดนิยมประจำย่านเมืองเก่า เส้นเหนียวนุ่มผัดซอสมะขามเปียกสูตรโบราณเข้มข้นฉ่ำเข้าเนื้อ กุ้งสดตัวโตเนื้อเด้ง",
+  "menu_th": "ผัดไทยกุ้งสดเส้นจันทน์, ผัดไทยห่อไข่, หอยทอดกรอบกระทะร้อน",
+  "tip_th": "ผัดไทยกุ้งสดห่อไข่คือจานเด็ด บีบมะนาวสดแนบหัวปลีและใบบัวบก ครบรสไม่ต้องปรุง",
+  "hours_th": "16:30 – 21:30 น. (ทุกวัน)",
+  "distance_th": "~0.6 กม. จากศิวรา",
+  "image": "/assets/guide/guide-kae-padthai.jpg",
+  "google_maps_url": "https://maps.google.com/?q=%E0%B9%80%E0%B8%81%E0%B9%8B%E0%B8%9C%E0%B8%B1%E0%B8%94%E0%B9%84%E0%B8%97%E0%B8%A2%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2",
+  "status": "open",
+  "provenance": "siwara-guide",
+  "sources": [
+   {
+    "name": "คู่มือกินเที่ยวตะกั่วป่า โดยศิวรา คาเฟ่",
+    "url": "https://siwaracafe.com/guide",
+    "accessed": "2026-09-07"
+   }
+  ]
+ },
+ {
+  "id": "guide-baan-lapp",
+  "name_th": "BAAN LAPP บ้านลัพพ์ (โฮมมี่ & สเต๊ก ตะกั่วป่า)",
+  "name_en": "BAAN LAPP (Homey Dining & Steaks)",
+  "category": "restaurant",
+  "guide_group": "dining",
+  "label_th": "คาเฟ่ & สเต๊กโฮมมี่",
+  "one_liner_th": "ร้านอาหาร & คาเฟ่บรรยากาศโฮมมี่สุดอบอุ่นสไตล์ Hidden Gem เสิร์ฟเมนูสเต๊ก พาสต้า และอาหารฟิวชั่นรสมือประณีต",
+  "menu_th": "สเต๊กหมูพอร์คช็อปโฮมเมด, สปาเก็ตตี้คาโบนาร่า/ขี้เมาทะเล, แซลมอนซอสซีฟู้ด",
+  "tip_th": "ช่วงเย็น 17:30 เป็นต้นไปเปิดไฟบรรยากาศดีมาก เหมาะกับการมาทานมื้อค่ำกับครอบครัว",
+  "hours_th": "11:00 – 21:00 น. (หยุดวันพุธ)",
+  "distance_th": "~2.2 กม. จากศิวรา",
+  "image": "/assets/guide/guide-baan-lapp.jpg",
+  "google_maps_url": "https://maps.google.com/?q=Baan%20Lapp%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2",
+  "status": "open",
+  "provenance": "siwara-guide",
+  "sources": [
+   {
+    "name": "คู่มือกินเที่ยวตะกั่วป่า โดยศิวรา คาเฟ่",
+    "url": "https://siwaracafe.com/guide",
+    "accessed": "2026-09-07"
+   }
+  ]
+ },
+ {
+  "id": "guide-iron-bridge",
+  "name_th": "สะพานเหล็กบุญสูง (สะพานโคกขนุน)",
+  "name_en": "Bun Sung Iron Bridge",
+  "category": "attraction",
+  "guide_group": "attraction",
+  "label_th": "แลนด์มาร์ก / ประวัติศาสตร์",
+  "one_liner_th": "แลนด์มาร์กประวัติศาสตร์ยุคเหมืองแร่รุ่งเรือง สร้างขึ้นจากชิ้นส่วนเหล็กของเรือขุดแร่โบราณ ทอดข้ามแม่น้ำตะกั่วป่าอย่างงดงาม",
+  "menu_th": "จุดชมวิวแม่น้ำตะกั่วป่า, ถ่ายรูปโครงสร้างเหล็กเรือขุดแร่โบราณ, รับลมเย็น",
+  "tip_th": "ช่วง 17:00 - 18:30 น. แสงพระอาทิตย์ตกจะสาดเข้าโครงสะพานเหล็กสีส้มสวยมาก ถ่ายรูปสวยสุดๆ",
+  "hours_th": "เปิดตลอด 24 ชั่วโมง (แนะนำ 16:30 – 18:30 น.)",
+  "distance_th": "~2.3 กม. จากศิวรา",
+  "image": "/assets/guide/guide-iron-bridge.jpg",
+  "google_maps_url": "https://maps.google.com/?q=%E0%B8%AA%E0%B8%B0%E0%B8%9E%E0%B8%B2%E0%B8%99%E0%B9%80%E0%B8%AB%E0%B8%A5%E0%B9%87%E0%B8%81%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2",
+  "status": "open",
+  "provenance": "siwara-guide",
+  "sources": [
+   {
+    "name": "คู่มือกินเที่ยวตะกั่วป่า โดยศิวรา คาเฟ่",
+    "url": "https://siwaracafe.com/guide",
+    "accessed": "2026-09-07"
+   }
+  ]
+ },
+ {
+  "id": "guide-old-town-street",
+  "name_th": "ถนนวัฒนธรรมศรีตะกั่วป่า & สตรีทอาร์ตตึกโบราณ",
+  "name_en": "Sri Takua Pa Heritage Street & Murals",
+  "category": "attraction",
+  "guide_group": "attraction",
+  "label_th": "ตึกเก่าชิโนโปรตุกีส",
+  "one_liner_th": "ย่านตึกแถวโบราณที่มีทางเดินโค้งใต้ตึก (Five-Foot Way) พร้อมภาพวาดสตรีทอาร์ตบอกเล่าเรื่องราวชาวบาบ๋าและประวัติศาสตร์เหมืองแร่",
+  "menu_th": "สถาปัตยกรรมชิโนโปรตุกีส, ซุ้มประตูห้าก้าว, สตรีทอาร์ตวิถีคนเหมือง",
+  "tip_th": "สามารถเดินทะลุซอยต่างๆ เชื่อมต่อไปยังร้านขนมเต้าส้อและร้านของกินเมืองเก่าได้สะดวก",
+  "hours_th": "เดินชมได้ตลอดวัน (แนะนำ 09:00 – 17:00 น.)",
+  "distance_th": "~0.7 กม. จากศิวรา",
+  "image": "/assets/guide/guide-old-town-street.jpg",
+  "google_maps_url": "https://maps.google.com/?q=%E0%B8%96%E0%B8%99%E0%B8%99%E0%B8%A8%E0%B8%A3%E0%B8%B5%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2",
+  "status": "open",
+  "provenance": "siwara-guide",
+  "sources": [
+   {
+    "name": "คู่มือกินเที่ยวตะกั่วป่า โดยศิวรา คาเฟ่",
+    "url": "https://siwaracafe.com/guide",
+    "accessed": "2026-09-07"
+   }
+  ]
+ },
+ {
+  "id": "guide-tam-nang",
+  "name_th": "น้ำตกตำหนัง (อุทยานแห่งชาติศรีพังงา)",
+  "name_en": "Tam Nang Waterfall (Si Phang Nga NP)",
+  "category": "attraction",
+  "guide_group": "attraction",
+  "label_th": "ธรรมชาติ / น้ำตก",
+  "one_liner_th": "น้ำตกขนาดใหญ่กลางผืนป่าดงดิบอันสมบูรณ์ของอุทยานแห่งชาติศรีพังงา สายน้ำไหลทิ้งตัวลงมาจากหน้าผาสูง 63 เมตร น้ำใสเห็นฝูงปลาพลวงแหวกว่าย",
+  "menu_th": "น้ำตกสูง 63 เมตร, เล่นน้ำตกใสเย็นฉ่ำ, ฝูงปลาพลวงธรรมชาติ, เส้นทางศึกษาธรรมชาติ",
+  "tip_th": "ช่วง 10:00 - 14:00 น. แสงแดดส่องลงผิวน้ำสวยมาก มีจุดพักผ่อนร่มรื่นใต้ต้นไม้ใหญ่",
+  "hours_th": "08:30 – 16:30 น. (ทุกวัน)",
+  "distance_th": "~21.8 กม. จากศิวรา",
+  "image": "/assets/guide/guide-tam-nang.jpg",
+  "google_maps_url": "https://maps.google.com/?q=%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%95%E0%B8%81%E0%B8%95%E0%B8%B3%E0%B8%AB%E0%B8%99%E0%B8%B1%E0%B8%87",
+  "status": "open",
+  "provenance": "siwara-guide",
+  "sources": [
+   {
+    "name": "คู่มือกินเที่ยวตะกั่วป่า โดยศิวรา คาเฟ่",
+    "url": "https://siwaracafe.com/guide",
+    "accessed": "2026-09-07"
+   }
+  ]
+ },
+ {
+  "id": "guide-tuangrat-taosor",
+  "name_th": "เต้าส้อตวงรัตน์ (ต้นตำรับ 100 ปี)",
+  "name_en": "Tuangrat 100-Year Taosor Pastry",
+  "category": "souvenir_shop",
+  "guide_group": "souvenir",
+  "label_th": "ของฝากขึ้นชื่อ",
+  "one_liner_th": "ของฝากอันดับ 1 ของตะกั่วป่า แป้งบางกรอบ ไส้ถั่วเนียนแน่น กลิ่นหอมอบควันเทียนสูตรโบราณดั้งเดิมสืบทอดมารุ่นสู่รุ่น",
+  "menu_th": "เต้าส้อไส้เค็มไข่เค็ม, ไส้หวานไข่เค็ม, ขนมจีบไส้สังขยาโบราณ",
+  "tip_th": "ไส้เค็มไข่เค็มคือ Signature ซื้อแบบเพิ่งอบเตาร้อนๆ หอมอร่อยมาก เก็บได้ 7-10 วัน",
+  "hours_th": "08:00 – 17:00 น. (ทุกวัน)",
+  "distance_th": "~0.6 กม. จากศิวรา",
+  "image": "/assets/guide/guide-tuangrat-taosor.jpg",
+  "google_maps_url": "https://maps.google.com/?q=%E0%B9%80%E0%B8%95%E0%B9%89%E0%B8%B2%E0%B8%AA%E0%B9%89%E0%B8%AD%E0%B8%95%E0%B8%A7%E0%B8%87%E0%B8%A3%E0%B8%B1%E0%B8%95%E0%B8%99%E0%B9%8C",
+  "status": "open",
+  "provenance": "siwara-guide",
+  "sources": [
+   {
+    "name": "คู่มือกินเที่ยวตะกั่วป่า โดยศิวรา คาเฟ่",
+    "url": "https://siwaracafe.com/guide",
+    "accessed": "2026-09-07"
+   }
+  ]
+ }
+]

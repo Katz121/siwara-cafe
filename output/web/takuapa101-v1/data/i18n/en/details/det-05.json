@@ -1,0 +1,206 @@
+{
+  "thung-phra": {
+    "history": [
+      {
+        "claim": "Thung Phra Pho Public Park is located within the Takua Pa old town area, which is subject to municipal building control regulations.",
+        "quote": "สวนสาธารณะทุ่งพระโพธิ์"
+      },
+      {
+        "claim": "Municipal planning documents state that the park features a health garden and a playground.",
+        "quote": "มีสวนสุขภาพ และสนามเด็กเล่น"
+      },
+      {
+        "claim": "No online evidence has verified the year of establishment, founders, its role during the tin mining era, specific architecture, or historical registration of the park.",
+        "quote": ""
+      }
+    ],
+    "timeline": [
+      {
+        "title": "Park within the old town building control zone",
+        "detail": "The Royal Gazette lists the park as an exception within the construction control boundary of Takua Pa old town."
+      },
+      {
+        "title": "Municipality manages electricity and water plans",
+        "detail": "There are projects to install electrical control cabinets in the park and plans regarding the Thung Phra Pho canal or pier."
+      },
+      {
+        "title": "Checkpoint for the Old Town Walk Rally",
+        "detail": "Takua Pa Khiri Khet School uses the park and the old town area as a route for cultural learning and health promotion activities."
+      },
+      {
+        "title": "Year of establishment not verified",
+        "detail": "No documents directly stating the year, founders, or reasons for establishing the park have been verified."
+      }
+    ],
+    "news": [
+      {
+        "title": "Takua Pa Khiri Khet School participates in Takua Pa Walk Rally 2026 (2569 BE)",
+        "summary": "The event uses Thung Phra Pho Public Park and the old town area as a walking and running route to learn about local history and culture."
+      }
+    ],
+    "nearby": [
+      {
+        "name": "Wat Na Muang"
+      },
+      {
+        "name": "Old town wall"
+      },
+      {
+        "name": "Bung Tao Kong Shrine"
+      }
+    ],
+    "visit": {
+      "best_time": null,
+      "parking": null,
+      "wheelchair": null,
+      "dress_code": null,
+      "opening_hours": null,
+      "admission_fee": null
+    },
+    "address_line": null
+  },
+  "riverwalk": {
+    "history": [
+      {
+        "claim": "The market is named 'Takua Pa Riverside Market, Ruam Jai Pracharath' in the Must-See Pracharath Market project and is located on the canal-side road next to Wat Yan Yao.",
+        "quote": "ถนนริมคลอง (ข้างวัดย่านยาว)"
+      },
+      {
+        "claim": "Online tourism sources suggest the market connects with water tourism and boat tours along both sides of the Takua Pa River.",
+        "quote": "ล่องเรือชมทิวทัศน์สองฝั่งแม่น้ำตะกั่วป่า"
+      },
+      {
+        "claim": "Talat Yai or Takua Pa old town area was a trade center during the tin mining era and features Sino-Portuguese buildings, but no evidence has verified the year the riverside market itself was built or if it is registered as a historical site.",
+        "quote": "ศูนย์กลางการค้าในยุคเหมืองแร่"
+      }
+    ],
+    "timeline": [
+      {
+        "title": "Original town destroyed by the Burmese and people migrated",
+        "detail": "The original Takua Pa town was destroyed and abandoned before being revived around Ban Talat Yai during the reign of King Rama III."
+      },
+      {
+        "title": "Market listed in the Must-See Market project",
+        "detail": "Government documents name the Takua Pa Riverside Market, Ruam Jai Pracharath in Phang Nga province."
+      },
+      {
+        "title": "Official location and time data available",
+        "detail": "The Department of Internal Trade states that the market is located on the canal-side road next to Wat Yan Yao and opens on Saturdays from 3:00 PM to 8:00 PM."
+      },
+      {
+        "title": "Takua Pa grew into a port and trade center",
+        "detail": "The riverside area was the axis for navigation, goods exchange, and settlements of people from various nations."
+      },
+      {
+        "title": "Chap Se area served as an old port",
+        "detail": "The name Chap Se is a Hokkien Chinese word meaning port, and is associated with the Chinese merchant community and the tin mining economy."
+      },
+      {
+        "title": "Mines gradually closed, town shifted from a mining hub to an old town",
+        "detail": "Local historical sources note that prosperity from mining declined after the mines gradually closed, and the river became shallow due to mining sediment."
+      },
+      {
+        "title": "Seafood festival uses the market as a venue",
+        "detail": "The Ministry of Culture's cultural calendar lists the Takua Pa Seafood Festival at the riverside market, although accessible pages do not clearly show the event dates."
+      }
+    ],
+    "news": [],
+    "nearby": [
+      {
+        "name": "Wat Yan Yao (Wat Nikorn Wararam)"
+      },
+      {
+        "name": "Takua Pa old town / Talat Yai community"
+      },
+      {
+        "name": "Takua Pa bus terminal"
+      }
+    ],
+    "visit": {
+      "best_time": "Saturday afternoon to evening, as the market starts getting busy around 4:00 PM.",
+      "parking": null,
+      "wheelchair": null,
+      "dress_code": null,
+      "opening_hours": "Saturdays, 3:00 PM to 8:00 PM",
+      "admission_fee": "Free admission"
+    },
+    "address_line": "Sri Takua Pa Road or Canal-side Road, next to Wat Yan Yao"
+  },
+  "culture-street": {
+    "history": [
+      {
+        "claim": "Tourism news sources indicate it started in 2007 (2550 BE) under the name 'Takua Pa Old Town, Telling the Past'.",
+        "quote": "มีมาตั้งแต่ปี พ.ศ. 2550"
+      },
+      {
+        "claim": "The Department of Internal Trade's market registry lists its establishment and promotion date as 17 December 2017.",
+        "quote": "ก่อตั้งเมื่อ : 17 ธันวาคม 2560"
+      },
+      {
+        "claim": "Buildings in the old town area preserve traces of Sino-Portuguese or Sino-Takua Pa architecture related to the tin mining era.",
+        "quote": "สถาปัตยกรรมชิโนโปรตุกีสอันทรงคุณค่า"
+      }
+    ],
+    "timeline": [
+      {
+        "title": "Initial development of the town and Udomthara Road area",
+        "detail": "Old town documents classify the period from 1827 to 1897 as the town's establishment and early development phase, with Udomthara Road being one of the first settlement areas."
+      },
+      {
+        "title": "Shophouses influenced by Penang and Singapore ports",
+        "detail": "Sri Takua Pa Road features Straits Settlements colonial-influenced shophouses, which are linked to trade and the Chinese community in the port cities."
+      },
+      {
+        "title": "Takua Pa reached the peak of the mining era",
+        "detail": "Documents explain that the town's prosperity peaked around 1957 before the mines closed and the commercial district stagnated."
+      },
+      {
+        "title": "Cultural walking street project began",
+        "detail": "The TAT Phang Nga Office, Takua Pa Town Municipality, and the community started 'Takua Pa Old Town, Telling the Past'."
+      },
+      {
+        "title": "Registered and promoted as a market",
+        "detail": "The Department of Internal Trade's registry lists 17 December 2017 as the date of the market's establishment and promotion."
+      },
+      {
+        "title": "Street opened during the green season with free Pho Thong buses",
+        "detail": "The province and local partners expanded Sunday activities to stimulate off-season tourism and distribute income."
+      },
+      {
+        "title": "Merit-making and 9-Baht vegetarian food event",
+        "detail": "The street serves as a venue for vegetarian food activities and carrying on old town community traditions, with over 200 participating shops according to news reports."
+      }
+    ],
+    "news": [
+      {
+        "title": "Merit-making and 9-Baht vegetarian food event in Takua Pa old town",
+        "summary": "Vegetarian food activities and community traditions are held on the cultural street, with a large number of participants according to news reports."
+      },
+      {
+        "title": "Phang Nga opens Takua Pa walking street in the rainy season with free Pho Thong buses",
+        "summary": "Green season activities were held every Sunday from 26 June to 28 August 2022 to distribute income to the community."
+      },
+      {
+        "title": "Takua Pa old town cultural street in the Must-See Market activity",
+        "summary": "The Department of Internal Trade reported on activities promoting community market channels at the Takua Pa old town cultural street."
+      }
+    ],
+    "nearby": [
+      {
+        "name": "Takua Pa Governor's Residence Wall"
+      },
+      {
+        "name": "Wat Na Mueang"
+      }
+    ],
+    "visit": {
+      "best_time": "Sunday evenings, especially during the tourist season from around November to April.",
+      "parking": null,
+      "wheelchair": null,
+      "dress_code": null,
+      "opening_hours": "Sundays, 2:00 PM to 8:00 PM",
+      "admission_fee": "Free admission"
+    },
+    "address_line": "Sri Takua Pa Road and Udomthara Road"
+  }
+}

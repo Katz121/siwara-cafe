@@ -44,7 +44,7 @@ def pic(id, eager=False):
 def source(): return f'<aside class="source"><h2>ที่มาของข้อมูล</h2><p>เรียบเรียงจาก<a href="{SOURCE}">แผ่นพับเทศบาลเมืองตะกั่วป่า</a> · สกัดข้อมูล 6 กันยายน 2569 เอกสารไม่ระบุวันที่เผยแพร่ เวลาเปิด สถานะร้าน และกำหนดงานปัจจุบันยังไม่ได้ยืนยัน ควรตรวจสอบกับสถานที่ก่อนเดินทาง</p></aside>'
 nav=[('places','สถานที่'),('map','แผนที่'),('traditions','ประเพณี'),('eat','กินและของฝาก'),('routes','เส้นทางเดิน'),('trip','ทริปของคุณ'),('about','เกี่ยวกับ')]
 nav.insert(1, ('news', 'ความเคลื่อนไหว'))
-nav.insert(5, ('rest', 'พักเบรก'))
+nav.insert(5, ('rest', 'กินเที่ยว'))
 nav.insert(0, ("stories", "เรื่องเล่าตะกั่วป่า"))
 def page(path,title,desc,body,record=None):
  body = design.transform(path, body, globals(), record)
@@ -117,32 +117,61 @@ page('/trip/','ทริปของคุณ','เลือกจุดหม�
 def render_rest():
     extra_shops = json.loads((DATA/'shops-extra.json').read_text(encoding='utf-8'))
     all_shops = shops + extra_shops
-    rest_stops = [r for r in all_shops if r['category'] == 'drink_shop' and (r.get('near_old_town') == True or r.get('subdistrict') == 'ตะกั่วป่า')]
-    rest_stops.sort(key=lambda x: x['name_th'])
-    
-    html = intro('พักเบรกระหว่างเดินเมืองเก่า', 'จุดนั่งพัก ห้องน้ำ และร้านเครื่องดื่มระหว่างเดินเมืองเก่าตะกั่วป่า')
-    html += '<p>เมืองเก่าเดินได้ทั้งย่านแต่ร่มน้อย ช่วงบ่ายแดดแรง การมีจุดพักช่วยให้เดินได้ครบ</p>'
-    
-    html += '<h2>จุดพักในย่าน</h2><div class="rest-stops">'
+    picks = json.loads((DATA/'guide-picks.json').read_text(encoding='utf-8'))
+
+    html = intro('พักเบรกและกินเที่ยวตะกั่วป่า', 'ร้านและจุดแวะที่คนทำคู่มือเล่มนี้ไปมาเองแล้ว พร้อมเวลาเปิดและพิกัดนำทาง')
+    html += ('<p>เมืองเก่าเดินได้ทั้งย่านแต่ร่มน้อย ช่วงบ่ายแดดแรง การมีจุดแวะช่วยให้เดินได้ครบ</p>'
+             '<p class="small">รายการข้างล่างคัดมาจาก'
+             '<a href="https://siwaracafe.com/guide" target="_blank" rel="noopener">คู่มือกินเที่ยวตะกั่วป่าของศิวรา คาเฟ่</a>'
+             ' ซึ่งเป็นคนจัดทำเว็บนี้ · ต่างจากรายชื่อร้านใน<a href="/eat/">หน้ากินและของฝาก</a> ตรงที่ทุกร้านตรงนี้มีคนไปมาเองแล้ว '
+             'จึงมีเวลาเปิดและพิกัดที่ใช้ได้จริง · ถึงอย่างนั้นร้านเล็กเปลี่ยนเวลาได้เสมอ ควรโทรถามก่อนเดินทางไกล</p>')
+
+    GROUPS = [('dining', 'ร้านอาหารและของกิน'), ('attraction', 'จุดแวะและที่เที่ยว'), ('souvenir', 'ของฝาก')]
     json_ld_list = []
-    for i, r in enumerate(rest_stops):
-        gmap = f'<a href="{esc(r["maps_search_url"])}" target="_blank" rel="noopener">หาบน Google Maps</a>' if r.get('maps_search_url') else ''
-        hours = f'<p>เวลาเปิด: {esc(r["hours_th"])}</p>' if r.get('hours_th') else 'ตรวจสอบจากช่องทางร้านก่อนมา'
-        desc = f'<p>{esc(r.get("one_liner_th") or "")}</p>'
-        html += f'<article class="rest-stop"><h3>{esc(r["name_th"])}</h3>{desc}{hours}{gmap}</article>'
-        item_type = "Place" if r['id'] == 'siwara-cafe' else "LocalBusiness"
-        if r['id'] != 'siwara-cafe': # Rule: ห้ามใส่ schema Restaurant หรือ LocalBusiness ของศิวราในหน้านี้ ให้ใช้ sameAs ในหน้า /about/ แทน
+    for key, label in GROUPS:
+        rows = [r for r in picks if r.get('guide_group') == key]
+        if not rows:
+            continue
+        rows.sort(key=lambda x: x['name_th'])
+        html += f'<h2>{esc(label)}</h2><div class="rest-stops">'
+        for r in rows:
+            art = f'<a class="pick-art" href="{esc(r["google_maps_url"])}" target="_blank" rel="noopener"><img src="{esc(r["image"])}" alt="{esc(r["name_th"])}" loading="lazy"></a>' if r.get('image') else ''
+            meta = []
+            if r.get('hours_th'):
+                meta.append('เวลาเปิด ' + esc(r['hours_th']))
+            if r.get('distance_th'):
+                meta.append(esc(r['distance_th']))
+            metaline = f'<p class="pick-meta">{" · ".join(meta)}</p>' if meta else ''
+            tip = f'<p class="pick-tip">{esc(r["tip_th"])}</p>' if r.get('tip_th') else ''
+            gmap = f'<a class="shop-nav" href="{esc(r["google_maps_url"])}" target="_blank" rel="noopener">นำทาง ↗</a>' if r.get('google_maps_url') else ''
+            html += (f'<article class="rest-stop pick">{art}<div class="pick-body">'
+                     f'<h3>{esc(r["name_th"])}</h3>'
+                     f'<p>{esc(r.get("one_liner_th") or "")}</p>{metaline}{tip}{gmap}'
+                     f'</div></article>')
             json_ld_list.append({
                 "@type": "ListItem",
                 "position": len(json_ld_list) + 1,
-                "item": {
-                    "@type": item_type,
-                    "name": r["name_th"],
-                    "url": r.get("website") or r.get("maps_search_url") or f"{BASE}/rest/"
-                }
+                "item": {"@type": "Place", "name": r["name_th"],
+                         "url": r.get("google_maps_url") or f"{BASE}/rest/"}
             })
-    html += '</div>'
-    
+        html += '</div>'
+
+    html += ('<h2>แผ่นพับพกไปเดิน</h2>'
+             '<div class="leaflet-block">'
+             '<a class="leaflet-art" href="/assets/leaflet/takuapa-walk-leaflet.pdf" target="_blank" rel="noopener">'
+             '<img src="/assets/leaflet/leaflet-page-1.webp" alt="แผ่นพับเดินเมืองเก่าตะกั่วป่า หน้าแรก" loading="lazy"></a>'
+             '<div class="leaflet-copy">'
+             '<p>แผ่นพับสองหน้า เล่าเรื่องบ้านไม้และสี่จุดในเส้นทางข้างบน '
+             'พิมพ์ใส่กระดาษ A4 แล้วพับครึ่งพกไปเดินได้เลย ไม่ต้องเปิดมือถือกลางแดด</p>'
+             '<div class="leaflet-actions">'
+             '<a class="button" href="/assets/leaflet/takuapa-walk-leaflet.pdf" target="_blank" rel="noopener">โหลดแผ่นพับ PDF</a>'
+             '<a class="text-link" href="/leaflet/">อ่านบนเว็บแทน ↗</a>'
+             '</div>'
+             '<p class="small">จัดทำโดย'
+             '<a href="https://siwaracafe.com/" target="_blank" rel="noopener">ศิวรา คาเฟ่</a>'
+             ' ผู้จัดทำคู่มือเล่มนี้ · แจกฟรี นำไปพิมพ์ต่อได้</p>'
+             '</div></div>')
+
     html += '''
     <h2>บ้านไม้ที่ทำคู่มือเล่มนี้</h2>
     <div class="siwara-card">
@@ -185,7 +214,26 @@ def render_rest():
     html += f'<script type="application/ld+json">{json.dumps(json_ld, ensure_ascii=False).replace("</", "<\\/")}</script>'
     return html
 
-page('/rest/', 'พักเบรกระหว่างเดินเมืองเก่า', 'จุดนั่งพัก ห้องน้ำ และร้านเครื่องดื่มระหว่างเดินเมืองเก่าตะกั่วป่า', render_rest())
+def render_leaflet():
+    html = intro('แผ่นพับเดินเมืองเก่าตะกั่วป่า', 'สองหน้า พิมพ์ใส่ A4 พับครึ่ง พกไปเดินได้')
+    html += ('<p>แผ่นพับนี้เล่าเรื่องบ้านไม้สักหลังหนึ่งในย่านตลาดเก่า แล้วชวนเดินต่อไปอีกสี่จุดในเมือง '
+             'ทำไว้สำหรับคนที่อยากเดินโดยไม่ต้องก้มดูมือถือตลอดทาง</p>')
+    html += ('<div class="leaflet-pages">'
+             '<figure><img src="/assets/leaflet/leaflet-page-1.webp" alt="แผ่นพับหน้าแรก เล่าเรื่องบ้านไม้ศิวรา" loading="eager" width="1400"><figcaption>หน้าแรก</figcaption></figure>'
+             '<figure><img src="/assets/leaflet/leaflet-page-2.webp" alt="แผ่นพับหน้าสอง สี่จุดในเส้นทางเดิน" loading="lazy" width="1400"><figcaption>หน้าสอง</figcaption></figure>'
+             '</div>')
+    html += ('<div class="leaflet-actions">'
+             '<a class="button" href="/assets/leaflet/takuapa-walk-leaflet.pdf" target="_blank" rel="noopener">โหลด PDF สำหรับพิมพ์</a>'
+             '<a class="text-link" href="/rest/">กลับไปหน้ากินเที่ยว ↗</a>'
+             '</div>')
+    html += ('<aside class="source"><h2>ที่มาของแผ่นพับ</h2>'
+             '<p>ออกแบบและจัดทำโดย<a href="https://siwaracafe.com/" target="_blank" rel="noopener">ศิวรา คาเฟ่</a> '
+             'บ้านไม้ในย่านตลาดเก่าที่เป็นผู้จัดทำคู่มือเล่มนี้ · แจกฟรี พิมพ์ต่อและแจกต่อได้ '
+             'ข้อมูลสถานที่เรียบเรียงจากแหล่งเดียวกับหน้าสถานที่ในเว็บนี้</p></aside>')
+    return html
+
+page('/leaflet/', 'แผ่นพับเดินเมืองเก่าตะกั่วป่า', 'แผ่นพับสองหน้า พิมพ์ A4 พับครึ่ง พกไปเดินเมืองเก่าตะกั่วป่า โหลดฟรี', render_leaflet())
+page('/rest/', 'พักเบรกและกินเที่ยวตะกั่วป่า', 'ร้านอร่อยและจุดแวะในตะกั่วป่าที่มีคนไปมาเองแล้ว พร้อมเวลาเปิดและพิกัดนำทาง แผ่นพับเดินเมืองเก่าโหลดฟรี', render_rest())
 
 (OUT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join(f'<url><loc>{esc(BASE+p)}</loc><lastmod>{date.today().isoformat()}</lastmod></url>' for p in PAGES)+'</urlset>',encoding='utf-8')
 (OUT/'robots.txt').write_text('User-agent: *\nAllow: /\nSitemap: '+BASE+'/sitemap.xml\n',encoding='utf-8')
@@ -250,78 +298,7 @@ page('/stories/','เรื่องเล่าตะกั่วป่า','�
 for story in stories.get_all_stories():
  route = story.get('route') or f"/stories/{story['id']}/"
  page(route, story['title'], story['dek'], stories.article(story, {'byid': byid}))
-def render_rest():
-    extra_shops = json.loads((DATA/'shops-extra.json').read_text(encoding='utf-8'))
-    all_shops = shops + extra_shops
-    rest_stops = [r for r in all_shops if r['category'] == 'drink_shop' and (r.get('near_old_town') == True or r.get('subdistrict') == 'ตะกั่วป่า')]
-    rest_stops.sort(key=lambda x: x['name_th'])
-    
-    html = intro('พักเบรกระหว่างเดินเมืองเก่า', 'จุดนั่งพัก ห้องน้ำ และร้านเครื่องดื่มระหว่างเดินเมืองเก่าตะกั่วป่า')
-    html += '<p>เมืองเก่าเดินได้ทั้งย่านแต่ร่มน้อย ช่วงบ่ายแดดแรง การมีจุดพักช่วยให้เดินได้ครบ</p>'
-    
-    html += '<h2>จุดพักในย่าน</h2><div class="rest-stops">'
-    json_ld_list = []
-    for i, r in enumerate(rest_stops):
-        gmap = f'<a href="{esc(r["maps_search_url"])}" target="_blank" rel="noopener">หาบน Google Maps</a>' if r.get('maps_search_url') else ''
-        hours = f'<p>เวลาเปิด: {esc(r["hours_th"])}</p>' if r.get('hours_th') else 'ตรวจสอบจากช่องทางร้านก่อนมา'
-        desc = f'<p>{esc(r.get("one_liner_th") or "")}</p>'
-        html += f'<article class="rest-stop"><h3>{esc(r["name_th"])}</h3>{desc}{hours}{gmap}</article>'
-        item_type = "Place" if r['id'] == 'siwara-cafe' else "LocalBusiness"
-        if r['id'] != 'siwara-cafe': # Rule: ห้ามใส่ schema Restaurant หรือ LocalBusiness ของศิวราในหน้านี้ ให้ใช้ sameAs ในหน้า /about/ แทน
-            json_ld_list.append({
-                "@type": "ListItem",
-                "position": len(json_ld_list) + 1,
-                "item": {
-                    "@type": item_type,
-                    "name": r["name_th"],
-                    "url": r.get("website") or r.get("maps_search_url") or f"{BASE}/rest/"
-                }
-            })
-    html += '</div>'
-    
-    html += '''
-    <h2>บ้านไม้ที่ทำคู่มือเล่มนี้</h2>
-    <div class="siwara-card">
-        <p>เว็บไซต์นี้จัดทำโดยศิวรา คาเฟ่ บ้านไม้สัก จั่วไม้ กระจกสี ประตูบานเก่า ที่อยู่ 53 ถนนราษฎร์บำรุง ย่านตลาดเก่า</p>
-        <a href="https://siwaracafe.com/" target="_blank" rel="noopener">รู้จักบ้านศิวราผู้จัดทำคู่มือ ↗</a>
-    </div>
-    '''
-    
-    html += '<h2>เส้นทางเดินสั้นจากบ้านไม้</h2>'
-    walk_points = [
-        ('khun-in', 'หลังคาระเบียงและช่องเปิด'),
-        ('tao-ming', 'หน้าจั่วและระเบียงสีเหลือง'),
-        ('guan-yu', 'ประตูและรายละเอียดสีแดง'),
-        ('iron-bridge', 'โครงเหล็กและภูมิทัศน์ริมน้ำ')
-    ]
-    html += '<div class="short-walk">'
-    for pid, focus in walk_points:
-        html += f'<article class="walk-point"><a href="{url(byid[pid])}">{pic(pid)}</a><div><h3>{a(byid[pid])}</h3><p>ชวนมอง: {focus}</p><button data-trip-add="{pid}">เพิ่มลงทริป</button></div></article>'
-    html += '</div>'
-    
-    html += '<p>วางแผนต่อ: <a href="/trip/">จัดทริปของคุณ ↗</a> · <a href="/map/">ดูแผนที่เมือง ↗</a></p>'
-    html += source()
-    
-    json_ld = [
-        {
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-                {"@type": "ListItem", "position": 1, "name": "หน้าแรก", "item": BASE + "/"},
-                {"@type": "ListItem", "position": 2, "name": "พักเบรกระหว่างเดินเมืองเก่า", "item": BASE + "/rest/"}
-            ]
-        }
-    ]
-    if json_ld_list:
-        json_ld.append({
-            "@context": "https://schema.org",
-            "@type": "ItemList",
-            "itemListElement": json_ld_list
-        })
-    html += f'<script type="application/ld+json">{json.dumps(json_ld, ensure_ascii=False).replace("</", "<\\/")}</script>'
-    return html
-
-page('/rest/', 'พักเบรกระหว่างเดินเมืองเก่า', 'จุดนั่งพัก ห้องน้ำ และร้านเครื่องดื่มระหว่างเดินเมืองเก่าตะกั่วป่า', render_rest())
+page('/rest/', 'พักเบรกและกินเที่ยวตะกั่วป่า', 'ร้านอร่อยและจุดแวะในตะกั่วป่าที่มีคนไปมาเองแล้ว พร้อมเวลาเปิดและพิกัดนำทาง แผ่นพับเดินเมืองเก่าโหลดฟรี', render_rest())
 
 (OUT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join(f'<url><loc>{esc(BASE+p)}</loc><lastmod>{date.today().isoformat()}</lastmod></url>' for p in PAGES)+'</urlset>',encoding='utf-8')
 for name in ['NotoSerifThai','IBMPlexSansThaiLooped-Regular','CormorantGaramond']:

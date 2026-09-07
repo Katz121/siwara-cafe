@@ -1,0 +1,214 @@
+{
+  "wat-kongkha": {
+    "history": [
+      {
+        "claim": "ONEP source states that the temple was built in 1762 (2305 BE) and was originally named Wat Kongkha.",
+        "quote": "built in 1762, originally named Wat Kongkha"
+      },
+      {
+        "claim": "The temple history recorded in the archaeological database states that the ubosot was built in 1936, was originally named Wat Kongkha, and was renamed to Wat Kongkha Phimuk in 1940.",
+        "quote": "The ubosot of the temple was built in 1936"
+      },
+      {
+        "claim": "The ubosot and chedi are historical sites that are still in use, and the temple is the first provincial meditation practice center of Phang Nga.",
+        "quote": "The ubosot and chedi of Wat Kongkha Phimuk are historical sites that are still in use"
+      },
+      {
+        "claim": "The Fine Arts Department announced the registration of the historical site and defined the land area in the Royal Gazette on December 18, 1996.",
+        "quote": "Volume 113, Special Part 50 Ngor, dated December 18, 1996"
+      },
+      {
+        "claim": "The ubosot is a rectangular brick and mortar building facing east with stucco designs and southern Thai style roof structures.",
+        "quote": "The appearance is a rectangular brick and mortar building"
+      }
+    ],
+    "timeline": [
+      {
+        "title": "Founding of Wat Kongkha (Data conflicts with building age evidence)",
+        "detail": "ONEP states the temple was built in 1762 and originally named Wat Kongkha, but the archaeological database uses 1936 as the age of the ubosot, so it cannot be concluded whether the site and the building started in the same year."
+      },
+      {
+        "title": "Construction of the ubosot which is an important historical site",
+        "detail": "The rectangular brick and mortar ubosot faces east and features stucco designs and southern Thai style roof structures."
+      },
+      {
+        "title": "Renamed to Wat Kongkha Phimuk",
+        "detail": "The temple history in the archaeological database states that it was originally named Wat Kongkha and then renamed to Wat Kongkha Phimuk."
+      },
+      {
+        "title": "Registered as a historical site",
+        "detail": "The Fine Arts Department announced the registration of the historical site and defined the land area in the Royal Gazette Volume 113, Special Part 50 Ngor."
+      },
+      {
+        "title": "Became the first provincial meditation practice center of Phang Nga",
+        "detail": "The National Office of Buddhism registry lists Wat Kongkha Phimuk as the first center of Phang Nga province according to resolution 12/2002."
+      }
+    ],
+    "news": [],
+    "nearby": [
+      {
+        "name": "Somchai Andaman Building"
+      },
+      {
+        "name": "Kanda Supermarket"
+      }
+    ],
+    "visit": {
+      "best_time": null,
+      "parking": null,
+      "wheelchair": "OpenStreetMap data via Mapcarta indicates a wheelchair=yes tag, but details on ramp conditions or facilities from official sources are not verified.",
+      "dress_code": null,
+      "opening_hours": null,
+      "admission_fee": null
+    },
+    "address_line": "Rat Bamrung Road"
+  },
+  "wat-nikorn": {
+    "history": [
+      {
+        "claim": "The temple was built in 1793 (2336 BE) by Khun Ta Kaeo and Khun Ta Ram.",
+        "quote": "built in 1793 by Khun Ta Kaeo and Khun Ta Ram"
+      },
+      {
+        "claim": "The temple was granted Wisungkhammasima in 1842.",
+        "quote": "was granted Wisungkhammasima in 1842"
+      },
+      {
+        "claim": "The temple was once a place to gather bodies of the 2004 tsunami victims waiting for identity verification.",
+        "quote": "gather bodies of tsunami victims waiting for identity verification"
+      }
+    ],
+    "timeline": [
+      {
+        "title": "Beginning of temple construction",
+        "detail": "Khun Ta Kaeo and Khun Ta Ram built Wat Nikornwararam."
+      },
+      {
+        "title": "Received Wisungkhammasima",
+        "detail": "The temple was granted Wisungkhammasima."
+      },
+      {
+        "title": "Post tsunami memorial area",
+        "detail": "Used to gather bodies of victims waiting for identity verification."
+      },
+      {
+        "title": "Received land title deed documents",
+        "detail": "The Phang Nga Provincial Office of Buddhism and the Land Office handed over the title deed documents to the abbot."
+      },
+      {
+        "title": "Donation center for northern floods",
+        "detail": "The temple, together with the monastic community and the people of Takua Pa, collected items to help flood victims."
+      },
+      {
+        "title": "Participated in Takua Pa old town Songkran event",
+        "detail": "The abbot and monks of Wat Nikornwararam participated in the alms offering activity organized by the province."
+      }
+    ],
+    "news": [
+      {
+        "title": "Phang Nga continues Songkran traditions with alms offering in Takua Pa old town",
+        "summary": "Phra Khru Nikorn Thammasophit and monks from Wat Nikornwararam participated in provincial activities."
+      },
+      {
+        "title": "Inspection of the Temple, Public, State, Creating Happiness project",
+        "summary": "Wat Nikornwararam was mentioned as a temple ready for southern regional assessment."
+      },
+      {
+        "title": "Phang Nga monks unite to help flood victims in the north",
+        "summary": "The temple set up a donation center for items together with the monastic community and the public."
+      },
+      {
+        "title": "Phang Nga Provincial Office of Buddhism joins in handing over the land title deed documents of Wat Nikornwararam",
+        "summary": "Handing over the land title deed documents to Phra Khru Nikorn Thammasophit, the abbot of Wat Nikornwararam."
+      }
+    ],
+    "nearby": [
+      {
+        "name": "Takua Pa Riverside Market, Yan Yao Walking Street"
+      }
+    ],
+    "visit": {
+      "best_time": null,
+      "parking": null,
+      "wheelchair": null,
+      "dress_code": "Polite dress is recommended when entering the religious site.",
+      "opening_hours": null,
+      "admission_fee": null
+    },
+    "address_line": "Ban Yan Yao, Phetkasem Road"
+  },
+  "wat-sena": {
+    "history": [
+      {
+        "claim": "The temple was founded in 1847 (2390 BE) by Phraya Senanuchit (Nuch Na Nakhon), the governor of Takua Pa.",
+        "quote": "created by Phraya Senanuchit ... in 1847"
+      },
+      {
+        "claim": "The temple registry indicates the founding date as 1847 and it is a private temple of the Maha Nikaya order.",
+        "quote": "Senanucharangsan ... 2390 2449"
+      },
+      {
+        "claim": "The ubosot features architecture influenced by Chinese styles, and the temple was registered as a historical site by the Fine Arts Department in 1996.",
+        "quote": "architecture influenced by Chinese styles"
+      },
+      {
+        "claim": "Tourism sources state that the temple was once the site for the oath of allegiance ceremony and houses a museum displaying antiques, including a wooden pulpit with the royal monogram JPR.",
+        "quote": "A museum at the temple displays many antiques"
+      },
+      {
+        "claim": "Evidence directly confirming the temple's role in the tin mining industry is not verified.",
+        "quote": ""
+      }
+    ],
+    "timeline": [
+      {
+        "title": "Construction of Wat Mai Kamphaeng",
+        "detail": "Phraya Senanuchit (Nuch Na Nakhon) built the temple after organizing the town wall and the Takua Pa office, constructing a wall and ubosot as the center for town religious ceremonies."
+      },
+      {
+        "title": "Phra Khru Udom Panya (Nuam) started as abbot",
+        "detail": "Encyclopedia information states his tenure from 1865 to 1909 and names him the first ecclesiastical provincial governor of Takua Pa."
+      },
+      {
+        "title": "Received Wisungkhammasima",
+        "detail": "Temple registry sources state the date of receiving Wisungkhammasima as January 8, 1898."
+      },
+      {
+        "title": "End of the water oath ceremony role in the old regime",
+        "detail": "Temple history data states that the temple was used for the oath of allegiance ceremony until before the 1932 regime change."
+      },
+      {
+        "title": "Construction of the current sermon hall",
+        "detail": "The temple database indicates that the reinforced concrete sermon hall was built in 1963."
+      },
+      {
+        "title": "Registered as a historical site",
+        "detail": "ONEP states that the temple was registered by the Fine Arts Department in 1996, emphasizing the value of the ubosot and Chinese architectural influences."
+      },
+      {
+        "title": "Construction of the chedi for the ashes of Phra Khru Udom Panya (Nuam)",
+        "detail": "Disciples built a chedi to the northeast of the ubosot to contain the ashes of Phra Khru Udom Panya (Nuam)."
+      },
+      {
+        "title": "Ubosot restoration permission ceremony",
+        "detail": "The Takua Pa Town Municipality published news about the Buddhist Lent Day activity and the blessing ceremony to request permission to restore the ubosot, providing evidence of a restoration project during that time, but the success of the work is not verified."
+      }
+    ],
+    "news": [
+      {
+        "title": "Takua Pa Town Municipality tours Wat Senanucharangsan and invites participation in the ubosot restoration permission ceremony",
+        "summary": "A municipality promotional video mentions the old town temple and specifies the blessing ceremony to request permission to restore the ubosot on July 26, 2023, alongside the candle procession activity around town."
+      }
+    ],
+    "nearby": [],
+    "visit": {
+      "best_time": null,
+      "parking": null,
+      "wheelchair": null,
+      "dress_code": null,
+      "opening_hours": null,
+      "admission_fee": null
+    },
+    "address_line": "Talat Kao, Takua Pa Subdistrict"
+  }
+}

@@ -1,0 +1,11 @@
+I've translated the 45 requested phrases and saved them to the JSON file according to your rules.
+
+**Summary of what was done:**
+- Read the translation rules in `briefs/2026-09-07_english-spec.md`.
+- Translated all 45 items with exact keys, keeping formatting such as `·` and `↗`.
+- Replaced any promotional fluff, used exact names/transliterations for organizations and places (e.g. `เทศบาลเมืองตะกั่วป่า (Takua Pa Town Municipality)`, `Bang Nai Si Subdistrict`, `Wat Na Mueang`), formatted dates `13 Apr 2026 (2569 BE)`, and avoided em/en-dashes.
+- Saved the output as a valid UTF-8 JSON file in `data/i18n/en/missing-parts/miss-04.json`.
+
+I ran a Python verification check and confirmed that there are exactly 45 keys successfully saved in the JSON file. You can find the file here: [miss-04.json](file:///D:/Siwaracafeweb/output/web/takuapa101-v1/data/i18n/en/missing-parts/miss-04.json).
+
+--ERR--

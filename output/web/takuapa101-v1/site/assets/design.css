@@ -418,3 +418,37 @@
 @media (prefers-reduced-motion:reduce){
   .siwara-card a,.walk-point button{transition:none}
 }
+
+/* ============ Curated picks and the printable leaflet ============ */
+.rest-stop.pick{padding:0;overflow:hidden}
+.pick-art{display:block;background:#eee6d3;line-height:0}
+.pick-art img{display:block;width:100%;height:168px;object-fit:cover}
+.pick-body{display:flex;flex-direction:column;gap:7px;padding:18px 20px 20px;flex:1}
+.pick-meta{font-size:.79rem;color:#7a8880}
+.pick-tip{font-size:.84rem;line-height:1.62;color:#5d6b62;padding-left:12px;border-left:2px solid #e8a931}
+
+.leaflet-block{
+  display:grid;grid-template-columns:minmax(0,240px) minmax(0,1fr);gap:26px;align-items:center;
+  padding:24px 26px;margin:20px 0 44px;
+  background:#fffdf7;border:1px solid rgba(32,63,57,.16);border-radius:16px;
+}
+.leaflet-art{display:block;line-height:0}
+.leaflet-art img{display:block;width:100%;border-radius:10px;box-shadow:0 12px 26px -18px rgba(20,36,31,.7)}
+.leaflet-copy{display:flex;flex-direction:column;gap:12px}
+.leaflet-copy p{margin:0;line-height:1.75}
+.leaflet-actions{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin:6px 0}
+.leaflet-actions .button{
+  display:inline-flex;align-items:center;min-height:46px;padding:0 22px;
+  background:#203f39;color:#f6f1e6;border-radius:999px;text-decoration:none;font-size:.9rem;
+}
+.leaflet-actions .button:hover{background:#2b544c}
+
+.leaflet-pages{display:grid;grid-template-columns:1fr;gap:22px;margin:26px 0 30px}
+.leaflet-pages figure{margin:0}
+.leaflet-pages img{display:block;width:100%;height:auto;border-radius:12px;border:1px solid rgba(32,63,57,.14)}
+.leaflet-pages figcaption{margin-top:8px;font-size:.8rem;color:#7d8c81}
+
+@media (max-width:720px){
+  .leaflet-block{grid-template-columns:1fr;gap:18px}
+  .leaflet-art img{max-width:260px}
+}

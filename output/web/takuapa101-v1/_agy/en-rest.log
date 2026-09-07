@@ -3,3 +3,6 @@ jobs=6
   story-architecture: rc=0
   story-food-people: rc=0
   story-water-trade: rc=0
+  story-kuapapoh: rc=0
+  shops: rc=0
+done

@@ -55,6 +55,10 @@ JOBS["wire-en"] = f"""โฟลเดอร์งาน {HERE}
 - `data/i18n/en/ui.json` (272 คีย์) · `data/i18n/en/places.json` (27 สถานที่)
 - `data/i18n/en/stories/*.json` (5 บทความ) · `data/i18n/en/shops.json`
 - `i18n.py` มีฟังก์ชัน t() และ load() แล้ว
+- `data/photo-registry.json` มี caption_en, credit_en, license_en แล้ว ใช้ค่าเหล่านี้ในหน้าอังกฤษ
+- `data/i18n/en/publishers.json` เป็นคำอธิบายอังกฤษของหน่วยงานไทย · ในหน้าอังกฤษให้แสดงเป็น
+  "ชื่อไทย (English gloss)" เพื่อให้คนตามไปหาต้นทางภาษาไทยได้
+
 
 งานรอบนี้คือ **ต่อสายเข้า build ให้สร้างหน้าอังกฤษใต้ /en/**
 1. `build_site.py` รับ lang แล้ววนสร้างสองภาษา · ไทยที่ราก `/` · อังกฤษที่ `/en/...`
