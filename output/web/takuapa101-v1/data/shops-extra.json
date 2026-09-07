@@ -8,7 +8,8 @@
   "one_liner_th": "คาเฟ่ในตะกั่วป่า ผู้จัดทำคู่มือเมืองเล่มนี้",
   "provenance": "first-party",
   "sources": [],
-  "status": "open"
+  "status": "open",
+  "maps_search_url": "https://www.google.com/maps/search/?api=1&query=%E0%B8%A8%E0%B8%B4%E0%B8%A7%E0%B8%A3%E0%B8%B2%20%E0%B8%84%E0%B8%B2%E0%B9%80%E0%B8%9F%E0%B9%88%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2"
  },
  {
   "id": "baan-bai",
@@ -18,7 +19,8 @@
   "one_liner_th": null,
   "provenance": "owner-added",
   "sources": [],
-  "status": "open"
+  "status": "open",
+  "maps_search_url": "https://www.google.com/maps/search/?api=1&query=%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B9%83%E0%B8%9A%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2"
  },
  {
   "id": "pa-daeng-khanom-wan",
@@ -58,7 +60,8 @@
    }
   ],
   "provenance": "researched",
-  "batch": "dessert"
+  "batch": "dessert",
+  "maps_search_url": "https://www.google.com/maps/search/?api=1&query=%E0%B8%9B%E0%B9%89%E0%B8%B2%E0%B9%81%E0%B8%94%E0%B8%87%E0%B8%82%E0%B8%99%E0%B8%A1%E0%B8%AB%E0%B8%A7%E0%B8%B2%E0%B8%99%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2"
  },
  {
   "id": "khanom-jeen-pa-mom",
@@ -99,7 +102,8 @@
    }
   ],
   "provenance": "researched",
-  "batch": "dessert"
+  "batch": "dessert",
+  "maps_search_url": "https://www.google.com/maps/search/?api=1&query=%E0%B8%82%E0%B8%99%E0%B8%A1%E0%B8%88%E0%B8%B5%E0%B8%99%E0%B8%9B%E0%B9%89%E0%B8%B2%E0%B8%A1%E0%B9%88%E0%B8%AD%E0%B8%A1%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2"
  },
  {
   "id": "khanom-jeen-phi-neng",
@@ -137,7 +141,8 @@
    }
   ],
   "provenance": "researched",
-  "batch": "dessert"
+  "batch": "dessert",
+  "maps_search_url": "https://www.google.com/maps/search/?api=1&query=%E0%B8%82%E0%B8%99%E0%B8%A1%E0%B8%88%E0%B8%B5%E0%B8%99%E0%B8%9E%E0%B8%B5%E0%B9%88%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B9%88%E0%B8%87%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2"
  },
  {
   "id": "khanom-jeen-nai-na",
@@ -176,7 +181,8 @@
    }
   ],
   "provenance": "researched",
-  "batch": "dessert"
+  "batch": "dessert",
+  "maps_search_url": "https://www.google.com/maps/search/?api=1&query=%E0%B8%82%E0%B8%99%E0%B8%A1%E0%B8%88%E0%B8%B5%E0%B8%99%E0%B9%83%E0%B8%99%E0%B8%99%E0%B8%B2%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2"
  },
  {
   "id": "mata-coffee-and-bakery",
@@ -217,7 +223,8 @@
    }
   ],
   "provenance": "researched",
-  "batch": "dessert"
+  "batch": "dessert",
+  "maps_search_url": "https://www.google.com/maps/search/?api=1&query=%E0%B8%A1%E0%B8%B2%E0%B8%95%E0%B8%B2%20Coffee%20And%20Bakery%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2"
  },
  {
   "id": "the-eighth-room",
@@ -258,7 +265,8 @@
    }
   ],
   "provenance": "researched",
-  "batch": "dessert"
+  "batch": "dessert",
+  "maps_search_url": "https://www.google.com/maps/search/?api=1&query=The%20Eighth%20Room%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2"
  },
  {
   "id": "delicacy-khaolak",
@@ -298,7 +306,8 @@
    }
   ],
   "provenance": "researched",
-  "batch": "dessert"
+  "batch": "dessert",
+  "maps_search_url": "https://www.google.com/maps/search/?api=1&query=Delicacy%20Khaolak%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2"
  },
  {
   "id": "garang-khao-lak",
@@ -338,7 +347,8 @@
    }
   ],
   "provenance": "researched",
-  "batch": "dessert"
+  "batch": "dessert",
+  "maps_search_url": "https://www.google.com/maps/search/?api=1&query=%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%B1%E0%B8%87%20%E0%B9%80%E0%B8%82%E0%B8%B2%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2"
  },
  {
   "id": "baan-khanom-arom-dee",
@@ -378,7 +388,8 @@
    }
   ],
   "provenance": "researched",
-  "batch": "dessert"
+  "batch": "dessert",
+  "maps_search_url": "https://www.google.com/maps/search/?api=1&query=%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%82%E0%B8%99%E0%B8%A1%E0%B8%AD%E0%B8%B2%E0%B8%A3%E0%B8%A1%E0%B8%93%E0%B9%8C%E0%B8%94%E0%B8%B5%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2"
  },
  {
   "id": "ocean-man-cafe",
@@ -418,7 +429,8 @@
    }
   ],
   "provenance": "researched",
-  "batch": "dessert"
+  "batch": "dessert",
+  "maps_search_url": "https://www.google.com/maps/search/?api=1&query=%E0%B9%82%E0%B8%AD%E0%B9%80%E0%B8%8A%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%99%20%E0%B9%81%E0%B8%A1%E0%B8%99%20%E0%B8%84%E0%B8%B2%E0%B9%80%E0%B8%9F%E0%B9%88%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2"
  },
  {
   "id": "la-malila-cafe",
@@ -457,7 +469,8 @@
    }
   ],
   "provenance": "researched",
-  "batch": "dessert"
+  "batch": "dessert",
+  "maps_search_url": "https://www.google.com/maps/search/?api=1&query=%E0%B8%A5%E0%B8%B2%20%E0%B8%A1%E0%B8%B0%E0%B8%A5%E0%B8%B4%E0%B8%A5%E0%B8%B2%20%E0%B8%84%E0%B8%B2%E0%B9%80%E0%B8%9F%E0%B9%88%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2"
  },
  {
   "id": "pa-fon-khanom-wan",
@@ -499,7 +512,8 @@
    }
   ],
   "provenance": "researched",
-  "batch": "dessert"
+  "batch": "dessert",
+  "maps_search_url": "https://www.google.com/maps/search/?api=1&query=%E0%B8%9B%E0%B9%89%E0%B8%B2%E0%B8%9D%E0%B8%99%E0%B8%82%E0%B8%99%E0%B8%A1%E0%B8%AB%E0%B8%A7%E0%B8%B2%E0%B8%99%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2"
  },
  {
   "id": "the-eighth-room-by-mata-cafe",
@@ -537,7 +551,8 @@
    }
   ],
   "provenance": "researched",
-  "batch": "drinks"
+  "batch": "drinks",
+  "maps_search_url": "https://www.google.com/maps/search/?api=1&query=%E0%B8%94%E0%B8%B4%20%E0%B9%80%E0%B8%AD%E0%B8%97%20%E0%B8%A3%E0%B8%B9%E0%B8%A1%20%E0%B8%9A%E0%B8%B2%E0%B8%A2%20%E0%B8%A1%E0%B8%B2%E0%B8%95%E0%B8%B2%E0%B8%84%E0%B8%B2%E0%B9%80%E0%B8%9F%E0%B9%88%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2"
  },
  {
   "id": "garang-artisan-icecream",
@@ -575,7 +590,8 @@
    }
   ],
   "provenance": "researched",
-  "batch": "drinks"
+  "batch": "drinks",
+  "maps_search_url": "https://www.google.com/maps/search/?api=1&query=%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%B1%E0%B8%87%20%E0%B8%84%E0%B8%B2%E0%B9%80%E0%B8%9F%E0%B9%88%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2"
  },
  {
   "id": "yellow-snail-cafe-gallery",
@@ -614,7 +630,8 @@
    }
   ],
   "provenance": "researched",
-  "batch": "drinks"
+  "batch": "drinks",
+  "maps_search_url": "https://www.google.com/maps/search/?api=1&query=%E0%B9%80%E0%B8%A2%E0%B8%A5%E0%B9%82%E0%B8%A5%E0%B8%A7%E0%B9%8C%20%E0%B8%AA%E0%B9%80%E0%B8%99%E0%B8%A5%20%E0%B8%84%E0%B8%B2%E0%B9%80%E0%B8%9F%E0%B9%88%20%E0%B9%81%E0%B8%AD%E0%B8%99%E0%B8%94%E0%B9%8C%20%E0%B9%81%E0%B8%81%E0%B8%A5%E0%B8%A5%E0%B8%AD%E0%B8%A3%E0%B8%B5%E0%B9%88%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2"
  },
  {
   "id": "mahamitr-cafe",
@@ -651,7 +668,8 @@
    }
   ],
   "provenance": "researched",
-  "batch": "drinks"
+  "batch": "drinks",
+  "maps_search_url": "https://www.google.com/maps/search/?api=1&query=%E0%B8%A1%E0%B8%B2%E0%B8%AB%E0%B8%B2%E0%B8%A1%E0%B8%B4%E0%B8%95%E0%B8%A3%20%E0%B8%84%E0%B8%B2%E0%B9%80%E0%B8%9F%E0%B9%88%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2"
  },
  {
   "id": "trok-ca-fe",
@@ -688,7 +706,8 @@
    }
   ],
   "provenance": "researched",
-  "batch": "drinks"
+  "batch": "drinks",
+  "maps_search_url": "https://www.google.com/maps/search/?api=1&query=%E0%B8%95%E0%B8%A3%E0%B8%AD%E0%B8%81%E0%B8%84%E0%B8%B2%E0%B9%80%E0%B8%9F%E0%B9%88%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2"
  },
  {
   "id": "tribe-khaolak",
@@ -725,7 +744,8 @@
    }
   ],
   "provenance": "researched",
-  "batch": "drinks"
+  "batch": "drinks",
+  "maps_search_url": "https://www.google.com/maps/search/?api=1&query=%E0%B9%84%E0%B8%97%E0%B8%A3%E0%B8%9A%E0%B9%8C%20%E0%B9%80%E0%B8%82%E0%B8%B2%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2"
  },
  {
   "id": "valhalla-villas-teahouse",
@@ -763,7 +783,8 @@
    }
   ],
   "provenance": "researched",
-  "batch": "drinks"
+  "batch": "drinks",
+  "maps_search_url": "https://www.google.com/maps/search/?api=1&query=%E0%B8%A7%E0%B8%B1%E0%B8%A5%E0%B8%AE%E0%B8%B1%E0%B8%A5%E0%B8%A5%E0%B8%B2%20%E0%B8%A7%E0%B8%B4%E0%B8%A5%E0%B8%A5%E0%B9%88%E0%B8%B2%20%E0%B9%81%E0%B8%AD%E0%B8%99%E0%B8%94%E0%B9%8C%20%E0%B8%97%E0%B8%B5%E0%B9%80%E0%B8%AE%E0%B8%B2%E0%B8%AA%E0%B9%8C%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2"
  },
  {
   "id": "karkinos-khao-lak",
@@ -800,7 +821,8 @@
    }
   ],
   "provenance": "researched",
-  "batch": "drinks"
+  "batch": "drinks",
+  "maps_search_url": "https://www.google.com/maps/search/?api=1&query=%E0%B8%84%E0%B8%B2%E0%B8%84%E0%B8%B5%E0%B8%99%E0%B8%AD%E0%B8%AA%20%E0%B9%80%E0%B8%82%E0%B8%B2%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2"
  },
  {
   "id": "underground-tea-cafe",
@@ -841,7 +863,8 @@
    }
   ],
   "provenance": "researched",
-  "batch": "drinks"
+  "batch": "drinks",
+  "maps_search_url": "https://www.google.com/maps/search/?api=1&query=%E0%B8%AD%E0%B8%B1%E0%B8%99%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%81%E0%B8%A3%E0%B8%B2%E0%B8%A7%E0%B8%94%E0%B9%8C%20%E0%B8%97%E0%B8%B5%20%E0%B8%84%E0%B8%B2%E0%B9%80%E0%B8%9F%E0%B9%88%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2"
  },
  {
   "id": "unnamed-khaolak",
@@ -879,7 +902,8 @@
    }
   ],
   "provenance": "researched",
-  "batch": "drinks"
+  "batch": "drinks",
+  "maps_search_url": "https://www.google.com/maps/search/?api=1&query=%E0%B8%AD%E0%B8%B1%E0%B8%99%E0%B9%80%E0%B8%99%E0%B8%A1%20%E0%B9%80%E0%B8%82%E0%B8%B2%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2"
  },
  {
   "id": "tubtim-dimsum",
@@ -921,7 +945,8 @@
    }
   ],
   "provenance": "researched",
-  "batch": "food-oldtown"
+  "batch": "food-oldtown",
+  "maps_search_url": "https://www.google.com/maps/search/?api=1&query=%E0%B8%97%E0%B8%B1%E0%B8%9A%E0%B8%97%E0%B8%B4%E0%B8%A1%20%E0%B8%95%E0%B8%B4%E0%B9%88%E0%B8%A1%E0%B8%8B%E0%B8%B3%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2"
  },
  {
   "id": "kai-tong-dimsum",
@@ -960,7 +985,8 @@
    }
   ],
   "provenance": "researched",
-  "batch": "food-oldtown"
+  "batch": "food-oldtown",
+  "maps_search_url": "https://www.google.com/maps/search/?api=1&query=%E0%B9%84%E0%B8%81%E0%B9%88%E0%B9%82%E0%B8%95%E0%B9%89%E0%B8%87%20%E0%B8%AD%E0%B8%B2%E0%B8%AB%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%8A%E0%B9%89%E0%B8%B2%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2"
  },
  {
   "id": "punthong-dimsum",
@@ -999,7 +1025,8 @@
    }
   ],
   "provenance": "researched",
-  "batch": "food-oldtown"
+  "batch": "food-oldtown",
+  "maps_search_url": "https://www.google.com/maps/search/?api=1&query=%E0%B8%9B%E0%B8%B1%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%AD%E0%B8%87%E0%B8%95%E0%B8%B4%E0%B9%88%E0%B8%A1%E0%B8%8B%E0%B8%B3%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2"
  },
  {
   "id": "hua-ta-bistro",
@@ -1039,7 +1066,8 @@
    }
   ],
   "provenance": "researched",
-  "batch": "food-oldtown"
+  "batch": "food-oldtown",
+  "maps_search_url": "https://www.google.com/maps/search/?api=1&query=%E0%B8%AB%E0%B8%B1%E0%B8%A7%E0%B8%97%E0%B9%88%E0%B8%B2%20%E0%B8%9A%E0%B8%B4%E0%B8%AA%E0%B9%82%E0%B8%97%E0%B8%A3%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2"
  },
  {
   "id": "ice-tae-cha-chak",
@@ -1078,7 +1106,8 @@
    }
   ],
   "provenance": "researched",
-  "batch": "food-oldtown"
+  "batch": "food-oldtown",
+  "maps_search_url": "https://www.google.com/maps/search/?api=1&query=%E0%B9%84%E0%B8%AD%E0%B8%8B%E0%B9%8C%E0%B9%81%E0%B8%95%20%E0%B8%8A%E0%B8%B2%E0%B8%8A%E0%B8%B1%E0%B8%81%20%26%20%E0%B8%8A%E0%B8%B2%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%B3%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2"
  },
  {
   "id": "lert-ocha",
@@ -1118,7 +1147,8 @@
    }
   ],
   "provenance": "researched",
-  "batch": "food-oldtown"
+  "batch": "food-oldtown",
+  "maps_search_url": "https://www.google.com/maps/search/?api=1&query=%E0%B9%80%E0%B8%A5%E0%B8%B4%E0%B8%A8%E0%B9%82%E0%B8%AD%E0%B8%8A%E0%B8%B2%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2"
  },
  {
   "id": "krua-luang-ten",
@@ -1157,7 +1187,8 @@
    }
   ],
   "provenance": "researched",
-  "batch": "food-oldtown"
+  "batch": "food-oldtown",
+  "maps_search_url": "https://www.google.com/maps/search/?api=1&query=%E0%B8%84%E0%B8%A3%E0%B8%B1%E0%B8%A7%E0%B8%AB%E0%B8%A5%E0%B8%A7%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%99%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2"
  },
  {
   "id": "khrua-nong",
@@ -1195,7 +1226,8 @@
    }
   ],
   "provenance": "researched",
-  "batch": "food-wider"
+  "batch": "food-wider",
+  "maps_search_url": "https://www.google.com/maps/search/?api=1&query=%E0%B8%84%E0%B8%A3%E0%B8%B1%E0%B8%A7%E0%B8%99%E0%B9%89%E0%B8%AD%E0%B8%87%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2"
  },
  {
   "id": "yim-yim-restaurant",
@@ -1232,7 +1264,8 @@
    }
   ],
   "provenance": "researched",
-  "batch": "food-wider"
+  "batch": "food-wider",
+  "maps_search_url": "https://www.google.com/maps/search/?api=1&query=%E0%B8%A2%E0%B8%B4%E0%B9%89%E0%B8%A1%20%E0%B8%A2%E0%B8%B4%E0%B9%89%E0%B8%A1%20%E0%B8%8A%E0%B8%A7%E0%B8%99%E0%B8%8A%E0%B8%B4%E0%B8%A1%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2"
  },
  {
   "id": "timbre",
@@ -1267,7 +1300,8 @@
    }
   ],
   "provenance": "researched",
-  "batch": "food-wider"
+  "batch": "food-wider",
+  "maps_search_url": "https://www.google.com/maps/search/?api=1&query=%E0%B8%97%E0%B8%B4%E0%B8%A1%E0%B9%80%E0%B8%9A%E0%B8%AD%E0%B8%A3%E0%B9%8C%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2"
  },
  {
   "id": "khrua-ko-yot",
@@ -1338,7 +1372,8 @@
    }
   ],
   "provenance": "researched",
-  "batch": "food-wider"
+  "batch": "food-wider",
+  "maps_search_url": "https://www.google.com/maps/search/?api=1&query=%E0%B8%84%E0%B8%A3%E0%B8%B1%E0%B8%A7%E0%B8%85%E0%B8%99%E0%B8%84%E0%B8%AD%E0%B8%99%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2"
  },
  {
   "id": "karkinos-khaolak",
@@ -1376,7 +1411,8 @@
    }
   ],
   "provenance": "researched",
-  "batch": "food-wider"
+  "batch": "food-wider",
+  "maps_search_url": "https://www.google.com/maps/search/?api=1&query=%E0%B8%84%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B8%84%E0%B8%B4%E0%B8%99%E0%B8%AD%E0%B8%AA%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2"
  },
  {
   "id": "the-eighth-room-by-mata-cafe-2",
@@ -1483,7 +1519,8 @@
    }
   ],
   "provenance": "researched",
-  "batch": "food-wider"
+  "batch": "food-wider",
+  "maps_search_url": "https://www.google.com/maps/search/?api=1&query=%E0%B8%84%E0%B8%AD%E0%B8%95%E0%B8%95%E0%B8%AD%E0%B8%99%20%E0%B8%84%E0%B8%B2%E0%B9%80%E0%B8%9F%E0%B9%88%20%E0%B9%81%E0%B8%AD%E0%B8%99%E0%B8%94%E0%B9%8C%20%E0%B9%84%E0%B8%A5%E0%B8%9A%E0%B8%A3%E0%B8%B2%E0%B8%A3%E0%B8%B5%E0%B9%88%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2"
  },
  {
   "id": "jee-tarn-souvenir-shop",
@@ -1523,7 +1560,8 @@
    }
   ],
   "provenance": "researched",
-  "batch": "souvenir"
+  "batch": "souvenir",
+  "maps_search_url": "https://www.google.com/maps/search/?api=1&query=%E0%B8%88%E0%B8%B5%E0%B9%89%E0%B8%96%E0%B9%89%E0%B8%B2%E0%B8%99%20%E0%B8%88%E0%B8%B3%E0%B8%AB%E0%B8%99%E0%B9%88%E0%B8%B2%E0%B8%A2%E0%B8%AA%E0%B8%B4%E0%B8%99%E0%B8%84%E0%B9%89%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%9D%E0%B8%B2%E0%B8%81%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2"
  },
  {
   "id": "shop",
@@ -1540,12 +1578,16 @@
   ],
   "address_th": "ตลาด บขส. ตะกั่วป่า",
   "subdistrict": "บางนายสี",
-  "geo": null,
+  "geo": {
+   "lat": 8.87096,
+   "lng": 98.35078,
+   "source_url": "https://www.naewna.com/likesara/647610"
+  },
   "hours_th": null,
   "price_range_th": null,
   "phone": null,
   "facebook": null,
-  "google_maps_url": null,
+  "google_maps_url": "https://maps.app.goo.gl/search?q=8.87096,98.35078",
   "near_old_town": false,
   "status": "open",
   "unknowns": [
@@ -1606,7 +1648,8 @@
    }
   ],
   "provenance": "researched",
-  "batch": "souvenir"
+  "batch": "souvenir",
+  "maps_search_url": "https://www.google.com/maps/search/?api=1&query=%E0%B8%81%E0%B8%87%E0%B8%AA%E0%B8%B5%20%E0%B8%82%E0%B8%99%E0%B8%A1%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%9D%E0%B8%B2%E0%B8%81%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2"
  },
  {
   "id": "shop-2",
@@ -1645,7 +1688,8 @@
    }
   ],
   "provenance": "researched",
-  "batch": "souvenir"
+  "batch": "souvenir",
+  "maps_search_url": "https://www.google.com/maps/search/?api=1&query=%E0%B9%80%E0%B8%A2%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%A1%20%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B9%80%E0%B8%AE%E0%B8%87%20%28%E0%B9%82%E0%B8%81%E0%B8%A7%E0%B9%80%E0%B8%A2%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%A1%29%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2"
  },
  {
   "id": "siriporn-batik",
@@ -1684,7 +1728,8 @@
    }
   ],
   "provenance": "researched",
-  "batch": "souvenir"
+  "batch": "souvenir",
+  "maps_search_url": "https://www.google.com/maps/search/?api=1&query=%E0%B8%A8%E0%B8%B4%E0%B8%A3%E0%B8%B4%E0%B8%9E%E0%B8%A3%E0%B8%9A%E0%B8%B2%E0%B8%95%E0%B8%B4%E0%B8%81%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2"
  },
  {
   "id": "shop-3",
@@ -1698,12 +1743,16 @@
   ],
   "address_th": "ตลาดใหญ่ตะกั่วป่า (ตลาดสดเทศบาล)",
   "subdistrict": "ตะกั่วป่า",
-  "geo": null,
+  "geo": {
+   "lat": 8.851477,
+   "lng": 98.369947,
+   "source_url": "https://www.edtguide.com/eat/419894"
+  },
   "hours_th": "05:00 - 08:30",
   "price_range_th": null,
-  "phone": null,
+  "phone": "087-268-3105",
   "facebook": null,
-  "google_maps_url": null,
+  "google_maps_url": "https://maps.app.goo.gl/search?q=8.851477,98.369947",
   "near_old_town": true,
   "status": "open",
   "unknowns": [
@@ -1762,7 +1811,8 @@
    }
   ],
   "provenance": "researched",
-  "batch": "souvenir"
+  "batch": "souvenir",
+  "maps_search_url": "https://www.google.com/maps/search/?api=1&query=%E0%B8%9A%E0%B8%B2%E0%B8%95%E0%B8%B4%E0%B8%81%20%E0%B8%A1%E0%B8%B1%E0%B8%94%E0%B8%A2%E0%B9%89%E0%B8%AD%E0%B8%A1%20%40%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%28%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%B2%E0%B8%AA%E0%B8%B8%20%E0%B8%9E%E0%B8%B2%E0%B8%99%E0%B8%9E%E0%B8%A3%E0%B8%B0%29%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2"
  },
  {
   "id": "eco-print-by-kanokwan",
@@ -1804,7 +1854,8 @@
    }
   ],
   "provenance": "researched",
-  "batch": "souvenir"
+  "batch": "souvenir",
+  "maps_search_url": "https://www.google.com/maps/search/?api=1&query=Eco%20Print%20by%20Kanokwan%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2"
  },
  {
   "id": "shop-5",
@@ -1842,6 +1893,7 @@
    }
   ],
   "provenance": "researched",
-  "batch": "souvenir"
+  "batch": "souvenir",
+  "maps_search_url": "https://www.google.com/maps/search/?api=1&query=%E0%B8%95%E0%B8%B3%E0%B8%99%E0%B8%B2%E0%B8%99%E0%B9%82%E0%B8%81%E0%B8%AA%E0%B8%B8%E0%B9%89%E0%B8%A2%20%E0%B8%AD%E0%B9%8A%E0%B8%B2%E0%B8%A1%E0%B9%83%E0%B8%99%E0%B8%AA%E0%B8%A7%E0%B8%99%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2"
  }
 ]

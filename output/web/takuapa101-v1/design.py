@@ -149,6 +149,8 @@ def transform(path,body,ctx,record):
             if r.get('geo'):
                 g = r['geo']
                 bits.append(f'<a class="shop-nav" href="https://www.google.com/maps/search/?api=1&query={g["lat"]},{g["lng"]}" target="_blank" rel="noopener">นำทาง ↗</a>')
+            elif r.get('google_maps_url') or r.get('maps_search_url'):
+                bits.append(f'<a class="shop-nav" href="{e(r.get("google_maps_url") or r["maps_search_url"])}" target="_blank" rel="noopener">หาบน Google Maps ↗</a>')
             src = (r.get('sources') or [{}])[0].get('url')
             tag = 'ร้านของผู้จัดทำ' if r.get('provenance') == 'first-party' else ('เพิ่มโดยผู้ดูแล' if r.get('provenance') == 'owner-added' else 'จากการค้นหา')
             if src:

@@ -33,7 +33,7 @@
       "lng": 98.362899,
       "confidence": "high",
       "url": "/takuapa/places/wat-kongkha/",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3c/%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%84%E0%B8%87%E0%B8%84%E0%B8%B22563_%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2.jpg",
+      "image": "/takuapa/assets/wat-kongkha.webp",
       "kicker": "สังเกตเส้นสายอุโบสถภาคใต้"
     },
     {
@@ -117,7 +117,7 @@
       "lng": 98.3445279,
       "confidence": "high",
       "url": "/takuapa/places/phra-narai/",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/4/48/Takua_Pa%2C_Takua_Pa_District%2C_Phang-nga%2C_Thailand_-_panoramio_%281%29.jpg",
+      "image": "/takuapa/assets/phra-narai.webp",
       "kicker": "พักในสวนแล้วต่อเรื่องประวัติเมือง"
     },
     {
@@ -153,7 +153,7 @@
       "lng": 98.364073,
       "confidence": "medium",
       "url": "/takuapa/places/culture-street/",
-      "image": "/takuapa/assets/photos/shophouse-78.webp",
+      "image": "/takuapa/assets/photos/shophouse-305.webp",
       "kicker": "อ่านหน้าต่าง ป้ายร้าน และชีวิตบนถนน"
     },
     {
@@ -225,7 +225,7 @@
       "lng": 98.366634,
       "confidence": "high",
       "url": "/takuapa/traditions/",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Takua_Pa%2C_Takua_Pa_District%2C_Phang-nga%2C_Thailand_-_panoramio_%281%29.jpg/1280px-Takua_Pa%2C_Takua_Pa_District%2C_Phang-nga%2C_Thailand_-_panoramio_%281%29.jpg",
+      "image": "/takuapa/assets/ruler-ceremony.webp",
       "kicker": "เรื่องการรำลึกถึงผู้ปกครองเมือง"
     },
     {
@@ -237,7 +237,7 @@
       "lng": 98.3563150443,
       "confidence": "high",
       "url": "/takuapa/traditions/",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Takua_Pa,_Takua_Pa_District,_Phang-nga,_Thailand_-_panoramio_(1).jpg?width=1600",
+      "image": "/takuapa/assets/relic-procession.webp",
       "kicker": "ประเพณีที่เชื่อมการเดินทางและการสักการะ"
     }
   ],

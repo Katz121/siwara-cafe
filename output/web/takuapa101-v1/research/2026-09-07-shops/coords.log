@@ -1,1 +1,9 @@
 ร้านที่ยังไม่มีพิกัด 49 · แบ่ง 7 ชุด
+  batch-01: FAIL rc=1
+  batch-03: FAIL rc=1
+  batch-02: FAIL rc=1
+  batch-04: FAIL rc=0
+  batch-07: FAIL rc=1
+  batch-06: OK
+  batch-05: FAIL rc=1
+done
