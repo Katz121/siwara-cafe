@@ -1,0 +1,175 @@
+{
+  "policy_th": "รูปหนึ่งใบใช้ได้เฉพาะที่ที่มันเป็นภาพของสิ่งนั้นจริง · คำบรรยายมาจากรายการนี้เท่านั้น ห้ามเขียนใหม่ให้เข้ากับหัวข้อที่จะวาง · ถ้าไม่มีรูปที่ตรงเรื่อง ให้ใช้ภาพวาดของสถานที่นั้น หรือไม่ต้องมีรูป ห้ามหารูปกลาง ๆ มาถม",
+  "reviewed_on": "2026-09-07",
+  "photos": [
+    {
+      "file": "/assets/photos/tao-ming-school.jpg",
+      "depicts_th": "อาคารโรงเรียนเต้าหมิง ถ่ายจากด้านหน้าเต็มอาคาร",
+      "caption_th": "อาคารโรงเรียนเต้าหมิง ถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า",
+      "allowed_on": [
+        "tao-ming",
+        "architecture",
+        "kuapapoh"
+      ],
+      "era": "current",
+      "credit": "คลังภาพโครงการกั่วป่าโพ้",
+      "license": "ใช้ในเว็บนี้ได้"
+    },
+    {
+      "file": "/assets/photos/tao-ming-logo.jpg",
+      "depicts_th": "ตราสัญลักษณ์ของโรงเรียนเต้าหมิง",
+      "caption_th": "ตราโรงเรียนเต้าหมิง",
+      "allowed_on": [
+        "tao-ming"
+      ],
+      "era": "archive",
+      "credit": "คลังภาพโครงการกั่วป่าโพ้",
+      "license": "ใช้ในเว็บนี้ได้"
+    },
+    {
+      "file": "/assets/photos/shophouse-78.webp",
+      "depicts_th": "ตึกแถวเลขที่ 78 บนถนนสายวัฒนธรรม",
+      "caption_th": "ตึกแถวเลขที่ 78 บนถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า",
+      "allowed_on": [
+        "architecture"
+      ],
+      "era": "current",
+      "credit": "คลังภาพโครงการกั่วป่าโพ้",
+      "license": "ใช้ในเว็บนี้ได้"
+    },
+    {
+      "file": "/assets/photos/shophouse-109.webp",
+      "depicts_th": "ตึกแถวเลขที่ 109 บนถนนสายวัฒนธรรม",
+      "caption_th": "ตึกแถวเลขที่ 109 บนถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า",
+      "allowed_on": [
+        "kuapapoh"
+      ],
+      "era": "current",
+      "credit": "คลังภาพโครงการกั่วป่าโพ้",
+      "license": "ใช้ในเว็บนี้ได้"
+    },
+    {
+      "file": "/assets/photos/shophouse-305.webp",
+      "depicts_th": "ตึกแถวเลขที่ 305 บนถนนสายวัฒนธรรม",
+      "caption_th": "ตึกแถวเลขที่ 305 บนถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า",
+      "allowed_on": [
+        "culture-street"
+      ],
+      "era": "current",
+      "credit": "คลังภาพโครงการกั่วป่าโพ้",
+      "license": "ใช้ในเว็บนี้ได้"
+    },
+    {
+      "file": "/assets/photos/kuapapoh-port.webp",
+      "depicts_th": "ภาพเก่าขาวดำ เรือหลายลำจอดที่ท่าน้ำ มีเรือใบและเพิงริมน้ำ",
+      "caption_th": "ภาพเก่า เรือจอดที่ท่าน้ำตะกั่วป่า",
+      "allowed_on": [
+        "riverwalk",
+        "water-trade"
+      ],
+      "era": "archive",
+      "credit": "คลังภาพโครงการกั่วป่าโพ้",
+      "license": "ใช้ในเว็บนี้ได้",
+      "note_th": "เป็นภาพสแกนขนาดเล็กและมีกรอบสีแดงติดมาด้วย ไม่เหมาะใช้เป็นภาพเปิดขนาดใหญ่"
+    },
+    {
+      "file": "/assets/photos/kuapapoh-brand.jpg",
+      "depicts_th": "งานออกแบบแบรนด์กั่วป่าโพ้",
+      "caption_th": "กั่วป่าโพ้ · แบรนด์ของโครงการเมืองเก่าตะกั่วป่า",
+      "allowed_on": [
+        "kuapapoh"
+      ],
+      "era": "current",
+      "credit": "โครงการกั่วป่าโพ้",
+      "license": "ใช้ในเว็บนี้ได้"
+    },
+    {
+      "file": "/assets/photos/kuapapoh-history.jpg",
+      "depicts_th": "แผ่นเอกสารเล่าประวัติที่โครงการกั่วป่าโพ้จัดทำ",
+      "caption_th": "แผ่นเล่าประวัติเมือง จัดทำโดยโครงการกั่วป่าโพ้",
+      "allowed_on": [
+        "kuapapoh"
+      ],
+      "era": "current",
+      "credit": "โครงการกั่วป่าโพ้",
+      "license": "ใช้ในเว็บนี้ได้"
+    },
+    {
+      "file": "/assets/photos/kuapapoh-wuikun.jpg",
+      "depicts_th": "งานออกแบบชุดหวุ่ยกุ่นของโครงการ",
+      "caption_th": "หวุ่ยกุ่น · งานออกแบบของโครงการกั่วป่าโพ้",
+      "allowed_on": [
+        "kuapapoh"
+      ],
+      "era": "current",
+      "credit": "โครงการกั่วป่าโพ้",
+      "license": "ใช้ในเว็บนี้ได้"
+    },
+    {
+      "file": "/assets/photos/kuapapoh-doc-1.jpg",
+      "depicts_th": "เอกสารเก่าที่โครงการรวบรวมไว้ แผ่นที่หนึ่ง",
+      "caption_th": "เอกสารเก่าของเมือง จากคลังโครงการกั่วป่าโพ้",
+      "allowed_on": [
+        "kuapapoh"
+      ],
+      "era": "archive",
+      "credit": "โครงการกั่วป่าโพ้",
+      "license": "ใช้ในเว็บนี้ได้"
+    },
+    {
+      "file": "/assets/photos/kuapapoh-doc-2.jpg",
+      "depicts_th": "เอกสารเก่าที่โครงการรวบรวมไว้ แผ่นที่สอง",
+      "caption_th": "เอกสารเก่าของเมือง จากคลังโครงการกั่วป่าโพ้",
+      "allowed_on": [
+        "kuapapoh"
+      ],
+      "era": "archive",
+      "credit": "โครงการกั่วป่าโพ้",
+      "license": "ใช้ในเว็บนี้ได้"
+    },
+    {
+      "file": "/assets/photos/kuapapoh-pattern.jpg",
+      "depicts_th": "ลายกระเบื้องแบบเปอรานากัน",
+      "caption_th": "ลายกระเบื้องเปอรานากันที่ยังเห็นได้ในเมืองเก่า",
+      "allowed_on": [
+        "kuapapoh",
+        "architecture"
+      ],
+      "era": "current",
+      "credit": "โครงการกั่วป่าโพ้",
+      "license": "ใช้ในเว็บนี้ได้"
+    }
+  ],
+  "rejected": [
+    {
+      "files": [
+        "/assets/photos/cc/culture-street-1.webp",
+        "/assets/photos/cc/new-year-alms-2.webp",
+        "/assets/photos/cc/relic-procession-2.webp"
+      ],
+      "reason_th": "ภาพเดียวกันสามชื่อ · เป็นแผงขายข้าวหมกไก่ริมถนนกับสายไฟ ไม่ใช่ภาพของถนนสายวัฒนธรรม ตักบาตรปีใหม่ หรือขบวนแห่พระบรมสารีริกธาตุ ตามที่ตั้งชื่อไว้"
+    },
+    {
+      "files": [
+        "/assets/photos/cc/culture-street-2.webp"
+      ],
+      "reason_th": "เป็นภาพชายหาดมีเสาไม้ แต่ถูกตั้งคำบรรยายว่าถนนเพชรเกษม"
+    },
+    {
+      "files": [
+        "/assets/photos/cc/relic-procession-1.webp",
+        "/assets/photos/cc/ruler-ceremony-1.webp"
+      ],
+      "reason_th": "ภาพเดียวกันสองชื่อ · เป็นซุ้มประตูวัดถ่ายจากถนน ระบุไม่ได้ว่าวัดไหน และไม่ใช่ภาพของพิธีบวงสรวงหรือขบวนแห่"
+    },
+    {
+      "files": [
+        "/assets/photos/cc/wat-kongkha-1.webp",
+        "/assets/photos/cc/phra-narai-1.webp",
+        "/assets/photos/cc/new-year-alms-1.webp",
+        "/assets/photos/cc/new-year-alms-3.webp"
+      ],
+      "reason_th": "โหลดไม่สำเร็จ หรือยืนยันไม่ได้ว่าเป็นภาพของสถานที่นั้นจริง"
+    }
+  ]
+}

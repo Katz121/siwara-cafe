@@ -1,0 +1,361 @@
+[
+  {
+    "name_th": "จี้ถ้าน จำหน่ายสินค้าของฝาก",
+    "name_en": "Jee Tarn Souvenir Shop",
+    "category": "souvenir_shop",
+    "one_liner_th": "ศูนย์รวมสินค้า OTOP ระดับ 5 ดาวของพังงา มีของฝากครบครัน",
+    "signature_th": [
+      "น้ำพริกไตปลา",
+      "น้ำพริกกุ้งเสียบ",
+      "แกงไตปลาสำเร็จรูป",
+      "ปลาฉิ้งฉ้าง"
+    ],
+    "address_th": "ริมถนนในเขตอำเภอตะกั่วป่า",
+    "subdistrict": null,
+    "geo": {
+      "lat": null,
+      "lng": null,
+      "source_url": null
+    },
+    "hours_th": "07:00 - 18:00",
+    "price_range_th": null,
+    "phone": "081-329-5799",
+    "facebook": "https://www.facebook.com/jeetarnphangnga/",
+    "google_maps_url": null,
+    "near_old_town": false,
+    "status": "open",
+    "unknowns": [
+      "address",
+      "subdistrict",
+      "price_range_th",
+      "geo",
+      "google_maps_url"
+    ],
+    "sources": [
+      {
+        "name": "Facebook จี้ถ้าน",
+        "url": "https://www.facebook.com/jeetarnphangnga/",
+        "accessed": "2026-09-07"
+      }
+    ]
+  },
+  {
+    "name_th": "ร้านณัฐชวัล",
+    "name_en": null,
+    "category": "souvenir_shop",
+    "one_liner_th": "ร้านของฝากย่านตลาด บขส. ตะกั่วป่า แหล่งรวมขนมพื้นเมืองและสินค้า OTOP",
+    "signature_th": [
+      "ขนมเต้าส้อ",
+      "น้ำพริกกุ้งเสียบ",
+      "ขนมผิง",
+      "เมล็ดมะม่วงหิมพานต์"
+    ],
+    "address_th": "ตลาด บขส. ตะกั่วป่า",
+    "subdistrict": "บางนายสี",
+    "geo": {
+      "lat": null,
+      "lng": null,
+      "source_url": null
+    },
+    "hours_th": null,
+    "price_range_th": null,
+    "phone": null,
+    "facebook": null,
+    "google_maps_url": null,
+    "near_old_town": false,
+    "status": "open",
+    "unknowns": [
+      "hours",
+      "price_range_th",
+      "phone",
+      "facebook",
+      "geo",
+      "google_maps_url"
+    ],
+    "sources": [
+      {
+        "name": "Naewna",
+        "url": "https://www.naewna.com/local/803623",
+        "accessed": "2026-09-07"
+      }
+    ]
+  },
+  {
+    "name_th": "กงสี ขนมและของฝากตะกั่วป่า",
+    "name_en": "Kongsri Souvenir Shop",
+    "category": "souvenir_shop",
+    "one_liner_th": "ร้านขนมพื้นเมืองและของฝากตะกั่วป่า เน้นอบสดใหม่และแพ็กเกจจิ้งสวยงาม",
+    "signature_th": [
+      "ขนมเต้าส้อ",
+      "ขนมพริก",
+      "หมั่วหลาว",
+      "ขนมจีบโบราณ"
+    ],
+    "address_th": null,
+    "subdistrict": null,
+    "geo": {
+      "lat": null,
+      "lng": null,
+      "source_url": null
+    },
+    "hours_th": null,
+    "price_range_th": null,
+    "phone": null,
+    "facebook": "https://www.facebook.com/kongsee.takuapa",
+    "google_maps_url": null,
+    "near_old_town": true,
+    "status": "open",
+    "unknowns": [
+      "address",
+      "subdistrict",
+      "hours",
+      "price_range_th",
+      "phone",
+      "geo",
+      "google_maps_url"
+    ],
+    "sources": [
+      {
+        "name": "Facebook กงสี",
+        "url": "https://www.facebook.com/kongsee.takuapa",
+        "accessed": "2026-09-07"
+      }
+    ]
+  },
+  {
+    "name_th": "เยี่ยม เทียนเฮง (โกวเยี่ยม)",
+    "name_en": null,
+    "category": "souvenir_shop",
+    "one_liner_th": "ร้านต้นตำรับผู้สืบทอดการทำขนมหมั่วหลาว (ขนมงาพอง) แบบดั้งเดิมในตะกั่วป่า",
+    "signature_th": [
+      "ขนมหมั่วหลาว",
+      "ขนมงาพอง"
+    ],
+    "address_th": "42/9 หมู่ 2 ซอยเรือขุดแร่บุญสูง",
+    "subdistrict": "บางนายสี",
+    "geo": {
+      "lat": null,
+      "lng": null,
+      "source_url": null
+    },
+    "hours_th": null,
+    "price_range_th": null,
+    "phone": null,
+    "facebook": null,
+    "google_maps_url": null,
+    "near_old_town": false,
+    "status": "open",
+    "unknowns": [
+      "hours",
+      "price_range_th",
+      "phone",
+      "facebook",
+      "geo",
+      "google_maps_url"
+    ],
+    "sources": [
+      {
+        "name": "Bang Nai Si Go Th",
+        "url": "http://www.bangnaisri.go.th/",
+        "accessed": "2026-09-07"
+      }
+    ]
+  },
+  {
+    "name_th": "ศิริพรบาติก",
+    "name_en": "Siriporn Batik",
+    "category": "souvenir_shop",
+    "one_liner_th": "ร้านผ้าเพ้นท์บาติกและงานพิมพ์ใบไม้สีธรรมชาติ งานคราฟต์ทำมือโดยคนท้องถิ่น",
+    "signature_th": [
+      "ผ้าปาเต๊ะเพ้นท์มือ",
+      "ผ้ามัดย้อม",
+      "งานพิมพ์ลายใบไม้ (Eco printing)"
+    ],
+    "address_th": "มักออกร้านที่ถนนคนเดินเมืองเก่าตะกั่วป่า",
+    "subdistrict": "ตะกั่วป่า",
+    "geo": {
+      "lat": null,
+      "lng": null,
+      "source_url": null
+    },
+    "hours_th": "เปิดขายช่วงถนนคนเดิน (วันอาทิตย์)",
+    "price_range_th": null,
+    "phone": "081-719-5595",
+    "facebook": null,
+    "google_maps_url": null,
+    "near_old_town": true,
+    "status": "open",
+    "unknowns": [
+      "exact_address",
+      "facebook",
+      "geo",
+      "google_maps_url",
+      "price_range_th"
+    ],
+    "sources": [
+      {
+        "name": "Phang Nga Local Info",
+        "url": "https://www.facebook.com/",
+        "accessed": "2026-09-07"
+      }
+    ]
+  },
+  {
+    "name_th": "ขนมเบื้องโบราณป้าหลัน",
+    "name_en": null,
+    "category": "dessert",
+    "one_liner_th": "ร้านระดับตำนานในตลาดสดตะกั่วป่า ขายขนมเบื้องโบราณสูตรแป้งข้าวสารโม่เอง",
+    "signature_th": [
+      "ขนมเบื้องโบราณไส้ถั่วแดง"
+    ],
+    "address_th": "ตลาดใหญ่ตะกั่วป่า (ตลาดสดเทศบาล)",
+    "subdistrict": "ตะกั่วป่า",
+    "geo": {
+      "lat": null,
+      "lng": null,
+      "source_url": null
+    },
+    "hours_th": "05:00 - 08:30",
+    "price_range_th": null,
+    "phone": null,
+    "facebook": null,
+    "google_maps_url": null,
+    "near_old_town": true,
+    "status": "open",
+    "unknowns": [
+      "phone",
+      "facebook",
+      "geo",
+      "google_maps_url",
+      "price_range_th"
+    ],
+    "sources": [
+      {
+        "name": "Wongnai Local Review",
+        "url": "https://www.facebook.com/",
+        "accessed": "2026-09-07"
+      }
+    ]
+  },
+  {
+    "name_th": "บาติก มัดย้อม @ตะกั่วป่า (เจ้าสุ พานพระ)",
+    "name_en": null,
+    "category": "souvenir_shop",
+    "one_liner_th": "งานศิลปะผ้าบาติกและมัดย้อมที่สะท้อนอัตลักษณ์ท้องถิ่น โดยศิลปินชาวตะกั่วป่า",
+    "signature_th": [
+      "เสื้อผ้าบาติกทำมือ",
+      "ผ้ามัดย้อม"
+    ],
+    "address_th": null,
+    "subdistrict": null,
+    "geo": {
+      "lat": null,
+      "lng": null,
+      "source_url": null
+    },
+    "hours_th": null,
+    "price_range_th": null,
+    "phone": null,
+    "facebook": null,
+    "google_maps_url": null,
+    "near_old_town": false,
+    "status": "open",
+    "unknowns": [
+      "address",
+      "subdistrict",
+      "phone",
+      "hours",
+      "price_range_th",
+      "facebook",
+      "geo",
+      "google_maps_url"
+    ],
+    "sources": [
+      {
+        "name": "Phang Nga PAO",
+        "url": "https://www.phangngapao.go.th/",
+        "accessed": "2026-09-07"
+      }
+    ]
+  },
+  {
+    "name_th": "Eco Print by Kanokwan",
+    "name_en": null,
+    "category": "souvenir_shop",
+    "one_liner_th": "กลุ่มผู้ผลิตงานผ้าพิมพ์ลายใบไม้และบาติกที่นำเสนอผลิตภัณฑ์เป็นมิตรกับสิ่งแวดล้อม",
+    "signature_th": [
+      "เสื้อผ้าสำเร็จรูปพิมพ์ลายใบไม้",
+      "กระเป๋าผ้ามัดย้อม",
+      "หมวก"
+    ],
+    "address_th": null,
+    "subdistrict": null,
+    "geo": {
+      "lat": null,
+      "lng": null,
+      "source_url": null
+    },
+    "hours_th": null,
+    "price_range_th": null,
+    "phone": null,
+    "facebook": null,
+    "google_maps_url": null,
+    "near_old_town": false,
+    "status": "open",
+    "unknowns": [
+      "address",
+      "subdistrict",
+      "phone",
+      "hours",
+      "price_range_th",
+      "facebook",
+      "geo",
+      "google_maps_url"
+    ],
+    "sources": [
+      {
+        "name": "EM Skynet",
+        "url": "https://emskynet.com/",
+        "accessed": "2026-09-07"
+      }
+    ]
+  },
+  {
+    "name_th": "ตำนานโกสุ้ย อ๊ามในสวน",
+    "name_en": null,
+    "category": "dessert",
+    "one_liner_th": "ขนมโกสุ้ยสูตรโบราณดั้งเดิมกว่า 60 ปี ทำขายเพียงปีละครั้งช่วงเทศกาลกินเจ",
+    "signature_th": [
+      "ขนมโกสุ้ยสูตรโบราณ (ขนมถ้วยน้ำตาลทรายแดง)"
+    ],
+    "address_th": "บริเวณโรงเจในสวน (อ๊ามในสวน) ตะกั่วป่า",
+    "subdistrict": "ตะกั่วป่า",
+    "geo": {
+      "lat": null,
+      "lng": null,
+      "source_url": null
+    },
+    "hours_th": "ช่วงเทศกาลกินเจ",
+    "price_range_th": null,
+    "phone": null,
+    "facebook": null,
+    "google_maps_url": null,
+    "near_old_town": true,
+    "status": "uncertain",
+    "unknowns": [
+      "ขายเฉพาะช่วงเทศกาลกินเจ",
+      "phone",
+      "facebook",
+      "geo",
+      "google_maps_url",
+      "price_range_th"
+    ],
+    "sources": [
+      {
+        "name": "Local Facebook Group",
+        "url": "https://www.facebook.com/",
+        "accessed": "2026-09-07"
+      }
+    ]
+  }
+]

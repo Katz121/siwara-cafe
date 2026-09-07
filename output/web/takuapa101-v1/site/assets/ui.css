@@ -40,3 +40,47 @@ body.searchbox-open{overflow:hidden}
 .news-sum{font-size:.84rem;line-height:1.6;color:#55625a}
 .news-auto-tag{align-self:flex-start;font-size:.68rem;letter-spacing:.07em;padding:2px 8px;border-radius:999px;background:#efe6cd;color:#7a6234;border:1px solid rgba(122,98,52,.28)}
 .news-row.is-auto .news-date{color:#7a6234}
+
+/* ============ Directory entries added by research ============ */
+.shop-extra > span:last-child{display:flex;flex-direction:column;gap:5px;min-width:0}
+.shop-note{font-size:.86rem;line-height:1.6;color:#4c574f}
+.shop-meta{font-size:.79rem;color:#7a8880}
+.shop-nav,.shop-src{font-size:.76rem;width:fit-content}
+.shop-nav{color:#203f39;text-decoration:underline;text-underline-offset:3px;min-height:32px;display:inline-flex;align-items:center}
+.shop-src{color:#8a7a5e;letter-spacing:.04em}
+a.shop-src:hover{color:#a3492f}
+.shop-warn{font-size:.72rem;padding:2px 8px;border-radius:999px;background:#f3e6d6;color:#8a5a29;width:fit-content}
+.shop-list li.shop-extra{padding-top:12px;padding-bottom:12px}
+@media (max-width:600px){
+  .shop-extra > span:last-child{gap:6px}
+  .shop-nav{min-height:44px}
+}
+
+/* ============ Header that survives a nine-item menu ============ */
+.nav-toggle{display:none;place-items:center;width:42px;height:42px;border:1px solid rgba(32,63,57,.24);border-radius:11px;background:transparent;color:inherit;cursor:pointer;font:inherit}
+.nav-toggle .ib-glyph{font-size:1.05rem;line-height:1}
+.site-header{gap:14px}
+.site-header nav{display:flex;flex-wrap:wrap;gap:2px 16px;min-width:0}
+@media (max-width:1180px){
+  .site-header nav a{font-size:.92rem}
+  .site-header nav{gap:2px 12px}
+}
+@media (max-width:1040px){
+  .site-header .header-map{display:none}
+}
+@media (max-width:900px){
+  /* The bottom tab bar carries navigation on small screens, so the top menu
+     collapses into a disclosure instead of scrolling off the edge. */
+  .site-header nav{
+    position:absolute;left:0;right:0;top:100%;z-index:700;
+    flex-direction:column;gap:0;align-items:stretch;
+    background:#fffdf7;border-bottom:1px solid rgba(32,63,57,.18);
+    box-shadow:0 18px 30px -24px rgba(20,36,31,.8);
+    padding:6px 18px 12px;max-height:70vh;overflow:auto;
+  }
+  .site-header nav[hidden]{display:none}
+  .site-header nav a{padding:13px 4px;min-height:46px;display:flex;align-items:center;border-bottom:1px solid rgba(32,63,57,.1)}
+  .site-header nav a:last-child{border-bottom:0}
+  .site-header{position:relative}
+  .nav-toggle{display:grid}
+}

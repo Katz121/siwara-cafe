@@ -1,0 +1,420 @@
+[
+  {
+    "name_th": "ดิ เอท รูม บาย มาตาคาเฟ่",
+    "name_en": "The Eighth Room by mata cafe",
+    "category": "cafe",
+    "one_liner_th": "คาเฟ่สไตล์โคซี่ในย่านเขาหลัก มีเมนูบรันช์ วาฟเฟิลโฮมเมด และเครื่องดื่มหลากหลาย",
+    "signature_th": [
+      "วาฟเฟิล",
+      "ชาเขียวมัทฉะ",
+      "All Day Breakfast"
+    ],
+    "address_th": "ริมถนนเพชรเกษม (เขาหลักเซ็นเตอร์) ตรงข้ามธนาคารไทยพาณิชย์",
+    "subdistrict": "คึกคัก",
+    "geo": {
+      "lat": null,
+      "lng": null,
+      "source_url": null
+    },
+    "hours_th": "09:00 - 19:00 (ทุกวัน)",
+    "price_range_th": null,
+    "phone": null,
+    "facebook": "https://www.facebook.com/TheEighthRoom/",
+    "google_maps_url": null,
+    "near_old_town": false,
+    "status": "open",
+    "unknowns": [
+      "geo",
+      "price_range_th",
+      "phone",
+      "google_maps_url"
+    ],
+    "sources": [
+      {
+        "name": "Wongnai",
+        "url": "https://www.wongnai.com/restaurants/the-eighth-room-by-mata-cafe",
+        "accessed": "2026-09-07"
+      }
+    ]
+  },
+  {
+    "name_th": "การัง คาเฟ่",
+    "name_en": "Garang Artisan Icecream",
+    "category": "dessert",
+    "one_liner_th": "ร้านไอศกรีมโฮมเมดและคาเฟ่ริมหาดบางสัก โดดเด่นด้วยการตกแต่งสไตล์โมร็อกโกและรสชาติไอศกรีมที่ใช้วัตถุดิบท้องถิ่น",
+    "signature_th": [
+      "ไอศกรีมรสข้าวดอกข่า",
+      "ไอศกรีมรสเต้าส้อ",
+      "กาแฟ"
+    ],
+    "address_th": "หาดบางสัก",
+    "subdistrict": "บางม่วง",
+    "geo": {
+      "lat": null,
+      "lng": null,
+      "source_url": null
+    },
+    "hours_th": "10:00 - 19:00 (ปิดวันอังคาร)",
+    "price_range_th": null,
+    "phone": null,
+    "facebook": "https://www.facebook.com/garangicecream/",
+    "google_maps_url": null,
+    "near_old_town": false,
+    "status": "open",
+    "unknowns": [
+      "geo",
+      "price_range_th",
+      "phone",
+      "google_maps_url"
+    ],
+    "sources": [
+      {
+        "name": "Facebook",
+        "url": "https://www.facebook.com/garangicecream/",
+        "accessed": "2026-09-07"
+      }
+    ]
+  },
+  {
+    "name_th": "เยลโลว์ สเนล คาเฟ่ แอนด์ แกลลอรี่",
+    "name_en": "Yellow Snail Cafe & Gallery",
+    "category": "cafe",
+    "one_liner_th": "คาเฟ่สไตล์ปูนเปลือยในย่านเขาหลัก โดดเด่นเรื่องกาแฟและการจัดแสดงงานศิลปะ",
+    "signature_th": [
+      "โกโก้เย็น",
+      "Espresso Macchiato"
+    ],
+    "address_th": "ริมถนนเพชรเกษม เขาหลัก",
+    "subdistrict": "คึกคัก",
+    "geo": {
+      "lat": null,
+      "lng": null,
+      "source_url": null
+    },
+    "hours_th": null,
+    "price_range_th": null,
+    "phone": null,
+    "facebook": null,
+    "google_maps_url": null,
+    "near_old_town": false,
+    "status": "uncertain",
+    "unknowns": [
+      "geo",
+      "hours_th",
+      "price_range_th",
+      "phone",
+      "facebook",
+      "google_maps_url"
+    ],
+    "sources": [
+      {
+        "name": "Wongnai",
+        "url": "https://www.wongnai.com/restaurants/yellow-snail-cafe",
+        "accessed": "2026-09-07"
+      }
+    ]
+  },
+  {
+    "name_th": "มาหามิตร คาเฟ่",
+    "name_en": "Mahamitr Cafe",
+    "category": "cafe",
+    "one_liner_th": "คาเฟ่สไตล์ดาร์กมินิมอลท่ามกลางสวนปาล์มร่มรื่น มีลานเซิร์ฟสเก็ตและเสิร์ฟอาหารจานเดียว",
+    "signature_th": [
+      "กาแฟอาราบิก้า",
+      "ผัดไทยกุ้งสด",
+      "ข้าวผัดไตปลาแห้ง"
+    ],
+    "address_th": "11/6 หมู่ที่ 5",
+    "subdistrict": "โคกเคียน",
+    "geo": {
+      "lat": null,
+      "lng": null,
+      "source_url": null
+    },
+    "hours_th": "09:00 - 18:00 (ปิดวันศุกร์)",
+    "price_range_th": null,
+    "phone": "082-629-1177",
+    "facebook": "https://www.facebook.com/mahamitrcafe/",
+    "google_maps_url": null,
+    "near_old_town": false,
+    "status": "open",
+    "unknowns": [
+      "geo",
+      "price_range_th",
+      "google_maps_url"
+    ],
+    "sources": [
+      {
+        "name": "Facebook",
+        "url": "https://www.facebook.com/mahamitrcafe/",
+        "accessed": "2026-09-07"
+      }
+    ]
+  },
+  {
+    "name_th": "ตรอกคาเฟ่",
+    "name_en": "TROK CA'FE",
+    "category": "drink_shop",
+    "one_liner_th": "ร้านกาแฟลับสุดวินเทจที่ซ่อนตัวอยู่ในตรอกเมืองเก่าตะกั่วป่า ให้บรรยากาศดิบเท่ท่ามกลางซากตึกร้อยปี",
+    "signature_th": [
+      "โกโก้",
+      "กาแฟโบราณ",
+      "ขนมปังปิ้งสังขยา"
+    ],
+    "address_th": "ถนนคนเดินเมืองเก่าตะกั่วป่า",
+    "subdistrict": "ตะกั่วป่า",
+    "geo": {
+      "lat": null,
+      "lng": null,
+      "source_url": null
+    },
+    "hours_th": "เปิดวันอาทิตย์ที่มีถนนคนเดิน",
+    "price_range_th": null,
+    "phone": "063-063-3598",
+    "facebook": "https://www.facebook.com/TROKCAFETakuapa",
+    "google_maps_url": null,
+    "near_old_town": true,
+    "status": "open",
+    "unknowns": [
+      "geo",
+      "price_range_th",
+      "google_maps_url"
+    ],
+    "sources": [
+      {
+        "name": "Sanook",
+        "url": "https://www.sanook.com/travel/1427845/",
+        "accessed": "2026-09-07"
+      }
+    ]
+  },
+  {
+    "name_th": "ลา มะลิลา คาเฟ่",
+    "name_en": "La Malila Café",
+    "category": "cafe",
+    "one_liner_th": "คาเฟ่สไตล์ยุโรปโทนสีขาว-เขียว ในซอยหาดบางเนียง ใช้เมล็ดกาแฟคั่วเองคุณภาพสูง",
+    "signature_th": [
+      "Rose Matcha Latte",
+      "Toffee Nut Ice Cube Latte",
+      "ทาร์ตไข่ใบเหรียงเบคอน"
+    ],
+    "address_th": "ซอยหาดบางเนียง (ข้างโรงแรม La Flora Khao Lak)",
+    "subdistrict": "คึกคัก",
+    "geo": {
+      "lat": null,
+      "lng": null,
+      "source_url": null
+    },
+    "hours_th": "08:00 - 20:00 (ทุกวัน)",
+    "price_range_th": null,
+    "phone": null,
+    "facebook": "https://www.facebook.com/lamalilacafekhaolak",
+    "google_maps_url": null,
+    "near_old_town": false,
+    "status": "open",
+    "unknowns": [
+      "geo",
+      "price_range_th",
+      "phone",
+      "google_maps_url"
+    ],
+    "sources": [
+      {
+        "name": "Wongnai",
+        "url": "https://www.wongnai.com/restaurants/la-malila-cafe",
+        "accessed": "2026-09-07"
+      }
+    ]
+  },
+  {
+    "name_th": "ไทรบ์ เขาหลัก",
+    "name_en": "Tribe.Khaolak",
+    "category": "cafe",
+    "one_liner_th": "คาเฟ่และร้านบรันช์สไตล์โฮมมี่บรรยากาศอบอุ่น เป็นมิตรกับสัตว์เลี้ยง ช่วงค่ำเปิดเป็นบาร์",
+    "signature_th": [
+      "Bagel Tribe Classic Smoked Salmon",
+      "กาแฟ"
+    ],
+    "address_th": "เขาหลัก",
+    "subdistrict": "คึกคัก",
+    "geo": {
+      "lat": null,
+      "lng": null,
+      "source_url": null
+    },
+    "hours_th": null,
+    "price_range_th": null,
+    "phone": "091-881-6593",
+    "facebook": "https://www.facebook.com/KhaolaksTribe",
+    "google_maps_url": null,
+    "near_old_town": false,
+    "status": "open",
+    "unknowns": [
+      "geo",
+      "hours_th",
+      "price_range_th",
+      "google_maps_url"
+    ],
+    "sources": [
+      {
+        "name": "Facebook",
+        "url": "https://www.facebook.com/KhaolaksTribe",
+        "accessed": "2026-09-07"
+      }
+    ]
+  },
+  {
+    "name_th": "วัลฮัลลา วิลล่า แอนด์ ทีเฮาส์",
+    "name_en": "Valhalla Villas & Teahouse",
+    "category": "cafe",
+    "one_liner_th": "คาเฟ่สไตล์มินิมอลบนเนินเขาเขาหลัก โดดเด่นด้วยกระจกบานใหญ่ที่มองเห็นวิวทะเลอันดามันแบบพาโนรามา",
+    "signature_th": [
+      "ชา",
+      "กาแฟ",
+      "เบเกอรี่โฮมเมด"
+    ],
+    "address_th": "บนเนินเขา ถนนเพชรเกษม เขาหลัก",
+    "subdistrict": "คึกคัก",
+    "geo": {
+      "lat": null,
+      "lng": null,
+      "source_url": null
+    },
+    "hours_th": "09:30 - 18:30 (ทุกวัน)",
+    "price_range_th": null,
+    "phone": null,
+    "facebook": "https://www.facebook.com/valhallakhaolak/",
+    "google_maps_url": null,
+    "near_old_town": false,
+    "status": "open",
+    "unknowns": [
+      "geo",
+      "price_range_th",
+      "phone",
+      "google_maps_url"
+    ],
+    "sources": [
+      {
+        "name": "Wongnai",
+        "url": "https://www.wongnai.com/restaurants/valhalla-khaolak",
+        "accessed": "2026-09-07"
+      }
+    ]
+  },
+  {
+    "name_th": "คาคีนอส เขาหลัก",
+    "name_en": "KARKINOS KHAO LAK",
+    "category": "restaurant",
+    "one_liner_th": "บีชคลับและร้านอาหารอิตาเลียนริมหาดปะการัง บรรยากาศโอเพ่นแอร์เหมาะแก่การชมพระอาทิตย์ตก",
+    "signature_th": [
+      "พิซซ่าสไตล์นาโปลีตานา",
+      "พาสต้า",
+      "ค็อกเทล"
+    ],
+    "address_th": "45 หมู่ 2 หาดปะการัง (ในพื้นที่โรงแรม Apsara)",
+    "subdistrict": "คึกคัก",
+    "geo": {
+      "lat": null,
+      "lng": null,
+      "source_url": null
+    },
+    "hours_th": "11:00 - 22:00 (ทุกวัน)",
+    "price_range_th": null,
+    "phone": "076-584-447",
+    "facebook": "https://www.facebook.com/karkinoskhaolak/",
+    "google_maps_url": null,
+    "near_old_town": false,
+    "status": "open",
+    "unknowns": [
+      "geo",
+      "price_range_th",
+      "google_maps_url"
+    ],
+    "sources": [
+      {
+        "name": "Facebook",
+        "url": "https://www.facebook.com/karkinoskhaolak/",
+        "accessed": "2026-09-07"
+      }
+    ]
+  },
+  {
+    "name_th": "อันเดอร์กราวด์ ที คาเฟ่",
+    "name_en": "Underground Tea Cafe",
+    "category": "drink_shop",
+    "one_liner_th": "คาเฟ่ชาไข่มุกสไตล์ลอฟต์ดิบเท่ ซ่อนตัวอยู่ชั้นใต้ดินร้านก๋วยเตี๋ยวในย่านเมืองเก่า",
+    "signature_th": [
+      "ชาไข่มุกออริจินัล",
+      "ชาเขียวมะลิบ๊วย",
+      "อเมริกาโน่ส้ม",
+      "ชีสเค้กคาราเมล"
+    ],
+    "address_th": "ใต้ร้านก๋วยเตี๋ยวบ้านแม่ ย่านเมืองเก่าตะกั่วป่า",
+    "subdistrict": "ตะกั่วป่า",
+    "geo": {
+      "lat": null,
+      "lng": null,
+      "source_url": null
+    },
+    "hours_th": null,
+    "price_range_th": null,
+    "phone": null,
+    "facebook": null,
+    "google_maps_url": null,
+    "near_old_town": true,
+    "status": "open",
+    "unknowns": [
+      "geo",
+      "hours_th",
+      "price_range_th",
+      "phone",
+      "facebook",
+      "google_maps_url"
+    ],
+    "sources": [
+      {
+        "name": "Wongnai",
+        "url": "https://www.wongnai.com/restaurants/underground-tea-cafe",
+        "accessed": "2026-09-07"
+      }
+    ]
+  },
+  {
+    "name_th": "อันเนม เขาหลัก",
+    "name_en": "Unnamed Khaolak",
+    "category": "cafe",
+    "one_liner_th": "โฮมมี่คาเฟ่ในบ้านสีขาวสไตล์สมาคมชาวเซิร์ฟ เสิร์ฟบรันช์และกาแฟคั่วสดใหม่",
+    "signature_th": [
+      "กาแฟคั่วกลาง/เข้ม",
+      "All-day Breakfast",
+      "ขนมเค้กโฮมเมด"
+    ],
+    "address_th": "49/2 หมู่ 3 ถนนเพชรเกษม",
+    "subdistrict": "คึกคัก",
+    "geo": {
+      "lat": null,
+      "lng": null,
+      "source_url": null
+    },
+    "hours_th": "07:30 - 16:30 (ปิดวันพุธ)",
+    "price_range_th": null,
+    "phone": null,
+    "facebook": "https://www.facebook.com/unnamedkhaolak/",
+    "google_maps_url": null,
+    "near_old_town": false,
+    "status": "open",
+    "unknowns": [
+      "geo",
+      "price_range_th",
+      "phone",
+      "google_maps_url"
+    ],
+    "sources": [
+      {
+        "name": "Facebook",
+        "url": "https://www.facebook.com/unnamedkhaolak/",
+        "accessed": "2026-09-07"
+      }
+    ]
+  }
+]

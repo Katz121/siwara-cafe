@@ -1,0 +1,483 @@
+[
+  {
+    "name_th": "ป้าแดงขนมหวาน",
+    "name_en": "Pa Daeng Khanom Wan",
+    "category": "dessert",
+    "one_liner_th": "ร้านขนมหวานไทยดั้งเดิมรสชาติเข้มข้น ราคาเป็นกันเองในย่านตลาดลานโล่ง",
+    "signature_th": [
+      "บัวลอยไข่หวาน",
+      "ทับทิมกรอบ",
+      "กล้วยบวชชี",
+      "เต้าส่วนน้ำกะทิ"
+    ],
+    "address_th": "ตลาดลานโล่ง ตำบลตะกั่วป่า อำเภอตะกั่วป่า จังหวัดพังงา",
+    "subdistrict": "ตะกั่วป่า",
+    "geo": {
+      "lat": null,
+      "lng": null,
+      "source_url": null
+    },
+    "hours_th": null,
+    "price_range_th": "เริ่มต้น 20 บาท",
+    "phone": null,
+    "facebook": null,
+    "google_maps_url": null,
+    "near_old_town": true,
+    "status": "open",
+    "unknowns": [
+      "geo",
+      "hours",
+      "phone",
+      "facebook",
+      "google_maps_url"
+    ],
+    "sources": [
+      {
+        "name": "หรอยจัง พังงา",
+        "url": "https://roijang.com/phangnga/pa-dang-kanomwan/",
+        "accessed": "2026-09-07"
+      }
+    ]
+  },
+  {
+    "name_th": "ขนมจีนป้าม่อม",
+    "name_en": "Khanom Jeen Pa Mom",
+    "category": "restaurant",
+    "one_liner_th": "ร้านขนมจีนตำนานคู่ตะกั่วป่า มีน้ำยาให้เลือกถึง 8 ชนิดพร้อมผักเหนาะจัดเต็ม",
+    "signature_th": [
+      "ขนมจีนน้ำยากะทิ",
+      "ขนมจีนแกงไตปลา",
+      "ขนมจีนน้ำยาป่า",
+      "ไก่ทอด"
+    ],
+    "address_th": "ตลาดลานโล่ง (เยื้องสถานีตำรวจภูธรตะกั่วป่า) ถนนเพชรเกษม ตำบลตะกั่วป่า อำเภอตะกั่วป่า จังหวัดพังงา",
+    "subdistrict": "ตะกั่วป่า",
+    "geo": {
+      "lat": null,
+      "lng": null,
+      "source_url": null
+    },
+    "hours_th": null,
+    "price_range_th": null,
+    "phone": null,
+    "facebook": null,
+    "google_maps_url": null,
+    "near_old_town": true,
+    "status": "open",
+    "unknowns": [
+      "geo",
+      "hours",
+      "price_range",
+      "phone",
+      "facebook",
+      "google_maps_url"
+    ],
+    "sources": [
+      {
+        "name": "Wongnai",
+        "url": "https://www.wongnai.com/restaurants/404169qD",
+        "accessed": "2026-09-07"
+      }
+    ]
+  },
+  {
+    "name_th": "ขนมจีนพี่เหน่ง",
+    "name_en": "Khanom Jeen Phi Neng",
+    "category": "restaurant",
+    "one_liner_th": "ขนมจีนรสเด็ดในตลาดลานโล่ง เติมผักสดผักดองได้ไม่อั้น ราคาประหยัด",
+    "signature_th": [
+      "ขนมจีนแกงไตปลา",
+      "ขนมจีนน้ำยาปู",
+      "ขนมจีนแกงเขียวหวาน"
+    ],
+    "address_th": "ตลาดลานโล่ง ถนนเพชรเกษม ตำบลตะกั่วป่า อำเภอตะกั่วป่า จังหวัดพังงา",
+    "subdistrict": "ตะกั่วป่า",
+    "geo": {
+      "lat": null,
+      "lng": null,
+      "source_url": null
+    },
+    "hours_th": "11:00 · 20:00 น.",
+    "price_range_th": null,
+    "phone": "086-272-7784",
+    "facebook": null,
+    "google_maps_url": null,
+    "near_old_town": true,
+    "status": "open",
+    "unknowns": [
+      "geo",
+      "price_range",
+      "facebook",
+      "google_maps_url"
+    ],
+    "sources": [
+      {
+        "name": "Wongnai",
+        "url": "https://www.wongnai.com/restaurants/khanomjeen-phi-neng",
+        "accessed": "2026-09-07"
+      }
+    ]
+  },
+  {
+    "name_th": "ขนมจีนในนา",
+    "name_en": "Khanom Jeen Nai Na",
+    "category": "restaurant",
+    "one_liner_th": "ร้านขนมจีนบรรยากาศร่มรื่นกลางสวนปาล์ม ขายแบบเป็นชุดพร้อมน้ำยาหลากหลาย",
+    "signature_th": [
+      "ชุดขนมจีน",
+      "น้ำยากะทิ",
+      "แกงไตปลา",
+      "ไก่ทอด"
+    ],
+    "address_th": "ซอยโชคชัย หมู่ 5 ตำบลบางนายสี อำเภอตะกั่วป่า จังหวัดพังงา",
+    "subdistrict": "บางนายสี",
+    "geo": {
+      "lat": null,
+      "lng": null,
+      "source_url": null
+    },
+    "hours_th": "ศุกร์ · อาทิตย์ 08:00 · 17:00 น.",
+    "price_range_th": null,
+    "phone": "084-245-5419",
+    "facebook": null,
+    "google_maps_url": null,
+    "near_old_town": false,
+    "status": "open",
+    "unknowns": [
+      "geo",
+      "price_range",
+      "facebook",
+      "google_maps_url"
+    ],
+    "sources": [
+      {
+        "name": "หรอยจัง พังงา",
+        "url": "https://roijang.com/phangnga/kanom-jeen-nai-na/",
+        "accessed": "2026-09-07"
+      }
+    ]
+  },
+  {
+    "name_th": "มาตา Coffee And Bakery",
+    "name_en": "Mata Coffee And Bakery",
+    "category": "dessert",
+    "one_liner_th": "ร้านเบเกอรี่และกาแฟบรรยากาศสบายๆ โดดเด่นด้วยเค้กโฮมเมดทำสดใหม่",
+    "signature_th": [
+      "เค้กมะพร้าวอ่อน",
+      "บราวนี่อัลมอนด์",
+      "เอแคลร์กาแฟ"
+    ],
+    "address_th": "ริมถนนเพชรเกษม (ตรงข้าม บ.ข.ส. ตะกั่วป่า) อำเภอตะกั่วป่า จังหวัดพังงา",
+    "subdistrict": null,
+    "geo": {
+      "lat": null,
+      "lng": null,
+      "source_url": null
+    },
+    "hours_th": null,
+    "price_range_th": null,
+    "phone": null,
+    "facebook": null,
+    "google_maps_url": null,
+    "near_old_town": false,
+    "status": "open",
+    "unknowns": [
+      "geo",
+      "hours",
+      "price_range",
+      "subdistrict",
+      "phone",
+      "facebook",
+      "google_maps_url"
+    ],
+    "sources": [
+      {
+        "name": "Shopee Food",
+        "url": "https://shopee.co.th/mata-coffee-bakery",
+        "accessed": "2026-09-07"
+      }
+    ]
+  },
+  {
+    "name_th": "The Eighth Room",
+    "name_en": "The Eighth Room",
+    "category": "dessert",
+    "one_liner_th": "คาเฟ่สไตล์ลอฟท์ย่านเขาหลัก มีเมนูครบทั้งอาหารคาว ขนมหวาน และชาเขียวมัทฉะ",
+    "signature_th": [
+      "มัทฉะ",
+      "วาฟเฟิล",
+      "ไอศกรีม",
+      "All Day Breakfast"
+    ],
+    "address_th": "ริมถนนเพชรเกษม (เยื้องธนาคารไทยพาณิชย์ สาขาเขาหลัก) ตำบลคึกคัก อำเภอตะกั่วป่า จังหวัดพังงา",
+    "subdistrict": "คึกคัก",
+    "geo": {
+      "lat": null,
+      "lng": null,
+      "source_url": null
+    },
+    "hours_th": null,
+    "price_range_th": null,
+    "phone": null,
+    "facebook": null,
+    "google_maps_url": null,
+    "near_old_town": false,
+    "status": "open",
+    "unknowns": [
+      "geo",
+      "hours",
+      "price_range",
+      "phone",
+      "facebook",
+      "google_maps_url"
+    ],
+    "sources": [
+      {
+        "name": "Wongnai",
+        "url": "https://www.wongnai.com/restaurants/the-eighth-room",
+        "accessed": "2026-09-07"
+      }
+    ]
+  },
+  {
+    "name_th": "Delicacy Khaolak",
+    "name_en": "Delicacy Khaolak",
+    "category": "dessert",
+    "one_liner_th": "คาเฟ่และเบเกอรี่ตกแต่งสไตล์บาหลี โดดเด่นด้วยขนมอบโฮมเมดและบรรยากาศอบอุ่น",
+    "signature_th": [
+      "ครัวซองต์อัลมอนด์",
+      "ซาวโดวจ์",
+      "สโคน",
+      "คานาเล่"
+    ],
+    "address_th": "เขาหลักเซ็นเตอร์ (ตรงข้าม McDonald's) ตำบลคึกคัก อำเภอตะกั่วป่า จังหวัดพังงา",
+    "subdistrict": "คึกคัก",
+    "geo": {
+      "lat": null,
+      "lng": null,
+      "source_url": null
+    },
+    "hours_th": "09:00 · 22:00 น.",
+    "price_range_th": null,
+    "phone": null,
+    "facebook": null,
+    "google_maps_url": null,
+    "near_old_town": false,
+    "status": "open",
+    "unknowns": [
+      "geo",
+      "price_range",
+      "phone",
+      "facebook",
+      "google_maps_url"
+    ],
+    "sources": [
+      {
+        "name": "Wongnai",
+        "url": "https://www.wongnai.com/restaurants/delicacy-khaolak",
+        "accessed": "2026-09-07"
+      }
+    ]
+  },
+  {
+    "name_th": "การัง เขาหลัก",
+    "name_en": "Garang Khao Lak",
+    "category": "dessert",
+    "one_liner_th": "คาเฟ่ชื่อดังดีไซน์ล้ำสมัย ขึ้นชื่อเรื่องไอศกรีมโฮมเมดที่มีให้เลือกกว่าร้อยรสชาติ",
+    "signature_th": [
+      "ไอศกรีมรสเต้าส้อ",
+      "ครัวซองต์",
+      "ไอศกรีมโฮมเมด"
+    ],
+    "address_th": "ตำบลคึกคัก อำเภอตะกั่วป่า จังหวัดพังงา",
+    "subdistrict": "คึกคัก",
+    "geo": {
+      "lat": null,
+      "lng": null,
+      "source_url": null
+    },
+    "hours_th": null,
+    "price_range_th": null,
+    "phone": null,
+    "facebook": "https://www.facebook.com/garangicecream/",
+    "google_maps_url": null,
+    "near_old_town": false,
+    "status": "open",
+    "unknowns": [
+      "geo",
+      "hours",
+      "price_range",
+      "phone",
+      "google_maps_url",
+      "address"
+    ],
+    "sources": [
+      {
+        "name": "Garang Ice Cream",
+        "url": "https://garangicecream.com",
+        "accessed": "2026-09-07"
+      }
+    ]
+  },
+  {
+    "name_th": "บ้านขนมอารมณ์ดี",
+    "name_en": "Baan Khanom Arom Dee",
+    "category": "dessert",
+    "one_liner_th": "คาเฟ่สไตล์มินิมอลที่มีเค้กเนื้อนุ่มละมุนลิ้น และรับทำเค้กตามโอกาสพิเศษต่างๆ",
+    "signature_th": [
+      "เค้กส้ม",
+      "มาม่อน",
+      "เค้กวันเกิด"
+    ],
+    "address_th": "อำเภอตะกั่วป่า จังหวัดพังงา",
+    "subdistrict": null,
+    "geo": {
+      "lat": null,
+      "lng": null,
+      "source_url": null
+    },
+    "hours_th": null,
+    "price_range_th": null,
+    "phone": "086-945-4262",
+    "facebook": "https://www.facebook.com/BaanKhanomAromDeeTakuaPa",
+    "google_maps_url": null,
+    "near_old_town": false,
+    "status": "open",
+    "unknowns": [
+      "geo",
+      "hours",
+      "price_range",
+      "subdistrict",
+      "address",
+      "google_maps_url"
+    ],
+    "sources": [
+      {
+        "name": "หรอยจัง พังงา",
+        "url": "https://roijang.com/phangnga/baan-khanom-arom-dee/",
+        "accessed": "2026-09-07"
+      }
+    ]
+  },
+  {
+    "name_th": "โอเชี่ยน แมน คาเฟ่",
+    "name_en": "Ocean Man Café",
+    "category": "dessert",
+    "one_liner_th": "คาเฟ่สไตล์มินิมอลอิฐแดงรูปเกลียวคลื่น มีเบเกอรี่โฮมเมดและสามารถนำสัตว์เลี้ยงเข้าโซนเอาท์ดอร์ได้",
+    "signature_th": [
+      "Dirty Coffee",
+      "บานอฟฟี่พาย",
+      "เค้กแครอท",
+      "Ocean Man Buns"
+    ],
+    "address_th": "หน้าโรงแรม Khaolak Paradise Resort ตำบลคึกคัก อำเภอตะกั่วป่า จังหวัดพังงา",
+    "subdistrict": "คึกคัก",
+    "geo": {
+      "lat": null,
+      "lng": null,
+      "source_url": null
+    },
+    "hours_th": "09:00 · 18:00 น.",
+    "price_range_th": null,
+    "phone": null,
+    "facebook": null,
+    "google_maps_url": null,
+    "near_old_town": false,
+    "status": "open",
+    "unknowns": [
+      "geo",
+      "price_range",
+      "phone",
+      "facebook",
+      "google_maps_url"
+    ],
+    "sources": [
+      {
+        "name": "TalonTiew",
+        "url": "https://www.talontiew.com/ocean-man-cafe/",
+        "accessed": "2026-09-07"
+      }
+    ]
+  },
+  {
+    "name_th": "ลา มะลิลา คาเฟ่",
+    "name_en": "La Malila Café",
+    "category": "dessert",
+    "one_liner_th": "คาเฟ่บรรยากาศเรียบหรูย่านหาดบางเนียง โดดเด่นด้วยกาแฟคั่วเองและเบเกอรี่อบสดใหม่",
+    "signature_th": [
+      "Rose Matcha Latte",
+      "Almond Strawberry Tart",
+      "ทาร์ตไข่ใบเหรียงเบคอน"
+    ],
+    "address_th": "ซอยหาดบางเนียง (ข้างโรงแรม La Flora Khao Lak) ตำบลคึกคัก อำเภอตะกั่วป่า จังหวัดพังงา",
+    "subdistrict": "คึกคัก",
+    "geo": {
+      "lat": null,
+      "lng": null,
+      "source_url": null
+    },
+    "hours_th": "08:00 · 20:00 น.",
+    "price_range_th": null,
+    "phone": null,
+    "facebook": null,
+    "google_maps_url": null,
+    "near_old_town": false,
+    "status": "open",
+    "unknowns": [
+      "geo",
+      "price_range",
+      "phone",
+      "facebook",
+      "google_maps_url"
+    ],
+    "sources": [
+      {
+        "name": "Wongnai",
+        "url": "https://www.wongnai.com/restaurants/la-malila-cafe",
+        "accessed": "2026-09-07"
+      }
+    ]
+  },
+  {
+    "name_th": "ป้าฝนขนมหวาน",
+    "name_en": "Pa Fon Khanom Wan",
+    "category": "dessert",
+    "one_liner_th": "ร้านขนมหวานไทยพื้นเมืองที่มีหลากหลายเมนูตั้งอยู่ในตลาดเจ๊มุก",
+    "signature_th": [
+      "มันเชื่อม",
+      "ถั่วดำสาคู",
+      "กล้วยบวชชี",
+      "บัวลอย"
+    ],
+    "address_th": "ตลาดเจ๊มุก อำเภอตะกั่วป่า จังหวัดพังงา",
+    "subdistrict": null,
+    "geo": {
+      "lat": null,
+      "lng": null,
+      "source_url": null
+    },
+    "hours_th": null,
+    "price_range_th": null,
+    "phone": null,
+    "facebook": null,
+    "google_maps_url": null,
+    "near_old_town": false,
+    "status": "open",
+    "unknowns": [
+      "geo",
+      "hours",
+      "price_range",
+      "subdistrict",
+      "phone",
+      "facebook",
+      "google_maps_url"
+    ],
+    "sources": [
+      {
+        "name": "Wongnai",
+        "url": "https://www.wongnai.com/restaurants/pa-fon-khanom-wan",
+        "accessed": "2026-09-07"
+      }
+    ]
+  }
+]

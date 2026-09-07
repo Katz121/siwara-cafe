@@ -2,6 +2,33 @@
 from html import escape as e
 import re
 
+# ---- Photo registry guard ----
+# Nothing renders a photograph unless the registry says that photo depicts this
+# subject. A caption always comes from the registry, never from the page that is
+# placing it, so a picture cannot be relabelled to fit a heading.
+_PHOTO_REG = None
+
+
+def photo_for(subject, file=None, era=None):
+    """Return a renderable photo dict for this subject, or None."""
+    global _PHOTO_REG
+    import json as _j, os as _o
+    if _PHOTO_REG is None:
+        fp = _o.path.join(_o.path.dirname(_o.path.abspath(__file__)), 'data', 'photo-registry.json')
+        try:
+            reg = _j.load(open(fp, encoding='utf-8'))
+        except Exception:
+            reg = {'photos': []}
+        _PHOTO_REG = {p['file']: p for p in reg.get('photos', [])}
+    if file:
+        p = _PHOTO_REG.get(file)
+        return p if p and subject in p.get('allowed_on', []) else None
+    for p in _PHOTO_REG.values():
+        if subject in p.get('allowed_on', []) and (era is None or p.get('era') == era):
+            return p
+    return None
+
+
 GROUPS = [('temple','วัดและเจดีย์',['wat-boromthat','wat-khuha','wat-pathum','wat-kongkha','wat-nikorn','wat-sena']),('shrine','ศาลเจ้าและโรงเจ',['guan-yu','pun-thao','kue-chai','rong-jae']),('heritage','ตึกเก่าและร่องรอยเมือง',['iron-bridge','governor-wall','khun-in','tao-ming']),('park','สวนและพื้นที่สาธารณะ',['phra-narai','thung-phra']),('market','ตลาดและของกิน',['riverwalk','culture-street','food-center']),('museum','พิพิธภัณฑ์',['museum'])]
 MAP_NOTE = 'แผนที่ประชาสัมพันธ์ของเทศบาลเมืองตะกั่วป่า ระยะและสัดส่วนไม่ตรงตามพื้นที่จริง'
 
@@ -59,7 +86,7 @@ def transform(path,body,ctx,record):
         for r in records:
             g = r.get('geo') or {}
             coords = [g['lng'], g['lat']] if isinstance(g.get('lat'), (int,float)) and isinstance(g.get('lng'), (int,float)) else None
-            photos = r.get('photos', {}).get('usable', [])
+            photos = [p for p in (r.get('photos', {}).get('usable', []) or []) if photo_for(r['id'], p.get('file'))]
             hero_photo = next((p for p in photos if p.get('era') in ('current','now')), photos[0] if photos else None)
             if hero_photo:
                 photo_src = hero_photo.get('file') or hero_photo.get('local_path') or hero_photo.get('url')
@@ -93,26 +120,64 @@ def transform(path,body,ctx,record):
             result+=f'<section class="route-chapter" id="route-{i}"><div class="route-chapter-visual"><span class="giant-number">0{i}</span>{pic(ids[0])}<span class="chapter">TAKUA PA / WALK & READ</span></div><div class="route-chapter-copy"><h2>{name}</h2><ol class="stops">'+''.join(f'<li><span>{j:02d}</span><div><h3>{ctx["a"](byid[x])}</h3><p>{e(ctx["copy"][x]["kicker"])}</p></div></li>' for j,x in enumerate(ids,1))+'</ol><a class="text-link" href="/map/">เปิดแผนที่ประกอบ ↗</a></div></section>'
         return result+source()
     if path=='/eat/':
-        body=body.replace('59 รายชื่อ','60 รายชื่อ').replace('59 รายชื่อและลำดับ','60 รายชื่อและลำดับ')
+        import json as _json, os as _os
+
+        # Shops found by research sit alongside the brochure list rather than in a
+        # second directory, but each one carries its source so a reader can check it.
+        _fp = _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), 'data', 'shops-extra.json')
+        extra = []
+        if _os.path.exists(_fp):
+            try:
+                extra = _json.load(open(_fp, encoding='utf-8'))
+            except Exception:
+                extra = []
+
+        HEADS = {'restaurant': '<h2>ร้านอาหาร', 'drink_shop': '<h2>เครื่องดื่ม', 'souvenir_shop': '<h2>ของฝาก'}
+        BASE_COUNT = {'restaurant': 32, 'drink_shop': 19, 'souvenir_shop': 8}
+        added = {'restaurant': 0, 'drink_shop': 0, 'souvenir_shop': 0}
+
+        def _entry(r):
+            label = e(r['name_th']) + (f" · {e(r['name_en'])}" if r.get('name_en') else '')
+            href = r.get('website') or r.get('facebook') or r.get('google_maps_url')
+            name = f'<a href="{e(href)}" target="_blank" rel="noopener">{label}</a>' if href else label
+            bits = []
+            if r.get('one_liner_th'): bits.append(f"<small class=\"shop-note\">{e(r['one_liner_th'])}</small>")
+            meta = []
+            if r.get('hours_th'): meta.append(e(r['hours_th']))
+            if r.get('subdistrict'): meta.append('ต.' + e(r['subdistrict']))
+            if meta: bits.append(f'<small class="shop-meta">{" · ".join(meta)}</small>')
+            if r.get('geo'):
+                g = r['geo']
+                bits.append(f'<a class="shop-nav" href="https://www.google.com/maps/search/?api=1&query={g["lat"]},{g["lng"]}" target="_blank" rel="noopener">นำทาง ↗</a>')
+            src = (r.get('sources') or [{}])[0].get('url')
+            tag = 'ร้านของผู้จัดทำ' if r.get('provenance') == 'first-party' else ('เพิ่มโดยผู้ดูแล' if r.get('provenance') == 'owner-added' else 'จากการค้นหา')
+            if src:
+                bits.append(f'<a class="shop-src" href="{e(src)}" target="_blank" rel="noopener">{tag} ↗</a>')
+            else:
+                bits.append(f'<span class="shop-src">{tag}</span>')
+            if r.get('status') == 'uncertain':
+                bits.append('<span class="shop-warn">ยังไม่ยืนยันว่าเปิดอยู่</span>')
+            key = ' '.join(filter(None, [r['name_th'], r.get('name_en'), r.get('one_liner_th')]))
+            return (f'<li id="{e(r["id"])}" data-shop="{e(key)}" class="shop-extra">'
+                    f'<span class="shop-number">—</span><span>{name}{"".join(bits)}</span></li>')
+
+        for cat, head in HEADS.items():
+            rows = ''.join(_entry(r) for r in extra if r['category'] == cat)
+            if not rows:
+                continue
+            added[cat] = sum(1 for r in extra if r['category'] == cat)
+            at = body.index('<ol class="shop-list">', body.index(head))
+            cut = at + len('<ol class="shop-list">')
+            body = body[:cut] + rows + body[cut:]
+
+        total = sum(BASE_COUNT.values()) + sum(added.values())
+        body = body.replace('59 รายชื่อ', f'{total} รายชื่อ').replace('แสดง 59 ร้าน', f'แสดง {total} ร้าน')
+        for cat, head in HEADS.items():
+            n = BASE_COUNT[cat] + added[cat]
+            body = body.replace(f'{head} <span class="count">{BASE_COUNT[cat]}</span></h2>', f'{head} <span class="count">{n}</span></h2>')
         start=body.index('<div class="filters">')
-        # First-party listing: Siwara Cafe belongs in the drinks section, not restaurants.
-        # Drinks places added outside the municipal brochure. Kept in the same
-        # list so readers see one directory, not two.
-        extra_drinks = [
-            ('siwara-cafe', 'ศิวรา คาเฟ่ · Siwara Cafe', 'ศิวรา คาเฟ่ Siwara Cafe', 'https://siwaracafe.com/'),
-            ('baan-bai', 'บ้านใบ', 'บ้านใบ Baan Bai', None),
-        ]
-        rows = ''
-        for eid, label, key, href in extra_drinks:
-            name = f'<a href="{href}" rel="noopener">{label}</a>' if href else label
-            rows += f'<li id="{eid}" data-shop="{key}"><span class="shop-number">—</span><span>{name}</span></li>'
-        drinks_at=body.index('<ol class="shop-list">', body.index('<h2>เครื่องดื่ม'))
-        cut=drinks_at+len('<ol class="shop-list">')
-        body=body[:cut]+rows+body[cut:]
-        total=59+len(extra_drinks); drinks=19+len(extra_drinks)
-        body=body.replace('59 รายชื่อ',f'{total} รายชื่อ').replace('แสดง 59 ร้าน',f'แสดง {total} ร้าน').replace('<h2>เครื่องดื่ม <span class="count">19</span></h2>',f'<h2>เครื่องดื่ม <span class="count">{drinks}</span></h2>')
         tools=body[start:].replace('</select></label></div>','</select></label><button class="button button-outline" id="clear-shops" type="button">ล้างตัวกรอง</button></div>',1)
-        return f'<header class="eat-intro"><div>{intro("อีกรสชาติของตะกั่วป่า","กิน ดื่ม และเลือกของฝากจากย่านเมืองเก่า")}<p>59 รายชื่อและลำดับตามแผ่นพับเทศบาล<br>ยังไม่ได้ยืนยันสถานะการเปิดร้านในปัจจุบัน</p></div><div class="eat-intro-art">{pic("food-center",True)}<span class="food-stamp">EAT<br>LOCAL</span></div></header>'+tools
+        return f'<header class="eat-intro"><div>{intro("อีกรสชาติของตะกั่วป่า","กิน ดื่ม และเลือกของฝากจากย่านเมืองเก่า")}<p>{total} ร้านในอำเภอตะกั่วป่า<br>59 ร้านจากแผ่นพับเทศบาล ที่เหลือมาจากการค้นหาและระบุแหล่งที่มาไว้ทุกร้าน<br>ยังไม่ได้ยืนยันสถานะการเปิดร้านในปัจจุบัน ควรโทรถามก่อนเดินทาง</p></div><div class="eat-intro-art">{pic("food-center",True)}<span class="food-stamp">EAT<br>LOCAL</span></div></header>'+tools
     if record and record['type']=='place':
         id=record['id']; idx=ctx['places'].index(record); _,label=next((k,l) for k,l,ids in GROUPS if id in ids)
         hero=f'<div class="breadcrumbs"><a href="/">หน้าแรก</a><span>/</span><a href="/places/">สถานที่</a><span>/</span><span>{label}</span></div><header class="place-hero"><div class="place-hero-copy"><span class="chapter">FIELD NOTE {idx+1:02d} / {label}</span><h1>{e(record["name_th"])}</h1><p class="english">{e(record.get("name_en",""))}</p><p class="place-lead">{e(ctx["copy"][id]["kicker"])}</p><a class="text-link" href="#story">เปิดอ่านเรื่องของที่นี่ ↓</a></div><figure class="place-hero-art">{pic(id,True)}<figcaption><span>TAKUA PA / {idx+1:02d}</span><span>สถานที่ในเมืองตะกั่วป่า</span></figcaption></figure></header>'
@@ -252,7 +317,7 @@ def city_feed(ctx, limit_news=8):
 def shell(path, html):
     html=html.replace('/assets/site.css','/assets/design.css').replace('/assets/site.js','/assets/design.js')
     html=html.replace('<body>',f'<body class="{"home" if path=="/" else "inner-page"}">')
-    html=re.sub(r'<header class="nav">.*?</header>',lambda m:m.group().replace('class="nav"','class="site-header"').replace('<a class="brand" href="/">ตะกั่วป่า <span>101</span></a>','<a class="brand" href="/" aria-label="ตะกั่วป่า 101 หน้าแรก"><span class="brand-mark">๑๐๑</span><span>ตะกั่วป่า<small>TAKUA PA FIELD NOTES</small></span></a>').replace('</nav>','</nav><div class="header-tools"><button class="icon-button" type="button" data-open-search aria-label="ค้นหาในเว็บไซต์ (กด Ctrl+K)"><span class="ib-glyph" aria-hidden="true">⌕</span></button><a class="icon-button" href="/trip/" aria-label="ทริปของคุณ"><span class="ib-glyph" aria-hidden="true">◫</span><span class="qs-badge" data-trip-count hidden>0</span></a><a class="header-map" href="/map/">เปิดแผนที่ ↗</a></div>'),html,count=1)
+    html=re.sub(r'<header class="nav">.*?</header>',lambda m:m.group().replace('class="nav"','class="site-header"').replace('<a class="brand" href="/">ตะกั่วป่า <span>101</span></a>','<a class="brand" href="/" aria-label="ตะกั่วป่า 101 หน้าแรก"><span class="brand-mark">๑๐๑</span><span>ตะกั่วป่า<small>TAKUA PA FIELD NOTES</small></span></a>').replace('</nav>','</nav><div class="header-tools"><button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="main-nav" aria-label="เปิดเมนู"><span class="ib-glyph" aria-hidden="true">☰</span></button><button class="icon-button" type="button" data-open-search aria-label="ค้นหาในเว็บไซต์ (กด Ctrl+K)"><span class="ib-glyph" aria-hidden="true">⌕</span></button><a class="icon-button" href="/trip/" aria-label="ทริปของคุณ"><span class="ib-glyph" aria-hidden="true">◫</span><span class="qs-badge" data-trip-count hidden>0</span></a><a class="header-map" href="/map/">เปิดแผนที่ ↗</a></div>'),html,count=1)
     footer='<footer class="site-footer"><div class="footer-top"><a href="/" class="footer-name">ตะกั่วป่า <em>101</em></a><p>เมืองหนึ่งเมือง<br>มีเรื่องให้ค่อย ๆ รู้จัก</p><a class="round-link" href="#main" aria-label="กลับขึ้นด้านบน">↑</a></div><div class="footer-bottom"><a href="https://siwaracafe.com/">จัดทำโดยบ้านศิวรา ตะกั่วป่า</a><span>คู่มือเมืองเก่า · จังหวัดพังงา</span><a href="https://www.takuapacity.go.th/pdf/travel-preview.pdf">แผ่นพับต้นทาง ↗</a></div></footer>'
     html=re.sub(r'<footer>.*?</footer>',lambda m:footer,html,count=1)
     if path == '/map/':

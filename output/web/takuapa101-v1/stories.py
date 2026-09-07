@@ -9,6 +9,33 @@ import json
 import glob
 import os
 
+# ---- Photo registry guard ----
+# Nothing renders a photograph unless the registry says that photo depicts this
+# subject. A caption always comes from the registry, never from the page that is
+# placing it, so a picture cannot be relabelled to fit a heading.
+_PHOTO_REG = None
+
+
+def photo_for(subject, file=None, era=None):
+    """Return a renderable photo dict for this subject, or None."""
+    global _PHOTO_REG
+    import json as _j, os as _o
+    if _PHOTO_REG is None:
+        fp = _o.path.join(_o.path.dirname(_o.path.abspath(__file__)), 'data', 'photo-registry.json')
+        try:
+            reg = _j.load(open(fp, encoding='utf-8'))
+        except Exception:
+            reg = {'photos': []}
+        _PHOTO_REG = {p['file']: p for p in reg.get('photos', [])}
+    if file:
+        p = _PHOTO_REG.get(file)
+        return p if p and subject in p.get('allowed_on', []) else None
+    for p in _PHOTO_REG.values():
+        if subject in p.get('allowed_on', []) and (era is None or p.get('era') == era):
+            return p
+    return None
+
+
 ROOT = Path(__file__).parent
 AUDIT_DIR = ROOT / "research" / "2026-09-07-history"
 AUDIT_DIR.mkdir(parents=True, exist_ok=True)
@@ -93,6 +120,26 @@ def _source_list(ids):
 def _place_links(ids, ctx):
     return '<div class="story-place-links">' + ''.join(f'<a href="/places/{i}/">{escape(ctx["byid"][i]["name_th"])}</a>' for i in ids if i in ctx['byid']) + '</div>'
 
+
+def illustration_for(story, ctx=None, skip=()):
+    """The commissioned drawing of a place this story is actually about.
+
+    Illustrations are drawn per place, so they are always on topic. They are the
+    right fallback when no photograph in the registry depicts the subject.
+    """
+    import os as _o
+    root = _o.path.dirname(_o.path.abspath(__file__))
+    for pid in (story.get('places') or []):
+        if pid in skip:
+            continue
+        rel = f'/assets/{pid}.webp'
+        if _o.path.exists(_o.path.join(root, 'site', rel.lstrip('/'))):
+            name = ''
+            if ctx and pid in (ctx.get('byid') or {}):
+                name = ctx['byid'][pid]['name_th']
+            return {'file': rel, 'caption_th': name, 'pid': pid}
+    return None
+
 def article(story, ctx):
     is_new = 'lede' in story
     if not is_new:
@@ -102,10 +149,21 @@ def article(story, ctx):
     meta = f'<p class="story-meta">ปรับปรุงเมื่อ {escape(story.get("updated", ""))} · เวลาอ่าน {story.get("reading_minutes", 0)} นาที</p>'
     header = f'<header class="story-hero-v2"><div class="breadcrumbs"><a href="/">หน้าแรก</a><span>/</span><a href="/stories/">เรื่องเล่าตะกั่วป่า</a><span>/</span><span>{escape(story.get("group", ""))}</span></div><span class="eyebrow">เรื่องเล่าตะกั่วป่า · {escape(story.get("group", ""))}</span><h1>{escape(story.get("title", ""))}</h1><p class="lead">{escape(story.get("dek", ""))}</p>{meta}</header>'
     
+    used_images = set()
     hero_html = ''
-    hp = story.get("hero_photo")
+    hp = photo_for(story.get("id"), (story.get("hero_photo") or {}).get("file"))
+    if hp:
+        used_images.add(hp["file"])
     if hp:
         hero_html = f'<figure class="hero-photo-v2"><img src="{escape(hp["file"])}" alt="{escape(hp.get("caption_th",""))}" loading="eager"><figcaption><span>{escape(hp.get("caption_th",""))}</span><span class="credit">{escape(hp.get("credit",""))}</span></figcaption></figure>'
+    else:
+        ill = illustration_for(story, ctx)
+        if ill:
+            used_images.add(ill["file"])
+            hero_html = (f'<figure class="hero-photo-v2 is-illustration"><img src="{escape(ill["file"])}" '
+                         f'alt="{escape(ill["caption_th"])}" loading="eager"><figcaption>'
+                         f'<span>{escape(ill["caption_th"])}</span>'
+                         f'<span class="credit">ภาพวาดประกอบ · ยังไม่มีภาพถ่ายที่ได้รับอนุญาตของเรื่องนี้</span></figcaption></figure>')
     
     lede_html = '<div class="story-lede-v2">' + ''.join(f'<p>{escape(p)}</p>' for p in story.get("lede", [])) + '</div>'
     
@@ -120,7 +178,18 @@ def article(story, ctx):
         
         sec_content = f'<h2 id="{h_id}">{escape(h2)}</h2>'
         
-        sp = sec.get("photo")
+        sp = photo_for(story.get("id"), (sec.get("photo") or {}).get("file"))
+        if sp and sp["file"] in used_images:
+            sp = None
+        if sp is None:
+            _alt = illustration_for(story, ctx, skip=tuple(
+                f.rsplit('/', 1)[-1].rsplit('.', 1)[0] for f in used_images))
+            sp = None
+            if _alt and _alt["file"] not in used_images:
+                sp = {'file': _alt['file'], 'caption_th': _alt['caption_th'],
+                      'credit': 'ภาพวาดประกอบ'}
+        if sp:
+            used_images.add(sp["file"])
         if sp:
             sec_content += f'<figure class="section-photo-v2"><img src="{escape(sp["file"])}" alt="{escape(sp.get("caption_th",""))}" loading="lazy"><figcaption><span>{escape(sp.get("caption_th",""))}</span><span class="credit">{escape(sp.get("credit",""))}</span></figcaption></figure>'
         
@@ -187,8 +256,9 @@ def index(ctx):
         route = s.get('route', f'/stories/{s["id"]}/')
         mins = f'<span class="story-mins">{s["reading_minutes"]} นาที</span>' if is_new else ''
         photo = ''
-        if is_new and s.get("hero_photo"):
-            photo = f'<img src="{escape(s["hero_photo"]["file"])}" alt="" loading="lazy">'
+        _hp = photo_for(s.get("id"), (s.get("hero_photo") or {}).get("file")) if is_new else None
+        if _hp:
+            photo = f'<img src="{escape(_hp["file"])}" alt="" loading="lazy">'
         else:
             for pid in s.get("places", []):
                 if os.path.exists(f"site/assets/{pid}.webp"):

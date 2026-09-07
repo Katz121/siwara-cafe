@@ -1,0 +1,321 @@
+[
+  {
+    "name_th": "ขนมจีนป้าม่อม",
+    "name_en": null,
+    "category": "restaurant",
+    "one_liner_th": "ร้านขนมจีนรสเด็ดคู่เมืองตะกั่วป่า โดดเด่นด้วยน้ำแกงหลากหลายและผักเหนาะจัดเต็มกว่า 20 ชนิด",
+    "signature_th": [
+      "ขนมจีนน้ำยากะทิ",
+      "แกงไตปลา",
+      "ผักเหนาะ",
+      "ไก่ทอด"
+    ],
+    "address_th": "โซนตลาดลานโล่ง เยื้องสถานีตำรวจภูธรตะกั่วป่า",
+    "subdistrict": "ตะกั่วป่า",
+    "geo": {
+      "lat": null,
+      "lng": null,
+      "source_url": null
+    },
+    "hours_th": null,
+    "price_range_th": null,
+    "phone": null,
+    "facebook": null,
+    "google_maps_url": null,
+    "near_old_town": true,
+    "status": "open",
+    "unknowns": [
+      "geo",
+      "hours_th",
+      "price_range_th",
+      "phone",
+      "facebook",
+      "google_maps_url"
+    ],
+    "sources": [
+      {
+        "name": "Wongnai",
+        "url": "https://www.wongnai.com/restaurants/kanomjeen-pamom",
+        "accessed": "2026-09-07"
+      }
+    ]
+  },
+  {
+    "name_th": "ทับทิม ติ่มซำ",
+    "name_en": "Tubtim Dimsum",
+    "category": "restaurant",
+    "one_liner_th": "ร้านอาหารเช้าและติ่มซำบรรยากาศดี ท่ามกลางสวนดอกไม้และต้นไม้ร่มรื่น",
+    "signature_th": [
+      "ติ่มซำ",
+      "บะกุ๊ดเต๋",
+      "โจ๊ก",
+      "ชาชัก"
+    ],
+    "address_th": null,
+    "subdistrict": null,
+    "geo": {
+      "lat": null,
+      "lng": null,
+      "source_url": null
+    },
+    "hours_th": "ช่วงเช้า",
+    "price_range_th": null,
+    "phone": null,
+    "facebook": null,
+    "google_maps_url": null,
+    "near_old_town": true,
+    "status": "open",
+    "unknowns": [
+      "address_th",
+      "subdistrict",
+      "geo",
+      "price_range_th",
+      "phone",
+      "facebook",
+      "google_maps_url"
+    ],
+    "sources": [
+      {
+        "name": "Wongnai",
+        "url": "https://www.wongnai.com",
+        "accessed": "2026-09-07"
+      }
+    ]
+  },
+  {
+    "name_th": "ไก่โต้ง อาหารเช้า",
+    "name_en": "Kai Tong Dimsum",
+    "category": "restaurant",
+    "one_liner_th": "ร้านติ่มซำนึ่งสดและอาหารเช้ายอดนิยมของคนท้องถิ่นและนักท่องเที่ยว",
+    "signature_th": [
+      "ติ่มซำนึ่งสด",
+      "หมี่สั่ว",
+      "บะกุ๊ดเต๋",
+      "ไข่กระทะ"
+    ],
+    "address_th": "ติดถนนเพชรเกษม ตรงข้ามเยื้องโรงพยาบาลตะกั่วป่า",
+    "subdistrict": "บางนายสี",
+    "geo": {
+      "lat": null,
+      "lng": null,
+      "source_url": null
+    },
+    "hours_th": "07:00 - 11:00",
+    "price_range_th": null,
+    "phone": "089-832-4234",
+    "facebook": null,
+    "google_maps_url": null,
+    "near_old_town": true,
+    "status": "open",
+    "unknowns": [
+      "geo",
+      "price_range_th",
+      "facebook",
+      "google_maps_url"
+    ],
+    "sources": [
+      {
+        "name": "Ryoiireview",
+        "url": "https://www.ryoiireview.com",
+        "accessed": "2026-09-07"
+      }
+    ]
+  },
+  {
+    "name_th": "ปั้นทองติ่มซำ",
+    "name_en": "Punthong Dimsum",
+    "category": "restaurant",
+    "one_liner_th": "ร้านติ่มซำนึ่งสดกว่า 60 เมนู เลือกจากตู้ให้พนักงานนึ่งร้อนๆ บริการรวดเร็ว",
+    "signature_th": [
+      "ขนมจีบหมู",
+      "ฮะเก๋า",
+      "ซี่โครงหมูเต้าซี่",
+      "หอยจ๊อปู"
+    ],
+    "address_th": "ถนนเพชรเกษม เข้าซอยข้างธนาคารกรุงไทยประมาณ 50 เมตร",
+    "subdistrict": "คึกคัก",
+    "geo": {
+      "lat": null,
+      "lng": null,
+      "source_url": null
+    },
+    "hours_th": "06:30 - 11:30",
+    "price_range_th": null,
+    "phone": "084-188-8876",
+    "facebook": null,
+    "google_maps_url": null,
+    "near_old_town": false,
+    "status": "open",
+    "unknowns": [
+      "geo",
+      "price_range_th",
+      "facebook",
+      "google_maps_url"
+    ],
+    "sources": [
+      {
+        "name": "Wongnai",
+        "url": "https://www.wongnai.com",
+        "accessed": "2026-09-07"
+      }
+    ]
+  },
+  {
+    "name_th": "หัวท่า บิสโทร",
+    "name_en": "Hua Ta Bistro",
+    "category": "restaurant",
+    "one_liner_th": "ร้านอาหารฟิวชั่นในบ้านเก่า ตกแต่งสไตล์วินเทจย้อนยุคเมืองตะกั่วป่า",
+    "signature_th": [
+      "ข้าวผัดหัวท่า",
+      "ซุปเปอร์ขาไก่น้ำดำ",
+      "ยำทะเลทอด",
+      "ฮันนี่โทสต์"
+    ],
+    "address_th": "ถนนเพชรเกษม แถวหัวท่าสะพานเสนา ย่านตลาดเก่าตะกั่วป่า",
+    "subdistrict": "ตะกั่วป่า",
+    "geo": {
+      "lat": null,
+      "lng": null,
+      "source_url": null
+    },
+    "hours_th": null,
+    "price_range_th": null,
+    "phone": "087-596-6995",
+    "facebook": null,
+    "google_maps_url": null,
+    "near_old_town": true,
+    "status": "open",
+    "unknowns": [
+      "geo",
+      "hours_th",
+      "price_range_th",
+      "facebook",
+      "google_maps_url"
+    ],
+    "sources": [
+      {
+        "name": "Pantip",
+        "url": "https://pantip.com",
+        "accessed": "2026-09-07"
+      }
+    ]
+  },
+  {
+    "name_th": "ไอซ์แต ชาชัก & ชาระบำ",
+    "name_en": "Ice Tae Cha Chak",
+    "category": "drink_shop",
+    "one_liner_th": "ร้านอาหารฮาลาลและเครื่องดื่มยามเย็น โดดเด่นด้วยลีลาชาชักและโรตีภูเขาไฟ",
+    "signature_th": [
+      "โรตีภูเขาไฟ",
+      "ชาชัก",
+      "อาหารตามสั่งฮาลาล"
+    ],
+    "address_th": "ถนนราษฎร์บำรุง เยื้องเทศบาลเมืองตะกั่วป่า",
+    "subdistrict": "ตะกั่วป่า",
+    "geo": {
+      "lat": null,
+      "lng": null,
+      "source_url": null
+    },
+    "hours_th": "ช่วงเย็นถึงค่ำ",
+    "price_range_th": null,
+    "phone": null,
+    "facebook": null,
+    "google_maps_url": null,
+    "near_old_town": true,
+    "status": "open",
+    "unknowns": [
+      "geo",
+      "price_range_th",
+      "phone",
+      "facebook",
+      "google_maps_url"
+    ],
+    "sources": [
+      {
+        "name": "Wongnai",
+        "url": "https://www.wongnai.com",
+        "accessed": "2026-09-07"
+      }
+    ]
+  },
+  {
+    "name_th": "เลิศโอชา",
+    "name_en": "Lert Ocha",
+    "category": "restaurant",
+    "one_liner_th": "ร้านอาหารเช้าสไตล์โกปี้เตี๊ยมเก่าแก่ของตะกั่วป่า สัมผัสวิถีชีวิตดั้งเดิม",
+    "signature_th": [
+      "เสี่ยวโบ๊ย (ขนมจีบ)",
+      "ซาลาเปา",
+      "สังขยา",
+      "โจ๊ก"
+    ],
+    "address_th": "ใกล้ตลาดสด บขส. ตะกั่วป่า",
+    "subdistrict": "ตะกั่วป่า",
+    "geo": {
+      "lat": null,
+      "lng": null,
+      "source_url": null
+    },
+    "hours_th": "06:00 - 12:00",
+    "price_range_th": null,
+    "phone": null,
+    "facebook": null,
+    "google_maps_url": null,
+    "near_old_town": true,
+    "status": "open",
+    "unknowns": [
+      "geo",
+      "price_range_th",
+      "phone",
+      "facebook",
+      "google_maps_url"
+    ],
+    "sources": [
+      {
+        "name": "Wongnai",
+        "url": "https://www.wongnai.com",
+        "accessed": "2026-09-07"
+      }
+    ]
+  },
+  {
+    "name_th": "ครัวหลวงเทน",
+    "name_en": "Krua Luang Ten",
+    "category": "restaurant",
+    "one_liner_th": "ร้านอาหารใต้รสจัดจ้านระดับมิชลินไกด์ นิยามตัวเองว่าหรอยที่สุดในเมืองมนุษย์",
+    "signature_th": [
+      "ปลาทรายทอดขมิ้น",
+      "แกงส้มปลากะพง",
+      "คั่วกลิ้งเนื้อ",
+      "โวยวายผัดย่านัด"
+    ],
+    "address_th": "160 หมู่ 2 ถนนเพชรเกษม ฝั่งตรงข้ามทางเข้าแหลมปะการัง",
+    "subdistrict": "คึกคัก",
+    "geo": {
+      "lat": null,
+      "lng": null,
+      "source_url": null
+    },
+    "hours_th": "11:00 - 13:30, 17:00 - 21:00",
+    "price_range_th": null,
+    "phone": "090-716-4182",
+    "facebook": null,
+    "google_maps_url": null,
+    "near_old_town": false,
+    "status": "open",
+    "unknowns": [
+      "geo",
+      "price_range_th",
+      "facebook",
+      "google_maps_url"
+    ],
+    "sources": [
+      {
+        "name": "Wongnai",
+        "url": "https://www.wongnai.com",
+        "accessed": "2026-09-07"
+      }
+    ]
+  }
+]

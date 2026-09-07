@@ -125,3 +125,31 @@
 
   window.TakuaSearch = { open: open, close: close };
 })();
+
+/* Collapsed header menu on narrow screens. */
+(function () {
+  'use strict';
+  var mq = window.matchMedia('(max-width: 900px)');
+  var nav = document.getElementById('main-nav');
+  var btn = document.querySelector('[data-nav-toggle]');
+  if (!nav || !btn) return;
+  function sync() {
+    if (mq.matches) {
+      nav.hidden = btn.getAttribute('aria-expanded') !== 'true';
+    } else {
+      nav.hidden = false;
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  }
+  btn.addEventListener('click', function () {
+    btn.setAttribute('aria-expanded', btn.getAttribute('aria-expanded') === 'true' ? 'false' : 'true');
+    sync();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && mq.matches && btn.getAttribute('aria-expanded') === 'true') {
+      btn.setAttribute('aria-expanded', 'false'); sync(); btn.focus();
+    }
+  });
+  mq.addEventListener('change', sync);
+  sync();
+})();

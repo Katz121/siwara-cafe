@@ -1,0 +1,439 @@
+[
+  {
+    "name_th": "ครัวหลวงเทน",
+    "name_en": "Khrua Luang Ten",
+    "category": "restaurant",
+    "one_liner_th": "ร้านอาหารใต้ดั้งเดิมรสชาติจัดจ้านถึงเครื่อง รางวัลมิชลิน บิบ กูร์มองด์",
+    "signature_th": [
+      "แกงส้มปลากะพงยอดมะพร้าว",
+      "ปลาซิวทอดขมิ้น",
+      "คั่วกลิ้งเนื้อ",
+      "แกงน้ำเคย"
+    ],
+    "address_th": "ถนนเพชรเกษม ตรงข้ามทางเข้าแหลมปะการัง",
+    "subdistrict": "คึกคัก",
+    "geo": {
+      "lat": null,
+      "lng": null,
+      "source_url": null
+    },
+    "hours_th": "11:00·13:30 และ 17:00·21:30 (ปิดวันที่ 10, 20, 30 ของเดือน)",
+    "price_range_th": null,
+    "phone": "090·716·4182",
+    "facebook": null,
+    "google_maps_url": null,
+    "near_old_town": false,
+    "status": "open",
+    "unknowns": [
+      "ราคา",
+      "พิกัดชัดเจน"
+    ],
+    "sources": [
+      {
+        "name": "Wongnai",
+        "url": "https://www.wongnai.com/search?q=%E0%B8%84%E0%B8%A3%E0%B8%B1%E0%B8%A7%E0%B8%AB%E0%B8%A5%E0%B8%A7%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%99",
+        "accessed": "2026·09·07"
+      }
+    ]
+  },
+  {
+    "name_th": "ครัวน้อง",
+    "name_en": "Khrua Nong",
+    "category": "restaurant",
+    "one_liner_th": "ร้านอาหารใต้ไซส์มินิแต่รสชาติระดับมิชลินไกด์ แนะนำใบเหลียงผัดไข่ใส่กุ้งเสียบ",
+    "signature_th": [
+      "ใบเหลียงผัดไข่ใส่กุ้งเสียบ",
+      "สะตอผัดกะปิกุ้ง",
+      "ไข่เจียวปู",
+      "เต้าหู้ทรงเครื่องปู"
+    ],
+    "address_th": "ฝั่งซ้ายมือก่อนถึงโรงพยาบาลตะกั่วป่า (มาจากเขาหลัก)",
+    "subdistrict": "บางนายสี",
+    "geo": {
+      "lat": null,
+      "lng": null,
+      "source_url": null
+    },
+    "hours_th": "จันทร์·อังคาร, พฤหัส·อาทิตย์ 11:00·21:00 (ปิดวันพุธ)",
+    "price_range_th": null,
+    "phone": null,
+    "facebook": "https://www.facebook.com/p/ร้านครัวน้อง·ตะกั่วป่า·จพังงา·100063625442273/",
+    "google_maps_url": null,
+    "near_old_town": false,
+    "status": "open",
+    "unknowns": [
+      "ราคา",
+      "พิกัดชัดเจน",
+      "เบอร์โทร"
+    ],
+    "sources": [
+      {
+        "name": "Facebook",
+        "url": "https://www.facebook.com/p/%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B8%A3%E0%B8%B1%E0%B8%A7%E0%B8%99%E0%B9%89%E0%B8%AD%E0%B8%87·%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2·%E0%B8%88%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2·100063625442273/",
+        "accessed": "2026·09·07"
+      }
+    ]
+  },
+  {
+    "name_th": "ยิ้ม ยิ้ม ชวนชิม",
+    "name_en": "Yim Yim Restaurant",
+    "category": "restaurant",
+    "one_liner_th": "ร้านอาหารพื้นบ้านระดับตำนานเปิดมากว่า 30 ปี ผสมผสานอาหารจีนและใต้ได้อย่างลงตัว",
+    "signature_th": [
+      "ลูกชิ้นปลาลวกจิ้ม",
+      "แฮกึ๊น",
+      "แกงส้มปลากะพงยอดมะพร้าว"
+    ],
+    "address_th": "11/27 หมู่ 3 ริมถนนเพชรเกษม",
+    "subdistrict": "บางม่วง",
+    "geo": {
+      "lat": null,
+      "lng": null,
+      "source_url": null
+    },
+    "hours_th": "11:00·21:00 (หยุดวันจันทร์)",
+    "price_range_th": null,
+    "phone": "076·593·058",
+    "facebook": null,
+    "google_maps_url": null,
+    "near_old_town": false,
+    "status": "open",
+    "unknowns": [
+      "ราคา",
+      "พิกัดชัดเจน",
+      "Facebook"
+    ],
+    "sources": [
+      {
+        "name": "Wongnai",
+        "url": "https://www.wongnai.com/search?q=%E0%B8%A2%E0%B8%B4%E0%B9%89%E0%B8%A1%E0%B8%A2%E0%B8%B4%E0%B9%89%E0%B8%A1%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2",
+        "accessed": "2026·09·07"
+      }
+    ]
+  },
+  {
+    "name_th": "ทิมเบอร์",
+    "name_en": "Timbre",
+    "category": "restaurant",
+    "one_liner_th": "ร้านอาหารกึ่งบาร์บรรยากาศดี มีดนตรีสด เหมาะสำหรับนั่งชิลล์ยามค่ำคืน",
+    "signature_th": [
+      "อาหารและเครื่องดื่มหลากชนิด"
+    ],
+    "address_th": "ซอยวัฒนา หลังศาล ย่านยาว",
+    "subdistrict": "ย่านยาว",
+    "geo": {
+      "lat": null,
+      "lng": null,
+      "source_url": null
+    },
+    "hours_th": "11:00·14:00 และ 17:00·00:00",
+    "price_range_th": null,
+    "phone": "085·609·6627",
+    "facebook": null,
+    "google_maps_url": null,
+    "near_old_town": false,
+    "status": "open",
+    "unknowns": [
+      "ราคา",
+      "พิกัดชัดเจน",
+      "เมนูแนะนำที่เจาะจง"
+    ],
+    "sources": [
+      {
+        "name": "Wongnai",
+        "url": "https://www.wongnai.com/search?q=Timbre%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2",
+        "accessed": "2026·09·07"
+      }
+    ]
+  },
+  {
+    "name_th": "ครัวโก้ยศ",
+    "name_en": "Khrua Ko Yot",
+    "category": "restaurant",
+    "one_liner_th": "ร้านอาหารใต้และตามสั่งยอดฮิต รสชาติจัดจ้าน ราคาเป็นมิตร",
+    "signature_th": [
+      "หมูกรอบคั่วพริกเกลือ",
+      "แกงส้มปลากะพง",
+      "กุ้งผัดกะปิสะตอ"
+    ],
+    "address_th": "ซอยบัวแก้ว 1",
+    "subdistrict": "คึกคัก",
+    "geo": {
+      "lat": null,
+      "lng": null,
+      "source_url": null
+    },
+    "hours_th": "12:00 เป็นต้นไป",
+    "price_range_th": null,
+    "phone": "086·593·1258",
+    "facebook": null,
+    "google_maps_url": "https://maps.app.goo.gl/Zcg7PWGeys4nkuFn9",
+    "near_old_town": false,
+    "status": "open",
+    "unknowns": [
+      "ราคา",
+      "เวลาปิด"
+    ],
+    "sources": [
+      {
+        "name": "Wongnai",
+        "url": "https://www.wongnai.com/search?q=%E0%B8%84%E0%B8%A3%E0%B8%B1%E0%B8%A7%E0%B9%82%E0%B8%81%E0%B9%89%E0%B8%A2%E0%B8%A8",
+        "accessed": "2026·09·07"
+      }
+    ]
+  },
+  {
+    "name_th": "ครัวฅนคอน",
+    "name_en": "Khonkon Kitchen",
+    "category": "restaurant",
+    "one_liner_th": "ร้านอาหารพื้นบ้านปักษ์ใต้สไตล์ครอบครัว นั่งซุ้มไม้ไผ่บรรยากาศสบาย",
+    "signature_th": [
+      "แกงส้มปลามง"
+    ],
+    "address_th": "เข้าซอยแหลมปะการังประมาณ 200 เมตร",
+    "subdistrict": "คึกคัก",
+    "geo": {
+      "lat": null,
+      "lng": null,
+      "source_url": null
+    },
+    "hours_th": null,
+    "price_range_th": null,
+    "phone": "083·430·4542",
+    "facebook": null,
+    "google_maps_url": null,
+    "near_old_town": false,
+    "status": "open",
+    "unknowns": [
+      "ราคา",
+      "พิกัดชัดเจน",
+      "เวลาเปิดปิด"
+    ],
+    "sources": [
+      {
+        "name": "Wongnai",
+        "url": "https://www.wongnai.com/search?q=%E0%B8%84%E0%B8%A3%E0%B8%B1%E0%B8%A7%E0%B8%85%E0%B8%99%E0%B8%84%E0%B8%AD%E0%B8%99%20%E0%B9%80%E0%B8%82%E0%B8%B2%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81",
+        "accessed": "2026·09·07"
+      }
+    ]
+  },
+  {
+    "name_th": "คาร์คินอส",
+    "name_en": "KARKINOS Khaolak",
+    "category": "restaurant",
+    "one_liner_th": "บีชคลับและร้านอาหารอิตาเลียนริมหาดปะการัง บรรยากาศชิลล์ชมพระอาทิตย์ตก",
+    "signature_th": [
+      "พิซซ่าสไตล์นาโปลีตานา",
+      "พาสต้า",
+      "สเต็ก",
+      "ค็อกเทล"
+    ],
+    "address_th": "45 (1) หมู่ 2 (ริมหาดปะการัง ในโรงแรม Apsara Beachfront Resort and Villa)",
+    "subdistrict": "คึกคัก",
+    "geo": {
+      "lat": null,
+      "lng": null,
+      "source_url": null
+    },
+    "hours_th": null,
+    "price_range_th": null,
+    "phone": "076·584·447",
+    "facebook": null,
+    "google_maps_url": null,
+    "near_old_town": false,
+    "status": "open",
+    "unknowns": [
+      "ราคา",
+      "พิกัดชัดเจน",
+      "เวลาเปิดปิด"
+    ],
+    "sources": [
+      {
+        "name": "Wongnai",
+        "url": "https://www.wongnai.com/restaurants/karkinos·khaolak",
+        "accessed": "2026·09·07"
+      }
+    ]
+  },
+  {
+    "name_th": "ดิ เอทธ์ รูม",
+    "name_en": "The Eighth Room by mata cafe",
+    "category": "drink_shop",
+    "one_liner_th": "คาเฟ่สไตล์โคซี่ริมถนนเขาหลัก บรรยากาศอบอุ่น มี All Day Breakfast และขนมโฮมเมด",
+    "signature_th": [
+      "ชาเขียวมัทฉะ",
+      "วาฟเฟิล",
+      "เมนูจากอะโวคาโด"
+    ],
+    "address_th": "ริมถนนหลัก ตรงข้ามธนาคารไทยพาณิชย์ สาขาเขาหลัก",
+    "subdistrict": "คึกคัก",
+    "geo": {
+      "lat": null,
+      "lng": null,
+      "source_url": null
+    },
+    "hours_th": "09:00·21:00",
+    "price_range_th": null,
+    "phone": "080·875·8411",
+    "facebook": null,
+    "google_maps_url": "https://goo.gl/maps/k25ARgpiGtPoxEh49",
+    "near_old_town": false,
+    "status": "open",
+    "unknowns": [
+      "ราคา",
+      "พิกัดชัดเจน"
+    ],
+    "sources": [
+      {
+        "name": "Wongnai",
+        "url": "https://www.wongnai.com/restaurants/274465vH·the·eighth·room·by·mata·cafe",
+        "accessed": "2026·09·07"
+      }
+    ]
+  },
+  {
+    "name_th": "ลา มะลิลา คาเฟ่",
+    "name_en": "La Malila Cafe",
+    "category": "drink_shop",
+    "one_liner_th": "คาเฟ่โทนขาว·เขียวสไตล์มินิมอล มีโรงคั่วกาแฟเอง",
+    "signature_th": [
+      "Dirty Coffee",
+      "Rose Matcha Latte",
+      "ทาร์ตไข่ใบเหรียงเบคอน"
+    ],
+    "address_th": "ซอยทางเข้าหาดบางเนียง (ในเครือ La Flora Khao Lak)",
+    "subdistrict": "คึกคัก",
+    "geo": {
+      "lat": null,
+      "lng": null,
+      "source_url": null
+    },
+    "hours_th": "08:00·20:00",
+    "price_range_th": null,
+    "phone": "076·428·000 ต่อ 1130",
+    "facebook": "https://www.facebook.com/lamalilacafekhaolak",
+    "google_maps_url": "https://maps.app.goo.gl/1wRxob7AmVyTSo3s7",
+    "near_old_town": false,
+    "status": "open",
+    "unknowns": [
+      "ราคา",
+      "พิกัดชัดเจน"
+    ],
+    "sources": [
+      {
+        "name": "Facebook",
+        "url": "https://www.facebook.com/lamalilacafekhaolak",
+        "accessed": "2026·09·07"
+      }
+    ]
+  },
+  {
+    "name_th": "โอเชี่ยน แมน คาเฟ่",
+    "name_en": "Ocean Man Cafe",
+    "category": "drink_shop",
+    "one_liner_th": "คาเฟ่อิฐแดงสไตล์มินิมอล มีเมนูอาหารฟิวชั่นและขนมอร่อย",
+    "signature_th": [
+      "Ocean Man Buns",
+      "Banoffee Pie",
+      "Carrot Cake",
+      "Dirty Latte"
+    ],
+    "address_th": "ติดกับโรงแรม Khaolak Paradise",
+    "subdistrict": "คึกคัก",
+    "geo": {
+      "lat": null,
+      "lng": null,
+      "source_url": null
+    },
+    "hours_th": "09:00·18:00",
+    "price_range_th": null,
+    "phone": null,
+    "facebook": "https://www.facebook.com/oceanmancafe",
+    "google_maps_url": "https://maps.app.goo.gl/DQR84riCgWhhqJXX6",
+    "near_old_town": false,
+    "status": "open",
+    "unknowns": [
+      "ราคา",
+      "พิกัดชัดเจน",
+      "เบอร์โทร"
+    ],
+    "sources": [
+      {
+        "name": "Facebook",
+        "url": "https://www.facebook.com/oceanmancafe",
+        "accessed": "2026·09·07"
+      }
+    ]
+  },
+  {
+    "name_th": "สเวลล์ คาเฟ่",
+    "name_en": "Swell Cafe",
+    "category": "drink_shop",
+    "one_liner_th": "คาเฟ่สไตล์โฮมมี่รับลมทะเล เป็นมิตรกับเด็กๆ มีของเล่นให้เล่น",
+    "signature_th": [
+      "มัทฉะลาเต้",
+      "ไอศกรีมเจลาโต้",
+      "ชีสเค้ก"
+    ],
+    "address_th": "บริเวณหาดคึกคัก",
+    "subdistrict": "คึกคัก",
+    "geo": {
+      "lat": null,
+      "lng": null,
+      "source_url": null
+    },
+    "hours_th": null,
+    "price_range_th": null,
+    "phone": null,
+    "facebook": null,
+    "google_maps_url": "https://maps.app.goo.gl/FeNLozvvjysKN35o9",
+    "near_old_town": false,
+    "status": "open",
+    "unknowns": [
+      "ราคา",
+      "เวลาเปิดปิด",
+      "เบอร์โทร"
+    ],
+    "sources": [
+      {
+        "name": "Wongnai",
+        "url": "https://www.wongnai.com/search?q=Swell%20Cafe%20%E0%B9%80%E0%B8%82%E0%B8%B2%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81",
+        "accessed": "2026·09·07"
+      }
+    ]
+  },
+  {
+    "name_th": "คอตตอน คาเฟ่ แอนด์ ไลบรารี่",
+    "name_en": "Cotton Cafe and Library",
+    "category": "drink_shop",
+    "one_liner_th": "คาเฟ่สไตล์ห้องสมุดในโรงแรมหรู มองเห็นวิวสระว่ายน้ำ",
+    "signature_th": [
+      "Cotton Assorbito"
+    ],
+    "address_th": "ในโรงแรม La Vela Khao Lak",
+    "subdistrict": "คึกคัก",
+    "geo": {
+      "lat": null,
+      "lng": null,
+      "source_url": null
+    },
+    "hours_th": "09:00·20:00",
+    "price_range_th": null,
+    "phone": null,
+    "facebook": null,
+    "google_maps_url": null,
+    "near_old_town": false,
+    "status": "open",
+    "unknowns": [
+      "ราคา",
+      "เบอร์โทร"
+    ],
+    "sources": [
+      {
+        "name": "Wongnai",
+        "url": "https://www.wongnai.com/restaurants/cotton·cafe·and·library·la·vela·khaolak",
+        "accessed": "2026·09·07"
+      }
+    ]
+  }
+]
