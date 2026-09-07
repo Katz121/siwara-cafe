@@ -452,3 +452,9 @@
   .leaflet-block{grid-template-columns:1fr;gap:18px}
   .leaflet-art img{max-width:260px}
 }
+
+/* The picture link was shrinking to its image's intrinsic width, so each card
+   showed a differently sized photo pinned to the left. Give it a definite width. */
+.rest-stop.pick{display:flex;flex-direction:column;align-items:stretch}
+.rest-stop .pick-art{display:block;width:100%;flex:0 0 auto;align-self:stretch}
+.rest-stop .pick-art img{display:block;width:100%;height:180px;object-fit:cover;object-position:center}

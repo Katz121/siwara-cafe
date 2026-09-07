@@ -2,7 +2,9 @@
    read directly. Facebook pages need a page token, so they stay disabled until
    one is configured (see FB_PAGES in the README). */
 
-export const GOOGLE_NEWS_QUERIES = [
+/* Google News answers 503 to Cloudflare Workers, so searches go through Bing
+   News RSS, which serves them. The outlet feeds below catch what Bing misses. */
+export const NEWS_QUERIES = [
   'ตะกั่วป่า',
   'เมืองเก่าตะกั่วป่า',
   '"ตะกั่วป่า" เทศกาล',
@@ -11,6 +13,14 @@ export const GOOGLE_NEWS_QUERIES = [
   'ตะกั่วป่า พังงา ท่องเที่ยว',
   'ตะโกลา พังงา',
   'กั่วป่าโพ้',
+];
+
+/* Whole outlet feeds. Everything is passed through the same rule filter, which
+   requires the town's name, so these add reach without adding noise. */
+export const OUTLET_FEEDS = [
+  { id: 'matichon', name: 'มติชน', url: 'https://www.matichon.co.th/feed' },
+  { id: 'khaosod', name: 'ข่าวสด', url: 'https://www.khaosod.co.th/feed' },
+  { id: 'thairath', name: 'ไทยรัฐ', url: 'https://www.thairath.co.th/rss/news' },
 ];
 
 /* Direct feeds. Each entry: {id, name, url, kind: 'rss' | 'html', authority} */

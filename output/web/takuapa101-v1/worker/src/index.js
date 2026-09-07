@@ -1,8 +1,8 @@
 /* takuapa101-news · Cloudflare Worker
    cron  -> harvest, rule-filter, AI re-check, store in KV
    fetch -> serve the reviewed feed to the site as JSON */
-import { GOOGLE_NEWS_QUERIES, DIRECT_SOURCES, FIRST_PARTY } from './sources.js';
-import { ruleFilter, fingerprint, normalise } from './filter.js';
+import { NEWS_QUERIES, OUTLET_FEEDS, DIRECT_SOURCES, FIRST_PARTY } from './sources.js';
+import { ruleFilter, fingerprint, normalise, titleKey } from './filter.js';
 import { recheck, bucketOf } from './recheck.js';
 
 const UA = 'takuapa101-news/1.0 (+https://siwaracafe.com/takuapa/)';
@@ -39,30 +39,48 @@ async function fetchText(url) {
   return r.text();
 }
 
-async function harvestGoogleNews() {
+function parseRss(xml, meta) {
   const out = [];
-  for (const q of GOOGLE_NEWS_QUERIES) {
-    const url = 'https://news.google.com/rss/search?q=' + encodeURIComponent(q) + '&hl=th&gl=TH&ceid=TH:th';
-    let xml;
+  for (const raw of xml.split(/<item[\s>]/).slice(1)) {
+    const block = raw.split('</item>')[0];
+    const title = tag(block, 'title');
+    const link = tag(block, 'link') || tag(block, 'guid');
+    if (!title || !link) continue;
+    out.push({
+      title,
+      link,
+      date: toISO(tag(block, 'pubDate') || tag(block, 'dc:date')),
+      outlet: tag(block, 'source') || meta.outlet || '',
+      summary: normalise(tag(block, 'description')).slice(0, 400),
+      source: meta.source,
+      query: meta.query,
+    });
+  }
+  return out;
+}
+
+async function harvestSearch() {
+  const out = [];
+  for (const q of NEWS_QUERIES) {
+    const url = 'https://www.bing.com/news/search?q=' + encodeURIComponent(q) + '&format=RSS&setmkt=th-TH';
     try {
-      xml = await fetchText(url);
+      const xml = await fetchText(url);
+      out.push(...parseRss(xml, { source: 'bing-news', query: q }));
     } catch (e) {
       continue;
     }
-    for (const raw of xml.split('<item>').slice(1)) {
-      const block = raw.split('</item>')[0];
-      const title = tag(block, 'title');
-      const link = tag(block, 'link');
-      if (!title || !link) continue;
-      out.push({
-        title,
-        link,
-        date: toISO(tag(block, 'pubDate')),
-        outlet: tag(block, 'source'),
-        summary: normalise(tag(block, 'description')).slice(0, 400),
-        source: 'google-news',
-        query: q,
-      });
+  }
+  return out;
+}
+
+async function harvestOutlets() {
+  const out = [];
+  for (const f of OUTLET_FEEDS) {
+    try {
+      const xml = await fetchText(f.url);
+      out.push(...parseRss(xml, { source: f.id, outlet: f.name }));
+    } catch (e) {
+      continue;
     }
   }
   return out;
@@ -122,19 +140,24 @@ export async function runHarvest(env) {
   const maxItems = Number(env.MAX_ITEMS || 60);
   const maxReviews = Number(env.MAX_REVIEWS_PER_RUN || 20);
 
-  const fromGoogle = await harvestGoogleNews();
-  const fromDirect = await harvestDirect();
-  const raw = fromGoogle.concat(fromDirect);
+  const raw = (await harvestSearch())
+    .concat(await harvestOutlets())
+    .concat(await harvestDirect());
 
   const seen = new Set(await readJSON(env, KEY_SEEN, []));
   const stats = { fetched: raw.length, rule_rejected: 0, already_seen: 0, reviewed: 0, live: 0, held: 0, dropped: 0 };
 
   const candidates = [];
+  const titlesSeen = new Set(
+    (await readJSON(env, KEY_LIVE, [])).map((r) => titleKey(r.title_th || '')));
   for (const item of raw) {
     const fp = await fingerprint(item);
     if (seen.has(fp)) { stats.already_seen++; continue; }
     const verdict = ruleFilter(item);
     if (!verdict.ok) { stats.rule_rejected++; seen.add(fp); continue; }
+    const tkey = titleKey(item.title);
+    if (tkey && titlesSeen.has(tkey)) { stats.duplicate = (stats.duplicate || 0) + 1; seen.add(fp); continue; }
+    if (tkey) titlesSeen.add(tkey);
     candidates.push({ ...item, id: fp, place_id: verdict.place_id, rule_score: verdict.score });
   }
   candidates.sort((a, b) => b.rule_score - a.rule_score);
@@ -197,6 +220,61 @@ export default {
       // Items the reviewer was not confident about. Inspectable, never rendered as news.
       const heldItems = await readJSON(env, KEY_HELD, []);
       return new Response(JSON.stringify({ items: heldItems }), { headers });
+    }
+    if (url.pathname === '/api/debug') {
+      const report = { google: [], direct: [], ai: null };
+      for (const query of NEWS_QUERIES.slice(0, 2)) {
+        const target = 'https://www.bing.com/news/search?q=' + encodeURIComponent(query) + '&format=RSS&setmkt=th-TH';
+        try {
+          const res = await fetch(target, { headers: { 'User-Agent': UA, 'Accept-Language': 'th,en' } });
+          const body = await res.text();
+          report.google.push({ query, status: res.status, length: body.length,
+                               items: body.split('<item>').length - 1, head: body.slice(0, 160) });
+        } catch (e) {
+          report.google.push({ query, error: String(e).slice(0, 160) });
+        }
+      }
+      try {
+        const res = await fetch(DIRECT_SOURCES[0].url, { headers: { 'User-Agent': UA } });
+        const body = await res.text();
+        report.direct.push({ url: DIRECT_SOURCES[0].url, status: res.status, length: body.length });
+      } catch (e) {
+        report.direct.push({ error: String(e).slice(0, 160) });
+      }
+      try {
+        const out = await env.AI.run(env.WORKERS_AI_MODEL || '@cf/meta/llama-3.3-70b-instruct-fp8-fast', {
+          messages: [{ role: 'user', content: 'Reply with only this JSON: {"ok":true}' }],
+          max_tokens: 60,
+        });
+        report.ai = typeof out === 'string' ? out.slice(0, 200) : JSON.stringify(out).slice(0, 200);
+      } catch (e) {
+        report.ai = 'ERR ' + String(e).slice(0, 200);
+      }
+      return new Response(JSON.stringify(report, null, 1), { headers });
+    }
+    if (url.pathname === '/api/probe') {
+      const cands = [
+        ['bing', 'https://www.bing.com/news/search?q=%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2&format=RSS'],
+        ['thairath', 'https://www.thairath.co.th/rss/news'],
+        ['matichon', 'https://www.matichon.co.th/feed'],
+        ['khaosod', 'https://www.khaosod.co.th/feed'],
+        ['mgr', 'https://mgronline.com/rss/detail/local.xml'],
+        ['prd', 'https://thainews.prd.go.th/rss'],
+        ['siamrath', 'https://siamrath.co.th/rss/all'],
+        ['naewna', 'https://www.naewna.com/rss/local'],
+        ['gnews-alt', 'https://news.google.com/rss/search?q=takuapa&hl=en-US&gl=US&ceid=US:en'],
+      ];
+      const rows = [];
+      for (const [name, u] of cands) {
+        try {
+          const res = await fetch(u, { headers: { 'User-Agent': UA, 'Accept': 'application/rss+xml,application/xml,text/xml,*/*' } });
+          const body = await res.text();
+          rows.push({ name, status: res.status, len: body.length, items: body.split('<item').length - 1 });
+        } catch (e) {
+          rows.push({ name, error: String(e).slice(0, 90) });
+        }
+      }
+      return new Response(JSON.stringify(rows, null, 1), { headers });
     }
     if (url.pathname === '/api/status') {
       const run = await readJSON(env, KEY_RUN, { note: 'ยังไม่เคยรัน' });

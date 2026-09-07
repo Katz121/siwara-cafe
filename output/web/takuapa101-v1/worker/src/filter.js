@@ -45,3 +45,14 @@ export async function fingerprint(item) {
   const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(base));
   return [...new Uint8Array(buf)].slice(0, 10).map((b) => b.toString(16).padStart(2, '0')).join('');
 }
+
+
+/* Two outlets carrying the same story should appear once. Compare on a stripped
+   title rather than the link, since each outlet has its own URL. */
+export function titleKey(title) {
+  return normalise(title)
+    .replace(/[\s฀-๿]*(สยามรัฐ|มติชน|ข่าวสด|ไทยรัฐ|แนวหน้า|ผู้จัดการ|NBT|MGR).*/i, '')
+    .replace(/[^0-9a-zA-Z฀-๿]/g, '')
+    .slice(0, 48)
+    .toLowerCase();
+}

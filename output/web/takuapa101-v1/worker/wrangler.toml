@@ -8,9 +8,15 @@ crons = ["0 */6 * * *"]
 
 [[kv_namespaces]]
 binding = "NEWS"
-id = "REPLACE_WITH_KV_ID"
-preview_id = "REPLACE_WITH_KV_PREVIEW_ID"
+id = "eec7fc96311e4e3b8186ce9750eb9d26"
+preview_id = "e97e3b1e2c4646698fa9e4c16355568d"
 
 [vars]
-ALLOWED_ORIGINS = "https://siwaracafe.com,http://127.0.0.1:8091"
+ALLOWED_ORIGINS = "https://takuapa101.com,https://takuapa101.pages.dev,http://127.0.0.1:8091"
 MAX_ITEMS = "60"
+MIN_CONFIDENCE = "75"
+MAX_REVIEWS_PER_RUN = "20"
+
+# Stage two reviewer. Uses Workers AI unless ANTHROPIC_API_KEY is set as a secret.
+[ai]
+binding = "AI"

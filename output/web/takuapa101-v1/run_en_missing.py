@@ -3,6 +3,7 @@
 The most repeated strings are chrome and status labels; translating those first
 unlocks whole pages, so batches run in frequency order.
 """
+import hashlib
 import json
 import os
 import shutil
@@ -61,7 +62,7 @@ PROMPT = """โฟลเดอร์งาน {HERE}
 
 
 def run(i, keys):
-    slug = "miss-%02d" % (i + 1)
+    slug = "miss-" + hashlib.sha1(chr(10).join(keys).encode("utf-8")).hexdigest()[:10]
     out = os.path.join(OUT, slug + ".json")
     if os.path.exists(out) and os.path.getsize(out) > 200:
         return slug, "skip(exists)"
@@ -85,7 +86,7 @@ def run(i, keys):
 
 
 only = set(sys.argv[1:])
-groups = [(i, g) for i, g in enumerate(GROUPS) if not only or ("miss-%02d" % (i + 1)) in only]
+groups = list(enumerate(GROUPS))
 print("ต้องแปล %d ข้อความ · %d ชุด" % (len(todo), len(groups)), flush=True)
 with ThreadPoolExecutor(max_workers=2) as ex:
     for f in as_completed({ex.submit(run, i, g): i for i, g in groups}):

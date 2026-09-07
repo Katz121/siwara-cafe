@@ -21,11 +21,39 @@ verdict:
 
 id สถานที่ที่เลือกได้: wat-boromthat, wat-khuha, wat-pathum, wat-kongkha, wat-nikorn, wat-sena, museum, guan-yu, pun-thao, kue-chai, rong-jae, phra-narai, thung-phra, riverwalk, culture-street, iron-bridge, governor-wall, khun-in, tao-ming, food-center, vegetarian, loy-krathong, chak-phra, new-year-alms, narai-ceremony, ruler-ceremony, relic-procession`;
 
+
+function salvage(text) {
+  const verdict = (text.match(/(publish|hold|drop)/i) || [])[1];
+  if (!verdict) return null;
+  const conf = (text.match(/confidence["'\s:]+(\d{1,3})/i) || [])[1];
+  const place = (text.match(/place_id["'\s:]+["']([a-z0-9-]+)["']/i) || [])[1];
+  const reason = (text.match(/reason_th["'\s:]+["']([^"']{2,120})["']/i) || [])[1];
+  const title = (text.match(/clean_title_th["'\s:]+["']([^"']{2,120})["']/i) || [])[1];
+  const summary = (text.match(/summary_th["'\s:]+["']([^"']{2,300})["']/i) || [])[1];
+  return {
+    verdict: verdict.toLowerCase(),
+    confidence: conf ? Number(conf) : 60,
+    place_id: place || null,
+    reason_th: reason || '',
+    clean_title_th: title || '',
+    summary_th: summary || '',
+  };
+}
+
 function parseVerdict(text) {
   try {
-    const m = text.match(/\{[\s\S]*\}/);
-    if (!m) return null;
-    const v = JSON.parse(m[0]);
+    // Small models wrap JSON in prose or code fences, and sometimes emit the
+    // fields without braces at all. Try the strict read first, then salvage.
+    const cleaned = String(text || '').replace(/```json|```/g, ' ');
+    const m = cleaned.match(/\{[\s\S]*\}/);
+    if (!m) return salvage(cleaned);
+    let v;
+    try {
+      v = JSON.parse(m[0]);
+    } catch (e) {
+      v = salvage(cleaned);
+      if (!v) return null;
+    }
     if (!['publish', 'hold', 'drop'].includes(v.verdict)) return null;
     v.confidence = Math.max(0, Math.min(100, Number(v.confidence) || 0));
     return v;
@@ -58,11 +86,21 @@ async function viaWorkersAI(env, prompt) {
   const out = await env.AI.run(env.WORKERS_AI_MODEL || '@cf/meta/llama-3.3-70b-instruct-fp8-fast', {
     messages: [
       { role: 'system', content: SYSTEM },
-      { role: 'user', content: prompt },
+      { role: 'user', content: prompt + '\n\nReply with JSON only, no other text.' },
     ],
     max_tokens: 700,
+    temperature: 0.1,
   });
-  return out.response || '';
+  // Workers AI answers in two shapes depending on the model: a bare
+  // {response} or an OpenAI style {choices:[{message:{content}}]}.
+  if (typeof out === 'string') return out;
+  if (out && typeof out.response === 'string') return out.response;
+  const choice = out && out.choices && out.choices[0];
+  if (choice && choice.message && typeof choice.message.content === 'string') {
+    return choice.message.content;
+  }
+  if (choice && typeof choice.text === 'string') return choice.text;
+  return JSON.stringify(out);
 }
 
 /* Returns the item annotated with the review, or null when it should be dropped. */
@@ -76,7 +114,10 @@ export async function recheck(env, item) {
     return { ...item, verdict: 'hold', confidence: 0, review_error: String(e).slice(0, 120) };
   }
   const v = parseVerdict(text);
-  if (!v) return { ...item, verdict: 'hold', confidence: 0, review_error: 'อ่านคำตอบไม่ได้' };
+  if (!v) {
+    return { ...item, verdict: 'hold', confidence: 0,
+             review_error: 'อ่านคำตอบไม่ได้', raw_reply: String(text).slice(0, 400) };
+  }
   return {
     ...item,
     verdict: v.verdict,
