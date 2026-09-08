@@ -6,29 +6,6 @@
   "reading_minutes": 5,
   "gallery": [
     {
-      "heading_th": "อาภรณ์ในภาพเขียนชุดนี้",
-      "heading_en": "The garments in this series",
-      "files": [
-        "/assets/photos/kuapapoh-charm-kebaya-green.webp",
-        "/assets/photos/kuapapoh-charm-lace-white.webp"
-      ]
-    },
-    {
-      "heading_th": "บรรยากาศในห้องจัดแสดง",
-      "heading_en": "Inside the exhibition room",
-      "files": [
-        "/assets/photos/kuapapoh-charm-09-wall.webp",
-        "/assets/photos/kuapapoh-expo-wall.webp",
-        "/assets/photos/kuapapoh-expo-shelf.webp",
-        "/assets/photos/kuapapoh-artist-card.webp"
-      ]
-    }
-  ],
-  "hero_photo": {
-    "file": "/assets/photos/kuapapoh-charm-09.webp"
-  },
-  "gallery": [
-    {
       "heading_th": "ชุดผลงานเครื่องแต่งกาย",
       "heading_en": "Clothing works",
       "files": [
@@ -47,6 +24,9 @@
       ]
     }
   ],
+  "hero_photo": {
+    "file": "/assets/photos/kuapapoh-charm-09.webp"
+  },
   "lede": [
     "อ. แรกใน 6 อ. ของย่านเมืองเก่าตะกั่วป่าเปิดผนึกแล้ว · อาภรณ์ชวนเราอ่านเมืองผ่านเครื่องแต่งกาย ลวดลาย และเครื่องประดับที่ปรากฏในภาพเขียนของช่างป๋อง",
     "นิทรรศการ มนต์เสน่ห์เปอรานากัน จัดแสดงในเดือนกันยายน 2569 ที่ 78 สตูดิโอ ถนนวัฒนธรรมตะกั่วป่า เรื่องราวในหน้านี้ยึดข้อมูลโครงการและสิ่งที่เห็นในภาพเป็นหลัก ส่วนประวัติศาสตร์ของเครื่องแต่งกายที่ยังไม่มีข้อมูลยืนยันจะระบุไว้ชัดเจน"
@@ -151,5 +131,6 @@
       "accessed": "2026-09-09"
     }
   ],
-  "updated": "2026-09-09"
+  "updated": "2026-09-09",
+  "cover": "/assets/photos/kuapapoh-charm-09.webp"
 }

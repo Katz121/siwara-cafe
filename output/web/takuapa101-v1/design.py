@@ -292,8 +292,13 @@ def city_feed(ctx, limit_news=8):
             stories = [{'id': x['id'], 'group': x['group'], 'title': x['title'], 'dek': x['dek']} for x in st.STORIES + [st.KUAPAPOH]]
         except Exception:
             stories = []
-    _order = ['city', 'apaporn', 'architecture', 'water-trade', 'food-people', 'kuapapoh']
-    stories.sort(key=lambda x: _order.index(x['id']) if x.get('id') in _order else 99)
+    # กระทู้ใหม่สุดอยู่อันดับหนึ่งเสมอ เพื่อดันของเก่าลง
+    # วันเท่ากันค่อยใช้ลำดับที่จัดไว้เอง
+    _order = ['city', 'architecture', 'water-trade', 'food-people', 'kuapapoh']
+    stories.sort(key=lambda x: (
+        x.get('updated') or '',
+        -(_order.index(x['id']) if x.get('id') in _order else 99),
+    ), reverse=True)
     news = _load_json('data/news-feed.json', [])[:limit_news]
 
     used = set()
@@ -306,8 +311,15 @@ def city_feed(ctx, limit_news=8):
         # Tiles use the commissioned illustrations: they are on-brand and each one
         # is distinct. Photographs stay inside the article where captions and
         # credits give them context.
+        # กระทู้ที่มีผลงานเป็นตัวเนื้อหาเอง ระบุ cover ได้ตรง ๆ
+        # ต้องผ่านทะเบียนรูปเหมือนรูปอื่นทุกใบ
         src = None
-        for pid in (sd.get('places') or []):
+        cover = sd.get('cover')
+        if cover:
+            import stories as _st
+            if _st.photo_for(sd.get('id'), cover):
+                src = cover
+        for pid in ([] if src else (sd.get('places') or [])):
             cand = f'/assets/{pid}.webp'
             if _os.path.exists('site' + cand) and cand not in used:
                 src = cand
