@@ -90,6 +90,13 @@ check('ไม่มีลิงก์ไปแหล่งที่ตายแ�
 check('ไม่มีโดเมนที่สะกดผิด takuacity',
       sum(read(p).count('takuacity.go.th') for p in pages) == 0)
 
+# โดเมนที่เคยพิมพ์ตกมาแล้ว · ซ้าย = ที่ผิด ขวา = ที่ถูก
+TYPOS = {'takuacity.go.th': 'takuapacity.go.th',
+         'kuapoh.pages.dev': 'kuapapoh.pages.dev'}
+for wrong, right in TYPOS.items():
+    n = sum(len(re.findall(r'(?<![a-z])' + re.escape(wrong), read(p))) for p in pages)
+    check('ไม่มี %s (ที่ถูกคือ %s)' % (wrong, right), n == 0, '%d จุด' % n)
+
 print('\n== ไฟล์ที่อ้างถึง ==')
 missing = set()
 for p in pages:

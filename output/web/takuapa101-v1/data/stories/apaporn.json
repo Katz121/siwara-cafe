@@ -94,13 +94,13 @@
         "claim_th": "รายละเอียดเสื้อผ้าและเครื่องประดับในภาพเขียน",
         "status": "QUALIFIED",
         "explain_th": "อธิบายจากภาพที่ระบุใน photo registry และข้อมูลโครงการเท่านั้น",
-        "source_url": "https://kuapoh.pages.dev/"
+        "source_url": "https://kuapapoh.pages.dev/"
       },
       {
         "claim_th": "เหตุผลทางประวัติศาสตร์ของเครื่องแต่งกายเปอรานากันในเมืองเหมืองแร่",
         "status": "UNVERIFIED",
         "explain_th": "ยังไม่มีข้อมูลยืนยันในแหล่งข้อมูลที่ใช้กับบทความนี้",
-        "source_url": "https://kuapoh.pages.dev/"
+        "source_url": "https://kuapapoh.pages.dev/"
       }
     ]
   },
@@ -118,7 +118,7 @@
       "id": "kuapapoh-content",
       "title": "กั่วป่าโพ้ · ข้อมูลโครงการ",
       "publisher": "โครงการกั่วป่าโพ้",
-      "url": "https://kuapoh.pages.dev/",
+      "url": "https://kuapapoh.pages.dev/",
       "locator": "content.json · hero, six, events, houses",
       "accessed": "2026-09-09"
     },
