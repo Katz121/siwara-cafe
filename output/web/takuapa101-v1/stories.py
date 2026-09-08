@@ -139,15 +139,13 @@ def get_all_stories():
                 stories_dict[sd['id']] = sd
         except Exception:
             pass
-    order = ['city', 'architecture', 'water-trade', 'food-people', 'kuapapoh', 'apaporn']
-    result = []
-    for o in order:
-        if o in stories_dict:
-            result.append(stories_dict[o])
-            del stories_dict[o]
-    for _, v in stories_dict.items():
-        result.append(v)
-    return result
+    # กระทู้ใหม่สุดอยู่อันดับหนึ่งเสมอ เพื่อดันของเก่าลง · ไม่ต้องมาแก้ลิสต์
+    # ทุกครั้งที่เพิ่มกระทู้ · วันเท่ากันค่อยใช้ลำดับที่จัดไว้เอง
+    order = ['city', 'architecture', 'water-trade', 'food-people', 'kuapapoh']
+    return sorted(stories_dict.values(), key=lambda x: (
+        x.get('updated') or '',
+        -(order.index(x['id']) if x.get('id') in order else 99),
+    ), reverse=True)
 
 def _source_list(ids):
     return '<ol class="story-sources">' + ''.join(f'<li>{source_link(SOURCES[i]["url"], escape(SOURCES[i]["title"]))} · {escape(SOURCES[i]["publisher"])} · {escape(SOURCES[i]["locator"])}</li>' for i in ids) + '</ol>'
@@ -331,8 +329,12 @@ def index(ctx):
         # The index is a gallery, so every card gets the same treatment: the
         # commissioned illustration of a place the story is about. Photographs
         # stay inside the articles where a caption gives them context.
+        # กระทู้ที่ระบุ cover ไว้ ใช้ภาพนั้นเป็นปก · ยังต้องผ่านทะเบียนรูป
         photo = ''
-        for pid in s.get("places", []):
+        cover = s.get('cover')
+        if cover and photo_for(s.get('id'), cover):
+            photo = f'<img src="{escape(cover)}" alt="" loading="lazy">'
+        for pid in ([] if photo else s.get("places", [])):
             if pid not in used_art and os.path.exists(f"site/assets/{pid}.webp"):
                 photo = f'<img src="/assets/{pid}.webp" alt="" loading="lazy">'
                 used_art.add(pid)
