@@ -82,7 +82,7 @@ export function ruleFilter(item) {
 
 /* Stable id so the same story is never published twice. */
 export async function fingerprint(item) {
-  const base = (item.link || '') + '|' + normalise(item.title).slice(0, 90);
+  const base = urlKey(item.link || '') + '|' + normalise(item.title).slice(0, 90);
   const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(base));
   return [...new Uint8Array(buf)].slice(0, 10).map((b) => b.toString(16).padStart(2, '0')).join('');
 }

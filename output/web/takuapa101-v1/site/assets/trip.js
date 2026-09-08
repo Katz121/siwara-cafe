@@ -54,6 +54,7 @@
                 countEls.forEach(el => {
                     try {
                         el.textContent = list.length;
+                        el.hidden = list.length === 0;
                     } catch (err) {}
                 });
 

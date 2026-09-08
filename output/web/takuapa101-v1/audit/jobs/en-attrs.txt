@@ -1,0 +1,27 @@
+งานแก้จริง (แก้ไฟล์ได้) · D:\Siwaracafeweb\output\web\takuapa101-v1
+
+บั๊ก: หน้าอังกฤษยังมี placeholder ภาษาไทย
+หลักฐาน: `site/en/eat/index.html` มี `placeholder="พิมพ์ชื่อร้านที่ต้องการ"`
+ทั้งที่ `data/i18n/en/ui.json` มีคำแปล 'พิมพ์ชื่อร้านที่ต้องการ' -> 'Type the shop name you want' อยู่แล้ว
+
+สิ่งที่รู้แล้วจากการดีบัก (ไม่ต้องทำซ้ำ)
+- `build_en.py:214 translate_attrs()` มี 'placeholder' ใน TRANSLATABLE_ATTRS แล้ว
+- คำแปลอยู่ใน mem จริง (ตรวจด้วย build_memory() แล้ว key ตรงกัน ยาว 23 ตัวอักษรเท่ากัน)
+- เรียก translate_attrs() ตรง ๆ ด้วย tag ทดสอบ แล้วคืนค่าเดิมไม่แปล
+- regex `([\w:-]+)=(["\'])([^"\']*)` ทดสอบแยกแล้วจับ group ถูกต้อง
+- ไม่มี translate_attrs นิยามซ้ำสองที่
+
+งานของคุณ
+1. หาสาเหตุจริงว่าทำไม translate_attrs ถึงไม่แปล แล้วแก้
+2. **มีบั๊กอีกตัวที่ต้องแก้ด้วย**: บรรทัด return ประกอบสตริงเป็น
+   `f'{name}={quote}{esc(hit, quote=True)}{quote}'` แต่ regex ไม่ได้กินเครื่องหมายคำพูดปิด
+   ผลคือถ้าแปลสำเร็จจะได้ `placeholder="..."">` มีคำพูดเกินมาหนึ่งตัว · แก้ให้ถูก
+3. เขียนเทสต์เล็ก ๆ `test_translate_attrs.py` ครอบ 3 เคส: แปลได้, ไม่มีคำแปล, ค่าไม่ใช่ไทย
+   รันแล้วต้องผ่านทั้งหมด
+4. รัน `python build_en.py` แล้วยืนยันว่า
+   - `grep -c 'placeholder="พิมพ์' site/en/eat/index.html` ได้ 0
+   - ไม่มี `""` ซ้อนใน attribute ของหน้าอังกฤษหน้าไหนเลย
+   - ยังได้ 44 หน้าเท่าเดิม
+5. ตรวจทั้งเว็บอังกฤษว่ายังมี attribute ไหนที่ค่าเป็นภาษาไทยเหลืออีกไหม (alt, title, aria-label, placeholder)
+   ถ้ามีและมีคำแปลอยู่แล้ว ต้องหายไปด้วย · ถ้าไม่มีคำแปล ให้เพิ่มลง `data/i18n/en/ui.json`
+6. สรุปที่ `audit/fix-en-attrs.md`

@@ -1,0 +1,26 @@
+[
+  {
+    "url_prefix": "https://www.dit.go.th/FILE/CONTENT_FILE/256202181736250948974.pdf",
+    "checked_on": "2026-09-08",
+    "reason": "http_404",
+    "note": "ไฟล์ PDF เดิมตอบกลับ 404"
+  },
+  {
+    "url_prefix": "https://www.dit.go.th/th/market/2383",
+    "checked_on": "2026-09-08",
+    "reason": "http_404",
+    "note": "หน้าตลาดเดิมตอบกลับ 404"
+  },
+  {
+    "url_prefix": "https://radiothailand.prd.go.th/th/content/category/detail/id/9/iid/481052",
+    "checked_on": "2026-09-08",
+    "reason": "http_404",
+    "note": "หน้าข่าวเดิมตอบกลับ 404"
+  },
+  {
+    "url_prefix": "https://www.dit.go.th/FILE/CONTENT_FILE/256602221220300556074.pdf",
+    "checked_on": "2026-09-08",
+    "reason": "http_404",
+    "note": "ไฟล์ PDF เดิมตอบกลับ 404"
+  }
+]

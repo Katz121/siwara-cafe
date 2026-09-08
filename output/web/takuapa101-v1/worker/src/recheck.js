@@ -22,6 +22,19 @@ verdict:
 id สถานที่ที่เลือกได้: wat-boromthat, wat-khuha, wat-pathum, wat-kongkha, wat-nikorn, wat-sena, museum, guan-yu, pun-thao, kue-chai, rong-jae, phra-narai, thung-phra, riverwalk, culture-street, iron-bridge, governor-wall, khun-in, tao-ming, food-center, vegetarian, loy-krathong, chak-phra, new-year-alms, narai-ceremony, ruler-ceremony, relic-procession`;
 
 
+/* The model sometimes writes the word "null" as a string, or invents an id.
+   Only ids that actually exist on the site may reach the public feed. */
+const PLACE_IDS = new Set(['wat-boromthat','wat-khuha','wat-pathum','wat-kongkha','wat-nikorn',
+  'wat-sena','museum','guan-yu','pun-thao','kue-chai','rong-jae','phra-narai','thung-phra',
+  'riverwalk','culture-street','iron-bridge','governor-wall','khun-in','tao-ming','food-center',
+  'vegetarian','loy-krathong','chak-phra','new-year-alms','narai-ceremony','ruler-ceremony',
+  'relic-procession']);
+
+function cleanPlaceId(value) {
+  const id = String(value == null ? '' : value).trim().toLowerCase();
+  return PLACE_IDS.has(id) ? id : null;
+}
+
 function salvage(text) {
   const verdict = (text.match(/(publish|hold|drop)/i) || [])[1];
   if (!verdict) return null;
@@ -33,7 +46,7 @@ function salvage(text) {
   return {
     verdict: verdict.toLowerCase(),
     confidence: conf ? Number(conf) : 60,
-    place_id: place || null,
+    place_id: cleanPlaceId(place),
     reason_th: reason || '',
     clean_title_th: title || '',
     summary_th: summary || '',
@@ -122,7 +135,7 @@ export async function recheck(env, item) {
     ...item,
     verdict: v.verdict,
     confidence: v.confidence,
-    place_id: v.place_id || item.place_id || null,
+    place_id: cleanPlaceId(v.place_id) || cleanPlaceId(item.place_id),
     review_reason_th: v.reason_th || '',
     title: v.clean_title_th || item.title,
     summary: v.summary_th || item.summary || '',

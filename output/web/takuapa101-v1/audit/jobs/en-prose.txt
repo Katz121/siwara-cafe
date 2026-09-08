@@ -1,0 +1,31 @@
+งานแก้จริง (แก้ไฟล์ได้) · D:\Siwaracafeweb\output\web\takuapa101-v1
+
+หน้าอังกฤษหลายจุดอ่านออกว่าแปลมา ไม่ใช่ภาษาอังกฤษที่เจ้าของภาษาเขียน
+อ่าน `audit/a2-enq.md` ให้ครบก่อน แล้วแก้ตามรายการ
+
+วิธีแก้: หน้าอังกฤษสร้างจาก `build_en.py` โดยเทียบคำแปลใน `data/i18n/en/*.json`
+**ห้ามแก้ไฟล์ HTML ใน `site/` ตรง ๆ** เพราะจะถูกเขียนทับตอน build · ให้แก้ที่ไฟล์คำแปล
+
+รายการที่ต้องแก้ (จาก a2-enq.md)
+1. "Through shrine doors, looking at old house windows / And know the city a bit more at every stop"
+   ประโยคไม่สมบูรณ์ · เขียนใหม่ให้เป็นคำโปรยอังกฤษที่ลื่นและชวนเข้ามาอ่าน
+2. "Short walk from wooden house" ขาด article
+3. "20 places to slowly get to know" แปลตรงตัว
+4. "Look at the story of the Chinese community" แข็ง · ใช้ Explore
+5. "the school formally declared its intention to be established in 1920" passive ผิดธรรมชาติ
+   ต้องบอกให้ชัดว่าใครยื่นขอจัดตั้ง โดยไม่เพิ่มข้อเท็จจริงที่แหล่งไม่ได้บอก
+6. "the bridge became a mining town trace" · ใช้ "a trace of the town's mining past"
+7. "The bridge thus stands between functioning infrastructure and a landmark for walking, views, and photography" แข็ง
+8. "with a Hidden Gem style" · ใช้ "with a hidden-gem feel"
+9. "turning it into a beautiful orange" · ผิดความหมาย
+
+กฎ
+- ห้ามเปลี่ยนข้อเท็จจริงหรือเพิ่ม claim · ปรับได้แค่ภาษา
+- คำที่ระบุสถานะ "not verified" / "no evidence" ต้องยังอยู่และยังชัด
+- ใช้ `·` ไม่ใช้ em-dash/en-dash
+- ชื่อหน่วยงานราชการไทยที่คงภาษาไทยไว้ ตั้งใจให้เป็นแบบนั้น ห้ามแปล
+
+ปิดงาน
+- รัน `python build_en.py` · 44 หน้า
+- ยืนยันว่าข้อความ 9 จุดข้างบนเปลี่ยนจริงในไฟล์ `site/en/`
+- สรุปที่ `audit/fix-en-prose.md` ตารางก่อน/หลังทั้ง 9 จุด

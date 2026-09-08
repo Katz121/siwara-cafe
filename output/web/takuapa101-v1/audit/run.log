@@ -1,1 +1,6 @@
 งานตรวจ 4 ชุด
+  code-quality: codex rc=0
+  seo-tech: codex rc=0
+  language: agy rc=0
+  content-facts: agy rc=1
+done

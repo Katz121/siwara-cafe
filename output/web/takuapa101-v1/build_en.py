@@ -10,6 +10,7 @@ import json
 import os
 import re
 import sys
+from PIL import Image
 from datetime import date
 from html import escape as esc
 
@@ -25,6 +26,14 @@ I18N = os.path.join(DATA, 'i18n', 'en')
 BASE = SITE_BASE_URL.rstrip('/')
 PREFIX = (BASE_PATH or '') + '/en'
 
+def strip_dead_source_links(html):
+    from dead_sources import is_dead
+    def repl(m):
+        if is_dead(m.group(1)):
+            return f'<span class="source-offline">{m.group(2)} <small>Original source offline · checked 8 Sep 2026</small></span>'
+        return m.group(0)
+    return re.sub(r'<a[^>]*href="([^"]+)"[^>]*>(.*?)</a>', repl, html)
+
 
 def load(rel, default=None):
     fp = os.path.join(ROOT, rel)
@@ -39,7 +48,7 @@ def load(rel, default=None):
 
 def build_memory():
     """Thai string -> English string, from every approved translation file."""
-    mem = {}
+    mem = {'หาในแผนที่ ↗': 'Find on map ↗'}
 
     def add(th, en):
         if not isinstance(th, str) or not isinstance(en, str):
@@ -116,6 +125,13 @@ def build_memory():
             continue
         add(th.get('name_th'), en.get('name'))
         add(th.get('one_liner_th'), en.get('one_liner'))
+
+    # The 59 brochure shops live in library.json (separate from researched extras).
+    # Their printed English names are transliterations, so include them in the
+    # replacement memory and keep the Thai name in the searchable data-shop key.
+    for shop in load('data/library.json', {}).get('records', []):
+        if shop.get('type') == 'business_directory':
+            add(shop.get('name_th'), shop.get('name_en_as_printed'))
 
     # Detail fields translated in a later pass: history, timeline, news, visit.
     for fp in sorted(glob.glob(os.path.join(I18N, 'details', '*.json'))):
@@ -203,6 +219,21 @@ def translate_html(html, mem, missing=None):
     return ''.join(out)
 
 
+def _compound(value, mem):
+    """Labels like "ขยายภาพ · <คำบรรยายรูป>" are built from two known pieces.
+
+    The caption half already lives in the photo registry, so translating each
+    side separately covers every photo without a dictionary entry per image.
+    """
+    if ' · ' not in value:
+        return None
+    head, rest = value.split(' · ', 1)      # a caption may itself contain ' · '
+    left, right = mem.get(head.strip()), mem.get(rest.strip())
+    if not left or not right:
+        return None
+    return f'{left} · {right}'
+
+
 def translate_attrs(tag, mem, missing=None):
     """Same whole-value rule for the handful of attributes a reader sees."""
     def sub(m):
@@ -210,13 +241,15 @@ def translate_attrs(tag, mem, missing=None):
         if name.lower() not in TRANSLATABLE_ATTRS or not re.search(r'[฀-๿]', val):
             return m.group(0)
         hit = mem.get(val.strip())
+        if not hit:
+            hit = _compound(val.strip(), mem)
         if hit:
             return f'{name}={quote}{esc(hit, quote=True)}{quote}'
         if missing is not None:
             missing[val.strip()] = missing.get(val.strip(), 0) + 1
         return m.group(0)
 
-    return re.sub(r'([\w:-]+)=(["\'])([^"\']*)', sub, tag)
+    return re.sub(r'([\w:-]+)=(["\'])([^"\']*)\2', sub, tag)
 
 
 def repoint_links(html):
@@ -230,7 +263,7 @@ def repoint_links(html):
         if base and not url.startswith(base + '/') and url != base:
             return m.group(0)
         rest = url[len(base):] if base else url
-        if rest.startswith('/assets/') or rest.startswith('/en/'):
+        if rest.startswith('/assets/') or rest == '/en' or rest.startswith('/en/'):
             return m.group(0)
         return f'{attr}={quote}{base}/en{rest}{quote}'
 
@@ -343,13 +376,15 @@ def main():
                          lambda m: m.group(1) + esc(d_en, quote=True) + m.group(2), out, count=1)
         out = out.replace('"og:locale":"th_TH"', '"og:locale":"en_US"')
         out = out.replace('og:locale" content="th_TH"', 'og:locale" content="en_US"')
-        en_url = BASE + PREFIX + ('' if route == '/' else route)
-        th_url = BASE + (BASE_PATH or '') + ('' if route == '/' else route)
+        en_url = BASE + PREFIX + ('/' if route == '/' else route)
+        th_url = BASE + (BASE_PATH or '') + ('/' if route == '/' else route)
+        out = strip_dead_source_links(out)
         out = re.sub(r'<link rel="canonical" href="[^"]*"', f'<link rel="canonical" href="{esc(en_url)}"', out, count=1)
         alts = (f'<link rel="alternate" hreflang="th" href="{esc(th_url)}">'
                 f'<link rel="alternate" hreflang="en" href="{esc(en_url)}">'
                 f'<link rel="alternate" hreflang="x-default" href="{esc(th_url)}">')
-        out = out.replace('</head>', alts + '</head>', 1)
+        if 'hreflang="en"' not in out:
+            out = out.replace('</head>', alts + '</head>', 1)
         out = out.replace('"@context": "https://schema.org"', '"@context": "https://schema.org", "inLanguage": "en"')
         switch = f'<a class="lang-switch" href="{esc((BASE_PATH or "") + ("/" if route == "/" else route))}" hreflang="th" lang="th">ไทย</a>'
         out = out.replace('<div class="header-tools">', '<div class="header-tools">' + switch, 1)
@@ -363,7 +398,7 @@ def main():
         th_html = html
         if 'hreflang="en"' not in th_html:
             th_html = th_html.replace('</head>', alts + '</head>', 1)
-            en_switch = f'<a class="lang-switch" href="{esc(PREFIX + ("" if route == "/" else route))}" hreflang="en" lang="en">EN</a>'
+            en_switch = f'<a class="lang-switch" href="{esc(PREFIX + ("/" if route == "/" else route))}" hreflang="en" lang="en">EN</a>'
             th_html = th_html.replace('<div class="header-tools">', '<div class="header-tools">' + en_switch, 1)
             open(src, 'w', encoding='utf-8').write(th_html)
 
@@ -371,7 +406,7 @@ def main():
     if os.path.exists(sm) and made:
         xml = open(sm, encoding='utf-8').read()
         extra = ''.join(
-            f'<url><loc>{esc(BASE + PREFIX + ("" if r == "/" else r))}</loc>'
+            f'<url><loc>{esc(BASE + PREFIX + ("/" if r == "/" else r))}</loc>'
             f'<lastmod>{date.today().isoformat()}</lastmod></url>'
             for r, _ in sorted(pages)
             if os.path.exists(os.path.join(EN, '' if r == '/' else r.strip('/'), 'index.html')))
@@ -384,6 +419,22 @@ def main():
     print(f'สร้างหน้าอังกฤษ {made} หน้า · ข้าม {skipped} หน้า (คำแปลไม่พอ)')
     print(f'ข้อความที่ยังไม่มีคำแปล {len(missing)} แบบ · เขียนไว้ที่ data/i18n/en/missing.json')
 
+    img_re = re.compile(r'<img([^>]*?)src="([^"]+)"([^>]*)>', re.I)
+    for root, _, names in os.walk(SITE):
+        for name in names:
+            if not name.endswith('.html'): continue
+            fp = os.path.join(root, name)
+            html = open(fp, encoding='utf-8').read()
+            def add_dims(m):
+                attrs = m.group(1) + m.group(3); src = m.group(2).split('?', 1)[0]
+                if 'width=' in attrs or 'height=' in attrs or not src.startswith('/assets/'): return m.group(0)
+                asset = os.path.join(SITE, 'assets', src[8:])
+                if not os.path.exists(asset): return m.group(0)
+                try: w, h = Image.open(asset).size
+                except Exception: return m.group(0)
+                return f'<img{m.group(1)}src="{m.group(2)}" width="{w}" height="{h}"{m.group(3)}>'
+            updated = img_re.sub(add_dims, html)
+            if updated != html: open(fp, 'w', encoding='utf-8').write(updated)
 
 if __name__ == '__main__':
     main()

@@ -1,119 +1,119 @@
 {
- "guide-lad-yai": {
-  "name": "Lad Yai Old Town Walking Street",
-  "label": "Old Town Walk",
-  "one_liner": "Charming Sunday evening walking street along historic Sri Takua Pa Road with street food stalls, Baba heritage desserts, and local crafts.",
-  "menu": "Tao Kua, Ang Ku Kuih (Turtle Cakes), Crispy Buer Tod, Local snacks",
-  "tip": "Open Sundays only! Best visited around 17:00 for golden-hour photography.",
-  "hours": "Sundays only 15:30 – 20:30",
-  "distance": "~0.7 km from Siwara"
- },
- "guide-bang-deen": {
-  "name": "Bang Deen Michelin Roti & Biryani",
-  "label": "Breakfast / Michelin",
-  "one_liner": "Michelin Guide recognized breakfast spot famous for fragrant Thai-Muslim chicken biryani and freshly rolled roti with rich chicken massaman curry.",
-  "menu": "Chicken Biryani, Roti with Massaman Curry, Chicken Mataba, Teh Tarik",
-  "tip": "Pair crispy hot roti with rich massaman curry and hot milk tea.",
-  "hours": "06:00 – 13:30 daily",
-  "distance": "~2.8 km from Siwara"
- },
- "guide-mee-talad-khwang": {
-  "name": "Mee Phang Nga (Talad Khwang)",
-  "label": "Hokkien Noodles",
-  "one_liner": "Legendary handmade yellow Hokkien egg noodles tossed in fragrant shallot oil, served with giant crispy pork cracklings and dumplings.",
-  "menu": "Handmade Hokkien Noodles, Dry Tom Yum Wonton Noodles, Crispy Cracklings",
-  "tip": "Order dry Tom Yum egg noodles with extra crispy pork cracklings.",
-  "hours": "09:00 – 15:30 (Closed Tue)",
-  "distance": "~0.6 km from Siwara"
- },
- "guide-moo-satay-kruaew": {
-  "name": "Kru Aew Satay & Khanom Jeen",
-  "label": "Satay & Rice Noodles",
-  "one_liner": "Beloved hidden gem in Thung Phra Pho serving charcoal-grilled tender pork satay alongside fiery southern Thai curry rice noodles.",
-  "menu": "Charcoal Pork Satay, Southern Crab Curry Noodles, Peanut Sauce",
-  "tip": "Charcoal grilled to order. Order satay skewers with peanut sauce and curry noodles.",
-  "hours": "12:00 – 18:00 (Closed Thu)",
-  "distance": "~2.4 km from Siwara"
- },
- "guide-pa-da-hokkien": {
-  "name": "Pa Da Hokkien Fried Noodles",
-  "label": "Stir-fried Hokkien",
-  "one_liner": "Authentic wok-fried Hokkien noodles with seafood, pork slices, and runny poached egg in the heart of the old town.",
-  "menu": "Wok-fried Hokkien Noodles with Egg, Misua Soup with Prawns",
-  "tip": "Break the runny egg yolk and mix into the piping-hot wok noodles.",
-  "hours": "07:00 – 17:00 daily",
-  "distance": "~0.7 km from Siwara"
- },
- "guide-pu-dam": {
-  "name": "Pu Dam Restaurant (Bang Nai Si)",
-  "label": "Local Seafood & Crab",
-  "one_liner": "Scenic riverside local seafood restaurant in Bang Nai Si known for exceptionally fresh mangrove mud crabs and fiery southern curries.",
-  "menu": "Steamed Mud Crab with Roe, Sour Crab Curry, Crab Fried Rice",
-  "tip": "Steamed mud crabs with spicy seafood dip are a must-try.",
-  "hours": "10:00 – 21:00 daily",
-  "distance": "~3.2 km from Siwara"
- },
- "guide-jae-ouan": {
-  "name": "Jae Ouan Fresh Seafood (Nam Khem)",
-  "label": "Coastal Seafood",
-  "one_liner": "Top-rated coastal seafood eatery in Ban Nam Khem, serving wild-caught giant tiger prawns, blue swimming crabs, and authentic lime seafood sauce.",
-  "menu": "Grilled Tiger Prawns, Seafood Tom Yum, Steamed Blue Crab, Wing Shells",
-  "tip": "Ideal for dinner after visiting Ban Nam Khem Memorial.",
-  "hours": "10:30 – 21:30 daily",
-  "distance": "~11.5 km from Siwara"
- },
- "guide-kae-padthai": {
-  "name": "Kae Pad Thai (Old Market)",
-  "label": "Evening Pad Thai",
-  "one_liner": "Popular evening street stall serving classic tamarind-glazed Pad Thai noodles with fresh prawns and crispy golden omelette wrapping.",
-  "menu": "Fresh Prawn Pad Thai, Egg-wrapped Pad Thai, Crispy Fried Mussels",
-  "tip": "Egg-wrapped Pad Thai with fresh lime and banana blossom.",
-  "hours": "16:30 – 21:30 daily",
-  "distance": "~0.6 km from Siwara"
- },
- "guide-baan-lapp": {
-  "name": "BAAN LAPP (Homey Dining & Steaks)",
-  "label": "Craft Dining & Steaks",
-  "one_liner": "Cozy hidden gem dining room in Takua Pa serving homemade pork chops, creamy pastas, salmon with seafood sauce, and artisan desserts.",
-  "menu": "Homemade Pork Chop Steak, Seafood Pasta, Salmon with Thai Dressing",
-  "tip": "Warm romantic lighting after 17:30, perfect for evening dinners.",
-  "hours": "11:00 – 21:00 (Closed Wed)",
-  "distance": "~2.2 km from Siwara"
- },
- "guide-iron-bridge": {
-  "name": "Bun Sung Iron Bridge",
-  "label": "Historic Landmark",
-  "one_liner": "Historic iron bridge constructed from retired tin-mining dredger steel frames, spanning across the tranquil Takua Pa River.",
-  "menu": "River viewpoint, Tin-dredge steel photo spot, Sunset breeze",
-  "tip": "Sunset golden hour from 17:00-18:30 illuminates the iron arches beautifully.",
-  "hours": "Open 24 hrs (Best 16:30 – 18:30)",
-  "distance": "~2.3 km from Siwara"
- },
- "guide-old-town-street": {
-  "name": "Sri Takua Pa Heritage Street & Murals",
-  "label": "Sino-Portuguese Heritage",
-  "one_liner": "Preserved century-old Sino-Portuguese shophouse street with covered arcades and expressive street art murals depicting tin-mining heritage.",
-  "menu": "Sino-Portuguese Architecture, Five-Foot Way Arcades, Street Murals",
-  "tip": "Stroll along the covered arcades and explore interconnecting alleys.",
-  "hours": "Open all day (Best 09:00 – 17:00)",
-  "distance": "~0.7 km from Siwara"
- },
- "guide-tam-nang": {
-  "name": "Tam Nang Waterfall (Si Phang Nga NP)",
-  "label": "Rainforest Waterfall",
-  "one_liner": "Magnificent 63-meter jungle waterfall nestled in Si Phang Nga National Park rainforest, with crystal-clear pools full of native brook carp.",
-  "menu": "63m High Waterfall, Crystal Pools, Brook Carp Fish, Nature Trail",
-  "tip": "10:00-14:00 offers the clearest sunlight reflection over the water.",
-  "hours": "08:30 – 16:30 daily",
-  "distance": "~21.8 km from Siwara"
- },
- "guide-tuangrat-taosor": {
-  "name": "Tuangrat 100-Year Taosor Pastry",
-  "label": "Local Souvenir",
-  "one_liner": "The #1 signature souvenir of Takua Pa — crispy thin flaky pastries stuffed with savory salted mung bean and salted egg yolk, baked daily.",
-  "menu": "Savory Salted Egg Taosor, Sweet Bean Taosor, Traditional Pastries",
-  "tip": "Salted egg savory bean is the top seller. Delicious with hot coffee or tea.",
-  "hours": "08:00 – 17:00 daily",
-  "distance": "~0.6 km from Siwara"
- }
+  "guide-lad-yai": {
+    "name": "Lad Yai Old Town Walking Street",
+    "label": "Old Town Walk",
+    "one_liner": "Charming Sunday evening walking street along historic Sri Takua Pa Road with street food stalls, Baba heritage desserts, and local crafts.",
+    "menu": "Tao Kua, Ang Ku Kuih (Turtle Cakes), Crispy Buer Tod, Local snacks",
+    "tip": "Open Sundays only! Best visited around 17:00 for golden-hour photography.",
+    "hours": "Sundays only 15:30 ถึง 20:30",
+    "distance": "~0.7 km from Siwara"
+  },
+  "guide-bang-deen": {
+    "name": "Bang Deen Michelin Roti & Biryani",
+    "label": "Breakfast / Michelin",
+    "one_liner": "Michelin Guide recognized breakfast spot famous for fragrant Thai-Muslim chicken biryani and freshly rolled roti with rich chicken massaman curry.",
+    "menu": "Chicken Biryani, Roti with Massaman Curry, Chicken Mataba, Teh Tarik",
+    "tip": "Pair crispy hot roti with rich massaman curry and hot milk tea.",
+    "hours": "06:00 ถึง 13:30 daily",
+    "distance": "~2.8 km from Siwara"
+  },
+  "guide-mee-talad-khwang": {
+    "name": "Mee Phang Nga (Talad Khwang)",
+    "label": "Hokkien Noodles",
+    "one_liner": "Legendary handmade yellow Hokkien egg noodles tossed in fragrant shallot oil, served with giant crispy pork cracklings and dumplings.",
+    "menu": "Handmade Hokkien Noodles, Dry Tom Yum Wonton Noodles, Crispy Cracklings",
+    "tip": "Order dry Tom Yum egg noodles with extra crispy pork cracklings.",
+    "hours": "09:00 ถึง 15:30 (Closed Tue)",
+    "distance": "~0.6 km from Siwara"
+  },
+  "guide-moo-satay-kruaew": {
+    "name": "Kru Aew Satay & Khanom Jeen",
+    "label": "Satay & Rice Noodles",
+    "one_liner": "Beloved hidden gem in Thung Phra Pho serving charcoal-grilled tender pork satay alongside fiery southern Thai curry rice noodles.",
+    "menu": "Charcoal Pork Satay, Southern Crab Curry Noodles, Peanut Sauce",
+    "tip": "Charcoal grilled to order. Order satay skewers with peanut sauce and curry noodles.",
+    "hours": "12:00 ถึง 18:00 (Closed Thu)",
+    "distance": "~2.4 km from Siwara"
+  },
+  "guide-pa-da-hokkien": {
+    "name": "Pa Da Hokkien Fried Noodles",
+    "label": "Stir-fried Hokkien",
+    "one_liner": "Authentic wok-fried Hokkien noodles with seafood, pork slices, and runny poached egg in the heart of the old town.",
+    "menu": "Wok-fried Hokkien Noodles with Egg, Misua Soup with Prawns",
+    "tip": "Break the runny egg yolk and mix into the piping-hot wok noodles.",
+    "hours": "07:00 ถึง 17:00 daily",
+    "distance": "~0.7 km from Siwara"
+  },
+  "guide-pu-dam": {
+    "name": "Pu Dam Restaurant (Bang Nai Si)",
+    "label": "Local Seafood & Crab",
+    "one_liner": "Scenic riverside local seafood restaurant in Bang Nai Si known for exceptionally fresh mangrove mud crabs and fiery southern curries.",
+    "menu": "Steamed Mud Crab with Roe, Sour Crab Curry, Crab Fried Rice",
+    "tip": "Steamed mud crabs with spicy seafood dip are a must-try.",
+    "hours": "10:00 ถึง 21:00 daily",
+    "distance": "~3.2 km from Siwara"
+  },
+  "guide-jae-ouan": {
+    "name": "Jae Ouan Fresh Seafood (Nam Khem)",
+    "label": "Coastal Seafood",
+    "one_liner": "Top-rated coastal seafood eatery in Ban Nam Khem, serving wild-caught giant tiger prawns, blue swimming crabs, and authentic lime seafood sauce.",
+    "menu": "Grilled Tiger Prawns, Seafood Tom Yum, Steamed Blue Crab, Wing Shells",
+    "tip": "Ideal for dinner after visiting Ban Nam Khem Memorial.",
+    "hours": "10:30 ถึง 21:30 daily",
+    "distance": "~11.5 km from Siwara"
+  },
+  "guide-kae-padthai": {
+    "name": "Kae Pad Thai (Old Market)",
+    "label": "Evening Pad Thai",
+    "one_liner": "Popular evening street stall serving classic tamarind-glazed Pad Thai noodles with fresh prawns and crispy golden omelette wrapping.",
+    "menu": "Fresh Prawn Pad Thai, Egg-wrapped Pad Thai, Crispy Fried Mussels",
+    "tip": "Egg-wrapped Pad Thai with fresh lime and banana blossom.",
+    "hours": "16:30 ถึง 21:30 daily",
+    "distance": "~0.6 km from Siwara"
+  },
+  "guide-baan-lapp": {
+    "name": "BAAN LAPP (Homey Dining & Steaks)",
+    "label": "Craft Dining & Steaks",
+    "one_liner": "Cozy hidden gem dining room in Takua Pa serving homemade pork chops, creamy pastas, salmon with seafood sauce, and artisan desserts.",
+    "menu": "Homemade Pork Chop Steak, Seafood Pasta, Salmon with Thai Dressing",
+    "tip": "Warm romantic lighting after 17:30, perfect for evening dinners.",
+    "hours": "11:00 ถึง 21:00 (Closed Wed)",
+    "distance": "~2.2 km from Siwara"
+  },
+  "guide-iron-bridge": {
+    "name": "Bun Sung Iron Bridge",
+    "label": "Historic Landmark",
+    "one_liner": "Historic iron bridge constructed from retired tin-mining dredger steel frames, spanning across the tranquil Takua Pa River.",
+    "menu": "River viewpoint, Tin-dredge steel photo spot, Sunset breeze",
+    "tip": "Sunset golden hour from 17:00-18:30 illuminates the iron arches beautifully.",
+    "hours": "Open 24 hrs (Best 16:30 ถึง 18:30)",
+    "distance": "~2.3 km from Siwara"
+  },
+  "guide-old-town-street": {
+    "name": "Sri Takua Pa Heritage Street & Murals",
+    "label": "Sino-Portuguese Heritage",
+    "one_liner": "Preserved century-old Sino-Portuguese shophouse street with covered arcades and expressive street art murals depicting tin-mining heritage.",
+    "menu": "Sino-Portuguese Architecture, Five-Foot Way Arcades, Street Murals",
+    "tip": "Stroll along the covered arcades and explore interconnecting alleys.",
+    "hours": "Open all day (Best 09:00 ถึง 17:00)",
+    "distance": "~0.7 km from Siwara"
+  },
+  "guide-tam-nang": {
+    "name": "Tam Nang Waterfall (Si Phang Nga NP)",
+    "label": "Rainforest Waterfall",
+    "one_liner": "Magnificent 63-meter jungle waterfall nestled in Si Phang Nga National Park rainforest, with crystal-clear pools full of native brook carp.",
+    "menu": "63m High Waterfall, Crystal Pools, Brook Carp Fish, Nature Trail",
+    "tip": "10:00-14:00 offers the clearest sunlight reflection over the water.",
+    "hours": "08:30 ถึง 16:30 daily",
+    "distance": "~21.8 km from Siwara"
+  },
+  "guide-tuangrat-taosor": {
+    "name": "Tuangrat 100-Year Taosor Pastry",
+    "label": "Local Souvenir",
+    "one_liner": "The #1 signature souvenir of Takua Pa · crispy thin flaky pastries stuffed with savory salted mung bean and salted egg yolk, baked daily.",
+    "menu": "Savory Salted Egg Taosor, Sweet Bean Taosor, Traditional Pastries",
+    "tip": "Salted egg savory bean is the top seller. Delicious with hot coffee or tea.",
+    "hours": "08:00 ถึง 17:00 daily",
+    "distance": "~0.6 km from Siwara"
+  }
 }

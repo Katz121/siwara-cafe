@@ -77,7 +77,7 @@ story = {
       "photo": {
           "file": "/assets/photos/cc/culture-street-1.webp",
           "caption_th": "บรรยากาศเมืองตะกั่วป่า จังหวัดพังงา",
-          "credit": "mohigan — CC BY-SA 3.0 (Wikimedia Commons)",
+          "credit": "mohigan · CC BY-SA 3.0 (Wikimedia Commons)",
           "license": "CC BY-SA 3.0"
       },
       "source_refs": ["onep-html", "onep-pdf", "sac-wall"]
@@ -143,7 +143,7 @@ story = {
       "title": "เอกสารเมืองเก่าตะกั่วป่า",
       "publisher": "สผ.",
       "url": "https://nced.onep.go.th/opendata/2568/oldtown36_announce/takuapa.pdf",
-      "locator": "PDF หน้า 11–13, 55–56, 58",
+      "locator": "PDF หน้า 11-13, 55-56, 58",
       "accessed": "2026-09-07"
     },
     {

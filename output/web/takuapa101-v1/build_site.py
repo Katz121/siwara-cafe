@@ -1,13 +1,14 @@
 """Build the local Takuapa101 editorial prototype from the approved library."""
 from pathlib import Path
 from html import escape as esc
-import json, os, sys
+import json, os, sys, re
 from datetime import date
 from seo_config import SITE_BASE_URL, BASE_PATH, NEWS_API, ROBOTS, GOOGLE_VERIFY, BING_VERIFY
 import seo
 sys.stdout.reconfigure(encoding="utf-8")
 import design
 import stories
+from dead_sources import source_link, is_dead
 from PIL import Image
 from fontTools import subset
 
@@ -21,6 +22,10 @@ byid = {r['id']: r for r in records}
 places = [r for r in records if r['type']=='place']
 events = [r for r in records if r['type']=='event']
 shops = [r for r in records if r['type']=='business_directory']
+def shop_map_url(r):
+    """Brochure entries have no verified address/coordinates; use name search only."""
+    from urllib.parse import quote_plus
+    return 'https://www.google.com/maps/search/?api=1&query=' + quote_plus(r['name_th'] + ' ตะกั่วป่า')
 BASE = SITE_BASE_URL
 SOURCE = library['source_url']
 PAGES = []
@@ -41,7 +46,7 @@ def a(r): return f'<a href="{url(r)}">{esc(r["name_th"])}</a>'
 def pic(id, eager=False):
  w,h=Image.open(OUT/f'assets/{id}.webp').size
  return f'<img src="/assets/{id}.webp" alt="{esc(byid[id]["name_th"])}" width="{w}" height="{h}" loading="{"eager" if eager else "lazy"}">'
-def source(): return f'<aside class="source"><h2>ที่มาของข้อมูล</h2><p>เรียบเรียงจาก<a href="{SOURCE}">แผ่นพับเทศบาลเมืองตะกั่วป่า</a> · สกัดข้อมูล 6 กันยายน 2569 เอกสารไม่ระบุวันที่เผยแพร่ เวลาเปิด สถานะร้าน และกำหนดงานปัจจุบันยังไม่ได้ยืนยัน ควรตรวจสอบกับสถานที่ก่อนเดินทาง</p></aside>'
+def source(): return f'<aside class="source"><h2>ที่มาของข้อมูล</h2><p>เรียบเรียงจาก{source_link(SOURCE, "แผ่นพับเทศบาลเมืองตะกั่วป่า")} · สกัดข้อมูล 6 กันยายน 2569 เอกสารไม่ระบุวันที่เผยแพร่ เวลาเปิด สถานะร้าน และกำหนดงานปัจจุบันยังไม่ได้ยืนยัน ควรตรวจสอบกับสถานที่ก่อนเดินทาง</p></aside>'
 # Ten top level links plus four header buttons will not sit on one row, and a
 # wrapped menu reads as a mistake. Six carry the site; the rest stay one tap away
 # in the menu drawer and remain in the footer, so nothing becomes unreachable.
@@ -87,7 +92,8 @@ def map_svg(active=None,decorative=False):
 caption='ผังนี้อ้างอิงตำแหน่งจากแผนที่ประชาสัมพันธ์ของเทศบาลเมืองตะกั่วป่า ระยะและสัดส่วนไม่ตรงตามพื้นที่จริง'
 def map_preview(): return f'<div class="map-preview"><div>{map_svg()}</div><div><span class="eyebrow">READ THE OLD TOWN</span><h2>แผนที่ย่านเก่า</h2><p>มองถนน สายน้ำ และจุดหมายของเมืองไว้ในภาพเดียว เลือกหมายเลขเพื่ออ่านเรื่องของสถานที่</p><a class="text-link" href="/map/">เปิดแผนที่เต็มและรายชื่อจุด ↗</a><p class="small">{caption}</p></div></div>'
 def timeline(): return '<div class="timeline">'+''.join(f'<article><span class="eyebrow">{period(r)}</span><h3>{a(r)}</h3></article>' for r in sorted(events,key=lambda r:['new-year-alms','ruler-ceremony','relic-procession','narai-ceremony','vegetarian','chak-phra','loy-krathong'].index(r['id'])))+'</div>'
-hero=f'<section class="masthead"><div class="hero-lines">{map_svg(decorative=True)}</div><div class="edition"><span>TAKUA PA · PHANG NGA</span><span>คู่มือเมืองเก่า / 01</span></div><div class="hero-title"><div><span class="eyebrow">ค่อย ๆ รู้จักเมือง ผ่านเรื่องราวระหว่างทาง</span><h1>ตะกั่วป่า <em>101</em></h1><p class="subtitle">วัด ศาลเจ้า ตึกเก่า<br>และย่านตลาดริมน้ำ</p><p>รวมสถานที่และเรื่องราวจากแผ่นพับเทศบาลเมืองตะกั่วป่า<br>ชวนเลือกจุดแวะ แล้วเปิดอ่านเมืองในแบบของคุณ</p><div class="hero-links"><a href="/map/">เปิดแผนที่ย่านเก่า ↗</a><a href="/places/">ดูสถานที่ทั้ง 20 แห่ง ↗</a></div></div><a class="hero-art" href="/places/tao-ming/">{pic("tao-ming",True)}<span>โรงเรียนเต้าหมิง · อาคารที่ส่งต่อภาษาและวัฒนธรรม ↗</span></a></div><div class="hero-bottom"><span>20 สถานที่</span><span>7 ประเพณี</span><span>59 ร้านจากเอกสารเทศบาล</span></div></section>'
+from design import SHOP_TOTAL as shop_total
+hero=f'<section class="masthead"><div class="hero-lines">{map_svg(decorative=True)}</div><div class="edition"><span>TAKUA PA · PHANG NGA</span><span>คู่มือเมืองเก่า / 01</span></div><div class="hero-title"><div><span class="eyebrow">ค่อย ๆ รู้จักเมือง ผ่านเรื่องราวระหว่างทาง</span><h1>ตะกั่วป่า <em>101</em></h1><p class="subtitle">วัด ศาลเจ้า ตึกเก่า<br>และย่านตลาดริมน้ำ</p><p>รวมสถานที่และเรื่องราวจากแผ่นพับเทศบาลเมืองตะกั่วป่า<br>ชวนเลือกจุดแวะ แล้วเปิดอ่านเมืองในแบบของคุณ</p><div class="hero-links"><a href="/map/">เปิดแผนที่ย่านเก่า ↗</a><a href="/places/">ดูสถานที่ทั้ง 20 แห่ง ↗</a></div></div><a class="hero-art" href="/places/tao-ming/">{pic("tao-ming",True)}<span>โรงเรียนเต้าหมิง · อาคารที่ส่งต่อภาษาและวัฒนธรรม ↗</span></a></div><div class="hero-bottom"><span>20 สถานที่</span><span>7 ประเพณี</span><span>{shop_total} ร้านกินดื่มของฝาก</span></div></section>'
 page('/','เที่ยวตะกั่วป่า คู่มือเมืองเก่าตะกั่วป่า พังงา','ที่เที่ยวตะกั่วป่า 20 แห่ง แผนที่เมืองเก่า ของกินตะกั่วป่า คาเฟ่ และประเพณีตลอดปี · คู่มือเที่ยว Takua Pa จังหวัดพังงา',hero+'<section><div class="section-heading"><h2>เริ่มจากตรงนี้</h2><span>เลือกเรื่องที่อยากรู้จัก</span></div>'+route_list()+'</section><section>'+map_preview()+'</section><section><div class="section-heading"><h2>สถานที่ 20 แห่ง</h2><span>เรื่องของเมือง ผ่านแต่ละจุดหมาย</span></div>'+directory()+'</section><section><h2>ประเพณีตลอดปี</h2><p>ช่วงเวลาตามเอกสารต้นทาง · ตรวจสอบกำหนดการของแต่ละปีก่อนเดินทาง</p>'+timeline()+'</section><section class="eat-callout"><span class="number">59</span><div><h2>กินและซื้อของฝากในย่าน</h2><p>รายชื่อร้านอาหาร 32 แห่ง · เครื่องดื่ม 19 แห่ง · ของฝาก 8 แห่ง จากแผ่นพับ</p><a class="text-link" href="/eat/">เปิดรายชื่อร้านในย่าน ↗</a></div></section><section><h2>ข้อมูลนี้มาจากไหน</h2><p class="measure">ข้อมูลเรียบเรียงจากแผ่นพับประชาสัมพันธ์เทศบาลเมืองตะกั่วป่า สกัดเมื่อ 6 กันยายน 2569 รายละเอียดการเข้าชมและสถานะร้านปัจจุบันยังไม่ได้ยืนยัน</p><a class="text-link" href="/about/">อ่านที่มาและข้อจำกัดข้อมูล ↗</a></section>')
 page('/places/','ที่เที่ยวตะกั่วป่า 20 แห่ง','ที่เที่ยวตะกั่วป่าครบทุกจุด วัด ศาลเจ้าจีน ตึกชิโน-โปรตุกีส สวนสาธารณะ ตลาดริมน้ำ และพิพิธภัณฑ์ พร้อมพิกัดนำทาง',intro('สถานที่ 20 แห่ง','เลือกหนึ่งจุดหมาย แล้วค่อย ๆ ต่อเรื่องราวของเมืองเข้าด้วยกัน')+'<div class="jump-links">'+''.join(f'<a href="#category-{i}">{name} · {len(ids)}</a>' for i,(name,ids) in enumerate(groups))+'</div>'+directory())
 
@@ -151,7 +157,7 @@ for r in events:
  page(url(r),r['name_th'],r['name_th']+' · '+period(r)+' ตามเอกสารเทศบาลเมืองตะกั่วป่า',body,r)
 page('/routes/','เส้นทางเดินเที่ยวเมืองเก่าตะกั่วป่า','เดินเที่ยวตะกั่วป่า 4 เส้นทาง วัดและเจดีย์ ศาลเจ้าจีน ตึกเก่าและตลาดริมน้ำ เลือกตามเวลาที่มี',intro('เส้นทางเดินอ่านเมือง','สามชุดจุดหมายให้เลือกตามความสนใจ')+'<p class="measure">รายการนี้จัดกลุ่มสถานที่ตามเรื่องราว ไม่กำหนดเวลาเดินหรือระยะทาง ใช้แผนที่ประกอบการเลือกจุดแวะ และตรวจสอบการเข้าชมก่อนออกเดินทาง</p>'+route_list(True)+map_preview()+source())
 shopgroups=[('restaurant','ร้านอาหาร'),('drink_shop','เครื่องดื่ม'),('souvenir_shop','ของฝาก')]
-shophtml=''.join(f'<section class="shop-group" data-category="{cat}"><h2>{label} <span class="count">{sum(r["category"]==cat for r in shops)}</span></h2><ol class="shop-list">'+''.join(f'<li id="{r["id"]}" data-shop="{esc(r["name_th"])}"><span class="shop-number">{r["source_list_number"]:02d}</span><span>{esc(r["name_th"])}</span></li>' for r in shops if r['category']==cat)+'</ol></section>' for cat,label in shopgroups)
+shophtml=''.join(f'<section class="shop-group" data-category="{cat}"><h2>{label} <span class="count">{sum(r["category"]==cat for r in shops)}</span></h2><ol class="shop-list">'+''.join(f'<li id="{r["id"]}" data-shop="{esc(r["name_th"] + " | " + r.get("name_en_as_printed", ""))}"><span class="shop-number">{r["source_list_number"]:02d}</span><span>{esc(r["name_th"])}</span> <a href="{shop_map_url(r)}">หาในแผนที่ ↗</a></li>' for r in shops if r['category']==cat)+'</ol></section>' for cat,label in shopgroups)
 page('/eat/','ร้านอาหารตะกั่วป่า และของฝาก','รายชื่อร้านอาหารตะกั่วป่า คาเฟ่ และของฝากกว่า 100 ร้าน ค้นหาตามชื่อและหมวด พร้อมลิงก์นำทาง',intro('กินและของฝากในย่าน','59 รายชื่อจากแผ่นพับเทศบาลเมืองตะกั่วป่า')+'<p>รายชื่อและลำดับตามเอกสารต้นทาง ยังไม่ได้ยืนยันสถานะการเปิดร้านในปัจจุบัน</p><div class="filters"><label>ค้นหาชื่อร้าน<input id="shop-search" type="search" placeholder="พิมพ์ชื่อร้านที่ต้องการ"></label><label>หมวดหมู่<select id="shop-category"><option value="all">ทุกร้าน</option>'+''.join(f'<option value="{cat}">{label}</option>' for cat,label in shopgroups)+'</select></label></div><p id="results" role="status" aria-live="polite">แสดง 59 ร้าน</p><p id="empty" hidden>ไม่พบรายชื่อ ลองเปลี่ยนคำค้นหรือเลือกหมวดอื่น</p>'+shophtml+source())
 table='<table><caption>รายชื่อจุดบนผัง</caption><thead><tr><th>หมายเลข</th><th>สถานที่</th><th>ตำแหน่งในต้นทาง</th></tr></thead><tbody>'+''.join(f'<tr><td>{places.index(byid[p["id"]])+1:02d}</td><td>{a(byid[p["id"]])}</td><td>{"ปรากฏในแผนที่" if p["x"] is not None else "ไม่ปรากฏตำแหน่ง"}</td></tr>' for p in points)+'</tbody></table>'
 page('/map/','แผนที่ตะกั่วป่า เมืองเก่าและย่านยาว','แผนที่เที่ยวตะกั่วป่าปักหมุดสถานที่จริง กดนำทางด้วย Google Maps ได้ทันที พร้อมภาพแผนที่เทศบาลซ้อนทับ',intro('แผนที่ย่านเก่า','ถนน สายน้ำ และจุดหมายที่เชื่อมเรื่องราวของเมือง')+f'<p class="measure">{caption}</p><details class="map-panel"><summary>ดูเป็นผังแผนที่ · 14 จุดจากต้นทาง</summary><div class="map-scroll">{map_svg()}</div></details>'+table+'<h2>เทียบกับแผนที่ต้นทาง</h2><p>แสดงเฉพาะหมุดสถานที่ที่จับคู่ได้ชัดเจน หมายเลขร้านบนภาพต้นทางยังไม่ได้จับคู่เป็นหมุดในผังนี้</p><a class="text-link" href="/assets/municipal-map.png">เปิดภาพแผนที่เทศบาลฉบับเต็ม ↗</a>'+source())
@@ -188,7 +194,9 @@ def render_rest():
         rows.sort(key=lambda x: x['name_th'])
         html += f'<h2>{esc(label)}</h2><div class="rest-stops">'
         for r in rows:
-            art = f'<a class="pick-art" href="{esc(r["google_maps_url"])}" target="_blank" rel="noopener"><img src="{esc(r["image"])}" alt="{esc(r["name_th"])}" loading="lazy"></a>' if r.get('image') else ''
+            image = esc(r["image"].replace('.jpg', '.webp')) if r.get('image') else ''
+            iw, ih = Image.open(ROOT / 'site' / image.lstrip('/')).size if image else (0, 0)
+            art = f'<a class="pick-art" href="{esc(r["google_maps_url"])}" target="_blank" rel="noopener"><img src="{image}" alt="{esc(r["name_th"])}" width="{iw}" height="{ih}" loading="lazy"></a>' if image else ''
             meta = []
             if r.get('hours_th'):
                 meta.append('เวลาเปิด ' + esc(r['hours_th']))
@@ -212,12 +220,12 @@ def render_rest():
     html += ('<h2>แผ่นพับพกไปเดิน</h2>'
              '<div class="leaflet-block">'
              '<a class="leaflet-art" href="/assets/leaflet/takuapa-walk-leaflet.pdf" target="_blank" rel="noopener">'
-             '<img src="/assets/leaflet/leaflet-page-1.webp" alt="แผ่นพับเดินเมืองเก่าตะกั่วป่า หน้าแรก" loading="lazy"></a>'
+             '<img src="/assets/leaflet/leaflet-page-1.webp" alt="แผ่นพับเดินเมืองเก่าตะกั่วป่า หน้าแรก" width="1400" height="990" loading="lazy"></a>'
              '<div class="leaflet-copy">'
              '<p>แผ่นพับสองหน้า เล่าเรื่องบ้านไม้และสี่จุดในเส้นทางข้างบน '
              'พิมพ์ใส่กระดาษ A4 แล้วพับครึ่งพกไปเดินได้เลย ไม่ต้องเปิดมือถือกลางแดด</p>'
              '<div class="leaflet-actions">'
-             '<a class="button" href="/assets/leaflet/takuapa-walk-leaflet.pdf" target="_blank" rel="noopener">โหลดแผ่นพับ PDF</a>'
+             '<a class="button" href="/assets/leaflet/takuapa-walk-leaflet.pdf" target="_blank" rel="noopener">โหลดแผ่นพับ PDF · 7.6 MB</a>'
              '<a class="text-link" href="/leaflet/">อ่านบนเว็บแทน ↗</a>'
              '</div>'
              '<p class="small">จัดทำโดย'
@@ -276,7 +284,7 @@ def render_leaflet():
              '<figure><img src="/assets/leaflet/leaflet-page-2.webp" alt="แผ่นพับหน้าสอง สี่จุดในเส้นทางเดิน" loading="lazy" width="1400"><figcaption>หน้าสอง</figcaption></figure>'
              '</div>')
     html += ('<div class="leaflet-actions">'
-             '<a class="button" href="/assets/leaflet/takuapa-walk-leaflet.pdf" target="_blank" rel="noopener">โหลด PDF สำหรับพิมพ์</a>'
+             '<a class="button" href="/assets/leaflet/takuapa-walk-leaflet.pdf" target="_blank" rel="noopener">โหลด PDF สำหรับพิมพ์ · 7.6 MB</a>'
              '<a class="text-link" href="/rest/">กลับไปหน้ากินเที่ยว ↗</a>'
              '</div>')
     html += ('<aside class="source"><h2>ที่มาของแผ่นพับ</h2>'
@@ -320,7 +328,9 @@ def render_news():
         summary = esc(n.get("summary_th", ""))
         outlet = esc(n.get("outlet", ""))
         url_link = esc(n.get("url", ""))
-        link = f'<a class="news-out" href="{url_link}" target="_blank" rel="noopener">อ่านข่าวต้นทาง ↗</a>' if url_link else ''
+        link = (f'<span class="news-out news-out-offline">ข่าวต้นทางถูกถอดออกแล้ว · ตรวจเมื่อ 8 ก.ย. 2569</span>'
+                if is_dead(url_link) else
+                f'<a class="news-out" href="{url_link}" target="_blank" rel="noopener">อ่านข่าวต้นทาง ↗</a>') if url_link else ''
         
         items_html += f'<article class="news-item" data-place="{esc(n.get("place_name",""))}" data-year="{y}"><time datetime="{d}">{d_th}</time><div class="news-content"><h2>{title}</h2><p>{summary}</p><div class="news-meta">{place_link}{" · " if place_link and outlet else ""}{outlet}</div>{link}</div></article>'
         
@@ -352,11 +362,30 @@ _short_th = json.loads((DATA/'seo-titles-th.json').read_text(encoding='utf-8'))
 for story in stories.get_all_stories():
  route = story.get('route') or f"/stories/{story['id']}/"
  page(route, _short_th.get(story['id'], story['title']), story['dek'], stories.article(story, {'byid': byid}))
-page('/rest/', 'ของกินตะกั่วป่า คาเฟ่ และจุดแวะพัก', 'ร้านอาหารและคาเฟ่ตะกั่วป่าที่มีคนไปมาเองแล้ว ของกินตะกั่วป่าและของฝากขึ้นชื่อ พร้อมเวลาเปิดและพิกัดนำทาง', render_rest())
 
 (OUT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join(f'<url><loc>{esc(BASE+p)}</loc><lastmod>{date.today().isoformat()}</lastmod></url>' for p in PAGES)+'</urlset>',encoding='utf-8')
 for name in ['NotoSerifThai','IBMPlexSansThaiLooped-Regular','CormorantGaramond']:
  target=OUT/f'assets/{name}.woff2'
  if not target.exists():
-  opts=subset.Options();opts.flavor='woff2';font=subset.load_font(str(OUT/f'assets/{name}.ttf'),opts); sub=subset.Subsetter(options=opts);sub.populate(unicodes=list(range(0x20,0x180))+list(range(0xE00,0xE80))+list(range(0x2000,0x2070))+[0x2197]);sub.subset(font);subset.save_font(font,str(target),opts)
+  opts=subset.Options();opts.flavor='woff2';font=subset.load_font(str(ROOT/f'fonts-src/{name}.ttf'),opts); sub=subset.Subsetter(options=opts);sub.populate(unicodes=list(range(0x20,0x180))+list(range(0xE00,0xE80))+list(range(0x2000,0x2070))+[0x2197]);sub.subset(font);subset.save_font(font,str(target),opts)
 print(f'Built {len(PAGES)} pages, 20 places, 7 traditions, 59 directory entries. Original municipal image map. Local preview: {BASE}/')
+
+# Reserve image space in every generated page, including custom HTML blocks.
+_IMG_RE = re.compile(r'<img\b(?P<attrs>[^>]*?)\bsrc="(?P<src>[^"]+)"(?P<tail>[^>]*)>', re.I)
+for _fp in OUT.rglob('*.html'):
+ _html = _fp.read_text(encoding='utf-8')
+ def _dimensions(m):
+  if 'width=' in (m.group('attrs') + m.group('tail')) or not m.group('src').startswith('/assets/'):
+   return m.group(0)
+  _asset = OUT / m.group('src').split('?', 1)[0].removeprefix('/assets/')
+  if not _asset.exists(): return m.group(0)
+  try: _w, _h = Image.open(_asset).size
+  except Exception: return m.group(0)
+  return f'<img{m.group("attrs")}src="{m.group("src")}" width="{_w}" height="{_h}"{m.group("tail")}>'
+ _updated = _IMG_RE.sub(_dimensions, _html)
+ if _updated != _html: _fp.write_text(_updated, encoding='utf-8')
+for _fp in OUT.rglob('*.html'):
+ _html = _fp.read_text(encoding='utf-8')
+ _html = _html.replace('src="/assets/leaflet/leaflet-page-1.webp"', 'src="/assets/leaflet/leaflet-page-1.webp"').replace('src="/assets/leaflet/leaflet-page-2.webp"', 'src="/assets/leaflet/leaflet-page-2.webp"')
+ _html = _html.replace('width="1400">', 'width="1325" height="884">')
+ _fp.write_text(_html, encoding='utf-8')

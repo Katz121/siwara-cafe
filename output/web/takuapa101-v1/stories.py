@@ -8,6 +8,7 @@ from pathlib import Path
 import json
 import glob
 import os
+from dead_sources import source_link
 
 # ---- Photo registry guard ----
 # Nothing renders a photograph unless the registry says that photo depicts this
@@ -36,13 +37,19 @@ def photo_for(subject, file=None, era=None):
     return None
 
 
+def registry_caption(photo, lang='th'):
+    """Return captions only from the registry; story JSON cannot override them."""
+    key = 'caption_en' if lang == 'en' else 'caption_th'
+    return (photo or {}).get(key, '')
+
+
 ROOT = Path(__file__).parent
 AUDIT_DIR = ROOT / "research" / "2026-09-07-history"
 AUDIT_DIR.mkdir(parents=True, exist_ok=True)
 
 SOURCES = {
     "onep-html": {"title": "เมืองเก่าตะกั่วป่า", "publisher": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม (สผ.)", "url": "https://culturalenvi.onep.go.th/site/detail/4428", "locator": "หน้าเว็บหัวข้อเมืองเก่าตะกั่วป่า", "authority": "official"},
-    "onep-pdf": {"title": "เอกสารเมืองเก่าตะกั่วป่า", "publisher": "สผ.", "url": "https://nced.onep.go.th/opendata/2568/oldtown36_announce/takuapa.pdf", "locator": "PDF หน้า 11–13, 55–56, 58", "authority": "official"},
+    "onep-pdf": {"title": "เอกสารเมืองเก่าตะกั่วป่า", "publisher": "สผ.", "url": "https://nced.onep.go.th/opendata/2568/oldtown36_announce/takuapa.pdf", "locator": "PDF หน้า 11-13, 55-56, 58", "authority": "official"},
     "finearts-thungtuk": {"title": "ทุ่งตึกเมืองท่าการค้าโบราณ", "publisher": "กรมศิลปากร", "url": "https://www.finearts.go.th/architecture/view/35708-ทุ่งตึกเมืองท่าการค้าโบราณ", "locator": "บทความแหล่งโบราณคดีทุ่งตึก", "authority": "official"},
     "sac-wall": {"title": "ฐานข้อมูลแหล่งโบราณคดี: เมืองตะกั่วป่า", "publisher": "ศูนย์มานุษยวิทยาสิรินธร", "url": "https://archaeology.sac.or.th/archaeology/874", "locator": "รายการแหล่งโบราณคดีและข้อสันนิษฐานกำแพง", "authority": "official"},
     "dcp-food": {"title": "มรดกภูมิปัญญาทางวัฒนธรรมของชาติ: อาหารบาบ๋า", "publisher": "กรมส่งเสริมวัฒนธรรม", "url": "https://book.culture.go.th/newbook/ich/ich2013.pdf", "locator": "หนังสือมรดกภูมิปัญญาฯ พ.ศ. 2556 หน้า 124 (ฉบับพิมพ์) / PDF หน้า 133", "authority": "official"},
@@ -63,7 +70,7 @@ STORIES = [
     {
         "id": "architecture", "group": "บ้านเก่าและสถาปัตยกรรม", "title": "เรือนแถว ถนน และอาคารที่จำเมืองไว้", "dek": "อ่านเมืองผ่านอาคารการค้า โรงเรียน สะพาน และร่องรอยกำแพง · แต่ละชิ้นมีระดับหลักฐานไม่เท่ากัน", "route": "/stories/architecture/", "sources": ["onep-pdf", "sac-wall"], "places": ["tao-ming", "iron-bridge", "khun-in", "governor-wall", "culture-street"],
         "sections": [
-            ("เรือนแถวของย่านการค้า", "เอกสาร สผ. ระบุอาคารเรือนแถวแบบชิโน–โปรตุกีสบนถนนอุดมธาราและศรีเมืองตะกั่วป่า และเชื่อมรูปแบบย่านกับการค้าและเหมืองแร่ · นี่เป็นคำอธิบายระดับย่าน ไม่ใช่การยืนยันอายุของบ้านแต่ละหลัง"),
+            ("เรือนแถวของย่านการค้า", "เอกสาร สผ. ระบุอาคารเรือนแถวแบบชิโน-โปรตุกีสบนถนนอุดมธาราและศรีเมืองตะกั่วป่า และเชื่อมรูปแบบย่านกับการค้าและเหมืองแร่ · นี่เป็นคำอธิบายระดับย่าน ไม่ใช่การยืนยันอายุของบ้านแต่ละหลัง"),
             ("เต๋าหมิงและสะพานเหล็ก", "รายงานเดียวกันระบุว่าโรงเรียนเต๋าหมิงสร้าง พ.ศ. 2465 ด้วยเงินของพ่อค้าจีนจากหลายเมือง และสะพานเหล็กบุญสูงสร้าง พ.ศ. 2511 โดยบริษัทจุติบุญสูง พร้อมการนำเหล็กจากเรือขุดแร่ที่เลิกใช้มาใช้ซ้ำ"),
             ("สิ่งที่ต้องแยกคำว่า ‘สร้าง’ กับ ‘ซ่อม’", "ข้อมูลของขุนอินระบุการซ่อมแซมใน พ.ศ. 2524 ขณะที่ทะเบียนสถานที่ของโครงการใช้ปี พ.ศ. 2460 เป็นปีสร้าง · สองข้อมูลนี้อาจพูดถึงคนละเหตุการณ์ จึงไม่ควรรวมเป็นปีเดียวโดยไม่อธิบาย"),
             ("กำแพงที่เป็นข้อสันนิษฐาน", "ฐานข้อมูลโบราณคดีของศูนย์มานุษยวิทยาสิรินธรใช้ถ้อยคำเชิงข้อสันนิษฐานเกี่ยวกับช่วงสร้างกำแพงเมือง ส่วนรายงาน สผ. กล่าวถึงแนวกำแพงที่สูญหายบางส่วนจากการขยายถนน · เว็บไซต์จึงแสดงเรื่องนี้เป็นหลักฐานที่ต้องอ่านพร้อมคำกำกับ"),
@@ -80,7 +87,7 @@ STORIES = [
     {
         "id": "food-people", "group": "ผู้คนและรสชาติ", "title": "รสชาติของชุมชนบาบ๋าและตลาดเก่า", "dek": "อาหารเป็นทั้งความทรงจำของครัวเรือนและหลักฐานของการแลกเปลี่ยน · อ่านเมนูอย่างเคารพแหล่งที่มา", "route": "/stories/food-people/", "sources": ["dcp-food", "fda-taosor", "dit-market"], "places": ["food-center", "culture-street"],
         "sections": [
-            ("ตะกั่วป่าในแผนที่อาหารบาบ๋า", "หนังสือมรดกภูมิปัญญาทางวัฒนธรรมของกรมส่งเสริมวัฒนธรรมระบุชื่อตะกั่วป่าไว้ในกลุ่มชุมชนอาหารบาบ๋า–เปอรานากัน · การอ้างนี้บอกถึงบริบททางวัฒนธรรม ไม่ได้ยืนยันว่าร้านหรือเมนูทุกรายการมีสูตรเดียวกัน"),
+            ("ตะกั่วป่าในแผนที่อาหารบาบ๋า", "หนังสือมรดกภูมิปัญญาทางวัฒนธรรมของกรมส่งเสริมวัฒนธรรมระบุชื่อตะกั่วป่าไว้ในกลุ่มชุมชนอาหารบาบ๋า-เปอรานากัน · การอ้างนี้บอกถึงบริบททางวัฒนธรรม ไม่ได้ยืนยันว่าร้านหรือเมนูทุกรายการมีสูตรเดียวกัน"),
             ("เต้าส้อสองชั้น", "เอกสารภาคสนามของสำนักงานคณะกรรมการอาหารและยากล่าวถึงเต้าส้อสองชั้นของจังหวัดพังงาและการรับรองผลิตภัณฑ์บางรายการ · เว็บไซต์ไม่เติมชื่อผู้ผลิต ราคา หรือเวลาขายที่ไม่ได้อยู่ในเอกสาร"),
             ("ตลาดเป็นพื้นที่ของการพบกัน", "ระเบียนของกรมการค้าภายในใช้เป็นหลักฐานประกอบเรื่องย่านตลาดและการค้าบนถนนศรีเมืองตะกั่วป่าและอุดมธารา · รายชื่อร้านในเมนู ‘กินและของฝาก’ ยังคงเป็นรายชื่อจากเอกสารเทศบาล จึงควรตรวจสอบสถานะก่อนเดินทาง"),
             ("ศิวรา คาเฟ่ในระบบเรื่องเล่า", "ศิวรา คาเฟ่เป็นผู้จัดทำตะกั่วป่า 101 และอยู่ในหมวดเครื่องดื่มของเว็บไซต์เพื่อให้ผู้อ่านแยกบทบาทผู้จัดทำออกจากข้อมูลประวัติศาสตร์ได้ชัดเจน · ข้อมูลการเปิดบริการและเมนูให้ตรวจจากเว็บไซต์ของร้านโดยตรง"),
@@ -115,7 +122,7 @@ def get_all_stories():
     return result
 
 def _source_list(ids):
-    return '<ol class="story-sources">' + ''.join(f'<li><a href="{escape(SOURCES[i]["url"])}" rel="noopener">{escape(SOURCES[i]["title"])}</a> · {escape(SOURCES[i]["publisher"])} · {escape(SOURCES[i]["locator"])}</li>' for i in ids) + '</ol>'
+    return '<ol class="story-sources">' + ''.join(f'<li>{source_link(SOURCES[i]["url"], escape(SOURCES[i]["title"]))} · {escape(SOURCES[i]["publisher"])} · {escape(SOURCES[i]["locator"])}</li>' for i in ids) + '</ol>'
 
 def _place_links(ids, ctx):
     return '<div class="story-place-links">' + ''.join(f'<a href="/places/{i}/">{escape(ctx["byid"][i]["name_th"])}</a>' for i in ids if i in ctx['byid']) + '</div>'
@@ -179,7 +186,8 @@ def article(story, ctx):
     if hp:
         used_images.add(hp["file"])
     if hp:
-        hero_html = f'<figure class="hero-photo-v2"><img src="{escape(hp["file"])}" alt="{escape(hp.get("caption_th",""))}" loading="eager"><figcaption><span>{escape(hp.get("caption_th",""))}</span><span class="credit">{escape(hp.get("credit",""))}</span></figcaption></figure>'
+        cap = registry_caption(hp)
+        hero_html = f'<figure class="hero-photo-v2"><img src="{escape(hp["file"])}" alt="{escape(cap)}" loading="eager"><figcaption><span>{escape(cap)}</span><span class="credit">{escape(hp.get("credit",""))}</span></figcaption></figure>'
     else:
         ill = illustration_for(story, ctx)
         if ill:
@@ -215,7 +223,8 @@ def article(story, ctx):
         if sp:
             used_images.add(sp["file"])
         if sp:
-            sec_content += f'<figure class="section-photo-v2"><img src="{escape(sp["file"])}" alt="{escape(sp.get("caption_th",""))}" loading="lazy"><figcaption><span>{escape(sp.get("caption_th",""))}</span><span class="credit">{escape(sp.get("credit",""))}</span></figcaption></figure>'
+            cap = registry_caption(sp)
+            sec_content += f'<figure class="section-photo-v2"><img src="{escape(sp["file"])}" alt="{escape(cap)}" loading="lazy"><figcaption><span>{escape(cap)}</span><span class="credit">{escape(sp.get("credit",""))}</span></figcaption></figure>'
         
         for p in sec.get("paragraphs", []):
             sec_content += f'<p>{escape(p)}</p>'
@@ -241,7 +250,7 @@ def article(story, ctx):
         items = ''
         for it in ev.get("items", []):
             st = it.get("status", "")
-            items += f'<li><div class="ev-claim">{escape(it.get("claim_th",""))}</div><div class="ev-status {escape(st.lower())}">{escape(st)}</div><div class="ev-explain">{escape(it.get("explain_th",""))} <a href="{escape(it.get("source_url",""))}" target="_blank" rel="noopener">อ้างอิง ↗</a></div></li>'
+            items += f'<li><div class="ev-claim">{escape(it.get("claim_th",""))}</div><div class="ev-status {escape(st.lower())}">{escape(st)}</div><div class="ev-explain">{escape(it.get("explain_th",""))} {source_link(it.get("source_url",""), "อ้างอิง ↗")}</div></li>'
         ev_html = f'<aside class="evidence-box-v2"><h3>{escape(ev.get("heading_th",""))}</h3><ul class="ev-items-v2">{items}</ul></aside>'
 
     places_html = ''
@@ -251,7 +260,7 @@ def article(story, ctx):
             if pid in ctx["byid"]:
                 pr = ctx["byid"][pid]
                 pic_html = ctx["pic"](pid) if "pic" in ctx else ""
-                cards += f'<div class="place-card-mini">{pic_html}<div><h4>{escape(pr["name_th"])}</h4><button class="button button-outline" data-trip-add="{escape(pid)}">เพิ่มลงทริป</button></div></div>'
+                cards += f'<div class="place-card-mini">{pic_html}<div><h3>{escape(pr["name_th"])}</h3><button class="button button-outline" data-trip-add="{escape(pid)}">เพิ่มลงทริป</button></div></div>'
         places_html = f'<section class="story-places-v2"><h2>ไปดูของจริงได้ที่ไหน</h2><div class="mini-cards-v2">{cards}</div></section>'
 
     unknowns = story.get("unknowns", [])
@@ -264,11 +273,11 @@ def article(story, ctx):
     src_lis = ''
     for s in sources:
         if isinstance(s, dict):
-            src_lis += f'<li><cite>{escape(s.get("title",""))}</cite> · {escape(s.get("publisher",""))} · {escape(s.get("locator",""))} · <a href="{escape(s.get("url",""))}" target="_blank" rel="noopener">ดูแหล่งที่มา</a> (เข้าถึง {escape(s.get("accessed",""))})</li>'
+            src_lis += f'<li><cite>{escape(s.get("title",""))}</cite> · {escape(s.get("publisher",""))} · {escape(s.get("locator",""))} · {source_link(s.get("url",""), "ดูแหล่งที่มา")} (เข้าถึง {escape(s.get("accessed",""))})</li>'
         else:
             if s in SOURCES:
                 src = SOURCES[s]
-                src_lis += f'<li><cite>{escape(src["title"])}</cite> · {escape(src["publisher"])} · {escape(src["locator"])} · <a href="{escape(src["url"])}" target="_blank" rel="noopener">ดูแหล่งที่มา</a></li>'
+                src_lis += f'<li><cite>{escape(src["title"])}</cite> · {escape(src["publisher"])} · {escape(src["locator"])} · {source_link(src["url"], "ดูแหล่งที่มา")}</li>'
     sources_html = f'<section class="story-sources-v2"><h2>แหล่งข้อมูล</h2><ol>{src_lis}</ol></section>'
 
     return f'<div class="story-article-v2">{header}{hero_html}<div class="story-layout-v2"><div class="story-main-v2">{lede_html}{sections_html}{places_html}{story_outro(story.get("id"))}{un_html}{sources_html}</div><div class="story-sidebar-v2">{ev_html}{toc_html}</div></div></div>'

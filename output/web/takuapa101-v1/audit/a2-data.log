@@ -1,0 +1,1165 @@
+ตรวจเสร็จและเขียนรายงานแล้วที่ [audit/a2-data.md](D:/Siwaracafeweb/output/web/takuapa101-v1/audit/a2-data.md)
+
+สรุปสั้น ๆ:
+
+- JSON 103 ไฟล์ parse ผ่านทั้งหมด · ไม่พบไฟล์ว่างหรือ BOM
+- พบ ID อ้างถึงที่ไม่มีใน `places-enriched.json` ใน `guide-picks` และ routes
+- รูปในทะเบียนมีไฟล์จริงครบ
+- พบสถานที่ไม่มี geo 5 รายการ
+- จำนวน 20 สถานที่และ 7 ประเพณีตรง
+- จำนวน 59 รายการไม่ตรงกับข้อมูลจริง (ข้อมูลร้านมี 49 รายการ)
+
+--ERR--
+OpenAI Codex v0.153.4
+--------
+workdir: D:\Siwaracafeweb\output\web\takuapa101-v1
+model: gpt-5.6-luna
+provider: openai
+approval: never
+sandbox: danger-full-access
+reasoning effort: low
+reasoning summaries: none
+session id: 01a080b1-4bcc-72b1-a1c9-1ee8ede67e9b
+--------
+user
+อ่าน `audit/SPEC.md` ให้ครบก่อนลงมือ แล้วทำตามกฎทุกข้อ โดยเฉพาะข้อห้ามแก้ไฟล์และห้ามแต่งปัญหา
+งานนี้ขอบเขตแคบ ทำให้จบใน 15 นาที · ถ้าตรวจข้อไหนไม่ได้ ให้เขียนว่าตรวจไม่ได้เพราะอะไร แล้วไปข้อถัดไป
+เสิร์ฟไฟล์ด้วย `python -m http.server 8799 --directory site` แล้วเปิด http://127.0.0.1:8799 ถ้าต้องใช้เบราว์เซอร์ (Playwright ติดตั้งแล้ว)
+
+ตรวจความสอดคล้องของไฟล์ข้อมูล (งานอ่านไฟล์ล้วน ไม่ต้องเปิดเน็ต)
+1. `data/*.json` ทุกไฟล์ parse ผ่านไหม มีไฟล์ว่างหรือ BOM ไหม
+2. id ของสถานที่ที่อ้างถึงใน stories, routes, guide-picks, map-points
+   มีอยู่จริงใน `places-enriched.json` ทุกตัวไหม · ลิสต์ id ที่อ้างถึงแต่ไม่มี
+3. `data/photo-registry.json` · ไฟล์รูปที่อ้างถึงมีอยู่จริงใน `site/assets/` ทุกใบไหม
+   และมีรูปใน assets ที่ไม่ได้อยู่ในทะเบียนแต่ถูกใช้บนหน้าเว็บไหม
+4. ตรวจว่ามีสถานที่ไหนไม่มี geo, ไม่มีรูป, หรือไม่มี source เลย · ลิสต์ให้ครบ
+5. ตรวจว่าจำนวนที่เขียนบนหน้าเว็บ (20 สถานที่, 7 ประเพณี, 59 รายการ) ตรงกับข้อมูลจริงไหม
+เขียนรายงานที่ `audit/a2-data.md`
+codex
+ผมจะอ่าน `audit/SPEC.md` ให้ครบก่อน แล้วตรวจเฉพาะไฟล์ในขอบเขตที่ระบุโดยไม่แก้ข้อมูลหรือเว็บ จากนั้นจะเขียนผลลง `audit/a2-data.md` เท่านั้น และจะระบุข้อที่ตรวจไม่ได้พร้อมเหตุผลหากมีครับ
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'Get-Content -Raw -LiteralPath audit/SPEC.md' in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 66ms:
+# à¸‡à¸²à¸™à¸•à¸£à¸§à¸ˆà¹€à¸§à¹‡à¸š takuapa101.com Â· à¸£à¸­à¸šà¸•à¸£à¸§à¸ˆà¸„à¸§à¸²à¸¡à¸–à¸¹à¸à¸•à¹‰à¸­à¸‡
+
+à¹‚à¸Ÿà¸¥à¹€à¸”à¸­à¸£à¹Œà¸‡à¸²à¸™ `D:\Siwaracafeweb\output\web\takuapa101-v1`
+à¹€à¸§à¹‡à¸šà¸ˆà¸£à¸´à¸‡ `https://takuapa101.com` Â· à¹„à¸—à¸¢ 45 à¸«à¸™à¹‰à¸² Â· à¸­à¸±à¸‡à¸à¸¤à¸© 44 à¸«à¸™à¹‰à¸²
+
+## à¸à¸Žà¸à¸²à¸£à¸—à¸³à¸‡à¸²à¸™ (à¸—à¸¸à¸à¸„à¸™à¸•à¹‰à¸­à¸‡à¸­à¹ˆà¸²à¸™)
+
+1. **à¸«à¹‰à¸²à¸¡à¹à¸à¹‰à¹„à¸Ÿà¸¥à¹Œà¹ƒà¸” à¹†** à¸‡à¸²à¸™à¸™à¸µà¹‰à¸„à¸·à¸­à¸•à¸£à¸§à¸ˆà¹à¸¥à¸°à¸£à¸²à¸¢à¸‡à¸²à¸™à¹€à¸—à¹ˆà¸²à¸™à¸±à¹‰à¸™ Â· à¹€à¸ˆà¹‰à¸²à¸‚à¸­à¸‡à¹€à¸§à¹‡à¸šà¸ˆà¸°à¹€à¸›à¹‡à¸™à¸„à¸™à¸•à¸±à¸”à¸ªà¸´à¸™à¹ƒà¸ˆà¹à¸à¹‰
+2. **à¸—à¸¸à¸à¸‚à¹‰à¸­à¸—à¸µà¹ˆà¸£à¸²à¸¢à¸‡à¸²à¸™à¸•à¹‰à¸­à¸‡à¸¡à¸µà¸«à¸¥à¸±à¸à¸à¸²à¸™** à¸£à¸°à¸šà¸¸à¹„à¸Ÿà¸¥à¹Œ à¸šà¸£à¸£à¸—à¸±à¸” à¸«à¸£à¸·à¸­ URL à¸—à¸µà¹ˆà¸•à¸£à¸§à¸ˆà¹€à¸ˆà¸­ Â· à¸«à¹‰à¸²à¸¡à¹€à¸‚à¸µà¸¢à¸™à¸§à¹ˆà¸² "à¸­à¸²à¸ˆà¸ˆà¸°" à¸¥à¸­à¸¢ à¹†
+3. **à¹à¸¢à¸à¸„à¸§à¸²à¸¡à¸£à¸¸à¸™à¹à¸£à¸‡** à¹€à¸›à¹‡à¸™ 3 à¸£à¸°à¸”à¸±à¸š
+   - `à¸œà¸´à¸”` = à¸‚à¹‰à¸­à¸¡à¸¹à¸¥à¸œà¸´à¸” à¸¥à¸´à¸‡à¸à¹Œà¹€à¸ªà¸µà¸¢ à¹‚à¸„à¹‰à¸”à¸žà¸±à¸‡ à¸œà¸¹à¹‰à¹ƒà¸Šà¹‰à¹€à¸ˆà¸­à¸›à¸±à¸à¸«à¸²à¸ˆà¸£à¸´à¸‡
+   - `à¸„à¸§à¸£à¹à¸à¹‰` = à¹„à¸¡à¹ˆà¸œà¸´à¸”à¹à¸•à¹ˆà¸—à¸³à¹ƒà¸«à¹‰à¸”à¸µà¸à¸§à¹ˆà¸²à¸™à¸µà¹‰à¹„à¸”à¹‰à¸Šà¸±à¸”à¹€à¸ˆà¸™
+   - `à¸‚à¹‰à¸­à¸ªà¸±à¸‡à¹€à¸à¸•` = à¹€à¸£à¸·à¹ˆà¸­à¸‡à¸£à¸ªà¸™à¸´à¸¢à¸¡à¸«à¸£à¸·à¸­à¸—à¸²à¸‡à¹€à¸¥à¸·à¸­à¸
+4. **à¸«à¹‰à¸²à¸¡à¸£à¸²à¸¢à¸‡à¸²à¸™à¸ªà¸´à¹ˆà¸‡à¸—à¸µà¹ˆà¸¢à¸±à¸‡à¹„à¸¡à¹ˆà¹„à¸”à¹‰à¸•à¸£à¸§à¸ˆà¸ˆà¸£à¸´à¸‡** à¸–à¹‰à¸²à¸•à¸£à¸§à¸ˆà¹„à¸¡à¹ˆà¹„à¸”à¹‰à¹ƒà¸«à¹‰à¹€à¸‚à¸µà¸¢à¸™à¸§à¹ˆà¸²à¸•à¸£à¸§à¸ˆà¹„à¸¡à¹ˆà¹„à¸”à¹‰à¹€à¸žà¸£à¸²à¸°à¸­à¸°à¹„à¸£
+5. à¸–à¹‰à¸²à¹„à¸¡à¹ˆà¹€à¸ˆà¸­à¸›à¸±à¸à¸«à¸²à¹ƒà¸™à¸«à¸±à¸§à¸‚à¹‰à¸­à¹„à¸«à¸™ à¹ƒà¸«à¹‰à¹€à¸‚à¸µà¸¢à¸™à¸§à¹ˆà¸² "à¸•à¸£à¸§à¸ˆà¹à¸¥à¹‰à¸§à¹„à¸¡à¹ˆà¸žà¸šà¸›à¸±à¸à¸«à¸²" à¸žà¸£à¹‰à¸­à¸¡à¸šà¸­à¸à¸§à¹ˆà¸²à¸•à¸£à¸§à¸ˆà¸­à¸°à¹„à¸£à¹„à¸›à¸šà¹‰à¸²à¸‡
+   **à¸­à¸¢à¹ˆà¸²à¹à¸•à¹ˆà¸‡à¸›à¸±à¸à¸«à¸²à¸‚à¸¶à¹‰à¸™à¸¡à¸²à¹€à¸žà¸·à¹ˆà¸­à¹ƒà¸«à¹‰à¸¡à¸µà¸­à¸°à¹„à¸£à¸£à¸²à¸¢à¸‡à¸²à¸™**
+6. à¹€à¸‚à¸µà¸¢à¸™à¸£à¸²à¸¢à¸‡à¸²à¸™à¹€à¸›à¹‡à¸™à¸ à¸²à¸©à¸²à¹„à¸—à¸¢ à¹ƒà¸Šà¹‰ `Â·` à¹à¸—à¸™ em-dash Â· à¹€à¸‚à¸µà¸¢à¸™à¹„à¸Ÿà¸¥à¹Œà¹€à¸›à¹‡à¸™ UTF-8 à¹€à¸—à¹ˆà¸²à¸™à¸±à¹‰à¸™
+
+## à¸šà¸£à¸´à¸šà¸—à¸—à¸µà¹ˆà¸•à¹‰à¸­à¸‡à¸£à¸¹à¹‰à¸à¹ˆà¸­à¸™à¸•à¸£à¸§à¸ˆ
+
+à¹€à¸§à¹‡à¸šà¸™à¸µà¹‰à¸•à¸±à¹‰à¸‡à¹ƒà¸ˆ **à¹à¸¢à¸à¸‚à¹‰à¸­à¹€à¸—à¹‡à¸ˆà¸ˆà¸£à¸´à¸‡à¸—à¸µà¹ˆà¸¢à¸·à¸™à¸¢à¸±à¸™à¹à¸¥à¹‰à¸§à¸­à¸­à¸à¸ˆà¸²à¸à¸—à¸µà¹ˆà¸¢à¸±à¸‡à¹„à¸¡à¹ˆà¸¢à¸·à¸™à¸¢à¸±à¸™** à¸­à¸¢à¹ˆà¸²à¸‡à¸Šà¸±à¸”à¹€à¸ˆà¸™
+à¸„à¸³à¸§à¹ˆà¸² "à¸¢à¸±à¸‡à¹„à¸¡à¹ˆà¸¢à¸·à¸™à¸¢à¸±à¸™" "à¸ªà¸±à¸™à¸™à¸´à¸©à¸à¸²à¸™" "à¹à¸«à¸¥à¹ˆà¸‡à¸‚à¸±à¸”à¸à¸±à¸™" à¸—à¸µà¹ˆà¹€à¸«à¹‡à¸™à¸šà¸™à¸«à¸™à¹‰à¸²à¹€à¸§à¹‡à¸š **à¹„à¸¡à¹ˆà¹ƒà¸Šà¹ˆà¸‚à¹‰à¸­à¸šà¸à¸žà¸£à¹ˆà¸­à¸‡**
+à¹à¸•à¹ˆà¹€à¸›à¹‡à¸™à¸ªà¸´à¹ˆà¸‡à¸—à¸µà¹ˆà¸•à¸±à¹‰à¸‡à¹ƒà¸ˆà¹ƒà¸ªà¹ˆ Â· à¸­à¸¢à¹ˆà¸²à¸£à¸²à¸¢à¸‡à¸²à¸™à¸§à¹ˆà¸²à¹€à¸›à¹‡à¸™à¸›à¸±à¸à¸«à¸²
+
+à¸—à¸³à¸™à¸­à¸‡à¹€à¸”à¸µà¸¢à¸§à¸à¸±à¸™ à¸Šà¸·à¹ˆà¸­à¸«à¸™à¹ˆà¸§à¸¢à¸‡à¸²à¸™à¸£à¸²à¸Šà¸à¸²à¸£à¹„à¸—à¸¢à¹ƒà¸™à¸«à¸™à¹‰à¸²à¸­à¸±à¸‡à¸à¸¤à¸©à¸—à¸µà¹ˆà¹€à¸‚à¸µà¸¢à¸™à¹€à¸›à¹‡à¸™
+`à¸ªà¸³à¸™à¸±à¸à¸‡à¸²à¸™à¸™à¹‚à¸¢à¸šà¸²à¸¢à¹à¸¥à¸°à¹à¸œà¸™... (Office of Natural Resources...)` **à¸•à¸±à¹‰à¸‡à¹ƒà¸ˆà¸„à¸‡à¸ à¸²à¸©à¸²à¹„à¸—à¸¢à¹„à¸§à¹‰**
+à¹€à¸žà¸·à¹ˆà¸­à¹ƒà¸«à¹‰à¸„à¸™à¸•à¸²à¸¡à¹„à¸›à¸«à¸²à¹€à¸­à¸à¸ªà¸²à¸£à¸•à¹‰à¸™à¸—à¸²à¸‡à¹„à¸”à¹‰ à¹„à¸¡à¹ˆà¹ƒà¸Šà¹ˆà¸„à¸³à¹à¸›à¸¥à¸•à¸à¸«à¸¥à¹ˆà¸™
+
+à¹„à¸Ÿà¸¥à¹Œà¸­à¹‰à¸²à¸‡à¸­à¸´à¸‡à¸ªà¸³à¸„à¸±à¸
+- `data/places-enriched.json` à¸‚à¹‰à¸­à¸¡à¸¹à¸¥à¸ªà¸–à¸²à¸™à¸—à¸µà¹ˆ 27 à¹à¸«à¹ˆà¸‡ à¸—à¸¸à¸ claim à¸¡à¸µ status à¹à¸¥à¸° source_url
+- `data/photo-registry.json` à¸—à¸°à¹€à¸šà¸µà¸¢à¸™à¸£à¸¹à¸› à¸à¸³à¸«à¸™à¸”à¸§à¹ˆà¸²à¸£à¸¹à¸›à¹„à¸«à¸™à¸‚à¸¶à¹‰à¸™à¸«à¸™à¹‰à¸²à¹„à¸«à¸™à¹„à¸”à¹‰
+- `data/stories/*.json` à¸šà¸—à¸„à¸§à¸²à¸¡ 5 à¸šà¸—
+- `data/guide-picks.json` à¸„à¸¹à¹ˆà¸¡à¸·à¸­à¸„à¸±à¸”à¸ªà¸£à¸£ 13 à¸£à¸²à¸¢à¸à¸²à¸£
+- `data/shops-extra.json` à¸£à¹‰à¸²à¸™à¸ˆà¸²à¸à¸à¸²à¸£à¸„à¹‰à¸™à¸«à¸² 49 à¸£à¹‰à¸²à¸™
+
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'Get-ChildItem -Recurse -File data,site | Select-Object FullName,Length | Sort-Object FullName' in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 171ms:
+
+FullName                                                                                   Length
+--------                                                                                   ------
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\calendar.json                                10622
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\card-copy.json                                7971
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\geocode-cache.json                           97454
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\geo-missing.md                                1371
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\guide-picks.json                             24535
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\details\det-01.json                   9329
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\details\det-01.log                    1719
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\details\det-02.json                   9982
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\details\det-02.log                    1897
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\details\det-03.json                   9567
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\details\det-03.log                    1832
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\details\det-04.json                   8329
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\details\det-04.log                    2146
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\details\det-05.json                   9750
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\details\det-05.log                    2921
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\details\det-06.json                  11162
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\details\det-06.log                    1751
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\details\det-07.json                   9388
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\details\det-07.log                    2510
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\details\det-08.json                   8798
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\details\det-08.log                    1887
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\details\det-09.json                   7696
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\details\det-09.log                     123
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\guide-picks.json                      6805
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\meta.json                             2519
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing.json                        114139
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-01.json            2691
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-01.log             1205
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-02.json            6510
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-02.log             2427
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-029a8c3af0.json   30013
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-029a8c3af0.log   153308
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-03.json            5820
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-03.log              877
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-04.json            9201
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-04.log              956
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-0418f67c04.log      123
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-05.json           12132
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-05.log             1319
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-06.json           16688
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-06.log             2898
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-07.log              123
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-08.json            4173
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-08.log             1761
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-09.json            4754
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-09.log             2259
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-0b57d0fc53.json   12791
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-0b57d0fc53.log   149602
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-0b6dc891ac.json   35035
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-0b6dc891ac.log   175941
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-10.log             1723
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-11.log              123
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-12.log              123
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-13.log              123
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-13b7571510.log      122
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-14.log              123
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-15.log              123
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-16.log              107
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-160f202f46.log   107896
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-17.log              121
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-179f9234a4.json   37782
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-179f9234a4.log     3076
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-18.log              121
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-19.log              121
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-1cf7139378.json   34024
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-1cf7139378.log     1603
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-20.log              120
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-20515fcd2d.log      121
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-21.json           30558
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-21.log             1676
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-22.json           24338
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-22.log             2211
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-23.json           33954
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-23.log             2626
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-24.json           28896
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-24.log             2612
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-25.json           20442
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-25.log             1185
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-26.log               48
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-27.json           19172
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-27.log             2268
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-28.log               48
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-29.json           11645
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-29.log             1491
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-2ab25b5716.json   36620
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-2ab25b5716.log   272879
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-2bbda3e954.json    6183
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-2bbda3e954.log   148228
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-30.json           23845
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-30.log             1455
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-31684062b6.json   32765
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-31684062b6.log   446330
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-3da8395d64.log      123
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-42b0c664dc.log      122
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-44dd86b4e7.json   14250
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-44dd86b4e7.log   108770
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-5939740605.json   12739
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-5939740605.log   189322
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-5fa494c890.json    7793
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-5fa494c890.log  1052678
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-6377f34506.json   27347
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-6377f34506.log   136464
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-64dd4d84aa.json   20729
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-64dd4d84aa.log     2739
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-6a6749d70b.json   24159
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-6a6749d70b.log     2271
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-6e81276424.json   34955
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-6e81276424.log   174707
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-71faa349c0.json   21579
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-71faa349c0.log   118287
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-7d58d2312d.json    7795
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-7d58d2312d.log   647578
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-7e11bd4af9.json   13126
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-7e11bd4af9.log     2766
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-899d8337a4.json   10718
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-899d8337a4.log  1174975
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-8b9e56ecd0.log      121
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-954be13ea4.json   38938
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-954be13ea4.log     1710
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-9b0ef820d5.json   18119
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-9b0ef820d5.log   126517
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-9fac7839c8.json   11225
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-9fac7839c8.log    61799
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-a7a766e7b1.json    4468
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-a7a766e7b1.log   101449
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-aae8beaad0.log      123
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-b2d98fc2a2.json   36527
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-b2d98fc2a2.log     1688
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-b6157a0d1d.json   19976
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-b6157a0d1d.log     2553
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-cb491a7c59.json    9924
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-cb491a7c59.log     2079
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-cd794a3752.json   25119
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-cd794a3752.log     1760
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-d1e16f9993.json   29311
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-d1e16f9993.log   149212
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-d6f7476421.json   15518
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-dc14f4aa94.json   25685
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-dc14f4aa94.log  1422129
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-e108f1d3a4.json   35455
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-e108f1d3a4.log   174769
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-e20bf891a2.log      123
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-e2d6b7d215.json   25829
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-e2d6b7d215.log   130137
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-e3e856dd04.json   29982
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-e3e856dd04.log   151835
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-ef02f7c8aa.log   242390
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-f0f5cbac8e.json   37666
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-f0f5cbac8e.log   186417
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-f6a5eccf51.json   33542
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-f6a5eccf51.log   170556
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\places.json                         182284
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\places-parts\part-01.json            28152
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\places-parts\part-01.log              2310
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\places-parts\part-02.json            25256
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\places-parts\part-02.log              2484
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\places-parts\part-03.json            27498
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\places-parts\part-03.log              1317
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\places-parts\part-04.json            23946
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\places-parts\part-04.log              1294
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\places-parts\part-05.json            28950
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\places-parts\part-05.log              2151
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\places-parts\part-06.json            26599
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\places-parts\part-06.log              1848
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\places-parts\part-07.json            21371
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\places-parts\part-07.log               560
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\publishers.json                       1012
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\shops.json                            8864
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\stories\architecture.json            14239
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\stories\city.json                    12747
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\stories\food-people.json             11782
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\stories\kuapapoh.json                12297
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\stories\water-trade.json             16875
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\ui.json                              31036
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\romanisation.json                        2625
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\indexnow-payload.json                         4349
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\library.json                                109393
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\links.json                                     526
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\map-gaps.md                                    793
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\map-points.json                               2081
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\news-feed.json                               24306
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\photo-permission-queue.md                    20506
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\photo-registry.json                          11872
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\photos-local.json                             6698
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\places-enriched.json                        856439
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\places-extracted.json                       377482
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\places-targets.json                          17438
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\seo-titles-en.json                             290
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\seo-titles-th.json                             719
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\shops-extra.json                             78192
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\siwara-guide.json                            25278
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\stories\architecture.json                    26820
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\stories\architecture.log                      2156
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\stories\city.json                            24804
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\stories\city.log                                48
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\stories\food-people.json                     22483
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\stories\kuapapoh.json                        25448
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\stories\kuapapoh.log                          2980
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\stories\water-trade.json                     30189
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\stories\water-trade.log                         48
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\1fe376a45dfca8f4bbddde935ca90177.txt            32
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\about\index.html                             10092
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\CormorantGaramond.ttf               1195560
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\CormorantGaramond.woff2               37792
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\culture-street.webp                  252098
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\design.css                            63200
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\design.js                             18392
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\favicon.svg                             229
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\food-center.webp                     197190
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\governor-wall.webp                   223528
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\guan-yu.webp                         166692
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\guide\guide-baan-lapp.jpg            470696
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\guide\guide-bang-deen.jpg            707830
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\guide\guide-iron-bridge.jpg          832771
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\guide\guide-jae-ouan.jpg             272952
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\guide\guide-kae-padthai.jpg          290649
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\guide\guide-lad-yai.jpg              552251
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\guide\guide-mee-talad-khwang.jpg      88077
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\guide\guide-moo-satay-kruaew.jpg     467908
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\guide\guide-old-town-street.jpg      204812
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\guide\guide-pa-da-hokkien.jpg        490668
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\guide\guide-pu-dam.jpg               306710
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\guide\guide-tam-nang.jpg            4818236
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\guide\guide-tuangrat-taosor.jpg      483554
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\IBMPlexSansThaiLooped-Regular.ttf    125080
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\IBMPlexSansThaiLooped-Regular.woff2   28808
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\iron-bridge.webp                     205780
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\khun-in.webp                         159378
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\kue-chai.webp                        210654
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\leaflet\leaflet-page-1.webp          387768
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\leaflet\leaflet-page-2.webp          300482
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\leaflet\takuapa-walk-leaflet.pdf    7932489
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\live-news.js                           4809
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\map.css                                2582
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\map.js                                 7406
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\map-points.json                       12485
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\municipal-map.png                   1871863
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\museum.webp                          189342
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\NotoSerifThai.ttf                    292188
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\NotoSerifThai.woff2                  123888
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\og\chak-phra.png                     307741
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\og\culture-street.png                437524
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\og\default.png                       287864
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\og\food-center.png                   381502
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\og\governor-wall.png                 396666
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\og\guan-yu.png                       324741
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\og\iron-bridge.png                   371178
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\og\khun-in.png                       298689
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\og\kue-chai.png                      371960
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\og\loy-krathong.png                  377205
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\og\museum.png                        364912
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\og\narai-ceremony.png                328700
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\og\new-year-alms.png                 290940
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\og\phra-narai.png                    317832
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\og\pun-thao.png                      360758
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\og\relic-procession.png              323559
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\og\riverwalk.png                     380623
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\og\rong-jae.png                      302006
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\og\ruler-ceremony.png                398471
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\og\tao-ming.png                      286867
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\og\thung-phra.png                    454149
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\og\vegetarian.png                    328329
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\og\wat-boromthat.png                 312801
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\og\wat-khuha.png                     361610
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\og\wat-kongkha.png                   334138
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\og\wat-nikorn.png                    357595
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\og\wat-pathum.png                    337692
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\og\wat-sena.png                      317757
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\photos\kuapapoh-brand.jpg            221014
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\photos\kuapapoh-doc-1.jpg            215563
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\photos\kuapapoh-doc-2.jpg            235106
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\photos\kuapapoh-history.jpg          239698
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\photos\kuapapoh-pattern.jpg           25840
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\photos\kuapapoh-port.webp             12932
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\photos\kuapapoh-wuikun.jpg           201860
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\photos\shophouse-109.webp             34846
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\photos\shophouse-305.webp             28580
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\photos\shophouse-78.webp              49016
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\photos\tao-ming-logo.jpg              26885
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\photos\tao-ming-school.jpg           286043
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\phra-narai.webp                      170916
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\pun-thao.webp                        207744
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\riverwalk.webp                       215178
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\rong-jae.webp                        178434
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\search.js                              7167
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\search-index.json                     30551
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\site.css                               9363
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\site.js                                 941
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\tao-ming.webp                        145406
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\theme.css                              6448
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\theme.js                               1517
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\thung-phra.webp                      277366
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\trip.js                                5462
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\trip-page.js                          10426
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\ui.css                                 6434
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\wat-boromthat.webp                   180208
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\wat-khuha.webp                       211502
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\wat-kongkha.webp                     211930
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\wat-nikorn.webp                      178928
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\wat-pathum.webp                      193998
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\assets\wat-sena.webp                        175580
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\eat\index.html                               91409
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\en\about\index.html                           7453
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\en\eat\index.html                            79095
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\en\index.html                                41440
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\en\leaflet\index.html                         7058
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\en\map\index.html                            28522
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\en\news\index.html                           41389
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\en\places\culture-street\index.html          35735
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\en\places\food-center\index.html             32275
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\en\places\governor-wall\index.html           30749
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\en\places\guan-yu\index.html                 30068
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\en\places\index.html                         22517
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\en\places\iron-bridge\index.html             31983
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\en\places\khun-in\index.html                 29399
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\en\places\kue-chai\index.html                26673
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\en\places\museum\index.html                  29305
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\en\places\phra-narai\index.html              29936
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\en\places\pun-thao\index.html                29566
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\en\places\riverwalk\index.html               32792
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\en\places\rong-jae\index.html                26542
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\en\places\tao-ming\index.html                34650
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\en\places\thung-phra\index.html              28240
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\en\places\wat-boromthat\index.html           32362
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\en\places\wat-khuha\index.html               26496
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\en\places\wat-kongkha\index.html             30471
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\en\places\wat-nikorn\index.html              28937
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\en\places\wat-pathum\index.html              30053
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\en\places\wat-sena\index.html                33623
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\en\rest\index.html                           29640
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\en\routes\index.html                         13220
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\en\stories\architecture\index.html           22813
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\en\stories\city\index.html                   19791
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\en\stories\food-people\index.html            19466
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\en\stories\index.html                         9795
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\en\stories\kuapapoh\index.html               24147
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\en\stories\water-trade\index.html            23538
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\en\traditions\chak-phra\index.html           11174
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\en\traditions\index.html                     12121
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\en\traditions\loy-krathong\index.html         7822
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\en\traditions\narai-ceremony\index.html       7891
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\en\traditions\new-year-alms\index.html        6914
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\en\traditions\relic-procession\index.html     8011
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\en\traditions\ruler-ceremony\index.html       7895
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\en\traditions\vegetarian\index.html           9836
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\en\trip\index.html                            5870
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\index.html                                   52162
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\leaflet\index.html                            8431
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\map\index.html                               31280
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\news\index.html                              51555
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\places\culture-street\index.html             50787
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\places\food-center\index.html                48424
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\places\governor-wall\index.html              44818
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\places\guan-yu\index.html                    43977
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\places\index.html                            26313
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\places\iron-bridge\index.html                45930
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\places\khun-in\index.html                    41675
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\places\kue-chai\index.html                   37346
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\places\museum\index.html                     41028
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\places\phra-narai\index.html                 41123
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\places\pun-thao\index.html                   45246
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\places\riverwalk\index.html                  45160
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\places\rong-jae\index.html                   40496
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\places\tao-ming\index.html                   50613
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\places\thung-phra\index.html                 40776
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\places\wat-boromthat\index.html              44832
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\places\wat-khuha\index.html                  36773
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\places\wat-kongkha\index.html                42997
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\places\wat-nikorn\index.html                 40179
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\places\wat-pathum\index.html                 43990
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\places\wat-sena\index.html                   46539
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\rest\index.html                              38760
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\robots.txt                                      70
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\routes\index.html                            16444
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\sitemap.xml                                   8119
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\stories\architecture\index.html              38830
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\stories\city\index.html                      34083
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\stories\food-people\index.html               32676
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\stories\index.html                           12699
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\stories\kuapapoh\index.html                  41363
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\stories\water-trade\index.html               39966
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\traditions\chak-phra\index.html              13371
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\traditions\index.html                        15218
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\traditions\loy-krathong\index.html            9555
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\traditions\narai-ceremony\index.html         10210
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\traditions\new-year-alms\index.html           8481
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\traditions\relic-procession\index.html       10179
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\traditions\ruler-ceremony\index.html          9943
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\traditions\vegetarian\index.html             12465
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\trip\index.html                               7052
+
+
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "python -c \"import json,glob,os; files=glob.glob('data/**/*.json',recursive=True); bad=[]; empty=[]; bom=[]; parsed={};
+for f in files:
+ b=open(f,'rb').read();
+ if not b: empty.append(f)
+ if b.startswith(b'\\\\xef\\\\xbb\\\\xbf'): bom.append(f)
+ try: parsed[f]=json.loads(b.decode('utf-8-sig'))
+ except Exception as e: bad.append((f,str(e)))
+print('JSON',len(files),'bad',bad,'empty',empty,'bom',bom)
+for f in ['data/places-enriched.json','data/stories/architecture.json','data/guide-picks.json','data/map-points.json','data/photo-registry.json']:
+ x=parsed.get(f); print(f, type(x).__name__, (list(x)[:20] if isinstance(x,dict) else len(x)))\"" in D:\Siwaracafeweb\output\web\takuapa101-v1
+ exited 1 in 83ms:
+Traceback (most recent call last):
+JSON 103 bad [] empty [] bom []
+  File "<string>", line 10, in <module>
+TypeError: object of type 'NoneType' has no len()
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "python -c \"import json,glob; P={f:json.loads(open(f,'rb').read().decode('utf-8-sig')) for f in glob.glob('data/**/*.json',recursive=True)}; [print(f,type(x).__name__, (list(x)[:15] if isinstance(x,dict) else (len(x) if isinstance(x,list) else x))) for f,x in P.items() if f in ['data/places-enriched.json','data/stories/architecture.json','data/guide-picks.json','data/map-points.json','data/photo-registry.json']]\"" in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 70ms:
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "python -c \"import json,glob,os; P={f:json.loads(open(f,'rb').read().decode('utf-8-sig')) for f in glob.glob('data/**/*.json',recursive=True)}; [print(f,type(x).__name__, (list(x)[:15] if isinstance(x,dict) else (len(x) if isinstance(x,list) else x))) for f,x in P.items() if any(f.replace('\\\\\\\\','/').endswith(s) for s in ['data/places-enriched.json','data/stories/architecture.json','data/guide-picks.json','data/map-points.json','data/photo-registry.json'])]\"" in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 67ms:
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "python -c \"import json; fs=['data/places-enriched.json','data/stories/architecture.json','data/guide-picks.json','data/map-points.json','data/photo-registry.json']; [(lambda f,x: print(f,type(x).__name__,list(x)[:15] if isinstance(x,dict) else (len(x) if isinstance(x,list) else x)))(f,json.load(open(f,encoding='utf-8-sig'))) for f in fs]\"" in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 56ms:
+data/places-enriched.json list 27
+data/stories/architecture.json dict ['id', 'group', 'title', 'dek', 'reading_minutes', 'hero_photo', 'lede', 'sections', 'pull_quotes', 'evidence_box', 'unknowns', 'places', 'sources', 'updated']
+data/guide-picks.json list 13
+data/map-points.json list 20
+data/photo-registry.json dict ['policy_th', 'reviewed_on', 'photos', 'rejected']
+
+codex
+อ่านกติกาครบแล้วครับ · หลักสำคัญคือรายงานต้องมีหลักฐานอ้างไฟล์/บรรทัดหรือ URL, ห้ามสรุปสิ่งที่ยังตรวจไม่จริง และต้องเขียนภาษาไทย UTF-8 ผมกำลังไล่ตรวจ JSON ทั้งชุด รวมถึงเทียบทะเบียนรูปกับไฟล์จริงและการใช้งานในหน้าเว็บแบบอ่านอย่างเดียวครับ
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "python -c \"import json,glob,os,re
+root='.'
+files=glob.glob('data/**/*.json',recursive=True); P={f:json.load(open(f,encoding='utf-8-sig')) for f in files}; places=json.load(open('data/places-enriched.json',encoding='utf-8-sig')); ids={p.get('id') for p in places}
+print('place_count',len(places),'ids',sorted(ids))
+for f in ['data/stories/architecture.json','data/stories/city.json','data/stories/food-people.json','data/stories/kuapapoh.json','data/stories/water-trade.json','data/guide-picks.json','data/map-points.json','data/siwara-guide.json']:
+ x=json.load(open(f,encoding='utf-8-sig'))
+ vals=[]
+ def walk(o,k=''):
+  if isinstance(o,dict):
+   for a,b in o.items():
+    if a.lower() in ('id','place_id','placeid','places','place_ids','placeids','stops','items') or 'place' in a.lower(): walk(b,a)
+  elif isinstance(o,list):
+   for b in o: walk(b,k)
+  elif isinstance(o,str) and (k and ('place' in k.lower() or k.lower() in ('id','stops','items'))): vals.append(o)
+ walk(x)
+ refs=sorted(set(v for v in vals if v in ids or v.startswith('place-') or v in ids))
+ missing=sorted(set(v for v in vals if v not in ids))
+ print(os.path.basename(f),'refs',len(refs),refs,'missing_candidates',missing[:30])
+# geo/photo/source
+missgeo=[]; missphoto=[]; misssrc=[]
+for p in places:
+ if not p.get('geo') and not (p.get('lat') is not None and p.get('lng') is not None): missgeo.append(p['id'])
+ if not any(p.get(k) for k in ['photos','photo','image','hero_photo']): missphoto.append(p['id'])
+ if not any(p.get(k) for k in ['sources','source','source_url']): misssrc.append(p['id'])
+print('missing geo',missgeo);print('missing photo',missphoto);print('missing source',misssrc)
+# registry
+reg=P['data/photo-registry.json']; photos=reg.get('photos',[]); print('registry photos',len(photos));
+for q in photos[:2]: print('photo sample',q)
+\"" in D:\Siwaracafeweb\output\web\takuapa101-v1
+ exited 1 in 76ms:
+Traceback (most recent call last):
+place_count 27 ids ['chak-phra', 'culture-street', 'food-center', 'governor-wall', 'guan-yu', 'iron-bridge', 'khun-in', 'kue-chai', 'loy-krathong', 'museum', 'narai-ceremony', 'new-year-alms', 'phra-narai', 'pun-thao', 'relic-procession', 'riverwalk', 'rong-jae', 'ruler-ceremony', 'tao-ming', 'thung-phra', 'vegetarian', 'wat-boromthat', 'wat-khuha', 'wat-kongkha', 'wat-nikorn', 'wat-pathum', 'wat-sena']
+architecture.json refs 5 ['culture-street', 'governor-wall', 'iron-bridge', 'khun-in', 'tao-ming'] missing_candidates ['architecture']
+city.json refs 3 ['governor-wall', 'riverwalk', 'wat-kongkha'] missing_candidates ['city']
+food-people.json refs 2 ['culture-street', 'food-center'] missing_candidates ['food-people']
+kuapapoh.json refs 3 ['culture-street', 'riverwalk', 'tao-ming'] missing_candidates ['kuapapoh']
+water-trade.json refs 4 ['iron-bridge', 'riverwalk', 'thung-phra', 'wat-pathum'] missing_candidates ['water-trade']
+guide-picks.json refs 0 [] missing_candidates ['guide-baan-lapp', 'guide-bang-deen', 'guide-iron-bridge', 'guide-jae-ouan', 'guide-kae-padthai', 'guide-lad-yai', 'guide-mee-talad-khwang', 'guide-moo-satay-kruaew', 'guide-old-town-street', 'guide-pa-da-hokkien', 'guide-pu-dam', 'guide-tam-nang', 'guide-tuangrat-taosor']
+map-points.json refs 20 ['culture-street', 'food-center', 'governor-wall', 'guan-yu', 'iron-bridge', 'khun-in', 'kue-chai', 'museum', 'phra-narai', 'pun-thao', 'riverwalk', 'rong-jae', 'tao-ming', 'thung-phra', 'wat-boromthat', 'wat-khuha', 'wat-kongkha', 'wat-nikorn', 'wat-pathum', 'wat-sena'] missing_candidates []
+siwara-guide.json refs 0 [] missing_candidates ['baan_lapp', 'bang_deen', 'iron_bridge', 'jae_ouan', 'kae_padthai', 'lad_yai', 'mee_talad_khwang', 'moo_satay_kruaew', 'old_town_street', 'pa_da_hokkien', 'pu_dam', 'tam_nang', 'tuangrat_taosor']
+missing geo ['rong-jae', 'new-year-alms', 'vegetarian', 'loy-krathong', 'chak-phra']
+missing photo []
+missing source []
+  File "<string>", line 27, in <module>
+KeyError: 'data/photo-registry.json'
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "python -c \"import json,glob,os,re
+reg=json.load(open('data/photo-registry.json',encoding='utf-8-sig')); print('keys',reg.keys()); print('photo keys',sorted({k for x in reg['photos'] for k in x})); print('photos',[(x.get('path') or x.get('file') or x.get('src') or x.get('url'),x.get('id')) for x in reg['photos']]);
+# counts page text and data
+for f in ['site/index.html','site/en/index.html','site/places/index.html','site/en/places/index.html','site/traditions/index.html','site/en/traditions/index.html']:
+ s=open(f,encoding='utf-8').read(); print(f,[(n,s.count(n)) for n in ['20','7','59']])
+# find likely numeric text
+for f in glob.glob('site/**/*.html',recursive=True):
+ s=open(f,encoding='utf-8').read()
+ if any(x in s for x in ['20 places','7 traditions','59']): print('match',f,[line.strip() for line in s.splitlines() if '20 places' in line or '7 traditions' in line or '59' in line][:5])
+\"" in D:\Siwaracafeweb\output\web\takuapa101-v1
+ exited 1 in 71ms:
+Traceback (most recent call last):
+  File "<string>", line 9, in <module>
+  File "C:\Users\siwat\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 166-180: character maps to <undefined>
+keys dict_keys(['policy_th', 'reviewed_on', 'photos', 'rejected'])
+photo keys ['allowed_on', 'caption_en', 'caption_th', 'credit', 'credit_en', 'depicts_th', 'era', 'file', 'license', 'license_en', 'note_th']
+photos [('/assets/photos/tao-ming-school.jpg', None), ('/assets/photos/tao-ming-logo.jpg', None), ('/assets/photos/shophouse-78.webp', None), ('/assets/photos/shophouse-109.webp', None), ('/assets/photos/shophouse-305.webp', None), ('/assets/photos/kuapapoh-port.webp', None), ('/assets/photos/kuapapoh-brand.jpg', None), ('/assets/photos/kuapapoh-history.jpg', None), ('/assets/photos/kuapapoh-wuikun.jpg', None), ('/assets/photos/kuapapoh-doc-1.jpg', None), ('/assets/photos/kuapapoh-doc-2.jpg', None), ('/assets/photos/kuapapoh-pattern.jpg', None)]
+site/index.html [('20', 13), ('7', 18), ('59', 1)]
+site/en/index.html [('20', 13), ('7', 18), ('59', 2)]
+site/places/index.html [('20', 9), ('7', 6), ('59', 0)]
+site/en/places/index.html [('20', 10), ('7', 6), ('59', 0)]
+site/traditions/index.html [('20', 2), ('7', 5), ('59', 0)]
+site/en/traditions/index.html [('20', 3), ('7', 3), ('59', 0)]
+match site\index.html 
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "python -c \"import json,glob,os,re
+for f in ['data/shops-extra.json','data/guide-picks.json','data/library.json','data/places-enriched.json','data/calendar.json']:
+ x=json.load(open(f,encoding='utf-8-sig')); print(f,len(x) if isinstance(x,list) else {k:(len(v) if isinstance(v,list) else type(v).__name__) for k,v in x.items()})
+reg=json.load(open('data/photo-registry.json',encoding='utf-8-sig')); assets=set(os.path.relpath(p,'site').replace('\\\\\\\\','/') for p in glob.glob('site/assets/**/*',recursive=True) if os.path.isfile(p)); regpaths=set(x['file'].lstrip('/') for x in reg['photos']); print('reg_missing',sorted(regpaths-assets))
+used=set();
+for f in glob.glob('site/**/*',recursive=True):
+ if os.path.isfile(f) and os.path.splitext(f)[1].lower() in ['.html','.js','.css','.json','.xml']:
+  s=open(f,encoding='utf-8',errors='ignore').read(); used|=set(m.lstrip('/') for m in re.findall(r'["'^'"\\\"\\'\\\\s]*(?:assets/)["'^'"\\\"\\'\\\\s<>)]*',s) if any(m.lower().endswith(e) for e in ['.jpg','.jpeg','.png','.webp','.svg','.gif']))
+print('used_image_paths',sorted(used)); print('used_not_registry',sorted((used & assets)-regpaths))
+\"" in D:\Siwaracafeweb\output\web\takuapa101-v1
+ exited 1 in 144ms:
+At line:9 char:133
++ ... '/') for m in re.findall(r'[^\"\'\\s]*(?:assets/)[^\"\'\\s<>)]*',s) i ...
++                                                                 ~
+Unexpected token ')' in expression or statement.
+At line:10 char:65
++ ... d(used)); print('used_not_registry',sorted((used & assets)-regpaths))
++                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The string is missing the terminator: '.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : UnexpectedToken
+ 
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "python -c \"import json,glob,os; fs=['data/shops-extra.json','data/guide-picks.json','data/library.json','data/places-enriched.json','data/calendar.json']; [(lambda f,x:print(f,len(x) if isinstance(x,list) else {k:(len(v) if isinstance(v,list) else type(v).__name__) for k,v in x.items()}))(f,json.load(open(f,encoding='utf-8-sig'))) for f in fs]; r=json.load(open('data/photo-registry.json',encoding='utf-8-sig')); a=set(os.path.relpath(p,'site').replace('\\\\\\\\','/') for p in glob.glob('site/assets/**/*',recursive=True) if os.path.isfile(p)); q=set(x['file'].lstrip('/') for x in r['photos']); print('reg_missing',sorted(q-a))\"" in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 81ms:
+data/shops-extra.json 49
+data/guide-picks.json 13
+data/library.json {'schema_version': 'int', 'title': 'str', 'source_url': 'str', 'source_sha256': 'str', 'source_pages': 'int', 'extracted_on': 'str', 'record_count': 'int', 'scope': 'str', 'rights_note_internal': 'str', 'records': 86}
+data/places-enriched.json 27
+data/calendar.json {'events': 7, 'calendar': 12}
+reg_missing ['assets/photos/kuapapoh-brand.jpg', 'assets/photos/kuapapoh-doc-1.jpg', 'assets/photos/kuapapoh-doc-2.jpg', 'assets/photos/kuapapoh-history.jpg', 'assets/photos/kuapapoh-pattern.jpg', 'assets/photos/kuapapoh-port.webp', 'assets/photos/kuapapoh-wuikun.jpg', 'assets/photos/shophouse-109.webp', 'assets/photos/shophouse-305.webp', 'assets/photos/shophouse-78.webp', 'assets/photos/tao-ming-logo.jpg', 'assets/photos/tao-ming-school.jpg']
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "python -c \"import json,glob,os; r=json.load(open('data/photo-registry.json',encoding='utf-8-sig')); a=set(os.path.relpath(p,'site').replace(os.sep,'/') for p in glob.glob('site/assets/**/*',recursive=True) if os.path.isfile(p)); q=set(x['file'].lstrip('/') for x in r['photos']); print('reg_missing',sorted(q-a)); print('assets_count',len(a))\"" in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 69ms:
+reg_missing []
+assets_count 99
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "rg -o --no-filename 'assets/["'^"'"'' )<>]+\\.(jpg|jpeg|png|webp|svg|gif)' site | Sort-Object -Unique" in D:\Siwaracafeweb\output\web\takuapa101-v1
+ exited 1 in 102ms:
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "rg -o --no-filename '/assets/["'^"'"'' )<>]+\\.(jpg|jpeg|png|webp|svg|gif)' site | Sort-Object -Unique" in D:\Siwaracafeweb\output\web\takuapa101-v1
+ exited 1 in 119ms:
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "rg -o --no-filename 'assets/["'^ ]+'"' site | Select-Object -First 100" in D:\Siwaracafeweb\output\web\takuapa101-v1
+ exited 1 in 98ms:
+assets/og/default.png"><meta
+assets/og/default.png"><meta
+assets/NotoSerifThai.woff2"
+assets/IBMPlexSansThaiLooped-Regular.woff2"
+assets/design.css"><script
+assets/design.js"
+assets/trip.js"
+assets/trip-page.js"
+assets/ui.css"><link
+assets/theme.css"><script
+assets/theme.js"></script><script
+assets/search.js"
+assets/live-news.js"
+assets/favicon.svg"
+assets/og/default.png"><meta
+assets/og/default.png"><meta
+assets/NotoSerifThai.woff2"
+assets/IBMPlexSansThaiLooped-Regular.woff2"
+assets/design.css"><script
+assets/design.js"
+assets/trip.js"
+assets/ui.css"><link
+assets/theme.css"><script
+assets/theme.js"></script><script
+assets/search.js"
+assets/live-news.js"
+assets/favicon.svg"
+assets/wat-boromthat.webp&quot;,
+assets/wat-khuha.webp&quot;,
+assets/wat-pathum.webp&quot;,
+assets/wat-kongkha.webp&quot;,
+assets/wat-nikorn.webp&quot;,
+assets/wat-sena.webp&quot;,
+assets/museum.webp&quot;,
+assets/guan-yu.webp&quot;,
+assets/pun-thao.webp&quot;,
+assets/kue-chai.webp&quot;,
+assets/rong-jae.webp&quot;,
+assets/phra-narai.webp&quot;,
+assets/thung-phra.webp&quot;,
+assets/photos/kuapapoh-port.webp&quot;,
+assets/photos/shophouse-305.webp&quot;,
+assets/iron-bridge.webp&quot;,
+assets/governor-wall.webp&quot;,
+assets/khun-in.webp&quot;,
+assets/photos/tao-ming-school.jpg&quot;,
+assets/culture-street.webp&quot;,
+assets/phra-narai.webp&quot;,
+assets/governor-wall.webp&quot;,
+assets/guan-yu.webp&quot;,
+assets/riverwalk.webp&quot;,
+assets/wat-boromthat.webp&quot;,
+assets/wat-boromthat.webp&quot;,
+assets/food-center.webp&quot;,
+assets/municipal-map.png"
+assets/municipal-map.png"
+assets/og/default.png"><meta
+assets/og/default.png"><meta
+assets/NotoSerifThai.woff2"
+assets/IBMPlexSansThaiLooped-Regular.woff2"
+assets/design.css"><script
+assets/design.js"
+assets/trip.js"
+assets/ui.css"><link
+assets/theme.css"><script
+assets/theme.js"></script><script
+assets/search.js"
+assets/live-news.js"
+assets/favicon.svg"
+assets/leaflet/leaflet-page-1.webp"
+assets/leaflet/leaflet-page-2.webp"
+assets/leaflet/takuapa-walk-leaflet.pdf"
+assets/og/default.png"><meta
+assets/og/default.png"><meta
+assets/NotoSerifThai.woff2"
+assets/IBMPlexSansThaiLooped-Regular.woff2"
+assets/design.css"><script
+assets/design.js"
+assets/trip.js"
+assets/ui.css"><link
+assets/theme.css"><script
+assets/theme.js"></script><script
+assets/search.js"
+assets/live-news.js"
+assets/favicon.svg"
+assets/tao-ming.webp"
+assets/guan-yu.webp"
+assets/khun-in.webp"
+assets/wat-boromthat.webp"
+assets/guan-yu.webp"
+assets/tao-ming.webp"
+assets/khun-in.webp"
+assets/riverwalk.webp"
+assets/culture-street.webp"
+assets/iron-bridge.webp"
+assets/food-center.webp"
+assets/tao-ming.webp"
+assets/municipal-map.png"
+assets/wat-boromthat.webp"
+assets/wat-khuha.webp"
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$used = Get-ChildItem -Recurse -File site | Where-Object { $_.Extension -in '"'.html','.js','.css','.json','.xml' } | Select-String -Pattern 'assets/["'^"'"'' )<>]+\\.(jpg|jpeg|png|webp|svg|gif)' -AllMatches | ForEach-Object { "'$_.Matches.Value -replace '"'"'^.*assets/'"','assets/' -replace '[\"''&].*"'$'"','' } | Sort-Object -Unique; "'$used -join "`n"' in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 121ms:
+assets/culture-street.webp
+assets/favicon.svg
+assets/food-center.webp
+assets/governor-wall.webp
+assets/guan-yu.webp
+assets/guide/guide-baan-lapp.jpg
+assets/guide/guide-bang-deen.jpg
+assets/guide/guide-iron-bridge.jpg
+assets/guide/guide-jae-ouan.jpg
+assets/guide/guide-kae-padthai.jpg
+assets/guide/guide-lad-yai.jpg
+assets/guide/guide-mee-talad-khwang.jpg
+assets/guide/guide-moo-satay-kruaew.jpg
+assets/guide/guide-old-town-street.jpg
+assets/guide/guide-pa-da-hokkien.jpg
+assets/guide/guide-pu-dam.jpg
+assets/guide/guide-tam-nang.jpg
+assets/guide/guide-tuangrat-taosor.jpg
+assets/iron-bridge.webp
+assets/khun-in.webp
+assets/kue-chai.webp
+assets/leaflet/leaflet-page-1.webp
+assets/leaflet/leaflet-page-2.webp
+assets/municipal-map.png
+assets/museum.webp
+assets/narai-ceremony.webp
+assets/og/chak-phra.png
+assets/og/culture-street.png
+assets/og/default.png
+assets/og/food-center.png
+assets/og/governor-wall.png
+assets/og/guan-yu.png
+assets/og/iron-bridge.png
+assets/og/khun-in.png
+assets/og/kue-chai.png
+assets/og/loy-krathong.png
+assets/og/museum.png
+assets/og/narai-ceremony.png
+assets/og/new-year-alms.png
+assets/og/phra-narai.png
+assets/og/pun-thao.png
+assets/og/relic-procession.png
+assets/og/riverwalk.png
+assets/og/rong-jae.png
+assets/og/ruler-ceremony.png
+assets/og/tao-ming.png
+assets/og/thung-phra.png
+assets/og/vegetarian.png
+assets/og/wat-boromthat.png
+assets/og/wat-khuha.png
+assets/og/wat-kongkha.png
+assets/og/wat-nikorn.png
+assets/og/wat-pathum.png
+assets/og/wat-sena.png
+assets/photos/kuapapoh-brand.jpg
+assets/photos/kuapapoh-doc-1.jpg
+assets/photos/kuapapoh-doc-2.jpg
+assets/photos/kuapapoh-history.jpg
+assets/photos/kuapapoh-pattern.jpg
+assets/photos/kuapapoh-port.webp
+assets/photos/kuapapoh-wuikun.jpg
+assets/photos/shophouse-109.webp
+assets/photos/shophouse-305.webp
+assets/photos/shophouse-78.webp
+assets/photos/tao-ming-logo.jpg
+assets/photos/tao-ming-school.jpg
+assets/phra-narai.webp
+assets/pun-thao.webp
+assets/relic-procession.webp
+assets/riverwalk.webp
+assets/rong-jae.webp
+assets/ruler-ceremony.webp
+assets/tao-ming.webp
+assets/thung-phra.webp
+assets/wat-boromthat.webp
+assets/wat-khuha.webp
+assets/wat-kongkha.webp
+assets/wat-nikorn.webp
+assets/wat-pathum.webp
+assets/wat-sena.webp
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "python -c \"import json; x=json.load(open('site/assets/search-index.json',encoding='utf-8')); print(type(x).__name__,len(x) if isinstance(x,list) else {k:(len(v) if isinstance(v,list) else type(v).__name__) for k,v in x.items()})\"" in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 67ms:
+list 91
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Select-String -Path site/index.html,site/en/index.html -Pattern '59' -Context 1,1 | ForEach-Object { \""'$($_.Path):$($_.LineNumber):$($_.Line.Trim())" }' in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 83ms:
+D:\Siwaracafeweb\output\web\takuapa101-v1\site\en\index.html:1:<!doctype html><html lang="en" data-base="" data-news-api=""><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Takua Pa Old Town Guide · Phang Nga, Thailand · Takua Pa 101</title><meta name="description" content="Things to do in Takua Pa old town: 20 places, a walking map, Peranakan shophouses, temples, shrines and where to eat. An easy day trip from Khao Lak."><meta name="robots" content="index,follow,max-image-preview:large"><meta property="og:title" content="Takua Pa Old Town Guide · Phang Nga, Thailand"><meta property="og:description" content="Things to do in Takua Pa old town: 20 places, a walking map, Peranakan shophouses, temples, shrines and where to eat. An easy day trip from Khao Lak."><meta property="og:url" content="https://takuapa101.com/"><meta property="og:type" content="website"><meta property="og:image" content="https://takuapa101.com/assets/og/default.png"><meta property="og:locale" content="en_US"><meta property="og:site_name" content="ตะกั่วป่า 101"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://takuapa101.com/assets/og/default.png"><meta name="generator" content="ตะกั่วป่า 101"><link rel="canonical" href="https://takuapa101.com/en/"><link rel="preload" href="/assets/NotoSerifThai.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/assets/IBMPlexSansThaiLooped-Regular.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="/assets/design.css"><script type="application/ld+json">[{"@context": "https://schema.org", "inLanguage": "en", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "หน้าแรก", "item": "https://takuapa101.com/"}]}, {"@context": "https://schema.org", "inLanguage": "en", "@type": "WebSite", "name": "ตะกั่วป่า 101", "url": "https://takuapa101.com/", "potentialAction": {"@type": "SearchAction", "target": {"@type": "EntryPoint", "urlTemplate": "https://takuapa101.com/places/?q={search_term_string}"}, "query-input": "required name=search_term_string"}}, {"@context": "https://schema.org", "inLanguage": "en", "@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": 1, "url": "https://takuapa101.com/places/tao-ming/"}, {"@type": "ListItem", "position": 2, "url": "https://takuapa101.com/places/guan-yu/"}, {"@type": "ListItem", "position": 3, "url": "https://takuapa101.com/places/khun-in/"}, {"@type": "ListItem", "position": 4, "url": "https://takuapa101.com/stories/city/"}, {"@type": "ListItem", "position": 5, "url": "https://takuapa101.com/stories/architecture/"}, {"@type": "ListItem", "position": 6, "url": "https://takuapa101.com/stories/water-trade/"}, {"@type": "ListItem", "position": 7, "url": "https://takuapa101.com/stories/food-people/"}, {"@type": "ListItem", "position": 8, "url": "https://takuapa101.com/stories/kuapapoh/"}, {"@type": "ListItem", "position": 9, "url": "https://takuapa101.com/places/kue-chai/"}, {"@type": "ListItem", "position": 10, "url": "https://takuapa101.com/places/thung-phra/"}, {"@type": "ListItem", "position": 11, "url": "https://takuapa101.com/places/museum/"}, {"@type": "ListItem", "position": 12, "url": "https://takuapa101.com/places/iron-bridge/"}, {"@type": "ListItem", "position": 13, "url": "https://takuapa101.com/places/wat-boromthat/"}, {"@type": "ListItem", "position": 14, "url": "https://takuapa101.com/places/wat-khuha/"}, {"@type": "ListItem", "position": 15, "url": "https://takuapa101.com/places/wat-pathum/"}, {"@type": "ListItem", "position": 16, "url": "https://takuapa101.com/places/wat-kongkha/"}, {"@type": "ListItem", "position": 17, "url": "https://takuapa101.com/places/wat-nikorn/"}, {"@type": "ListItem", "position": 18, "url": "https://takuapa101.com/places/wat-sena/"}, {"@type": "ListItem", "position": 19, "url": "https://takuapa101.com/places/pun-thao/"}, {"@type": "ListItem", "position": 20, "url": "https://takuapa101.com/places/rong-jae/"}, {"@type": "ListItem", "position": 21, "url": "https://takuapa101.com/places/governor-wall/"}, {"@type": "ListItem", "position": 22, "url": "https://takuapa101.com/places/phra-narai/"}, {"@type": "ListItem", "position": 23, "url": "https://takuapa101.com/places/riverwalk/"}, {"@type": "ListItem", "position": 24, "url": "https://takuapa101.com/places/culture-street/"}, {"@type": "ListItem", "position": 25, "url": "https://takuapa101.com/places/food-center/"}, {"@type": "ListItem", "position": 26, "url": "https://takuapa101.com/traditions/new-year-alms/"}, {"@type": "ListItem", "position": 27, "url": "https://takuapa101.com/traditions/ruler-ceremony/"}, {"@type": "ListItem", "position": 28, "url": "https://takuapa101.com/traditions/relic-procession/"}, {"@type": "ListItem", "position": 29, "url": "https://takuapa101.com/traditions/narai-ceremony/"}, {"@type": "ListItem", "position": 30, "url": "https://takuapa101.com/traditions/vegetarian/"}, {"@type": "ListItem", "position": 31, "url": "https://takuapa101.com/traditions/chak-phra/"}, {"@type": "ListItem", "position": 32, "url": "https://takuapa101.com/traditions/loy-krathong/"}]}]</script><script src="/assets/design.js" defer></script><script src="/assets/trip.js" defer></script><link rel="stylesheet" href="/assets/ui.css"><link rel="stylesheet" href="/assets/theme.css"><script src="/assets/theme.js"></script><script src="/assets/search.js" defer></script><script src="/assets/live-news.js" defer></script><meta name="theme-color" content="#203f39"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="alternate" hreflang="th" href="https://takuapa101.com/"><link rel="alternate" hreflang="en" href="https://takuapa101.com/en/"><link rel="alternate" hreflang="x-default" href="https://takuapa101.com/"></head><body class="home"><a class="skip" href="#main">Skip to content</a><header class="site-header"><a class="brand" href="/en/" aria-label="ตะกั่วป่า 101 หน้าแรก"><span class="brand-mark">101</span><span>Takua Pa<small>TAKUA PA FIELD NOTES</small></span></a><nav id="main-nav" aria-label="เมนูหลัก"><a href="/en/places/">Places</a><a href="/en/stories/">Stories</a><a href="/en/map/">Map</a><a href="/en/rest/">Eat and explore</a><a href="/en/news/">Updates</a><a href="/en/trip/">Your trip</a><a href="/en/traditions/" class="nav-more">Traditions</a><a href="/en/eat/" class="nav-more">Eat & Souvenirs</a><a href="/en/routes/" class="nav-more">Walking Routes</a><a href="/en/leaflet/" class="nav-more">Leaflet</a><a href="/en/about/" class="nav-more">About</a></nav><div class="header-tools"><a class="lang-switch" href="/" hreflang="th" lang="th">ไทย</a><button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="สลับเป็นโหมดกลางคืน"><span class="tt-night" aria-hidden="true">☾</span><span class="tt-day" aria-hidden="true">☀</span></button><button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="main-nav" aria-label="เปิดเมนู"><span class="ib-glyph" aria-hidden="true">☰</span></button><button class="icon-button" type="button" data-open-search aria-label="ค้นหาในเว็บไซต์ (กด Ctrl+K)"><span class="ib-glyph" aria-hidden="true">⌕</span></button><a class="icon-button" href="/en/trip/" aria-label="ทริปของคุณ"><span class="ib-glyph" aria-hidden="true">◫</span><span class="qs-badge" data-trip-count hidden>0</span></a><a class="header-map" href="/en/map/">Open map ↗</a></div></header><main id="main"><section class="hero"><div class="hero-topline"><span>PHANG NGA, THAILAND</span><span>Stories of the City / Issue 1</span></div><div class="hero-layout"><div class="hero-copy"><span class="hero-eyebrow"><i></i> An old town guide that invites you to walk slowly</span><h1>Takua Pa<span class="hero-title-bottom">A storytelling city<em>101</em></span></h1><p>Through shrine doors, looking at old house windows<br>And know the city a bit more at every stop</p><div class="hero-actions"><a class="button" href="#places">Choose your destination<span aria-hidden="true">↗</span></a><a class="text-link" href="/en/map/">Open map ↗</a></div><div class="hero-footnote"><span class="tiny-star" aria-hidden="true">✳</span><span>20 Places · 7 Traditions · 59 Shops<br>Compiled from Takua Pa municipal brochure</span></div></div><div class="hero-collage"><div class="collage-ring" aria-hidden="true"></div><span class="stamp">TAKUA PA<br><strong>Takua Pa</strong><br>OLD TOWN</span><a class="postcard postcard-main" href="/en/places/tao-ming/"><img src="/assets/tao-ming.webp" alt="โรงเรียนเต้าหมิง" width="1000" height="667" loading="eager"><span><b>01 / Old buildings</b> Tao Ming School ↗</span></a><a class="postcard postcard-left" href="/en/places/guan-yu/"><img src="/assets/guan-yu.webp" alt="ศาลเจ้าพ่อกวนอู ซิ่นไช่ตึ๋ง" width="1000" height="1000" loading="eager"><span>Community faith ↗</span></a><a class="postcard postcard-right" href="/en/places/khun-in/"><img src="/assets/khun-in.webp" alt="บ้านขุนอินทร์" width="1000" height="1000" loading="eager"><span>A window into the past ↗</span></a><span class="collage-note">Collect stories along the way</span><span class="collage-spark" aria-hidden="true">✳</span></div></div><div class="hero-bottom"><span>Temples & Pagodas</span><i>✳</i><span>Shrine</span><i>✳</i><span>Old house</span><i>✳</i><span>Riverside market</span><a href="#start">Start reading ↓</a></div></section><nav class="quick-start" aria-label="เริ่มต้นใช้งาน"><h2 class="visually-hidden">Start Here</h2><a class="quick-card" href="/en/map/" data-qs="map"><span class="qs-icon" aria-hidden="true"></span><span class="qs-text"><b>Open Map</b><small>See what is where</small></span></a><a class="quick-card" href="/en/places/" data-qs="places"><span class="qs-icon" aria-hidden="true"></span><span class="qs-text"><b>Where to go</b><small>20 places in the old town</small></span></a><a class="quick-card" href="/en/eat/" data-qs="eat"><span class="qs-icon" aria-hidden="true"></span><span class="qs-text"><b>What to eat</b><small>60 shops in the area</small></span></a><a class="quick-card" href="/en/trip/" data-qs="trip"><span class="qs-icon" aria-hidden="true"></span><span class="qs-text"><b>Plan my trip</b><small>Save places and follow the route</small></span><span class="qs-badge" data-trip-count hidden>0</span></a></nav><section id="start" class="section"><div class="section-heading"><div><span class="chapter">01 / Read the town</span><h2>Start from your interests</h2></div><p>Three routes to read the city · Choose stops in your own way</p></div><div class="route-cards"><a class="route-card" href="/en/routes/#route-1"><div class="route-art"><img src="/assets/wat-boromthat.webp" alt="วัดบรมธาตุคีรีเขต (วัดลุ่ม)" width="1000" height="1000" loading="lazy"><span class="route-no">01</span></div><div class="route-copy"><span class="eyebrow">Read the city through faith</span><h3>Temples and Pagodas Route</h3><span class="route-footer">6 destinations <span aria-hidden="true">↗</span></span></div></a><a class="route-card" href="/en/routes/#route-2"><div class="route-art"><img src="/assets/guan-yu.webp" alt="ศาลเจ้าพ่อกวนอู ซิ่นไช่ตึ๋ง" width="1000" height="1000" loading="lazy"><span class="route-no">02</span></div><div class="route-copy"><span class="eyebrow">Look at the story of the Chinese community</span><h3>Shrines and Vegetarian Halls Route</h3><span class="route-footer">4 destinations <span aria-hidden="true">↗</span></span></div></a><a class="route-card" href="/en/routes/#route-3"><div class="route-art"><img src="/assets/tao-ming.webp" alt="โรงเรียนเต้าหมิง" width="1000" height="667" loading="lazy"><span class="route-no">03</span></div><div class="route-copy"><span class="eyebrow">Trace buildings, trade, and people</span><h3>Old Buildings and Riverside Market Route</h3><span class="route-footer">6 destinations <span aria-hidden="true">↗</span></span></div></a><a class="route-card" href="/en/routes/#route-4"><div class="route-art"><img src="/assets/khun-in.webp" alt="บ้านขุนอินทร์" width="1000" height="1000" loading="lazy"><span class="route-no">04</span></div><div class="route-copy"><span class="eyebrow">Best for a half-day visit</span><h3>Short walk from wooden house</h3><span class="route-footer">4 destinations <span aria-hidden="true">↗</span></span></div></a></div></section><section class="section city-feed" id="city-feed"><div class="section-heading"><div><span class="chapter">02 / Read the town</span><h2>City topics and news</h2></div><p>Compiled stories and the latest updates in Takua Pa</p></div><div class="city-feed-grid"><div class="cf-stories"><h3 class="cf-title">Stories of the City</h3><div class="story-tiles"><a class="story-tile story-tile-lead" href="/en/stories/city/"><span class="sc-img"><img src="/assets/riverwalk.webp" alt="" loading="lazy"></span><span class="sc-body"><span class="chapter">Know the city</span><b>Takua Pa: The Town That Moved with the River</b><p>From an ancient settlement on the trans-peninsular route to a market and mining town · Verified facts and questions waiting to be answered.</p><small>6 minutes</small></span></a><a class="story-tile" href="/en/stories/architecture/"><span class="sc-img"><img src="/assets/culture-street.webp" alt="" loading="lazy"></span><span class="sc-body"><span class="chapter">Old houses and architecture</span><b>Buildings built with tin money and dredger steel · Architecture that remembers the town</b><p>Read Takua Pa through the shophouses on Culture Street, Boon Sung Iron Bridge, the governor's residence, and Tao Ming School · The transition embedded in brick, mortar, and steel structures</p><small>6 minutes</small></span></a><a class="story-tile" href="/en/stories/water-trade/"><span class="sc-img"><img src="/assets/iron-bridge.webp" alt="" loading="lazy"></span><span class="sc-body"><span class="chapter">Waterways and trade</span><b>From Thung Tuk to the Takua Pa River: The Day the Waterway Built the Town</b><p>The river is not just a backdrop. It is a route, a connector of people, and the determiner of the town's fate, which had to relocate due to sedimentation.</p><small>7 minutes</small></span></a><a class="story-tile" href="/en/stories/food-people/"><span class="sc-img"><img src="/assets/food-center.webp" alt="" loading="lazy"></span><span class="sc-body"><span class="chapter">People and flavors</span><b>Flavours of the Baba Community and the Old Market</b><p>Food serves as both household memories and evidence of cultural exchange · Read Takua Pa through the Baba cuisine, double-layered Tao Sor, and the Culture Street</p><small>7 minutes</small></span></a><a class="story-tile" href="/en/stories/kuapapoh/"><span class="sc-img"><img src="/assets/tao-ming.webp" alt="" loading="lazy"></span><span class="sc-body"><span class="chapter">City topics</span><b>Kuapapoh: The Day Old Houses Stand Up to Tell Their Stories</b><p>A creative space project that revived houses number 78, 109, and 305 · What the new generation tells about the town, and what history still needs to uncover</p><small>6 minutes</small></span></a></div><a class="text-link" href="/en/stories/">Read all stories ↗</a></div><div class="cf-news"><h3 class="cf-title">Latest Updates</h3><ol class="news-list" data-news-list data-news-max="4" data-news-keep="10"><li class="news-row"><span class="news-date">4/5/2569</span><span class="news-main"><b>Praying for blessings at Kue Chai Tung Shrine, Phang Nga Province</b><span class="news-meta"><a href="/en/places/kue-chai/">Kue Chai Tung Shrine</a> · NBT2HD</span><a class="news-out" href="https://www.youtube.com/watch?v=q6K2Zl6700I" target="_blank" rel="noopener">Read original news ↗</a></span></li><li class="news-row"><span class="news-date">13/4/2569</span><span class="news-main"><b>Phang Nga Hosts Grand Songkran, Alms Giving in Takua Pa Old Town for Thai New Year Blessings</b><span class="news-meta"><a href="/en/traditions/">New Year's Dawn Almsgiving</a> · TOPNEWS</span><a class="news-out" href="https://www.topnews.co.th/news/1546452" target="_blank" rel="noopener">Read original news ↗</a></span></li><li class="news-row"><span class="news-date">13/4/2569</span><span class="news-main"><b>Takua Pa Blooms! Retracing Old Town Charm at Takuapa Oldtown Songkran Festival 2026</b><span class="news-meta"><a href="/en/traditions/">New Year's Dawn Almsgiving</a> · MGR Online</span><a class="news-out" href="https://mgronline.com/onlinesection/detail/9690000036775" target="_blank" rel="noopener">Read original news ↗</a></span></li><li class="news-row"><span class="news-date">8/3/2569</span><span class="news-main"><b>Takua Pa Khiri Khet School participates in Takua Pa Walk Rally 2026 (2569 BE)</b><span class="news-meta"><a href="/en/places/thung-phra/">Thung Phra Pho Park</a> · Takua Pa Khiri Khet School</span><a class="news-out" href="https://www.keereekatschool.ac.th/gallery-detail_1497" target="_blank" rel="noopener">Read original news ↗</a></span></li><li class="news-row"><span class="news-date">1/3/2569</span><span class="news-main"><b>Phang Nga hosts the 12th 'From Takola to Takua Pa' event</b><span class="news-meta"><a href="/en/places/museum/">Takua Pa Community Museum</a> · สถานีวิทยุกระจายเสียงแห่งประเทศไทย (Radio Thailand)</span><a class="news-out" href="https://radiothailand.prd.go.th/th/content/category/detail/id/9/iid/481052" target="_blank" rel="noopener">Read original news ↗</a></span></li><li class="news-row"><span class="news-date">21/2/2569</span><span class="news-main"><b>Old Town Storytelling Event at Tao Ming School, Takua Pa</b><span class="news-meta"><a href="/en/places/tao-ming/">Tao Ming School</a> · YOUPHUKET</span><a class="news-out" href="https://youphuket.club/author/admin/page/58/" target="_blank" rel="noopener">Read original news ↗</a></span></li><li class="news-row"><span class="news-date">30/1/2569</span><span class="news-main"><b>Inviting check-ins at Boon Soong iron bridge, mining heritage of Takua Pa town</b><span class="news-meta"><a href="/en/places/iron-bridge/">Boon Soong Iron Bridge</a> · NBT2HD</span><a class="news-out" href="https://www.youtube.com/watch?v=QUZ54DTc0LQ" target="_blank" rel="noopener">Read original news ↗</a></span></li><li class="news-row"><span class="news-date">5/11/2568</span><span class="news-main"><b>Loy Krathong activities at Khlong Takua Pa and Khlong Bang Muang</b><span class="news-meta"><a href="/en/traditions/">Loy Krathong</a> · กรมทรัพยากรทางทะเลและชายฝั่ง (Department of Marine and Coastal Resources)</span><a class="news-out" href="https://newweb.dmcr.go.th/detailAll/81026/nws/258" target="_blank" rel="noopener">Read original news ↗</a></span></li></ol><p class="small" data-news-updated hidden></p><a class="text-link" href="/en/news/">View all updates ↗</a><p class="small">Compiled from public news · Check schedule with organizers before visiting</p></div></div></section><section class="map-teaser"><div class="map-teaser-copy"><span class="chapter">Open the map / Then go out and know the city</span><h2>Which alley, which street<br><em>Has a story waiting</em></h2><p>From Yan Yao to the old town, open the municipal map and slowly look for the next destination</p><a class="button" href="/en/map/">Open the town map<span aria-hidden="true">↗</span></a><span class="map-caption">Uses the original municipal map image</span></div><a class="map-paper" href="/en/map/" aria-label="เปิดแผนที่เทศบาล"><img src="/assets/municipal-map.png" width="1358" height="1938" alt="แผนที่ท่องเที่ยวเมืองตะกั่วป่าจากเทศบาล" loading="lazy"><span class="paper-tag">TAKUA PA · TOWN MAP ↗</span></a><span class="map-compass" aria-hidden="true">✳</span></section><section id="places" class="section"><div class="section-heading"><div><span class="chapter">03 / Read the town</span><h2>One city, many angles to know</h2></div><p>All 20 places, from paper to stories of the city</p></div><div class="explorer" data-explorer><div class="explorer-tools"><div class="filter-tabs" role="group" aria-label="หมวดสถานที่"><button type="button" data-filter="all" aria-pressed="true">All <sup>20</sup></button><button type="button" data-filter="temple" aria-pressed="false">Temples & Pagodas <sup>6</sup></button><button type="button" data-filter="shrine" aria-pressed="false">Shrines & Vegetarian Halls <sup>4</sup></button><button type="button" data-filter="heritage" aria-pressed="false">Old Buildings & City Traces <sup>4</sup></button><button type="button" data-filter="park" aria-pressed="false">Parks & Public Spaces <sup>2</sup></button><button type="button" data-filter="market" aria-pressed="false">Markets & Food <sup>3</sup></button><button type="button" data-filter="museum" aria-pressed="false">Museums <sup>1</sup></button></div></div><div class="explorer-status"><span data-place-count role="status" aria-live="polite">20 places to slowly get to know</span><span>Select image to read ↗</span></div><h2 class="visually-hidden">รายชื่อสถานที่ทั้งหมด</h2><div class="places-grid"><article class="place-card" data-place-card data-category="temple" data-name="วัดบรมธาตุคีรีเขต (วัดลุ่ม)"><a class="place-image" href="/en/places/wat-boromthat/"><img src="/assets/wat-boromthat.webp" alt="วัดบรมธาตุคีรีเขต (วัดลุ่ม)" width="1000" height="1000" loading="lazy"><span class="card-index">01</span><span class="image-arrow" aria-hidden="true">↗</span></a><div class="card-copy"><span class="eyebrow">Temples & Pagodas</span><h3><a href="/en/places/wat-boromthat/">Wat Boromthat Khiri Khet (the town's relic temple)</a></h3><p>White pagoda and the town's faith</p></div></article><article class="place-card" data-place-card data-category="temple" data-name="วัดคุหาภิมุข (วัดควนถ้ำ)"><a class="place-image" href="/en/places/wat-khuha/"><img src="/assets/wat-khuha.webp" alt="วัดคุหาภิมุข (วัดควนถ้ำ)" width="1000" height="1000" loading="lazy"><span class="card-index">02</span><span class="image-arrow" aria-hidden="true">↗</span></a><div class="card-copy"><span class="eyebrow">Temples & Pagodas</span><h3><a href="/en/places/wat-khuha/">Wat Khuha Phimuk (the cave hill temple)</a></h3><p>Small details that invite you to pause and look.</p></div></article><article class="place-card" data-place-card data-category="temple" data-name="วัดปทุมธารา (วัดหน้าเมือง)"><a class="place-image" href="/en/places/wat-pathum/"><img src="/assets/wat-pathum.webp" alt="วัดปทุมธารา (วัดหน้าเมือง)" width="1000" height="1000" loading="lazy"><span class="card-index">03</span><span class="image-arrow" aria-hidden="true">↗</span></a><div class="card-copy"><span class="eyebrow">Temples & Pagodas</span><h3><a href="/en/places/wat-pathum/">Wat Pathum Thara (the front town temple)</a></h3><p>Old ordination hall and waterway stories</p></div></article><article class="place-card" data-place-card data-category="temple" data-name="วัดคงคาภิมุข (วัดคงคา)"><a class="place-image" href="/en/places/wat-kongkha/"><img src="/assets/wat-kongkha.webp" alt="วัดคงคาภิมุข (วัดคงคา)" width="1000" height="1000" loading="lazy"><span class="card-index">04</span><span class="image-arrow" aria-hidden="true">↗</span></a><div class="card-copy"><span class="eyebrow">Temples & Pagodas</span><h3><a href="/en/places/wat-kongkha/">Wat Kongkha Phimuk (the riverside temple)</a></h3><p>Southern Thai style ordination hall details</p></div></article><article class="place-card" data-place-card data-category="temple" data-name="วัดนิกรวราราม (วัดย่านยาว)"><a class="place-image" href="/en/places/wat-nikorn/"><img src="/assets/wat-nikorn.webp" alt="วัดนิกรวราราม (วัดย่านยาว)" width="1000" height="726" loading="lazy"><span class="card-index">05</span><span class="image-arrow" aria-hidden="true">↗</span></a><div class="card-copy"><span class="eyebrow">Temples & Pagodas</span><h3><a href="/en/places/wat-nikorn/">Wat Nikornwararam</a></h3><p>The temple and community memories</p></div></article><article class="place-card" data-place-card data-category="temple" data-name="วัดเสนานุชรังสรรค์ (วัดใหม่)"><a class="place-image" href="/en/places/wat-sena/"><img src="/assets/wat-sena.webp" alt="วัดเสนานุชรังสรรค์ (วัดใหม่)" width="1000" height="1000" loading="lazy"><span class="card-index">06</span><span class="image-arrow" aria-hidden="true">↗</span></a><div class="card-copy"><span class="eyebrow">Temples & Pagodas</span><h3><a href="/en/places/wat-sena/">Wat Sena Nuch Rangsan</a></h3><p>Thai and Chinese traces in the same building</p></div></article><article class="place-card" data-place-card data-category="shrine" data-name="ศาลเจ้าพ่อกวนอู ซิ่นไช่ตึ๋ง"><a class="place-image" href="/en/places/guan-yu/"><img src="/assets/guan-yu.webp" alt="ศาลเจ้าพ่อกวนอู ซิ่นไช่ตึ๋ง" width="1000" height="1000" loading="lazy"><span class="card-index">08</span><span class="image-arrow" aria-hidden="true">↗</span></a><div class="card-copy"><span class="eyebrow">Shrines & Vegetarian Halls</span><h3><a href="/en/places/guan-yu/">Guan Yu / Sin Chai Tung Shrine</a></h3><p>Red door and the community's faith</p></div></article><article class="place-card" data-place-card data-category="shrine" data-name="ศาลเจ้าปุนเถ่ากงอ๊า"><a class="place-image" href="/en/places/pun-thao/"><img src="/assets/pun-thao.webp" alt="ศาลเจ้าปุนเถ่ากงอ๊า" width="1000" height="1000" loading="lazy"><span class="card-index">09</span><span class="image-arrow" aria-hidden="true">↗</span></a><div class="card-copy"><span class="eyebrow">Shrines & Vegetarian Halls</span><h3><a href="/en/places/pun-thao/">Pun Thao Kong A Shrine</a></h3><p>Faith in the old port area</p></div></article><article class="place-card" data-place-card data-category="shrine" data-name="ศาลเจ้ากู่ใช่ตึ๋ง"><a class="place-image" href="/en/places/kue-chai/"><img src="/assets/kue-chai.webp" alt="ศาลเจ้ากู่ใช่ตึ๋ง" width="1000" height="1000" loading="lazy"><span class="card-index">10</span><span class="image-arrow" aria-hidden="true">↗</span></a><div class="card-copy"><span class="eyebrow">Shrines & Vegetarian Halls</span><h3><a href="/en/places/kue-chai/">Kue Chai Tung Shrine</a></h3><p>A space for people's hopes</p></div></article><article class="place-card" data-place-card data-category="shrine" data-name="โรงเจในสวน"><a class="place-image" href="/en/places/rong-jae/"><img src="/assets/rong-jae.webp" alt="โรงเจในสวน" width="1000" height="1000" loading="lazy"><span class="card-index">11</span><span class="image-arrow" aria-hidden="true">↗</span></a><div class="card-copy"><span class="eyebrow">Shrines & Vegetarian Halls</span><h3><a href="/en/places/rong-jae/">The Shrine in the Garden</a></h3><p>Traditions passed down through places</p></div></article><article class="place-card" data-place-card data-category="heritage" data-name="สะพานเหล็กบุญสูง"><a class="place-image" href="/en/places/iron-bridge/"><img src="/assets/iron-bridge.webp" alt="สะพานเหล็กบุญสูง" width="1000" height="1000" loading="lazy"><span class="card-index">16</span><span class="image-arrow" aria-hidden="true">↗</span></a><div class="card-copy"><span class="eyebrow">Old Buildings & City Traces</span><h3><a href="/en/places/iron-bridge/">Boon Soong Iron Bridge</a></h3><p>Iron structure connecting mining stories</p></div></article><article class="place-card" data-place-card data-category="heritage" data-name="กำแพงจวนเจ้าเมืองตะกั่วป่า"><a class="place-image" href="/en/places/governor-wall/"><img src="/assets/governor-wall.webp" alt="กำแพงจวนเจ้าเมืองตะกั่วป่า" width="1000" height="1000" loading="lazy"><span class="card-index">17</span><span class="image-arrow" aria-hidden="true">↗</span></a><div class="card-copy"><span class="eyebrow">Old Buildings & City Traces</span><h3><a href="/en/places/governor-wall/">Governor’s Residence Wall</a></h3><p>A trace on the wall that tells the town's story</p></div></article><article class="place-card" data-place-card data-category="heritage" data-name="บ้านขุนอินทร์"><a class="place-image" href="/en/places/khun-in/"><img src="/assets/khun-in.webp" alt="บ้านขุนอินทร์" width="1000" height="1000" loading="lazy"><span class="card-index">18</span><span class="image-arrow" aria-hidden="true">↗</span></a><div class="card-copy"><span class="eyebrow">Old Buildings & City Traces</span><h3><a href="/en/places/khun-in/">Khun In House</a></h3><p>Windows and balconies inviting a look into the past</p></div></article><article class="place-card" data-place-card data-category="heritage" data-name="โรงเรียนเต้าหมิง"><a class="place-image" href="/en/places/tao-ming/"><img src="/assets/tao-ming.webp" alt="โรงเรียนเต้าหมิง" width="1000" height="667" loading="lazy"><span class="card-index">19</span><span class="image-arrow" aria-hidden="true">↗</span></a><div class="card-copy"><span class="eyebrow">Old Buildings & City Traces</span><h3><a href="/en/places/tao-ming/">Tao Ming School</a></h3><p>A building that passes on language and culture</p></div></article><article class="place-card" data-place-card data-category="park" data-name="สวนสาธารณะพระนารายณ์"><a class="place-image" href="/en/places/phra-narai/"><img src="/assets/phra-narai.webp" alt="สวนสาธารณะพระนารายณ์" width="1000" height="1000" loading="lazy"><span class="card-index">12</span><span class="image-arrow" aria-hidden="true">↗</span></a><div class="card-copy"><span class="eyebrow">Parks & Public Spaces</span><h3><a href="/en/places/phra-narai/">Phra Narai Park</a></h3><p>Rest area with stories of belief</p></div></article><article class="place-card" data-place-card data-category="park" data-name="สวนสาธารณะทุ่งพระโพธิ์"><a class="place-image" href="/en/places/thung-phra/"><img src="/assets/thung-phra.webp" alt="สวนสาธารณะทุ่งพระโพธิ์" width="1000" height="1000" loading="lazy"><span class="card-index">13</span><span class="image-arrow" aria-hidden="true">↗</span></a><div class="card-copy"><span class="eyebrow">Parks & Public Spaces</span><h3><a href="/en/places/thung-phra/">Thung Phra Pho Park</a></h3><p>Steamboat traces in the garden</p></div></article><article class="place-card" data-place-card data-category="market" data-name="ตลาดริมน้ำตะกั่วป่า"><a class="place-image" href="/en/places/riverwalk/"><img src="/assets/riverwalk.webp" alt="ตลาดริมน้ำตะกั่วป่า" width="1000" height="1000" loading="lazy"><span class="card-index">14</span><span class="image-arrow" aria-hidden="true">↗</span></a><div class="card-copy"><span class="eyebrow">Markets & Food</span><h3><a href="/en/places/riverwalk/">Takuapa Riverwalk</a></h3><p>Food and life by the river</p></div></article><article class="place-card" data-place-card data-category="market" data-name="ถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า"><a class="place-image" href="/en/places/culture-street/"><img src="/assets/culture-street.webp" alt="ถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า" width="1000" height="1000" loading="lazy"><span class="card-index">15</span><span class="image-arrow" aria-hidden="true">↗</span></a><div class="card-copy"><span class="eyebrow">Markets & Food</span><h3><a href="/en/places/culture-street/">Takua Pa Old Town Cultural Street</a></h3><p>Walking and reading the city through buildings and people</p></div></article><article class="place-card" data-place-card data-category="market" data-name="ศูนย์อาหารลานโล่งตะกั่วป่า"><a class="place-image" href="/en/places/food-center/"><img src="/assets/food-center.webp" alt="ศูนย์อาหารลานโล่งตะกั่วป่า" width="1000" height="1000" loading="lazy"><span class="card-index">20</span><span class="image-arrow" aria-hidden="true">↗</span></a><div class="card-copy"><span class="eyebrow">Markets & Food</span><h3><a href="/en/places/food-center/">Takua Pa Open-Air Food Center</a></h3><p>Many flavors in one destination</p></div></article><article class="place-card" data-place-card data-category="museum" data-name="พิพิธภัณฑ์เสนานุชรังสรรค์ชุมชนตะกั่วป่า"><a class="place-image" href="/en/places/museum/"><img src="/assets/museum.webp" alt="พิพิธภัณฑ์เสนานุชรังสรรค์ชุมชนตะกั่วป่า" width="1000" height="1000" loading="lazy"><span class="card-index">07</span><span class="image-arrow" aria-hidden="true">↗</span></a><div class="card-copy"><span class="eyebrow">Museums</span><h3><a href="/en/places/museum/">Takua Pa Community Museum</a></h3><p>Preserving the town's stories together</p></div></article></div><div class="empty-state" data-place-empty hidden><h3>Haven't found this destination yet</h3><p>Try another search term or view all places</p><button type="button" data-clear-places>Clear filters</button></div></div><a class="text-link index-link" href="/en/places/">Open index and search places ↗</a></section><section class="section traditions-section"><div class="section-heading"><div><span class="chapter">04 / Read the town</span><h2>When the city has an appointment</h2></div><p>Year-round traditions · Timing from the source documents</p></div><div class="traditions-list"><details class="tradition"><summary><span class="event-no">01</span><span class="event-name">New Year's Dawn Almsgiving</span><span class="event-period">January 1</span><span class="expand-icon" aria-hidden="true">+</span></summary><div class="event-body"><p>Activities in the traditions section of the municipal brochure</p><a class="text-link" href="/en/traditions/new-year-alms/">Read details from document ↗</a></div></details><details class="tradition"><summary><span class="event-no">02</span><span class="event-name">Takua Pa Governor Worship Ceremony</span><span class="event-period">February</span><span class="expand-icon" aria-hidden="true">+</span></summary><div class="event-body"><p>Related places: <a href="/en/places/governor-wall/">Governor’s Residence Wall</a></p><a class="text-link" href="/en/traditions/ruler-ceremony/">Read details from document ↗</a></div></details><details class="tradition"><summary><span class="event-no">03</span><span class="event-name">Relic Procession to Khao Phra Bat</span><span class="event-period">Makha Bucha Day</span><span class="expand-icon" aria-hidden="true">+</span></summary><div class="event-body"><p>Related places: <a href="/en/places/wat-boromthat/">Wat Boromthat Khiri Khet (the town's relic temple)</a></p><a class="text-link" href="/en/traditions/relic-procession/">Read details from document ↗</a></div></details><details class="tradition"><summary><span class="event-no">04</span><span class="event-name">Phra Narai and Deities Worship Ceremony</span><span class="event-period">March - April</span><span class="expand-icon" aria-hidden="true">+</span></summary><div class="event-body"><p>Related places: <a href="/en/places/phra-narai/">Phra Narai Park</a></p><a class="text-link" href="/en/traditions/narai-ceremony/">Read details from document ↗</a></div></details><details class="tradition"><summary><span class="event-no">05</span><span class="event-name">Vegetarian Festival (Jia Kiu Ong Chai)</span><span class="event-period">1st to 9th day of the 9th Chinese lunar month · Usually September-October</span><span class="expand-icon" aria-hidden="true">+</span></summary><div class="event-body"><p>Related places: <a href="/en/places/guan-yu/">Guan Yu / Sin Chai Tung Shrine</a> · <a href="/en/places/pun-thao/">Pun Thao Kong A Shrine</a> · <a href="/en/places/kue-chai/">Kue Chai Tung Shrine</a> · <a href="/en/places/rong-jae/">The Shrine in the Garden</a></p><a class="text-link" href="/en/traditions/vegetarian/">Read details from document ↗</a></div></details><details class="tradition"><summary><span class="event-no">06</span><span class="event-name">Chak Phra Festival</span><span class="event-period">Day after Buddhist Lent ends</span><span class="expand-icon" aria-hidden="true">+</span></summary><div class="event-body"><p>Related places: <a href="/en/places/wat-boromthat/">Wat Boromthat Khiri Khet (the town's relic temple)</a> · <a href="/en/places/wat-khuha/">Wat Khuha Phimuk (the cave hill temple)</a> · <a href="/en/places/wat-pathum/">Wat Pathum Thara (the front town temple)</a> · <a href="/en/places/wat-kongkha/">Wat Kongkha Phimuk (the riverside temple)</a> · <a href="/en/places/wat-nikorn/">Wat Nikornwararam</a> · <a href="/en/places/wat-sena/">Wat Sena Nuch Rangsan</a></p><a class="text-link" href="/en/traditions/chak-phra/">Read details from document ↗</a></div></details><details class="tradition"><summary><span class="event-no">07</span><span class="event-name">Loy Krathong</span><span class="event-period">Full moon of the 12th Thai lunar month · Document mentions November</span><span class="expand-icon" aria-hidden="true">+</span></summary><div class="event-body"><p>Related places: <a href="/en/places/riverwalk/">Takuapa Riverwalk</a></p><a class="text-link" href="/en/traditions/loy-krathong/">Read details from document ↗</a></div></details></div><p class="small">Check each year’s schedule before travelling</p></section><section class="food-feature"><div class="food-feature-image"><img src="/assets/food-center.webp" alt="ศูนย์อาหารลานโล่งตะกั่วป่า" width="1000" height="1000" loading="lazy"><span class="food-stamp">LOCAL<br>FLAVOURS</span></div><div class="food-feature-copy"><span class="chapter">05 / Eat and shop for souvenirs in the district</span><h2>Know the city<br>Through another flavor</h2><p>Open the list of restaurants, drinks, and souvenirs<br>59 shops from municipal brochure</p><div class="food-counts"><span><b>32</b>Food</span><span><b>20</b>Drinks</span><span><b>08</b>Souvenirs</span></div><a class="button" href="/en/eat/">Find shops<span aria-hidden="true">↗</span></a></div></section><section class="about-strip"><span class="chapter">Notes from Baan Siwara</span><h2>The town’s story<br>That we want to invite you to know</h2><div><p>Takua Pa 101 compiles information from the Takua Pa municipal brochure, with sources and data scope for you to read further</p><a class="text-link" href="/en/about/">Get to know this guide ↗</a></div></section></main><footer class="site-footer"><div class="footer-top"><a href="/en/" class="footer-name">Takua Pa <em>101</em></a><p>One city<br>Stories to get to know</p><a class="round-link" href="#main" aria-label="กลับขึ้นด้านบน">↑</a></div><div class="footer-bottom"><a href="https://siwaracafe.com/">Created by Baan Siwara, Takua Pa</a><span>Old Town Guide · Phang Nga Province</span><a href="https://www.takuapacity.go.th/pdf/travel-preview.pdf">Original Brochure ↗</a></div></footer><nav class="tabbar" aria-label="เมนูด่วน"><a href="/en/" aria-current="page"><span class="tb-glyph" aria-hidden="true">⌂</span>Home</a><a href="/en/map/"><span class="tb-glyph" aria-hidden="true">◈</span>Map</a><a href="/en/eat/"><span class="tb-glyph" aria-hidden="true">◉</span>Eat</a><a href="/en/trip/"><span class="tb-glyph" aria-hidden="true">◫</span>Trip<span class="qs-badge" data-trip-count hidden>0</span></a></nav></body></html>
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "python -c \"import json; x=json.load(open('data/i18n/en/shops.json',encoding='utf-8-sig')); print(type(x).__name__,len(x) if isinstance(x,list) else {k:(len(v) if isinstance(v,list) else type(v).__name__) for k,v in x.items()})\"" in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 65ms:
+dict {'siwara-cafe': 'dict', 'baan-bai': 'dict', 'pa-daeng-khanom-wan': 'dict', 'khanom-jeen-pa-mom': 'dict', 'khanom-jeen-phi-neng': 'dict', 'khanom-jeen-nai-na': 'dict', 'mata-coffee-and-bakery': 'dict', 'the-eighth-room': 'dict', 'delicacy-khaolak': 'dict', 'garang-khao-lak': 'dict', 'baan-khanom-arom-dee': 'dict', 'ocean-man-cafe': 'dict', 'la-malila-cafe': 'dict', 'pa-fon-khanom-wan': 'dict', 'the-eighth-room-by-mata-cafe': 'dict', 'garang-artisan-icecream': 'dict', 'yellow-snail-cafe-gallery': 'dict', 'mahamitr-cafe': 'dict', 'trok-ca-fe': 'dict', 'tribe-khaolak': 'dict', 'valhalla-villas-teahouse': 'dict', 'karkinos-khao-lak': 'dict', 'underground-tea-cafe': 'dict', 'unnamed-khaolak': 'dict', 'tubtim-dimsum': 'dict', 'kai-tong-dimsum': 'dict', 'punthong-dimsum': 'dict', 'hua-ta-bistro': 'dict', 'ice-tae-cha-chak': 'dict', 'lert-ocha': 'dict', 'krua-luang-ten': 'dict', 'khrua-nong': 'dict', 'yim-yim-restaurant': 'dict', 'timbre': 'dict', 'khrua-ko-yot': 'dict', 'khonkon-kitchen': 'dict', 'karkinos-khaolak': 'dict', 'the-eighth-room-by-mata-cafe-2': 'dict', 'swell-cafe': 'dict', 'cotton-cafe-and-library': 'dict', 'jee-tarn-souvenir-shop': 'dict', 'shop': 'dict', 'kongsri-souvenir-shop': 'dict', 'shop-2': 'dict', 'siriporn-batik': 'dict', 'shop-3': 'dict', 'shop-4': 'dict', 'eco-print-by-kanokwan': 'dict', 'shop-5': 'dict'}
+
+apply patch
+patch: completed
+D:\Siwaracafeweb\output\web\takuapa101-v1\audit\a2-data.md
+diff --git a/output/web/takuapa101-v1/audit/a2-data.md b/output/web/takuapa101-v1/audit/a2-data.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..0cd53810afa7b1d81fee535340f5768d17ced57b
+--- /dev/null
++++ b/output/web/takuapa101-v1/audit/a2-data.md
+@@ -0,0 +1,56 @@
++# รายงานตรวจความสอดคล้องข้อมูล · A2
++
++ตรวจแบบอ่านไฟล์เท่านั้น ณ 2026-09-08 · ไม่ได้แก้ไฟล์ข้อมูลหรือไฟล์เว็บ
++
++## 1) JSON parse / ไฟล์ว่าง / BOM
++
++ตรวจ `data/**/*.json` จำนวน 103 ไฟล์ด้วย UTF-8 (รองรับการตรวจ BOM แยกต่างหาก)
++
++- parse ไม่ผ่าน: ไม่พบ
++- ไฟล์ว่าง: ไม่พบ
++- BOM: ไม่พบ
++
++ผล: ตรวจแล้วไม่พบปัญหา
++
++## 2) ID สถานที่ที่อ้างถึง
++
++ฐานอ้างอิงคือ `data/places-enriched.json` มี 27 IDs
++
++- `data/stories/*.json`: ID ที่อ้างถึงทั้งหมดมีอยู่จริง · ไม่พบ ID หาย
++- `data/map-points.json`: 20 รายการที่อ้างถึงมีอยู่จริง · ไม่พบ ID หาย
++- `data/guide-picks.json`: อ้างถึง ID ต่อไปนี้ที่ไม่มีใน `places-enriched.json`: `guide-baan-lapp`, `guide-bang-deen`, `guide-iron-bridge`, `guide-jae-ouan`, `guide-kae-padthai`, `guide-lad-yai`, `guide-mee-talad-khwang`, `guide-moo-satay-kruaew`, `guide-old-town-street`, `guide-pa-da-hokkien`, `guide-pu-dam`, `guide-tam-nang`, `guide-tuangrat-taosor`
++- routes (`data/siwara-guide.json`): อ้างถึงค่าต่อไปนี้ที่ไม่มีใน `places-enriched.json`: `baan_lapp`, `bang_deen`, `iron_bridge`, `jae_ouan`, `kae_padthai`, `lad_yai`, `mee_talad_khwang`, `moo_satay_kruaew`, `old_town_street`, `pa_da_hokkien`, `pu_dam`, `tam_nang`, `tuangrat_taosor`
++
++หลักฐานไฟล์: `data/places-enriched.json`, `data/stories/*.json`, `data/guide-picks.json`, `data/map-points.json`, `data/siwara-guide.json`
++
++## 3) ทะเบียนรูปและการใช้รูปบนเว็บ
++
++`data/photo-registry.json` ทะเบียน 12 รูป · ตรวจไฟล์ตามฟิลด์ `file` กับ `site/assets/` แล้วพบไฟล์หาย: ไม่พบ
++
++ตรวจการอ้างอิงรูปใน HTML/JS/CSS/JSON/XML ใต้ `site/` แล้วพบรูปที่ใช้งานแต่ไม่อยู่ในทะเบียน (สรุปตามกลุ่ม):
++
++- รูปสถานที่: `culture-street.webp`, `food-center.webp`, `governor-wall.webp`, `guan-yu.webp`, `iron-bridge.webp`, `khun-in.webp`, `kue-chai.webp`, `museum.webp`, `phra-narai.webp`, `pun-thao.webp`, `relic-procession.webp`, `riverwalk.webp`, `rong-jae.webp`, `ruler-ceremony.webp`, `tao-ming.webp`, `thung-phra.webp`, `wat-boromthat.webp`, `wat-khuha.webp`, `wat-kongkha.webp`, `wat-nikorn.webp`, `wat-pathum.webp`, `wat-sena.webp`, `narai-ceremony.webp`
++- รูปคู่มือ: `assets/guide/` ทั้ง 13 ไฟล์
++- รูป OG: `assets/og/` ทั้ง 27 ไฟล์
++- อื่น ๆ: `assets/favicon.svg`, `assets/leaflet/leaflet-page-1.webp`, `assets/leaflet/leaflet-page-2.webp`, `assets/municipal-map.png`
++
++รูปใน `assets/photos/` ทั้ง 12 ไฟล์มีทะเบียนและถูกตรวจว่ามีไฟล์จริงแล้ว
++
++## 4) สถานที่ไม่มี geo / รูป / source
++
++ตรวจสถานที่ 27 รายการใน `data/places-enriched.json`:
++
++- ไม่มี geo: `rong-jae`, `new-year-alms`, `vegetarian`, `loy-krathong`, `chak-phra`
++- ไม่มีรูป: ไม่พบ
++- ไม่มี source: ไม่พบ
++
++หมายเหตุ: การตรวจนี้ยึดฟิลด์ข้อมูลที่มีอยู่จริงใน JSON ไม่ได้อนุมานจากรูปที่หน้าเว็บแสดง
++
++## 5) จำนวนที่เขียนบนหน้าเว็บเทียบข้อมูลจริง
++
++- 20 สถานที่: ตรงกับสถานที่ที่ไม่ใช่ประเพณีใน `places-enriched.json` (27 ทั้งหมด − 7 ประเพณี) และตรงกับ `data/map-points.json` 20 รายการ
++- 7 ประเพณี: ตรงกับ `calendar.events` 7 รายการใน `data/calendar.json` และรายการประเพณี 7 รายการใน `places-enriched.json`
++- 59 รายการ: ไม่ตรงกับข้อมูลร้านที่ตรวจพบ · `site/en/index.html` ระบุ “59 shops” และแจกแจง 32 + 20 + 08 = 60 แต่ `data/shops-extra.json` มี 49 รายการ และ `data/i18n/en/shops.json` มี 49 keys
++
++การเปิดเว็บ/เสิร์ฟ HTTP: ไม่ได้ทำ เพราะงานนี้กำหนดเป็นงานอ่านไฟล์ล้วน และการตรวจข้อ 3/5 ทำได้จากไฟล์เว็บที่สร้างแล้ว
++
+
+diff --git a/output/web/takuapa101-v1/audit/a2-data.md b/output/web/takuapa101-v1/audit/a2-data.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..0cd53810afa7b1d81fee535340f5768d17ced57b
+--- /dev/null
++++ b/output/web/takuapa101-v1/audit/a2-data.md
+@@ -0,0 +1,56 @@
++# รายงานตรวจความสอดคล้องข้อมูล · A2
++
++ตรวจแบบอ่านไฟล์เท่านั้น ณ 2026-09-08 · ไม่ได้แก้ไฟล์ข้อมูลหรือไฟล์เว็บ
++
++## 1) JSON parse / ไฟล์ว่าง / BOM
++
++ตรวจ `data/**/*.json` จำนวน 103 ไฟล์ด้วย UTF-8 (รองรับการตรวจ BOM แยกต่างหาก)
++
++- parse ไม่ผ่าน: ไม่พบ
++- ไฟล์ว่าง: ไม่พบ
++- BOM: ไม่พบ
++
++ผล: ตรวจแล้วไม่พบปัญหา
++
++## 2) ID สถานที่ที่อ้างถึง
++
++ฐานอ้างอิงคือ `data/places-enriched.json` มี 27 IDs
++
++- `data/stories/*.json`: ID ที่อ้างถึงทั้งหมดมีอยู่จริง · ไม่พบ ID หาย
++- `data/map-points.json`: 20 รายการที่อ้างถึงมีอยู่จริง · ไม่พบ ID หาย
++- `data/guide-picks.json`: อ้างถึง ID ต่อไปนี้ที่ไม่มีใน `places-enriched.json`: `guide-baan-lapp`, `guide-bang-deen`, `guide-iron-bridge`, `guide-jae-ouan`, `guide-kae-padthai`, `guide-lad-yai`, `guide-mee-talad-khwang`, `guide-moo-satay-kruaew`, `guide-old-town-street`, `guide-pa-da-hokkien`, `guide-pu-dam`, `guide-tam-nang`, `guide-tuangrat-taosor`
++- routes (`data/siwara-guide.json`): อ้างถึงค่าต่อไปนี้ที่ไม่มีใน `places-enriched.json`: `baan_lapp`, `bang_deen`, `iron_bridge`, `jae_ouan`, `kae_padthai`, `lad_yai`, `mee_talad_khwang`, `moo_satay_kruaew`, `old_town_street`, `pa_da_hokkien`, `pu_dam`, `tam_nang`, `tuangrat_taosor`
++
++หลักฐานไฟล์: `data/places-enriched.json`, `data/stories/*.json`, `data/guide-picks.json`, `data/map-points.json`, `data/siwara-guide.json`
++
++## 3) ทะเบียนรูปและการใช้รูปบนเว็บ
++
++`data/photo-registry.json` ทะเบียน 12 รูป · ตรวจไฟล์ตามฟิลด์ `file` กับ `site/assets/` แล้วพบไฟล์หาย: ไม่พบ
++
++ตรวจการอ้างอิงรูปใน HTML/JS/CSS/JSON/XML ใต้ `site/` แล้วพบรูปที่ใช้งานแต่ไม่อยู่ในทะเบียน (สรุปตามกลุ่ม):
++
++- รูปสถานที่: `culture-street.webp`, `food-center.webp`, `governor-wall.webp`, `guan-yu.webp`, `iron-bridge.webp`, `khun-in.webp`, `kue-chai.webp`, `museum.webp`, `phra-narai.webp`, `pun-thao.webp`, `relic-procession.webp`, `riverwalk.webp`, `rong-jae.webp`, `ruler-ceremony.webp`, `tao-ming.webp`, `thung-phra.webp`, `wat-boromthat.webp`, `wat-khuha.webp`, `wat-kongkha.webp`, `wat-nikorn.webp`, `wat-pathum.webp`, `wat-sena.webp`, `narai-ceremony.webp`
++- รูปคู่มือ: `assets/guide/` ทั้ง 13 ไฟล์
++- รูป OG: `assets/og/` ทั้ง 27 ไฟล์
++- อื่น ๆ: `assets/favicon.svg`, `assets/leaflet/leaflet-page-1.webp`, `assets/leaflet/leaflet-page-2.webp`, `assets/municipal-map.png`
++
++รูปใน `assets/photos/` ทั้ง 12 ไฟล์มีทะเบียนและถูกตรวจว่ามีไฟล์จริงแล้ว
++
++## 4) สถานที่ไม่มี geo / รูป / source
++
++ตรวจสถานที่ 27 รายการใน `data/places-enriched.json`:
++
++- ไม่มี geo: `rong-jae`, `new-year-alms`, `vegetarian`, `loy-krathong`, `chak-phra`
++- ไม่มีรูป: ไม่พบ
++- ไม่มี source: ไม่พบ
++
++หมายเหตุ: การตรวจนี้ยึดฟิลด์ข้อมูลที่มีอยู่จริงใน JSON ไม่ได้อนุมานจากรูปที่หน้าเว็บแสดง
++
++## 5) จำนวนที่เขียนบนหน้าเว็บเทียบข้อมูลจริง
++
++- 20 สถานที่: ตรงกับสถานที่ที่ไม่ใช่ประเพณีใน `places-enriched.json` (27 ทั้งหมด − 7 ประเพณี) และตรงกับ `data/map-points.json` 20 รายการ
++- 7 ประเพณี: ตรงกับ `calendar.events` 7 รายการใน `data/calendar.json` และรายการประเพณี 7 รายการใน `places-enriched.json`
++- 59 รายการ: ไม่ตรงกับข้อมูลร้านที่ตรวจพบ · `site/en/index.html` ระบุ “59 shops” และแจกแจง 32 + 20 + 08 = 60 แต่ `data/shops-extra.json` มี 49 รายการ และ `data/i18n/en/shops.json` มี 49 keys
++
++การเปิดเว็บ/เสิร์ฟ HTTP: ไม่ได้ทำ เพราะงานนี้กำหนดเป็นงานอ่านไฟล์ล้วน และการตรวจข้อ 3/5 ทำได้จากไฟล์เว็บที่สร้างแล้ว
++
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'Get-Content -Raw -Encoding UTF8 audit/a2-data.md; git status --short -- audit/a2-data.md' in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 98ms:
+# รายงานตรวจความสอดคล้องข้อมูล · A2
+
+ตรวจแบบอ่านไฟล์เท่านั้น ณ 2026-09-08 · ไม่ได้แก้ไฟล์ข้อมูลหรือไฟล์เว็บ
+
+## 1) JSON parse / ไฟล์ว่าง / BOM
+
+ตรวจ `data/**/*.json` จำนวน 103 ไฟล์ด้วย UTF-8 (รองรับการตรวจ BOM แยกต่างหาก)
+
+- parse ไม่ผ่าน: ไม่พบ
+- ไฟล์ว่าง: ไม่พบ
+- BOM: ไม่พบ
+
+ผล: ตรวจแล้วไม่พบปัญหา
+
+## 2) ID สถานที่ที่อ้างถึง
+
+ฐานอ้างอิงคือ `data/places-enriched.json` มี 27 IDs
+
+- `data/stories/*.json`: ID ที่อ้างถึงทั้งหมดมีอยู่จริง · ไม่พบ ID หาย
+- `data/map-points.json`: 20 รายการที่อ้างถึงมีอยู่จริง · ไม่พบ ID หาย
+- `data/guide-picks.json`: อ้างถึง ID ต่อไปนี้ที่ไม่มีใน `places-enriched.json`: `guide-baan-lapp`, `guide-bang-deen`, `guide-iron-bridge`, `guide-jae-ouan`, `guide-kae-padthai`, `guide-lad-yai`, `guide-mee-talad-khwang`, `guide-moo-satay-kruaew`, `guide-old-town-street`, `guide-pa-da-hokkien`, `guide-pu-dam`, `guide-tam-nang`, `guide-tuangrat-taosor`
+- routes (`data/siwara-guide.json`): อ้างถึงค่าต่อไปนี้ที่ไม่มีใน `places-enriched.json`: `baan_lapp`, `bang_deen`, `iron_bridge`, `jae_ouan`, `kae_padthai`, `lad_yai`, `mee_talad_khwang`, `moo_satay_kruaew`, `old_town_street`, `pa_da_hokkien`, `pu_dam`, `tam_nang`, `tuangrat_taosor`
+
+หลักฐานไฟล์: `data/places-enriched.json`, `data/stories/*.json`, `data/guide-picks.json`, `data/map-points.json`, `data/siwara-guide.json`
+
+## 3) ทะเบียนรูปและการใช้รูปบนเว็บ
+
+`data/photo-registry.json` ทะเบียน 12 รูป · ตรวจไฟล์ตามฟิลด์ `file` กับ `site/assets/` แล้วพบไฟล์หาย: ไม่พบ
+
+ตรวจการอ้างอิงรูปใน HTML/JS/CSS/JSON/XML ใต้ `site/` แล้วพบรูปที่ใช้งานแต่ไม่อยู่ในทะเบียน (สรุปตามกลุ่ม):
+
+- รูปสถานที่: `culture-street.webp`, `food-center.webp`, `governor-wall.webp`, `guan-yu.webp`, `iron-bridge.webp`, `khun-in.webp`, `kue-chai.webp`, `museum.webp`, `phra-narai.webp`, `pun-thao.webp`, `relic-procession.webp`, `riverwalk.webp`, `rong-jae.webp`, `ruler-ceremony.webp`, `tao-ming.webp`, `thung-phra.webp`, `wat-boromthat.webp`, `wat-khuha.webp`, `wat-kongkha.webp`, `wat-nikorn.webp`, `wat-pathum.webp`, `wat-sena.webp`, `narai-ceremony.webp`
+- รูปคู่มือ: `assets/guide/` ทั้ง 13 ไฟล์
+- รูป OG: `assets/og/` ทั้ง 27 ไฟล์
+- อื่น ๆ: `assets/favicon.svg`, `assets/leaflet/leaflet-page-1.webp`, `assets/leaflet/leaflet-page-2.webp`, `assets/municipal-map.png`
+
+รูปใน `assets/photos/` ทั้ง 12 ไฟล์มีทะเบียนและถูกตรวจว่ามีไฟล์จริงแล้ว
+
+## 4) สถานที่ไม่มี geo / รูป / source
+
+ตรวจสถานที่ 27 รายการใน `data/places-enriched.json`:
+
+- ไม่มี geo: `rong-jae`, `new-year-alms`, `vegetarian`, `loy-krathong`, `chak-phra`
+- ไม่มีรูป: ไม่พบ
+- ไม่มี source: ไม่พบ
+
+หมายเหตุ: การตรวจนี้ยึดฟิลด์ข้อมูลที่มีอยู่จริงใน JSON ไม่ได้อนุมานจากรูปที่หน้าเว็บแสดง
+
+## 5) จำนวนที่เขียนบนหน้าเว็บเทียบข้อมูลจริง
+
+- 20 สถานที่: ตรงกับสถานที่ที่ไม่ใช่ประเพณีใน `places-enriched.json` (27 ทั้งหมด − 7 ประเพณี) และตรงกับ `data/map-points.json` 20 รายการ
+- 7 ประเพณี: ตรงกับ `calendar.events` 7 รายการใน `data/calendar.json` และรายการประเพณี 7 รายการใน `places-enriched.json`
+- 59 รายการ: ไม่ตรงกับข้อมูลร้านที่ตรวจพบ · `site/en/index.html` ระบุ “59 shops” และแจกแจง 32 + 20 + 08 = 60 แต่ `data/shops-extra.json` มี 49 รายการ และ `data/i18n/en/shops.json` มี 49 keys
+
+การเปิดเว็บ/เสิร์ฟ HTTP: ไม่ได้ทำ เพราะงานนี้กำหนดเป็นงานอ่านไฟล์ล้วน และการตรวจข้อ 3/5 ทำได้จากไฟล์เว็บที่สร้างแล้ว
+
+
+?? audit/a2-data.md
+
+diff --git a/output/web/takuapa101-v1/audit/a2-data.md b/output/web/takuapa101-v1/audit/a2-data.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..0cd53810afa7b1d81fee535340f5768d17ced57b
+--- /dev/null
++++ b/output/web/takuapa101-v1/audit/a2-data.md
+@@ -0,0 +1,56 @@
++# รายงานตรวจความสอดคล้องข้อมูล · A2
++
++ตรวจแบบอ่านไฟล์เท่านั้น ณ 2026-09-08 · ไม่ได้แก้ไฟล์ข้อมูลหรือไฟล์เว็บ
++
++## 1) JSON parse / ไฟล์ว่าง / BOM
++
++ตรวจ `data/**/*.json` จำนวน 103 ไฟล์ด้วย UTF-8 (รองรับการตรวจ BOM แยกต่างหาก)
++
++- parse ไม่ผ่าน: ไม่พบ
++- ไฟล์ว่าง: ไม่พบ
++- BOM: ไม่พบ
++
++ผล: ตรวจแล้วไม่พบปัญหา
++
++## 2) ID สถานที่ที่อ้างถึง
++
++ฐานอ้างอิงคือ `data/places-enriched.json` มี 27 IDs
++
++- `data/stories/*.json`: ID ที่อ้างถึงทั้งหมดมีอยู่จริง · ไม่พบ ID หาย
++- `data/map-points.json`: 20 รายการที่อ้างถึงมีอยู่จริง · ไม่พบ ID หาย
++- `data/guide-picks.json`: อ้างถึง ID ต่อไปนี้ที่ไม่มีใน `places-enriched.json`: `guide-baan-lapp`, `guide-bang-deen`, `guide-iron-bridge`, `guide-jae-ouan`, `guide-kae-padthai`, `guide-lad-yai`, `guide-mee-talad-khwang`, `guide-moo-satay-kruaew`, `guide-old-town-street`, `guide-pa-da-hokkien`, `guide-pu-dam`, `guide-tam-nang`, `guide-tuangrat-taosor`
++- routes (`data/siwara-guide.json`): อ้างถึงค่าต่อไปนี้ที่ไม่มีใน `places-enriched.json`: `baan_lapp`, `bang_deen`, `iron_bridge`, `jae_ouan`, `kae_padthai`, `lad_yai`, `mee_talad_khwang`, `moo_satay_kruaew`, `old_town_street`, `pa_da_hokkien`, `pu_dam`, `tam_nang`, `tuangrat_taosor`
++
++หลักฐานไฟล์: `data/places-enriched.json`, `data/stories/*.json`, `data/guide-picks.json`, `data/map-points.json`, `data/siwara-guide.json`
++
++## 3) ทะเบียนรูปและการใช้รูปบนเว็บ
++
++`data/photo-registry.json` ทะเบียน 12 รูป · ตรวจไฟล์ตามฟิลด์ `file` กับ `site/assets/` แล้วพบไฟล์หาย: ไม่พบ
++
++ตรวจการอ้างอิงรูปใน HTML/JS/CSS/JSON/XML ใต้ `site/` แล้วพบรูปที่ใช้งานแต่ไม่อยู่ในทะเบียน (สรุปตามกลุ่ม):
++
++- รูปสถานที่: `culture-street.webp`, `food-center.webp`, `governor-wall.webp`, `guan-yu.webp`, `iron-bridge.webp`, `khun-in.webp`, `kue-chai.webp`, `museum.webp`, `phra-narai.webp`, `pun-thao.webp`, `relic-procession.webp`, `riverwalk.webp`, `rong-jae.webp`, `ruler-ceremony.webp`, `tao-ming.webp`, `thung-phra.webp`, `wat-boromthat.webp`, `wat-khuha.webp`, `wat-kongkha.webp`, `wat-nikorn.webp`, `wat-pathum.webp`, `wat-sena.webp`, `narai-ceremony.webp`
++- รูปคู่มือ: `assets/guide/` ทั้ง 13 ไฟล์
++- รูป OG: `assets/og/` ทั้ง 27 ไฟล์
++- อื่น ๆ: `assets/favicon.svg`, `assets/leaflet/leaflet-page-1.webp`, `assets/leaflet/leaflet-page-2.webp`, `assets/municipal-map.png`
++
++รูปใน `assets/photos/` ทั้ง 12 ไฟล์มีทะเบียนและถูกตรวจว่ามีไฟล์จริงแล้ว
++
++## 4) สถานที่ไม่มี geo / รูป / source
++
++ตรวจสถานที่ 27 รายการใน `data/places-enriched.json`:
++
++- ไม่มี geo: `rong-jae`, `new-year-alms`, `vegetarian`, `loy-krathong`, `chak-phra`
++- ไม่มีรูป: ไม่พบ
++- ไม่มี source: ไม่พบ
++
++หมายเหตุ: การตรวจนี้ยึดฟิลด์ข้อมูลที่มีอยู่จริงใน JSON ไม่ได้อนุมานจากรูปที่หน้าเว็บแสดง
++
++## 5) จำนวนที่เขียนบนหน้าเว็บเทียบข้อมูลจริง
++
++- 20 สถานที่: ตรงกับสถานที่ที่ไม่ใช่ประเพณีใน `places-enriched.json` (27 ทั้งหมด − 7 ประเพณี) และตรงกับ `data/map-points.json` 20 รายการ
++- 7 ประเพณี: ตรงกับ `calendar.events` 7 รายการใน `data/calendar.json` และรายการประเพณี 7 รายการใน `places-enriched.json`
++- 59 รายการ: ไม่ตรงกับข้อมูลร้านที่ตรวจพบ · `site/en/index.html` ระบุ “59 shops” และแจกแจง 32 + 20 + 08 = 60 แต่ `data/shops-extra.json` มี 49 รายการ และ `data/i18n/en/shops.json` มี 49 keys
++
++การเปิดเว็บ/เสิร์ฟ HTTP: ไม่ได้ทำ เพราะงานนี้กำหนดเป็นงานอ่านไฟล์ล้วน และการตรวจข้อ 3/5 ทำได้จากไฟล์เว็บที่สร้างแล้ว
++
+
+codex
+ตรวจเสร็จและเขียนรายงานแล้วที่ [audit/a2-data.md](D:/Siwaracafeweb/output/web/takuapa101-v1/audit/a2-data.md)
+
+สรุปสั้น ๆ:
+
+- JSON 103 ไฟล์ parse ผ่านทั้งหมด · ไม่พบไฟล์ว่างหรือ BOM
+- พบ ID อ้างถึงที่ไม่มีใน `places-enriched.json` ใน `guide-picks` และ routes
+- รูปในทะเบียนมีไฟล์จริงครบ
+- พบสถานที่ไม่มี geo 5 รายการ
+- จำนวน 20 สถานที่และ 7 ประเพณีตรง
+- จำนวน 59 รายการไม่ตรงกับข้อมูลจริง (ข้อมูลร้านมี 49 รายการ)
+diff --git a/output/web/takuapa101-v1/audit/a2-data.md b/output/web/takuapa101-v1/audit/a2-data.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..0cd53810afa7b1d81fee535340f5768d17ced57b
+--- /dev/null
++++ b/output/web/takuapa101-v1/audit/a2-data.md
+@@ -0,0 +1,56 @@
++# รายงานตรวจความสอดคล้องข้อมูล · A2
++
++ตรวจแบบอ่านไฟล์เท่านั้น ณ 2026-09-08 · ไม่ได้แก้ไฟล์ข้อมูลหรือไฟล์เว็บ
++
++## 1) JSON parse / ไฟล์ว่าง / BOM
++
++ตรวจ `data/**/*.json` จำนวน 103 ไฟล์ด้วย UTF-8 (รองรับการตรวจ BOM แยกต่างหาก)
++
++- parse ไม่ผ่าน: ไม่พบ
++- ไฟล์ว่าง: ไม่พบ
++- BOM: ไม่พบ
++
++ผล: ตรวจแล้วไม่พบปัญหา
++
++## 2) ID สถานที่ที่อ้างถึง
++
++ฐานอ้างอิงคือ `data/places-enriched.json` มี 27 IDs
++
++- `data/stories/*.json`: ID ที่อ้างถึงทั้งหมดมีอยู่จริง · ไม่พบ ID หาย
++- `data/map-points.json`: 20 รายการที่อ้างถึงมีอยู่จริง · ไม่พบ ID หาย
++- `data/guide-picks.json`: อ้างถึง ID ต่อไปนี้ที่ไม่มีใน `places-enriched.json`: `guide-baan-lapp`, `guide-bang-deen`, `guide-iron-bridge`, `guide-jae-ouan`, `guide-kae-padthai`, `guide-lad-yai`, `guide-mee-talad-khwang`, `guide-moo-satay-kruaew`, `guide-old-town-street`, `guide-pa-da-hokkien`, `guide-pu-dam`, `guide-tam-nang`, `guide-tuangrat-taosor`
++- routes (`data/siwara-guide.json`): อ้างถึงค่าต่อไปนี้ที่ไม่มีใน `places-enriched.json`: `baan_lapp`, `bang_deen`, `iron_bridge`, `jae_ouan`, `kae_padthai`, `lad_yai`, `mee_talad_khwang`, `moo_satay_kruaew`, `old_town_street`, `pa_da_hokkien`, `pu_dam`, `tam_nang`, `tuangrat_taosor`
++
++หลักฐานไฟล์: `data/places-enriched.json`, `data/stories/*.json`, `data/guide-picks.json`, `data/map-points.json`, `data/siwara-guide.json`
++
++## 3) ทะเบียนรูปและการใช้รูปบนเว็บ
++
++`data/photo-registry.json` ทะเบียน 12 รูป · ตรวจไฟล์ตามฟิลด์ `file` กับ `site/assets/` แล้วพบไฟล์หาย: ไม่พบ
++
++ตรวจการอ้างอิงรูปใน HTML/JS/CSS/JSON/XML ใต้ `site/` แล้วพบรูปที่ใช้งานแต่ไม่อยู่ในทะเบียน (สรุปตามกลุ่ม):
++
++- รูปสถานที่: `culture-street.webp`, `food-center.webp`, `governor-wall.webp`, `guan-yu.webp`, `iron-bridge.webp`, `khun-in.webp`, `kue-chai.webp`, `museum.webp`, `phra-narai.webp`, `pun-thao.webp`, `relic-procession.webp`, `riverwalk.webp`, `rong-jae.webp`, `ruler-ceremony.webp`, `tao-ming.webp`, `thung-phra.webp`, `wat-boromthat.webp`, `wat-khuha.webp`, `wat-kongkha.webp`, `wat-nikorn.webp`, `wat-pathum.webp`, `wat-sena.webp`, `narai-ceremony.webp`
++- รูปคู่มือ: `assets/guide/` ทั้ง 13 ไฟล์
++- รูป OG: `assets/og/` ทั้ง 27 ไฟล์
++- อื่น ๆ: `assets/favicon.svg`, `assets/leaflet/leaflet-page-1.webp`, `assets/leaflet/leaflet-page-2.webp`, `assets/municipal-map.png`
++
++รูปใน `assets/photos/` ทั้ง 12 ไฟล์มีทะเบียนและถูกตรวจว่ามีไฟล์จริงแล้ว
++
++## 4) สถานที่ไม่มี geo / รูป / source
++
++ตรวจสถานที่ 27 รายการใน `data/places-enriched.json`:
++
++- ไม่มี geo: `rong-jae`, `new-year-alms`, `vegetarian`, `loy-krathong`, `chak-phra`
++- ไม่มีรูป: ไม่พบ
++- ไม่มี source: ไม่พบ
++
++หมายเหตุ: การตรวจนี้ยึดฟิลด์ข้อมูลที่มีอยู่จริงใน JSON ไม่ได้อนุมานจากรูปที่หน้าเว็บแสดง
++
++## 5) จำนวนที่เขียนบนหน้าเว็บเทียบข้อมูลจริง
++
++- 20 สถานที่: ตรงกับสถานที่ที่ไม่ใช่ประเพณีใน `places-enriched.json` (27 ทั้งหมด − 7 ประเพณี) และตรงกับ `data/map-points.json` 20 รายการ
++- 7 ประเพณี: ตรงกับ `calendar.events` 7 รายการใน `data/calendar.json` และรายการประเพณี 7 รายการใน `places-enriched.json`
++- 59 รายการ: ไม่ตรงกับข้อมูลร้านที่ตรวจพบ · `site/en/index.html` ระบุ “59 shops” และแจกแจง 32 + 20 + 08 = 60 แต่ `data/shops-extra.json` มี 49 รายการ และ `data/i18n/en/shops.json` มี 49 keys
++
++การเปิดเว็บ/เสิร์ฟ HTTP: ไม่ได้ทำ เพราะงานนี้กำหนดเป็นงานอ่านไฟล์ล้วน และการตรวจข้อ 3/5 ทำได้จากไฟล์เว็บที่สร้างแล้ว
++
+
+tokens used
+58,305

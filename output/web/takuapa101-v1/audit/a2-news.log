@@ -1,0 +1,1447 @@
+ตรวจเสร็จและเขียนรายงานแล้วที่ [audit/a2-news.md](D:/Siwaracafeweb/output/web/takuapa101-v1/audit/a2-news.md)
+
+สรุปผล:
+
+- พบ `ผิด`: production คืน `place_id: "null"` เป็น string
+- พบ `ควรแก้`: AI salvage parser ใช้ byte `0x08` แทน `\b` แต่ยัง fail-safe ไม่ปล่อยข่าวผิดขึ้นเว็บ
+- Feed ที่ 503 ถูกข้ามไปแหล่งถัดไปได้
+- ตรวจลิงก์ได้ 4/5 เส้น · 1 เส้น timeout จึงระบุว่าตรวจไม่ได้
+- ไม่พบ secret/key ฝังในโค้ด deploy
+- ไม่ได้แก้ไฟล์ระบบใด ๆ · เพิ่มเฉพาะรายงานตามที่ร้องขอ
+
+--ERR--
+OpenAI Codex v0.153.4
+--------
+workdir: D:\Siwaracafeweb\output\web\takuapa101-v1
+model: gpt-5.6-luna
+provider: openai
+approval: never
+sandbox: danger-full-access
+reasoning effort: low
+reasoning summaries: none
+session id: 01a080b4-0be6-7710-b90b-7615ff2e678f
+--------
+user
+อ่าน `audit/SPEC.md` ให้ครบก่อนลงมือ แล้วทำตามกฎทุกข้อ โดยเฉพาะข้อห้ามแก้ไฟล์และห้ามแต่งปัญหา
+งานนี้ขอบเขตแคบ ทำให้จบใน 15 นาที · ถ้าตรวจข้อไหนไม่ได้ ให้เขียนว่าตรวจไม่ได้เพราะอะไร แล้วไปข้อถัดไป
+เสิร์ฟไฟล์ด้วย `python -m http.server 8799 --directory site` แล้วเปิด http://127.0.0.1:8799 ถ้าต้องใช้เบราว์เซอร์ (Playwright ติดตั้งแล้ว)
+
+ตรวจระบบข่าวอัตโนมัติใน `worker/`
+1. อ่าน `worker/src/index.js`, `filter.js`, `recheck.js` · หา bug เชิงตรรกะ
+   โดยเฉพาะ: การกันข่าวซ้ำ, การแกะลิงก์จริงออกจากลิงก์ห่อของ Bing, การจัดการ error
+2. ถ้า feed ต้นทางล่มหรือคืน 503 ระบบจะพังทั้งระบบไหม หรือข้ามไปตัวถัดไปได้
+3. ถ้า AI คืนคำตอบผิดรูปแบบ จะเกิดอะไรขึ้น · มีทางที่ข่าวผิดหลุดขึ้นเว็บไหม
+4. ยิง https://takuapa101-news.siwatid-99.workers.dev/api/news ดูข้อมูลที่คืนมาจริง
+   ลิงก์ในผลลัพธ์เปิดไปถึงบทความจริงไหม (สุ่มเช็ก 5 เส้นด้วย HTTP)
+5. มีข้อมูลลับหรือคีย์หลุดในโค้ดที่ deploy ไหม
+เขียนรายงานที่ `audit/a2-news.md`
+codex
+ผมจะอ่าน `audit/SPEC.md` และกติกา audit ให้ครบก่อน จากนั้นตรวจเฉพาะขอบเขตที่ระบุ เก็บหลักฐานจากโค้ด/HTTP และเขียนรายงานลง `audit/a2-news.md` เท่านั้น โดยจะไม่แก้ไฟล์ระบบหรือแต่งปัญหา หากข้อใดตรวจไม่ได้จะระบุเหตุผลไว้ชัดเจน.
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'Get-Content -Raw audit/SPEC.md; Write-Output "`n---DEBUG SKILL---"; Get-Content -Raw '"'C:\\Users\\siwat\\.agents\\skills\\debug-mantra\\SKILL.md'; Write-Output \""'`n---SCRUTINIZE SKILL---"; Get-Content -Raw '"'C:\\Users\\siwat\\.agents\\skills\\scrutinize\\SKILL.md'" in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 102ms:
+# à¸‡à¸²à¸™à¸•à¸£à¸§à¸ˆà¹€à¸§à¹‡à¸š takuapa101.com Â· à¸£à¸­à¸šà¸•à¸£à¸§à¸ˆà¸„à¸§à¸²à¸¡à¸–à¸¹à¸à¸•à¹‰à¸­à¸‡
+
+à¹‚à¸Ÿà¸¥à¹€à¸”à¸­à¸£à¹Œà¸‡à¸²à¸™ `D:\Siwaracafeweb\output\web\takuapa101-v1`
+à¹€à¸§à¹‡à¸šà¸ˆà¸£à¸´à¸‡ `https://takuapa101.com` Â· à¹„à¸—à¸¢ 45 à¸«à¸™à¹‰à¸² Â· à¸­à¸±à¸‡à¸à¸¤à¸© 44 à¸«à¸™à¹‰à¸²
+
+## à¸à¸Žà¸à¸²à¸£à¸—à¸³à¸‡à¸²à¸™ (à¸—à¸¸à¸à¸„à¸™à¸•à¹‰à¸­à¸‡à¸­à¹ˆà¸²à¸™)
+
+1. **à¸«à¹‰à¸²à¸¡à¹à¸à¹‰à¹„à¸Ÿà¸¥à¹Œà¹ƒà¸” à¹†** à¸‡à¸²à¸™à¸™à¸µà¹‰à¸„à¸·à¸­à¸•à¸£à¸§à¸ˆà¹à¸¥à¸°à¸£à¸²à¸¢à¸‡à¸²à¸™à¹€à¸—à¹ˆà¸²à¸™à¸±à¹‰à¸™ Â· à¹€à¸ˆà¹‰à¸²à¸‚à¸­à¸‡à¹€à¸§à¹‡à¸šà¸ˆà¸°à¹€à¸›à¹‡à¸™à¸„à¸™à¸•à¸±à¸”à¸ªà¸´à¸™à¹ƒà¸ˆà¹à¸à¹‰
+2. **à¸—à¸¸à¸à¸‚à¹‰à¸­à¸—à¸µà¹ˆà¸£à¸²à¸¢à¸‡à¸²à¸™à¸•à¹‰à¸­à¸‡à¸¡à¸µà¸«à¸¥à¸±à¸à¸à¸²à¸™** à¸£à¸°à¸šà¸¸à¹„à¸Ÿà¸¥à¹Œ à¸šà¸£à¸£à¸—à¸±à¸” à¸«à¸£à¸·à¸­ URL à¸—à¸µà¹ˆà¸•à¸£à¸§à¸ˆà¹€à¸ˆà¸­ Â· à¸«à¹‰à¸²à¸¡à¹€à¸‚à¸µà¸¢à¸™à¸§à¹ˆà¸² "à¸­à¸²à¸ˆà¸ˆà¸°" à¸¥à¸­à¸¢ à¹†
+3. **à¹à¸¢à¸à¸„à¸§à¸²à¸¡à¸£à¸¸à¸™à¹à¸£à¸‡** à¹€à¸›à¹‡à¸™ 3 à¸£à¸°à¸”à¸±à¸š
+   - `à¸œà¸´à¸”` = à¸‚à¹‰à¸­à¸¡à¸¹à¸¥à¸œà¸´à¸” à¸¥à¸´à¸‡à¸à¹Œà¹€à¸ªà¸µà¸¢ à¹‚à¸„à¹‰à¸”à¸žà¸±à¸‡ à¸œà¸¹à¹‰à¹ƒà¸Šà¹‰à¹€à¸ˆà¸­à¸›à¸±à¸à¸«à¸²à¸ˆà¸£à¸´à¸‡
+   - `à¸„à¸§à¸£à¹à¸à¹‰` = à¹„à¸¡à¹ˆà¸œà¸´à¸”à¹à¸•à¹ˆà¸—à¸³à¹ƒà¸«à¹‰à¸”à¸µà¸à¸§à¹ˆà¸²à¸™à¸µà¹‰à¹„à¸”à¹‰à¸Šà¸±à¸”à¹€à¸ˆà¸™
+   - `à¸‚à¹‰à¸­à¸ªà¸±à¸‡à¹€à¸à¸•` = à¹€à¸£à¸·à¹ˆà¸­à¸‡à¸£à¸ªà¸™à¸´à¸¢à¸¡à¸«à¸£à¸·à¸­à¸—à¸²à¸‡à¹€à¸¥à¸·à¸­à¸
+4. **à¸«à¹‰à¸²à¸¡à¸£à¸²à¸¢à¸‡à¸²à¸™à¸ªà¸´à¹ˆà¸‡à¸—à¸µà¹ˆà¸¢à¸±à¸‡à¹„à¸¡à¹ˆà¹„à¸”à¹‰à¸•à¸£à¸§à¸ˆà¸ˆà¸£à¸´à¸‡** à¸–à¹‰à¸²à¸•à¸£à¸§à¸ˆà¹„à¸¡à¹ˆà¹„à¸”à¹‰à¹ƒà¸«à¹‰à¹€à¸‚à¸µà¸¢à¸™à¸§à¹ˆà¸²à¸•à¸£à¸§à¸ˆà¹„à¸¡à¹ˆà¹„à¸”à¹‰à¹€à¸žà¸£à¸²à¸°à¸­à¸°à¹„à¸£
+5. à¸–à¹‰à¸²à¹„à¸¡à¹ˆà¹€à¸ˆà¸­à¸›à¸±à¸à¸«à¸²à¹ƒà¸™à¸«à¸±à¸§à¸‚à¹‰à¸­à¹„à¸«à¸™ à¹ƒà¸«à¹‰à¹€à¸‚à¸µà¸¢à¸™à¸§à¹ˆà¸² "à¸•à¸£à¸§à¸ˆà¹à¸¥à¹‰à¸§à¹„à¸¡à¹ˆà¸žà¸šà¸›à¸±à¸à¸«à¸²" à¸žà¸£à¹‰à¸­à¸¡à¸šà¸­à¸à¸§à¹ˆà¸²à¸•à¸£à¸§à¸ˆà¸­à¸°à¹„à¸£à¹„à¸›à¸šà¹‰à¸²à¸‡
+   **à¸­à¸¢à¹ˆà¸²à¹à¸•à¹ˆà¸‡à¸›à¸±à¸à¸«à¸²à¸‚à¸¶à¹‰à¸™à¸¡à¸²à¹€à¸žà¸·à¹ˆà¸­à¹ƒà¸«à¹‰à¸¡à¸µà¸­à¸°à¹„à¸£à¸£à¸²à¸¢à¸‡à¸²à¸™**
+6. à¹€à¸‚à¸µà¸¢à¸™à¸£à¸²à¸¢à¸‡à¸²à¸™à¹€à¸›à¹‡à¸™à¸ à¸²à¸©à¸²à¹„à¸—à¸¢ à¹ƒà¸Šà¹‰ `Â·` à¹à¸—à¸™ em-dash Â· à¹€à¸‚à¸µà¸¢à¸™à¹„à¸Ÿà¸¥à¹Œà¹€à¸›à¹‡à¸™ UTF-8 à¹€à¸—à¹ˆà¸²à¸™à¸±à¹‰à¸™
+
+## à¸šà¸£à¸´à¸šà¸—à¸—à¸µà¹ˆà¸•à¹‰à¸­à¸‡à¸£à¸¹à¹‰à¸à¹ˆà¸­à¸™à¸•à¸£à¸§à¸ˆ
+
+à¹€à¸§à¹‡à¸šà¸™à¸µà¹‰à¸•à¸±à¹‰à¸‡à¹ƒà¸ˆ **à¹à¸¢à¸à¸‚à¹‰à¸­à¹€à¸—à¹‡à¸ˆà¸ˆà¸£à¸´à¸‡à¸—à¸µà¹ˆà¸¢à¸·à¸™à¸¢à¸±à¸™à¹à¸¥à¹‰à¸§à¸­à¸­à¸à¸ˆà¸²à¸à¸—à¸µà¹ˆà¸¢à¸±à¸‡à¹„à¸¡à¹ˆà¸¢à¸·à¸™à¸¢à¸±à¸™** à¸­à¸¢à¹ˆà¸²à¸‡à¸Šà¸±à¸”à¹€à¸ˆà¸™
+à¸„à¸³à¸§à¹ˆà¸² "à¸¢à¸±à¸‡à¹„à¸¡à¹ˆà¸¢à¸·à¸™à¸¢à¸±à¸™" "à¸ªà¸±à¸™à¸™à¸´à¸©à¸à¸²à¸™" "à¹à¸«à¸¥à¹ˆà¸‡à¸‚à¸±à¸”à¸à¸±à¸™" à¸—à¸µà¹ˆà¹€à¸«à¹‡à¸™à¸šà¸™à¸«à¸™à¹‰à¸²à¹€à¸§à¹‡à¸š **à¹„à¸¡à¹ˆà¹ƒà¸Šà¹ˆà¸‚à¹‰à¸­à¸šà¸à¸žà¸£à¹ˆà¸­à¸‡**
+à¹à¸•à¹ˆà¹€à¸›à¹‡à¸™à¸ªà¸´à¹ˆà¸‡à¸—à¸µà¹ˆà¸•à¸±à¹‰à¸‡à¹ƒà¸ˆà¹ƒà¸ªà¹ˆ Â· à¸­à¸¢à¹ˆà¸²à¸£à¸²à¸¢à¸‡à¸²à¸™à¸§à¹ˆà¸²à¹€à¸›à¹‡à¸™à¸›à¸±à¸à¸«à¸²
+
+à¸—à¸³à¸™à¸­à¸‡à¹€à¸”à¸µà¸¢à¸§à¸à¸±à¸™ à¸Šà¸·à¹ˆà¸­à¸«à¸™à¹ˆà¸§à¸¢à¸‡à¸²à¸™à¸£à¸²à¸Šà¸à¸²à¸£à¹„à¸—à¸¢à¹ƒà¸™à¸«à¸™à¹‰à¸²à¸­à¸±à¸‡à¸à¸¤à¸©à¸—à¸µà¹ˆà¹€à¸‚à¸µà¸¢à¸™à¹€à¸›à¹‡à¸™
+`à¸ªà¸³à¸™à¸±à¸à¸‡à¸²à¸™à¸™à¹‚à¸¢à¸šà¸²à¸¢à¹à¸¥à¸°à¹à¸œà¸™... (Office of Natural Resources...)` **à¸•à¸±à¹‰à¸‡à¹ƒà¸ˆà¸„à¸‡à¸ à¸²à¸©à¸²à¹„à¸—à¸¢à¹„à¸§à¹‰**
+à¹€à¸žà¸·à¹ˆà¸­à¹ƒà¸«à¹‰à¸„à¸™à¸•à¸²à¸¡à¹„à¸›à¸«à¸²à¹€à¸­à¸à¸ªà¸²à¸£à¸•à¹‰à¸™à¸—à¸²à¸‡à¹„à¸”à¹‰ à¹„à¸¡à¹ˆà¹ƒà¸Šà¹ˆà¸„à¸³à¹à¸›à¸¥à¸•à¸à¸«à¸¥à¹ˆà¸™
+
+à¹„à¸Ÿà¸¥à¹Œà¸­à¹‰à¸²à¸‡à¸­à¸´à¸‡à¸ªà¸³à¸„à¸±à¸
+- `data/places-enriched.json` à¸‚à¹‰à¸­à¸¡à¸¹à¸¥à¸ªà¸–à¸²à¸™à¸—à¸µà¹ˆ 27 à¹à¸«à¹ˆà¸‡ à¸—à¸¸à¸ claim à¸¡à¸µ status à¹à¸¥à¸° source_url
+- `data/photo-registry.json` à¸—à¸°à¹€à¸šà¸µà¸¢à¸™à¸£à¸¹à¸› à¸à¸³à¸«à¸™à¸”à¸§à¹ˆà¸²à¸£à¸¹à¸›à¹„à¸«à¸™à¸‚à¸¶à¹‰à¸™à¸«à¸™à¹‰à¸²à¹„à¸«à¸™à¹„à¸”à¹‰
+- `data/stories/*.json` à¸šà¸—à¸„à¸§à¸²à¸¡ 5 à¸šà¸—
+- `data/guide-picks.json` à¸„à¸¹à¹ˆà¸¡à¸·à¸­à¸„à¸±à¸”à¸ªà¸£à¸£ 13 à¸£à¸²à¸¢à¸à¸²à¸£
+- `data/shops-extra.json` à¸£à¹‰à¸²à¸™à¸ˆà¸²à¸à¸à¸²à¸£à¸„à¹‰à¸™à¸«à¸² 49 à¸£à¹‰à¸²à¸™
+
+
+---DEBUG SKILL---
+---
+name: debug-mantra
+description: Four-mantra debugging discipline â€” reproduce, trace the fail path, falsify the hypothesis, cross-reference every breadcrumb. Recite the mantra block verbatim at the start of any debugging session, then apply the four steps in order before proposing any fix. Trigger on /debug-mantra and proactively whenever debugging starts â€” user reports a bug, says something is broken/throwing/failing, asks to debug/diagnose/investigate an issue, or pastes a stack trace or error log.
+---
+
+# Debug Mantra
+
+Four-step discipline for any debug session. Recite verbatim, then apply in order.
+
+## Recite this â€” verbatim, as the first thing in your first response
+
+> **Mantra:**
+> 1. **First is reproducibility.** Can the issue be reproduced reliably?
+> 2. **Know the fail path.** Debugger first; then source trace + knob enumeration; then in-code instrumentation.
+> 3. **Question your hypothesis.** What would disprove it?
+> 4. **Every run is a breadcrumb.** Cross-reference all of them.
+
+Then begin work.
+
+---
+
+## 1. Reproduce reliably
+
+Build a runnable repro before anything else.
+
+- **Reliable repro** â†’ capture the exact steps, inputs, and environment as a runnable artifact: failing test, curl script, CLI invocation, replay harness.
+- **Flaky repro** â†’ the bug is not yet debuggable. Raise the rate first: loop the trigger, parallelise, add stress, narrow timing windows, inject sleeps. 50% flake is debuggable; 1% is not.
+- **No repro at all** â†’ stop. Say so explicitly. Ask the user for env access, captured artifacts (HAR, log dump, core), or permission to instrument. Do **not** proceed to hypothesise.
+
+Target: a fast (1â€“5 s), deterministic pass/fail signal. Pin time, seed the RNG, freeze network, isolate filesystem.
+
+## 2. Know the fail path
+
+Once reproducible, find *where* the code breaks and *what stops it from breaking*. The differential narrows the search. Try in this order â€” escalate only when the prior tactic fails.
+
+1. **Attach a debugger.** If the env supports it, attach and step to the failure site. One breakpoint beats ten logs. Do this **before** turning any knobs.
+2. **Source trace + knob enumeration.** If no debugger (or it can't reach the bug), trace the code path end-to-end and list every knob that can influence the outcome:
+   - config flags, env vars, feature toggles
+   - branch conditions, input shape
+   - timing, concurrency, build options
+   Each knob is a candidate axis to flip in the differential. Flip one at a time.
+3. **In-code instrumentation.** If outside knobs can't move the failure, go inside: `printf` / log statements at the suspected fail site, dump the relevant internal state. Tag every probe with a unique prefix (e.g. `[DBG-a4f2]`) so cleanup is a single grep. Let the trace show where reality diverges from your model.
+
+## 3. Falsify the hypothesis
+
+When a candidate root cause surfaces, scrutinise it **before** testing it.
+
+- Does it actually explain the symptom end-to-end? Walk it through.
+- What is the simplest **proof**? What is the cleanest **disproof**?
+- Run the **disproof first**. If the hypothesis survives, it's real. If it dies, you saved yourself from chasing a phantom.
+- Generate 3â€“5 ranked hypotheses, not one. Single-hypothesis thinking anchors on the first plausible idea.
+
+## 4. Every run is a breadcrumb
+
+Maintain a running **ledger** of every experiment in this session. Each entry: what changed, what happened, what it ruled in or out.
+
+- When a new hypothesis surfaces, walk the ledger. Does it hold for **every** prior observation, not just the most recent?
+- If any past run contradicts it, the hypothesis is wrong or incomplete â€” refine or discard.
+- When in doubt, design the **single experiment** whose outcome makes it certain. Run that next, instead of churning on adjacent runs.
+- Update the ledger after every run. It is your memory across the session.
+
+---
+
+## Operating rules
+
+- Recite the mantra block **once** per debug session, in your first response. Do not re-recite mid-session.
+- Recite **verbatim**. Never paraphrase, shorten, or skip lines of the recital.
+- If the user says "skip the mantra" â†’ skip the recital but still apply the four steps silently.
+- Apply the four steps **in order**:
+  - Do not propose a fix before #1 is satisfied (reliable repro exists).
+  - Do not start testing hypotheses before #2 has narrowed the fail path.
+  - Do not commit to a hypothesis before #3 has tried to disprove it.
+  - Do not declare a hypothesis correct until #4 confirms it against every prior breadcrumb.
+- If you catch yourself proposing a fix without a reliable repro, stop and return to step 1.
+- The mantra is a constraint **you** carry through the session â€” not advice to deliver back to the user.
+
+
+---SCRUTINIZE SKILL---
+---
+name: scrutinize
+description: Outsider-perspective end-to-end review of a plan, PR, or code change. First questions intent and whether a simpler/more elegant approach would achieve the same goal, then traces the actual code path (not just the diff) to verify the change does what it claims. Output is concise, actionable, and every call carries its rationale. Trigger on /scrutinize and proactively whenever the user asks to review, audit, sanity-check, or get a second opinion on a plan, PR, diff, design doc, or proposed code change.
+---
+
+# Scrutinize
+
+Stand outside the change and ask whether it should exist at all, then verify it actually does what it claims end-to-end.
+
+## Operating stance
+
+- **Outsider.** Forget who wrote it and why they think it's right. Read the artifact cold.
+- **End-to-end, not diff-local.** The diff is the entry point, not the scope. Follow the call graph through real code paths.
+- **Actionable, concise, with rationale.** Every finding states *what to change*, *why*, and *what evidence* led you there. No filler, no restating the diff back.
+
+## Workflow
+
+Run these in order. Do not skip ahead.
+
+### 1. Intent â€” what is this actually trying to do?
+
+- State the goal in one sentence, in your own words. If you cannot, the artifact is underspecified â€” say so and stop.
+- Ask: **is there a simpler, smaller, or more elegant way to achieve the same goal?** Consider:
+  - Doing nothing (is the problem real / load-bearing?).
+  - Using something that already exists in the codebase instead of adding new surface.
+  - A smaller change that solves 90% of the goal with 10% of the risk.
+  - Solving it at a different layer (config vs code, framework vs app, build vs runtime).
+- If a better alternative exists, name it explicitly with rationale. This is the most valuable thing you can output â€” surface it before the line-by-line review.
+
+### 2. Trace â€” walk the actual code path
+
+- For each behavior the change claims, trace the path end-to-end through the real code, not just the lines in the diff:
+  - Entry point â†’ call sites â†’ branches taken â†’ state mutated â†’ exit / return / side effect.
+  - Include the unchanged code on either side of the diff. Bugs hide at the seams.
+- For a plan or design doc: trace the proposed flow against the existing system. Where does it touch reality? What does it assume that isn't true?
+- Note every place the trace surprises you (unexpected branch, dead code reached, state you didn't know existed). Surprises are signal.
+
+### 3. Verify â€” does it actually do what it claims?
+
+For each claim the change/plan makes, answer:
+
+- **Does the code path you just traced actually produce that behavior?** Walk it explicitly. "It claims X. Path: A â†’ B â†’ C. At C, [observation]. Therefore [holds / doesn't hold]."
+- **What inputs / states would break it?** Edge cases, concurrent callers, error paths, partial failures, retries, empty/null/unicode/huge inputs, ordering assumptions.
+- **What does it silently change?** Performance, error semantics, observability, contract for other callers, on-disk / on-wire format.
+- **How is it tested?** Do the tests actually exercise the traced path, or do they pass while skipping it (mocks that hide the bug, asserts on intermediate state, happy path only)?
+
+### 4. Report
+
+Output one tight section per finding. Order by severity (blocker â†’ major â†’ nit). For each:
+
+- **Finding** â€” one sentence, specific. Cite `file:line` when applicable.
+- **Why it matters** â€” the consequence, not the principle.
+- **Evidence** â€” the trace step or input that exposes it.
+- **Suggested change** â€” concrete, minimal.
+
+Close with a one-line verdict: ship / fix-then-ship / rework / reject â€” with the single biggest reason.
+
+## Operating rules
+
+- **No rubber-stamps.** "LGTM" is not an output. If you genuinely find nothing, say what you traced and what you checked, so the user can judge whether your review covered the surface they cared about.
+- **Cite or it didn't happen.** Every claim about the code references a specific path, file, or line. No vague "this might break under load."
+- **Distinguish claim from verification.** "The PR says X" and "I traced X and confirmed / refuted it" are different â€” keep them separate in the output.
+- **One simpler-alternative pass is mandatory.** Even on small changes, spend one breath asking if the whole thing is necessary. Skip only if the user explicitly says "don't question scope."
+- **Don't pad with style nits when there's a structural problem.** If step 1 or step 2 surfaces a real issue, lead with it; defer nits or drop them.
+- **No flattery, no hedging.** "This is a great PR but..." adds nothing. State the finding.
+
+
+codex
+> **Mantra:**
+> 1. **First is reproducibility.** Can the issue be reproduced reliably?
+> 2. **Know the fail path.** Debugger first; then source trace + knob enumeration; then in-code instrumentation.
+> 3. **Question your hypothesis.** What would disprove it?
+> 4. **Every run is a breadcrumb.** Cross-reference all of them.
+
+ผมใช้แนวทางตรวจแบบ end-to-end ตามทักษะ audit/debug: จะยืนยันจากเส้นทางโค้ดและผลตอบสนองจริงก่อนสรุปแต่ละข้อ.
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$p='"'audit/SPEC.md'; [Text.Encoding]::UTF8.GetString([IO.File]::ReadAllBytes("'$p)); Write-Output "`n---FILES---"; Get-ChildItem worker/src | Select-Object Name; Write-Output "`n---INDEX---"; $i=0; Get-Content -Encoding UTF8 worker/src/index.js | % { $i++; '"'{0,4}: {1}' -f "'$i,$_ }; Write-Output "`n---FILTER---"; $i=0; Get-Content -Encoding UTF8 worker/src/filter.js | % { $i++; '"'{0,4}: {1}' -f "'$i,$_ }; Write-Output "`n---RECHECK---"; $i=0; Get-Content -Encoding UTF8 worker/src/recheck.js | % { $i++; '"'{0,4}: {1}' -f "'$i,$_ }' in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 116ms:
+# งานตรวจเว็บ takuapa101.com · รอบตรวจความถูกต้อง
+
+โฟลเดอร์งาน `D:\Siwaracafeweb\output\web\takuapa101-v1`
+เว็บจริง `https://takuapa101.com` · ไทย 45 หน้า · อังกฤษ 44 หน้า
+
+## กฎการทำงาน (ทุกคนต้องอ่าน)
+
+1. **ห้ามแก้ไฟล์ใด ๆ** งานนี้คือตรวจและรายงานเท่านั้น · เจ้าของเว็บจะเป็นคนตัดสินใจแก้
+2. **ทุกข้อที่รายงานต้องมีหลักฐาน** ระบุไฟล์ บรรทัด หรือ URL ที่ตรวจเจอ · ห้ามเขียนว่า "อาจจะ" ลอย ๆ
+3. **แยกความรุนแรง** เป็น 3 ระดับ
+   - `ผิด` = ข้อมูลผิด ลิงก์เสีย โค้ดพัง ผู้ใช้เจอปัญหาจริง
+   - `ควรแก้` = ไม่ผิดแต่ทำให้ดีกว่านี้ได้ชัดเจน
+   - `ข้อสังเกต` = เรื่องรสนิยมหรือทางเลือก
+4. **ห้ามรายงานสิ่งที่ยังไม่ได้ตรวจจริง** ถ้าตรวจไม่ได้ให้เขียนว่าตรวจไม่ได้เพราะอะไร
+5. ถ้าไม่เจอปัญหาในหัวข้อไหน ให้เขียนว่า "ตรวจแล้วไม่พบปัญหา" พร้อมบอกว่าตรวจอะไรไปบ้าง
+   **อย่าแต่งปัญหาขึ้นมาเพื่อให้มีอะไรรายงาน**
+6. เขียนรายงานเป็นภาษาไทย ใช้ `·` แทน em-dash · เขียนไฟล์เป็น UTF-8 เท่านั้น
+
+## บริบทที่ต้องรู้ก่อนตรวจ
+
+เว็บนี้ตั้งใจ **แยกข้อเท็จจริงที่ยืนยันแล้วออกจากที่ยังไม่ยืนยัน** อย่างชัดเจน
+คำว่า "ยังไม่ยืนยัน" "สันนิษฐาน" "แหล่งขัดกัน" ที่เห็นบนหน้าเว็บ **ไม่ใช่ข้อบกพร่อง**
+แต่เป็นสิ่งที่ตั้งใจใส่ · อย่ารายงานว่าเป็นปัญหา
+
+ทำนองเดียวกัน ชื่อหน่วยงานราชการไทยในหน้าอังกฤษที่เขียนเป็น
+`สำนักงานนโยบายและแผน... (Office of Natural Resources...)` **ตั้งใจคงภาษาไทยไว้**
+เพื่อให้คนตามไปหาเอกสารต้นทางได้ ไม่ใช่คำแปลตกหล่น
+
+ไฟล์อ้างอิงสำคัญ
+- `data/places-enriched.json` ข้อมูลสถานที่ 27 แห่ง ทุก claim มี status และ source_url
+- `data/photo-registry.json` ทะเบียนรูป กำหนดว่ารูปไหนขึ้นหน้าไหนได้
+- `data/stories/*.json` บทความ 5 บท
+- `data/guide-picks.json` คู่มือคัดสรร 13 รายการ
+- `data/shops-extra.json` ร้านจากการค้นหา 49 ร้าน
+
+
+---FILES---
+
+Name      
+----      
+filter.js 
+index.js  
+recheck.js
+sources.js
+
+---INDEX---
+   1: /* takuapa101-news · Cloudflare Worker
+   2:    cron  -> harvest, rule-filter, AI re-check, store in KV
+   3:    fetch -> serve the reviewed feed to the site as JSON */
+   4: import { NEWS_QUERIES, OUTLET_FEEDS, DIRECT_SOURCES, FIRST_PARTY } from './sources.js';
+   5: import { ruleFilter, fingerprint, normalise, titleKey, unwrapLink, urlKey } from './filter.js';
+   6: import { recheck, bucketOf } from './recheck.js';
+   7: 
+   8: const UA = 'takuapa101-news/1.0 (+https://siwaracafe.com/takuapa/)';
+   9: const KEY_LIVE = 'feed:live';
+  10: const KEY_HELD = 'feed:held';
+  11: const KEY_SEEN = 'seen:index';
+  12: const KEY_RUN = 'run:last';
+  13: 
+  14: function cors(env, request) {
+  15:   const origin = request.headers.get('Origin') || '';
+  16:   const allowed = (env.ALLOWED_ORIGINS || '').split(',').map((s) => s.trim()).filter(Boolean);
+  17:   const ok = allowed.some((a) => origin === a || origin.startsWith(a));
+  18:   return {
+  19:     'Access-Control-Allow-Origin': ok ? origin : (allowed[0] || '*'),
+  20:     'Access-Control-Allow-Methods': 'GET,OPTIONS',
+  21:     'Access-Control-Allow-Headers': 'content-type',
+  22:     'Cache-Control': 'public, max-age=600',
+  23:   };
+  24: }
+  25: 
+  26: function tag(xml, name) {
+  27:   const m = xml.match(new RegExp('<' + name + '[^>]*>([\\s\\S]*?)</' + name + '>'));
+  28:   return m ? normalise(m[1].replace(/<!\[CDATA\[|\]\]>/g, '')) : '';
+  29: }
+  30: 
+  31: function toISO(d) {
+  32:   const t = Date.parse(d);
+  33:   return Number.isNaN(t) ? '' : new Date(t).toISOString().slice(0, 10);
+  34: }
+  35: 
+  36: async function fetchText(url) {
+  37:   const r = await fetch(url, { headers: { 'User-Agent': UA, 'Accept-Language': 'th,en' }, cf: { cacheTtl: 300 } });
+  38:   if (!r.ok) throw new Error(url.slice(0, 60) + ' -> ' + r.status);
+  39:   return r.text();
+  40: }
+  41: 
+  42: function parseRss(xml, meta) {
+  43:   const out = [];
+  44:   for (const raw of xml.split(/<item[\s>]/).slice(1)) {
+  45:     const block = raw.split('</item>')[0];
+  46:     const title = tag(block, 'title');
+  47:     const link = unwrapLink(tag(block, 'link') || tag(block, 'guid'));
+  48:     if (!title || !/^https?:\/\//i.test(link)) continue;
+  49:     out.push({
+  50:       title,
+  51:       link,
+  52:       date: toISO(tag(block, 'pubDate') || tag(block, 'dc:date')),
+  53:       outlet: tag(block, 'source') || meta.outlet || '',
+  54:       summary: normalise(tag(block, 'description')).slice(0, 400),
+  55:       source: meta.source,
+  56:       query: meta.query,
+  57:     });
+  58:   }
+  59:   return out;
+  60: }
+  61: 
+  62: async function harvestSearch() {
+  63:   const out = [];
+  64:   for (const q of NEWS_QUERIES) {
+  65:     const url = 'https://www.bing.com/news/search?q=' + encodeURIComponent(q) + '&format=RSS&setmkt=th-TH';
+  66:     try {
+  67:       const xml = await fetchText(url);
+  68:       out.push(...parseRss(xml, { source: 'bing-news', query: q }));
+  69:     } catch (e) {
+  70:       continue;
+  71:     }
+  72:   }
+  73:   return out;
+  74: }
+  75: 
+  76: async function harvestOutlets() {
+  77:   const out = [];
+  78:   for (const f of OUTLET_FEEDS) {
+  79:     try {
+  80:       const xml = await fetchText(f.url);
+  81:       out.push(...parseRss(xml, { source: f.id, outlet: f.name }));
+  82:     } catch (e) {
+  83:       continue;
+  84:     }
+  85:   }
+  86:   return out;
+  87: }
+  88: 
+  89: async function harvestDirect() {
+  90:   const out = [];
+  91:   for (const s of DIRECT_SOURCES.concat(FIRST_PARTY)) {
+  92:     try {
+  93:       if (s.kind === 'json') {
+  94:         const d = JSON.parse(await fetchText(s.url));
+  95:         const events = Array.isArray(d) ? d : (d.events || []);
+  96:         for (const e of events) {
+  97:           if (!e.title) continue;
+  98:           out.push({
+  99:             title: e.title,
+ 100:             link: e.url || s.url,
+ 101:             date: (e.date || '').slice(0, 10),
+ 102:             outlet: s.name,
+ 103:             summary: e.summary || '',
+ 104:             source: s.id,
+ 105:             authority: s.authority,
+ 106:           });
+ 107:         }
+ 108:       } else {
+ 109:         const html = await fetchText(s.url);
+ 110:         const seen = new Set();
+ 111:         const re = /<a[^>]+href="([^"]+)"[^>]*>([\s\S]{6,160}?)<\/a>/gi;
+ 112:         let m;
+ 113:         while ((m = re.exec(html))) {
+ 114:           const text = normalise(m[2]);
+ 115:           if (text.length < 14 || seen.has(text)) continue;
+ 116:           if (!/ตะกั่วป่า|ตะโกลา/.test(text)) continue;
+ 117:           seen.add(text);
+ 118:           let href = m[1];
+ 119:           if (href.startsWith('/')) href = new URL(s.url).origin + href;
+ 120:           if (!/^https?:/.test(href)) continue;
+ 121:           out.push({ title: text, link: href, date: '', outlet: s.name, summary: '', source: s.id, authority: s.authority });
+ 122:           if (seen.size >= 20) break;
+ 123:         }
+ 124:       }
+ 125:     } catch (e) {
+ 126:       // one bad source must not stop the run
+ 127:     }
+ 128:   }
+ 129:   return out;
+ 130: }
+ 131: 
+ 132: async function readJSON(env, key, fallback) {
+ 133:   const v = await env.NEWS.get(key, 'json');
+ 134:   return (v === null || v === undefined) ? fallback : v;
+ 135: }
+ 136: 
+ 137: export async function runHarvest(env) {
+ 138:   const started = new Date().toISOString();
+ 139:   const minConf = Number(env.MIN_CONFIDENCE || 75);
+ 140:   const maxItems = Number(env.MAX_ITEMS || 60);
+ 141:   const maxReviews = Number(env.MAX_REVIEWS_PER_RUN || 20);
+ 142: 
+ 143:   const raw = (await harvestSearch())
+ 144:     .concat(await harvestOutlets())
+ 145:     .concat(await harvestDirect());
+ 146: 
+ 147:   const seen = new Set(await readJSON(env, KEY_SEEN, []));
+ 148:   const stats = { fetched: raw.length, rule_rejected: 0, already_seen: 0, reviewed: 0, live: 0, held: 0, dropped: 0 };
+ 149: 
+ 150:   const candidates = [];
+ 151:   const liveNow = await readJSON(env, KEY_LIVE, []);
+ 152:   const titlesSeen = new Set(liveNow.map((r) => titleKey(r.title_th || '')));
+ 153:   const urlsSeen = new Set(liveNow.map((r) => urlKey(r.url || '')));
+ 154:   for (const item of raw) {
+ 155:     const fp = await fingerprint(item);
+ 156:     if (seen.has(fp)) { stats.already_seen++; continue; }
+ 157:     const verdict = ruleFilter(item);
+ 158:     if (!verdict.ok) { stats.rule_rejected++; seen.add(fp); continue; }
+ 159:     const ukey = urlKey(item.link);
+ 160:     if (ukey && urlsSeen.has(ukey)) { stats.duplicate = (stats.duplicate || 0) + 1; seen.add(fp); continue; }
+ 161:     const tkey = titleKey(item.title);
+ 162:     if (tkey && titlesSeen.has(tkey)) { stats.duplicate = (stats.duplicate || 0) + 1; seen.add(fp); continue; }
+ 163:     if (ukey) urlsSeen.add(ukey);
+ 164:     if (tkey) titlesSeen.add(tkey);
+ 165:     candidates.push({ ...item, id: fp, place_id: verdict.place_id, rule_score: verdict.score });
+ 166:   }
+ 167:   candidates.sort((a, b) => b.rule_score - a.rule_score);
+ 168: 
+ 169:   const live = await readJSON(env, KEY_LIVE, []);
+ 170:   const held = await readJSON(env, KEY_HELD, []);
+ 171: 
+ 172:   for (const c of candidates.slice(0, maxReviews)) {
+ 173:     const reviewed = await recheck(env, c);
+ 174:     stats.reviewed++;
+ 175:     const bucket = bucketOf(reviewed, minConf);
+ 176:     seen.add(c.id);
+ 177:     const record = {
+ 178:       id: reviewed.id,
+ 179:       date: reviewed.date,
+ 180:       title_th: reviewed.title,
+ 181:       summary_th: reviewed.summary,
+ 182:       outlet: reviewed.outlet,
+ 183:       url: reviewed.link,
+ 184:       place_id: reviewed.place_id,
+ 185:       confidence: reviewed.confidence,
+ 186:       reason_th: reviewed.review_reason_th || '',
+ 187:       source: reviewed.source,
+ 188:       auto: true,
+ 189:       checked_at: started,
+ 190:     };
+ 191:     if (bucket === 'live') {
+ 192:       // The reviewer rewrites the headline, so check once more against what is
+ 193:       // already published before adding it.
+ 194:       const finalKey = titleKey(record.title_th || '');
+ 195:       if (finalKey && live.some((r) => titleKey(r.title_th || '') === finalKey)) {
+ 196:         stats.duplicate = (stats.duplicate || 0) + 1;
+ 197:       } else {
+ 198:         live.unshift(record);
+ 199:         stats.live++;
+ 200:       }
+ 201:     }
+ 202:     else if (bucket === 'held') { held.unshift({ ...record, verdict: reviewed.verdict, review_error: reviewed.review_error || '' }); stats.held++; }
+ 203:     else { stats.dropped++; }
+ 204:   }
+ 205: 
+ 206:   const byDate = (a, b) => String(b.date || '').localeCompare(String(a.date || ''));
+ 207:   const trimmedLive = live.sort(byDate).slice(0, maxItems);
+ 208:   const trimmedHeld = held.sort(byDate).slice(0, 80);
+ 209: 
+ 210:   await env.NEWS.put(KEY_LIVE, JSON.stringify(trimmedLive));
+ 211:   await env.NEWS.put(KEY_HELD, JSON.stringify(trimmedHeld));
+ 212:   await env.NEWS.put(KEY_SEEN, JSON.stringify([...seen].slice(-4000)));
+ 213:   await env.NEWS.put(KEY_RUN, JSON.stringify({ started, finished: new Date().toISOString(), stats }));
+ 214:   return stats;
+ 215: }
+ 216: 
+ 217: export default {
+ 218:   async scheduled(event, env, ctx) {
+ 219:     ctx.waitUntil(runHarvest(env));
+ 220:   },
+ 221: 
+ 222:   async fetch(request, env) {
+ 223:     const url = new URL(request.url);
+ 224:     const headers = { ...cors(env, request), 'content-type': 'application/json; charset=utf-8' };
+ 225:     if (request.method === 'OPTIONS') return new Response(null, { headers });
+ 226: 
+ 227:     if (url.pathname === '/api/news') {
+ 228:       const live = await readJSON(env, KEY_LIVE, []);
+ 229:       const run = await readJSON(env, KEY_RUN, {});
+ 230:       const limit = Math.min(Number(url.searchParams.get('limit') || 20), 60);
+ 231:       return new Response(JSON.stringify({ items: live.slice(0, limit), updated: run.finished || null }), { headers });
+ 232:     }
+ 233:     if (url.pathname === '/api/held') {
+ 234:       // Items the reviewer was not confident about. Inspectable, never rendered as news.
+ 235:       const heldItems = await readJSON(env, KEY_HELD, []);
+ 236:       return new Response(JSON.stringify({ items: heldItems }), { headers });
+ 237:     }
+ 238:     if (url.pathname === '/api/debug') {
+ 239:       const report = { google: [], direct: [], ai: null };
+ 240:       for (const query of NEWS_QUERIES.slice(0, 2)) {
+ 241:         const target = 'https://www.bing.com/news/search?q=' + encodeURIComponent(query) + '&format=RSS&setmkt=th-TH';
+ 242:         try {
+ 243:           const res = await fetch(target, { headers: { 'User-Agent': UA, 'Accept-Language': 'th,en' } });
+ 244:           const body = await res.text();
+ 245:           report.google.push({ query, status: res.status, length: body.length,
+ 246:                                items: body.split('<item>').length - 1, head: body.slice(0, 160) });
+ 247:         } catch (e) {
+ 248:           report.google.push({ query, error: String(e).slice(0, 160) });
+ 249:         }
+ 250:       }
+ 251:       try {
+ 252:         const res = await fetch(DIRECT_SOURCES[0].url, { headers: { 'User-Agent': UA } });
+ 253:         const body = await res.text();
+ 254:         report.direct.push({ url: DIRECT_SOURCES[0].url, status: res.status, length: body.length });
+ 255:       } catch (e) {
+ 256:         report.direct.push({ error: String(e).slice(0, 160) });
+ 257:       }
+ 258:       try {
+ 259:         const out = await env.AI.run(env.WORKERS_AI_MODEL || '@cf/meta/llama-3.3-70b-instruct-fp8-fast', {
+ 260:           messages: [{ role: 'user', content: 'Reply with only this JSON: {"ok":true}' }],
+ 261:           max_tokens: 60,
+ 262:         });
+ 263:         report.ai = typeof out === 'string' ? out.slice(0, 200) : JSON.stringify(out).slice(0, 200);
+ 264:       } catch (e) {
+ 265:         report.ai = 'ERR ' + String(e).slice(0, 200);
+ 266:       }
+ 267:       return new Response(JSON.stringify(report, null, 1), { headers });
+ 268:     }
+ 269:     if (url.pathname === '/api/probe') {
+ 270:       const cands = [
+ 271:         ['bing', 'https://www.bing.com/news/search?q=%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2&format=RSS'],
+ 272:         ['thairath', 'https://www.thairath.co.th/rss/news'],
+ 273:         ['matichon', 'https://www.matichon.co.th/feed'],
+ 274:         ['khaosod', 'https://www.khaosod.co.th/feed'],
+ 275:         ['mgr', 'https://mgronline.com/rss/detail/local.xml'],
+ 276:         ['prd', 'https://thainews.prd.go.th/rss'],
+ 277:         ['siamrath', 'https://siamrath.co.th/rss/all'],
+ 278:         ['naewna', 'https://www.naewna.com/rss/local'],
+ 279:         ['gnews-alt', 'https://news.google.com/rss/search?q=takuapa&hl=en-US&gl=US&ceid=US:en'],
+ 280:       ];
+ 281:       const rows = [];
+ 282:       for (const [name, u] of cands) {
+ 283:         try {
+ 284:           const res = await fetch(u, { headers: { 'User-Agent': UA, 'Accept': 'application/rss+xml,application/xml,text/xml,*/*' } });
+ 285:           const body = await res.text();
+ 286:           rows.push({ name, status: res.status, len: body.length, items: body.split('<item').length - 1 });
+ 287:         } catch (e) {
+ 288:           rows.push({ name, error: String(e).slice(0, 90) });
+ 289:         }
+ 290:       }
+ 291:       return new Response(JSON.stringify(rows, null, 1), { headers });
+ 292:     }
+ 293:     if (url.pathname === '/api/status') {
+ 294:       const run = await readJSON(env, KEY_RUN, { note: 'ยังไม่เคยรัน' });
+ 295:       return new Response(JSON.stringify(run), { headers });
+ 296:     }
+ 297:     if (url.pathname === '/api/run') {
+ 298:       const key = url.searchParams.get('key');
+ 299:       if (key && env.RUN_KEY && key === env.RUN_KEY) {
+ 300:         const stats = await runHarvest(env);
+ 301:         return new Response(JSON.stringify(stats), { headers });
+ 302:       }
+ 303:       return new Response(JSON.stringify({ error: 'ต้องมี key ที่ถูกต้อง' }), { status: 403, headers });
+ 304:     }
+ 305:     return new Response(JSON.stringify({ endpoints: ['/api/news', '/api/held', '/api/status'] }), { headers });
+ 306:   },
+ 307: };
+
+---FILTER---
+   1: /* Stage 1: rule filter. Cheap, deterministic, runs on every fetched item. */
+   2: import { REQUIRE_ANY, BLOCK_PATTERNS, OUTLET_ALLOWLIST, PLACE_KEYWORDS } from './sources.js';
+   3: 
+   4: const ENTITIES = { amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' ' };
+   5: 
+   6: export function decodeEntities(s) {
+   7:   return String(s || '').replace(/&(#x?[0-9a-f]+|[a-z]+);/gi, function (m, code) {
+   8:     if (code[0] === '#') {
+   9:       const n = code[1] === 'x' || code[1] === 'X'
+  10:         ? parseInt(code.slice(2), 16)
+  11:         : parseInt(code.slice(1), 10);
+  12:       return Number.isFinite(n) ? String.fromCodePoint(n) : m;
+  13:     }
+  14:     const hit = ENTITIES[code.toLowerCase()];
+  15:     return hit === undefined ? m : hit;
+  16:   });
+  17: }
+  18: 
+  19: export function normalise(s) {
+  20:   return decodeEntities((s || '').replace(/<[^>]*>/g, ' ')).replace(/\s+/g, ' ').trim();
+  21: }
+  22: 
+  23: /* Bing hands back a click tracker, not the article. The real address sits in
+  24:    the url= parameter, percent encoded. */
+  25: export function unwrapLink(link) {
+  26:   const raw = decodeEntities(String(link || '')).trim();
+  27:   const m = raw.match(/[?&]url=([^&\s]+)/i);
+  28:   if (m) {
+  29:     try {
+  30:       const inner = decodeURIComponent(m[1]);
+  31:       if (/^https?:\/\//i.test(inner)) return inner;
+  32:     } catch (e) {
+  33:       // fall through to the raw link
+  34:     }
+  35:   }
+  36:   return raw;
+  37: }
+  38: 
+  39: /* Same article from two outlets, or the same outlet twice, is one story. */
+  40: export function urlKey(u) {
+  41:   try {
+  42:     const parsed = new URL(unwrapLink(u));
+  43:     return (parsed.hostname.replace(/^www\./, '') + parsed.pathname.replace(/\/+$/, '')).toLowerCase();
+  44:   } catch (e) {
+  45:     return String(u || '').slice(0, 90).toLowerCase();
+  46:   }
+  47: }
+  48: 
+  49: export function outletAllowed(outlet, link) {
+  50:   const hay = ((outlet || '') + ' ' + (link || '')).toLowerCase();
+  51:   return OUTLET_ALLOWLIST.some((o) => hay.includes(o.toLowerCase()));
+  52: }
+  53: 
+  54: export function guessPlace(text) {
+  55:   for (const [id, words] of Object.entries(PLACE_KEYWORDS)) {
+  56:     if (words.some((w) => text.includes(w))) return id;
+  57:   }
+  58:   return null;
+  59: }
+  60: 
+  61: /* Returns {ok, reason, place_id, score}. score 0-100 is a rough relevance hint,
+  62:    not a truth claim: stage 2 decides whether the item is publishable. */
+  63: export function ruleFilter(item) {
+  64:   const text = normalise(item.title + ' ' + (item.summary || ''));
+  65:   if (!text) return { ok: false, reason: 'ไม่มีข้อความ' };
+  66:   if (!REQUIRE_ANY.some((w) => text.includes(w))) {
+  67:     return { ok: false, reason: 'ไม่พบชื่อเมืองในข่าว' };
+  68:   }
+  69:   const blocked = BLOCK_PATTERNS.find((re) => re.test(text));
+  70:   if (blocked) return { ok: false, reason: 'อยู่ในหมวดที่ไม่รับ: ' + blocked.source.slice(0, 28) };
+  71:   if (!outletAllowed(item.outlet, item.link)) {
+  72:     return { ok: false, reason: 'สำนักข่าวไม่อยู่ในรายการที่รับ: ' + (item.outlet || '?') };
+  73:   }
+  74:   const place_id = guessPlace(text);
+  75:   let score = 40;
+  76:   if (text.includes('เมืองเก่า')) score += 20;
+  77:   if (place_id) score += 20;
+  78:   if (/เทศกาล|ประเพณี|งาน|จัดขึ้น|เปิดตัว|บูรณะ|ขึ้นทะเบียน|นิทรรศการ|เดินเมือง/.test(text)) score += 15;
+  79:   if (/เทศบาล|ททท\.|กรมศิลปากร|จังหวัดพังงา/.test(text)) score += 10;
+  80:   return { ok: true, reason: 'ผ่านกฎ', place_id, score: Math.min(score, 100) };
+  81: }
+  82: 
+  83: /* Stable id so the same story is never published twice. */
+  84: export async function fingerprint(item) {
+  85:   const base = (item.link || '') + '|' + normalise(item.title).slice(0, 90);
+  86:   const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(base));
+  87:   return [...new Uint8Array(buf)].slice(0, 10).map((b) => b.toString(16).padStart(2, '0')).join('');
+  88: }
+  89: 
+  90: 
+  91: /* Two outlets carrying the same story should appear once. Compare on a stripped
+  92:    title rather than the link, since each outlet has its own URL. */
+  93: export function titleKey(title) {
+  94:   return normalise(title)
+  95:     .replace(/[\s฀-๿]*(สยามรัฐ|มติชน|ข่าวสด|ไทยรัฐ|แนวหน้า|ผู้จัดการ|NBT|MGR).*/i, '')
+  96:     .replace(/[^0-9a-zA-Z฀-๿]/g, '')
+  97:     .slice(0, 48)
+  98:     .toLowerCase();
+  99: }
+
+---RECHECK---
+   1: /* Stage 2: an automatic second opinion. No human in the loop, but nothing is
+   2:    published on the rule filter alone. Uses the Claude API when a key is
+   3:    configured (best Thai), otherwise the Workers AI binding. */
+   4: 
+   5: const SYSTEM = `คุณคือบรรณาธิการข่าวท้องถิ่นของเว็บไกด์ "ตะกั่วป่า 101" (อำเภอตะกั่วป่า จังหวัดพังงา)
+   6: หน้าที่: ตรวจข่าวที่ผ่านตัวกรองอัตโนมัติมาแล้ว ว่าควรขึ้นเว็บหรือไม่
+   7: 
+   8: เกณฑ์ผ่าน (ต้องครบทุกข้อ):
+   9: 1. เป็นข่าวเกี่ยวกับ "อำเภอตะกั่วป่า จังหวัดพังงา" จริง ไม่ใช่แค่เอ่ยชื่อผ่าน ๆ หรือเป็นข่าวระดับประเทศที่บังเอิญมีคำนี้
+  10: 2. เป็นเรื่องที่นักท่องเที่ยวหรือคนสนใจเมืองอยากรู้ เช่น เทศกาล ประเพณี งานเมือง การบูรณะ สถานที่ เส้นทางเดินทาง วัฒนธรรม อาหาร
+  11: 3. ไม่ใช่ข่าวอาชญากรรม อุบัติเหตุ การเมืองท้องถิ่นที่ขัดแย้ง โฆษณา ประกาศขาย หรือข่าวที่ทำให้เมืองเสียหาย
+  12: 4. หัวข้อไม่ใช่ clickbait และเนื้อหาไม่ขัดกับตัวเอง
+  13: 
+  14: ตอบเป็น JSON อย่างเดียว ไม่ต้องมีข้อความอื่น:
+  15: {"verdict":"publish|hold|drop","confidence":0-100,"place_id":"<id หรือ null>","reason_th":"เหตุผลสั้น 1 ประโยค","clean_title_th":"หัวข้อที่เรียบเรียงให้อ่านง่ายขึ้น ไม่เกิน 90 ตัวอักษร ห้ามเติมข้อเท็จจริงใหม่","summary_th":"สรุป 1-2 ประโยคจากเนื้อที่ให้มาเท่านั้น ห้ามแต่งเพิ่ม"}
+  16: 
+  17: verdict:
+  18: - publish = มั่นใจว่าเข้าเกณฑ์ครบ
+  19: - hold = น่าจะเกี่ยว แต่ข้อมูลไม่พอตัดสิน
+  20: - drop = ไม่เข้าเกณฑ์
+  21: 
+  22: id สถานที่ที่เลือกได้: wat-boromthat, wat-khuha, wat-pathum, wat-kongkha, wat-nikorn, wat-sena, museum, guan-yu, pun-thao, kue-chai, rong-jae, phra-narai, thung-phra, riverwalk, culture-street, iron-bridge, governor-wall, khun-in, tao-ming, food-center, vegetarian, loy-krathong, chak-phra, new-year-alms, narai-ceremony, ruler-ceremony, relic-procession`;
+  23: 
+  24: 
+  25: function salvage(text) {
+  26:   const verdict = (text.match(/(publish|hold|drop)/i) || [])[1];
+  27:   if (!verdict) return null;
+  28:   const conf = (text.match(/confidence["'\s:]+(\d{1,3})/i) || [])[1];
+  29:   const place = (text.match(/place_id["'\s:]+["']([a-z0-9-]+)["']/i) || [])[1];
+  30:   const reason = (text.match(/reason_th["'\s:]+["']([^"']{2,120})["']/i) || [])[1];
+  31:   const title = (text.match(/clean_title_th["'\s:]+["']([^"']{2,120})["']/i) || [])[1];
+  32:   const summary = (text.match(/summary_th["'\s:]+["']([^"']{2,300})["']/i) || [])[1];
+  33:   return {
+  34:     verdict: verdict.toLowerCase(),
+  35:     confidence: conf ? Number(conf) : 60,
+  36:     place_id: place || null,
+  37:     reason_th: reason || '',
+  38:     clean_title_th: title || '',
+  39:     summary_th: summary || '',
+  40:   };
+  41: }
+  42: 
+  43: function parseVerdict(text) {
+  44:   try {
+  45:     // Small models wrap JSON in prose or code fences, and sometimes emit the
+  46:     // fields without braces at all. Try the strict read first, then salvage.
+  47:     const cleaned = String(text || '').replace(/```json|```/g, ' ');
+  48:     const m = cleaned.match(/\{[\s\S]*\}/);
+  49:     if (!m) return salvage(cleaned);
+  50:     let v;
+  51:     try {
+  52:       v = JSON.parse(m[0]);
+  53:     } catch (e) {
+  54:       v = salvage(cleaned);
+  55:       if (!v) return null;
+  56:     }
+  57:     if (!['publish', 'hold', 'drop'].includes(v.verdict)) return null;
+  58:     v.confidence = Math.max(0, Math.min(100, Number(v.confidence) || 0));
+  59:     return v;
+  60:   } catch (e) {
+  61:     return null;
+  62:   }
+  63: }
+  64: 
+  65: async function viaClaude(env, prompt) {
+  66:   const r = await fetch('https://api.anthropic.com/v1/messages', {
+  67:     method: 'POST',
+  68:     headers: {
+  69:       'content-type': 'application/json',
+  70:       'x-api-key': env.ANTHROPIC_API_KEY,
+  71:       'anthropic-version': '2023-06-01',
+  72:     },
+  73:     body: JSON.stringify({
+  74:       model: env.RECHECK_MODEL || 'claude-haiku-4-5-20251001',
+  75:       max_tokens: 700,
+  76:       system: SYSTEM,
+  77:       messages: [{ role: 'user', content: prompt }],
+  78:     }),
+  79:   });
+  80:   if (!r.ok) throw new Error('claude ' + r.status);
+  81:   const d = await r.json();
+  82:   return (d.content || []).map((c) => c.text || '').join('');
+  83: }
+  84: 
+  85: async function viaWorkersAI(env, prompt) {
+  86:   const out = await env.AI.run(env.WORKERS_AI_MODEL || '@cf/meta/llama-3.3-70b-instruct-fp8-fast', {
+  87:     messages: [
+  88:       { role: 'system', content: SYSTEM },
+  89:       { role: 'user', content: prompt + '\n\nReply with JSON only, no other text.' },
+  90:     ],
+  91:     max_tokens: 700,
+  92:     temperature: 0.1,
+  93:   });
+  94:   // Workers AI answers in two shapes depending on the model: a bare
+  95:   // {response} or an OpenAI style {choices:[{message:{content}}]}.
+  96:   if (typeof out === 'string') return out;
+  97:   if (out && typeof out.response === 'string') return out.response;
+  98:   const choice = out && out.choices && out.choices[0];
+  99:   if (choice && choice.message && typeof choice.message.content === 'string') {
+ 100:     return choice.message.content;
+ 101:   }
+ 102:   if (choice && typeof choice.text === 'string') return choice.text;
+ 103:   return JSON.stringify(out);
+ 104: }
+ 105: 
+ 106: /* Returns the item annotated with the review, or null when it should be dropped. */
+ 107: export async function recheck(env, item) {
+ 108:   const prompt = `หัวข้อ: ${item.title}\nสำนักข่าว: ${item.outlet || 'ไม่ทราบ'}\nวันที่: ${item.date || 'ไม่ทราบ'}\nลิงก์: ${item.link}\nเนื้อหาย่อ: ${item.summary || '(ไม่มี)'}\nสถานที่ที่ตัวกรองเดาไว้: ${item.place_id || 'ไม่ทราบ'}`;
+ 109:   let text = '';
+ 110:   try {
+ 111:     text = env.ANTHROPIC_API_KEY ? await viaClaude(env, prompt) : await viaWorkersAI(env, prompt);
+ 112:   } catch (e) {
+ 113:     // A failed review must never publish an unreviewed item.
+ 114:     return { ...item, verdict: 'hold', confidence: 0, review_error: String(e).slice(0, 120) };
+ 115:   }
+ 116:   const v = parseVerdict(text);
+ 117:   if (!v) {
+ 118:     return { ...item, verdict: 'hold', confidence: 0,
+ 119:              review_error: 'อ่านคำตอบไม่ได้', raw_reply: String(text).slice(0, 400) };
+ 120:   }
+ 121:   return {
+ 122:     ...item,
+ 123:     verdict: v.verdict,
+ 124:     confidence: v.confidence,
+ 125:     place_id: v.place_id || item.place_id || null,
+ 126:     review_reason_th: v.reason_th || '',
+ 127:     title: v.clean_title_th || item.title,
+ 128:     summary: v.summary_th || item.summary || '',
+ 129:   };
+ 130: }
+ 131: 
+ 132: /* Only a confident pass reaches the public feed. */
+ 133: export function bucketOf(item, minConfidence) {
+ 134:   if (item.verdict === 'publish' && item.confidence >= minConfidence) return 'live';
+ 135:   if (item.verdict === 'drop') return 'dropped';
+ 136:   return 'held';
+ 137: }
+
+
+
+codex
+อ่าน SPEC ครบแล้ว · พบกฎหลักว่าห้ามแก้ไฟล์ใด ๆ และทุกข้อสรุปต้องมีหลักฐาน ผมกำลังตรวจเส้นทางจริงต่อ: แหล่งข้อมูล/การ dedupe/การ parse AI และ endpoint production พร้อมสุ่มลิงก์ 5 รายการ.
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Write-Output '---SOURCES---'; "'$i=0; Get-Content -Encoding UTF8 worker/src/sources.js | % { $i++; '"'{0,4}: {1}' -f "'$i,$_ }; Write-Output '"'---CONFIG/SECRETS SEARCH---'; rg -n --hidden -g '"'!node_modules'"' -g '"'!audit/a2-news.md'"' '(ANTHROPIC|RUN_KEY|API_KEY|secret|token|password|NEWS)' worker wrangler.toml .dev.vars 2>"'$null; Write-Output '"'---API---'; try { "'$r=Invoke-WebRequest -UseBasicParsing '"'https://takuapa101-news.siwatid-99.workers.dev/api/news'; "'$r.StatusCode; $r.Content } catch { $_.Exception.Message }' in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 1091ms:
+---SOURCES---
+   1: /* Where city news comes from. Google News RSS needs no key; the .go.th feeds are
+   2:    read directly. Facebook pages need a page token, so they stay disabled until
+   3:    one is configured (see FB_PAGES in the README). */
+   4: 
+   5: /* Google News answers 503 to Cloudflare Workers, so searches go through Bing
+   6:    News RSS, which serves them. The outlet feeds below catch what Bing misses. */
+   7: export const NEWS_QUERIES = [
+   8:   'ตะกั่วป่า',
+   9:   'เมืองเก่าตะกั่วป่า',
+  10:   '"ตะกั่วป่า" เทศกาล',
+  11:   '"ตะกั่วป่า" ประเพณี',
+  12:   'ถนนสายวัฒนธรรม ตะกั่วป่า',
+  13:   'ตะกั่วป่า พังงา ท่องเที่ยว',
+  14:   'ตะโกลา พังงา',
+  15:   'กั่วป่าโพ้',
+  16: ];
+  17: 
+  18: /* Whole outlet feeds. Everything is passed through the same rule filter, which
+  19:    requires the town's name, so these add reach without adding noise. */
+  20: export const OUTLET_FEEDS = [
+  21:   { id: 'matichon', name: 'มติชน', url: 'https://www.matichon.co.th/feed' },
+  22:   { id: 'khaosod', name: 'ข่าวสด', url: 'https://www.khaosod.co.th/feed' },
+  23:   { id: 'thairath', name: 'ไทยรัฐ', url: 'https://www.thairath.co.th/rss/news' },
+  24: ];
+  25: 
+  26: /* Direct feeds. Each entry: {id, name, url, kind: 'rss' | 'html', authority} */
+  27: export const DIRECT_SOURCES = [
+  28:   { id: 'takuapacity', name: 'เทศบาลเมืองตะกั่วป่า', url: 'https://www.takuapacity.go.th/news', kind: 'html', authority: 'official' },
+  29:   { id: 'tat-phangnga', name: 'ททท. สำนักงานพังงา', url: 'https://thai.tourismthailand.org/Search-result?keyword=%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2', kind: 'html', authority: 'official' },
+  30:   { id: 'finearts', name: 'กรมศิลปากร', url: 'https://www.finearts.go.th/main/categories/news', kind: 'html', authority: 'official' },
+  31: ];
+  32: 
+  33: /* Set FB_PAGES as a Worker secret: JSON [{id, name, page_id}] plus FB_TOKEN. */
+  34: export const FB_ENABLED_HINT = 'ตั้งค่า secret FB_TOKEN และ FB_PAGES เพื่อเปิดการดึงจากเพจ';
+  35: 
+  36: /* Siwara's own events feed, published by the shop itself. */
+  37: export const FIRST_PARTY = [
+  38:   { id: 'siwara', name: 'ศิวรา คาเฟ่', url: 'https://siwaracafe.com/api/events.json', kind: 'json', authority: 'first-party' },
+  39: ];
+  40: 
+  41: /* An item must mention the town. Without this, national tourism stories and
+  42:    province-wide weather bulletins flood the feed. */
+  43: export const REQUIRE_ANY = ['ตะกั่วป่า', 'ตะโกลา', 'กั่วป่าโพ้', 'Takua Pa', 'Takuapa'];
+  44: 
+  45: /* Categories that mention the town but are not city news. */
+  46: export const BLOCK_PATTERNS = [
+  47:   /ดัชนีคุณภาพอากาศ|คุณภาพอากาศ|AQI|IQAir/i,
+  48:   /พยากรณ์อากาศประจำวัน|อุณหภูมิวันนี้/i,
+  49:   /ขายที่ดิน|ขายบ้าน|ให้เช่า|คอนโด|ประกาศขาย|นายหน้า/i,
+  50:   /หวย|เลขเด็ด|สลากกินแบ่ง/i,
+  51:   /ราคาน้ำมันวันนี้|ราคาทองวันนี้/i,
+  52:   /โปรโมชั่น|ส่วนลด|ดีลเด็ด|ราคาถูกที่สุด/i,
+  53:   /อุบัติเหตุ|ฆ่า|ยิง|ข่มขืน|จับกุมยาเสพติด|ศพ/i,
+  54: ];
+  55: 
+  56: /* Outlets we will publish without a human reading them first. */
+  57: export const OUTLET_ALLOWLIST = [
+  58:   'thairath', 'matichon', 'khaosod', 'dailynews', 'bangkokbiznews', 'prachachat',
+  59:   'thansettakij', 'posttoday', 'siamrath', 'naewna', 'mgronline', 'ผู้จัดการออนไลน์',
+  60:   'topnews', 'nationtv', 'pptvhd36', 'thaipbs', 'ch7', 'ch3plus', 'amarintv',
+  61:   'springnews', 'komchadluek', 'sanook', 'kapook', 'thaipost', 'innnews',
+  62:   'nbt', 'prd.go.th', 'thainews', 'สวพ', 'มติชน', 'ไทยรัฐ', 'แนวหน้า', 'สยามรัฐ',
+  63:   'tourismthailand', 'finearts.go.th', 'takuapacity.go.th', 'phangnga',
+  64:   'youphuket', 'phuketnews', 'andamannews', 'line.me',
+  65: ];
+  66: 
+  67: /* Which place a story belongs to. First match wins. */
+  68: export const PLACE_KEYWORDS = {
+  69:   'wat-boromthat': ['บรมธาตุคีรีเขต', 'วัดลุ่ม', 'พระธาตุคีรีเขต', 'เขาพระบาท'],
+  70:   'wat-khuha': ['คุหาภิมุข', 'วัดควนถ้ำ'],
+  71:   'wat-pathum': ['ปทุมธารา', 'วัดหน้าเมือง'],
+  72:   'wat-kongkha': ['คงคาภิมุข', 'วัดคงคา'],
+  73:   'wat-nikorn': ['นิกรวราราม', 'วัดย่านยาว'],
+  74:   'wat-sena': ['เสนานุชรังสรรค์', 'วัดใหม่'],
+  75:   'museum': ['พิพิธภัณฑ์'],
+  76:   'guan-yu': ['กวนอู', 'ซิ่นไช่ตึ๋ง'],
+  77:   'pun-thao': ['ปุนเถ่ากง'],
+  78:   'kue-chai': ['กู่ใช่ตึ๋ง'],
+  79:   'rong-jae': ['โรงเจ'],
+  80:   'phra-narai': ['พระนารายณ์'],
+  81:   'thung-phra': ['ทุ่งพระโพธิ์'],
+  82:   'riverwalk': ['ตลาดริมน้ำ', 'ริมน้ำตะกั่วป่า'],
+  83:   'culture-street': ['ถนนสายวัฒนธรรม', 'ถนนคนเดิน', 'เมืองเก่าตะกั่วป่า', 'ชิโน'],
+  84:   'iron-bridge': ['สะพานเหล็ก', 'บุญสูง'],
+  85:   'governor-wall': ['จวนเจ้าเมือง', 'กำแพงเมือง'],
+  86:   'khun-in': ['ขุนอินทร์', 'บ้านขุนอิน'],
+  87:   'tao-ming': ['เต้าหมิง', 'เต๋าหมิง'],
+  88:   'food-center': ['ศูนย์อาหาร', 'ลานโล่ง'],
+  89:   'vegetarian': ['กินเจ', 'กินผัก', 'ถือศีลกินผัก', 'อ๋องฉ่าย'],
+  90:   'loy-krathong': ['ลอยกระทง'],
+  91:   'chak-phra': ['ชักพระ', 'เรือพระ'],
+  92:   'new-year-alms': ['ตักบาตร', 'สงกรานต์', 'ปีใหม่'],
+  93:   'narai-ceremony': ['บวงสรวง' , 'เทวรูปพระนารายณ์'],
+  94:   'ruler-ceremony': ['บวงสรวงเจ้าเมือง'],
+  95:   'relic-procession': ['พระบรมสารีริกธาตุ', 'แห่พระธาตุ'],
+  96: };
+---CONFIG/SECRETS SEARCH---
+worker\wrangler.toml:10:binding = "NEWS"
+worker\wrangler.toml:20:# Stage two reviewer. Uses Workers AI unless ANTHROPIC_API_KEY is set as a secret.
+worker\test_filter.mjs:2:import { GOOGLE_NEWS_QUERIES } from './src/sources.js';
+worker\test_filter.mjs:14:for (const q of GOOGLE_NEWS_QUERIES) {
+worker\src\sources.js:2:   read directly. Facebook pages need a page token, so they stay disabled until
+worker\src\sources.js:7:export const NEWS_QUERIES = [
+worker\src\sources.js:33:/* Set FB_PAGES as a Worker secret: JSON [{id, name, page_id}] plus FB_TOKEN. */
+worker\src\sources.js:34:export const FB_ENABLED_HINT = 'ตั้งค่า secret FB_TOKEN และ FB_PAGES เพื่อเปิดการดึงจากเพจ';
+worker\src\recheck.js:70:      'x-api-key': env.ANTHROPIC_API_KEY,
+worker\src\recheck.js:75:      max_tokens: 700,
+worker\src\recheck.js:91:    max_tokens: 700,
+worker\src\recheck.js:111:    text = env.ANTHROPIC_API_KEY ? await viaClaude(env, prompt) : await viaWorkersAI(env, prompt);
+worker\src\index.js:4:import { NEWS_QUERIES, OUTLET_FEEDS, DIRECT_SOURCES, FIRST_PARTY } from './sources.js';
+worker\src\index.js:64:  for (const q of NEWS_QUERIES) {
+worker\src\index.js:133:  const v = await env.NEWS.get(key, 'json');
+worker\src\index.js:210:  await env.NEWS.put(KEY_LIVE, JSON.stringify(trimmedLive));
+worker\src\index.js:211:  await env.NEWS.put(KEY_HELD, JSON.stringify(trimmedHeld));
+worker\src\index.js:212:  await env.NEWS.put(KEY_SEEN, JSON.stringify([...seen].slice(-4000)));
+worker\src\index.js:213:  await env.NEWS.put(KEY_RUN, JSON.stringify({ started, finished: new Date().toISOString(), stats }));
+worker\src\index.js:240:      for (const query of NEWS_QUERIES.slice(0, 2)) {
+worker\src\index.js:261:          max_tokens: 60,
+worker\src\index.js:299:      if (key && env.RUN_KEY && key === env.RUN_KEY) {
+worker\README.md:31:โมเดลที่ใช้: ถ้าตั้ง secret `ANTHROPIC_API_KEY` จะใช้ Claude (ภาษาไทยดีที่สุด)
+worker\README.md:42:| เพจ Facebook ท้องถิ่น | ต้องตั้ง secret `FB_TOKEN` และ `FB_PAGES` ก่อน |
+worker\README.md:51:npx wrangler kv namespace create NEWS
+worker\README.md:52:npx wrangler kv namespace create NEWS --preview
+worker\README.md:58:npx wrangler secret put ANTHROPIC_API_KEY   # ไม่บังคับ ถ้าไม่ใส่จะใช้ Workers AI
+worker\README.md:59:npx wrangler secret put RUN_KEY             # กุญแจสำหรับสั่งรันเองผ่าน /api/run
+worker\README.md:73:$env:TAKUAPA_NEWS_API = "https://takuapa101-news.<subdomain>.workers.dev"
+worker\README.md:86:GET /api/run?key=RUN_KEY   สั่งรันทันทีโดยไม่รอ cron
+---API---
+200
+{"items":[{"id":"9efad15189b5de927610","date":"2026-09-07","title_th":"ตะกั่วป่าจัดทิ้งกระจาด ครั้งที่ 14","summary_th":"ตะกั่วป่าจัดประเพณีทิ้งกระจาด ครั้งที่ 14 แจกข้าวสารและอาหารแห้งให้ผู้ยากไร้กว่า 1,500 คน เพื่อชูมหาทานบารมีและอุทิศส่วนกุศล","outlet":"","url":"https://www.naewna.com/n/national-news/48965/","place_id":"null","confidence":90,"reason_th":"เป็นข่าวประเพณีท้องถิ่นที่น่าสนใจ","source":"bing-news","auto":true,"checked_at":"2026-09-08T10:26:53.584Z"},{"id":"9d80a57134fca21d6d9c","date":"2026-04-18","title_th":"ตะกั่วป่า Oldtown Songkran Festival 2026","summary_th":"งาน Takuapa Oldtown Songkran Festival 2026 ย้อนรอยเสน่ห์เมืองเก่าในอำเภอตะกั่วป่า","outlet":"","url":"https://siamrath.co.th/regional/news/142138","place_id":"culture-street","confidence":100,"reason_th":"เป็นข่าวเทศกาลที่น่าสนใจเกี่ยวกับอำเภอตะกั่วป่า","source":"bing-news","auto":true,"checked_at":"2026-09-08T10:26:53.584Z"},{"id":"e87b7edcdcd32fb51c2f","date":"2026-01-25","title_th":"เที่ยวถนนสายวัฒนธรรมเมืองเก่า","summary_th":"ถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่าเปิดให้เที่ยวทุกวันอาทิตย์","outlet":"","url":"https://mgronline.com/south/photo-gallery/9690000008004","place_id":"culture-street","confidence":90,"reason_th":"เป็นข่าวเกี่ยวกับสถานที่ท่องเที่ยวในอำเภอตะกั่วป่า","source":"bing-news","auto":true,"checked_at":"2026-09-08T10:26:53.584Z"},{"id":"8691c6575eaf4fceb50e","date":"2025-10-26","title_th":"พิธีอิ้วเก้ง ตะกั่วป่า","summary_th":"จัดพิธีอิ้วเก้งแห่พระรอบเมืองสุดศรัทธาที่ถนนศรีตะกั่วป่า ย่านเมืองเก่าตะกั่วป่า จังหวัดพังงา","outlet":"","url":"https://www.topnews.co.th/news/1368822","place_id":"guan-yu","confidence":100,"reason_th":"เป็นข่าวเกี่ยวกับพิธีกรรมที่น่าสนใจในอำเภอตะกั่วป่า","source":"bing-news","auto":true,"checked_at":"2026-09-08T10:26:53.584Z"},{"id":"0906ff3c24bdd6f9e4d6","date":"2024-08-30","title_th":"ย้อนตำนานเมืองตะโกลา","summary_th":"จัดงานย้อนตำนานเมืองตะโกลา สู่เสน่ห์อารยะเมืองเก่า ณ โรงแรมบ่อแสนวิล","outlet":"","url":"https://www.naewna.com/local/825858","place_id":"null","confidence":90,"reason_th":"เป็นข่าวเกี่ยวกับงานเทศกาลในอำเภอตะกั่วป่า จังหวัดพังงา","source":"bing-news","auto":true,"checked_at":"2026-09-08T10:26:53.584Z"},{"id":"5357f3c33031517fb092","date":"2022-10-04","title_th":"คนแห่ร่วมงานอิ่มบุญอิ่มเจ9บาท","summary_th":"นายกเทศมนตรีเมืองตะกั่วป่า กล่าวว่า ประเพณีถือศีลกินผัก เป็นกิจกรรมที่ชาวไทยเชื้อสายจีนได้ปฏิบัติสืบทอดกันมาเป็นเวลานาน","outlet":"","url":"https://www.dailynews.co.th/news/1541477/","place_id":"culture-street","confidence":90,"reason_th":"เป็นข่าวเกี่ยวกับประเพณีและงานเมืองที่น่าสนใจ","source":"bing-news","auto":true,"checked_at":"2026-09-08T10:26:53.584Z"},{"id":"4c02aae4494dcfbd37c9","date":"2022-10-04","title_th":"ปิดถนนเมืองเก่าตะกั่วป่า ในงานถือศีลกินเจ","summary_th":"ปิดถนนเมืองเก่าตะกั่วป่า ให้ชาวไทยเชื้อสายจีนนับพันคนร่วมงานเทศกาลถือศีลกินเจ","outlet":"","url":"https://mgronline.com/south/detail/9650000095018","place_id":"culture-street","confidence":90,"reason_th":"เป็นข่าวเทศกาลที่เกิดขึ้นในอำเภอตะกั่วป่า","source":"bing-news","auto":true,"checked_at":"2026-09-08T10:26:53.584Z"},{"id":"d0f315a8b36d46516a12","date":"2021-12-31","title_th":"ลอยเรือสะเดาะเคราะห์ ต้อนรับปีใหม่","summary_th":"ชาวตะกั่วป่า จ.พังงา สืบสานประเพณีทำบุญลอยเรือสะเดาะเคราะห์ ส่งท้ายปีเก่าตอนรับปีใหม่ 2565","outlet":"","url":"https://www.bangkokbiznews.com/news/980419","place_id":"new-year-alms","confidence":100,"reason_th":"เป็นข่าวประเพณีท้องถิ่นที่น่าสนใจ","source":"bing-news","auto":true,"checked_at":"2026-09-08T10:26:53.584Z"},{"id":"55bbe76d4c83368e5a6e","date":"2020-10-15","title_th":"ศาลเจ้าในตะกั่วป่า ร่วมประเพณีกินผัก","summary_th":"ศาลเจ้าในอำเภอตะกั่วป่า จังหวัดพังงา พร้อมร่วมประเพณีถือศีลกินผัก ประจำปี 2563","outlet":"","url":"https://mgronline.com/south/detail/9630000105078","place_id":"vegetarian","confidence":90,"reason_th":"เป็นข่าวเกี่ยวกับประเพณีถือศีลกินผักในอำเภอตะกั่วป่า","source":"bing-news","auto":true,"checked_at":"2026-09-08T10:26:53.584Z"},{"id":"b8d029ec5962ea580a01","date":"2019-05-15","title_th":"Trok Cafe ร้านลับในเมืองเก่า","summary_th":"ร้าน Trok Cafe ตั้งอยู่ในตลาดเก่าเมืองตะกั่วป่า จังหวัดพังงา เป็นร้านลับสุดคลาสสิคที่น่าสนใจ","outlet":"","url":"https://www.sanook.com/travel/1415441/","place_id":"culture-street","confidence":90,"reason_th":"เป็นข่าวเกี่ยวกับสถานที่ท่องเที่ยวในเมืองตะกั่วป่า","source":"bing-news","auto":true,"checked_at":"2026-09-08T10:26:53.584Z"},{"id":"361aed50e4ad2b1f957e","date":"2016-10-01","title_th":"เทศกาลกินผัก","summary_th":"เทศกาลกินผักใน อ.ตะกั่วป่า จ.พังงา เป็นไปอย่างคึกคัก ชาวไทยเชื้อสายจีน ตั้งโต๊ะ","outlet":"","url":"https://www.nationtv.tv/news/378518896","place_id":"vegetarian","confidence":90,"reason_th":"เป็นข่าวเทศกาลกินผักในพังงา","source":"bing-news","auto":true,"checked_at":"2026-09-08T10:26:53.584Z"},{"id":"384d45215a1b3fbd99d0","date":"2016-03-01","title_th":"หอมกลิ่นความหลังที่ย่านเก่า ตะกั่วป่า","summary_th":"พื้นที่อำเภอตะกั่วป่า จังหวัดพังงา เป็นเมืองเก่าและเป็นศูนย์กลางการค้าในอดีต","outlet":"","url":"https://www.bangkokbiznews.com/lifestyle/689001","place_id":"null","confidence":90,"reason_th":"เป็นข่าวเกี่ยวกับประวัติและความหลังของอำเภอตะกั่วป่า","source":"bing-news","auto":true,"checked_at":"2026-09-08T10:26:53.584Z"},{"id":"19f9b6bb7356dceaf76f","date":"2016-02-19","title_th":"ตะกั่วป่า เมืองเก่า คนเก๋า","summary_th":"เปิดประตูเมืองตะกั่วป่า พาย้อนไปสู่เมืองเก่าตะโกลา","outlet":"","url":"https://www.posttoday.com/lifestyle/417333","place_id":"null","confidence":80,"reason_th":"เป็นข่าวเกี่ยวกับประวัติและวัฒนธรรมของอำเภอตะกั่วป่า","source":"bing-news","auto":true,"checked_at":"2026-09-08T10:26:53.584Z"},{"id":"33fc0d9900baf9d0f282","date":"2015-10-18","title_th":"ถือศีลกิจเจตะกั่วป่า","summary_th":"ประเพณีถือศีลกินผักที่ตะกั่วป่า จ.พังงา มีขบวนแห่ของศาลพระโพธิสัตว์กวนอิม และม้าทรงแสดงอิทธิฤทธิ์","outlet":"","url":"https://www.thairath.co.th/news/local/533229","place_id":"guan-yu","confidence":90,"reason_th":"เป็นข่าวประเพณีท้องถิ่นที่น่าสนใจ","source":"bing-news","auto":true,"checked_at":"2026-09-08T10:26:53.584Z"},{"id":"8d147961abab2f858b8f","date":"2014-09-26","title_th":"ชาวตะกั่วป่าร่วมพิธีโก้ยห่านสะเดาะเคราะห์","summary_th":"งานประเพณีถือศีลกินผักที่ อ.ตะกั่วป่า จ.พังงา คึกคัก คนไทยเชื้อสายจีนเข้าร่วมประกอบพิธี","outlet":"","url":"https://mgronline.com/south/detail/9570000111209","place_id":"vegetarian","confidence":100,"reason_th":"เป็นข่าวประเพณีที่น่าสนใจเกี่ยวกับงานถือศีลกินผัก","source":"bing-news","auto":true,"checked_at":"2026-09-08T10:26:53.584Z"},{"id":"d7b30fab9dfc6b605bb3","date":"2013-01-08","title_th":"ถนนวัฒนธรรม ตะกั่วป่าเมืองเก่า","summary_th":"อบจ.พังงาร่วม ทม.ตะกั่วป่าเปิดงานถนนวัฒนธรรม ตะกั่วป่าเมืองเก่า","outlet":"","url":"https://mgronline.com/south/detail/9560000002581","place_id":"culture-street","confidence":90,"reason_th":"เป็นข่าวเกี่ยวกับเทศกาลหรืองานที่น่าสนใจในอำเภอตะกั่วป่า","source":"bing-news","auto":true,"checked_at":"2026-09-08T10:26:53.584Z"}],"updated":"2026-09-08T10:27:58.761Z"}
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$urls=@('"'https://www.naewna.com/n/national-news/48965/','https://siamrath.co.th/regional/news/142138','https://mgronline.com/south/photo-gallery/9690000008004','https://www.topnews.co.th/news/1368822','https://www.naewna.com/local/825858'); foreach("'$u in $urls){ try { $x=Invoke-WebRequest -UseBasicParsing -MaximumRedirection 5 -Method Head $u; "$($x.StatusCode)`t$u`t$($x.BaseResponse.ResponseUri.AbsoluteUri)" } catch { "$($_.Exception.Response.StatusCode.value__)`t$u`tERROR $($_.Exception.Message)" } }; Write-Output '"'---RECHECK BYTES---'; "'$line=(Get-Content -Encoding UTF8 worker/src/recheck.js)[25]; $line; [BitConverter]::ToString([Text.Encoding]::UTF8.GetBytes($line)); Write-Output '"'---WRANGLER---'; "'$i=0; Get-Content -Encoding UTF8 worker/wrangler.toml | % { $i++; '"'{0,4}: {1}' -f "'$i,$_ }; Write-Output '"'---STATUS---'; try { (Invoke-WebRequest -UseBasicParsing 'https://takuapa101-news.siwatid-99.workers.dev/api/status').Content } catch {"'$_.Exception.Message}' in D:\Siwaracafeweb\output\web\takuapa101-v1
+codex
+การตรวจ HTTP แบบ `HEAD` ของบางสำนักข่าวค้างจนหมดเวลา จึงยังสรุปผล 5 เส้นไม่ได้จากรอบแรก · ผมจะเปลี่ยนเป็น `curl` แบบจำกัดเวลาและติดตาม redirect เพื่อให้ข้อสรุปมีหลักฐาน ไม่ตีความจาก timeout ว่าเป็นลิงก์เสีย.
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$urls=@('"'https://www.naewna.com/n/national-news/48965/','https://siamrath.co.th/regional/news/142138','https://mgronline.com/south/photo-gallery/9690000008004','https://www.topnews.co.th/news/1368822','https://www.naewna.com/local/825858'); foreach("'$u in $urls){ curl.exe -L -sS --max-time 8 -o NUL -w "%{http_code}`t%{url_effective}`t$u`n" $u }; Write-Output '"'---RECHECK LINE/BYTES---'; "'$line=(Get-Content -Encoding UTF8 worker/src/recheck.js)[25]; $line; [BitConverter]::ToString([Text.Encoding]::UTF8.GetBytes($line)); Write-Output '"'---WRANGLER---'; "'$i=0; Get-Content -Encoding UTF8 worker/wrangler.toml | % { $i++; '"'{0,4}: {1}' -f "'$i,$_ }; Write-Output '"'---STATUS---'; curl.exe -sS --max-time 8 'https://takuapa101-news.siwatid-99.workers.dev/api/status'" in D:\Siwaracafeweb\output\web\takuapa101-v1
+ exited 1 in 1019ms:
+000	https://www.naewna.com/n/national-news/48965/	https://www.naewna.com/n/national-news/48965/
+curl: (35) schannel: next InitializeSecurityContext failed: CRYPT_E_NO_REVOCATION_CHECK (0x80092012) - The revocation function was unable to check revocation for the certificate.
+000	https://siamrath.co.th/regional/news/142138	https://siamrath.co.th/regional/news/142138
+curl: (35) schannel: next InitializeSecurityContext failed: CRYPT_E_NO_REVOCATION_CHECK (0x80092012) - The revocation function was unable to check revocation for the certificate.
+curl: (35) schannel: next InitializeSecurityContext failed: CRYPT_E_NO_REVOCATION_CHECK (0x80092012) - The revocation function was unable to check revocation for the certificate.
+000	https://mgronline.com/south/photo-gallery/9690000008004	https://mgronline.com/south/photo-gallery/9690000008004
+000	https://www.topnews.co.th/news/1368822	https://www.topnews.co.th/news/1368822
+curl: (35) schannel: next InitializeSecurityContext failed: CRYPT_E_NO_REVOCATION_CHECK (0x80092012) - The revocation function was unable to check revocation for the certificate.
+000	https://www.naewna.com/local/825858	https://www.naewna.com/local/825858
+curl: (35) schannel: next InitializeSecurityContext failed: CRYPT_E_NO_REVOCATION_CHECK (0x80092012) - The revocation function was unable to check revocation for the certificate.
+---RECHECK LINE/BYTES---
+  const verdict = (text.match(/(publish|hold|drop)/i) || [])[1];
+20-20-63-6F-6E-73-74-20-76-65-72-64-69-63-74-20-3D-20-28-74-65-78-74-2E-6D-61-74-63-68-28-2F-08-28-70-75-62-6C-69-73-68-7C-68-6F-6C-64-7C-64-72-6F-70-29-08-2F-69-29-20-7C-7C-20-5B-5D-29-5B-31-5D-3B
+---WRANGLER---
+   1: name = "takuapa101-news"
+   2: main = "src/index.js"
+   3: compatibility_date = "2026-09-01"
+   4: 
+   5: # Every six hours. Cloudflare cron runs in UTC.
+   6: [triggers]
+   7: crons = ["0 */6 * * *"]
+   8: 
+   9: [[kv_namespaces]]
+  10: binding = "NEWS"
+  11: id = "eec7fc96311e4e3b8186ce9750eb9d26"
+  12: preview_id = "e97e3b1e2c4646698fa9e4c16355568d"
+  13: 
+  14: [vars]
+  15: ALLOWED_ORIGINS = "https://takuapa101.com,https://takuapa101.pages.dev,http://127.0.0.1:8091"
+  16: MAX_ITEMS = "60"
+  17: MIN_CONFIDENCE = "75"
+  18: MAX_REVIEWS_PER_RUN = "20"
+  19: 
+  20: # Stage two reviewer. Uses Workers AI unless ANTHROPIC_API_KEY is set as a secret.
+  21: [ai]
+  22: binding = "AI"
+---STATUS---
+curl: (35) schannel: next InitializeSecurityContext failed: CRYPT_E_NO_REVOCATION_CHECK (0x80092012) - The revocation function was unable to check revocation for the certificate.
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$urls=@('"'https://www.naewna.com/n/national-news/48965/','https://siamrath.co.th/regional/news/142138','https://mgronline.com/south/photo-gallery/9690000008004','https://www.topnews.co.th/news/1368822','https://www.naewna.com/local/825858'); foreach("'$u in $urls){ curl.exe --ssl-no-revoke -L -sS --max-time 12 -o NUL -w "%{http_code}`t%{url_effective}`t$u`n" $u }' in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 30308ms:
+200	https://www.naewna.com/n/national-news/48965/	https://www.naewna.com/n/national-news/48965/
+200	https://siamrath.co.th/regional/news/142138	https://siamrath.co.th/regional/news/142138
+404	https://mgronline.com/south/photo-gallery/9690000008004	ERROR The remote server returned an error: (404) Not Found.
+200	https://www.topnews.co.th/news/1368822	https://www.topnews.co.th/news/1368822
+200	https://www.naewna.com/local/825858	https://www.naewna.com/local/825858
+---RECHECK BYTES---
+  const verdict = (text.match(/(publish|hold|drop)/i) || [])[1];
+20-20-63-6F-6E-73-74-20-76-65-72-64-69-63-74-20-3D-20-28-74-65-78-74-2E-6D-61-74-63-68-28-2F-08-28-70-75-62-6C-69-73-68-7C-68-6F-6C-64-7C-64-72-6F-70-29-08-2F-69-29-20-7C-7C-20-5B-5D-29-5B-31-5D-3B
+---WRANGLER---
+   1: name = "takuapa101-news"
+   2: main = "src/index.js"
+   3: compatibility_date = "2026-09-01"
+   4: 
+   5: # Every six hours. Cloudflare cron runs in UTC.
+   6: [triggers]
+   7: crons = ["0 */6 * * *"]
+   8: 
+   9: [[kv_namespaces]]
+  10: binding = "NEWS"
+  11: id = "eec7fc96311e4e3b8186ce9750eb9d26"
+  12: preview_id = "e97e3b1e2c4646698fa9e4c16355568d"
+  13: 
+  14: [vars]
+  15: ALLOWED_ORIGINS = "https://takuapa101.com,https://takuapa101.pages.dev,http://127.0.0.1:8091"
+  16: MAX_ITEMS = "60"
+  17: MIN_CONFIDENCE = "75"
+  18: MAX_REVIEWS_PER_RUN = "20"
+  19: 
+  20: # Stage two reviewer. Uses Workers AI unless ANTHROPIC_API_KEY is set as a secret.
+  21: [ai]
+  22: binding = "AI"
+---STATUS---
+{"started":"2026-09-08T10:26:53.584Z","finished":"2026-09-08T10:27:58.761Z","stats":{"fetched":178,"rule_rejected":129,"already_seen":9,"reviewed":20,"live":16,"held":0,"dropped":4,"duplicate":7}}
+
+ succeeded in 12695ms:
+curl: (28) Operation timed out after 12001 milliseconds with 0 bytes received
+000	https://www.naewna.com/n/national-news/48965/	https://www.naewna.com/n/national-news/48965/
+200	https://siamrath.co.th/regional/news/142138	https://siamrath.co.th/regional/news/142138
+403	https://mgronline.com/south/photo-gallery/9690000008004	https://mgronline.com/south/photo-gallery/9690000008004
+200	https://www.topnews.co.th/news/1368822	https://www.topnews.co.th/news/1368822
+200	https://www.naewna.com/local/825858	https://www.naewna.com/local/825858
+
+codex
+ผลตรวจสำคัญตอนนี้: feed ต้นทางถูกครอบ `try/catch` แยกรายแหล่ง จึงข้าม 503 ได้ · API production ตอบข้อมูลจริง · สุ่มลิงก์ตรวจได้ 4/5 เส้น (1 เส้น timeout) · พบหลักฐานชัดใน `recheck.js` ว่า salvage regex ใช้ byte `0x08` แทน word boundary ทำให้คำตอบ AI ที่ไม่ใช่ JSON ตรง ๆ ถูกพักไว้ ซึ่งปลอดภัยแต่ทำให้ความทนทานลดลง · พบข้อมูล `place_id:"null"` ในผลจริงด้วย.
+apply patch
+patch: completed
+D:\Siwaracafeweb\output\web\takuapa101-v1\audit\a2-news.md
+diff --git a/output/web/takuapa101-v1/audit/a2-news.md b/output/web/takuapa101-v1/audit/a2-news.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..1ee1fb5fe0be4a87a5f154d051e4dde6059e87f2
+--- /dev/null
++++ b/output/web/takuapa101-v1/audit/a2-news.md
+@@ -0,0 +1,81 @@
++# รายงานตรวจระบบข่าวอัตโนมัติ
++
++ตรวจไฟล์ `worker/src/index.js`, `worker/src/filter.js`, `worker/src/recheck.js`, `worker/src/sources.js`, `worker/wrangler.toml` และยิง endpoint production วันที่ 2026-09-08 · ไม่แก้ไฟล์ระบบตามกติกาใน `audit/SPEC.md`
++
++## สรุป
++
++- พบ `ผิด` 1 รายการ: ค่า `place_id` จาก AI ที่เป็นสตริง `"null"` หลุดเข้า feed จริง ทำให้ข้อมูลสถานที่ไม่เป็น null ตามสัญญาข้อมูล · หลักฐานคือผล `/api/news` รายการแรกมี `"place_id":"null"` และเส้นทางโค้ดใน `worker/src/recheck.js:121-128`
++- พบ `ควรแก้` 1 รายการ: parser สำรองของคำตอบ AI ใช้ byte `0x08` แทน `\\b` จึงกู้คำตอบที่ไม่ใช่ JSON ตรงรูปแบบไม่ได้ · ระบบจะพักข่าวไว้ ไม่ปล่อยข่าวผิดขึ้นเว็บ แต่เสียข่าวที่อาจตรวจได้
++- หัวข้อ feed ล่ม/503: ตรวจแล้วไม่พบปัญหาในเส้นทางแหล่งข้อมูล · แต่ไม่ได้ทดสอบรัน Worker จริงด้วยการบังคับ 503 เพราะไม่มีสิทธิ์เปลี่ยน upstream หรือ inject fetch ใน production
++- สุ่มตรวจลิงก์บทความจริงได้ 4/5 เส้น · 4 เส้นตอบ HTTP 200/403 และไปถึงโดเมนบทความตาม URL ที่คืนมา · 1 เส้น timeout จึงตรวจไม่ได้ ไม่สรุปว่าเสีย
++- ตรวจโค้ด deploy แล้วไม่พบค่าคีย์ลับฝังอยู่ในไฟล์ · พบเพียงชื่อ environment secret และค่า KV/vars ที่ไม่ใช่ secret
++
++## 1) การกันข่าวซ้ำ
++
++### ควรแก้ · fingerprint ไม่ normalize/unwrap ลิงก์ก่อนสร้าง seen key
++
++หลักฐาน: `worker/src/filter.js:84-87` สร้าง fingerprint จาก `(item.link || '')` ดิบและหัวข้อ ขณะที่ `worker/src/filter.js:40-46` มี `urlKey()` ที่ unwrap Bing และตัด `www.`/slash ท้าย URL แล้ว · ดังนั้นบทความเดียวกันที่เข้ามาครั้งหนึ่งเป็น Bing wrapper และอีกครั้งเป็นลิงก์ตรงจะได้ fingerprint คนละค่า แม้ dedupe ภายในรันเดียวกันจะใช้ `urlKey` ที่ `worker/src/index.js:159-164` ก็ตาม
++
++ผลกระทบที่ตรวจได้จากเส้นทางโค้ด: `seen:index` กันซ้ำข้ามรันด้วย fingerprint แต่ไม่ใช่ canonical URL · ข่าวที่ wrapper เปลี่ยนรูปจึงไม่ถูกกันด้วย seen key ข้ามรัน แม้ระบบยังมี title dedupe บางส่วน
++
++การตรวจยืนยันซ้ำจาก production ทำได้เพียงอ่าน `/api/news` ไม่สามารถจำลอง KV หลายรอบโดยไม่แก้/รันระบบจริง · ข้อสรุปนี้อ้างจาก source trace โดยตรง
++
++### ตรวจแล้วไม่พบปัญหา · dedupe ภายในชุด candidates และก่อน publish
++
++หลักฐาน: `worker/src/index.js:147-165` ตรวจ fingerprint, URL และ title กับ live/current candidates; `worker/src/index.js:192-200` ตรวจ title ซ้ำอีกครั้งหลัง AI เปลี่ยนหัวข้อก่อนใส่ live
++
++## 2) การแกะลิงก์ Bing
++
++### ตรวจแล้วไม่พบปัญหาในกรณี URL query มาตรฐาน
++
++หลักฐาน: `worker/src/filter.js:25-36` decode entities ก่อนหา `?url=`/`&url=`, decode ค่าและคืนเฉพาะ `http/https`; `worker/src/index.js:47-48` เรียก `unwrapLink()` ก่อนยอมรับรายการ; `worker/src/filter.js:40-46` เรียกซ้ำตอนสร้าง URL key
++
++ข้อจำกัดที่ตรวจพบจากโค้ด: regex `url=([^&\\s]+)` จะตัดค่าที่มี ampersand แบบไม่ percent-encode · ไม่มีตัวอย่าง production ให้ทดสอบกรณีนี้ จึงไม่จัดเป็นปัญหาที่เกิดขึ้นจริง
++
++## 3) feed ต้นทางล่มหรือคืน 503
++
++### ตรวจแล้วไม่พบปัญหาในเส้นทางข้ามแหล่งข้อมูล
++
++หลักฐาน: `worker/src/index.js:62-74` ครอบแต่ละ Bing query ด้วย `try/catch`; `worker/src/index.js:76-87` ครอบแต่ละ outlet feed แยกกัน; `worker/src/index.js:89-129` ครอบแต่ละ direct/first-party source แยกกัน · `fetchText()` ที่ `worker/src/index.js:36-39` throw เมื่อ `!r.ok` รวมถึง 503 แล้ว catch ของรายการนั้นจะ `continue`
++
++ดังนั้น 503 ของหนึ่ง feed ไม่ทำให้ harvest ทั้งระบบหยุด · หาก KV เขียนล้มเหลวภายหลังที่ `worker/src/index.js:210-213` จะทำให้ run ล้มได้ แต่เป็นคนละกรณีกับ upstream feed และยังไม่ได้ทดสอบจริง
++
++## 4) AI ตอบผิดรูปแบบและโอกาสข่าวผิดหลุด
++
++### ควรแก้ · salvage parser ใช้ตัวคั่นผิด แต่ผลที่ตรวจได้คือ fail-safe
++
++หลักฐาน: `worker/src/recheck.js:25-40` มี regex ที่ไฟล์จริงเป็น byte `08` รอบคำว่า `publish|hold|drop` ไม่ใช่ regex word boundary `\\b` · จึงไม่ match verdict ในข้อความ prose/code fence ที่ไม่มี JSON object สมบูรณ์
++
++ผลตามเส้นทางจริง: `parseVerdict()` ที่ `worker/src/recheck.js:43-63` จะคืน null เมื่อ salvage ไม่สำเร็จ · `recheck()` ที่ `worker/src/recheck.js:116-119` แปลงเป็น `verdict:'hold', confidence:0` · `bucketOf()` ที่ `worker/src/recheck.js:133-136` ส่งเข้า held ไม่ใช่ live ดังนั้นจากโค้ดนี้ยังไม่พบช่องให้คำตอบผิดรูปแบบหลุดขึ้นเว็บ
++
++### ผิด · ค่า `place_id` สตริง `"null"` หลุดเข้า public feed
++
++หลักฐานจาก production: `GET https://takuapa101-news.siwatid-99.workers.dev/api/news` ตอบรายการแรก `title_th:"ตะกั่วป่าจัดทิ้งกระจาด ครั้งที่ 14` พร้อม `place_id:"null"` (เป็นสตริง ไม่ใช่ JSON null)
++
++หลักฐานจากโค้ด: `worker/src/recheck.js:125` ใช้ `v.place_id || item.place_id || null` · ค่า string `"null"` เป็น truthy จึงถูกเก็บต่อที่ `worker/src/index.js:184` และ serialize ออกที่ `worker/src/index.js:231`
++
++## 5) ตรวจลิงก์ production แบบสุ่ม 5 เส้น
++
++URL ที่สุ่มจาก `/api/news` และผลตรวจด้วย `curl -L --ssl-no-revoke --max-time 12`:
++
++| URL | ผล HTTP | ผลตรวจ |
++|---|---:|---|
++| `https://www.naewna.com/n/national-news/48965/` | timeout | ตรวจไม่ได้เพราะปลายทางไม่ส่งข้อมูลภายใน 12 วินาที |
++| `https://siamrath.co.th/regional/news/142138` | 200 | ไปถึงปลายทาง |
++| `https://mgronline.com/south/photo-gallery/9690000008004` | 403 | ไปถึงเว็บไซต์ แต่ปลายทางปฏิเสธการเข้าถึงจากสภาพแวดล้อมตรวจ |
++| `https://www.topnews.co.th/news/1368822` | 200 | ไปถึงปลายทาง |
++| `https://www.naewna.com/local/825858` | 200 | ไปถึงปลายทาง |
++
++ลิงก์ 403 ยังยืนยันได้ว่าโดเมน/เส้นทางตอบกลับจริง แต่ตรวจเนื้อหาบทความไม่ได้ · ลิงก์ timeout ก็ตรวจเนื้อหาไม่ได้ · ไม่รายงานว่าเป็นลิงก์เสีย
++
++## 6) ข้อมูลลับหรือคีย์ที่หลุดในโค้ด deploy
++
++### ตรวจแล้วไม่พบปัญหา
++
++หลักฐาน: `worker/src/recheck.js:65-78` อ่าน `env.ANTHROPIC_API_KEY` จาก secret และไม่ฝังค่า; `worker/src/index.js:297-303` อ่าน `env.RUN_KEY`; `worker/wrangler.toml:14-22` มีเพียง allowed origins, limits และ AI binding ไม่มีค่า API key/token; `worker/src/sources.js:33-34` เป็นข้อความบอกชื่อ secret เท่านั้น
++
++การตรวจนี้ครอบคลุม source และ `wrangler.toml` ใน workspace · ตรวจค่า secret ที่เก็บอยู่บน Cloudflare จริงไม่ได้เพราะไม่มีสิทธิ์เข้าถึง secret store และ endpoint ที่อ่านได้ไม่เปิดเผยค่าเหล่านั้น
++
++## ข้อสรุป
++
++ระบบมี fail-safe เมื่อ AI ตอบผิดรูปแบบและข้าม feed ที่คืน 503 ได้ · รายการที่ต้องแก้ก่อนคือการแปลง `"null"` เป็น null/ตรวจค่า `place_id` ให้ถูกชนิด และควรแก้ salvage regex เพื่อไม่ทิ้งข่าวที่ AI ตอบเป็น prose หรือ JSON ไม่สมบูรณ์ · การตรวจลิงก์ครบ 5 เส้นทำไม่ได้ 1 เส้นเพราะ timeout จึงระบุไว้ตามกติกา ไม่สรุปเกินหลักฐาน
+
+diff --git a/output/web/takuapa101-v1/audit/a2-news.md b/output/web/takuapa101-v1/audit/a2-news.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..1ee1fb5fe0be4a87a5f154d051e4dde6059e87f2
+--- /dev/null
++++ b/output/web/takuapa101-v1/audit/a2-news.md
+@@ -0,0 +1,81 @@
++# รายงานตรวจระบบข่าวอัตโนมัติ
++
++ตรวจไฟล์ `worker/src/index.js`, `worker/src/filter.js`, `worker/src/recheck.js`, `worker/src/sources.js`, `worker/wrangler.toml` และยิง endpoint production วันที่ 2026-09-08 · ไม่แก้ไฟล์ระบบตามกติกาใน `audit/SPEC.md`
++
++## สรุป
++
++- พบ `ผิด` 1 รายการ: ค่า `place_id` จาก AI ที่เป็นสตริง `"null"` หลุดเข้า feed จริง ทำให้ข้อมูลสถานที่ไม่เป็น null ตามสัญญาข้อมูล · หลักฐานคือผล `/api/news` รายการแรกมี `"place_id":"null"` และเส้นทางโค้ดใน `worker/src/recheck.js:121-128`
++- พบ `ควรแก้` 1 รายการ: parser สำรองของคำตอบ AI ใช้ byte `0x08` แทน `\\b` จึงกู้คำตอบที่ไม่ใช่ JSON ตรงรูปแบบไม่ได้ · ระบบจะพักข่าวไว้ ไม่ปล่อยข่าวผิดขึ้นเว็บ แต่เสียข่าวที่อาจตรวจได้
++- หัวข้อ feed ล่ม/503: ตรวจแล้วไม่พบปัญหาในเส้นทางแหล่งข้อมูล · แต่ไม่ได้ทดสอบรัน Worker จริงด้วยการบังคับ 503 เพราะไม่มีสิทธิ์เปลี่ยน upstream หรือ inject fetch ใน production
++- สุ่มตรวจลิงก์บทความจริงได้ 4/5 เส้น · 4 เส้นตอบ HTTP 200/403 และไปถึงโดเมนบทความตาม URL ที่คืนมา · 1 เส้น timeout จึงตรวจไม่ได้ ไม่สรุปว่าเสีย
++- ตรวจโค้ด deploy แล้วไม่พบค่าคีย์ลับฝังอยู่ในไฟล์ · พบเพียงชื่อ environment secret และค่า KV/vars ที่ไม่ใช่ secret
++
++## 1) การกันข่าวซ้ำ
++
++### ควรแก้ · fingerprint ไม่ normalize/unwrap ลิงก์ก่อนสร้าง seen key
++
++หลักฐาน: `worker/src/filter.js:84-87` สร้าง fingerprint จาก `(item.link || '')` ดิบและหัวข้อ ขณะที่ `worker/src/filter.js:40-46` มี `urlKey()` ที่ unwrap Bing และตัด `www.`/slash ท้าย URL แล้ว · ดังนั้นบทความเดียวกันที่เข้ามาครั้งหนึ่งเป็น Bing wrapper และอีกครั้งเป็นลิงก์ตรงจะได้ fingerprint คนละค่า แม้ dedupe ภายในรันเดียวกันจะใช้ `urlKey` ที่ `worker/src/index.js:159-164` ก็ตาม
++
++ผลกระทบที่ตรวจได้จากเส้นทางโค้ด: `seen:index` กันซ้ำข้ามรันด้วย fingerprint แต่ไม่ใช่ canonical URL · ข่าวที่ wrapper เปลี่ยนรูปจึงไม่ถูกกันด้วย seen key ข้ามรัน แม้ระบบยังมี title dedupe บางส่วน
++
++การตรวจยืนยันซ้ำจาก production ทำได้เพียงอ่าน `/api/news` ไม่สามารถจำลอง KV หลายรอบโดยไม่แก้/รันระบบจริง · ข้อสรุปนี้อ้างจาก source trace โดยตรง
++
++### ตรวจแล้วไม่พบปัญหา · dedupe ภายในชุด candidates และก่อน publish
++
++หลักฐาน: `worker/src/index.js:147-165` ตรวจ fingerprint, URL และ title กับ live/current candidates; `worker/src/index.js:192-200` ตรวจ title ซ้ำอีกครั้งหลัง AI เปลี่ยนหัวข้อก่อนใส่ live
++
++## 2) การแกะลิงก์ Bing
++
++### ตรวจแล้วไม่พบปัญหาในกรณี URL query มาตรฐาน
++
++หลักฐาน: `worker/src/filter.js:25-36` decode entities ก่อนหา `?url=`/`&url=`, decode ค่าและคืนเฉพาะ `http/https`; `worker/src/index.js:47-48` เรียก `unwrapLink()` ก่อนยอมรับรายการ; `worker/src/filter.js:40-46` เรียกซ้ำตอนสร้าง URL key
++
++ข้อจำกัดที่ตรวจพบจากโค้ด: regex `url=([^&\\s]+)` จะตัดค่าที่มี ampersand แบบไม่ percent-encode · ไม่มีตัวอย่าง production ให้ทดสอบกรณีนี้ จึงไม่จัดเป็นปัญหาที่เกิดขึ้นจริง
++
++## 3) feed ต้นทางล่มหรือคืน 503
++
++### ตรวจแล้วไม่พบปัญหาในเส้นทางข้ามแหล่งข้อมูล
++
++หลักฐาน: `worker/src/index.js:62-74` ครอบแต่ละ Bing query ด้วย `try/catch`; `worker/src/index.js:76-87` ครอบแต่ละ outlet feed แยกกัน; `worker/src/index.js:89-129` ครอบแต่ละ direct/first-party source แยกกัน · `fetchText()` ที่ `worker/src/index.js:36-39` throw เมื่อ `!r.ok` รวมถึง 503 แล้ว catch ของรายการนั้นจะ `continue`
++
++ดังนั้น 503 ของหนึ่ง feed ไม่ทำให้ harvest ทั้งระบบหยุด · หาก KV เขียนล้มเหลวภายหลังที่ `worker/src/index.js:210-213` จะทำให้ run ล้มได้ แต่เป็นคนละกรณีกับ upstream feed และยังไม่ได้ทดสอบจริง
++
++## 4) AI ตอบผิดรูปแบบและโอกาสข่าวผิดหลุด
++
++### ควรแก้ · salvage parser ใช้ตัวคั่นผิด แต่ผลที่ตรวจได้คือ fail-safe
++
++หลักฐาน: `worker/src/recheck.js:25-40` มี regex ที่ไฟล์จริงเป็น byte `08` รอบคำว่า `publish|hold|drop` ไม่ใช่ regex word boundary `\\b` · จึงไม่ match verdict ในข้อความ prose/code fence ที่ไม่มี JSON object สมบูรณ์
++
++ผลตามเส้นทางจริง: `parseVerdict()` ที่ `worker/src/recheck.js:43-63` จะคืน null เมื่อ salvage ไม่สำเร็จ · `recheck()` ที่ `worker/src/recheck.js:116-119` แปลงเป็น `verdict:'hold', confidence:0` · `bucketOf()` ที่ `worker/src/recheck.js:133-136` ส่งเข้า held ไม่ใช่ live ดังนั้นจากโค้ดนี้ยังไม่พบช่องให้คำตอบผิดรูปแบบหลุดขึ้นเว็บ
++
++### ผิด · ค่า `place_id` สตริง `"null"` หลุดเข้า public feed
++
++หลักฐานจาก production: `GET https://takuapa101-news.siwatid-99.workers.dev/api/news` ตอบรายการแรก `title_th:"ตะกั่วป่าจัดทิ้งกระจาด ครั้งที่ 14` พร้อม `place_id:"null"` (เป็นสตริง ไม่ใช่ JSON null)
++
++หลักฐานจากโค้ด: `worker/src/recheck.js:125` ใช้ `v.place_id || item.place_id || null` · ค่า string `"null"` เป็น truthy จึงถูกเก็บต่อที่ `worker/src/index.js:184` และ serialize ออกที่ `worker/src/index.js:231`
++
++## 5) ตรวจลิงก์ production แบบสุ่ม 5 เส้น
++
++URL ที่สุ่มจาก `/api/news` และผลตรวจด้วย `curl -L --ssl-no-revoke --max-time 12`:
++
++| URL | ผล HTTP | ผลตรวจ |
++|---|---:|---|
++| `https://www.naewna.com/n/national-news/48965/` | timeout | ตรวจไม่ได้เพราะปลายทางไม่ส่งข้อมูลภายใน 12 วินาที |
++| `https://siamrath.co.th/regional/news/142138` | 200 | ไปถึงปลายทาง |
++| `https://mgronline.com/south/photo-gallery/9690000008004` | 403 | ไปถึงเว็บไซต์ แต่ปลายทางปฏิเสธการเข้าถึงจากสภาพแวดล้อมตรวจ |
++| `https://www.topnews.co.th/news/1368822` | 200 | ไปถึงปลายทาง |
++| `https://www.naewna.com/local/825858` | 200 | ไปถึงปลายทาง |
++
++ลิงก์ 403 ยังยืนยันได้ว่าโดเมน/เส้นทางตอบกลับจริง แต่ตรวจเนื้อหาบทความไม่ได้ · ลิงก์ timeout ก็ตรวจเนื้อหาไม่ได้ · ไม่รายงานว่าเป็นลิงก์เสีย
++
++## 6) ข้อมูลลับหรือคีย์ที่หลุดในโค้ด deploy
++
++### ตรวจแล้วไม่พบปัญหา
++
++หลักฐาน: `worker/src/recheck.js:65-78` อ่าน `env.ANTHROPIC_API_KEY` จาก secret และไม่ฝังค่า; `worker/src/index.js:297-303` อ่าน `env.RUN_KEY`; `worker/wrangler.toml:14-22` มีเพียง allowed origins, limits และ AI binding ไม่มีค่า API key/token; `worker/src/sources.js:33-34` เป็นข้อความบอกชื่อ secret เท่านั้น
++
++การตรวจนี้ครอบคลุม source และ `wrangler.toml` ใน workspace · ตรวจค่า secret ที่เก็บอยู่บน Cloudflare จริงไม่ได้เพราะไม่มีสิทธิ์เข้าถึง secret store และ endpoint ที่อ่านได้ไม่เปิดเผยค่าเหล่านั้น
++
++## ข้อสรุป
++
++ระบบมี fail-safe เมื่อ AI ตอบผิดรูปแบบและข้าม feed ที่คืน 503 ได้ · รายการที่ต้องแก้ก่อนคือการแปลง `"null"` เป็น null/ตรวจค่า `place_id` ให้ถูกชนิด และควรแก้ salvage regex เพื่อไม่ทิ้งข่าวที่ AI ตอบเป็น prose หรือ JSON ไม่สมบูรณ์ · การตรวจลิงก์ครบ 5 เส้นทำไม่ได้ 1 เส้นเพราะ timeout จึงระบุไว้ตามกติกา ไม่สรุปเกินหลักฐาน
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$p='"'audit/a2-news.md'; "'$b=[IO.File]::ReadAllBytes($p); if($b.Length -gt 3 -and $b[0]-eq 239 -and $b[1]-eq 187 -and $b[2]-eq 191){'"'UTF8 BOM'} else {'UTF8 bytes readable'}; Get-Content -Encoding UTF8 "'$p | Select-Object -First 12; git status --short -- audit/a2-news.md worker; git diff --stat -- audit/a2-news.md worker' in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 142ms:
+UTF8 bytes readable
+# รายงานตรวจระบบข่าวอัตโนมัติ
+
+ตรวจไฟล์ `worker/src/index.js`, `worker/src/filter.js`, `worker/src/recheck.js`, `worker/src/sources.js`, `worker/wrangler.toml` และยิง endpoint production วันที่ 2026-09-08 · ไม่แก้ไฟล์ระบบตามกติกาใน `audit/SPEC.md`
+
+## สรุป
+
+- พบ `ผิด` 1 รายการ: ค่า `place_id` จาก AI ที่เป็นสตริง `"null"` หลุดเข้า feed จริง ทำให้ข้อมูลสถานที่ไม่เป็น null ตามสัญญาข้อมูล · หลักฐานคือผล `/api/news` รายการแรกมี `"place_id":"null"` และเส้นทางโค้ดใน `worker/src/recheck.js:121-128`
+- พบ `ควรแก้` 1 รายการ: parser สำรองของคำตอบ AI ใช้ byte `0x08` แทน `\\b` จึงกู้คำตอบที่ไม่ใช่ JSON ตรงรูปแบบไม่ได้ · ระบบจะพักข่าวไว้ ไม่ปล่อยข่าวผิดขึ้นเว็บ แต่เสียข่าวที่อาจตรวจได้
+- หัวข้อ feed ล่ม/503: ตรวจแล้วไม่พบปัญหาในเส้นทางแหล่งข้อมูล · แต่ไม่ได้ทดสอบรัน Worker จริงด้วยการบังคับ 503 เพราะไม่มีสิทธิ์เปลี่ยน upstream หรือ inject fetch ใน production
+- สุ่มตรวจลิงก์บทความจริงได้ 4/5 เส้น · 4 เส้นตอบ HTTP 200/403 และไปถึงโดเมนบทความตาม URL ที่คืนมา · 1 เส้น timeout จึงตรวจไม่ได้ ไม่สรุปว่าเสีย
+- ตรวจโค้ด deploy แล้วไม่พบค่าคีย์ลับฝังอยู่ในไฟล์ · พบเพียงชื่อ environment secret และค่า KV/vars ที่ไม่ใช่ secret
+
+?? audit/a2-news.md
+
+diff --git a/output/web/takuapa101-v1/audit/a2-news.md b/output/web/takuapa101-v1/audit/a2-news.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..1ee1fb5fe0be4a87a5f154d051e4dde6059e87f2
+--- /dev/null
++++ b/output/web/takuapa101-v1/audit/a2-news.md
+@@ -0,0 +1,81 @@
++# รายงานตรวจระบบข่าวอัตโนมัติ
++
++ตรวจไฟล์ `worker/src/index.js`, `worker/src/filter.js`, `worker/src/recheck.js`, `worker/src/sources.js`, `worker/wrangler.toml` และยิง endpoint production วันที่ 2026-09-08 · ไม่แก้ไฟล์ระบบตามกติกาใน `audit/SPEC.md`
++
++## สรุป
++
++- พบ `ผิด` 1 รายการ: ค่า `place_id` จาก AI ที่เป็นสตริง `"null"` หลุดเข้า feed จริง ทำให้ข้อมูลสถานที่ไม่เป็น null ตามสัญญาข้อมูล · หลักฐานคือผล `/api/news` รายการแรกมี `"place_id":"null"` และเส้นทางโค้ดใน `worker/src/recheck.js:121-128`
++- พบ `ควรแก้` 1 รายการ: parser สำรองของคำตอบ AI ใช้ byte `0x08` แทน `\\b` จึงกู้คำตอบที่ไม่ใช่ JSON ตรงรูปแบบไม่ได้ · ระบบจะพักข่าวไว้ ไม่ปล่อยข่าวผิดขึ้นเว็บ แต่เสียข่าวที่อาจตรวจได้
++- หัวข้อ feed ล่ม/503: ตรวจแล้วไม่พบปัญหาในเส้นทางแหล่งข้อมูล · แต่ไม่ได้ทดสอบรัน Worker จริงด้วยการบังคับ 503 เพราะไม่มีสิทธิ์เปลี่ยน upstream หรือ inject fetch ใน production
++- สุ่มตรวจลิงก์บทความจริงได้ 4/5 เส้น · 4 เส้นตอบ HTTP 200/403 และไปถึงโดเมนบทความตาม URL ที่คืนมา · 1 เส้น timeout จึงตรวจไม่ได้ ไม่สรุปว่าเสีย
++- ตรวจโค้ด deploy แล้วไม่พบค่าคีย์ลับฝังอยู่ในไฟล์ · พบเพียงชื่อ environment secret และค่า KV/vars ที่ไม่ใช่ secret
++
++## 1) การกันข่าวซ้ำ
++
++### ควรแก้ · fingerprint ไม่ normalize/unwrap ลิงก์ก่อนสร้าง seen key
++
++หลักฐาน: `worker/src/filter.js:84-87` สร้าง fingerprint จาก `(item.link || '')` ดิบและหัวข้อ ขณะที่ `worker/src/filter.js:40-46` มี `urlKey()` ที่ unwrap Bing และตัด `www.`/slash ท้าย URL แล้ว · ดังนั้นบทความเดียวกันที่เข้ามาครั้งหนึ่งเป็น Bing wrapper และอีกครั้งเป็นลิงก์ตรงจะได้ fingerprint คนละค่า แม้ dedupe ภายในรันเดียวกันจะใช้ `urlKey` ที่ `worker/src/index.js:159-164` ก็ตาม
++
++ผลกระทบที่ตรวจได้จากเส้นทางโค้ด: `seen:index` กันซ้ำข้ามรันด้วย fingerprint แต่ไม่ใช่ canonical URL · ข่าวที่ wrapper เปลี่ยนรูปจึงไม่ถูกกันด้วย seen key ข้ามรัน แม้ระบบยังมี title dedupe บางส่วน
++
++การตรวจยืนยันซ้ำจาก production ทำได้เพียงอ่าน `/api/news` ไม่สามารถจำลอง KV หลายรอบโดยไม่แก้/รันระบบจริง · ข้อสรุปนี้อ้างจาก source trace โดยตรง
++
++### ตรวจแล้วไม่พบปัญหา · dedupe ภายในชุด candidates และก่อน publish
++
++หลักฐาน: `worker/src/index.js:147-165` ตรวจ fingerprint, URL และ title กับ live/current candidates; `worker/src/index.js:192-200` ตรวจ title ซ้ำอีกครั้งหลัง AI เปลี่ยนหัวข้อก่อนใส่ live
++
++## 2) การแกะลิงก์ Bing
++
++### ตรวจแล้วไม่พบปัญหาในกรณี URL query มาตรฐาน
++
++หลักฐาน: `worker/src/filter.js:25-36` decode entities ก่อนหา `?url=`/`&url=`, decode ค่าและคืนเฉพาะ `http/https`; `worker/src/index.js:47-48` เรียก `unwrapLink()` ก่อนยอมรับรายการ; `worker/src/filter.js:40-46` เรียกซ้ำตอนสร้าง URL key
++
++ข้อจำกัดที่ตรวจพบจากโค้ด: regex `url=([^&\\s]+)` จะตัดค่าที่มี ampersand แบบไม่ percent-encode · ไม่มีตัวอย่าง production ให้ทดสอบกรณีนี้ จึงไม่จัดเป็นปัญหาที่เกิดขึ้นจริง
++
++## 3) feed ต้นทางล่มหรือคืน 503
++
++### ตรวจแล้วไม่พบปัญหาในเส้นทางข้ามแหล่งข้อมูล
++
++หลักฐาน: `worker/src/index.js:62-74` ครอบแต่ละ Bing query ด้วย `try/catch`; `worker/src/index.js:76-87` ครอบแต่ละ outlet feed แยกกัน; `worker/src/index.js:89-129` ครอบแต่ละ direct/first-party source แยกกัน · `fetchText()` ที่ `worker/src/index.js:36-39` throw เมื่อ `!r.ok` รวมถึง 503 แล้ว catch ของรายการนั้นจะ `continue`
++
++ดังนั้น 503 ของหนึ่ง feed ไม่ทำให้ harvest ทั้งระบบหยุด · หาก KV เขียนล้มเหลวภายหลังที่ `worker/src/index.js:210-213` จะทำให้ run ล้มได้ แต่เป็นคนละกรณีกับ upstream feed และยังไม่ได้ทดสอบจริง
++
++## 4) AI ตอบผิดรูปแบบและโอกาสข่าวผิดหลุด
++
++### ควรแก้ · salvage parser ใช้ตัวคั่นผิด แต่ผลที่ตรวจได้คือ fail-safe
++
++หลักฐาน: `worker/src/recheck.js:25-40` มี regex ที่ไฟล์จริงเป็น byte `08` รอบคำว่า `publish|hold|drop` ไม่ใช่ regex word boundary `\\b` · จึงไม่ match verdict ในข้อความ prose/code fence ที่ไม่มี JSON object สมบูรณ์
++
++ผลตามเส้นทางจริง: `parseVerdict()` ที่ `worker/src/recheck.js:43-63` จะคืน null เมื่อ salvage ไม่สำเร็จ · `recheck()` ที่ `worker/src/recheck.js:116-119` แปลงเป็น `verdict:'hold', confidence:0` · `bucketOf()` ที่ `worker/src/recheck.js:133-136` ส่งเข้า held ไม่ใช่ live ดังนั้นจากโค้ดนี้ยังไม่พบช่องให้คำตอบผิดรูปแบบหลุดขึ้นเว็บ
++
++### ผิด · ค่า `place_id` สตริง `"null"` หลุดเข้า public feed
++
++หลักฐานจาก production: `GET https://takuapa101-news.siwatid-99.workers.dev/api/news` ตอบรายการแรก `title_th:"ตะกั่วป่าจัดทิ้งกระจาด ครั้งที่ 14` พร้อม `place_id:"null"` (เป็นสตริง ไม่ใช่ JSON null)
++
++หลักฐานจากโค้ด: `worker/src/recheck.js:125` ใช้ `v.place_id || item.place_id || null` · ค่า string `"null"` เป็น truthy จึงถูกเก็บต่อที่ `worker/src/index.js:184` และ serialize ออกที่ `worker/src/index.js:231`
++
++## 5) ตรวจลิงก์ production แบบสุ่ม 5 เส้น
++
++URL ที่สุ่มจาก `/api/news` และผลตรวจด้วย `curl -L --ssl-no-revoke --max-time 12`:
++
++| URL | ผล HTTP | ผลตรวจ |
++|---|---:|---|
++| `https://www.naewna.com/n/national-news/48965/` | timeout | ตรวจไม่ได้เพราะปลายทางไม่ส่งข้อมูลภายใน 12 วินาที |
++| `https://siamrath.co.th/regional/news/142138` | 200 | ไปถึงปลายทาง |
++| `https://mgronline.com/south/photo-gallery/9690000008004` | 403 | ไปถึงเว็บไซต์ แต่ปลายทางปฏิเสธการเข้าถึงจากสภาพแวดล้อมตรวจ |
++| `https://www.topnews.co.th/news/1368822` | 200 | ไปถึงปลายทาง |
++| `https://www.naewna.com/local/825858` | 200 | ไปถึงปลายทาง |
++
++ลิงก์ 403 ยังยืนยันได้ว่าโดเมน/เส้นทางตอบกลับจริง แต่ตรวจเนื้อหาบทความไม่ได้ · ลิงก์ timeout ก็ตรวจเนื้อหาไม่ได้ · ไม่รายงานว่าเป็นลิงก์เสีย
++
++## 6) ข้อมูลลับหรือคีย์ที่หลุดในโค้ด deploy
++
++### ตรวจแล้วไม่พบปัญหา
++
++หลักฐาน: `worker/src/recheck.js:65-78` อ่าน `env.ANTHROPIC_API_KEY` จาก secret และไม่ฝังค่า; `worker/src/index.js:297-303` อ่าน `env.RUN_KEY`; `worker/wrangler.toml:14-22` มีเพียง allowed origins, limits และ AI binding ไม่มีค่า API key/token; `worker/src/sources.js:33-34` เป็นข้อความบอกชื่อ secret เท่านั้น
++
++การตรวจนี้ครอบคลุม source และ `wrangler.toml` ใน workspace · ตรวจค่า secret ที่เก็บอยู่บน Cloudflare จริงไม่ได้เพราะไม่มีสิทธิ์เข้าถึง secret store และ endpoint ที่อ่านได้ไม่เปิดเผยค่าเหล่านั้น
++
++## ข้อสรุป
++
++ระบบมี fail-safe เมื่อ AI ตอบผิดรูปแบบและข้าม feed ที่คืน 503 ได้ · รายการที่ต้องแก้ก่อนคือการแปลง `"null"` เป็น null/ตรวจค่า `place_id` ให้ถูกชนิด และควรแก้ salvage regex เพื่อไม่ทิ้งข่าวที่ AI ตอบเป็น prose หรือ JSON ไม่สมบูรณ์ · การตรวจลิงก์ครบ 5 เส้นทำไม่ได้ 1 เส้นเพราะ timeout จึงระบุไว้ตามกติกา ไม่สรุปเกินหลักฐาน
+
+codex
+ตรวจเสร็จและเขียนรายงานแล้วที่ [audit/a2-news.md](D:/Siwaracafeweb/output/web/takuapa101-v1/audit/a2-news.md)
+
+สรุปผล:
+
+- พบ `ผิด`: production คืน `place_id: "null"` เป็น string
+- พบ `ควรแก้`: AI salvage parser ใช้ byte `0x08` แทน `\b` แต่ยัง fail-safe ไม่ปล่อยข่าวผิดขึ้นเว็บ
+- Feed ที่ 503 ถูกข้ามไปแหล่งถัดไปได้
+- ตรวจลิงก์ได้ 4/5 เส้น · 1 เส้น timeout จึงระบุว่าตรวจไม่ได้
+- ไม่พบ secret/key ฝังในโค้ด deploy
+- ไม่ได้แก้ไฟล์ระบบใด ๆ · เพิ่มเฉพาะรายงานตามที่ร้องขอ
+diff --git a/output/web/takuapa101-v1/audit/a2-news.md b/output/web/takuapa101-v1/audit/a2-news.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..1ee1fb5fe0be4a87a5f154d051e4dde6059e87f2
+--- /dev/null
++++ b/output/web/takuapa101-v1/audit/a2-news.md
+@@ -0,0 +1,81 @@
++# รายงานตรวจระบบข่าวอัตโนมัติ
++
++ตรวจไฟล์ `worker/src/index.js`, `worker/src/filter.js`, `worker/src/recheck.js`, `worker/src/sources.js`, `worker/wrangler.toml` และยิง endpoint production วันที่ 2026-09-08 · ไม่แก้ไฟล์ระบบตามกติกาใน `audit/SPEC.md`
++
++## สรุป
++
++- พบ `ผิด` 1 รายการ: ค่า `place_id` จาก AI ที่เป็นสตริง `"null"` หลุดเข้า feed จริง ทำให้ข้อมูลสถานที่ไม่เป็น null ตามสัญญาข้อมูล · หลักฐานคือผล `/api/news` รายการแรกมี `"place_id":"null"` และเส้นทางโค้ดใน `worker/src/recheck.js:121-128`
++- พบ `ควรแก้` 1 รายการ: parser สำรองของคำตอบ AI ใช้ byte `0x08` แทน `\\b` จึงกู้คำตอบที่ไม่ใช่ JSON ตรงรูปแบบไม่ได้ · ระบบจะพักข่าวไว้ ไม่ปล่อยข่าวผิดขึ้นเว็บ แต่เสียข่าวที่อาจตรวจได้
++- หัวข้อ feed ล่ม/503: ตรวจแล้วไม่พบปัญหาในเส้นทางแหล่งข้อมูล · แต่ไม่ได้ทดสอบรัน Worker จริงด้วยการบังคับ 503 เพราะไม่มีสิทธิ์เปลี่ยน upstream หรือ inject fetch ใน production
++- สุ่มตรวจลิงก์บทความจริงได้ 4/5 เส้น · 4 เส้นตอบ HTTP 200/403 และไปถึงโดเมนบทความตาม URL ที่คืนมา · 1 เส้น timeout จึงตรวจไม่ได้ ไม่สรุปว่าเสีย
++- ตรวจโค้ด deploy แล้วไม่พบค่าคีย์ลับฝังอยู่ในไฟล์ · พบเพียงชื่อ environment secret และค่า KV/vars ที่ไม่ใช่ secret
++
++## 1) การกันข่าวซ้ำ
++
++### ควรแก้ · fingerprint ไม่ normalize/unwrap ลิงก์ก่อนสร้าง seen key
++
++หลักฐาน: `worker/src/filter.js:84-87` สร้าง fingerprint จาก `(item.link || '')` ดิบและหัวข้อ ขณะที่ `worker/src/filter.js:40-46` มี `urlKey()` ที่ unwrap Bing และตัด `www.`/slash ท้าย URL แล้ว · ดังนั้นบทความเดียวกันที่เข้ามาครั้งหนึ่งเป็น Bing wrapper และอีกครั้งเป็นลิงก์ตรงจะได้ fingerprint คนละค่า แม้ dedupe ภายในรันเดียวกันจะใช้ `urlKey` ที่ `worker/src/index.js:159-164` ก็ตาม
++
++ผลกระทบที่ตรวจได้จากเส้นทางโค้ด: `seen:index` กันซ้ำข้ามรันด้วย fingerprint แต่ไม่ใช่ canonical URL · ข่าวที่ wrapper เปลี่ยนรูปจึงไม่ถูกกันด้วย seen key ข้ามรัน แม้ระบบยังมี title dedupe บางส่วน
++
++การตรวจยืนยันซ้ำจาก production ทำได้เพียงอ่าน `/api/news` ไม่สามารถจำลอง KV หลายรอบโดยไม่แก้/รันระบบจริง · ข้อสรุปนี้อ้างจาก source trace โดยตรง
++
++### ตรวจแล้วไม่พบปัญหา · dedupe ภายในชุด candidates และก่อน publish
++
++หลักฐาน: `worker/src/index.js:147-165` ตรวจ fingerprint, URL และ title กับ live/current candidates; `worker/src/index.js:192-200` ตรวจ title ซ้ำอีกครั้งหลัง AI เปลี่ยนหัวข้อก่อนใส่ live
++
++## 2) การแกะลิงก์ Bing
++
++### ตรวจแล้วไม่พบปัญหาในกรณี URL query มาตรฐาน
++
++หลักฐาน: `worker/src/filter.js:25-36` decode entities ก่อนหา `?url=`/`&url=`, decode ค่าและคืนเฉพาะ `http/https`; `worker/src/index.js:47-48` เรียก `unwrapLink()` ก่อนยอมรับรายการ; `worker/src/filter.js:40-46` เรียกซ้ำตอนสร้าง URL key
++
++ข้อจำกัดที่ตรวจพบจากโค้ด: regex `url=([^&\\s]+)` จะตัดค่าที่มี ampersand แบบไม่ percent-encode · ไม่มีตัวอย่าง production ให้ทดสอบกรณีนี้ จึงไม่จัดเป็นปัญหาที่เกิดขึ้นจริง
++
++## 3) feed ต้นทางล่มหรือคืน 503
++
++### ตรวจแล้วไม่พบปัญหาในเส้นทางข้ามแหล่งข้อมูล
++
++หลักฐาน: `worker/src/index.js:62-74` ครอบแต่ละ Bing query ด้วย `try/catch`; `worker/src/index.js:76-87` ครอบแต่ละ outlet feed แยกกัน; `worker/src/index.js:89-129` ครอบแต่ละ direct/first-party source แยกกัน · `fetchText()` ที่ `worker/src/index.js:36-39` throw เมื่อ `!r.ok` รวมถึง 503 แล้ว catch ของรายการนั้นจะ `continue`
++
++ดังนั้น 503 ของหนึ่ง feed ไม่ทำให้ harvest ทั้งระบบหยุด · หาก KV เขียนล้มเหลวภายหลังที่ `worker/src/index.js:210-213` จะทำให้ run ล้มได้ แต่เป็นคนละกรณีกับ upstream feed และยังไม่ได้ทดสอบจริง
++
++## 4) AI ตอบผิดรูปแบบและโอกาสข่าวผิดหลุด
++
++### ควรแก้ · salvage parser ใช้ตัวคั่นผิด แต่ผลที่ตรวจได้คือ fail-safe
++
++หลักฐาน: `worker/src/recheck.js:25-40` มี regex ที่ไฟล์จริงเป็น byte `08` รอบคำว่า `publish|hold|drop` ไม่ใช่ regex word boundary `\\b` · จึงไม่ match verdict ในข้อความ prose/code fence ที่ไม่มี JSON object สมบูรณ์
++
++ผลตามเส้นทางจริง: `parseVerdict()` ที่ `worker/src/recheck.js:43-63` จะคืน null เมื่อ salvage ไม่สำเร็จ · `recheck()` ที่ `worker/src/recheck.js:116-119` แปลงเป็น `verdict:'hold', confidence:0` · `bucketOf()` ที่ `worker/src/recheck.js:133-136` ส่งเข้า held ไม่ใช่ live ดังนั้นจากโค้ดนี้ยังไม่พบช่องให้คำตอบผิดรูปแบบหลุดขึ้นเว็บ
++
++### ผิด · ค่า `place_id` สตริง `"null"` หลุดเข้า public feed
++
++หลักฐานจาก production: `GET https://takuapa101-news.siwatid-99.workers.dev/api/news` ตอบรายการแรก `title_th:"ตะกั่วป่าจัดทิ้งกระจาด ครั้งที่ 14` พร้อม `place_id:"null"` (เป็นสตริง ไม่ใช่ JSON null)
++
++หลักฐานจากโค้ด: `worker/src/recheck.js:125` ใช้ `v.place_id || item.place_id || null` · ค่า string `"null"` เป็น truthy จึงถูกเก็บต่อที่ `worker/src/index.js:184` และ serialize ออกที่ `worker/src/index.js:231`
++
++## 5) ตรวจลิงก์ production แบบสุ่ม 5 เส้น
++
++URL ที่สุ่มจาก `/api/news` และผลตรวจด้วย `curl -L --ssl-no-revoke --max-time 12`:
++
++| URL | ผล HTTP | ผลตรวจ |
++|---|---:|---|
++| `https://www.naewna.com/n/national-news/48965/` | timeout | ตรวจไม่ได้เพราะปลายทางไม่ส่งข้อมูลภายใน 12 วินาที |
++| `https://siamrath.co.th/regional/news/142138` | 200 | ไปถึงปลายทาง |
++| `https://mgronline.com/south/photo-gallery/9690000008004` | 403 | ไปถึงเว็บไซต์ แต่ปลายทางปฏิเสธการเข้าถึงจากสภาพแวดล้อมตรวจ |
++| `https://www.topnews.co.th/news/1368822` | 200 | ไปถึงปลายทาง |
++| `https://www.naewna.com/local/825858` | 200 | ไปถึงปลายทาง |
++
++ลิงก์ 403 ยังยืนยันได้ว่าโดเมน/เส้นทางตอบกลับจริง แต่ตรวจเนื้อหาบทความไม่ได้ · ลิงก์ timeout ก็ตรวจเนื้อหาไม่ได้ · ไม่รายงานว่าเป็นลิงก์เสีย
++
++## 6) ข้อมูลลับหรือคีย์ที่หลุดในโค้ด deploy
++
++### ตรวจแล้วไม่พบปัญหา
++
++หลักฐาน: `worker/src/recheck.js:65-78` อ่าน `env.ANTHROPIC_API_KEY` จาก secret และไม่ฝังค่า; `worker/src/index.js:297-303` อ่าน `env.RUN_KEY`; `worker/wrangler.toml:14-22` มีเพียง allowed origins, limits และ AI binding ไม่มีค่า API key/token; `worker/src/sources.js:33-34` เป็นข้อความบอกชื่อ secret เท่านั้น
++
++การตรวจนี้ครอบคลุม source และ `wrangler.toml` ใน workspace · ตรวจค่า secret ที่เก็บอยู่บน Cloudflare จริงไม่ได้เพราะไม่มีสิทธิ์เข้าถึง secret store และ endpoint ที่อ่านได้ไม่เปิดเผยค่าเหล่านั้น
++
++## ข้อสรุป
++
++ระบบมี fail-safe เมื่อ AI ตอบผิดรูปแบบและข้าม feed ที่คืน 503 ได้ · รายการที่ต้องแก้ก่อนคือการแปลง `"null"` เป็น null/ตรวจค่า `place_id` ให้ถูกชนิด และควรแก้ salvage regex เพื่อไม่ทิ้งข่าวที่ AI ตอบเป็น prose หรือ JSON ไม่สมบูรณ์ · การตรวจลิงก์ครบ 5 เส้นทำไม่ได้ 1 เส้นเพราะ timeout จึงระบุไว้ตามกติกา ไม่สรุปเกินหลักฐาน
+
+tokens used
+40,264

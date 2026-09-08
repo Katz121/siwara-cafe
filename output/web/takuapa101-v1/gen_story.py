@@ -146,7 +146,7 @@ story = {
             "title": "เอกสารเมืองเก่าตะกั่วป่า",
             "publisher": "สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม (สผ.)",
             "url": "https://nced.onep.go.th/opendata/2568/oldtown36_announce/takuapa.pdf",
-            "locator": "PDF หน้า 11–13, 55–56, 58",
+            "locator": "PDF หน้า 11-13, 55-56, 58",
             "accessed": "2026-09-07"
         },
         {

@@ -18,12 +18,12 @@ DEST_PATH = ROOT / 'site' / 'assets' / 'map-points.json'
 def get_url(record: dict) -> str:
     """ส่งคืน URL ของสถานที่หรือประเพณี"""
     if record.get('category') == 'tradition' or record.get('type') == 'event':
-        return '/takuapa/traditions/'
-    return f"/takuapa/places/{record['id']}/"
+        return '/traditions/'
+    return f"/places/{record['id']}/"
 
 
 def get_image(record: dict) -> str:
-    """ส่งคืนรูปภาพ: ภาพ usable แรกถ้ามี ไม่มีใช้ /takuapa/assets/<id>.webp"""
+    """ส่งคืนรูปภาพ: ภาพ usable แรกถ้ามี ไม่มีใช้ /assets/<id>.webp"""
     photos = record.get('photos') or {}
     usable = photos.get('usable') or []
     if usable and isinstance(usable, list):
@@ -32,9 +32,9 @@ def get_image(record: dict) -> str:
             src = first.get('file') or first.get('url')
             if src:
                 if src.startswith('/') and not src.startswith('/takuapa/'):
-                    return f"/takuapa{src}"
+                    return f"{src}"
                 return src
-    return f"/takuapa/assets/{record['id']}.webp"
+    return f"/assets/{record['id']}.webp"
 
 
 def main():

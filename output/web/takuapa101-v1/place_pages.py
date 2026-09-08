@@ -3,7 +3,9 @@ import json
 from html import escape
 from pathlib import Path
 import seo
+from dead_sources import source_link
 ROOT = Path(__file__).parent
+_PHOTO_REGISTRY = None
 
 def text(v):
     return escape(seo.clean(v)) if v is not None else ''
@@ -14,15 +16,21 @@ def badge(status):
 
 def link(url, label='อ่านแหล่งอ้างอิง ↗'):
     if not url or not str(url).startswith(('https://','http://','/')): return ''
-    return f'<a href="{escape(url, quote=True)}" target="_blank" rel="noopener">{text(label)}</a>'
+    return source_link(url, text(label))
 
 def paragraphs(value):
     values=value if isinstance(value,list) else (value or '').split('\n\n')
     return ''.join(f'<p>{text(p)}</p>' for p in values if p)
 
 def photo(p, eager=False, zoom=False):
+    global _PHOTO_REGISTRY
     src=p.get('file') or p.get('local_path') or p.get('url')
-    caption=p.get('caption_th') or 'ภาพจากคลังโครงการ'
+    if _PHOTO_REGISTRY is None:
+        registry = json.loads((ROOT/'data/photo-registry.json').read_text(encoding='utf-8'))
+        _PHOTO_REGISTRY = {x.get('file'): x for x in registry.get('photos', [])}
+    registered = _PHOTO_REGISTRY.get(src)
+    caption=(registered or {}).get('caption_th') if registered else None
+    caption=caption or 'ภาพจากคลังโครงการ'
     img=f'<img src="{escape(src, quote=True)}" alt="{text(caption)}" loading="{"eager" if eager else "lazy"}">'
     if zoom: img=f'<a data-lightbox href="{escape(src, quote=True)}" aria-label="ขยายภาพ · {text(caption)}">{img}</a>'
     return '<figure class="research-photo">'+img+'<figcaption>'+text(caption)+'<small>เครดิต · '+text(p.get('credit') or p.get('attribution_th') or 'ยังไม่ยืนยัน')+'</small><small>สัญญาอนุญาต · '+text(p.get('license_note_th') or p.get('license') or 'ยังไม่ยืนยัน')+'</small>'+link(p.get('page_url'),'ที่มาของภาพ ↗')+'</figcaption></figure>'
@@ -39,7 +47,7 @@ def render(record,ctx,groups):
     r=seo.ENRICHED[record['id']]; rid=r['id']; photos=r.get('photos',{}).get('usable',[])
     _,category,ids=next(g for g in groups if rid in g[2])
     hero_photo=next((p for p in photos if p.get('era') in ('current','now')),photos[0] if photos else None)
-    hero='<div class="breadcrumbs"><a href="/">หน้าแรก</a> / <a href="/places/">สถานที่</a> / '+text(category)+'</div><header class="place-hero full-place-hero"><div><span class="chapter">บันทึกสถานที่ · '+text(category)+'</span><h1>'+text(r['name_th'])+'</h1><p class="english">'+text(r.get('name_en'))+'</p><span class="fact-status confirmed">ยืนยันแล้ว '+str(r.get('counts',{}).get('confirmed',0))+' ข้อ</span><p><a class="text-link" href="#eras">ตอนนั้น · ก่อนหน้า · ตอนนี้ ↓</a></p></div><div class="place-hero-art">'+(photo(hero_photo,True) if hero_photo else ctx['pic'](rid,True))+'</div></header>'
+    hero='<div class="breadcrumbs"><a href="/">หน้าแรก</a> / <a href="/places/">สถานที่</a> / '+text(category)+'</div><header class="place-hero full-place-hero"><div><span class="chapter">บันทึกสถานที่ · '+text(category)+'</span><h1>'+text(r['name_th'])+'</h1><p class="english">'+text(r.get('name_en'))+'</p><span class="fact-status confirmed">ยืนยันแล้ว '+str(r.get('counts',{}).get('confirmed',0))+' ข้อ</span><p><a class="text-link" href="#eras">ตอนนั้น · ก่อนหน้า · ตอนนี้ ↓</a></p><p class="place-hero-actions"><button class="button" type="button" data-trip-add="'+text(rid)+'">เพิ่มลงทริป</button><a class="text-link" href="/trip/">ดูทริปของคุณ</a></p></div><div class="place-hero-art">'+(photo(hero_photo,True) if hero_photo else ctx['pic'](rid,True))+'</div></header>'
     v=r.get('visit') or {}; c=r.get('contact') or {}; g=r.get('geo') or {}
     def field(label,value,status=None,href=None):
         content=(link(href,value) if href else text(value)) if value is not None and value!='' else '<span class="muted">ยังไม่ยืนยัน</span>'

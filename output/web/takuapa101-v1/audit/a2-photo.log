@@ -1,0 +1,913 @@
+ตรวจเสร็จและเขียนรายงานแล้วที่ [audit/a2-photo.md](D:/Siwaracafeweb/output/web/takuapa101-v1/audit/a2-photo.md)
+
+สรุป: พบคำบรรยายเขียนใหม่ 6 รายการ, รูปซ้ำเกิน 3 หน้า 19 ไฟล์ และรูปนอกทะเบียน 146 รายการซึ่งตรวจ `allowed_on` ไม่ได้เพราะไม่มีรายการในทะเบียน ส่วนรูปที่มีทะเบียนไม่พบการใช้ผิดหน้า.
+
+--ERR--
+OpenAI Codex v0.153.4
+--------
+workdir: D:\Siwaracafeweb\output\web\takuapa101-v1
+model: gpt-5.6-luna
+provider: openai
+approval: never
+sandbox: danger-full-access
+reasoning effort: low
+reasoning summaries: none
+session id: 01a080ba-6587-7f22-a5ea-fea937d51697
+--------
+user
+อ่าน `audit/SPEC.md` ให้ครบก่อนลงมือ แล้วทำตามกฎทุกข้อ โดยเฉพาะข้อห้ามแก้ไฟล์และห้ามแต่งปัญหา
+งานนี้ขอบเขตแคบ ทำให้จบใน 15 นาที · ถ้าตรวจข้อไหนไม่ได้ ให้เขียนว่าตรวจไม่ได้เพราะอะไร แล้วไปข้อถัดไป
+เสิร์ฟไฟล์ด้วย `python -m http.server 8799 --directory site` แล้วเปิด http://127.0.0.1:8799 ถ้าต้องใช้เบราว์เซอร์ (Playwright ติดตั้งแล้ว)
+
+ตรวจการใช้ภาพทั้งเว็บเทียบ `data/photo-registry.json`
+กฎของเว็บนี้: รูปหนึ่งใบใช้ได้เฉพาะหน้าที่มันเป็นภาพของสิ่งนั้นจริง และคำบรรยายต้องมาจากทะเบียนเท่านั้น
+1. ไล่ทุก img ในหน้า `site/` ที่ไม่ใช่ /en/ · รูปไหนถูกใช้บนหน้าที่ไม่อยู่ใน allowed_on
+2. คำบรรยายบนหน้าเว็บตรงกับ caption_th ในทะเบียนทุกใบไหม · อันไหนถูกเขียนใหม่
+3. รูปเดียวกันถูกใช้ซ้ำเกิน 3 หน้าไหม · ลิสต์พร้อมจำนวน
+4. ภาพวาดที่ใช้แทนภาพถ่าย · มีจุดไหนที่ผู้อ่านอาจเข้าใจผิดว่าเป็นภาพถ่ายจริงไหม
+เขียนรายงานที่ `audit/a2-photo.md`
+codex
+ผมจะอ่าน `audit/SPEC.md` ให้ครบก่อน แล้วตรวจแบบ read-only ตามขอบเขตที่ระบุ จากนั้นเขียนเฉพาะรายงาน `audit/a2-photo.md` โดยจะไม่แก้ไฟล์เว็บหรือทะเบียน และจะระบุข้อที่ตรวจไม่ได้พร้อมเหตุผลตามจริงครับ
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'Get-Content -Raw audit/SPEC.md' in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 30ms:
+# à¸‡à¸²à¸™à¸•à¸£à¸§à¸ˆà¹€à¸§à¹‡à¸š takuapa101.com Â· à¸£à¸­à¸šà¸•à¸£à¸§à¸ˆà¸„à¸§à¸²à¸¡à¸–à¸¹à¸à¸•à¹‰à¸­à¸‡
+
+à¹‚à¸Ÿà¸¥à¹€à¸”à¸­à¸£à¹Œà¸‡à¸²à¸™ `D:\Siwaracafeweb\output\web\takuapa101-v1`
+à¹€à¸§à¹‡à¸šà¸ˆà¸£à¸´à¸‡ `https://takuapa101.com` Â· à¹„à¸—à¸¢ 45 à¸«à¸™à¹‰à¸² Â· à¸­à¸±à¸‡à¸à¸¤à¸© 44 à¸«à¸™à¹‰à¸²
+
+## à¸à¸Žà¸à¸²à¸£à¸—à¸³à¸‡à¸²à¸™ (à¸—à¸¸à¸à¸„à¸™à¸•à¹‰à¸­à¸‡à¸­à¹ˆà¸²à¸™)
+
+1. **à¸«à¹‰à¸²à¸¡à¹à¸à¹‰à¹„à¸Ÿà¸¥à¹Œà¹ƒà¸” à¹†** à¸‡à¸²à¸™à¸™à¸µà¹‰à¸„à¸·à¸­à¸•à¸£à¸§à¸ˆà¹à¸¥à¸°à¸£à¸²à¸¢à¸‡à¸²à¸™à¹€à¸—à¹ˆà¸²à¸™à¸±à¹‰à¸™ Â· à¹€à¸ˆà¹‰à¸²à¸‚à¸­à¸‡à¹€à¸§à¹‡à¸šà¸ˆà¸°à¹€à¸›à¹‡à¸™à¸„à¸™à¸•à¸±à¸”à¸ªà¸´à¸™à¹ƒà¸ˆà¹à¸à¹‰
+2. **à¸—à¸¸à¸à¸‚à¹‰à¸­à¸—à¸µà¹ˆà¸£à¸²à¸¢à¸‡à¸²à¸™à¸•à¹‰à¸­à¸‡à¸¡à¸µà¸«à¸¥à¸±à¸à¸à¸²à¸™** à¸£à¸°à¸šà¸¸à¹„à¸Ÿà¸¥à¹Œ à¸šà¸£à¸£à¸—à¸±à¸” à¸«à¸£à¸·à¸­ URL à¸—à¸µà¹ˆà¸•à¸£à¸§à¸ˆà¹€à¸ˆà¸­ Â· à¸«à¹‰à¸²à¸¡à¹€à¸‚à¸µà¸¢à¸™à¸§à¹ˆà¸² "à¸­à¸²à¸ˆà¸ˆà¸°" à¸¥à¸­à¸¢ à¹†
+3. **à¹à¸¢à¸à¸„à¸§à¸²à¸¡à¸£à¸¸à¸™à¹à¸£à¸‡** à¹€à¸›à¹‡à¸™ 3 à¸£à¸°à¸”à¸±à¸š
+   - `à¸œà¸´à¸”` = à¸‚à¹‰à¸­à¸¡à¸¹à¸¥à¸œà¸´à¸” à¸¥à¸´à¸‡à¸à¹Œà¹€à¸ªà¸µà¸¢ à¹‚à¸„à¹‰à¸”à¸žà¸±à¸‡ à¸œà¸¹à¹‰à¹ƒà¸Šà¹‰à¹€à¸ˆà¸­à¸›à¸±à¸à¸«à¸²à¸ˆà¸£à¸´à¸‡
+   - `à¸„à¸§à¸£à¹à¸à¹‰` = à¹„à¸¡à¹ˆà¸œà¸´à¸”à¹à¸•à¹ˆà¸—à¸³à¹ƒà¸«à¹‰à¸”à¸µà¸à¸§à¹ˆà¸²à¸™à¸µà¹‰à¹„à¸”à¹‰à¸Šà¸±à¸”à¹€à¸ˆà¸™
+   - `à¸‚à¹‰à¸­à¸ªà¸±à¸‡à¹€à¸à¸•` = à¹€à¸£à¸·à¹ˆà¸­à¸‡à¸£à¸ªà¸™à¸´à¸¢à¸¡à¸«à¸£à¸·à¸­à¸—à¸²à¸‡à¹€à¸¥à¸·à¸­à¸
+4. **à¸«à¹‰à¸²à¸¡à¸£à¸²à¸¢à¸‡à¸²à¸™à¸ªà¸´à¹ˆà¸‡à¸—à¸µà¹ˆà¸¢à¸±à¸‡à¹„à¸¡à¹ˆà¹„à¸”à¹‰à¸•à¸£à¸§à¸ˆà¸ˆà¸£à¸´à¸‡** à¸–à¹‰à¸²à¸•à¸£à¸§à¸ˆà¹„à¸¡à¹ˆà¹„à¸”à¹‰à¹ƒà¸«à¹‰à¹€à¸‚à¸µà¸¢à¸™à¸§à¹ˆà¸²à¸•à¸£à¸§à¸ˆà¹„à¸¡à¹ˆà¹„à¸”à¹‰à¹€à¸žà¸£à¸²à¸°à¸­à¸°à¹„à¸£
+5. à¸–à¹‰à¸²à¹„à¸¡à¹ˆà¹€à¸ˆà¸­à¸›à¸±à¸à¸«à¸²à¹ƒà¸™à¸«à¸±à¸§à¸‚à¹‰à¸­à¹„à¸«à¸™ à¹ƒà¸«à¹‰à¹€à¸‚à¸µà¸¢à¸™à¸§à¹ˆà¸² "à¸•à¸£à¸§à¸ˆà¹à¸¥à¹‰à¸§à¹„à¸¡à¹ˆà¸žà¸šà¸›à¸±à¸à¸«à¸²" à¸žà¸£à¹‰à¸­à¸¡à¸šà¸­à¸à¸§à¹ˆà¸²à¸•à¸£à¸§à¸ˆà¸­à¸°à¹„à¸£à¹„à¸›à¸šà¹‰à¸²à¸‡
+   **à¸­à¸¢à¹ˆà¸²à¹à¸•à¹ˆà¸‡à¸›à¸±à¸à¸«à¸²à¸‚à¸¶à¹‰à¸™à¸¡à¸²à¹€à¸žà¸·à¹ˆà¸­à¹ƒà¸«à¹‰à¸¡à¸µà¸­à¸°à¹„à¸£à¸£à¸²à¸¢à¸‡à¸²à¸™**
+6. à¹€à¸‚à¸µà¸¢à¸™à¸£à¸²à¸¢à¸‡à¸²à¸™à¹€à¸›à¹‡à¸™à¸ à¸²à¸©à¸²à¹„à¸—à¸¢ à¹ƒà¸Šà¹‰ `Â·` à¹à¸—à¸™ em-dash Â· à¹€à¸‚à¸µà¸¢à¸™à¹„à¸Ÿà¸¥à¹Œà¹€à¸›à¹‡à¸™ UTF-8 à¹€à¸—à¹ˆà¸²à¸™à¸±à¹‰à¸™
+
+## à¸šà¸£à¸´à¸šà¸—à¸—à¸µà¹ˆà¸•à¹‰à¸­à¸‡à¸£à¸¹à¹‰à¸à¹ˆà¸­à¸™à¸•à¸£à¸§à¸ˆ
+
+à¹€à¸§à¹‡à¸šà¸™à¸µà¹‰à¸•à¸±à¹‰à¸‡à¹ƒà¸ˆ **à¹à¸¢à¸à¸‚à¹‰à¸­à¹€à¸—à¹‡à¸ˆà¸ˆà¸£à¸´à¸‡à¸—à¸µà¹ˆà¸¢à¸·à¸™à¸¢à¸±à¸™à¹à¸¥à¹‰à¸§à¸­à¸­à¸à¸ˆà¸²à¸à¸—à¸µà¹ˆà¸¢à¸±à¸‡à¹„à¸¡à¹ˆà¸¢à¸·à¸™à¸¢à¸±à¸™** à¸­à¸¢à¹ˆà¸²à¸‡à¸Šà¸±à¸”à¹€à¸ˆà¸™
+à¸„à¸³à¸§à¹ˆà¸² "à¸¢à¸±à¸‡à¹„à¸¡à¹ˆà¸¢à¸·à¸™à¸¢à¸±à¸™" "à¸ªà¸±à¸™à¸™à¸´à¸©à¸à¸²à¸™" "à¹à¸«à¸¥à¹ˆà¸‡à¸‚à¸±à¸”à¸à¸±à¸™" à¸—à¸µà¹ˆà¹€à¸«à¹‡à¸™à¸šà¸™à¸«à¸™à¹‰à¸²à¹€à¸§à¹‡à¸š **à¹„à¸¡à¹ˆà¹ƒà¸Šà¹ˆà¸‚à¹‰à¸­à¸šà¸à¸žà¸£à¹ˆà¸­à¸‡**
+à¹à¸•à¹ˆà¹€à¸›à¹‡à¸™à¸ªà¸´à¹ˆà¸‡à¸—à¸µà¹ˆà¸•à¸±à¹‰à¸‡à¹ƒà¸ˆà¹ƒà¸ªà¹ˆ Â· à¸­à¸¢à¹ˆà¸²à¸£à¸²à¸¢à¸‡à¸²à¸™à¸§à¹ˆà¸²à¹€à¸›à¹‡à¸™à¸›à¸±à¸à¸«à¸²
+
+à¸—à¸³à¸™à¸­à¸‡à¹€à¸”à¸µà¸¢à¸§à¸à¸±à¸™ à¸Šà¸·à¹ˆà¸­à¸«à¸™à¹ˆà¸§à¸¢à¸‡à¸²à¸™à¸£à¸²à¸Šà¸à¸²à¸£à¹„à¸—à¸¢à¹ƒà¸™à¸«à¸™à¹‰à¸²à¸­à¸±à¸‡à¸à¸¤à¸©à¸—à¸µà¹ˆà¹€à¸‚à¸µà¸¢à¸™à¹€à¸›à¹‡à¸™
+`à¸ªà¸³à¸™à¸±à¸à¸‡à¸²à¸™à¸™à¹‚à¸¢à¸šà¸²à¸¢à¹à¸¥à¸°à¹à¸œà¸™... (Office of Natural Resources...)` **à¸•à¸±à¹‰à¸‡à¹ƒà¸ˆà¸„à¸‡à¸ à¸²à¸©à¸²à¹„à¸—à¸¢à¹„à¸§à¹‰**
+à¹€à¸žà¸·à¹ˆà¸­à¹ƒà¸«à¹‰à¸„à¸™à¸•à¸²à¸¡à¹„à¸›à¸«à¸²à¹€à¸­à¸à¸ªà¸²à¸£à¸•à¹‰à¸™à¸—à¸²à¸‡à¹„à¸”à¹‰ à¹„à¸¡à¹ˆà¹ƒà¸Šà¹ˆà¸„à¸³à¹à¸›à¸¥à¸•à¸à¸«à¸¥à¹ˆà¸™
+
+à¹„à¸Ÿà¸¥à¹Œà¸­à¹‰à¸²à¸‡à¸­à¸´à¸‡à¸ªà¸³à¸„à¸±à¸
+- `data/places-enriched.json` à¸‚à¹‰à¸­à¸¡à¸¹à¸¥à¸ªà¸–à¸²à¸™à¸—à¸µà¹ˆ 27 à¹à¸«à¹ˆà¸‡ à¸—à¸¸à¸ claim à¸¡à¸µ status à¹à¸¥à¸° source_url
+- `data/photo-registry.json` à¸—à¸°à¹€à¸šà¸µà¸¢à¸™à¸£à¸¹à¸› à¸à¸³à¸«à¸™à¸”à¸§à¹ˆà¸²à¸£à¸¹à¸›à¹„à¸«à¸™à¸‚à¸¶à¹‰à¸™à¸«à¸™à¹‰à¸²à¹„à¸«à¸™à¹„à¸”à¹‰
+- `data/stories/*.json` à¸šà¸—à¸„à¸§à¸²à¸¡ 5 à¸šà¸—
+- `data/guide-picks.json` à¸„à¸¹à¹ˆà¸¡à¸·à¸­à¸„à¸±à¸”à¸ªà¸£à¸£ 13 à¸£à¸²à¸¢à¸à¸²à¸£
+- `data/shops-extra.json` à¸£à¹‰à¸²à¸™à¸ˆà¸²à¸à¸à¸²à¸£à¸„à¹‰à¸™à¸«à¸² 49 à¸£à¹‰à¸²à¸™
+
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$reg=Get-Content -Raw -Encoding UTF8 data/photo-registry.json; $reg.Substring(0,[Math]::Min(5000,$reg.Length)); Write-Output "`n--- files ---"; rg --files site | Select-Object -First 20' in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 116ms:
+{
+  "policy_th": "รูปหนึ่งใบใช้ได้เฉพาะที่ที่มันเป็นภาพของสิ่งนั้นจริง · คำบรรยายมาจากรายการนี้เท่านั้น ห้ามเขียนใหม่ให้เข้ากับหัวข้อที่จะวาง · ถ้าไม่มีรูปที่ตรงเรื่อง ให้ใช้ภาพวาดของสถานที่นั้น หรือไม่ต้องมีรูป ห้ามหารูปกลาง ๆ มาถม",
+  "reviewed_on": "2026-09-07",
+  "photos": [
+    {
+      "file": "/assets/photos/tao-ming-school.jpg",
+      "depicts_th": "อาคารโรงเรียนเต้าหมิง ถ่ายจากด้านหน้าเต็มอาคาร",
+      "caption_th": "อาคารโรงเรียนเต้าหมิง ถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า",
+      "allowed_on": [
+        "tao-ming",
+        "architecture",
+        "kuapapoh"
+      ],
+      "era": "current",
+      "credit": "คลังภาพโครงการกั่วป่าโพ้",
+      "license": "ใช้ในเว็บนี้ได้",
+      "caption_en": "Tao Ming School seen from the front, on the old town culture street",
+      "credit_en": "Kuapapoh project archive",
+      "license_en": "Cleared for use on this site"
+    },
+    {
+      "file": "/assets/photos/tao-ming-logo.jpg",
+      "depicts_th": "ตราสัญลักษณ์ของโรงเรียนเต้าหมิง",
+      "caption_th": "ตราโรงเรียนเต้าหมิง",
+      "allowed_on": [
+        "tao-ming"
+      ],
+      "era": "archive",
+      "credit": "คลังภาพโครงการกั่วป่าโพ้",
+      "license": "ใช้ในเว็บนี้ได้",
+      "caption_en": "The Tao Ming School emblem",
+      "credit_en": "Kuapapoh project archive",
+      "license_en": "Cleared for use on this site"
+    },
+    {
+      "file": "/assets/photos/shophouse-78.webp",
+      "depicts_th": "ตึกแถวเลขที่ 78 บนถนนสายวัฒนธรรม",
+      "caption_th": "ตึกแถวเลขที่ 78 บนถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า",
+      "allowed_on": [
+        "architecture"
+      ],
+      "era": "current",
+      "credit": "คลังภาพโครงการกั่วป่าโพ้",
+      "license": "ใช้ในเว็บนี้ได้",
+      "caption_en": "Shophouse number 78 on the old town culture street",
+      "credit_en": "Kuapapoh project archive",
+      "license_en": "Cleared for use on this site"
+    },
+    {
+      "file": "/assets/photos/shophouse-109.webp",
+      "depicts_th": "ตึกแถวเลขที่ 109 บนถนนสายวัฒนธรรม",
+      "caption_th": "ตึกแถวเลขที่ 109 บนถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า",
+      "allowed_on": [
+        "kuapapoh"
+      ],
+      "era": "current",
+      "credit": "คลังภาพโครงการกั่วป่าโพ้",
+      "license": "ใช้ในเว็บนี้ได้",
+      "caption_en": "Shophouse number 109 on the old town culture street",
+      "credit_en": "Kuapapoh project archive",
+      "license_en": "Cleared for use on this site"
+    },
+    {
+      "file": "/assets/photos/shophouse-305.webp",
+      "depicts_th": "ตึกแถวเลขที่ 305 บนถนนสายวัฒนธรรม",
+      "caption_th": "ตึกแถวเลขที่ 305 บนถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า",
+      "allowed_on": [
+        "culture-street"
+      ],
+      "era": "current",
+      "credit": "คลังภาพโครงการกั่วป่าโพ้",
+      "license": "ใช้ในเว็บนี้ได้",
+      "caption_en": "Shophouse number 305 on the old town culture street",
+      "credit_en": "Kuapapoh project archive",
+      "license_en": "Cleared for use on this site"
+    },
+    {
+      "file": "/assets/photos/kuapapoh-port.webp",
+      "depicts_th": "ภาพเก่าขาวดำ เรือหลายลำจอดที่ท่าน้ำ มีเรือใบและเพิงริมน้ำ",
+      "caption_th": "ภาพเก่า เรือจอดที่ท่าน้ำตะกั่วป่า",
+      "allowed_on": [
+        "riverwalk",
+        "water-trade"
+      ],
+      "era": "archive",
+      "credit": "คลังภาพโครงการกั่วป่าโพ้",
+      "license": "ใช้ในเว็บนี้ได้",
+      "note_th": "เป็นภาพสแกนขนาดเล็กและมีกรอบสีแดงติดมาด้วย ไม่เหมาะใช้เป็นภาพเปิดขนาดใหญ่",
+      "caption_en": "Archive photograph: boats moored at the Takua Pa landing",
+      "credit_en": "Kuapapoh project archive",
+      "license_en": "Cleared for use on this site"
+    },
+    {
+      "file": "/assets/photos/kuapapoh-brand.jpg",
+      "depicts_th": "งานออกแบบแบรนด์กั่วป่าโพ้",
+      "caption_th": "กั่วป่าโพ้ · แบรนด์ของโครงการเมืองเก่าตะกั่วป่า",
+      "allowed_on": [
+        "kuapapoh"
+      ],
+      "era": "current",
+      "credit": "โครงการกั่วป่าโพ้",
+      "license": "ใช้ในเว็บนี้ได้",
+      "caption_en": "Kuapapoh, the identity of the old town project",
+      "credit_en": "Kuapapoh project",
+      "license_en": "Cleared for use on this site"
+    },
+    {
+      "file": "/assets/photos/kuapapoh-history.jpg",
+      "depicts_th": "แผ่นเอกสารเล่าประวัติที่โครงการกั่วป่าโพ้จัดทำ",
+      "caption_th": "แผ่นเล่าประวัติเมือง จัดทำโดยโครงการกั่วป่าโพ้",
+      "allowed_on": [
+        "kuapapoh"
+      ],
+      "era": "current",
+      "credit": "โครงการกั่วป่าโพ้",
+      "license": "ใช้ในเว็บนี้ได้",
+      "caption_en": "A history sheet produced by the Kuapapoh project",
+      "credit_en": "Kuapapoh project",
+      "license_en": "Cleared for use on this site"
+    },
+    {
+      "file": "/assets/photos/kuapapoh-wuikun.jpg",
+      "depicts_th": "งานออกแบบชุดหวุ่ยกุ่นของโครงการ",
+      "caption_th": "หวุ่ยกุ่น · งานออกแบบของโครงการกั่วป่าโพ้",
+      "allowed_on": [
+        "kuapapoh"
+      ],
+      "era": "current",
+      "credit": "โครงการกั่วป่าโพ้",
+      
+
+--- files ---
+site\trip\index.html
+site\traditions\vegetarian\index.html
+site\traditions\ruler-ceremony\index.html
+site\traditions\relic-procession\index.html
+site\traditions\new-year-alms\index.html
+site\traditions\narai-ceremony\index.html
+site\traditions\loy-krathong\index.html
+site\traditions\index.html
+site\traditions\chak-phra\index.html
+site\stories\water-trade\index.html
+site\stories\kuapapoh\index.html
+site\stories\index.html
+site\stories\food-people\index.html
+site\stories\city\index.html
+site\stories\architecture\index.html
+site\sitemap.xml
+site\routes\index.html
+site\robots.txt
+site\rest\index.html
+site\places\wat-sena\index.html
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import json,re,html
+from pathlib import Path
+reg=json.loads(Path('data/photo-registry.json').read_text(encoding='utf-8'))['photos']
+by={p['file']:p for p in reg}
+rows=[]
+for f in sorted(Path('site').rglob('*.html')):
+    rel=f.relative_to('site').as_posix()
+    if rel.startswith('en/') : continue
+    slug='home' if rel=='index.html' else rel.rsplit('/',2)[-2] if rel.endswith('/index.html') else rel
+    s=f.read_text(encoding='utf-8',errors='replace')
+    for m in re.finditer(r'<img\\b["'^>]*>'"',s,re.I):
+        tag=m.group(); sm=re.search(r'\\bsrc=[\"\\'](["'^"'"\\']+)',tag,re.I); am=re.search(r'\\balt=[\"\\'](["'^"'"\\']*)',tag,re.I)
+        src=sm.group(1) if sm else ''
+        cap=am.group(1) if am else ''
+        # nearby figcaption or data-caption
+        tail=s[m.end():m.end()+800]; fm=re.search(r'<figcaption["'^>]*>(.*?)</figcaption>'"',tail,re.I|re.S)
+        if fm: cap=re.sub('<["'^>]+>'"','',fm.group(1)).strip()
+        p=by.get(src)
+        rows.append((rel,slug,src,html.unescape(cap),p['allowed_on'] if p else None,p['caption_th'] if p else None))
+print('IMG_COUNT',len(rows))
+for x in rows: print('\\t'.join(map(str,x)))
+print('--- UNKNOWN/OUTSIDE ---')
+for x in rows:
+ if x[4] is None or x[1] not in x[4]: print('\\t'.join(map(str,x)))
+print('--- CAP_MISMATCH ---')
+for x in rows:
+ if x[5] is not None and x[3]"'!=x[5]: print('"'\\t'.join(map(str,x)))
+print('--- COUNTS ---')
+from collections import Counter
+for src,n in Counter(x[2] for x in rows).items():
+ if n>3: print(n,src)
+'@ | python -" in D:\Siwaracafeweb\output\web\takuapa101-v1
+ exited 1 in 111ms:
+IMG_COUNT 158
+Traceback (most recent call last):
+  File "<stdin>", line 21, in <module>
+  File "C:\Users\siwat\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 51-82: character maps to <undefined>
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$env:PYTHONIOENCODING='"'utf-8'; @'
+import json,re,html
+from pathlib import Path
+reg=json.loads(Path('data/photo-registry.json').read_text(encoding='utf-8'))['photos']; by={p['file']:p for p in reg}; rows=[]
+for f in sorted(Path('site').rglob('*.html')):
+ rel=f.relative_to('site').as_posix()
+ if rel.startswith('en/'): continue
+ slug='home' if rel=='index.html' else rel.rsplit('/',2)[-2] if rel.endswith('/index.html') else rel
+ s=f.read_text(encoding='utf-8',errors='replace')
+ for m in re.finditer(r'<img\\b["'^>]*>'"',s,re.I):
+  tag=m.group(); sm=re.search(r'\\bsrc=[\"\\'](["'^"'"\\']+)',tag,re.I); am=re.search(r'\\balt=[\"\\'](["'^"'"\\']*)',tag,re.I); src=sm.group(1) if sm else ''; cap=am.group(1) if am else ''
+  tail=s[m.end():m.end()+800]; fm=re.search(r'<figcaption["'^>]*>(.*?)</figcaption>'"',tail,re.I|re.S)
+  if fm: cap=re.sub('<["'^>]+>'"','',fm.group(1)).strip()
+  p=by.get(src); rows.append((rel,slug,src,html.unescape(cap),p['allowed_on'] if p else None,p['caption_th'] if p else None))
+print('IMG_COUNT',len(rows))
+print('--- UNKNOWN/OUTSIDE ---')
+for x in rows:
+ if x[4] is None or x[1] not in x[4]: print('\\t'.join(map(str,x)))
+print('--- CAP_MISMATCH ---')
+for x in rows:
+ if x[5] is not None and x[3]"'!=x[5]: print('"'\\t'.join(map(str,x)))
+print('--- COUNTS >3 ---')
+from collections import Counter
+for src,n in Counter(x[2] for x in rows).items():
+ if n>3: print(n,src)
+'@ | python -" in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 107ms:
+IMG_COUNT 158
+--- UNKNOWN/OUTSIDE ---
+about/index.html	about	/assets/culture-street.webp	ถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า	None	None
+eat/index.html	eat	/assets/food-center.webp	ศูนย์อาหารลานโล่งตะกั่วป่า	None	None
+index.html	home	/assets/tao-ming.webp	โรงเรียนเต้าหมิง	None	None
+index.html	home	/assets/guan-yu.webp	ศาลเจ้าพ่อกวนอู ซิ่นไช่ตึ๋ง	None	None
+index.html	home	/assets/khun-in.webp	บ้านขุนอินทร์	None	None
+index.html	home	/assets/wat-boromthat.webp	วัดบรมธาตุคีรีเขต (วัดลุ่ม)	None	None
+index.html	home	/assets/guan-yu.webp	ศาลเจ้าพ่อกวนอู ซิ่นไช่ตึ๋ง	None	None
+index.html	home	/assets/tao-ming.webp	โรงเรียนเต้าหมิง	None	None
+index.html	home	/assets/khun-in.webp	บ้านขุนอินทร์	None	None
+index.html	home	/assets/riverwalk.webp		None	None
+index.html	home	/assets/culture-street.webp		None	None
+index.html	home	/assets/iron-bridge.webp		None	None
+index.html	home	/assets/food-center.webp		None	None
+index.html	home	/assets/tao-ming.webp		None	None
+index.html	home	/assets/municipal-map.png	แผนที่ท่องเที่ยวเมืองตะกั่วป่าจากเทศบาล	None	None
+index.html	home	/assets/wat-boromthat.webp	วัดบรมธาตุคีรีเขต (วัดลุ่ม)	None	None
+index.html	home	/assets/wat-khuha.webp	วัดคุหาภิมุข (วัดควนถ้ำ)	None	None
+index.html	home	/assets/wat-pathum.webp	วัดปทุมธารา (วัดหน้าเมือง)	None	None
+index.html	home	/assets/wat-kongkha.webp	วัดคงคาภิมุข (วัดคงคา)	None	None
+index.html	home	/assets/wat-nikorn.webp	วัดนิกรวราราม (วัดย่านยาว)	None	None
+index.html	home	/assets/wat-sena.webp	วัดเสนานุชรังสรรค์ (วัดใหม่)	None	None
+index.html	home	/assets/guan-yu.webp	ศาลเจ้าพ่อกวนอู ซิ่นไช่ตึ๋ง	None	None
+index.html	home	/assets/pun-thao.webp	ศาลเจ้าปุนเถ่ากงอ๊า	None	None
+index.html	home	/assets/kue-chai.webp	ศาลเจ้ากู่ใช่ตึ๋ง	None	None
+index.html	home	/assets/rong-jae.webp	โรงเจในสวน	None	None
+index.html	home	/assets/iron-bridge.webp	สะพานเหล็กบุญสูง	None	None
+index.html	home	/assets/governor-wall.webp	กำแพงจวนเจ้าเมืองตะกั่วป่า	None	None
+index.html	home	/assets/khun-in.webp	บ้านขุนอินทร์	None	None
+index.html	home	/assets/tao-ming.webp	โรงเรียนเต้าหมิง	None	None
+index.html	home	/assets/phra-narai.webp	สวนสาธารณะพระนารายณ์	None	None
+index.html	home	/assets/thung-phra.webp	สวนสาธารณะทุ่งพระโพธิ์	None	None
+index.html	home	/assets/riverwalk.webp	ตลาดริมน้ำตะกั่วป่า	None	None
+index.html	home	/assets/culture-street.webp	ถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า	None	None
+index.html	home	/assets/food-center.webp	ศูนย์อาหารลานโล่งตะกั่วป่า	None	None
+index.html	home	/assets/museum.webp	พิพิธภัณฑ์เสนานุชรังสรรค์ชุมชนตะกั่วป่า	None	None
+index.html	home	/assets/food-center.webp	ศูนย์อาหารลานโล่งตะกั่วป่า	None	None
+leaflet/index.html	leaflet	/assets/leaflet/leaflet-page-1.webp	หน้าแรก	None	None
+leaflet/index.html	leaflet	/assets/leaflet/leaflet-page-2.webp	หน้าสอง	None	None
+map/index.html	map	/assets/municipal-map.png	แผนที่ท่องเที่ยวตะกั่วป่าจากเทศบาล แสดงย่านยาว เมืองเก่า ถนน สถานที่ และหมายเลขร้าน	None	None
+places/food-center/index.html	food-center	/assets/food-center.webp	ศูนย์อาหารลานโล่งตะกั่วป่า	None	None
+places/governor-wall/index.html	governor-wall	/assets/governor-wall.webp	กำแพงจวนเจ้าเมืองตะกั่วป่า	None	None
+places/guan-yu/index.html	guan-yu	/assets/guan-yu.webp	ศาลเจ้าพ่อกวนอู ซิ่นไช่ตึ๋ง	None	None
+places/index.html	places	/assets/wat-boromthat.webp	วัดบรมธาตุคีรีเขต (วัดลุ่ม)	None	None
+places/index.html	places	/assets/wat-khuha.webp	วัดคุหาภิมุข (วัดควนถ้ำ)	None	None
+places/index.html	places	/assets/wat-pathum.webp	วัดปทุมธารา (วัดหน้าเมือง)	None	None
+places/index.html	places	/assets/wat-kongkha.webp	วัดคงคาภิมุข (วัดคงคา)	None	None
+places/index.html	places	/assets/wat-nikorn.webp	วัดนิกรวราราม (วัดย่านยาว)	None	None
+places/index.html	places	/assets/wat-sena.webp	วัดเสนานุชรังสรรค์ (วัดใหม่)	None	None
+places/index.html	places	/assets/guan-yu.webp	ศาลเจ้าพ่อกวนอู ซิ่นไช่ตึ๋ง	None	None
+places/index.html	places	/assets/pun-thao.webp	ศาลเจ้าปุนเถ่ากงอ๊า	None	None
+places/index.html	places	/assets/kue-chai.webp	ศาลเจ้ากู่ใช่ตึ๋ง	None	None
+places/index.html	places	/assets/rong-jae.webp	โรงเจในสวน	None	None
+places/index.html	places	/assets/iron-bridge.webp	สะพานเหล็กบุญสูง	None	None
+places/index.html	places	/assets/governor-wall.webp	กำแพงจวนเจ้าเมืองตะกั่วป่า	None	None
+places/index.html	places	/assets/khun-in.webp	บ้านขุนอินทร์	None	None
+places/index.html	places	/assets/tao-ming.webp	โรงเรียนเต้าหมิง	None	None
+places/index.html	places	/assets/phra-narai.webp	สวนสาธารณะพระนารายณ์	None	None
+places/index.html	places	/assets/thung-phra.webp	สวนสาธารณะทุ่งพระโพธิ์	None	None
+places/index.html	places	/assets/riverwalk.webp	ตลาดริมน้ำตะกั่วป่า	None	None
+places/index.html	places	/assets/culture-street.webp	ถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า	None	None
+places/index.html	places	/assets/food-center.webp	ศูนย์อาหารลานโล่งตะกั่วป่า	None	None
+places/index.html	places	/assets/museum.webp	พิพิธภัณฑ์เสนานุชรังสรรค์ชุมชนตะกั่วป่า	None	None
+places/iron-bridge/index.html	iron-bridge	/assets/iron-bridge.webp	สะพานเหล็กบุญสูง	None	None
+places/khun-in/index.html	khun-in	/assets/khun-in.webp	บ้านขุนอินทร์	None	None
+places/kue-chai/index.html	kue-chai	/assets/kue-chai.webp	ศาลเจ้ากู่ใช่ตึ๋ง	None	None
+places/museum/index.html	museum	/assets/museum.webp	พิพิธภัณฑ์เสนานุชรังสรรค์ชุมชนตะกั่วป่า	None	None
+places/phra-narai/index.html	phra-narai	/assets/phra-narai.webp	สวนสาธารณะพระนารายณ์	None	None
+places/pun-thao/index.html	pun-thao	/assets/pun-thao.webp	ศาลเจ้าปุนเถ่ากงอ๊า	None	None
+places/rong-jae/index.html	rong-jae	/assets/rong-jae.webp	โรงเจในสวน	None	None
+places/thung-phra/index.html	thung-phra	/assets/thung-phra.webp	สวนสาธารณะทุ่งพระโพธิ์	None	None
+places/wat-boromthat/index.html	wat-boromthat	/assets/wat-boromthat.webp	วัดบรมธาตุคีรีเขต (วัดลุ่ม)	None	None
+places/wat-khuha/index.html	wat-khuha	/assets/wat-khuha.webp	วัดคุหาภิมุข (วัดควนถ้ำ)	None	None
+places/wat-kongkha/index.html	wat-kongkha	/assets/wat-kongkha.webp	วัดคงคาภิมุข (วัดคงคา)	None	None
+places/wat-nikorn/index.html	wat-nikorn	/assets/wat-nikorn.webp	วัดนิกรวราราม (วัดย่านยาว)	None	None
+places/wat-pathum/index.html	wat-pathum	/assets/wat-pathum.webp	วัดปทุมธารา (วัดหน้าเมือง)	None	None
+places/wat-sena/index.html	wat-sena	/assets/wat-sena.webp	วัดเสนานุชรังสรรค์ (วัดใหม่)	None	None
+rest/index.html	rest	/assets/guide/guide-baan-lapp.webp	BAAN LAPP บ้านลัพพ์ (โฮมมี่ & สเต๊ก ตะกั่วป่า)	None	None
+rest/index.html	rest	/assets/guide/guide-moo-satay-kruaew.webp	ขนมจีนหมูสะเต๊ะครูแอ๋ว (ทุ่งพระโพธิ์)	None	None
+rest/index.html	rest	/assets/guide/guide-mee-talad-khwang.webp	บะหมี่พังงา ตลาดขวาง	None	None
+rest/index.html	rest	/assets/guide/guide-pa-da-hokkien.webp	ป้าดา หมี่ฮกเกี้ยน (ถนนศรีตะกั่วป่า)	None	None
+rest/index.html	rest	/assets/guide/guide-bang-deen.webp	ร้านบังดีน ข้าวหมกไก่ & โรตีแกง (Michelin Guide)	None	None
+rest/index.html	rest	/assets/guide/guide-pu-dam.webp	ร้านปูดำ (บางนายสี)	None	None
+rest/index.html	rest	/assets/guide/guide-kae-padthai.webp	เก๋ ผัดไทย (ตลาดเก่าตะกั่วป่า)	None	None
+rest/index.html	rest	/assets/guide/guide-jae-ouan.webp	เจ๊อ้วน ทะเลสด (บ้านน้ำเค็ม)	None	None
+rest/index.html	rest	/assets/guide/guide-old-town-street.webp	ถนนวัฒนธรรมศรีตะกั่วป่า & สตรีทอาร์ตตึกโบราณ	None	None
+rest/index.html	rest	/assets/guide/guide-tam-nang.webp	น้ำตกตำหนัง (อุทยานแห่งชาติศรีพังงา)	None	None
+rest/index.html	rest	/assets/guide/guide-iron-bridge.webp	สะพานเหล็กบุญสูง (สะพานโคกขนุน)	None	None
+rest/index.html	rest	/assets/guide/guide-lad-yai.webp	หลาดใหญ่ ถนนคนเดินสายวัฒนธรรมเมืองเก่า	None	None
+rest/index.html	rest	/assets/guide/guide-tuangrat-taosor.webp	เต้าส้อตวงรัตน์ (ต้นตำรับ 100 ปี)	None	None
+rest/index.html	rest	/assets/leaflet/leaflet-page-1.webp	แผ่นพับเดินเมืองเก่าตะกั่วป่า หน้าแรก	None	None
+rest/index.html	rest	/assets/khun-in.webp	บ้านขุนอินทร์	None	None
+rest/index.html	rest	/assets/tao-ming.webp	โรงเรียนเต้าหมิง	None	None
+rest/index.html	rest	/assets/guan-yu.webp	ศาลเจ้าพ่อกวนอู ซิ่นไช่ตึ๋ง	None	None
+rest/index.html	rest	/assets/iron-bridge.webp	สะพานเหล็กบุญสูง	None	None
+routes/index.html	routes	/assets/wat-boromthat.webp	วัดบรมธาตุคีรีเขต (วัดลุ่ม)	None	None
+routes/index.html	routes	/assets/guan-yu.webp	ศาลเจ้าพ่อกวนอู ซิ่นไช่ตึ๋ง	None	None
+routes/index.html	routes	/assets/tao-ming.webp	โรงเรียนเต้าหมิง	None	None
+routes/index.html	routes	/assets/khun-in.webp	บ้านขุนอินทร์	None	None
+stories/architecture/index.html	architecture	/assets/culture-street.webp	ถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่าภาพวาดประกอบ	None	None
+stories/architecture/index.html	architecture	/assets/governor-wall.webp	กำแพงจวนเจ้าเมืองตะกั่วป่าภาพวาดประกอบ	None	None
+stories/architecture/index.html	architecture	/assets/iron-bridge.webp	สะพานเหล็กบุญสูงภาพวาดประกอบ	None	None
+stories/architecture/index.html	architecture	/assets/khun-in.webp	บ้านขุนอินทร์ภาพวาดประกอบ	None	None
+stories/city/index.html	city	/assets/riverwalk.webp	ตลาดริมน้ำตะกั่วป่าภาพวาดประกอบ · ยังไม่มีภาพถ่ายที่ได้รับอนุญาตของเรื่องนี้	None	None
+stories/city/index.html	city	/assets/wat-kongkha.webp	วัดคงคาภิมุข (วัดคงคา)ภาพวาดประกอบ	None	None
+stories/city/index.html	city	/assets/governor-wall.webp	กำแพงจวนเจ้าเมืองตะกั่วป่าภาพวาดประกอบ	None	None
+stories/food-people/index.html	food-people	/assets/food-center.webp	ศูนย์อาหารลานโล่งตะกั่วป่าภาพวาดประกอบ · ยังไม่มีภาพถ่ายที่ได้รับอนุญาตของเรื่องนี้	None	None
+stories/food-people/index.html	food-people	/assets/culture-street.webp	ถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่าภาพวาดประกอบ	None	None
+stories/index.html	stories	/assets/riverwalk.webp		None	None
+stories/index.html	stories	/assets/culture-street.webp		None	None
+stories/index.html	stories	/assets/iron-bridge.webp		None	None
+stories/index.html	stories	/assets/food-center.webp		None	None
+stories/index.html	stories	/assets/tao-ming.webp		None	None
+stories/kuapapoh/index.html	kuapapoh	/assets/tao-ming.webp	โรงเรียนเต้าหมิงภาพวาดประกอบ	None	None
+stories/kuapapoh/index.html	kuapapoh	/assets/culture-street.webp	ถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่าภาพวาดประกอบ	None	None
+stories/water-trade/index.html	water-trade	/assets/riverwalk.webp	ตลาดริมน้ำตะกั่วป่าภาพวาดประกอบ	None	None
+stories/water-trade/index.html	water-trade	/assets/iron-bridge.webp	สะพานเหล็กบุญสูงภาพวาดประกอบ	None	None
+stories/water-trade/index.html	water-trade	/assets/wat-pathum.webp	วัดปทุมธารา (วัดหน้าเมือง)ภาพวาดประกอบ	None	None
+stories/water-trade/index.html	water-trade	/assets/thung-phra.webp	สวนสาธารณะทุ่งพระโพธิ์ภาพวาดประกอบ	None	None
+traditions/chak-phra/index.html	chak-phra	/assets/wat-boromthat.webp	วัดบรมธาตุคีรีเขต (วัดลุ่ม)	None	None
+traditions/chak-phra/index.html	chak-phra	/assets/wat-khuha.webp	วัดคุหาภิมุข (วัดควนถ้ำ)	None	None
+traditions/chak-phra/index.html	chak-phra	/assets/wat-pathum.webp	วัดปทุมธารา (วัดหน้าเมือง)	None	None
+traditions/chak-phra/index.html	chak-phra	/assets/wat-kongkha.webp	วัดคงคาภิมุข (วัดคงคา)	None	None
+traditions/chak-phra/index.html	chak-phra	/assets/wat-nikorn.webp	วัดนิกรวราราม (วัดย่านยาว)	None	None
+traditions/chak-phra/index.html	chak-phra	/assets/wat-sena.webp	วัดเสนานุชรังสรรค์ (วัดใหม่)	None	None
+traditions/loy-krathong/index.html	loy-krathong	/assets/riverwalk.webp	ตลาดริมน้ำตะกั่วป่า	None	None
+traditions/narai-ceremony/index.html	narai-ceremony	/assets/phra-narai.webp	สวนสาธารณะพระนารายณ์	None	None
+traditions/relic-procession/index.html	relic-procession	/assets/wat-boromthat.webp	วัดบรมธาตุคีรีเขต (วัดลุ่ม)	None	None
+traditions/ruler-ceremony/index.html	ruler-ceremony	/assets/governor-wall.webp	กำแพงจวนเจ้าเมืองตะกั่วป่า	None	None
+traditions/vegetarian/index.html	vegetarian	/assets/guan-yu.webp	ศาลเจ้าพ่อกวนอู ซิ่นไช่ตึ๋ง	None	None
+traditions/vegetarian/index.html	vegetarian	/assets/pun-thao.webp	ศาลเจ้าปุนเถ่ากงอ๊า	None	None
+traditions/vegetarian/index.html	vegetarian	/assets/kue-chai.webp	ศาลเจ้ากู่ใช่ตึ๋ง	None	None
+traditions/vegetarian/index.html	vegetarian	/assets/rong-jae.webp	โรงเจในสวน	None	None
+--- CAP_MISMATCH ---
+places/culture-street/index.html	culture-street	/assets/photos/shophouse-305.webp	ตึกแถวเลขที่ 305 บนถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่าเครดิต · คลังภาพโครงการกั่วป่าโพ้สัญญาอนุญาต · ใช้ในเว็บนี้ได้	['culture-street']	ตึกแถวเลขที่ 305 บนถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า
+places/culture-street/index.html	culture-street	/assets/photos/shophouse-305.webp	ตึกแถวเลขที่ 305 บนถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่าเครดิต · คลังภาพโครงการกั่วป่าโพ้สัญญาอนุญาต · ใช้ในเว็บนี้ได้	['culture-street']	ตึกแถวเลขที่ 305 บนถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า
+places/culture-street/index.html	culture-street	/assets/photos/shophouse-305.webp	ตึกแถวเลขที่ 305 บนถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่าเครดิต · คลังภาพโครงการกั่วป่าโพ้สัญญาอนุญาต · ใช้ในเว็บนี้ได้	['culture-street']	ตึกแถวเลขที่ 305 บนถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า
+places/riverwalk/index.html	riverwalk	/assets/photos/kuapapoh-port.webp	ภาพเก่า เรือจอดที่ท่าน้ำตะกั่วป่าเครดิต · คลังภาพโครงการกั่วป่าโพ้สัญญาอนุญาต · ใช้ในเว็บนี้ได้	['riverwalk', 'water-trade']	ภาพเก่า เรือจอดที่ท่าน้ำตะกั่วป่า
+places/riverwalk/index.html	riverwalk	/assets/photos/kuapapoh-port.webp	ภาพเก่า เรือจอดที่ท่าน้ำตะกั่วป่าเครดิต · คลังภาพโครงการกั่วป่าโพ้สัญญาอนุญาต · ใช้ในเว็บนี้ได้	['riverwalk', 'water-trade']	ภาพเก่า เรือจอดที่ท่าน้ำตะกั่วป่า
+places/riverwalk/index.html	riverwalk	/assets/photos/kuapapoh-port.webp	ภาพเก่า เรือจอดที่ท่าน้ำตะกั่วป่าเครดิต · คลังภาพโครงการกั่วป่าโพ้สัญญาอนุญาต · ใช้ในเว็บนี้ได้	['riverwalk', 'water-trade']	ภาพเก่า เรือจอดที่ท่าน้ำตะกั่วป่า
+places/riverwalk/index.html	riverwalk	/assets/photos/kuapapoh-port.webp	ภาพเก่า เรือจอดที่ท่าน้ำตะกั่วป่าเครดิต · คลังภาพโครงการกั่วป่าโพ้สัญญาอนุญาต · ใช้ในเว็บนี้ได้	['riverwalk', 'water-trade']	ภาพเก่า เรือจอดที่ท่าน้ำตะกั่วป่า
+places/tao-ming/index.html	tao-ming	/assets/photos/tao-ming-school.jpg	อาคารโรงเรียนเต้าหมิง ถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่าเครดิต · คลังภาพโครงการกั่วป่าโพ้สัญญาอนุญาต · ใช้ในเว็บนี้ได้	['tao-ming', 'architecture', 'kuapapoh']	อาคารโรงเรียนเต้าหมิง ถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า
+places/tao-ming/index.html	tao-ming	/assets/photos/tao-ming-logo.jpg	ตราโรงเรียนเต้าหมิงเครดิต · คลังภาพโครงการกั่วป่าโพ้สัญญาอนุญาต · ใช้ในเว็บนี้ได้	['tao-ming']	ตราโรงเรียนเต้าหมิง
+places/tao-ming/index.html	tao-ming	/assets/photos/tao-ming-logo.jpg	ตราโรงเรียนเต้าหมิงเครดิต · คลังภาพโครงการกั่วป่าโพ้สัญญาอนุญาต · ใช้ในเว็บนี้ได้	['tao-ming']	ตราโรงเรียนเต้าหมิง
+places/tao-ming/index.html	tao-ming	/assets/photos/tao-ming-school.jpg	อาคารโรงเรียนเต้าหมิง ถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่าเครดิต · คลังภาพโครงการกั่วป่าโพ้สัญญาอนุญาต · ใช้ในเว็บนี้ได้	['tao-ming', 'architecture', 'kuapapoh']	อาคารโรงเรียนเต้าหมิง ถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า
+places/tao-ming/index.html	tao-ming	/assets/photos/tao-ming-school.jpg	อาคารโรงเรียนเต้าหมิง ถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่าเครดิต · คลังภาพโครงการกั่วป่าโพ้สัญญาอนุญาต · ใช้ในเว็บนี้ได้	['tao-ming', 'architecture', 'kuapapoh']	อาคารโรงเรียนเต้าหมิง ถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า
+places/tao-ming/index.html	tao-ming	/assets/photos/tao-ming-logo.jpg	ตราโรงเรียนเต้าหมิงเครดิต · คลังภาพโครงการกั่วป่าโพ้สัญญาอนุญาต · ใช้ในเว็บนี้ได้	['tao-ming']	ตราโรงเรียนเต้าหมิง
+stories/architecture/index.html	architecture	/assets/photos/tao-ming-school.jpg	อาคารโรงเรียนเต้าหมิง ถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่าคลังภาพโครงการกั่วป่าโพ้	['tao-ming', 'architecture', 'kuapapoh']	อาคารโรงเรียนเต้าหมิง ถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า
+stories/architecture/index.html	architecture	/assets/photos/shophouse-78.webp	ตึกแถวเลขที่ 78 บนถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่าคลังภาพโครงการกั่วป่าโพ้	['architecture']	ตึกแถวเลขที่ 78 บนถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า
+stories/kuapapoh/index.html	kuapapoh	/assets/photos/kuapapoh-brand.jpg	กั่วป่าโพ้ · แบรนด์ของโครงการเมืองเก่าตะกั่วป่าโครงการกั่วป่าโพ้	['kuapapoh']	กั่วป่าโพ้ · แบรนด์ของโครงการเมืองเก่าตะกั่วป่า
+stories/kuapapoh/index.html	kuapapoh	/assets/photos/shophouse-109.webp	ตึกแถวเลขที่ 109 บนถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่าคลังภาพโครงการกั่วป่าโพ้	['kuapapoh']	ตึกแถวเลขที่ 109 บนถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า
+stories/kuapapoh/index.html	kuapapoh	/assets/photos/tao-ming-school.jpg	อาคารโรงเรียนเต้าหมิง ถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่าคลังภาพโครงการกั่วป่าโพ้	['tao-ming', 'architecture', 'kuapapoh']	อาคารโรงเรียนเต้าหมิง ถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า
+stories/kuapapoh/index.html	kuapapoh	/assets/photos/kuapapoh-pattern.jpg	ลายกระเบื้องเปอรานากันที่ยังเห็นได้ในเมืองเก่าโครงการกั่วป่าโพ้	['kuapapoh', 'architecture']	ลายกระเบื้องเปอรานากันที่ยังเห็นได้ในเมืองเก่า
+stories/kuapapoh/index.html	kuapapoh	/assets/photos/kuapapoh-brand.jpg	กั่วป่าโพ้ แบรนด์เมืองเก่าตะกั่วป่าเครดิต · กั่วป่าโพ้ / คลังภาพโครงการเมืองเก่าตะกั่วป่าสัญญาอนุญาต · ภาพจากคลังของโครงการ ใช้ในเว็บนี้ได้	['kuapapoh']	กั่วป่าโพ้ · แบรนด์ของโครงการเมืองเก่าตะกั่วป่า
+stories/kuapapoh/index.html	kuapapoh	/assets/photos/kuapapoh-pattern.jpg	ลายกระเบื้องเปอรานากันเมืองเก่าเครดิต · กั่วป่าโพ้ / คลังภาพโครงการเมืองเก่าตะกั่วป่าสัญญาอนุญาต · ภาพจากคลังของโครงการ ใช้ในเว็บนี้ได้	['kuapapoh', 'architecture']	ลายกระเบื้องเปอรานากันที่ยังเห็นได้ในเมืองเก่า
+stories/kuapapoh/index.html	kuapapoh	/assets/photos/kuapapoh-history.jpg	แผ่นเล่าประวัติกั่วป่าโพ้เครดิต · กั่วป่าโพ้ / คลังภาพโครงการเมืองเก่าตะกั่วป่าสัญญาอนุญาต · ภาพจากคลังของโครงการ ใช้ในเว็บนี้ได้	['kuapapoh']	แผ่นเล่าประวัติเมือง จัดทำโดยโครงการกั่วป่าโพ้
+stories/kuapapoh/index.html	kuapapoh	/assets/photos/kuapapoh-wuikun.jpg	หวุ่ยกุ่นเครดิต · กั่วป่าโพ้ / คลังภาพโครงการเมืองเก่าตะกั่วป่าสัญญาอนุญาต · ภาพจากคลังของโครงการ ใช้ในเว็บนี้ได้	['kuapapoh']	หวุ่ยกุ่น · งานออกแบบของโครงการกั่วป่าโพ้
+stories/kuapapoh/index.html	kuapapoh	/assets/photos/kuapapoh-doc-1.jpg	เอกสารเก่าเมืองตะกั่วป่า 1เครดิต · กั่วป่าโพ้ / คลังภาพโครงการเมืองเก่าตะกั่วป่าสัญญาอนุญาต · ภาพจากคลังของโครงการ ใช้ในเว็บนี้ได้	['kuapapoh']	เอกสารเก่าของเมือง จากคลังโครงการกั่วป่าโพ้
+stories/kuapapoh/index.html	kuapapoh	/assets/photos/kuapapoh-doc-2.jpg	เอกสารเก่าเมืองตะกั่วป่า 2เครดิต · กั่วป่าโพ้ / คลังภาพโครงการเมืองเก่าตะกั่วป่าสัญญาอนุญาต · ภาพจากคลังของโครงการ ใช้ในเว็บนี้ได้	['kuapapoh']	เอกสารเก่าของเมือง จากคลังโครงการกั่วป่าโพ้
+stories/water-trade/index.html	water-trade	/assets/photos/kuapapoh-port.webp	ภาพเก่า เรือจอดที่ท่าน้ำตะกั่วป่าคลังภาพโครงการกั่วป่าโพ้	['riverwalk', 'water-trade']	ภาพเก่า เรือจอดที่ท่าน้ำตะกั่วป่า
+--- COUNTS >3 ---
+8 /assets/culture-street.webp
+8 /assets/food-center.webp
+9 /assets/tao-ming.webp
+8 /assets/guan-yu.webp
+8 /assets/khun-in.webp
+7 /assets/wat-boromthat.webp
+7 /assets/riverwalk.webp
+8 /assets/iron-bridge.webp
+4 /assets/wat-khuha.webp
+5 /assets/wat-pathum.webp
+5 /assets/wat-kongkha.webp
+4 /assets/wat-nikorn.webp
+4 /assets/wat-sena.webp
+4 /assets/pun-thao.webp
+4 /assets/kue-chai.webp
+4 /assets/rong-jae.webp
+6 /assets/governor-wall.webp
+4 /assets/phra-narai.webp
+4 /assets/thung-phra.webp
+5 /assets/photos/kuapapoh-port.webp
+5 /assets/photos/tao-ming-school.jpg
+
+codex
+อ่าน SPEC ครบแล้วครับ ขณะนี้พบว่าเว็บมีทั้งภาพในทะเบียนและภาพประกอบ/ภาพสถานที่ที่ไม่มีรายการใน `photo-registry.json` จึงจะแยก “ตรวจพบการใช้ผิดทะเบียน” ออกจาก “ตรวจเทียบไม่ได้เพราะไม่มีรายการในทะเบียน” ให้ชัดเจน ไม่เหมารวมว่าภาพที่ไม่มีทะเบียนเป็นปัญหาโดยอัตโนมัติครับ
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$env:PYTHONIOENCODING='"'utf-8'; @'
+import json,re
+from pathlib import Path
+r=json.loads(Path('data/photo-registry.json').read_text(encoding='utf8'))['photos']
+for p in r: print(p['file'],'|',','.join(p['allowed_on']),'|',p.get('era',''))
+print('--- drawing refs ---')
+for f in Path('site').rglob('*.html'):
+ s=f.read_text(encoding='utf8',errors='replace')
+ if 'ภาพวาด' in s: print(f)
+'@ | python -" in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 109ms:
+/assets/photos/tao-ming-school.jpg | tao-ming,architecture,kuapapoh | current
+/assets/photos/tao-ming-logo.jpg | tao-ming | archive
+/assets/photos/shophouse-78.webp | architecture | current
+/assets/photos/shophouse-109.webp | kuapapoh | current
+/assets/photos/shophouse-305.webp | culture-street | current
+/assets/photos/kuapapoh-port.webp | riverwalk,water-trade | archive
+/assets/photos/kuapapoh-brand.jpg | kuapapoh | current
+/assets/photos/kuapapoh-history.jpg | kuapapoh | current
+/assets/photos/kuapapoh-wuikun.jpg | kuapapoh | current
+/assets/photos/kuapapoh-doc-1.jpg | kuapapoh | archive
+/assets/photos/kuapapoh-doc-2.jpg | kuapapoh | archive
+/assets/photos/kuapapoh-pattern.jpg | kuapapoh,architecture | current
+--- drawing refs ---
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$env:PYTHONIOENCODING='"'utf-8'; @'
+import json,re,html
+from pathlib import Path
+reg={p['file']:p for p in json.loads(Path('data/photo-registry.json').read_text(encoding='utf8'))['photos']}
+for f in sorted(Path('site').rglob('*.html')):
+ if '/en/' in f.as_posix(): continue
+ s=f.read_text(encoding='utf8',errors='replace')
+ for m in re.finditer(r'<figure\\b.*?</figure>',s,re.I|re.S):
+  b=m.group(); im=re.search(r'<img\\b["'^>]*'"\\bsrc=[\"\\'](["'^"'"\\']+)',b,re.I); fc=re.search(r'<figcaption["'^>]*>(.*?)</figcaption>'"',b,re.I|re.S)
+  if im and im.group(1) in reg:
+   cap=re.sub(r'<["'^>]+>'"','',fc.group(1)).strip() if fc else '(ไม่มี figcaption)'
+   cap=html.unescape(re.sub(r'\\s+',' ',cap))
+   if cap"'!=reg[im.group(1)]['"'caption_th']:
+    print(f.relative_to('site').as_posix(),'|',im.group(1),'|',repr(cap),'| expected',repr(reg[im.group(1)]['caption_th']))
+'@ | python -" in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 113ms:
+places/culture-street/index.html | /assets/photos/shophouse-305.webp | 'ตึกแถวเลขที่ 305 บนถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่าเครดิต · คลังภาพโครงการกั่วป่าโพ้สัญญาอนุญาต · ใช้ในเว็บนี้ได้' | expected 'ตึกแถวเลขที่ 305 บนถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า'
+places/culture-street/index.html | /assets/photos/shophouse-305.webp | 'ตึกแถวเลขที่ 305 บนถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่าเครดิต · คลังภาพโครงการกั่วป่าโพ้สัญญาอนุญาต · ใช้ในเว็บนี้ได้' | expected 'ตึกแถวเลขที่ 305 บนถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า'
+places/culture-street/index.html | /assets/photos/shophouse-305.webp | 'ตึกแถวเลขที่ 305 บนถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่าเครดิต · คลังภาพโครงการกั่วป่าโพ้สัญญาอนุญาต · ใช้ในเว็บนี้ได้' | expected 'ตึกแถวเลขที่ 305 บนถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า'
+places/riverwalk/index.html | /assets/photos/kuapapoh-port.webp | 'ภาพเก่า เรือจอดที่ท่าน้ำตะกั่วป่าเครดิต · คลังภาพโครงการกั่วป่าโพ้สัญญาอนุญาต · ใช้ในเว็บนี้ได้' | expected 'ภาพเก่า เรือจอดที่ท่าน้ำตะกั่วป่า'
+places/riverwalk/index.html | /assets/photos/kuapapoh-port.webp | 'ภาพเก่า เรือจอดที่ท่าน้ำตะกั่วป่าเครดิต · คลังภาพโครงการกั่วป่าโพ้สัญญาอนุญาต · ใช้ในเว็บนี้ได้' | expected 'ภาพเก่า เรือจอดที่ท่าน้ำตะกั่วป่า'
+places/riverwalk/index.html | /assets/photos/kuapapoh-port.webp | 'ภาพเก่า เรือจอดที่ท่าน้ำตะกั่วป่าเครดิต · คลังภาพโครงการกั่วป่าโพ้สัญญาอนุญาต · ใช้ในเว็บนี้ได้' | expected 'ภาพเก่า เรือจอดที่ท่าน้ำตะกั่วป่า'
+places/riverwalk/index.html | /assets/photos/kuapapoh-port.webp | 'ภาพเก่า เรือจอดที่ท่าน้ำตะกั่วป่าเครดิต · คลังภาพโครงการกั่วป่าโพ้สัญญาอนุญาต · ใช้ในเว็บนี้ได้' | expected 'ภาพเก่า เรือจอดที่ท่าน้ำตะกั่วป่า'
+places/tao-ming/index.html | /assets/photos/tao-ming-school.jpg | 'อาคารโรงเรียนเต้าหมิง ถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่าเครดิต · คลังภาพโครงการกั่วป่าโพ้สัญญาอนุญาต · ใช้ในเว็บนี้ได้' | expected 'อาคารโรงเรียนเต้าหมิง ถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า'
+places/tao-ming/index.html | /assets/photos/tao-ming-logo.jpg | 'ตราโรงเรียนเต้าหมิงเครดิต · คลังภาพโครงการกั่วป่าโพ้สัญญาอนุญาต · ใช้ในเว็บนี้ได้' | expected 'ตราโรงเรียนเต้าหมิง'
+places/tao-ming/index.html | /assets/photos/tao-ming-logo.jpg | 'ตราโรงเรียนเต้าหมิงเครดิต · คลังภาพโครงการกั่วป่าโพ้สัญญาอนุญาต · ใช้ในเว็บนี้ได้' | expected 'ตราโรงเรียนเต้าหมิง'
+places/tao-ming/index.html | /assets/photos/tao-ming-school.jpg | 'อาคารโรงเรียนเต้าหมิง ถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่าเครดิต · คลังภาพโครงการกั่วป่าโพ้สัญญาอนุญาต · ใช้ในเว็บนี้ได้' | expected 'อาคารโรงเรียนเต้าหมิง ถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า'
+places/tao-ming/index.html | /assets/photos/tao-ming-school.jpg | 'อาคารโรงเรียนเต้าหมิง ถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่าเครดิต · คลังภาพโครงการกั่วป่าโพ้สัญญาอนุญาต · ใช้ในเว็บนี้ได้' | expected 'อาคารโรงเรียนเต้าหมิง ถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า'
+places/tao-ming/index.html | /assets/photos/tao-ming-logo.jpg | 'ตราโรงเรียนเต้าหมิงเครดิต · คลังภาพโครงการกั่วป่าโพ้สัญญาอนุญาต · ใช้ในเว็บนี้ได้' | expected 'ตราโรงเรียนเต้าหมิง'
+stories/architecture/index.html | /assets/photos/tao-ming-school.jpg | 'อาคารโรงเรียนเต้าหมิง ถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่าคลังภาพโครงการกั่วป่าโพ้' | expected 'อาคารโรงเรียนเต้าหมิง ถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า'
+stories/architecture/index.html | /assets/photos/shophouse-78.webp | 'ตึกแถวเลขที่ 78 บนถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่าคลังภาพโครงการกั่วป่าโพ้' | expected 'ตึกแถวเลขที่ 78 บนถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า'
+stories/kuapapoh/index.html | /assets/photos/kuapapoh-brand.jpg | 'กั่วป่าโพ้ · แบรนด์ของโครงการเมืองเก่าตะกั่วป่าโครงการกั่วป่าโพ้' | expected 'กั่วป่าโพ้ · แบรนด์ของโครงการเมืองเก่าตะกั่วป่า'
+stories/kuapapoh/index.html | /assets/photos/shophouse-109.webp | 'ตึกแถวเลขที่ 109 บนถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่าคลังภาพโครงการกั่วป่าโพ้' | expected 'ตึกแถวเลขที่ 109 บนถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า'
+stories/kuapapoh/index.html | /assets/photos/tao-ming-school.jpg | 'อาคารโรงเรียนเต้าหมิง ถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่าคลังภาพโครงการกั่วป่าโพ้' | expected 'อาคารโรงเรียนเต้าหมิง ถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า'
+stories/kuapapoh/index.html | /assets/photos/kuapapoh-pattern.jpg | 'ลายกระเบื้องเปอรานากันที่ยังเห็นได้ในเมืองเก่าโครงการกั่วป่าโพ้' | expected 'ลายกระเบื้องเปอรานากันที่ยังเห็นได้ในเมืองเก่า'
+stories/kuapapoh/index.html | /assets/photos/kuapapoh-brand.jpg | 'กั่วป่าโพ้ แบรนด์เมืองเก่าตะกั่วป่าเครดิต · กั่วป่าโพ้ / คลังภาพโครงการเมืองเก่าตะกั่วป่าสัญญาอนุญาต · ภาพจากคลังของโครงการ ใช้ในเว็บนี้ได้' | expected 'กั่วป่าโพ้ · แบรนด์ของโครงการเมืองเก่าตะกั่วป่า'
+stories/kuapapoh/index.html | /assets/photos/kuapapoh-pattern.jpg | 'ลายกระเบื้องเปอรานากันเมืองเก่าเครดิต · กั่วป่าโพ้ / คลังภาพโครงการเมืองเก่าตะกั่วป่าสัญญาอนุญาต · ภาพจากคลังของโครงการ ใช้ในเว็บนี้ได้' | expected 'ลายกระเบื้องเปอรานากันที่ยังเห็นได้ในเมืองเก่า'
+stories/kuapapoh/index.html | /assets/photos/kuapapoh-history.jpg | 'แผ่นเล่าประวัติกั่วป่าโพ้เครดิต · กั่วป่าโพ้ / คลังภาพโครงการเมืองเก่าตะกั่วป่าสัญญาอนุญาต · ภาพจากคลังของโครงการ ใช้ในเว็บนี้ได้' | expected 'แผ่นเล่าประวัติเมือง จัดทำโดยโครงการกั่วป่าโพ้'
+stories/kuapapoh/index.html | /assets/photos/kuapapoh-wuikun.jpg | 'หวุ่ยกุ่นเครดิต · กั่วป่าโพ้ / คลังภาพโครงการเมืองเก่าตะกั่วป่าสัญญาอนุญาต · ภาพจากคลังของโครงการ ใช้ในเว็บนี้ได้' | expected 'หวุ่ยกุ่น · งานออกแบบของโครงการกั่วป่าโพ้'
+stories/kuapapoh/index.html | /assets/photos/kuapapoh-doc-1.jpg | 'เอกสารเก่าเมืองตะกั่วป่า 1เครดิต · กั่วป่าโพ้ / คลังภาพโครงการเมืองเก่าตะกั่วป่าสัญญาอนุญาต · ภาพจากคลังของโครงการ ใช้ในเว็บนี้ได้' | expected 'เอกสารเก่าของเมือง จากคลังโครงการกั่วป่าโพ้'
+stories/kuapapoh/index.html | /assets/photos/kuapapoh-doc-2.jpg | 'เอกสารเก่าเมืองตะกั่วป่า 2เครดิต · กั่วป่าโพ้ / คลังภาพโครงการเมืองเก่าตะกั่วป่าสัญญาอนุญาต · ภาพจากคลังของโครงการ ใช้ในเว็บนี้ได้' | expected 'เอกสารเก่าของเมือง จากคลังโครงการกั่วป่าโพ้'
+stories/water-trade/index.html | /assets/photos/kuapapoh-port.webp | 'ภาพเก่า เรือจอดที่ท่าน้ำตะกั่วป่าคลังภาพโครงการกั่วป่าโพ้' | expected 'ภาพเก่า เรือจอดที่ท่าน้ำตะกั่วป่า'
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'rg -n -C 3 "shophouse-305|kuapapoh-port|tao-ming-school.jpg" site/places/culture-street/index.html site/places/riverwalk/index.html site/stories/architecture/index.html | Select-Object -First 100' in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 89ms:
+site/places/culture-street/index.html:1:<!doctype html><html lang="th" data-base="" data-news-api=""><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>ถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า · ตะกั่วป่า 101</title><meta name="description" content="เดินอ่านเมืองผ่านอาคารและผู้คน · ถนนคนเดินตะกั่วป่า · ถนนศรีตะกั่วป่า · ตลาดเก่าตะกั่วป่า"><meta name="robots" content="index,follow,max-image-preview:large"><meta property="og:title" content="ถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า"><meta property="og:description" content="เดินอ่านเมืองผ่านอาคารและผู้คน · ถนนคนเดินตะกั่วป่า · ถนนศรีตะกั่วป่า · ตลาดเก่าตะกั่วป่า"><meta property="og:url" content="https://takuapa101.com/places/culture-street/"><meta property="og:type" content="website"><meta property="og:image" content="https://takuapa101.com/assets/og/culture-street.png"><meta property="og:locale" content="th_TH"><meta property="og:site_name" content="ตะกั่วป่า 101"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://takuapa101.com/assets/og/culture-street.png"><meta name="generator" content="ตะกั่วป่า 101"><link rel="canonical" href="https://takuapa101.com/places/culture-street/"><link rel="preload" href="/assets/NotoSerifThai.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/assets/IBMPlexSansThaiLooped-Regular.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="/assets/design.css"><script type="application/ld+json">[{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "หน้าแรก", "item": "https://takuapa101.com/"}, {"@type": "ListItem", "position": 2, "name": "ถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า", "item": "https://takuapa101.com/places/culture-street/"}]}, {"@context": "https://schema.org", "@type": "TouristAttraction", "name": "ถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า", "url": "https://takuapa101.com/places/culture-street/", "image": "https://takuapa101.com/assets/culture-street.webp", "description": "ย่านถนนคนเดินที่เชื่อมอาคารเก่า อาหาร และวิถีท้องถิ่น", "address": {"@type": "PostalAddress", "streetAddress": "ถนนศรีตะกั่วป่า และถนนอุดมธารา", "addressLocality": "ตะกั่วป่า", "addressRegion": "พังงา", "addressCountry": "TH"}, "geo": {"@type": "GeoCoordinates", "latitude": 8.829848, "longitude": 98.364073}, "telephone": "076424279"}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "เปิดให้เข้าชมเวลาใด", "acceptedAnswer": {"@type": "Answer", "text": "วันอาทิตย์ 14.00 ถึง 20.00 น."}}, {"@type": "Question", "name": "มีค่าเข้าชมหรือไม่", "acceptedAnswer": {"@type": "Answer", "text": "ข้อมูลยังไม่ยืนยัน · เข้าชมฟรี"}}, {"@type": "Question", "name": "เดินทางจากตัวเมืองตะกั่วป่าอย่างไร", "acceptedAnswer": {"@type": "Answer", "text": "ใช้ถนนราษฎร์บำรุงเข้าสู่ย่านเมืองเก่า แล้วต่อถนนศรีตะกั่วป่า; ช่วงถนนคนเดินอยู่บริเวณถนนศรีตะกั่วป่าและอุดมธารา"}}, {"@type": "Question", "name": "สถานที่นี้มีประวัติความเป็นมาอย่างไร", "acceptedAnswer": {"@type": "Answer", "text": "อาคารในย่านเมืองเก่ารักษาร่องรอยสถาปัตยกรรมชิโน-โปรตุกีส/ชิโน-ตะกั่วป่าที่สัมพันธ์กับยุคเหมืองแร่ดีบุก"}}, {"@type": "Question", "name": "มีจุดเด่นอะไรให้ชม", "acceptedAnswer": {"@type": "Answer", "text": "อาคารบ้านเรือนและตึกแถวชิโน-โปรตุกีสในย่านเมืองเก่า อาหารพื้นเมือง ขนมพื้นบ้าน และของกินท้องถิ่น การแสดงศิลปวัฒนธรรม การละเล่นพื้นเมือง และการแต่งกายแบบบาบ๋า"}}]}]</script><script src="/assets/design.js" defer></script><script src="/assets/trip.js" defer></script><link rel="stylesheet" href="/assets/ui.css"><link rel="stylesheet" href="/assets/theme.css"><script src="/assets/theme.js"></script><script src="/assets/search.js" defer></script><script src="/assets/live-news.js" defer></script><meta name="theme-color" content="#203f39"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"></head><body class="inner-page"><a class="skip" href="#main">ข้ามไปเนื้อหา</a><header class="site-header"><a class="brand" href="/" aria-label="ตะกั่วป่า 101 หน้าแรก"><span class="brand-mark">๑๐๑</span><span>ตะกั่วป่า<small>TAKUA PA FIELD NOTES</small></span></a><nav id="main-nav" aria-label="เมนูหลัก"><a href="/places/" aria-current="page">สถานที่</a><a href="/stories/">เรื่องเล่า</a><a href="/map/">แผนที่</a><a href="/rest/">กินเที่ยว</a><a href="/news/">ความเคลื่อนไหว</a><a href="/trip/">ทริปของคุณ</a><a href="/traditions/" class="nav-more">ประเพณี</a><a href="/eat/" class="nav-more">กินและของฝาก</a><a href="/routes/" class="nav-more">เส้นทางเดิน</a><a href="/leaflet/" class="nav-more">แผ่นพับ</a><a href="/about/" class="nav-more">เกี่ยวกับ</a></nav><div class="header-tools"><button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="สลับเป็นโหมดกลางคืน"><span class="tt-night" aria-hidden="true">☾</span><span class="tt-day" aria-hidden="true">☀</span></button><button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="main-nav" aria-label="เปิดเมนู"><span class="ib-glyph" aria-hidden="true">☰</span></button><button class="icon-button" type="button" data-open-search aria-label="ค้นหาในเว็บไซต์ (กด Ctrl+K)"><span class="ib-glyph" aria-hidden="true">⌕</span></button><a class="icon-button" href="/trip/" aria-label="ทริปของคุณ"><span class="ib-glyph" aria-hidden="true">◫</span><span class="qs-badge" data-trip-count hidden>0</span></a><a class="header-map" href="/map/">เปิดแผนที่ ↗</a></div></header><main id="main"><div class="breadcrumbs"><a href="/">หน้าแรก</a> / <a href="/places/">สถานที่</a> / ตลาดและของกิน</div><header class="place-hero full-place-hero"><div><span class="chapter">บันทึกสถานที่ · ตลาดและของกิน</span><h1>ถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า</h1><p class="english">Takua Pa Culture Street</p><span class="fact-status confirmed">ยืนยันแล้ว 6 ข้อ</span><p><a class="text-link" href="#eras">ตอนนั้น · ก่อนหน้า · ตอนนี้ ↓</a></p><p class="place-hero-actions"><button class="button" type="button" data-trip-add="culture-street">เพิ่มลงทริป</button><a class="text-link" href="/trip/">ดูทริปของคุณ</a></p></div><div class="place-hero-art"><figure class="research-photo"><img src="/assets/photos/shophouse-305.webp" alt="ตึกแถวเลขที่ 305 บนถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า" loading="eager"><figcaption>ตึกแถวเลขที่ 305 บนถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า<small>เครดิต · คลังภาพโครงการกั่วป่าโพ้</small><small>สัญญาอนุญาต · ใช้ในเว็บนี้ได้</small></figcaption></figure></div></header><div class="research-layout"><aside class="visit-card" id="visit"><h2>ข้อมูลใช้จริง</h2><dl><div><dt>พิกัด</dt><dd>8.829848, 98.364073 <span class="fact-status unknown">ยังไม่ยืนยัน</span></dd></div><div class="directions"><a href="https://www.google.com/maps/search/?api=1&amp;query=8.829848,98.364073" target="_blank" rel="noopener">นำทางด้วย Google Maps ↗</a><span class="source-offline">แหล่งพิกัด ↗ <small>แหล่งเดิมออฟไลน์ · ตรวจเมื่อ 8 ก.ย. 2569</small></span></div><div><dt>เวลาเปิด</dt><dd>วันอาทิตย์ 14.00 ถึง 20.00 น. <span class="fact-status confirmed">ยืนยันแล้ว</span></dd></div><div><dt>ค่าเข้า</dt><dd>เข้าชมฟรี <span class="fact-status unverified">ยังไม่ยืนยัน</span></dd></div><div><dt>ที่จอดรถ</dt><dd><span class="muted">ยังไม่ยืนยัน</span></dd></div><div><dt>ห้องน้ำ</dt><dd><span class="muted">ยังไม่ยืนยัน</span></dd></div><div><dt>รถเข็น</dt><dd><span class="muted">ยังไม่ยืนยัน</span></dd></div><div><dt>การแต่งกาย</dt><dd><span class="muted">ยังไม่ยืนยัน</span></dd></div><div><dt>โทรศัพท์</dt><dd>076424279 <span class="fact-status unknown">ยังไม่ยืนยัน</span></dd></div><div><dt>เพจ</dt><dd><span class="muted">ยังไม่ยืนยัน</span></dd></div><div><dt>เว็บไซต์</dt><dd><span class="muted">ยังไม่ยืนยัน</span></dd></div><div><dt>ไลน์</dt><dd><span class="muted">ยังไม่ยืนยัน</span></dd></div><div><span class="source-offline">แหล่งข้อมูลการเข้าชม ↗ <small>แหล่งเดิมออฟไลน์ · ตรวจเมื่อ 8 ก.ย. 2569</small></span><a href="https://archaeology.sac.or.th/archaeology/874" target="_blank" rel="noopener">แหล่งข้อมูลการเข้าชม ↗</a><span class="source-offline">แหล่งข้อมูลติดต่อ ↗ <small>แหล่งเดิมออฟไลน์ · ตรวจเมื่อ 8 ก.ย. 2569</small></span></div></dl></aside><nav class="research-rail" aria-label="สารบัญหน้านี้"><span class="chapter">ในบันทึกหน้านี้</span><a href="#visit">ข้อมูลใช้จริง</a><a href="#eras">ตอนนั้น · ก่อนหน้า · ตอนนี้</a><a href="#timeline">เส้นเวลาแบบจุด</a><a href="#gallery">แกลเลอรี</a><a href="#highlights">จุดเด่นที่ควรดู</a><a href="#news">ข่าวและความเคลื่อนไหว</a><a href="#did_you_know">รู้หรือไม่</a><a href="#getting_there">วิธีเดินทาง</a><a href="#nearby">ที่ใกล้เคียงและสถานที่ในหมวดเดียวกัน</a><a href="#nearby-note"></a><a href="#faq">คำถามที่พบบ่อย</a><a href="#sources">ที่มาของข้อมูล</a></nav><div class="research-body"><section class="research-section" id="eras"><h2>ตอนนั้น · ก่อนหน้า · ตอนนี้</h2><div class="era-axis"><article class="era-card" data-era="then"><span class="chapter">ตอนนั้น</span><h3>จากถนนการค้าเมืองเหมือง สู่เวทีเล่าความหลัง</h3><p class="era-years">พ.ศ. 2370 ถึง 2550</p><span class="fact-status disputed">ข้อมูลขัดแย้ง</span><p>ถนนสายนี้ไม่ได้ถูกสร้างขึ้นเป็นแหล่งท่องเที่ยวตั้งแต่แรก แต่เติบโตอยู่ในย่านเมืองเก่าตะกั่วป่า ซึ่งเป็นเมืองท่าและศูนย์กลางการค้าทางน้ำ ก่อนจะรุ่งเรืองมากในยุคเหมืองแร่ดีบุก ผู้คนจีนจากแผ่นดินใหญ่ ปีนัง และสิงคโปร์เข้ามาค้าขายและทำเหมือง จนเกิดตึกแถว ร้านค้า โรงแรม ร้านกาแฟ และกิจการบริการเรียงรายตามถนนอุดมธาราและศรีตะกั่วป่า</p><p>อาคารสองฝั่งถนนจึงเป็นหลักฐานของเมืองพหุวัฒนธรรม ทั้งตึกแถวแบบจีนและแบบอิทธิพลอาณานิคมที่เชื่อมโยงกับชุมชนบาบ๋า ถนนทำหน้าที่เป็นแกนการค้าและการอยู่อาศัยของเมือง ไม่ใช่ถนนคนเดินแบบปัจจุบัน</p><p>เมื่อโครงการถนนคนเดินเริ่มขึ้นใน พ.ศ. 2550 โดยความร่วมมือของ ททท. สำนักงานพังงา เทศบาลเมืองตะกั่วป่า ชุมชนตลาดใหญ่ และชุมชนเสนานุชรังสรรค์ ถนนเดิมจึงถูกนำมาใช้เป็นพื้นที่สาธารณะเพื่อเล่าอดีตและฟื้นชีวิตเศรษฐกิจชุมชน ภายใต้ชื่อ “ตะกั่วป่า เมืองเก่า เล่าความหลัง”</p><div class="era-sources">แหล่งอ้างอิง · <a href="https://anyflip.com/yxwin/sydm/basic/" target="_blank" rel="noopener">ร้อยเรื่องเมืองเก่าอันดามัน / เอกสารวิชาการเมืองเก่าตะกั่วป่า</a> · <a href="https://mgronline.com/south/detail/9650000044214" target="_blank" rel="noopener">ผู้จัดการออนไลน์: สัมผัสกลิ่นอายถนนสายวัฒนธรรม</a> · <a href="https://so04.tci-thaijo.org/index.php/yru_human/article/download/128497/96582/" target="_blank" rel="noopener">วารสารมหาวิทยาลัยราชภัฏยะลา</a></div></article><article class="era-card" data-era="before"><span class="chapter">ก่อนหน้า</span><h3>เมืองเหมืองซบเซา แต่ถนนเก่ายังไม่หายไป</h3><p class="era-years">พ.ศ. 2500 ถึง 2565</p><span class="fact-status disputed">ข้อมูลขัดแย้ง</span><p>หลังบริษัทเหมืองแร่ปิดตัวและแร่ดีบุกลดลง เศรษฐกิจย่านการค้าเก่าตะกั่วป่าซบเซา อาคารบางหลังยังอยู่ในสภาพดี ขณะที่บางหลังทรุดโทรมตามเวลา งานศึกษาพื้นที่ชี้ว่าการจัดถนนสายวัฒนธรรมใช้เรื่องเล่า อาหาร ภูมิปัญญา และสถาปัตยกรรมเดิมเป็นทุน เพื่อทำให้ย่านกลับมามีผู้คนและรายได้อีกครั้ง</p><p>ชื่อโครงการเปลี่ยนจาก “ตะกั่วป่า เมืองเก่า เล่าความหลัง” มาเป็น “ถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า” ในเวลาต่อมา ทะเบียนตลาดของกรมการค้าภายในระบุวันก่อตั้ง/ได้รับการส่งเสริม 17 ธันวาคม 2560 แต่แหล่งข่าวระบุการเริ่มกิจกรรมตั้งแต่ 2550 จึงควรเข้าใจว่าเป็นคนละหมุดหมาย: จุดเริ่มกิจกรรมกับจุดขึ้นทะเบียน/ส่งเสริมตลาด</p><p>ใน พ.ศ. 2565 จังหวัดและท้องถิ่นยังจัดกิจกรรมช่วงกรีนซีซันและมีรถโพถ้องพาเที่ยวฟรี แสดงว่าถนนถูกใช้เป็นเครื่องมือกระจายรายได้และดึงคนกลับเข้าสู่ย่านเก่า ไม่พบหลักฐานเฉพาะเจาะจงว่าถนนทั้งเส้นได้รับความเสียหายจากสึนามิ 2547 หรือได้รับการขึ้นทะเบียนเป็นโบราณสถานทั้งเส้น</p><div class="era-sources">แหล่งอ้างอิง · <span class="source-offline">กรมการค้าภายใน กระทรวงพาณิชย์ <small>แหล่งเดิมออฟไลน์ · ตรวจเมื่อ 8 ก.ย. 2569</small></span> · <a href="https://mgronline.com/travel/detail/9650000061422" target="_blank" rel="noopener">ผู้จัดการออนไลน์: เปิดถนนช่วงหน้าฝน พ.ศ. 2565</a> · <a href="https://so04.tci-thaijo.org/index.php/JSTD/article/view/254126" target="_blank" rel="noopener">งานวิจัยการท่องเที่ยวเชิงวัฒนธรรมตะกั่วป่า</a></div></article><article class="era-card" data-era="now"><span class="chapter">ตอนนี้</span><h3>ตลาดวันอาทิตย์ที่ยังทำให้เมืองเก่ามีชีวิต</h3><p class="era-years">2569 / 2026</p><span class="fact-status confirmed">ยืนยันแล้ว</span><p>ข้อมูลทะเบียนตลาดของกรมการค้าภายในระบุว่าถนนวัฒนธรรมเมืองเก่าตะกั่วป่าอยู่บนถนนศรีตะกั่วป่าและอุดมธารา เปิดวันอาทิตย์ เวลา 14.00 ถึง 20.00 น. และเข้าชมกิจกรรมได้โดยไม่เสียค่าเข้า ข้อมูลดังกล่าวระบุผู้ดูแลในระดับระบบตลาด แต่ไม่ได้ระบุหน่วยงานผู้รับผิดชอบถนนเป็นนิติบุคคลแยกต่างหาก</p><p>ปัจจุบันถนนยังทำหน้าที่เป็นตลาดและพื้นที่เรียนรู้ของชุมชน มีอาหารและขนมพื้นบ้าน งานจักสาน งานฝีมือ การแสดง การแต่งกายบาบ๋า นิทรรศการภาพถ่าย และภาพสตรีตอาร์ต อาคารเก่าชิโน-โปรตุกีสยังเป็นฉากหลักของกิจกรรม โดยสภาพอาคารมีทั้งส่วนที่อนุรักษ์ได้ดีและส่วนที่มีร่องรอยเสื่อมตามกาลเวลา แต่ไม่พบประกาศโครงการบูรณะใหญ่เฉพาะถนนนี้ในแหล่งที่ตรวจสอบ</p><p>ข่าวย้อนหลังยืนยันการจัดงานต่อเนื่องอย่างน้อยใน พ.ศ. 2565 และกิจกรรมชุมชนบนถนนใน พ.ศ. 2567 จึงสรุปได้ว่าถนนยังใช้งานอยู่ในฐานะตลาดวัฒนธรรมและพื้นที่กิจกรรมของคนท้องถิ่น โดยเวลาเปิดจริงอาจเปลี่ยนตามฤดูกาลหรือประกาศของผู้จัด</p><figure class="research-photo"><img src="/assets/photos/shophouse-305.webp" alt="ตึกแถวเลขที่ 305 บนถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า" loading="lazy"><figcaption>ตึกแถวเลขที่ 305 บนถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า<small>เครดิต · คลังภาพโครงการกั่วป่าโพ้</small><small>สัญญาอนุญาต · ใช้ในเว็บนี้ได้</small></figcaption></figure><div class="era-sources">แหล่งอ้างอิง · <span class="source-offline">กรมการค้าภายใน กระทรวงพาณิชย์ <small>แหล่งเดิมออฟไลน์ · ตรวจเมื่อ 8 ก.ย. 2569</small></span> · <a href="https://mgronline.com/south/detail/9670000097253" target="_blank" rel="noopener">ผู้จัดการออนไลน์: งานอิ่มบุญ อิ่มเจ 9 บาท พ.ศ. 2567</a> · <a href="https://mgronline.com/south/detail/9650000044214" target="_blank" rel="noopener">ผู้จัดการออนไลน์: ถนนสายวัฒนธรรมและสตรีตอาร์ต</a></div></article></div></section><section class="research-section" id="timeline"><h2>เส้นเวลาแบบจุด</h2><ol class="point-timeline" tabindex="0" aria-label="เส้นเวลา เลื่อนเพื่ออ่านเหตุการณ์"><li><span class="fact-status confirmed">ยืนยันแล้ว</span><p class="era-years">พ.ศ. 2370</p><h3>เริ่มพัฒนาเมืองและย่านถนนอุดมธารา</h3><p>เอกสารเมืองเก่าจัดช่วง พ.ศ. 2370 ถึง 2440 เป็นระยะตั้งเมืองและเริ่มพัฒนา ย่านถนนอุดมธาราเป็นพื้นที่ตั้งถิ่นฐานแรก ๆ ของเมือง</p><a href="https://anyflip.com/yxwin/sydm/basic/" target="_blank" rel="noopener">อ่านแหล่งอ้างอิง ↗</a></li><li><span class="fact-status confirmed">ยืนยันแล้ว</span><p class="era-years">พ.ศ. 2430</p><h3>ตึกแถวรับอิทธิพลเมืองท่าปีนัง · สิงคโปร์</h3><p>ถนนศรีตะกั่วป่ามีตึกแถวแบบอิทธิพลอาณานิคมช่องแคบ ซึ่งสัมพันธ์กับการค้าและชุมชนจีนในเมืองท่า</p><a href="https://anyflip.com/yxwin/sydm/basic/" target="_blank" rel="noopener">อ่านแหล่งอ้างอิง ↗</a></li><li><span class="fact-status confirmed">ยืนยันแล้ว</span><p class="era-years">พ.ศ. 2500</p><h3>เมืองตะกั่วป่ารุ่งเรืองถึงจุดสูงสุดของยุคเหมือง</h3><p>เอกสารอธิบายว่าความรุ่งเรืองของเมืองถึงขีดสุดช่วงต้น พ.ศ. 2500 ก่อนเหมืองปิดและย่านการค้าซบเซา</p><a href="https://anyflip.com/yxwin/sydm/basic/" target="_blank" rel="noopener">อ่านแหล่งอ้างอิง ↗</a></li><li><span class="fact-status disputed">ข้อมูลขัดแย้ง</span><p class="era-years">พ.ศ. 2550</p><h3>เริ่มโครงการถนนคนเดินเชิงวัฒนธรรม</h3><p>ททท. สำนักงานพังงา เทศบาลเมืองตะกั่วป่า และชุมชนเริ่มจัด “ตะกั่วป่า เมืองเก่า เล่าความหลัง”</p><a href="https://mgronline.com/south/detail/9650000044214" target="_blank" rel="noopener">อ่านแหล่งอ้างอิง ↗</a></li><li><span class="fact-status disputed">ข้อมูลขัดแย้ง</span><p class="era-years">17 ธันวาคม 2560</p><h3>ขึ้นทะเบียน/ได้รับการส่งเสริมเป็นตลาด</h3><p>ทะเบียนกรมการค้าภายในระบุวันก่อตั้งและได้รับการส่งเสริมของตลาดเป็น 17 ธันวาคม 2560</p><span class="source-offline">อ่านแหล่งอ้างอิง ↗ <small>แหล่งเดิมออฟไลน์ · ตรวจเมื่อ 8 ก.ย. 2569</small></span></li><li><span class="fact-status confirmed">ยืนยันแล้ว</span><p class="era-years">26 มิถุนายน ถึง 28 สิงหาคม 2565</p><h3>เปิดถนนช่วงกรีนซีซันและจัดรถโพถ้องฟรี</h3><p>จังหวัดและภาคีท้องถิ่นขยายกิจกรรมวันอาทิตย์เพื่อกระตุ้นการท่องเที่ยวนอกฤดูและกระจายรายได้</p><a href="https://mgronline.com/travel/detail/9650000061422" target="_blank" rel="noopener">อ่านแหล่งอ้างอิง ↗</a></li><li><span class="fact-status confirmed">ยืนยันแล้ว</span><p class="era-years">10 ตุลาคม 2567</p><h3>งานอิ่มบุญ อิ่มเจ 9 บาท</h3><p>ถนนเป็นพื้นที่จัดกิจกรรมอาหารเจและสืบทอดประเพณีของชุมชนเมืองเก่า มีร้านเข้าร่วมกว่า 200 ร้านตามข่าว</p><a href="https://mgronline.com/south/detail/9670000097253" target="_blank" rel="noopener">อ่านแหล่งอ้างอิง ↗</a></li></ol></section><section class="research-section" id="gallery"><h2>แกลเลอรี</h2><div data-gallery><div class="gallery-tabs" hidden><button type="button" data-tab="today">ภาพวันนี้</button><button type="button" data-tab="archive">ภาพเก่า</button></div><div id="gallery-today" data-panel="today"><h3>ภาพวันนี้</h3><div class="photo-grid"><figure class="research-photo"><a data-lightbox href="/assets/photos/shophouse-305.webp" aria-label="ขยายภาพ · ตึกแถวเลขที่ 305 บนถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า"><img src="/assets/photos/shophouse-305.webp" alt="ตึกแถวเลขที่ 305 บนถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า" loading="lazy"></a><figcaption>ตึกแถวเลขที่ 305 บนถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า<small>เครดิต · คลังภาพโครงการกั่วป่าโพ้</small><small>สัญญาอนุญาต · ใช้ในเว็บนี้ได้</small></figcaption></figure></div></div><div id="gallery-archive" data-panel="archive"><h3>ภาพเก่า</h3><div class="photo-grid"><p class="muted">ยังไม่มีภาพที่ได้รับอนุญาตให้เผยแพร่ในหมวดนี้</p></div></div></div></section><section class="research-section" id="highlights"><h2>จุดเด่นที่ควรดู</h2><div class="research-cards"><article class="research-note"><h3>อาคารเก่า</h3><span class="fact-status unknown">ยังไม่ยืนยัน</span><p>อาคารบ้านเรือนและตึกแถวชิโน-โปรตุกีสในย่านเมืองเก่า</p><a href="https://travel.kapook.com/view275997.html" target="_blank" rel="noopener">อ่านแหล่งอ้างอิง ↗</a></article><article class="research-note"><h3>อาหารและขนมพื้นบ้าน</h3><span class="fact-status unknown">ยังไม่ยืนยัน</span><p>อาหารพื้นเมือง ขนมพื้นบ้าน และของกินท้องถิ่น</p><span class="source-offline">อ่านแหล่งอ้างอิง ↗ <small>แหล่งเดิมออฟไลน์ · ตรวจเมื่อ 8 ก.ย. 2569</small></span></article><article class="research-note"><h3>การแสดงและวิถีชุมชน</h3><span class="fact-status unknown">ยังไม่ยืนยัน</span><p>การแสดงศิลปวัฒนธรรม การละเล่นพื้นเมือง และการแต่งกายแบบบาบ๋า</p><span class="source-offline">อ่านแหล่งอ้างอิง ↗ <small>แหล่งเดิมออฟไลน์ · ตรวจเมื่อ 8 ก.ย. 2569</small></span></article><article class="research-note"><h3>สตรีตอาร์ต</h3><span class="fact-status unknown">ยังไม่ยืนยัน</span><p>ภาพศิลปะและสตรีตอาร์ตที่สื่อถึงวิถีชีวิตท้องถิ่น</p><a href="https://travel.kapook.com/view275997.html" target="_blank" rel="noopener">อ่านแหล่งอ้างอิง ↗</a></article></div></section><section class="research-section" id="news"><h2>ข่าวและความเคลื่อนไหว</h2><div class="research-cards"><article class="research-note"><p class="muted">2024-10-10 · ผู้จัดการออนไลน์</p><h3>งานอิ่มบุญ อิ่มเจ 9 บาท เมืองเก่าตะกั่วป่า</h3><p>กิจกรรมอาหารเจและประเพณีชุมชนจัดบนถนนสายวัฒนธรรม มีผู้เข้าร่วมจำนวนมากตามรายงานข่าว</p><a href="https://mgronline.com/south/detail/9670000097253" target="_blank" rel="noopener">อ่านแหล่งอ้างอิง ↗</a></article><article class="research-note"><p class="muted">2022-06-26 · ผู้จัดการออนไลน์</p><h3>พังงาเปิดถนนคนเดินตะกั่วป่าหน้าฝน พร้อมรถโพถ้องฟรี</h3><p>กิจกรรมกรีนซีซันจัดทุกวันอาทิตย์ 26 มิถุนายน ถึง 28 สิงหาคม 2565 เพื่อกระจายรายได้สู่ชุมชน</p><a href="https://mgronline.com/travel/detail/9650000061422" target="_blank" rel="noopener">อ่านแหล่งอ้างอิง ↗</a></article><article class="research-note"><p class="muted">2022-04-17 · กรมการค้าภายใน</p><h3>ถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่าในกิจกรรมตลาดต้องชม</h3><p>กรมการค้าภายในรายงานการจัดกิจกรรมส่งเสริมช่องทางตลาดชุมชนที่ถนนวัฒนธรรมเมืองเก่าตะกั่วป่า</p><span class="source-offline">อ่านแหล่งอ้างอิง ↗ <small>แหล่งเดิมออฟไลน์ · ตรวจเมื่อ 8 ก.ย. 2569</small></span></article></div></section><section class="research-section" id="did_you_know"><h2>รู้หรือไม่</h2><div class="research-cards"><article class="research-note"><span class="fact-status disputed">ข้อมูลขัดแย้ง</span><p>ชื่อเดิมของกิจกรรมคือ “ตะกั่วป่า เมืองเก่า เล่าความหลัง” ก่อนเปลี่ยนเป็นชื่อถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า</p><a href="https://mgronline.com/south/detail/9650000044214" target="_blank" rel="noopener">อ่านแหล่งอ้างอิง ↗</a></article><article class="research-note"><span class="fact-status confirmed">ยืนยันแล้ว</span><p>ตึกแถวด้านถนนศรีตะกั่วป่าหลายหลังมีทางเดินมีหลังคาด้านหน้าแบบหง่อคาขี่ ซึ่งช่วยกันแดดและฝน</p><a href="https://anyflip.com/yxwin/sydm/basic/" target="_blank" rel="noopener">อ่านแหล่งอ้างอิง ↗</a></article></div></section><section class="research-section" id="getting_there"><h2>วิธีเดินทาง</h2><div class="research-cards"><article class="research-note"><h3>ตัวเมืองตะกั่วป่า</h3><span class="fact-status unknown">ยังไม่ยืนยัน</span><p>ใช้ถนนราษฎร์บำรุงเข้าสู่ย่านเมืองเก่า แล้วต่อถนนศรีตะกั่วป่า; ช่วงถนนคนเดินอยู่บริเวณถนนศรีตะกั่วป่าและอุดมธารา</p><a href="https://archaeology.sac.or.th/archaeology/874" target="_blank" rel="noopener">อ่านแหล่งอ้างอิง ↗</a></article><article class="research-note"><h3>ภูเก็ต</h3><span class="fact-status unknown">ยังไม่ยืนยัน</span></article><article class="research-note"><h3>เขาหลัก</h3><span class="fact-status unknown">ยังไม่ยืนยัน</span></article><article class="research-note"><h3>สนามบิน</h3><span class="fact-status unknown">ยังไม่ยืนยัน</span></article></div></section><section class="research-section" id="nearby"><h2>ที่ใกล้เคียงและสถานที่ในหมวดเดียวกัน</h2><ul class="nearby-links"><li><a href="/places/governor-wall/">กำแพงจวนเจ้าเมืองตะกั่วป่า</a> <span class="fact-status unknown">ยังไม่ยืนยัน</span></li><li>วัดหน้าเมือง <span class="fact-status unknown">ยังไม่ยืนยัน</span> <a href="https://archaeology.sac.or.th/archaeology/874" target="_blank" rel="noopener">อ่านแหล่งอ้างอิง ↗</a></li><li><a href="/places/riverwalk/">ตลาดริมน้ำตะกั่วป่า</a></li><li><a href="/places/food-center/">ศูนย์อาหารลานโล่งตะกั่วป่า</a></li></ul></section><aside class="nearby-note"><span class="chapter">แวะพักใกล้ ๆ</span><p>ตึกแถวเลขที่ 53 ถนนราษฎร์บำรุง ย่านตลาดเก่า เป็นบ้านไม้สักที่เปิดเป็นคาเฟ่ จึงเป็นหนึ่งในไม่กี่หลังบนถนนสายนี้ที่เดินเข้าไปดูข้างในได้</p><a class="text-link" href="https://siwaracafe.com/" target="_blank" rel="noopener">ศิวรา คาเฟ่ บ้านไม้สักบนถนนสายนี้ ↗</a></aside><section class="research-section" id="faq"><h2>คำถามที่พบบ่อย</h2><details><summary>เปิดให้เข้าชมเวลาใด</summary><p>วันอาทิตย์ 14.00 ถึง 20.00 น.</p></details><details><summary>มีค่าเข้าชมหรือไม่</summary><p>ข้อมูลยังไม่ยืนยัน · เข้าชมฟรี</p></details><details><summary>เดินทางจากตัวเมืองตะกั่วป่าอย่างไร</summary><p>ใช้ถนนราษฎร์บำรุงเข้าสู่ย่านเมืองเก่า แล้วต่อถนนศรีตะกั่วป่า; ช่วงถนนคนเดินอยู่บริเวณถนนศรีตะกั่วป่าและอุดมธารา</p></details><details><summary>สถานที่นี้มีประวัติความเป็นมาอย่างไร</summary><p>อาคารในย่านเมืองเก่ารักษาร่องรอยสถาปัตยกรรมชิโน-โปรตุกีส/ชิโน-ตะกั่วป่าที่สัมพันธ์กับยุคเหมืองแร่ดีบุก</p></details><details><summary>มีจุดเด่นอะไรให้ชม</summary><p>อาคารบ้านเรือนและตึกแถวชิโน-โปรตุกีสในย่านเมืองเก่า อาหารพื้นเมือง ขนมพื้นบ้าน และของกินท้องถิ่น การแสดงศิลปวัฒนธรรม การละเล่นพื้นเมือง และการแต่งกายแบบบาบ๋า</p></details></section><section class="research-section" id="sources"><h2>ที่มาของข้อมูล</h2><div class="source-table"><table><thead><tr><th>ชื่อ</th><th>ประเภท</th><th>วันที่เข้าถึง</th><th>ลิงก์</th></tr></thead><tbody><tr><th scope="row">กรมการค้าภายใน กระทรวงพาณิชย์</th><td>หน่วยงานทางการ</td><td>2026-09-07</td><td><span class="source-offline">เปิดแหล่ง ↗ <small>แหล่งเดิมออฟไลน์ · ตรวจเมื่อ 8 ก.ย. 2569</small></span></td></tr><tr><th scope="row">ฐานข้อมูลแหล่งโบราณคดีที่สำคัญในประเทศไทย</th><td>แหล่งข้อมูลอื่น</td><td>2026-09-07</td><td><a href="https://archaeology.sac.or.th/archaeology/874" target="_blank" rel="noopener">เปิดแหล่ง ↗</a></td></tr><tr><th scope="row">Kapook Travel</th><td>ข่าว</td><td>2026-09-07</td><td><a href="https://travel.kapook.com/view275997.html" target="_blank" rel="noopener">เปิดแหล่ง ↗</a></td></tr><tr><th scope="row">แนวหน้า</th><td>ข่าว</td><td>2026-09-07</td><td><a href="https://www.naewna.com/local/537042" target="_blank" rel="noopener">เปิดแหล่ง ↗</a></td></tr><tr><th scope="row">กรมการค้าภายใน กระทรวงพาณิชย์</th><td>หน่วยงานทางการ</td><td>2026-09-07</td><td><span class="source-offline">เปิดแหล่ง ↗ <small>แหล่งเดิมออฟไลน์ · ตรวจเมื่อ 8 ก.ย. 2569</small></span></td></tr><tr><th scope="row">ร้อยเรื่องเมืองเก่าอันดามัน</th><td>แหล่งข้อมูลอื่น</td><td>2026-09-07</td><td><a href="https://anyflip.com/yxwin/sydm/basic/" target="_blank" rel="noopener">เปิดแหล่ง ↗</a></td></tr><tr><th scope="row">ผู้จัดการออนไลน์</th><td>ข่าว</td><td>2026-09-07</td><td><a href="https://mgronline.com/south/detail/9650000044214" target="_blank" rel="noopener">เปิดแหล่ง ↗</a></td></tr><tr><th scope="row">ผู้จัดการออนไลน์</th><td>ข่าว</td><td>2026-09-07</td><td><a href="https://mgronline.com/travel/detail/9650000061422" target="_blank" rel="noopener">เปิดแหล่ง ↗</a></td></tr><tr><th scope="row">งานวิจัยการพัฒนาเส้นทางท่องเที่ยวเชิงวัฒนธรรมเปอรานากัน</th><td>แหล่งข้อมูลอื่น</td><td>2026-09-07</td><td><a href="https://so04.tci-thaijo.org/index.php/JSTD/article/view/254126" target="_blank" rel="noopener">เปิดแหล่ง ↗</a></td></tr><tr><th scope="row">Kapook Travel</th><td>บล็อก</td><td>2026-09-07</td><td><a href="https://travel.kapook.com/view275997.html" target="_blank" rel="noopener">เปิดแหล่ง ↗</a></td></tr></tbody></table></div><details class="unknowns"><summary>ข้อมูลที่ยังหาไม่เจอ</summary><ul><li>ไม่พบรหัสไปรษณีย์ของถนนสายนี้จากแหล่งที่อ่านได้โดยตรง</li><li>ไม่พบข้อมูลยืนยันเรื่องที่จอดรถ ห้องน้ำ การเข้าถึงสำหรับรถเข็น และระยะเวลาเที่ยว</li><li>ไม่พบเพจเฟซบุ๊ก เว็บไซต์ หรือ LINE ที่ยืนยันได้จากแหล่งที่อ่าน</li><li>ไม่พบระยะทางที่ยืนยันได้จากภูเก็ต เขาหลัก หรือสนามบิน</li><li>ไม่พบข้อมูลผู้สร้างเฉพาะของถนนสายวัฒนธรรม</li><li>ไม่พบหลักฐานว่าถนนสายวัฒนธรรมเองขึ้นทะเบียนโบราณสถาน; การขึ้นทะเบียนที่พบเป็นของกำแพงจวนเจ้าเมืองตะกั่วป่า</li><li>ไม่พบปฏิทินจันทรคติของงาน</li><li>ไม่มีลิงก์รูปภาพทางการที่ตรวจสอบสิทธิ์การใช้งานได้โดยตรง จึงเว้น photos</li><li>ยังไม่พบหลักฐานตรงว่าถนนสายนี้ได้รับความเสียหายจากสึนามิ พ.ศ. 2547</li><li>ยังไม่พบประกาศขึ้นทะเบียนโบราณสถานที่ระบุถนนทั้งเส้นนี้โดยตรง</li><li>ยังไม่พบเอกสารระบุชื่อผู้ก่อตั้งรายบุคคลหรือผู้รับผิดชอบถนนในปี 2550</li><li>ยังไม่พบโครงการบูรณะใหญ่เฉพาะถนนที่ประกาศอย่างเป็นทางการถึงปี 2569</li><li>ยังไม่พบภาพเก่าที่มีสิทธิ์ใช้งานชัดเจนของถนนสายนี้ จึงเว้น photos_archive เป็นอาร์เรย์ว่าง</li></ul></details></section></div></div></main><footer class="site-footer"><div class="footer-top"><a href="/" class="footer-name">ตะกั่วป่า <em>101</em></a><p>เมืองหนึ่งเมือง<br>มีเรื่องให้ค่อย ๆ รู้จัก</p><a class="round-link" href="#main" aria-label="กลับขึ้นด้านบน">↑</a></div><div class="footer-bottom"><a href="https://siwaracafe.com/">จัดทำโดยบ้านศิวรา ตะกั่วป่า</a><span>คู่มือเมืองเก่า · จังหวัดพังงา</span><a href="https://www.takuapacity.go.th/pdf/travel-preview.pdf">แผ่นพับต้นทาง ↗</a></div></footer><nav class="tabbar" aria-label="เมนูด่วน"><a href="/"><span class="tb-glyph" aria-hidden="true">⌂</span>หน้าแรก</a><a href="/map/"><span class="tb-glyph" aria-hidden="true">◈</span>แผนที่</a><a href="/eat/"><span class="tb-glyph" aria-hidden="true">◉</span>กินอะไร</a><a href="/trip/"><span class="tb-glyph" aria-hidden="true">◫</span>ทริป<span class="qs-badge" data-trip-count hidden>0</span></a></nav></body></html>
+--
+site/stories/architecture/index.html:1:<!doctype html><html lang="th" data-base="" data-news-api=""><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>ตึกเก่าตะกั่วป่า สถาปัตยกรรมยุคเหมืองดีบุก · ตะกั่วป่า 101</title><meta name="description" content="อ่านเมืองตะกั่วป่าผ่านตึกแถวบนถนนสายวัฒนธรรม สะพานเหล็กบุญสูง จวนเจ้าเมือง และโรงเรียนเต้าหมิง · การเปลี่ยนผ่านที่ฝังอยู่ในอิฐ ปูน และโครงสร้างเหล็ก"><meta name="robots" content="index,follow,max-image-preview:large"><meta property="og:title" content="ตึกเก่าตะกั่วป่า สถาปัตยกรรมยุคเหมืองดีบุก"><meta property="og:description" content="อ่านเมืองตะกั่วป่าผ่านตึกแถวบนถนนสายวัฒนธรรม สะพานเหล็กบุญสูง จวนเจ้าเมือง และโรงเรียนเต้าหมิง · การเปลี่ยนผ่านที่ฝังอยู่ในอิฐ ปูน และโครงสร้างเหล็ก"><meta property="og:url" content="https://takuapa101.com/stories/architecture/"><meta property="og:type" content="website"><meta property="og:image" content="https://takuapa101.com/assets/og/default.png"><meta property="og:locale" content="th_TH"><meta property="og:site_name" content="ตะกั่วป่า 101"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://takuapa101.com/assets/og/default.png"><meta name="generator" content="ตะกั่วป่า 101"><link rel="canonical" href="https://takuapa101.com/stories/architecture/"><link rel="preload" href="/assets/NotoSerifThai.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/assets/IBMPlexSansThaiLooped-Regular.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="/assets/design.css"><script type="application/ld+json">[{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "หน้าแรก", "item": "https://takuapa101.com/"}, {"@type": "ListItem", "position": 2, "name": "ตึกเก่าตะกั่วป่า สถาปัตยกรรมยุคเหมืองดีบุก", "item": "https://takuapa101.com/stories/architecture/"}]}]</script><script src="/assets/design.js" defer></script><script src="/assets/trip.js" defer></script><link rel="stylesheet" href="/assets/ui.css"><link rel="stylesheet" href="/assets/theme.css"><script src="/assets/theme.js"></script><script src="/assets/search.js" defer></script><script src="/assets/live-news.js" defer></script><meta name="theme-color" content="#203f39"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"></head><body class="inner-page"><a class="skip" href="#main">ข้ามไปเนื้อหา</a><header class="site-header"><a class="brand" href="/" aria-label="ตะกั่วป่า 101 หน้าแรก"><span class="brand-mark">๑๐๑</span><span>ตะกั่วป่า<small>TAKUA PA FIELD NOTES</small></span></a><nav id="main-nav" aria-label="เมนูหลัก"><a href="/places/">สถานที่</a><a href="/stories/" aria-current="page">เรื่องเล่า</a><a href="/map/">แผนที่</a><a href="/rest/">กินเที่ยว</a><a href="/news/">ความเคลื่อนไหว</a><a href="/trip/">ทริปของคุณ</a><a href="/traditions/" class="nav-more">ประเพณี</a><a href="/eat/" class="nav-more">กินและของฝาก</a><a href="/routes/" class="nav-more">เส้นทางเดิน</a><a href="/leaflet/" class="nav-more">แผ่นพับ</a><a href="/about/" class="nav-more">เกี่ยวกับ</a></nav><div class="header-tools"><button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="สลับเป็นโหมดกลางคืน"><span class="tt-night" aria-hidden="true">☾</span><span class="tt-day" aria-hidden="true">☀</span></button><button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="main-nav" aria-label="เปิดเมนู"><span class="ib-glyph" aria-hidden="true">☰</span></button><button class="icon-button" type="button" data-open-search aria-label="ค้นหาในเว็บไซต์ (กด Ctrl+K)"><span class="ib-glyph" aria-hidden="true">⌕</span></button><a class="icon-button" href="/trip/" aria-label="ทริปของคุณ"><span class="ib-glyph" aria-hidden="true">◫</span><span class="qs-badge" data-trip-count hidden>0</span></a><a class="header-map" href="/map/">เปิดแผนที่ ↗</a></div></header><main id="main"><div class="story-article-v2"><header class="story-hero-v2"><div class="breadcrumbs"><a href="/">หน้าแรก</a><span>/</span><a href="/stories/">เรื่องเล่าตะกั่วป่า</a><span>/</span><span>บ้านเก่าและสถาปัตยกรรม</span></div><span class="eyebrow">เรื่องเล่าตะกั่วป่า · บ้านเก่าและสถาปัตยกรรม</span><h1>ตึกที่สร้างด้วยเงินดีบุกและเหล็กจากเรือขุดแร่ · สถาปัตยกรรมที่จำเมืองไว้</h1><p class="lead">อ่านเมืองตะกั่วป่าผ่านตึกแถวบนถนนสายวัฒนธรรม สะพานเหล็กบุญสูง จวนเจ้าเมือง และโรงเรียนเต้าหมิง · การเปลี่ยนผ่านที่ฝังอยู่ในอิฐ ปูน และโครงสร้างเหล็ก</p><p class="story-meta">ปรับปรุงเมื่อ 2026-09-07 · เวลาอ่าน 6 นาที</p></header><figure class="hero-photo-v2"><img src="/assets/photos/tao-ming-school.jpg" alt="อาคารโรงเรียนเต้าหมิง ถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า" loading="eager"><figcaption><span>อาคารโรงเรียนเต้าหมิง ถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า</span><span class="credit">คลังภาพโครงการกั่วป่าโพ้</span></figcaption></figure><div class="story-layout-v2"><div class="story-main-v2"><div class="story-lede-v2"><p>หากคุณได้เดินผ่านย่านถนนอุดมธาราและศรีตะกั่วป่าในวันนี้ ภาพแรกที่เห็นคือตึกแถวสไตล์ชิโนโปรตุกีสเรียงราย ทางเดินด้านหน้ามีหลังคาคลุมแบบ &#x27;หง่อคาขี่&#x27; ที่ช่วยกันแดดและฝนให้ผู้สัญจร มันให้ความรู้สึกเหมือนได้ก้าวย้อนเวลากลับไปในอดีตที่ได้รับการรักษาไว้อย่างดี</p><p>แต่อาคารเหล่านี้ไม่ใช่เพียงฉากหลังที่สวยงามสำหรับการถ่ายภาพ พวกมันคือเอกสารจดหมายเหตุขนาดใหญ่ที่บันทึกความเปลี่ยนแปลงของเมืองตะกั่วป่าไว้ในรูปแบบของอิฐ ปูน และโครงสร้างเหล็ก สถาปัตยกรรมแต่ละชิ้นบอกเล่าเรื่องราวของเมืองที่เติบโตและรุ่งเรืองด้วยเหมืองแร่ดีบุก การค้าทางน้ำ และการหลอมรวมของผู้คนหลากหลายวัฒนธรรม</p><p>เพื่อให้เข้าใจสถาปัตยกรรมของตะกั่วป่าอย่างลึกซึ้ง เราต้องมองลึกลงไปกว่าความสวยงามภายนอก เราจำเป็นต้องแยกแยะระหว่างสิ่งที่ &#x27;สร้างขึ้นใหม่&#x27; กับสิ่งที่ &#x27;ซ่อมแซม&#x27; และทำความเข้าใจชั้นของประวัติศาสตร์ที่ซ่อนอยู่ในกำแพงจวนเจ้าเมือง สะพานเหล็กของคนงานเหมือง และโรงเรียนที่สร้างจากเงินบริจาคของพ่อค้า</p></div><section class="story-section-v2"><h2 id="section-0">จวนเจ้าเมืองและกำแพงที่บอกเล่าความขัดแย้ง</h2><figure class="section-photo-v2"><img src="/assets/culture-street.webp" alt="ถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า" loading="lazy"><figcaption><span>ถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า</span><span class="credit">ภาพวาดประกอบ</span></figcaption></figure><p>ย้อนกลับไปในยุคที่ตะกั่วป่ากำลังเติบโตจากเศรษฐกิจเหมืองแร่ดีบุกและการค้าชายฝั่ง ความมั่งคั่งมาพร้อมกับความขัดแย้งเรื่องผลประโยชน์ กำแพงจวนเจ้าเมืองตะกั่วป่าจึงถูกสร้างขึ้นเพื่อทำหน้าที่คล้ายกำแพงค่าย ป้องกันอันตรายและเป็นที่หลบภัยของชาวเมือง นักวิชาการสันนิษฐานว่ากำแพงนี้น่าจะสร้างขึ้นในสมัยพระยาเสนานุชิต (นุช ณ นคร) เป็นเจ้าเมือง ช่วง พ.ศ. 2383 ถึง 2424</p><p>ตัวกำแพงก่อด้วยปูนผสมกรวดทรายวางซ้อนเป็นชั้น มีฐานที่กว้างกว่าตัวกำแพงเพื่อความมั่นคง ส่วนที่ยังหลงเหลืออยู่ในปัจจุบันมีความสูงราว 5 เมตร ภายในพื้นที่เคยแบ่งเป็นวังหน้า ห้องโถง และวังหลัง ซึ่งสะท้อนถึงการจัดสรรพื้นที่ใช้งานอย่างเป็นระบบของผู้ปกครองเมืองในยุคนั้น</p><p>หลักฐานสำคัญที่ช่วยยืนยันความรุ่งเรืองของการค้าในยุคนั้นมาจากการขุดค้นทางโบราณคดีของกรมศิลปากรใน พ.ศ. 2542 ซึ่งพบเครื่องถ้วยจีนสมัยราชวงศ์ชิง เครื่องถ้วยยุโรป เครื่องแก้ว และชิ้นส่วนประดับอาคาร สิ่งเหล่านี้เป็นเครื่องยืนยันว่าจวนเจ้าเมืองแห่งนี้เคยเชื่อมโยงกับเครือข่ายการค้าระดับโลก</p><p>เมื่อศูนย์กลางเมืองย้ายไปที่เกาะคอเขาและบ้านย่านยาว จวนเจ้าเมืองเดิมจึงหมดบทบาททางการปกครอง แต่ในปัจจุบัน พื้นที่แห่งนี้ได้กลายเป็นโบราณสถานแบบเปิดที่ชุมชนใช้เป็นพื้นที่จัดกิจกรรมทางวัฒนธรรม เช่น งาน &#x27;จากตะโกลา สู่ตะกั่วป่า&#x27; ทำให้กำแพงเก่ากลับมามีชีวิตอีกครั้งในฐานะเวทีของเมือง</p><div class="story-flags-v2"><span class="story-flag-v2 flag-unverified">ปีที่เริ่มสร้างกำแพง</span></div></section><blockquote class="pull-quote-v2"><p>สถาปัตยกรรมไม่ใช่เพียงฉากหลังที่สวยงาม แต่มันคือบันทึกความเปลี่ยนแปลงของเมืองตะกั่วป่าไว้ในรูปแบบของอิฐ ปูน และโครงสร้างเหล็ก</p></blockquote><section class="story-section-v2"><h2 id="section-1">บ้านนายอำเภอในยุคเปลี่ยนผ่าน</h2><figure class="section-photo-v2"><img src="/assets/governor-wall.webp" alt="กำแพงจวนเจ้าเมืองตะกั่วป่า" loading="lazy"><figcaption><span>กำแพงจวนเจ้าเมืองตะกั่วป่า</span><span class="credit">ภาพวาดประกอบ</span></figcaption></figure><p>การเปลี่ยนผ่านจากการปกครองระบบเจ้าเมืองเข้าสู่ระบบอำเภอ ถูกบันทึกไว้ในสถาปัตยกรรมของ &#x27;บ้านขุนอินทร์&#x27; ตามหลักฐานท้องถิ่น บ้านหลังนี้สร้างขึ้นราว พ.ศ. 2460 โดยช่างฝีมือชาวจีน เพื่อเป็นที่พักของ ร.อ.ท. ขุนอินทรคีรี (ช้อย ณ นคร) ผู้สืบสายตระกูลเจ้าเมืองที่ต่อมาได้รับตำแหน่งเป็นนายอำเภอตะกั่วป่า</p><p>ตัวอาคารเป็นตึกอิฐถือปูนสองชั้นแบบชิโนโปรตุกีสประยุกต์ ซึ่งสะท้อนถึงอิทธิพลของสถาปัตยกรรมจากเมืองท่าอย่างปีนังและสิงคโปร์ที่แพร่หลายเข้ามาพร้อมกับการค้าทางทะเล บ้านหลังนี้จึงไม่เพียงแต่แสดงถึงฐานะของเจ้าของ แต่ยังเป็นหลักฐานที่แสดงให้เห็นถึงการเชื่อมโยงของตะกั่วป่ากับโลกภายนอก</p><p>ในการอ่านประวัติศาสตร์จากสถาปัตยกรรม เราต้องระมัดระวังในการแยกแยะระหว่างปีที่สร้างและปีที่ซ่อมแซม รายงานของสำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อมระบุว่า ตระกูล ณ นคร ได้ทำการซ่อมแซมบ้านหลังนี้ใน พ.ศ. 2524 โดยพยายามรักษารูปแบบเดิมไว้ แต่เปลี่ยนวัสดุมุงหลังคาเป็นกระเบื้องลอน</p><p>การรับรู้ข้อมูลการซ่อมแซมนี้ช่วยให้เรามองเห็นบ้านขุนอินทร์ไม่ใช่เพียงแค่อดีตที่หยุดนิ่ง แต่เป็นสิ่งปลูกสร้างที่มีชีวิต ซึ่งได้รับการดูแลรักษาและปรับปรุงโดยผู้อยู่อาศัยตลอดหลายทศวรรษที่ผ่านมา</p><div class="story-flags-v2"><span class="story-flag-v2 flag-unverified">ปีที่สร้างบ้านขุนอินทร์ (พ.ศ. 2460)</span></div></section><blockquote class="pull-quote-v2"><p>จากโครงสร้างเพื่ออุตสาหกรรม สะพานเหล็กบุญสูงได้เปลี่ยนบทบาทมาเป็นเส้นทางสัญจรของชุมชน และกลายเป็นแลนด์มาร์กสำคัญที่ดึงดูดผู้คนให้มาเยี่ยมชมร่องรอยของเมืองแร่</p></blockquote><section class="story-section-v2"><h2 id="section-2">ทุนการศึกษาจากเหมืองแร่และเครือข่ายพ่อค้า</h2><figure class="section-photo-v2"><img src="/assets/iron-bridge.webp" alt="สะพานเหล็กบุญสูง" loading="lazy"><figcaption><span>สะพานเหล็กบุญสูง</span><span class="credit">ภาพวาดประกอบ</span></figcaption></figure><p>ความมั่งคั่งจากเหมืองแร่ดีบุกไม่ได้ถูกใช้ไปกับการสร้างที่พักอาศัยส่วนตัวเท่านั้น แต่ยังนำไปสู่การสร้างสถาบันของชุมชนด้วย อาคาร &#x27;โรงเรียนเต้าหมิง&#x27; ซึ่งสร้างขึ้นใน พ.ศ. 2465 เป็นตัวอย่างที่ชัดเจนของการร่วมแรงร่วมใจกันในชุมชน</p><p>ทุนในการก่อสร้างโรงเรียนแห่งนี้มาจากการเรี่ยไรเงินในหมู่เศรษฐีเหมืองแร่และพ่อค้าชาวจีน ทั้งจากตลาดเก่า ย่านยาว ระนอง และภูเก็ต สิ่งนี้แสดงให้เห็นถึงเครือข่ายความสัมพันธ์ทางภูมิศาสตร์และเศรษฐกิจที่แข็งแกร่งของชุมชนชาวจีนในภูมิภาคนี้</p><p>อาคารโรงเรียนสร้างโดยช่างชาวจีนในรูปแบบชิโนโปรตุกีสประยุกต์ และเคยเปิดสอนระดับประถมศึกษามาอย่างยาวนาน มันทำหน้าที่เป็นศูนย์กลางในการส่งต่อความรู้ ภาษา และวัฒนธรรมให้กับเด็กๆ ชาวไทยเชื้อสายจีนในตะกั่วป่ารุ่นแล้วรุ่นเล่า</p><p>แม้ว่าในปัจจุบันโรงเรียนจะยุติการเรียนการสอนไปแล้ว แต่อาคารยังคงได้รับการดูแลโดยมูลนิธิโรงเรียนเต้าหมิงตะกั่วป่า ยืนหยัดเป็นอนุสรณ์สถานแห่งความมุ่งมั่นด้านการศึกษาของชุมชนในยุคทองของเมือง</p></section><section class="story-section-v2"><h2 id="section-3">จากเรือขุดแร่สู่สะพานของคนงาน</h2><figure class="section-photo-v2"><img src="/assets/khun-in.webp" alt="บ้านขุนอินทร์" loading="lazy"><figcaption><span>บ้านขุนอินทร์</span><span class="credit">ภาพวาดประกอบ</span></figcaption></figure><p>ในขณะที่บ้านพักและโรงเรียนสะท้อนถึงความมั่งคั่งของพ่อค้า &#x27;สะพานเหล็กบุญสูง&#x27; กลับบอกเล่าเรื่องราวของยุคอุตสาหกรรมและชนชั้นแรงงาน สะพานแห่งนี้สร้างขึ้นใน พ.ศ. 2511 และเป็นผลผลิตโดยตรงจากอุตสาหกรรมเหมืองแร่ดีบุกของเมือง</p><p>ก่อนที่จะมีสะพาน คนงานเหมืองและชาวบ้านต้องพึ่งพาเรือแจวในการข้ามคลองตะกั่วป่าที่มีความกว้างกว่า 40 เมตร ซึ่งเป็นเรื่องยากลำบากอย่างยิ่งในช่วงฤดูน้ำหลาก แม้จะเคยมีการสร้างสะพานไม้สำหรับคนเดินและรถจักรยาน แต่เมื่ออุตสาหกรรมขยายตัว ความต้องการโครงสร้างที่แข็งแรงกว่าจึงเพิ่มขึ้น</p><p>บริษัทเรือขุดแร่จุติบุญสูงได้ริเริ่มสร้างสะพานแห่งนี้ โดยนำโครงเหล็กจากเรือขุดแร่ที่ปลดระวางแล้วมาประกอบกันเป็นสะพานเหล็กโคกขนุนที่มีความยาวกว่า 200 เมตร สะพานแห่งนี้จึงกลายเป็นเส้นทางลัดสำคัญที่เชื่อมต่อย่านตลาดเก่าเข้ากับพื้นที่เหมืองแร่ อำนวยความสะดวกให้กับแรงงานและการขนส่ง</p><p>แม้วันนี้เสียงของเครื่องจักรเหมืองแร่จะเงียบลงไปนานแล้ว แต่สะพานเหล็กยังคงอยู่ มันได้เปลี่ยนบทบาทจากโครงสร้างเพื่ออุตสาหกรรมมาเป็นเส้นทางสัญจรของชุมชน และกลายเป็นแลนด์มาร์กสำคัญที่ดึงดูดผู้คนให้มาเยี่ยมชมร่องรอยของเมืองแร่ตะกั่วป่า</p></section><section class="story-section-v2"><h2 id="section-4">ถนนสายวัฒนธรรมและตึกแถวที่กลับมามีชีวิต</h2><figure class="section-photo-v2"><img src="/assets/photos/shophouse-78.webp" alt="ตึกแถวเลขที่ 78 บนถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า" loading="lazy"><figcaption><span>ตึกแถวเลขที่ 78 บนถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า</span><span class="credit">คลังภาพโครงการกั่วป่าโพ้</span></figcaption></figure><p>ตึกแถวตลอดสองฝั่งถนนอุดมธาราและถนนศรีตะกั่วป่าคือมรดกทางสถาปัตยกรรมที่โดดเด่นที่สุดของเมือง อาคารเหล่านี้ถูกสร้างขึ้นเพื่อให้สอดคล้องกับวิถีชีวิตการค้า โดยมีพื้นที่ชั้นล่างสำหรับทำธุรกิจและทางเดินหง่อคาขี่ที่เชื่อมต่อกัน อาคารเหล่านี้ได้รับอิทธิพลจากสถาปัตยกรรมอาณานิคมช่องแคบ ซึ่งสะท้อนถึงเครือข่ายการค้ากับปีนังและสิงคโปร์</p><p>หลังจากที่อุตสาหกรรมเหมืองแร่ซบเซาและศูนย์กลางการค้าของเมืองย้ายออกไป ย่านตลาดเก่าแห่งนี้ก็เผชิญกับความเงียบเหงา อาคารหลายหลังถูกปล่อยให้ทรุดโทรมตามกาลเวลา ราวกับว่ายุคทองของถนนสายนี้ได้ผ่านพ้นไปแล้ว</p><p>แต่สถาปัตยกรรมที่ยังคงอยู่ได้กลายเป็นต้นทุนสำคัญในการฟื้นฟูย่านนี้ขึ้นมาใหม่ ประมาณ พ.ศ. 2550 ได้ริเริ่มโครงการ &#x27;ตะกั่วป่า เมืองเก่า เล่าความหลัง&#x27; ซึ่งนำร่องการเปิดพื้นที่ถนนให้เป็นถนนคนเดินเชิงวัฒนธรรม ก่อนจะพัฒนามาเป็นถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่าในปัจจุบัน</p><p>ทุกวันอาทิตย์ ถนนสายนี้จะปิดการจราจรและเปิดเป็นตลาดที่คึกคัก อาคารเก่าแบบชิโนโปรตุกีสกลับมาทำหน้าที่เป็นฉากหลังให้กับกิจกรรมของชุมชน ทั้งการขายอาหารพื้นบ้าน งานฝีมือ และการแสดง ซึ่งพิสูจน์ให้เห็นว่าสถาปัตยกรรมในอดีตสามารถค้นพบชีวิตและบทบาทใหม่ในยุคปัจจุบันได้</p><div class="story-flags-v2"><span class="story-flag-v2 flag-disputed">ปีที่เริ่มโครงการถนนคนเดิน</span></div></section><section class="story-places-v2"><h2>ไปดูของจริงได้ที่ไหน</h2><div class="mini-cards-v2"><div class="place-card-mini"><div><h3>ถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า</h3><button class="button button-outline" data-trip-add="culture-street">เพิ่มลงทริป</button></div></div><div class="place-card-mini"><div><h3>กำแพงจวนเจ้าเมืองตะกั่วป่า</h3><button class="button button-outline" data-trip-add="governor-wall">เพิ่มลงทริป</button></div></div><div class="place-card-mini"><div><h3>สะพานเหล็กบุญสูง</h3><button class="button button-outline" data-trip-add="iron-bridge">เพิ่มลงทริป</button></div></div><div class="place-card-mini"><div><h3>บ้านขุนอินทร์</h3><button class="button button-outline" data-trip-add="khun-in">เพิ่มลงทริป</button></div></div><div class="place-card-mini"><div><h3>โรงเรียนเต้าหมิง</h3><button class="button button-outline" data-trip-add="tao-ming">เพิ่มลงทริป</button></div></div></div></section><aside class="story-outro"><p>อาคารในบทความนี้ส่วนใหญ่ดูได้เฉพาะภายนอก · บ้านไม้สักหลังหนึ่งในย่านตลาดเก่าเปิดเป็นคาเฟ่ จึงเป็นหนึ่งในไม่กี่หลังที่เดินเข้าไปดูโครงสร้างไม้ ฝ้า และช่องแสงข้างในได้จริง</p><a class="text-link" href="https://siwaracafe.com/" target="_blank" rel="noopener">บ้านไม้สักที่เข้าไปข้างในได้ ↗</a></aside><details class="unknowns-box-v2"><summary>ข้อมูลที่ยังหาไม่เจอ</summary><ul><li>ปีที่แน่นอนของการสร้างบ้านขุนอินทร์และกำแพงจวนเจ้าเมืองตะกั่วป่า</li><li>ข้อมูลเอกสารการซ่อมแซมบูรณะตัวโครงสร้างสะพานเหล็กบุญสูงในระยะหลัง</li></ul></details><section class="story-sources-v2"><h2>แหล่งข้อมูล</h2><ol><li><cite>โครงการกำหนดขอบเขตพื้นที่เมืองเก่า · เมืองเก่าตะกั่วป่า</cite> · สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม · PDF หน้า 55 ถึง 58 · <a href="https://nced.onep.go.th/opendata/2568/oldtown36_announce/takuapa.pdf" target="_blank" rel="noopener">ดูแหล่งที่มา</a> (เข้าถึง 2026-09-07)</li><li><cite>อาคารโรงเรียนเต้าหมิง</cite> · สผ. ฐานข้อมูลสิ่งแวดล้อมศิลปกรรม · ส่วนความสำคัญ/ลักษณะ · <a href="https://culturalenvi.onep.go.th/site/detail/4420" target="_blank" rel="noopener">ดูแหล่งที่มา</a> (เข้าถึง 2026-09-07)</li><li><cite>ตึกขุนอินทร์</cite> · สผ. ฐานข้อมูลสิ่งแวดล้อมศิลปกรรม · ส่วนความสำคัญ/ลักษณะ · <a href="https://culturalenvi.onep.go.th/site/detail/4423" target="_blank" rel="noopener">ดูแหล่งที่มา</a> (เข้าถึง 2026-09-07)</li><li><cite>กำแพงจวนเจ้าเมืองตะกั่วป่า</cite> · ศูนย์มานุษยวิทยาสิรินธร (องค์การมหาชน) · สาระสำคัญทางโบราณคดี · <a href="https://archaeology.sac.or.th/archaeology/874" target="_blank" rel="noopener">ดูแหล่งที่มา</a> (เข้าถึง 2026-09-07)</li><li><cite>ถนนวัฒนธรรมเมืองเก่าตะกั่วป่า</cite> · กรมการค้าภายใน · ระเบียนตลาด · <span class="source-offline">ดูแหล่งที่มา <small>แหล่งเดิมออฟไลน์ · ตรวจเมื่อ 8 ก.ย. 2569</small></span> (เข้าถึง 2026-09-07)</li></ol></section></div><div class="story-sidebar-v2"><aside class="evidence-box-v2"><h3>หลักฐานอยู่ตรงไหน</h3><ul class="ev-items-v2"><li><div class="ev-claim">ปีที่สร้างบ้านขุนอินทร์</div><div class="ev-status unverified">UNVERIFIED</div><div class="ev-explain">ข้อมูลท้องถิ่นระบุว่าสร้าง พ.ศ. 2460 แต่รายงานของ สผ. และฐานข้อมูลทางการไม่ได้ระบุปีสร้างที่ชัดเจน จึงต้องรอหลักฐานปฐมภูมิมายืนยัน <a href="https://culturalenvi.onep.go.th/site/detail/4423" target="_blank" rel="noopener">อ้างอิง ↗</a></div></li><li><div class="ev-claim">ปีที่เริ่มถนนสายวัฒนธรรม</div><div class="ev-status disputed">DISPUTED</div><div class="ev-explain">ทะเบียนตลาดของกรมการค้าภายในระบุวันก่อตั้ง/ได้รับการส่งเสริมเป็น 17 ธันวาคม 2560 แต่แหล่งข่าวและงานวิจัยระบุการเริ่มกิจกรรมตั้งแต่ พ.ศ. 2550 จึงอาจเป็นคนละหมุดหมายระหว่างการจัดงานกับการขึ้นทะเบียน <span class="source-offline">อ้างอิง ↗ <small>แหล่งเดิมออฟไลน์ · ตรวจเมื่อ 8 ก.ย. 2569</small></span></div></li><li><div class="ev-claim">ปีที่สร้างกำแพงจวนเจ้าเมือง</div><div class="ev-status unverified">UNVERIFIED</div><div class="ev-explain">นักวิชาการสันนิษฐานว่าสร้างในสมัยพระยาเสนานุชิต (นุช) ระหว่าง พ.ศ. 2383 ถึง 2424 แต่ยังไม่พบหลักฐานระบุปีที่เริ่มสร้างแน่ชัด <a href="https://archaeology.sac.or.th/archaeology/874" target="_blank" rel="noopener">อ้างอิง ↗</a></div></li></ul></aside><nav class="story-toc-v2 scrollspy" id="story-toc"><h2>เนื้อหาในบทความ</h2><ul class="scrollspy-nav"><li><a href="#section-0">จวนเจ้าเมืองและกำแพงที่บอกเล่าความขัดแย้ง</a></li><li><a href="#section-1">บ้านนายอำเภอในยุคเปลี่ยนผ่าน</a></li><li><a href="#section-2">ทุนการศึกษาจากเหมืองแร่และเครือข่ายพ่อค้า</a></li><li><a href="#section-3">จากเรือขุดแร่สู่สะพานของคนงาน</a></li><li><a href="#section-4">ถนนสายวัฒนธรรมและตึกแถวที่กลับมามีชีวิต</a></li></ul></nav></div></div></div></main><footer class="site-footer"><div class="footer-top"><a href="/" class="footer-name">ตะกั่วป่า <em>101</em></a><p>เมืองหนึ่งเมือง<br>มีเรื่องให้ค่อย ๆ รู้จัก</p><a class="round-link" href="#main" aria-label="กลับขึ้นด้านบน">↑</a></div><div class="footer-bottom"><a href="https://siwaracafe.com/">จัดทำโดยบ้านศิวรา ตะกั่วป่า</a><span>คู่มือเมืองเก่า · จังหวัดพังงา</span><a href="https://www.takuapacity.go.th/pdf/travel-preview.pdf">แผ่นพับต้นทาง ↗</a></div></footer><nav class="tabbar" aria-label="เมนูด่วน"><a href="/"><span class="tb-glyph" aria-hidden="true">⌂</span>หน้าแรก</a><a href="/map/"><span class="tb-glyph" aria-hidden="true">◈</span>แผนที่</a><a href="/eat/"><span class="tb-glyph" aria-hidden="true">◉</span>กินอะไร</a><a href="/trip/"><span class="tb-glyph" aria-hidden="true">◫</span>ทริป<span class="qs-badge" data-trip-count hidden>0</span></a></nav></body></html>
+--
+site/places/riverwalk/index.html:1:<!doctype html><html lang="th" data-base="" data-news-api=""><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>ตลาดริมน้ำตะกั่วป่า · ตลาดท่าน้ำศรีเมือง · ตะกั่วป่า 101</title><meta name="description" content="อาหารและชีวิตริมแม่น้ำ · ตลาดวันเสาร์ตะกั่วป่า · ตลาดตะกั่วป่า · ของกินตะกั่วป่า"><meta name="robots" content="index,follow,max-image-preview:large"><meta property="og:title" content="ตลาดริมน้ำตะกั่วป่า · ตลาดท่าน้ำศรีเมือง"><meta property="og:description" content="อาหารและชีวิตริมแม่น้ำ · ตลาดวันเสาร์ตะกั่วป่า · ตลาดตะกั่วป่า · ของกินตะกั่วป่า"><meta property="og:url" content="https://takuapa101.com/places/riverwalk/"><meta property="og:type" content="website"><meta property="og:image" content="https://takuapa101.com/assets/og/riverwalk.png"><meta property="og:locale" content="th_TH"><meta property="og:site_name" content="ตะกั่วป่า 101"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://takuapa101.com/assets/og/riverwalk.png"><meta name="generator" content="ตะกั่วป่า 101"><link rel="canonical" href="https://takuapa101.com/places/riverwalk/"><link rel="preload" href="/assets/NotoSerifThai.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/assets/IBMPlexSansThaiLooped-Regular.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="/assets/design.css"><script type="application/ld+json">[{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "หน้าแรก", "item": "https://takuapa101.com/"}, {"@type": "ListItem", "position": 2, "name": "ตลาดริมน้ำตะกั่วป่า · ตลาดท่าน้ำศรีเมือง", "item": "https://takuapa101.com/places/riverwalk/"}]}, {"@context": "https://schema.org", "@type": "TouristAttraction", "name": "ตลาดริมน้ำตะกั่วป่า", "url": "https://takuapa101.com/places/riverwalk/", "image": "https://takuapa101.com/assets/riverwalk.webp", "description": "พื้นที่ตลาดริมแม่น้ำที่มีสินค้าและอาหารท้องถิ่น", "address": {"@type": "PostalAddress", "streetAddress": "ถนนศรีตะกั่วป่า/ถนนริมคลอง ข้างวัดย่านยาว", "addressLocality": "ตะกั่วป่า", "addressRegion": "พังงา", "postalCode": "82110", "addressCountry": "TH"}, "geo": {"@type": "GeoCoordinates", "latitude": 8.87157, "longitude": 98.35091}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "เปิดให้เข้าชมเวลาใด", "acceptedAnswer": {"@type": "Answer", "text": "ข้อมูลยังไม่ยืนยัน · วันเสาร์ 15:00 ถึง 20:00 น."}}, {"@type": "Question", "name": "มีค่าเข้าชมหรือไม่", "acceptedAnswer": {"@type": "Answer", "text": "ข้อมูลยังไม่ยืนยัน · ไม่มีค่าธรรมเนียมการเข้าชม"}}, {"@type": "Question", "name": "เดินทางจากตัวเมืองตะกั่วป่าอย่างไร", "acceptedAnswer": {"@type": "Answer", "text": "เดินทางไปย่านริมน้ำ/ถนนศรีตะกั่วป่า บริเวณข้างวัดย่านยาว; แหล่งข้อมูลระบุว่าสามารถใช้รถรับจ้างท้องถิ่นหรือมอเตอร์ไซค์รับจ้างจากสถานีขนส่งตะกั่วป่าได้"}}, {"@type": "Question", "name": "สถานที่นี้มีประวัติความเป็นมาอย่างไร", "acceptedAnswer": {"@type": "Answer", "text": "ตลาดมีชื่อในโครงการตลาดประชารัฐต้องชมว่า ‘ตลาดริมน้ำตะกั่วป่า ร่วมใจประชารัฐ’ และตั้งอยู่ถนนริมคลองข้างวัดย่านยาว"}}, {"@type": "Question", "name": "มีจุดเด่นอะไรให้ชม", "acceptedAnswer": {"@type": "Answer", "text": "มีแผงจำหน่ายขนมพื้นบ้าน อาหารพื้นเมือง สินค้าโอทอป และของดีเมืองตะกั่วป่า ตลาดตั้งอยู่ติดแนวคลอง/แม่น้ำตะกั่วป่า เหมาะกับการชมวิวริมน้ำและถ่ายภาพ รีวิวผู้ใช้ระบุว่ามีดนตรีสดโดยนักเรียนในบางช่วง"}}]}]</script><script src="/assets/design.js" defer></script><script src="/assets/trip.js" defer></script><link rel="stylesheet" href="/assets/ui.css"><link rel="stylesheet" href="/assets/theme.css"><script src="/assets/theme.js"></script><script src="/assets/search.js" defer></script><script src="/assets/live-news.js" defer></script><meta name="theme-color" content="#203f39"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"></head><body class="inner-page"><a class="skip" href="#main">ข้ามไปเนื้อหา</a><header class="site-header"><a class="brand" href="/" aria-label="ตะกั่วป่า 101 หน้าแรก"><span class="brand-mark">๑๐๑</span><span>ตะกั่วป่า<small>TAKUA PA FIELD NOTES</small></span></a><nav id="main-nav" aria-label="เมนูหลัก"><a href="/places/" aria-current="page">สถานที่</a><a href="/stories/">เรื่องเล่า</a><a href="/map/">แผนที่</a><a href="/rest/">กินเที่ยว</a><a href="/news/">ความเคลื่อนไหว</a><a href="/trip/">ทริปของคุณ</a><a href="/traditions/" class="nav-more">ประเพณี</a><a href="/eat/" class="nav-more">กินและของฝาก</a><a href="/routes/" class="nav-more">เส้นทางเดิน</a><a href="/leaflet/" class="nav-more">แผ่นพับ</a><a href="/about/" class="nav-more">เกี่ยวกับ</a></nav><div class="header-tools"><button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="สลับเป็นโหมดกลางคืน"><span class="tt-night" aria-hidden="true">☾</span><span class="tt-day" aria-hidden="true">☀</span></button><button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="main-nav" aria-label="เปิดเมนู"><span class="ib-glyph" aria-hidden="true">☰</span></button><button class="icon-button" type="button" data-open-search aria-label="ค้นหาในเว็บไซต์ (กด Ctrl+K)"><span class="ib-glyph" aria-hidden="true">⌕</span></button><a class="icon-button" href="/trip/" aria-label="ทริปของคุณ"><span class="ib-glyph" aria-hidden="true">◫</span><span class="qs-badge" data-trip-count hidden>0</span></a><a class="header-map" href="/map/">เปิดแผนที่ ↗</a></div></header><main id="main"><div class="breadcrumbs"><a href="/">หน้าแรก</a> / <a href="/places/">สถานที่</a> / ตลาดและของกิน</div><header class="place-hero full-place-hero"><div><span class="chapter">บันทึกสถานที่ · ตลาดและของกิน</span><h1>ตลาดริมน้ำตะกั่วป่า</h1><p class="english">Takuapa Riverwalk</p><span class="fact-status confirmed">ยืนยันแล้ว 9 ข้อ</span><p><a class="text-link" href="#eras">ตอนนั้น · ก่อนหน้า · ตอนนี้ ↓</a></p><p class="place-hero-actions"><button class="button" type="button" data-trip-add="riverwalk">เพิ่มลงทริป</button><a class="text-link" href="/trip/">ดูทริปของคุณ</a></p></div><div class="place-hero-art"><figure class="research-photo"><img src="/assets/photos/kuapapoh-port.webp" alt="ภาพเก่า เรือจอดที่ท่าน้ำตะกั่วป่า" loading="eager"><figcaption>ภาพเก่า เรือจอดที่ท่าน้ำตะกั่วป่า<small>เครดิต · คลังภาพโครงการกั่วป่าโพ้</small><small>สัญญาอนุญาต · ใช้ในเว็บนี้ได้</small></figcaption></figure></div></header><div class="research-layout"><aside class="visit-card" id="visit"><h2>ข้อมูลใช้จริง</h2><dl><div><dt>พิกัด</dt><dd>8.87157, 98.35091 <span class="fact-status unknown">ยังไม่ยืนยัน</span></dd></div><div class="directions"><a href="https://www.google.com/maps/search/?api=1&amp;query=8.87157,98.35091" target="_blank" rel="noopener">นำทางด้วย Google Maps ↗</a><a href="https://mapcarta.com/W816145865" target="_blank" rel="noopener">แหล่งพิกัด ↗</a></div><div><dt>เวลาเปิด</dt><dd>วันเสาร์ 15:00 ถึง 20:00 น. <span class="fact-status unverified">ยังไม่ยืนยัน</span></dd></div><div><dt>ค่าเข้า</dt><dd>ไม่มีค่าธรรมเนียมการเข้าชม <span class="fact-status unverified">ยังไม่ยืนยัน</span></dd></div><div><dt>ที่จอดรถ</dt><dd><span class="muted">ยังไม่ยืนยัน</span></dd></div><div><dt>ห้องน้ำ</dt><dd><span class="muted">ยังไม่ยืนยัน</span></dd></div><div><dt>รถเข็น</dt><dd><span class="muted">ยังไม่ยืนยัน</span></dd></div><div><dt>การแต่งกาย</dt><dd><span class="muted">ยังไม่ยืนยัน</span></dd></div><div><dt>โทรศัพท์</dt><dd><span class="muted">ยังไม่ยืนยัน</span></dd></div><div><dt>เพจ</dt><dd><span class="muted">ยังไม่ยืนยัน</span></dd></div><div><dt>เว็บไซต์</dt><dd><span class="muted">ยังไม่ยืนยัน</span></dd></div><div><dt>ไลน์</dt><dd><span class="muted">ยังไม่ยืนยัน</span></dd></div><div><span class="source-offline">แหล่งข้อมูลการเข้าชม ↗ <small>แหล่งเดิมออฟไลน์ · ตรวจเมื่อ 8 ก.ย. 2569</small></span><a href="https://www.thai-tour.com/place/phangnga/takuapa/4206" target="_blank" rel="noopener">แหล่งข้อมูลการเข้าชม ↗</a><a href="https://www.gplace.com/960259" target="_blank" rel="noopener">แหล่งข้อมูลการเข้าชม ↗</a><a href="https://wanderlog.com/place/details/11412806/takuapa-river-market" target="_blank" rel="noopener">แหล่งข้อมูลการเข้าชม ↗</a></div></dl></aside><nav class="research-rail" aria-label="สารบัญหน้านี้"><span class="chapter">ในบันทึกหน้านี้</span><a href="#visit">ข้อมูลใช้จริง</a><a href="#eras">ตอนนั้น · ก่อนหน้า · ตอนนี้</a><a href="#timeline">เส้นเวลาแบบจุด</a><a href="#gallery">แกลเลอรี</a><a href="#highlights">จุดเด่นที่ควรดู</a><a href="#did_you_know">รู้หรือไม่</a><a href="#getting_there">วิธีเดินทาง</a><a href="#nearby">ที่ใกล้เคียงและสถานที่ในหมวดเดียวกัน</a><a href="#nearby-note"></a><a href="#faq">คำถามที่พบบ่อย</a><a href="#sources">ที่มาของข้อมูล</a></nav><div class="research-body"><section class="research-section" id="eras"><h2>ตอนนั้น · ก่อนหน้า · ตอนนี้</h2><div class="era-axis"><article class="era-card" data-era="then"><span class="chapter">ตอนนั้น</span><h3>จากท่าเรือเมืองเหมือง สู่พื้นที่ตลาดริมน้ำ</h3><p class="era-years">ไม่พบปีสร้างตลาดปัจจุบัน; บริบทเมืองเก่า พ.ศ. 2325 ถึง ต้นพุทธศตวรรษที่ 20</p><span class="fact-status confirmed">ยืนยันแล้ว</span><p>หลักฐานที่มีอธิบายประวัติของพื้นที่เมืองตะกั่วป่าและท่าน้ำ มากกว่าจะระบุวันกำเนิดตลาดริมน้ำแห่งนี้โดยตรง ตะกั่วป่าเป็นเมืองท่าและศูนย์กลางแลกเปลี่ยนสินค้ามาแต่โบราณ ก่อนจะเติบโตจากการขุดแร่ดีบุกและการค้าทางน้ำ เมืองเก่าตั้งอยู่ในทำเลที่มีแม่น้ำล้อมรอบสามด้าน จึงเหมาะทั้งต่อการเดินเรือ การค้า และการป้องกันเมือง</p><figure class="research-photo"><img src="/assets/photos/kuapapoh-port.webp" alt="ภาพเก่า เรือจอดที่ท่าน้ำตะกั่วป่า" loading="lazy"><figcaption>ภาพเก่า เรือจอดที่ท่าน้ำตะกั่วป่า<small>เครดิต · คลังภาพโครงการกั่วป่าโพ้</small><small>สัญญาอนุญาต · ใช้ในเว็บนี้ได้</small></figcaption></figure><div class="era-sources">แหล่งอ้างอิง · <a href="https://culturalenvi.onep.go.th/site/detail/4428" target="_blank" rel="noopener">สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม</a> · <a href="https://wikicommunity.sac.or.th/community/1527" target="_blank" rel="noopener">ศูนย์มานุษยวิทยาสิรินธร: ชุมชนตลาดใหญ่</a></div></article><article class="era-card" data-era="before"><span class="chapter">ก่อนหน้า</span><h3>เมื่อเหมืองซบเซา ท่าน้ำกลายเป็นความทรงจำ แล้วถูกปลุกให้กลับมาคึกคัก</h3><p class="era-years">ราวทศวรรษ 2520 ถึง พ.ศ. 2562</p><span class="fact-status confirmed">ยืนยันแล้ว</span><p>ช่วงหลังจึงเกิดการฟื้นพื้นที่ในรูปตลาดชุมชน ภายใต้ชื่อ “ตลาดริมน้ำตะกั่วป่า ร่วมใจประชารัฐ” โดยเอกสารกรมการค้าภายในที่จัดทำข้อมูล ณ วันที่ 31 มกราคม 2562 ระบุที่ตั้งข้างวัดย่านยาวและเวลาเปิดวันเสาร์ 15.00 ถึง 20.00 น. ยังไม่พบหลักฐานว่าตลาดได้รับผลกระทบโดยตรงจากสึนามิ พ.ศ. 2547 หรือได้รับการขึ้นทะเบียนโบราณสถานในนามตลาด</p><figure class="research-photo"><img src="/assets/photos/kuapapoh-port.webp" alt="ภาพเก่า เรือจอดที่ท่าน้ำตะกั่วป่า" loading="lazy"><figcaption>ภาพเก่า เรือจอดที่ท่าน้ำตะกั่วป่า<small>เครดิต · คลังภาพโครงการกั่วป่าโพ้</small><small>สัญญาอนุญาต · ใช้ในเว็บนี้ได้</small></figcaption></figure><div class="era-sources">แหล่งอ้างอิง · <span class="source-offline">กรมการค้าภายใน กระทรวงพาณิชย์ <small>แหล่งเดิมออฟไลน์ · ตรวจเมื่อ 8 ก.ย. 2569</small></span> · <a href="https://culturalenvi.onep.go.th/site/detail/4428" target="_blank" rel="noopener">สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม</a></div></article><article class="era-card" data-era="now"><span class="chapter">ตอนนี้</span><h3>ตลาดเสาร์ริมคลองที่พาความทรงจำเมืองเก่ากลับมาเดินได้อีกครั้ง</h3><p class="era-years">2569 / 2026</p><span class="fact-status unverified">ยังไม่ยืนยัน</span><p>ตลาดตั้งอยู่ในภูมิทัศน์เมืองเก่าที่มีอาคารจีนและชิโน-โปรตุกีส กิจกรรมริมแม่น้ำของเทศบาลยังปรากฏในเอกสารแผนงาน เช่น การทำบุญตักบาตรบริเวณริมแม่น้ำข้างวัดนิกรวราราม และกระทรวงวัฒนธรรมมีรายการเทศกาลอาหารทะเลที่ระบุตลาดเป็นสถานที่จัด อย่างไรก็ดี ยังไม่พบชื่อหน่วยงานหรือบุคคลที่ดูแลตลาดโดยตรง รวมถึงโครงการบูรณะถาวรของตัวตลาดในปี 2569</p><div class="era-sources">แหล่งอ้างอิง · <a href="https://www.gplace.com/960259" target="_blank" rel="noopener">Gplace</a> · <a href="https://www.thai-tour.com/place/phangnga/takuapa/4206" target="_blank" rel="noopener">Thai-tour</a> · <a href="https://www.takuapacity.go.th/files/com_strategy/2022-12_231dcd9d5169573.pdf" target="_blank" rel="noopener">เทศบาลเมืองตะกั่วป่า: รายงานติดตามแผนพัฒนา</a> · <a href="https://calendar.m-culture.go.th/events/103651" target="_blank" rel="noopener">ปฏิทินวัฒนธรรม กระทรวงวัฒนธรรม</a></div></article></div></section><section class="research-section" id="timeline"><h2>เส้นเวลาแบบจุด</h2><ol class="point-timeline" tabindex="0" aria-label="เส้นเวลา เลื่อนเพื่ออ่านเหตุการณ์"><li><span class="fact-status confirmed">ยืนยันแล้ว</span><p class="era-years">พ.ศ. 2352</p><h3>เมืองเดิมถูกพม่าทำลายและผู้คนอพยพ</h3><p>เมืองตะกั่วป่าเดิมถูกทำลายจนร้าง ก่อนมีการฟื้นเมืองบริเวณบ้านตลาดใหญ่ในสมัยรัชกาลที่ 3</p><a href="https://culturalenvi.onep.go.th/site/detail/4428" target="_blank" rel="noopener">อ่านแหล่งอ้างอิง ↗</a></li><li><span class="fact-status confirmed">ยืนยันแล้ว</span><p class="era-years">พ.ศ. 2561</p><h3>ตลาดถูกระบุในโครงการตลาดต้องชม</h3><p>เอกสารภาครัฐระบุชื่อ ตลาดริมน้ำตะกั่วป่า ร่วมใจประชารัฐ ในจังหวัดพังงา</p><a href="https://einspection.moc.go.th/th/file/get/file/20210720dcb8f52155b576a7ca523b2a2247e871134559.pdf" target="_blank" rel="noopener">อ่านแหล่งอ้างอิง ↗</a></li><li><span class="fact-status confirmed">ยืนยันแล้ว</span><p class="era-years">ข้อมูล ณ 31 มกราคม 2562</p><h3>มีข้อมูลที่ตั้งและเวลาตลาดอย่างเป็นทางการ</h3><p>กรมการค้าภายในระบุว่าตลาดอยู่ถนนริมคลองข้างวัดย่านยาว เปิดวันเสาร์ 15.00 ถึง 20.00 น.</p><span class="source-offline">อ่านแหล่งอ้างอิง ↗ <small>แหล่งเดิมออฟไลน์ · ตรวจเมื่อ 8 ก.ย. 2569</small></span></li><li><span class="fact-status confirmed">ยืนยันแล้ว</span><p class="era-years">ไม่ระบุปี</p><h3>เมืองตะกั่วป่าเติบโตเป็นเมืองท่าและศูนย์กลางการค้า</h3><p>พื้นที่ริมแม่น้ำเป็นแกนของการเดินเรือ แลกเปลี่ยนสินค้า และการตั้งถิ่นฐานของผู้คนหลายชาติ</p><a href="https://culturalenvi.onep.go.th/site/detail/4428" target="_blank" rel="noopener">อ่านแหล่งอ้างอิง ↗</a></li><li><span class="fact-status confirmed">ยืนยันแล้ว</span><p class="era-years">ไม่ระบุปี</p><h3>ย่านจับเสทำหน้าที่เป็นท่าเรือเก่า</h3><p>ชื่อจับเส/จับเซ้เป็นคำจีนฮกเกี้ยนที่หมายถึงท่าเรือ และสัมพันธ์กับชุมชนพ่อค้าจีนกับเศรษฐกิจเหมืองแร่</p><a href="https://wikicommunity.sac.or.th/community/1527" target="_blank" rel="noopener">อ่านแหล่งอ้างอิง ↗</a></li><li><span class="fact-status confirmed">ยืนยันแล้ว</span><p class="era-years">ไม่ระบุปี</p><h3>เหมืองแร่ทยอยปิด เมืองเปลี่ยนจากศูนย์กลางเหมืองสู่เมืองเก่า</h3><p>แหล่งข้อมูลประวัติศาสตร์ท้องถิ่นระบุว่าความรุ่งเรืองจากเหมืองลดลงหลังเหมืองทยอยปิด และแม่น้ำตื้นเขินจากตะกอนเหมือง</p><a href="https://www.muangboranjournal.com/post/Takuapa_Naver_Ending_Stories" target="_blank" rel="noopener">อ่านแหล่งอ้างอิง ↗</a></li><li><span class="fact-status confirmed">ยืนยันแล้ว</span><p class="era-years">ไม่ระบุปี</p><h3>เทศกาลอาหารทะเลใช้ตลาดเป็นสถานที่จัด</h3><p>ปฏิทินวัฒนธรรมของกระทรวงวัฒนธรรมมีรายการ Takuapa Seafood Festival ณ ตลาดริมน้ำตะกั่วป่า แต่หน้าที่เปิดได้ไม่แสดงวันที่จัดอย่างชัดเจน</p><a href="https://calendar.m-culture.go.th/events/103651" target="_blank" rel="noopener">อ่านแหล่งอ้างอิง ↗</a></li></ol></section><section class="research-section" id="gallery"><h2>แกลเลอรี</h2><div data-gallery><div class="gallery-tabs" hidden><button type="button" data-tab="today">ภาพวันนี้</button><button type="button" data-tab="archive">ภาพเก่า</button></div><div id="gallery-today" data-panel="today"><h3>ภาพวันนี้</h3><div class="photo-grid"><p class="muted">ยังไม่มีภาพที่ได้รับอนุญาตให้เผยแพร่ในหมวดนี้</p></div></div><div id="gallery-archive" data-panel="archive"><h3>ภาพเก่า</h3><div class="photo-grid"><figure class="research-photo"><a data-lightbox href="/assets/photos/kuapapoh-port.webp" aria-label="ขยายภาพ · ภาพเก่า เรือจอดที่ท่าน้ำตะกั่วป่า"><img src="/assets/photos/kuapapoh-port.webp" alt="ภาพเก่า เรือจอดที่ท่าน้ำตะกั่วป่า" loading="lazy"></a><figcaption>ภาพเก่า เรือจอดที่ท่าน้ำตะกั่วป่า<small>เครดิต · คลังภาพโครงการกั่วป่าโพ้</small><small>สัญญาอนุญาต · ใช้ในเว็บนี้ได้</small></figcaption></figure></div></div></div></section><section class="research-section" id="highlights"><h2>จุดเด่นที่ควรดู</h2><div class="research-cards"><article class="research-note"><h3>อาหารและขนมพื้นบ้าน</h3><span class="fact-status unknown">ยังไม่ยืนยัน</span><p>มีแผงจำหน่ายขนมพื้นบ้าน อาหารพื้นเมือง สินค้าโอทอป และของดีเมืองตะกั่วป่า</p><a href="https://www.thai-tour.com/place/phangnga/takuapa/4206" target="_blank" rel="noopener">อ่านแหล่งอ้างอิง ↗</a></article><article class="research-note"><h3>บรรยากาศริมคลอง</h3><span class="fact-status unknown">ยังไม่ยืนยัน</span><p>ตลาดตั้งอยู่ติดแนวคลอง/แม่น้ำตะกั่วป่า เหมาะกับการชมวิวริมน้ำและถ่ายภาพ</p><a href="https://www.gplace.com/960259" target="_blank" rel="noopener">อ่านแหล่งอ้างอิง ↗</a></article><article class="research-note"><h3>การแสดงและดนตรี</h3><span class="fact-status unknown">ยังไม่ยืนยัน</span><p>รีวิวผู้ใช้ระบุว่ามีดนตรีสดโดยนักเรียนในบางช่วง</p><a href="https://wanderlog.com/place/details/11412806/takuapa-river-market" target="_blank" rel="noopener">อ่านแหล่งอ้างอิง ↗</a></article><article class="research-note"><h3>เชื่อมย่านเมืองเก่า</h3><span class="fact-status unknown">ยังไม่ยืนยัน</span><p>อยู่ใกล้ย่านเมืองเก่าตะกั่วป่าและอาคารชิโน-โปรตุกีสของชุมชนตลาดใหญ่</p><a href="https://wikicommunity.sac.or.th/community/1527" target="_blank" rel="noopener">อ่านแหล่งอ้างอิง ↗</a></article></div></section><section class="research-section" id="did_you_know"><h2>รู้หรือไม่</h2><div class="research-cards"><article class="research-note"><span class="fact-status confirmed">ยืนยันแล้ว</span><p>คำว่า “จับเส” ที่ใช้เรียกย่านการค้าเก่า สัมพันธ์กับคำจีนฮกเกี้ยนและท่าเรือเก่าของตะกั่วป่า</p><a href="https://wikicommunity.sac.or.th/community/1527" target="_blank" rel="noopener">อ่านแหล่งอ้างอิง ↗</a></article><article class="research-note"><span class="fact-status confirmed">ยืนยันแล้ว</span><p>เมืองเก่าตะกั่วป่ามีหลักฐานการค้าทางน้ำกับเรือสินค้าจากจีนและพม่า</p><a href="https://culturalenvi.onep.go.th/site/detail/4428" target="_blank" rel="noopener">อ่านแหล่งอ้างอิง ↗</a></article></div></section><section class="research-section" id="getting_there"><h2>วิธีเดินทาง</h2><div class="research-cards"><article class="research-note"><h3>ตัวเมืองตะกั่วป่า</h3><span class="fact-status unknown">ยังไม่ยืนยัน</span><p>เดินทางไปย่านริมน้ำ/ถนนศรีตะกั่วป่า บริเวณข้างวัดย่านยาว; แหล่งข้อมูลระบุว่าสามารถใช้รถรับจ้างท้องถิ่นหรือมอเตอร์ไซค์รับจ้างจากสถานีขนส่งตะกั่วป่าได้</p><a href="https://www.gplace.com/960259" target="_blank" rel="noopener">อ่านแหล่งอ้างอิง ↗</a></article><article class="research-note"><h3>ภูเก็ต</h3><span class="fact-status unknown">ยังไม่ยืนยัน</span><p>ไม่พบเส้นทางหรือระยะทางเฉพาะตลาดจากแหล่งที่อ่านได้</p><a href="https://www.gplace.com/960259" target="_blank" rel="noopener">อ่านแหล่งอ้างอิง ↗</a></article><article class="research-note"><h3>เขาหลัก</h3><span class="fact-status unknown">ยังไม่ยืนยัน</span><p>ไม่พบเส้นทางหรือระยะทางเฉพาะตลาดจากแหล่งที่อ่านได้</p><a href="https://www.gplace.com/960259" target="_blank" rel="noopener">อ่านแหล่งอ้างอิง ↗</a></article><article class="research-note"><h3>สนามบิน</h3><span class="fact-status unknown">ยังไม่ยืนยัน</span><p>ไม่พบเส้นทางหรือระยะทางเฉพาะตลาดจากแหล่งที่อ่านได้</p><a href="https://www.gplace.com/960259" target="_blank" rel="noopener">อ่านแหล่งอ้างอิง ↗</a></article></div></section><section class="research-section" id="nearby"><h2>ที่ใกล้เคียงและสถานที่ในหมวดเดียวกัน</h2><ul class="nearby-links"><li>วัดย่านยาว (วัดนิกรวราราม) <span class="fact-status unknown">ยังไม่ยืนยัน</span> <span class="source-offline">อ่านแหล่งอ้างอิง ↗ <small>แหล่งเดิมออฟไลน์ · ตรวจเมื่อ 8 ก.ย. 2569</small></span></li><li>ย่านเมืองเก่าตะกั่วป่า/ชุมชนตลาดใหญ่ <span class="fact-status unknown">ยังไม่ยืนยัน</span> <a href="https://wikicommunity.sac.or.th/community/1527" target="_blank" rel="noopener">อ่านแหล่งอ้างอิง ↗</a></li><li>สถานีขนส่งตะกั่วป่า <span class="fact-status unknown">ยังไม่ยืนยัน</span> <a href="https://mapcarta.com/W816145865" target="_blank" rel="noopener">อ่านแหล่งอ้างอิง ↗</a></li><li><a href="/places/culture-street/">ถนนสายวัฒนธรรมเมืองเก่าตะกั่วป่า</a></li><li><a href="/places/food-center/">ศูนย์อาหารลานโล่งตะกั่วป่า</a></li></ul></section><aside class="nearby-note"><span class="chapter">แวะพักใกล้ ๆ</span><p>ถ้าเดินตลาดเสร็จแล้วอยากนั่งพัก ย่านตลาดเก่าอยู่ห่างไปไม่ไกล มีบ้านไม้เก่าที่เปิดเป็นคาเฟ่อยู่ริมถนนราษฎร์บำรุง</p><a class="text-link" href="https://siwaracafe.com/" target="_blank" rel="noopener">ที่นั่งพักใกล้ตลาด ↗</a></aside><section class="research-section" id="faq"><h2>คำถามที่พบบ่อย</h2><details><summary>เปิดให้เข้าชมเวลาใด</summary><p>ข้อมูลยังไม่ยืนยัน · วันเสาร์ 15:00 ถึง 20:00 น.</p></details><details><summary>มีค่าเข้าชมหรือไม่</summary><p>ข้อมูลยังไม่ยืนยัน · ไม่มีค่าธรรมเนียมการเข้าชม</p></details><details><summary>เดินทางจากตัวเมืองตะกั่วป่าอย่างไร</summary><p>เดินทางไปย่านริมน้ำ/ถนนศรีตะกั่วป่า บริเวณข้างวัดย่านยาว; แหล่งข้อมูลระบุว่าสามารถใช้รถรับจ้างท้องถิ่นหรือมอเตอร์ไซค์รับจ้างจากสถานีขนส่งตะกั่วป่าได้</p></details><details><summary>สถานที่นี้มีประวัติความเป็นมาอย่างไร</summary><p>ตลาดมีชื่อในโครงการตลาดประชารัฐต้องชมว่า ‘ตลาดริมน้ำตะกั่วป่า ร่วมใจประชารัฐ’ และตั้งอยู่ถนนริมคลองข้างวัดย่านยาว</p></details><details><summary>มีจุดเด่นอะไรให้ชม</summary><p>มีแผงจำหน่ายขนมพื้นบ้าน อาหารพื้นเมือง สินค้าโอทอป และของดีเมืองตะกั่วป่า ตลาดตั้งอยู่ติดแนวคลอง/แม่น้ำตะกั่วป่า เหมาะกับการชมวิวริมน้ำและถ่ายภาพ รีวิวผู้ใช้ระบุว่ามีดนตรีสดโดยนักเรียนในบางช่วง</p></details></section><section class="research-section" id="sources"><h2>ที่มาของข้อมูล</h2><div class="source-table"><table><thead><tr><th>ชื่อ</th><th>ประเภท</th><th>วันที่เข้าถึง</th><th>ลิงก์</th></tr></thead><tbody><tr><th scope="row">กรมการค้าภายใน กระทรวงพาณิชย์</th><td>หน่วยงานทางการ</td><td>2026-09-07</td><td><span class="source-offline">เปิดแหล่ง ↗ <small>แหล่งเดิมออฟไลน์ · ตรวจเมื่อ 8 ก.ย. 2569</small></span></td></tr><tr><th scope="row">Mapcarta (ข้อมูล OpenStreetMap)</th><td>แหล่งข้อมูลอื่น</td><td>2026-09-07</td><td><a href="https://mapcarta.com/W816145865" target="_blank" rel="noopener">เปิดแหล่ง ↗</a></td></tr><tr><th scope="row">Thai-tour</th><td>บล็อก</td><td>2026-09-07</td><td><a href="https://www.thai-tour.com/place/phangnga/takuapa/4206" target="_blank" rel="noopener">เปิดแหล่ง ↗</a></td></tr><tr><th scope="row">Gplace</th><td>บล็อก</td><td>2026-09-07</td><td><a href="https://www.gplace.com/960259" target="_blank" rel="noopener">เปิดแหล่ง ↗</a></td></tr><tr><th scope="row">ศูนย์มานุษยวิทยาสิรินธร: ชุมชนตลาดใหญ่</th><td>แหล่งข้อมูลอื่น</td><td>2026-09-07</td><td><a href="https://wikicommunity.sac.or.th/community/1527" target="_blank" rel="noopener">เปิดแหล่ง ↗</a></td></tr><tr><th scope="row">สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม</th><td>หน่วยงานทางการ</td><td>2026-09-07</td><td><a href="https://culturalenvi.onep.go.th/index.php/site/detail/4431" target="_blank" rel="noopener">เปิดแหล่ง ↗</a></td></tr><tr><th scope="row">Wanderlog</th><td>แหล่งข้อมูลอื่น</td><td>2026-09-07</td><td><a href="https://wanderlog.com/place/details/11412806/takuapa-river-market" target="_blank" rel="noopener">เปิดแหล่ง ↗</a></td></tr><tr><th scope="row">สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม</th><td>หน่วยงานทางการ</td><td>2026-09-07</td><td><a href="https://culturalenvi.onep.go.th/site/detail/4428" target="_blank" rel="noopener">เปิดแหล่ง ↗</a></td></tr><tr><th scope="row">เทศบาลเมืองตะกั่วป่า</th><td>หน่วยงานทางการ</td><td>2026-09-07</td><td><a href="https://www.takuapacity.go.th/files/com_strategy/2022-12_231dcd9d5169573.pdf" target="_blank" rel="noopener">เปิดแหล่ง ↗</a></td></tr><tr><th scope="row">ปฏิทินวัฒนธรรม กระทรวงวัฒนธรรม</th><td>หน่วยงานทางการ</td><td>2026-09-07</td><td><a href="https://calendar.m-culture.go.th/events/103651" target="_blank" rel="noopener">เปิดแหล่ง ↗</a></td></tr><tr><th scope="row">Muang Boran Journal</th><td>บล็อก</td><td>2026-09-07</td><td><a href="https://www.muangboranjournal.com/post/Takuapa_Naver_Ending_Stories" target="_blank" rel="noopener">เปิดแหล่ง ↗</a></td></tr><tr><th scope="row">กระทรวงพาณิชย์: ตลาดต้องชมภาคใต้</th><td>หน่วยงานทางการ</td><td>2026-09-07</td><td><a href="https://einspection.moc.go.th/th/file/get/file/20210720dcb8f52155b576a7ca523b2a2247e871134559.pdf" target="_blank" rel="noopener">เปิดแหล่ง ↗</a></td></tr></tbody></table></div><details class="unknowns"><summary>ข้อมูลที่ยังหาไม่เจอ</summary><ul><li>ไม่พบพิกัดที่ติดป้ายชื่อเฉพาะตลาดริมน้ำ จึงใช้พิกัดตลาด/พื้นที่ใกล้เคียงจาก OpenStreetMap ผ่าน Mapcarta</li><li>ไม่พบเบอร์โทรศัพท์ เพจเฟซบุ๊ก เว็บไซต์ หรือ LINE ทางการของตลาด</li><li>ไม่พบหลักฐานยืนยันปีสร้าง ผู้สร้าง หรือการขึ้นทะเบียนโบราณสถานของตลาด</li><li>ไม่พบข้อมูลยืนยันที่จอดรถ ห้องน้ำ การเข้าถึงสำหรับผู้สูงอายุ/รถเข็น และการแต่งกาย</li><li>ไม่พบเทศกาลเฉพาะตลาดที่ยืนยันได้</li><li>ไม่พบลิงก์รูปภาพทางการที่ระบุสิทธิ์การใช้งาน</li><li>ไม่พบหลักฐานระบุปีเปิดตลาดครั้งแรก ผู้ก่อตั้ง ผู้รับผิดชอบ หรือหน่วยงานเจ้าของตลาด</li><li>ไม่พบหลักฐานว่าตลาดถูกทิ้งร้าง บูรณะ หรือเปลี่ยนมือในช่วงใด</li><li>ไม่พบหลักฐานยืนยันผลกระทบโดยตรงจากสึนามิ พ.ศ. 2547 ต่อพื้นที่ตลาด</li><li>ไม่พบหลักฐานว่าตลาดริมน้ำขึ้นทะเบียนโบราณสถาน; การขึ้นทะเบียนที่พบเป็นขององค์ประกอบอื่นในเมืองเก่า</li><li>ไม่พบประกาศเปิดตลาดล่าสุดปี 2569 จากผู้ดูแลโดยตรง จึงยังยืนยันวันเวลาเปิดปัจจุบันไม่ได้</li><li>ไม่พบข่าวย้อนหลัง 5 ปีที่ระบุการบูรณะหรือโครงการพัฒนาตลาดโดยตรงพร้อมวันที่เผยแพร่ชัดเจน</li><li>ไม่พบภาพเก่าที่ระบุว่าเป็นพื้นที่ตลาดริมน้ำโดยตรง</li><li>ภาพทั้งหมดเป็นลิงก์จากแหล่งท่องเที่ยวออนไลน์และไม่ทราบสิทธิ์ ต้องขออนุญาตก่อนใช้</li></ul></details></section></div></div></main><footer class="site-footer"><div class="footer-top"><a href="/" class="footer-name">ตะกั่วป่า <em>101</em></a><p>เมืองหนึ่งเมือง<br>มีเรื่องให้ค่อย ๆ รู้จัก</p><a class="round-link" href="#main" aria-label="กลับขึ้นด้านบน">↑</a></div><div class="footer-bottom"><a href="https://siwaracafe.com/">จัดทำโดยบ้านศิวรา ตะกั่วป่า</a><span>คู่มือเมืองเก่า · จังหวัดพังงา</span><a href="https://www.takuapacity.go.th/pdf/travel-preview.pdf">แผ่นพับต้นทาง ↗</a></div></footer><nav class="tabbar" aria-label="เมนูด่วน"><a href="/"><span class="tb-glyph" aria-hidden="true">⌂</span>หน้าแรก</a><a href="/map/"><span class="tb-glyph" aria-hidden="true">◈</span>แผนที่</a><a href="/eat/"><span class="tb-glyph" aria-hidden="true">◉</span>กินอะไร</a><a href="/trip/"><span class="tb-glyph" aria-hidden="true">◫</span>ทริป<span class="qs-badge" data-trip-count hidden>0</span></a></nav></body></html>
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$env:PYTHONIOENCODING='"'utf-8'; @'
+import json,re,html
+from pathlib import Path
+reg={p['file']:p for p in json.loads(Path('data/photo-registry.json').read_text(encoding='utf8'))['photos']}
+for f in sorted(Path('site').rglob('*.html')):
+ if '/en/' in f.as_posix(): continue
+ s=f.read_text(encoding='utf8',errors='replace')
+ for m in re.finditer(r'<img\\b["'^>]*>'"',s,re.I):
+  t=m.group(); sm=re.search(r'\\bsrc=[\"\\'](["'^"'"\\']+)',t,re.I); am=re.search(r'\\balt=[\"\\'](["'^"'"\\']*)',t,re.I)
+  if sm and sm.group(1) in reg and html.unescape(am.group(1) if am else '')"'!=reg[sm.group(1)]['"'caption_th']:
+   print(f.relative_to('site').as_posix(),sm.group(1),repr(html.unescape(am.group(1) if am else '')),repr(reg[sm.group(1)]['caption_th']))
+'@ | python -" in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 107ms:
+stories/kuapapoh/index.html /assets/photos/kuapapoh-brand.jpg 'กั่วป่าโพ้ แบรนด์เมืองเก่าตะกั่วป่า' 'กั่วป่าโพ้ · แบรนด์ของโครงการเมืองเก่าตะกั่วป่า'
+stories/kuapapoh/index.html /assets/photos/kuapapoh-pattern.jpg 'ลายกระเบื้องเปอรานากันเมืองเก่า' 'ลายกระเบื้องเปอรานากันที่ยังเห็นได้ในเมืองเก่า'
+stories/kuapapoh/index.html /assets/photos/kuapapoh-history.jpg 'แผ่นเล่าประวัติกั่วป่าโพ้' 'แผ่นเล่าประวัติเมือง จัดทำโดยโครงการกั่วป่าโพ้'
+stories/kuapapoh/index.html /assets/photos/kuapapoh-wuikun.jpg 'หวุ่ยกุ่น' 'หวุ่ยกุ่น · งานออกแบบของโครงการกั่วป่าโพ้'
+stories/kuapapoh/index.html /assets/photos/kuapapoh-doc-1.jpg 'เอกสารเก่าเมืองตะกั่วป่า 1' 'เอกสารเก่าของเมือง จากคลังโครงการกั่วป่าโพ้'
+stories/kuapapoh/index.html /assets/photos/kuapapoh-doc-2.jpg 'เอกสารเก่าเมืองตะกั่วป่า 2' 'เอกสารเก่าของเมือง จากคลังโครงการกั่วป่าโพ้'
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$env:PYTHONIOENCODING='"'utf-8'; @'
+import re
+from pathlib import Path
+from collections import defaultdict
+D=defaultdict(set)
+for f in Path('site').rglob('*.html'):
+ if '/en/' in f.as_posix(): continue
+ s=f.read_text(encoding='utf8',errors='replace')
+ for x in re.findall(r'<img\\b["'^>]*'"\\bsrc=[\"\\'](["'^"'"\\']+)',s,re.I): D[x].add(f.relative_to('site').as_posix())
+for x,p in sorted(D.items(),key=lambda z:(-len(z[1]),z[0])):
+ if len(p)>3: print(len(p),x)
+'@ | python -" in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 170ms:
+7 /assets/culture-street.webp
+7 /assets/iron-bridge.webp
+6 /assets/food-center.webp
+6 /assets/governor-wall.webp
+6 /assets/guan-yu.webp
+6 /assets/khun-in.webp
+6 /assets/riverwalk.webp
+6 /assets/tao-ming.webp
+6 /assets/wat-boromthat.webp
+5 /assets/wat-kongkha.webp
+5 /assets/wat-pathum.webp
+4 /assets/kue-chai.webp
+4 /assets/phra-narai.webp
+4 /assets/pun-thao.webp
+4 /assets/rong-jae.webp
+4 /assets/thung-phra.webp
+4 /assets/wat-khuha.webp
+4 /assets/wat-nikorn.webp
+4 /assets/wat-sena.webp
+
+codex
+ผลตรวจหลักได้แล้วครับ: ภาพที่มีทะเบียนไม่พบการวางนอก `allowed_on` แต่พบคำบรรยายที่เขียนใหม่ 6 รายการในหน้าเรื่องกั่วป่าโพ้ และมีภาพ/ภาพประกอบจำนวนมากที่ไม่มีรายการในทะเบียน จึงตรวจสิทธิ์และ allowed_on ของกลุ่มนั้นไม่ได้ตามหลักฐานที่มีครับ กำลังเขียนรายงานพร้อมเส้นทางไฟล์และบรรทัดหลักฐานลง `audit/a2-photo.md` เท่านั้น】【。
+apply patch
+patch: completed
+D:\Siwaracafeweb\output\web\takuapa101-v1\audit\a2-photo.md
+diff --git a/output/web/takuapa101-v1/audit/a2-photo.md b/output/web/takuapa101-v1/audit/a2-photo.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..aa158198817e09346e38f7284aa97402fbb1faa4
+--- /dev/null
++++ b/output/web/takuapa101-v1/audit/a2-photo.md
+@@ -0,0 +1,59 @@
++# รายงานตรวจภาพ · A2
++
++ตรวจเมื่อ 8 กันยายน 2569 · ตรวจไฟล์ HTML ใน `site/` ทุกหน้า ยกเว้นเส้นทาง `/en/` และเทียบกับ `data/photo-registry.json` ฉบับวันที่ 7 กันยายน 2569
++
++## สรุป
++
++- ตรวจพบ `img` ทั้งหมด 158 รายการอ้างอิงจาก HTML
++- ในจำนวนนี้เป็นไฟล์ที่มีรายการในทะเบียน 12 ไฟล์ และไฟล์ที่ไม่พบในทะเบียน 146 รายการ
++- สำหรับ 12 ไฟล์ที่มีทะเบียน ไม่พบการใช้บนหน้าที่อยู่นอก `allowed_on`
++- พบคำบรรยายที่เขียนใหม่ 6 รายการใน `site/stories/kuapapoh/index.html:1`
++- พบการใช้ไฟล์เดิมซ้ำเกิน 3 หน้าจำนวน 19 ไฟล์ รายการอยู่ด้านล่าง
++
++## 1. ใช้รูปนอก `allowed_on`
++
++ผลสำหรับรูปที่มีรายการในทะเบียน: **ตรวจแล้วไม่พบปัญหา**
++
++ไฟล์ที่ไม่พบในทะเบียนจึงตรวจ `allowed_on` ไม่ได้ ไม่ถือเป็นหลักฐานว่าผิดกฎโดยอัตโนมัติ แต่ทะเบียนปัจจุบันไม่รองรับการยืนยันรายการเหล่านี้ ได้แก่ภาพสถานที่/ภาพประกอบ เช่น `/assets/culture-street.webp`, `/assets/food-center.webp`, `/assets/tao-ming.webp`, `/assets/guan-yu.webp`, `/assets/riverwalk.webp` รวมถึงไฟล์ใน `/assets/guide/` และ `/assets/leaflet/` ตรวจพบการอ้างอิงใน `site/` หลายหน้า แต่ไม่มีระเบียนให้เทียบ
++
++หลักฐานรวม: `data/photo-registry.json` มีรายการภาพ 12 ไฟล์; การอ้างอิงที่ไม่ตรงกับ `file` ในทะเบียนถูกจัดเป็น “ตรวจไม่ได้เพราะไม่มีรายการในทะเบียน”
++
++## 2. คำบรรยายตรงกับ `caption_th` หรือไม่
++
++รูปที่มีทะเบียนส่วนใหญ่ใช้ `alt` และ/หรือ `figcaption` ตรงกับ `caption_th` แต่พบการเขียนใหม่ 6 รายการต่อไปนี้ใน `site/stories/kuapapoh/index.html:1`:
++
++| ไฟล์ภาพ | คำบนหน้าเว็บ | คำในทะเบียน |
++|---|---|---|
++| `/assets/photos/kuapapoh-brand.jpg` | กั่วป่าโพ้ แบรนด์เมืองเก่าตะกั่วป่า | กั่วป่าโพ้ · แบรนด์ของโครงการเมืองเก่าตะกั่วป่า |
++| `/assets/photos/kuapapoh-pattern.jpg` | ลายกระเบื้องเปอรานากันเมืองเก่า | ลายกระเบื้องเปอรานากันที่ยังเห็นได้ในเมืองเก่า |
++| `/assets/photos/kuapapoh-history.jpg` | แผ่นเล่าประวัติกั่วป่าโพ้ | แผ่นเล่าประวัติเมือง จัดทำโดยโครงการกั่วป่าโพ้ |
++| `/assets/photos/kuapapoh-wuikun.jpg` | หวุ่ยกุ่น | หวุ่ยกุ่น · งานออกแบบของโครงการกั่วป่าโพ้ |
++| `/assets/photos/kuapapoh-doc-1.jpg` | เอกสารเก่าเมืองตะกั่วป่า 1 | เอกสารเก่าของเมือง จากคลังโครงการกั่วป่าโพ้ |
++| `/assets/photos/kuapapoh-doc-2.jpg` | เอกสารเก่าเมืองตะกั่วป่า 2 | เอกสารเก่าของเมือง จากคลังโครงการกั่วป่าโพ้ |
++
++สำหรับ 146 ไฟล์ที่ไม่อยู่ในทะเบียน ตรวจเทียบ `caption_th` ไม่ได้เพราะไม่มีรายการต้นทางในทะเบียน
++
++## 3. รูปเดียวกันใช้ซ้ำเกิน 3 หน้า
++
++นับเป็นจำนวนหน้า HTML ที่ไม่ใช่ `/en/` ไม่ใช่จำนวนแท็ก `img`:
++
++| จำนวนหน้า | ไฟล์ |
++|---:|---|
++| 7 | `/assets/culture-street.webp`, `/assets/iron-bridge.webp` |
++| 6 | `/assets/food-center.webp`, `/assets/governor-wall.webp`, `/assets/guan-yu.webp`, `/assets/khun-in.webp`, `/assets/riverwalk.webp`, `/assets/tao-ming.webp`, `/assets/wat-boromthat.webp` |
++| 5 | `/assets/wat-kongkha.webp`, `/assets/wat-pathum.webp` |
++| 4 | `/assets/kue-chai.webp`, `/assets/phra-narai.webp`, `/assets/pun-thao.webp`, `/assets/rong-jae.webp`, `/assets/thung-phra.webp`, `/assets/wat-khuha.webp`, `/assets/wat-nikorn.webp`, `/assets/wat-sena.webp` |
++
++ไฟล์ซ้ำทั้งหมดในตารางนี้ไม่มีรายการใน `photo-registry.json` จึงตรวจได้เฉพาะจำนวนการใช้ ไม่สามารถยืนยันว่าแต่ละหน้าถูกต้องตาม `allowed_on` หรือไม่
++
++## 4. ภาพวาดที่อาจถูกเข้าใจว่าเป็นภาพถ่าย
++
++จาก HTML ที่ตรวจพบ ภาพประกอบในหน้าเรื่องเล่ามีคำว่า `ภาพวาดประกอบ` อยู่ในคำอธิบาย เช่น `site/stories/architecture/index.html:1`, `site/stories/city/index.html:1`, `site/stories/food-people/index.html:1`, `site/stories/kuapapoh/index.html:1` และ `site/stories/water-trade/index.html:1` จึง **ไม่พบหลักฐานจากข้อความบนหน้าว่าถูกระบุเป็นภาพถ่ายจริง**
++
++อย่างไรก็ตาม ไฟล์ภาพเหล่านี้ไม่อยู่ในทะเบียน และการตรวจครั้งนี้ไม่ได้เปิดดูพิกเซลของทุกภาพเพื่อยืนยันลักษณะภาพจริง ดังนั้นการจำแนกชนิดภาพของไฟล์นอกทะเบียน **ตรวจไม่ได้เพราะไม่มีระเบียนและไม่มีการตรวจภาพด้วยสายตาครบทุกไฟล์**
++
++## ข้อจำกัดการตรวจ
++
++- ไม่ได้แก้ไฟล์เว็บหรือไฟล์ทะเบียนตามข้อกำหนดของ SPEC
++- ไม่ได้เสิร์ฟเว็บด้วย `python -m http.server 8799 --directory site` เพราะการตรวจรายการ `img`, `alt` และ `figcaption` ทำได้จากไฟล์ต้นฉบับโดยตรง และไม่มีข้อที่ต้องตรวจพฤติกรรมรันไทม์ของเบราว์เซอร์
++- ไม่ได้สรุปว่ารูปที่ไม่มีทะเบียน “ผิด” โดยไม่มีหลักฐาน เพราะข้อกำหนดห้ามแต่งปัญหา
+
+diff --git a/output/web/takuapa101-v1/audit/a2-photo.md b/output/web/takuapa101-v1/audit/a2-photo.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..aa158198817e09346e38f7284aa97402fbb1faa4
+--- /dev/null
++++ b/output/web/takuapa101-v1/audit/a2-photo.md
+@@ -0,0 +1,59 @@
++# รายงานตรวจภาพ · A2
++
++ตรวจเมื่อ 8 กันยายน 2569 · ตรวจไฟล์ HTML ใน `site/` ทุกหน้า ยกเว้นเส้นทาง `/en/` และเทียบกับ `data/photo-registry.json` ฉบับวันที่ 7 กันยายน 2569
++
++## สรุป
++
++- ตรวจพบ `img` ทั้งหมด 158 รายการอ้างอิงจาก HTML
++- ในจำนวนนี้เป็นไฟล์ที่มีรายการในทะเบียน 12 ไฟล์ และไฟล์ที่ไม่พบในทะเบียน 146 รายการ
++- สำหรับ 12 ไฟล์ที่มีทะเบียน ไม่พบการใช้บนหน้าที่อยู่นอก `allowed_on`
++- พบคำบรรยายที่เขียนใหม่ 6 รายการใน `site/stories/kuapapoh/index.html:1`
++- พบการใช้ไฟล์เดิมซ้ำเกิน 3 หน้าจำนวน 19 ไฟล์ รายการอยู่ด้านล่าง
++
++## 1. ใช้รูปนอก `allowed_on`
++
++ผลสำหรับรูปที่มีรายการในทะเบียน: **ตรวจแล้วไม่พบปัญหา**
++
++ไฟล์ที่ไม่พบในทะเบียนจึงตรวจ `allowed_on` ไม่ได้ ไม่ถือเป็นหลักฐานว่าผิดกฎโดยอัตโนมัติ แต่ทะเบียนปัจจุบันไม่รองรับการยืนยันรายการเหล่านี้ ได้แก่ภาพสถานที่/ภาพประกอบ เช่น `/assets/culture-street.webp`, `/assets/food-center.webp`, `/assets/tao-ming.webp`, `/assets/guan-yu.webp`, `/assets/riverwalk.webp` รวมถึงไฟล์ใน `/assets/guide/` และ `/assets/leaflet/` ตรวจพบการอ้างอิงใน `site/` หลายหน้า แต่ไม่มีระเบียนให้เทียบ
++
++หลักฐานรวม: `data/photo-registry.json` มีรายการภาพ 12 ไฟล์; การอ้างอิงที่ไม่ตรงกับ `file` ในทะเบียนถูกจัดเป็น “ตรวจไม่ได้เพราะไม่มีรายการในทะเบียน”
++
++## 2. คำบรรยายตรงกับ `caption_th` หรือไม่
++
++รูปที่มีทะเบียนส่วนใหญ่ใช้ `alt` และ/หรือ `figcaption` ตรงกับ `caption_th` แต่พบการเขียนใหม่ 6 รายการต่อไปนี้ใน `site/stories/kuapapoh/index.html:1`:
++
++| ไฟล์ภาพ | คำบนหน้าเว็บ | คำในทะเบียน |
++|---|---|---|
++| `/assets/photos/kuapapoh-brand.jpg` | กั่วป่าโพ้ แบรนด์เมืองเก่าตะกั่วป่า | กั่วป่าโพ้ · แบรนด์ของโครงการเมืองเก่าตะกั่วป่า |
++| `/assets/photos/kuapapoh-pattern.jpg` | ลายกระเบื้องเปอรานากันเมืองเก่า | ลายกระเบื้องเปอรานากันที่ยังเห็นได้ในเมืองเก่า |
++| `/assets/photos/kuapapoh-history.jpg` | แผ่นเล่าประวัติกั่วป่าโพ้ | แผ่นเล่าประวัติเมือง จัดทำโดยโครงการกั่วป่าโพ้ |
++| `/assets/photos/kuapapoh-wuikun.jpg` | หวุ่ยกุ่น | หวุ่ยกุ่น · งานออกแบบของโครงการกั่วป่าโพ้ |
++| `/assets/photos/kuapapoh-doc-1.jpg` | เอกสารเก่าเมืองตะกั่วป่า 1 | เอกสารเก่าของเมือง จากคลังโครงการกั่วป่าโพ้ |
++| `/assets/photos/kuapapoh-doc-2.jpg` | เอกสารเก่าเมืองตะกั่วป่า 2 | เอกสารเก่าของเมือง จากคลังโครงการกั่วป่าโพ้ |
++
++สำหรับ 146 ไฟล์ที่ไม่อยู่ในทะเบียน ตรวจเทียบ `caption_th` ไม่ได้เพราะไม่มีรายการต้นทางในทะเบียน
++
++## 3. รูปเดียวกันใช้ซ้ำเกิน 3 หน้า
++
++นับเป็นจำนวนหน้า HTML ที่ไม่ใช่ `/en/` ไม่ใช่จำนวนแท็ก `img`:
++
++| จำนวนหน้า | ไฟล์ |
++|---:|---|
++| 7 | `/assets/culture-street.webp`, `/assets/iron-bridge.webp` |
++| 6 | `/assets/food-center.webp`, `/assets/governor-wall.webp`, `/assets/guan-yu.webp`, `/assets/khun-in.webp`, `/assets/riverwalk.webp`, `/assets/tao-ming.webp`, `/assets/wat-boromthat.webp` |
++| 5 | `/assets/wat-kongkha.webp`, `/assets/wat-pathum.webp` |
++| 4 | `/assets/kue-chai.webp`, `/assets/phra-narai.webp`, `/assets/pun-thao.webp`, `/assets/rong-jae.webp`, `/assets/thung-phra.webp`, `/assets/wat-khuha.webp`, `/assets/wat-nikorn.webp`, `/assets/wat-sena.webp` |
++
++ไฟล์ซ้ำทั้งหมดในตารางนี้ไม่มีรายการใน `photo-registry.json` จึงตรวจได้เฉพาะจำนวนการใช้ ไม่สามารถยืนยันว่าแต่ละหน้าถูกต้องตาม `allowed_on` หรือไม่
++
++## 4. ภาพวาดที่อาจถูกเข้าใจว่าเป็นภาพถ่าย
++
++จาก HTML ที่ตรวจพบ ภาพประกอบในหน้าเรื่องเล่ามีคำว่า `ภาพวาดประกอบ` อยู่ในคำอธิบาย เช่น `site/stories/architecture/index.html:1`, `site/stories/city/index.html:1`, `site/stories/food-people/index.html:1`, `site/stories/kuapapoh/index.html:1` และ `site/stories/water-trade/index.html:1` จึง **ไม่พบหลักฐานจากข้อความบนหน้าว่าถูกระบุเป็นภาพถ่ายจริง**
++
++อย่างไรก็ตาม ไฟล์ภาพเหล่านี้ไม่อยู่ในทะเบียน และการตรวจครั้งนี้ไม่ได้เปิดดูพิกเซลของทุกภาพเพื่อยืนยันลักษณะภาพจริง ดังนั้นการจำแนกชนิดภาพของไฟล์นอกทะเบียน **ตรวจไม่ได้เพราะไม่มีระเบียนและไม่มีการตรวจภาพด้วยสายตาครบทุกไฟล์**
++
++## ข้อจำกัดการตรวจ
++
++- ไม่ได้แก้ไฟล์เว็บหรือไฟล์ทะเบียนตามข้อกำหนดของ SPEC
++- ไม่ได้เสิร์ฟเว็บด้วย `python -m http.server 8799 --directory site` เพราะการตรวจรายการ `img`, `alt` และ `figcaption` ทำได้จากไฟล์ต้นฉบับโดยตรง และไม่มีข้อที่ต้องตรวจพฤติกรรมรันไทม์ของเบราว์เซอร์
++- ไม่ได้สรุปว่ารูปที่ไม่มีทะเบียน “ผิด” โดยไม่มีหลักฐาน เพราะข้อกำหนดห้ามแต่งปัญหา
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'Get-Item audit/a2-photo.md | Select-Object FullName,Length; git diff --stat -- audit/a2-photo.md; Get-Content -Encoding UTF8 audit/a2-photo.md | Select-Object -First 12' in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 96ms:
+
+FullName                                                    Length
+--------                                                    ------
+D:\Siwaracafeweb\output\web\takuapa101-v1\audit\a2-photo.md   8258
+# รายงานตรวจภาพ · A2
+
+ตรวจเมื่อ 8 กันยายน 2569 · ตรวจไฟล์ HTML ใน `site/` ทุกหน้า ยกเว้นเส้นทาง `/en/` และเทียบกับ `data/photo-registry.json` ฉบับวันที่ 7 กันยายน 2569
+
+## สรุป
+
+- ตรวจพบ `img` ทั้งหมด 158 รายการอ้างอิงจาก HTML
+- ในจำนวนนี้เป็นไฟล์ที่มีรายการในทะเบียน 12 ไฟล์ และไฟล์ที่ไม่พบในทะเบียน 146 รายการ
+- สำหรับ 12 ไฟล์ที่มีทะเบียน ไม่พบการใช้บนหน้าที่อยู่นอก `allowed_on`
+- พบคำบรรยายที่เขียนใหม่ 6 รายการใน `site/stories/kuapapoh/index.html:1`
+- พบการใช้ไฟล์เดิมซ้ำเกิน 3 หน้าจำนวน 19 ไฟล์ รายการอยู่ด้านล่าง
+
+
+
+
+diff --git a/output/web/takuapa101-v1/audit/a2-photo.md b/output/web/takuapa101-v1/audit/a2-photo.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..aa158198817e09346e38f7284aa97402fbb1faa4
+--- /dev/null
++++ b/output/web/takuapa101-v1/audit/a2-photo.md
+@@ -0,0 +1,59 @@
++# รายงานตรวจภาพ · A2
++
++ตรวจเมื่อ 8 กันยายน 2569 · ตรวจไฟล์ HTML ใน `site/` ทุกหน้า ยกเว้นเส้นทาง `/en/` และเทียบกับ `data/photo-registry.json` ฉบับวันที่ 7 กันยายน 2569
++
++## สรุป
++
++- ตรวจพบ `img` ทั้งหมด 158 รายการอ้างอิงจาก HTML
++- ในจำนวนนี้เป็นไฟล์ที่มีรายการในทะเบียน 12 ไฟล์ และไฟล์ที่ไม่พบในทะเบียน 146 รายการ
++- สำหรับ 12 ไฟล์ที่มีทะเบียน ไม่พบการใช้บนหน้าที่อยู่นอก `allowed_on`
++- พบคำบรรยายที่เขียนใหม่ 6 รายการใน `site/stories/kuapapoh/index.html:1`
++- พบการใช้ไฟล์เดิมซ้ำเกิน 3 หน้าจำนวน 19 ไฟล์ รายการอยู่ด้านล่าง
++
++## 1. ใช้รูปนอก `allowed_on`
++
++ผลสำหรับรูปที่มีรายการในทะเบียน: **ตรวจแล้วไม่พบปัญหา**
++
++ไฟล์ที่ไม่พบในทะเบียนจึงตรวจ `allowed_on` ไม่ได้ ไม่ถือเป็นหลักฐานว่าผิดกฎโดยอัตโนมัติ แต่ทะเบียนปัจจุบันไม่รองรับการยืนยันรายการเหล่านี้ ได้แก่ภาพสถานที่/ภาพประกอบ เช่น `/assets/culture-street.webp`, `/assets/food-center.webp`, `/assets/tao-ming.webp`, `/assets/guan-yu.webp`, `/assets/riverwalk.webp` รวมถึงไฟล์ใน `/assets/guide/` และ `/assets/leaflet/` ตรวจพบการอ้างอิงใน `site/` หลายหน้า แต่ไม่มีระเบียนให้เทียบ
++
++หลักฐานรวม: `data/photo-registry.json` มีรายการภาพ 12 ไฟล์; การอ้างอิงที่ไม่ตรงกับ `file` ในทะเบียนถูกจัดเป็น “ตรวจไม่ได้เพราะไม่มีรายการในทะเบียน”
++
++## 2. คำบรรยายตรงกับ `caption_th` หรือไม่
++
++รูปที่มีทะเบียนส่วนใหญ่ใช้ `alt` และ/หรือ `figcaption` ตรงกับ `caption_th` แต่พบการเขียนใหม่ 6 รายการต่อไปนี้ใน `site/stories/kuapapoh/index.html:1`:
++
++| ไฟล์ภาพ | คำบนหน้าเว็บ | คำในทะเบียน |
++|---|---|---|
++| `/assets/photos/kuapapoh-brand.jpg` | กั่วป่าโพ้ แบรนด์เมืองเก่าตะกั่วป่า | กั่วป่าโพ้ · แบรนด์ของโครงการเมืองเก่าตะกั่วป่า |
++| `/assets/photos/kuapapoh-pattern.jpg` | ลายกระเบื้องเปอรานากันเมืองเก่า | ลายกระเบื้องเปอรานากันที่ยังเห็นได้ในเมืองเก่า |
++| `/assets/photos/kuapapoh-history.jpg` | แผ่นเล่าประวัติกั่วป่าโพ้ | แผ่นเล่าประวัติเมือง จัดทำโดยโครงการกั่วป่าโพ้ |
++| `/assets/photos/kuapapoh-wuikun.jpg` | หวุ่ยกุ่น | หวุ่ยกุ่น · งานออกแบบของโครงการกั่วป่าโพ้ |
++| `/assets/photos/kuapapoh-doc-1.jpg` | เอกสารเก่าเมืองตะกั่วป่า 1 | เอกสารเก่าของเมือง จากคลังโครงการกั่วป่าโพ้ |
++| `/assets/photos/kuapapoh-doc-2.jpg` | เอกสารเก่าเมืองตะกั่วป่า 2 | เอกสารเก่าของเมือง จากคลังโครงการกั่วป่าโพ้ |
++
++สำหรับ 146 ไฟล์ที่ไม่อยู่ในทะเบียน ตรวจเทียบ `caption_th` ไม่ได้เพราะไม่มีรายการต้นทางในทะเบียน
++
++## 3. รูปเดียวกันใช้ซ้ำเกิน 3 หน้า
++
++นับเป็นจำนวนหน้า HTML ที่ไม่ใช่ `/en/` ไม่ใช่จำนวนแท็ก `img`:
++
++| จำนวนหน้า | ไฟล์ |
++|---:|---|
++| 7 | `/assets/culture-street.webp`, `/assets/iron-bridge.webp` |
++| 6 | `/assets/food-center.webp`, `/assets/governor-wall.webp`, `/assets/guan-yu.webp`, `/assets/khun-in.webp`, `/assets/riverwalk.webp`, `/assets/tao-ming.webp`, `/assets/wat-boromthat.webp` |
++| 5 | `/assets/wat-kongkha.webp`, `/assets/wat-pathum.webp` |
++| 4 | `/assets/kue-chai.webp`, `/assets/phra-narai.webp`, `/assets/pun-thao.webp`, `/assets/rong-jae.webp`, `/assets/thung-phra.webp`, `/assets/wat-khuha.webp`, `/assets/wat-nikorn.webp`, `/assets/wat-sena.webp` |
++
++ไฟล์ซ้ำทั้งหมดในตารางนี้ไม่มีรายการใน `photo-registry.json` จึงตรวจได้เฉพาะจำนวนการใช้ ไม่สามารถยืนยันว่าแต่ละหน้าถูกต้องตาม `allowed_on` หรือไม่
++
++## 4. ภาพวาดที่อาจถูกเข้าใจว่าเป็นภาพถ่าย
++
++จาก HTML ที่ตรวจพบ ภาพประกอบในหน้าเรื่องเล่ามีคำว่า `ภาพวาดประกอบ` อยู่ในคำอธิบาย เช่น `site/stories/architecture/index.html:1`, `site/stories/city/index.html:1`, `site/stories/food-people/index.html:1`, `site/stories/kuapapoh/index.html:1` และ `site/stories/water-trade/index.html:1` จึง **ไม่พบหลักฐานจากข้อความบนหน้าว่าถูกระบุเป็นภาพถ่ายจริง**
++
++อย่างไรก็ตาม ไฟล์ภาพเหล่านี้ไม่อยู่ในทะเบียน และการตรวจครั้งนี้ไม่ได้เปิดดูพิกเซลของทุกภาพเพื่อยืนยันลักษณะภาพจริง ดังนั้นการจำแนกชนิดภาพของไฟล์นอกทะเบียน **ตรวจไม่ได้เพราะไม่มีระเบียนและไม่มีการตรวจภาพด้วยสายตาครบทุกไฟล์**
++
++## ข้อจำกัดการตรวจ
++
++- ไม่ได้แก้ไฟล์เว็บหรือไฟล์ทะเบียนตามข้อกำหนดของ SPEC
++- ไม่ได้เสิร์ฟเว็บด้วย `python -m http.server 8799 --directory site` เพราะการตรวจรายการ `img`, `alt` และ `figcaption` ทำได้จากไฟล์ต้นฉบับโดยตรง และไม่มีข้อที่ต้องตรวจพฤติกรรมรันไทม์ของเบราว์เซอร์
++- ไม่ได้สรุปว่ารูปที่ไม่มีทะเบียน “ผิด” โดยไม่มีหลักฐาน เพราะข้อกำหนดห้ามแต่งปัญหา
+
+codex
+ตรวจเสร็จและเขียนรายงานแล้วที่ [audit/a2-photo.md](D:/Siwaracafeweb/output/web/takuapa101-v1/audit/a2-photo.md)
+
+สรุป: พบคำบรรยายเขียนใหม่ 6 รายการ, รูปซ้ำเกิน 3 หน้า 19 ไฟล์ และรูปนอกทะเบียน 146 รายการซึ่งตรวจ `allowed_on` ไม่ได้เพราะไม่มีรายการในทะเบียน ส่วนรูปที่มีทะเบียนไม่พบการใช้ผิดหน้า.
+diff --git a/output/web/takuapa101-v1/audit/a2-photo.md b/output/web/takuapa101-v1/audit/a2-photo.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..aa158198817e09346e38f7284aa97402fbb1faa4
+--- /dev/null
++++ b/output/web/takuapa101-v1/audit/a2-photo.md
+@@ -0,0 +1,59 @@
++# รายงานตรวจภาพ · A2
++
++ตรวจเมื่อ 8 กันยายน 2569 · ตรวจไฟล์ HTML ใน `site/` ทุกหน้า ยกเว้นเส้นทาง `/en/` และเทียบกับ `data/photo-registry.json` ฉบับวันที่ 7 กันยายน 2569
++
++## สรุป
++
++- ตรวจพบ `img` ทั้งหมด 158 รายการอ้างอิงจาก HTML
++- ในจำนวนนี้เป็นไฟล์ที่มีรายการในทะเบียน 12 ไฟล์ และไฟล์ที่ไม่พบในทะเบียน 146 รายการ
++- สำหรับ 12 ไฟล์ที่มีทะเบียน ไม่พบการใช้บนหน้าที่อยู่นอก `allowed_on`
++- พบคำบรรยายที่เขียนใหม่ 6 รายการใน `site/stories/kuapapoh/index.html:1`
++- พบการใช้ไฟล์เดิมซ้ำเกิน 3 หน้าจำนวน 19 ไฟล์ รายการอยู่ด้านล่าง
++
++## 1. ใช้รูปนอก `allowed_on`
++
++ผลสำหรับรูปที่มีรายการในทะเบียน: **ตรวจแล้วไม่พบปัญหา**
++
++ไฟล์ที่ไม่พบในทะเบียนจึงตรวจ `allowed_on` ไม่ได้ ไม่ถือเป็นหลักฐานว่าผิดกฎโดยอัตโนมัติ แต่ทะเบียนปัจจุบันไม่รองรับการยืนยันรายการเหล่านี้ ได้แก่ภาพสถานที่/ภาพประกอบ เช่น `/assets/culture-street.webp`, `/assets/food-center.webp`, `/assets/tao-ming.webp`, `/assets/guan-yu.webp`, `/assets/riverwalk.webp` รวมถึงไฟล์ใน `/assets/guide/` และ `/assets/leaflet/` ตรวจพบการอ้างอิงใน `site/` หลายหน้า แต่ไม่มีระเบียนให้เทียบ
++
++หลักฐานรวม: `data/photo-registry.json` มีรายการภาพ 12 ไฟล์; การอ้างอิงที่ไม่ตรงกับ `file` ในทะเบียนถูกจัดเป็น “ตรวจไม่ได้เพราะไม่มีรายการในทะเบียน”
++
++## 2. คำบรรยายตรงกับ `caption_th` หรือไม่
++
++รูปที่มีทะเบียนส่วนใหญ่ใช้ `alt` และ/หรือ `figcaption` ตรงกับ `caption_th` แต่พบการเขียนใหม่ 6 รายการต่อไปนี้ใน `site/stories/kuapapoh/index.html:1`:
++
++| ไฟล์ภาพ | คำบนหน้าเว็บ | คำในทะเบียน |
++|---|---|---|
++| `/assets/photos/kuapapoh-brand.jpg` | กั่วป่าโพ้ แบรนด์เมืองเก่าตะกั่วป่า | กั่วป่าโพ้ · แบรนด์ของโครงการเมืองเก่าตะกั่วป่า |
++| `/assets/photos/kuapapoh-pattern.jpg` | ลายกระเบื้องเปอรานากันเมืองเก่า | ลายกระเบื้องเปอรานากันที่ยังเห็นได้ในเมืองเก่า |
++| `/assets/photos/kuapapoh-history.jpg` | แผ่นเล่าประวัติกั่วป่าโพ้ | แผ่นเล่าประวัติเมือง จัดทำโดยโครงการกั่วป่าโพ้ |
++| `/assets/photos/kuapapoh-wuikun.jpg` | หวุ่ยกุ่น | หวุ่ยกุ่น · งานออกแบบของโครงการกั่วป่าโพ้ |
++| `/assets/photos/kuapapoh-doc-1.jpg` | เอกสารเก่าเมืองตะกั่วป่า 1 | เอกสารเก่าของเมือง จากคลังโครงการกั่วป่าโพ้ |
++| `/assets/photos/kuapapoh-doc-2.jpg` | เอกสารเก่าเมืองตะกั่วป่า 2 | เอกสารเก่าของเมือง จากคลังโครงการกั่วป่าโพ้ |
++
++สำหรับ 146 ไฟล์ที่ไม่อยู่ในทะเบียน ตรวจเทียบ `caption_th` ไม่ได้เพราะไม่มีรายการต้นทางในทะเบียน
++
++## 3. รูปเดียวกันใช้ซ้ำเกิน 3 หน้า
++
++นับเป็นจำนวนหน้า HTML ที่ไม่ใช่ `/en/` ไม่ใช่จำนวนแท็ก `img`:
++
++| จำนวนหน้า | ไฟล์ |
++|---:|---|
++| 7 | `/assets/culture-street.webp`, `/assets/iron-bridge.webp` |
++| 6 | `/assets/food-center.webp`, `/assets/governor-wall.webp`, `/assets/guan-yu.webp`, `/assets/khun-in.webp`, `/assets/riverwalk.webp`, `/assets/tao-ming.webp`, `/assets/wat-boromthat.webp` |
++| 5 | `/assets/wat-kongkha.webp`, `/assets/wat-pathum.webp` |
++| 4 | `/assets/kue-chai.webp`, `/assets/phra-narai.webp`, `/assets/pun-thao.webp`, `/assets/rong-jae.webp`, `/assets/thung-phra.webp`, `/assets/wat-khuha.webp`, `/assets/wat-nikorn.webp`, `/assets/wat-sena.webp` |
++
++ไฟล์ซ้ำทั้งหมดในตารางนี้ไม่มีรายการใน `photo-registry.json` จึงตรวจได้เฉพาะจำนวนการใช้ ไม่สามารถยืนยันว่าแต่ละหน้าถูกต้องตาม `allowed_on` หรือไม่
++
++## 4. ภาพวาดที่อาจถูกเข้าใจว่าเป็นภาพถ่าย
++
++จาก HTML ที่ตรวจพบ ภาพประกอบในหน้าเรื่องเล่ามีคำว่า `ภาพวาดประกอบ` อยู่ในคำอธิบาย เช่น `site/stories/architecture/index.html:1`, `site/stories/city/index.html:1`, `site/stories/food-people/index.html:1`, `site/stories/kuapapoh/index.html:1` และ `site/stories/water-trade/index.html:1` จึง **ไม่พบหลักฐานจากข้อความบนหน้าว่าถูกระบุเป็นภาพถ่ายจริง**
++
++อย่างไรก็ตาม ไฟล์ภาพเหล่านี้ไม่อยู่ในทะเบียน และการตรวจครั้งนี้ไม่ได้เปิดดูพิกเซลของทุกภาพเพื่อยืนยันลักษณะภาพจริง ดังนั้นการจำแนกชนิดภาพของไฟล์นอกทะเบียน **ตรวจไม่ได้เพราะไม่มีระเบียนและไม่มีการตรวจภาพด้วยสายตาครบทุกไฟล์**
++
++## ข้อจำกัดการตรวจ
++
++- ไม่ได้แก้ไฟล์เว็บหรือไฟล์ทะเบียนตามข้อกำหนดของ SPEC
++- ไม่ได้เสิร์ฟเว็บด้วย `python -m http.server 8799 --directory site` เพราะการตรวจรายการ `img`, `alt` และ `figcaption` ทำได้จากไฟล์ต้นฉบับโดยตรง และไม่มีข้อที่ต้องตรวจพฤติกรรมรันไทม์ของเบราว์เซอร์
++- ไม่ได้สรุปว่ารูปที่ไม่มีทะเบียน “ผิด” โดยไม่มีหลักฐาน เพราะข้อกำหนดห้ามแต่งปัญหา
+
+tokens used
+46,591

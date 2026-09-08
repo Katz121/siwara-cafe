@@ -131,6 +131,15 @@
   .site-header .theme-toggle{display:grid}
 }
 
+/* Phones: the bottom tab bar already carries ทริป, so the header drops its copy
+   rather than pushing the row past the viewport. */
+@media (max-width:460px){
+  .site-header .header-tools{gap:5px}
+  .site-header .header-tools .icon-button[href$="/trip/"]{display:none}
+  .site-header .lang-switch{margin-left:2px}
+  .site-header .brand small{display:none}
+}
+
 /* Secondary links live in the drawer on wide screens and appear inline once the
    whole menu becomes a drawer on narrow ones. */
 @media (min-width:901px){
@@ -149,3 +158,14 @@
   .nav-toggle{display:grid}
 }
 .site-header{position:relative}
+
+/* บนจอสัมผัส ปุ่มควบคุมต้องกดโดนง่าย · เกณฑ์ 44x44px
+   ลิงก์ที่แทรกอยู่ในประโยคไม่นับ เพราะเป็นข้อความไม่ใช่ปุ่ม */
+@media (max-width:900px){
+  .site-header .theme-toggle,
+  .site-header .nav-toggle,
+  .site-header .icon-button{width:44px;height:44px}
+  .site-header .lang-switch{min-width:44px;min-height:44px;display:inline-grid;place-items:center}
+  .site-header nav a{min-height:44px}
+  .tab-bar a{min-height:48px}
+}

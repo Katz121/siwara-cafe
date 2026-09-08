@@ -108,3 +108,9 @@ a.shop-src:hover{color:#a3492f}
   .news-meta a{display:inline-block;padding:6px 0;line-height:1.4}
   .news-row{padding:16px 0}
 }
+
+.place-hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:14px}
+.place-hero-actions .button{margin:0}
+
+.news-out-offline,.source-offline small{color:var(--muted,#6b7c78);font-size:.86em}
+.source-offline{white-space:normal}

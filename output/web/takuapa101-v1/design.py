@@ -1,6 +1,8 @@
 """Presentation layer for the 2026-09-07 editorial redesign."""
 from html import escape as e
 import re
+from PIL import Image
+from dead_sources import source_link, is_dead
 
 # ---- Photo registry guard ----
 # Nothing renders a photograph unless the registry says that photo depicts this
@@ -42,17 +44,51 @@ def card(id, ctx):
     r=ctx['byid'][id]; key,label=next((k,l) for k,l,ids in GROUPS if id in ids)
     return f'<article class="place-card" data-place-card data-category="{key}" data-name="{e(r["name_th"])}"><a class="place-image" href="{ctx["url"](r)}">{ctx["pic"](id)}<span class="card-index">{ctx["places"].index(r)+1:02d}</span><span class="image-arrow" aria-hidden="true">↗</span></a><div class="card-copy"><span class="eyebrow">{label}</span><h3>{ctx["a"](r)}</h3><p>{e(ctx["copy"][id]["kicker"])}</p></div></article>'
 
+LEAFLET_BY_CATEGORY = {'restaurant': 32, 'drink_shop': 19, 'souvenir_shop': 8}
+
+
+def _shops_by_category():
+    import json as _j, os as _o
+    n = dict(LEAFLET_BY_CATEGORY)
+    fp = _o.path.join(_o.path.dirname(_o.path.abspath(__file__)), 'data', 'shops-extra.json')
+    try:
+        d = _j.load(open(fp, encoding='utf-8'))
+        for r in (d if isinstance(d, list) else d.get('shops', [])):
+            c = r.get('category')
+            if c in n:
+                n[c] += 1
+    except Exception:
+        pass
+    return n
+
+
+SHOPS_BY_CATEGORY = _shops_by_category()
+
+LEAFLET_SHOPS = 59            # จากแผ่นพับเทศบาล · เป็นที่มาของรายชื่อชุดแรก
+def _shop_total():
+    """จำนวนร้านทั้งหมดที่แสดงบน /eat/ · แผ่นพับ + ที่ค้นเพิ่มและระบุแหล่งที่มาแล้ว"""
+    import json as _j, os as _o
+    n = LEAFLET_SHOPS
+    fp = _o.path.join(_o.path.dirname(_o.path.abspath(__file__)), 'data', 'shops-extra.json')
+    try:
+        d = _j.load(open(fp, encoding='utf-8'))
+        n += len(d if isinstance(d, list) else d.get('shops', []))
+    except Exception:
+        pass
+    return n
+SHOP_TOTAL = _shop_total()
+
 def explorer(ctx, search=False):
     tabs='<button type="button" data-filter="all" aria-pressed="true">ทั้งหมด <sup>20</sup></button>'+''.join(f'<button type="button" data-filter="{key}" aria-pressed="false">{label} <sup>{len(ids)}</sup></button>' for key,label,ids in GROUPS)
     field='<label class="search-label">ค้นหาสถานที่<input type="search" data-place-search placeholder="ชื่อวัด ศาลเจ้า หรือจุดที่อยากไป" autocomplete="off"></label>' if search else ''
-    return f'<div class="explorer" data-explorer><div class="explorer-tools">{field}<div class="filter-tabs" role="group" aria-label="หมวดสถานที่">{tabs}</div></div><div class="explorer-status"><span data-place-count role="status" aria-live="polite">20 สถานที่ให้ค่อย ๆ รู้จัก</span><span>เลือกภาพเพื่อเปิดอ่าน ↗</span></div><div class="places-grid">'+''.join(card(id,ctx) for _,_,ids in GROUPS for id in ids)+'</div><div class="empty-state" data-place-empty hidden><h3>ยังไม่เจอจุดหมายนี้</h3><p>ลองคำค้นอื่น หรือเลือกดูสถานที่ทั้งหมด</p><button type="button" data-clear-places>ล้างตัวกรอง</button></div></div>'
+    return f'<div class="explorer" data-explorer><div class="explorer-tools">{field}<div class="filter-tabs" role="group" aria-label="หมวดสถานที่">{tabs}</div></div><div class="explorer-status"><span data-place-count role="status" aria-live="polite">20 สถานที่ให้ค่อย ๆ รู้จัก</span><span>เลือกภาพเพื่อเปิดอ่าน ↗</span></div><h2 class="visually-hidden">รายชื่อสถานที่ทั้งหมด</h2><div class="places-grid">'+''.join(card(id,ctx) for _,_,ids in GROUPS for id in ids)+'</div><div class="empty-state" data-place-empty hidden><h3>ยังไม่เจอจุดหมายนี้</h3><p>ลองคำค้นอื่น หรือเลือกดูสถานที่ทั้งหมด</p><button type="button" data-clear-places>ล้างตัวกรอง</button></div></div>'
 
 def route_cards(ctx):
     arts=['wat-boromthat','guan-yu','tao-ming','khun-in']; angles=['อ่านเมืองผ่านศรัทธา','มองเรื่องราวของชุมชนจีน','ตามรอยอาคาร การค้า และผู้คน','เหมาะกับคนมีเวลาครึ่งวัน']
     return '<div class="route-cards">'+''.join(f'<a class="route-card" href="/routes/#route-{i}"><div class="route-art">{ctx["pic"](arts[i-1])}<span class="route-no">0{i}</span></div><div class="route-copy"><span class="eyebrow">{angles[i-1]}</span><h3>{name}</h3><span class="route-footer">{len(ids)} จุดหมาย <span aria-hidden="true">↗</span></span></div></a>' for i,(name,ids) in enumerate(ctx['routes'],1))+'</div>'
 
 def map_teaser():
-    return f'<section class="map-teaser"><div class="map-teaser-copy"><span class="chapter">กางแผนที่ / แล้วออกไปรู้จักเมือง</span><h2>ตรอกไหน ถนนไหน<br><em>มีเรื่องรออยู่</em></h2><p>จากย่านยาวถึงเมืองเก่า เปิดแผนที่เทศบาลแล้วค่อย ๆ มองหาจุดหมายถัดไป</p>{cta("/map/","กางแผนที่เมือง")}<span class="map-caption">ใช้ภาพแผนที่เทศบาลฉบับต้นทาง</span></div><a class="map-paper" href="/map/" aria-label="เปิดแผนที่เทศบาล"><img src="/assets/municipal-map.png" width="1358" height="1938" alt="แผนที่ท่องเที่ยวเมืองตะกั่วป่าจากเทศบาล" loading="lazy"><span class="paper-tag">TAKUA PA · TOWN MAP ↗</span></a><span class="map-compass" aria-hidden="true">✳</span></section>'
+    return f'<section class="map-teaser"><div class="map-teaser-copy"><span class="chapter">กางแผนที่ / แล้วออกไปรู้จักเมือง</span><h2>ตรอกไหน ถนนไหน<br><em>มีเรื่องรออยู่</em></h2><p>จากย่านยาวถึงเมืองเก่า เปิดแผนที่เทศบาลแล้วค่อย ๆ มองหาจุดหมายถัดไป</p>{cta("/map/","กางแผนที่เมือง")}<span class="map-caption">ใช้ภาพแผนที่เทศบาลฉบับต้นทาง</span></div><a class="map-paper" href="/map/" aria-label="เปิดแผนที่เทศบาล"><picture><source srcset="/assets/municipal-map.webp" type="image/webp"><img src="/assets/municipal-map.png" width="1358" height="1938" alt="แผนที่ท่องเที่ยวเมืองตะกั่วป่าจากเทศบาล" loading="lazy"></picture><span class="paper-tag">TAKUA PA · TOWN MAP ↗</span></a><span class="map-compass" aria-hidden="true">✳</span></section>'
 
 def traditions(ctx):
     order=['new-year-alms','ruler-ceremony','relic-procession','narai-ceremony','vegetarian','chak-phra','loy-krathong']; rows=[]
@@ -68,13 +104,13 @@ def transform(path,body,ctx,record):
     if path=='/stories/kuapapoh/': return body+place_pages.story_gallery()
     pic=ctx['pic']; intro=ctx['intro']; source=ctx['source']; byid=ctx['byid']
     if path=='/':
-        hero=f'''<section class="hero"><div class="hero-topline"><span>PHANG NGA, THAILAND</span><span>เรื่องของเมือง / ฉบับที่ ๑</span></div><div class="hero-layout"><div class="hero-copy"><span class="hero-eyebrow"><i></i> คู่มือเมืองเก่าที่ชวนคุณค่อย ๆ เดิน</span><h1>ตะกั่วป่า<span class="hero-title-bottom">เมืองเล่าเรื่อง<em>101</em></span></h1><p>ผ่านประตูศาลเจ้า มองหน้าต่างบ้านเก่า<br>แล้วรู้จักเมืองอีกนิด ในทุกจุดที่แวะ</p><div class="hero-actions">{cta('#places','เลือกจุดหมายของคุณ')}<a class="text-link" href="/map/">เปิดแผนที่ ↗</a></div><div class="hero-footnote"><span class="tiny-star" aria-hidden="true">✳</span><span>20 สถานที่ · 7 ประเพณี · 59 ร้าน<br>รวบรวมจากแผ่นพับเทศบาลเมืองตะกั่วป่า</span></div></div><div class="hero-collage"><div class="collage-ring" aria-hidden="true"></div><span class="stamp">TAKUA PA<br><strong>ตะกั่วป่า</strong><br>OLD TOWN</span><a class="postcard postcard-main" href="/places/tao-ming/">{pic('tao-ming',True)}<span><b>01 / ตึกเก่า</b> โรงเรียนเต้าหมิง ↗</span></a><a class="postcard postcard-left" href="/places/guan-yu/">{pic('guan-yu',True)}<span>ศรัทธาของชุมชน ↗</span></a><a class="postcard postcard-right" href="/places/khun-in/">{pic('khun-in',True)}<span>หน้าต่างสู่วันวาน ↗</span></a><span class="collage-note">เก็บเรื่องราวระหว่างทาง</span><span class="collage-spark" aria-hidden="true">✳</span></div></div><div class="hero-bottom"><span>วัดและเจดีย์</span><i>✳</i><span>ศาลเจ้า</span><i>✳</i><span>บ้านเก่า</span><i>✳</i><span>ตลาดริมน้ำ</span><a href="#start">เริ่มเปิดอ่าน ↓</a></div></section>'''
+        hero=f'''<section class="hero"><div class="hero-topline"><span>PHANG NGA, THAILAND</span><span>เรื่องของเมือง / ฉบับที่ ๑</span></div><div class="hero-layout"><div class="hero-copy"><span class="hero-eyebrow"><i></i> คู่มือเมืองเก่าที่ชวนคุณค่อย ๆ เดิน</span><h1>ตะกั่วป่า<span class="hero-title-bottom">เมืองเล่าเรื่อง<em>101</em></span></h1><p>ผ่านประตูศาลเจ้า มองหน้าต่างบ้านเก่า<br>แล้วรู้จักเมืองอีกนิด ในทุกจุดที่แวะ</p><div class="hero-actions">{cta('#places','เลือกจุดหมายของคุณ')}<a class="text-link" href="/map/">เปิดแผนที่ ↗</a></div><div class="hero-footnote"><span class="tiny-star" aria-hidden="true">✳</span><span>20 สถานที่ · 7 ประเพณี · {SHOP_TOTAL} ร้าน<br>ตั้งต้นจากแผ่นพับเทศบาลเมืองตะกั่วป่า แล้วค้นเพิ่มพร้อมแหล่งที่มา</span></div></div><div class="hero-collage"><div class="collage-ring" aria-hidden="true"></div><span class="stamp">TAKUA PA<br><strong>ตะกั่วป่า</strong><br>OLD TOWN</span><a class="postcard postcard-main" href="/places/tao-ming/">{pic('tao-ming',True)}<span><b>01 / ตึกเก่า</b> โรงเรียนเต้าหมิง ↗</span></a><a class="postcard postcard-left" href="/places/guan-yu/">{pic('guan-yu',True)}<span>ศรัทธาของชุมชน ↗</span></a><a class="postcard postcard-right" href="/places/khun-in/">{pic('khun-in',True)}<span>หน้าต่างสู่วันวาน ↗</span></a><span class="collage-note">เก็บเรื่องราวระหว่างทาง</span><span class="collage-spark" aria-hidden="true">✳</span></div></div><div class="hero-bottom"><span>วัดและเจดีย์</span><i>✳</i><span>ศาลเจ้า</span><i>✳</i><span>บ้านเก่า</span><i>✳</i><span>ตลาดริมน้ำ</span><a href="#start">เริ่มเปิดอ่าน ↓</a></div></section>'''
         body=hero+quick_start()
         body+='<section id="start" class="section">'+heading('01','เริ่มจากเรื่องที่คุณสนใจ','สามเส้นทางอ่านเมือง · เลือกจุดแวะในแบบของคุณ')+route_cards(ctx)+'</section>'
         body+=city_feed(ctx)+map_teaser()
         body+='<section id="places" class="section">'+heading('03','เมืองเดียว หลายมุมให้รู้จัก','สถานที่ทั้ง 20 แห่ง จากหน้ากระดาษสู่เรื่องเล่าของเมือง')+explorer(ctx)+'<a class="text-link index-link" href="/places/">เปิดดัชนีและค้นหาสถานที่ ↗</a></section>'
         body+='<section class="section traditions-section">'+heading('04','เมื่อเมืองมีนัดหมาย','ประเพณีตลอดปี · ช่วงเวลาตามเอกสารต้นทาง')+traditions(ctx)+'<p class="small">ตรวจสอบกำหนดการของแต่ละปีก่อนเดินทาง</p></section>'
-        body+=f'<section class="food-feature"><div class="food-feature-image">{pic("food-center")}<span class="food-stamp">LOCAL<br>FLAVOURS</span></div><div class="food-feature-copy"><span class="chapter">05 / กินและซื้อของฝากในย่าน</span><h2>รู้จักเมือง<br>ผ่านอีกรสชาติ</h2><p>เปิดรายชื่อร้านอาหาร เครื่องดื่ม และของฝาก<br>59 ร้านจากแผ่นพับเทศบาล</p><div class="food-counts"><span><b>32</b>อาหาร</span><span><b>20</b>เครื่องดื่ม</span><span><b>08</b>ของฝาก</span></div>{cta("/eat/","หาร้านในย่าน")}</div></section>'
+        body+=f'<section class="food-feature"><div class="food-feature-image">{pic("food-center")}<span class="food-stamp">LOCAL<br>FLAVOURS</span></div><div class="food-feature-copy"><span class="chapter">05 / กินและซื้อของฝากในย่าน</span><h2>รู้จักเมือง<br>ผ่านอีกรสชาติ</h2><p>เปิดรายชื่อร้านอาหาร เครื่องดื่ม และของฝาก<br>{SHOP_TOTAL} ร้าน เริ่มจากแผ่นพับเทศบาลแล้วค้นเพิ่ม</p><div class="food-counts"><span><b>{SHOPS_BY_CATEGORY['restaurant']}</b>อาหาร</span><span><b>{SHOPS_BY_CATEGORY['drink_shop']}</b>เครื่องดื่ม</span><span><b>{SHOPS_BY_CATEGORY['souvenir_shop']}</b>ของฝาก</span></div>{cta("/eat/","หาร้านในย่าน")}</div></section>'
         return body+'<section class="about-strip"><span class="chapter">บันทึกจากบ้านศิวรา</span><h2>เรื่องของเมือง<br>ที่อยากชวนคุณรู้จัก</h2><div><p>ตะกั่วป่า 101 รวบรวมข้อมูลจากแผ่นพับเทศบาลเมืองตะกั่วป่า พร้อมที่มาและขอบเขตข้อมูลให้คุณอ่านต่อได้</p><a class="text-link" href="/about/">รู้จักคู่มือเล่มนี้ ↗</a></div></section>'
     if path=='/places/':
         return intro('เลือกเปิดเรื่องของเมือง','20 จุดหมาย · วัด ศาลเจ้า ตึกเก่า และชีวิตริมทาง')+explorer(ctx,True)+source()
@@ -154,14 +190,14 @@ def transform(path,body,ctx,record):
             src = (r.get('sources') or [{}])[0].get('url')
             tag = 'ร้านของผู้จัดทำ' if r.get('provenance') == 'first-party' else ('เพิ่มโดยผู้ดูแล' if r.get('provenance') == 'owner-added' else 'จากการค้นหา')
             if src:
-                bits.append(f'<a class="shop-src" href="{e(src)}" target="_blank" rel="noopener">{tag} ↗</a>')
+                bits.append(f'<span class="shop-src">{source_link(src, tag)}</span>')
             else:
                 bits.append(f'<span class="shop-src">{tag}</span>')
             if r.get('status') == 'uncertain':
                 bits.append('<span class="shop-warn">ยังไม่ยืนยันว่าเปิดอยู่</span>')
             key = ' '.join(filter(None, [r['name_th'], r.get('name_en'), r.get('one_liner_th')]))
             return (f'<li id="{e(r["id"])}" data-shop="{e(key)}" class="shop-extra">'
-                    f'<span class="shop-number">—</span><span>{name}{"".join(bits)}</span></li>')
+                    f'<span class="shop-number">·</span><span>{name}{"".join(bits)}</span></li>')
 
         for cat, head in HEADS.items():
             rows = ''.join(_entry(r) for r in extra if r['category'] == cat)
@@ -228,7 +264,7 @@ def quick_start():
     items = [
         ('/map/', 'กางแผนที่', 'ดูว่าอะไรอยู่ตรงไหน', 'map'),
         ('/places/', 'เที่ยวไหนดี', '20 สถานที่ในเมืองเก่า', 'places'),
-        ('/eat/', 'กินอะไรดี', '60 ร้านในย่าน', 'eat'),
+        ('/eat/', 'กินอะไรดี', f'{SHOP_TOTAL} ร้านในย่าน', 'eat'),
         ('/trip/', 'จัดทริปของฉัน', 'เลือกเก็บไว้ แล้วเดินตามลำดับ', 'trip'),
     ]
     cards = ''
@@ -280,7 +316,16 @@ def city_feed(ctx, limit_news=8):
             src = (sd.get('hero_photo') or {}).get('file')
         if src:
             used.add(src)
-        img = f'<span class="sc-img"><img src="{e(src)}" alt="" loading="lazy"></span>' if src else ''
+        if src:
+            _asset = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'site', src.lstrip('/'))
+            try:
+                _w, _h = Image.open(_asset).size
+                _dims = f' width="{_w}" height="{_h}"'
+            except Exception:
+                _dims = ''
+            img = f'<span class="sc-img"><img src="{e(src)}" alt=""{_dims} loading="lazy"></span>'
+        else:
+            img = ''
         mins = sd.get('reading_minutes')
         meta = f'<small>{mins} นาที</small>' if mins else ''
         return (f'<a class="story-tile{" story-tile-lead" if big else ""}" href="/stories/{e(sd["id"])}/">{img}'
@@ -297,7 +342,9 @@ def city_feed(ctx, limit_news=8):
                 pass
         place = f'<a href="{e(n["place_url"])}">{e(n["place_name"])}</a>' if n.get('place_url') else ''
         out = e(n.get('outlet') or '')
-        link = f'<a class="news-out" href="{e(n["url"])}" target="_blank" rel="noopener">อ่านข่าวต้นทาง ↗</a>' if n.get('url') else ''
+        link = (f'<span class="news-out news-out-offline">ข่าวต้นทางถูกถอดออกแล้ว · ตรวจเมื่อ 8 ก.ย. 2569</span>'
+                if is_dead(n.get('url')) else
+                f'<a class="news-out" href="{e(n["url"])}" target="_blank" rel="noopener">อ่านข่าวต้นทาง ↗</a>') if n.get('url') else ''
         return (f'<li class="news-row"><span class="news-date">{e(d)}</span>'
                 f'<span class="news-main"><b>{e(n.get("title_th",""))}</b>'
                 f'<span class="news-meta">{place}{" · " + out if out else ""}</span>{link}</span></li>')
@@ -363,5 +410,5 @@ def shell(path, html):
         bar += f'<a href="{href}"{cur}><span class="tb-glyph" aria-hidden="true">{glyph}</span>{label}{badge}</a>'
     bar += '</nav>'
     html = html.replace('</body>', bar + '</body>')
-    html = html.replace('</head>', '<link rel="stylesheet" href="/assets/ui.css"><link rel="stylesheet" href="/assets/theme.css"><script src="/assets/trip.js" defer></script><script src="/assets/theme.js"></script><script src="/assets/search.js" defer></script><script src="/assets/live-news.js" defer></script><meta name="theme-color" content="#203f39"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"></head>')
+    html = html.replace('</head>', '<link rel="stylesheet" href="/assets/ui.css"><link rel="stylesheet" href="/assets/theme.css"><script src="/assets/theme.js"></script><script src="/assets/search.js" defer></script><script src="/assets/live-news.js" defer></script><meta name="theme-color" content="#203f39"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"></head>')
     return html
