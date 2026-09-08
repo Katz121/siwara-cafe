@@ -2,7 +2,7 @@
    cron  -> harvest, rule-filter, AI re-check, store in KV
    fetch -> serve the reviewed feed to the site as JSON */
 import { NEWS_QUERIES, OUTLET_FEEDS, DIRECT_SOURCES, FIRST_PARTY } from './sources.js';
-import { ruleFilter, fingerprint, normalise, titleKey } from './filter.js';
+import { ruleFilter, fingerprint, normalise, titleKey, unwrapLink, urlKey } from './filter.js';
 import { recheck, bucketOf } from './recheck.js';
 
 const UA = 'takuapa101-news/1.0 (+https://siwaracafe.com/takuapa/)';
@@ -44,8 +44,8 @@ function parseRss(xml, meta) {
   for (const raw of xml.split(/<item[\s>]/).slice(1)) {
     const block = raw.split('</item>')[0];
     const title = tag(block, 'title');
-    const link = tag(block, 'link') || tag(block, 'guid');
-    if (!title || !link) continue;
+    const link = unwrapLink(tag(block, 'link') || tag(block, 'guid'));
+    if (!title || !/^https?:\/\//i.test(link)) continue;
     out.push({
       title,
       link,
@@ -148,15 +148,19 @@ export async function runHarvest(env) {
   const stats = { fetched: raw.length, rule_rejected: 0, already_seen: 0, reviewed: 0, live: 0, held: 0, dropped: 0 };
 
   const candidates = [];
-  const titlesSeen = new Set(
-    (await readJSON(env, KEY_LIVE, [])).map((r) => titleKey(r.title_th || '')));
+  const liveNow = await readJSON(env, KEY_LIVE, []);
+  const titlesSeen = new Set(liveNow.map((r) => titleKey(r.title_th || '')));
+  const urlsSeen = new Set(liveNow.map((r) => urlKey(r.url || '')));
   for (const item of raw) {
     const fp = await fingerprint(item);
     if (seen.has(fp)) { stats.already_seen++; continue; }
     const verdict = ruleFilter(item);
     if (!verdict.ok) { stats.rule_rejected++; seen.add(fp); continue; }
+    const ukey = urlKey(item.link);
+    if (ukey && urlsSeen.has(ukey)) { stats.duplicate = (stats.duplicate || 0) + 1; seen.add(fp); continue; }
     const tkey = titleKey(item.title);
     if (tkey && titlesSeen.has(tkey)) { stats.duplicate = (stats.duplicate || 0) + 1; seen.add(fp); continue; }
+    if (ukey) urlsSeen.add(ukey);
     if (tkey) titlesSeen.add(tkey);
     candidates.push({ ...item, id: fp, place_id: verdict.place_id, rule_score: verdict.score });
   }
@@ -184,7 +188,17 @@ export async function runHarvest(env) {
       auto: true,
       checked_at: started,
     };
-    if (bucket === 'live') { live.unshift(record); stats.live++; }
+    if (bucket === 'live') {
+      // The reviewer rewrites the headline, so check once more against what is
+      // already published before adding it.
+      const finalKey = titleKey(record.title_th || '');
+      if (finalKey && live.some((r) => titleKey(r.title_th || '') === finalKey)) {
+        stats.duplicate = (stats.duplicate || 0) + 1;
+      } else {
+        live.unshift(record);
+        stats.live++;
+      }
+    }
     else if (bucket === 'held') { held.unshift({ ...record, verdict: reviewed.verdict, review_error: reviewed.review_error || '' }); stats.held++; }
     else { stats.dropped++; }
   }

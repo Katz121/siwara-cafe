@@ -1,8 +1,49 @@
 /* Stage 1: rule filter. Cheap, deterministic, runs on every fetched item. */
 import { REQUIRE_ANY, BLOCK_PATTERNS, OUTLET_ALLOWLIST, PLACE_KEYWORDS } from './sources.js';
 
+const ENTITIES = { amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' ' };
+
+export function decodeEntities(s) {
+  return String(s || '').replace(/&(#x?[0-9a-f]+|[a-z]+);/gi, function (m, code) {
+    if (code[0] === '#') {
+      const n = code[1] === 'x' || code[1] === 'X'
+        ? parseInt(code.slice(2), 16)
+        : parseInt(code.slice(1), 10);
+      return Number.isFinite(n) ? String.fromCodePoint(n) : m;
+    }
+    const hit = ENTITIES[code.toLowerCase()];
+    return hit === undefined ? m : hit;
+  });
+}
+
 export function normalise(s) {
-  return (s || '').replace(/<[^>]*>/g, ' ').replace(/&[a-z]+;|&#\d+;/gi, ' ').replace(/\s+/g, ' ').trim();
+  return decodeEntities((s || '').replace(/<[^>]*>/g, ' ')).replace(/\s+/g, ' ').trim();
+}
+
+/* Bing hands back a click tracker, not the article. The real address sits in
+   the url= parameter, percent encoded. */
+export function unwrapLink(link) {
+  const raw = decodeEntities(String(link || '')).trim();
+  const m = raw.match(/[?&]url=([^&\s]+)/i);
+  if (m) {
+    try {
+      const inner = decodeURIComponent(m[1]);
+      if (/^https?:\/\//i.test(inner)) return inner;
+    } catch (e) {
+      // fall through to the raw link
+    }
+  }
+  return raw;
+}
+
+/* Same article from two outlets, or the same outlet twice, is one story. */
+export function urlKey(u) {
+  try {
+    const parsed = new URL(unwrapLink(u));
+    return (parsed.hostname.replace(/^www\./, '') + parsed.pathname.replace(/\/+$/, '')).toLowerCase();
+  } catch (e) {
+    return String(u || '').slice(0, 90).toLowerCase();
+  }
 }
 
 export function outletAllowed(outlet, link) {
