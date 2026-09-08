@@ -56,8 +56,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Sarabun:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 
 <!-- ===== JSON-LD STRUCTURED DATA ===== -->
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "CafeOrCoffeeShop",
   "@id": "https://siwaracafe.com/#cafe",
@@ -72,21 +71,67 @@
   "url": "https://siwaracafe.com/",
   "telephone": "+66973501514",
   "priceRange": "฿฿",
-  "servesCuisine": ["Coffee", "Cafe", "Dessert"],
+  "servesCuisine": [
+    "Coffee",
+    "Cafe",
+    "Dessert"
+  ],
   "acceptsReservations": false,
-  "hasMenu": {"@id": "https://siwaracafe.com/#menu"},
+  "hasMenu": {
+    "@id": "https://siwaracafe.com/#menu"
+  },
   "amenityFeature": [
-    {"@type": "LocationFeatureSpecification", "name": "สวนริมน้ำ / Riverside garden", "value": true},
-    {"@type": "LocationFeatureSpecification", "name": "มุมถ่ายรูป / Photo spots", "value": true},
-    {"@type": "LocationFeatureSpecification", "name": "ที่จอดรถ / Parking", "value": true},
-    {"@type": "LocationFeatureSpecification", "name": "นั่งในร้าน / Dine-in", "value": true},
-    {"@type": "LocationFeatureSpecification", "name": "ซื้อกลับบ้าน / Takeaway", "value": true},
-    {"@type": "LocationFeatureSpecification", "name": "บอร์ดเกม / Board games", "value": true},
-    {"@type": "LocationFeatureSpecification", "name": "เหมาะนั่งทำงาน / Good for working", "value": true},
-    {"@type": "LocationFeatureSpecification", "name": "รับทำเค้กวันเกิด & Snack Box / Birthday cakes & snack boxes", "value": true}
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "สวนริมน้ำ / Riverside garden",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "มุมถ่ายรูป / Photo spots",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "ที่จอดรถ / Parking",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "นั่งในร้าน / Dine-in",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "ซื้อกลับบ้าน / Takeaway",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "บอร์ดเกม / Board games",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "เหมาะนั่งทำงาน / Good for working",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "รับทำเค้กวันเกิด & Snack Box / Birthday cakes & snack boxes",
+      "value": true
+    }
   ],
   "hasMap": "https://maps.app.goo.gl/EmCpQ4hKVBHTm3vM9",
-  "areaServed": ["ตะกั่วป่า", "เมืองเก่าตะกั่วป่า", "เขาหลัก", "พังงา", "Takua Pa", "Khao Lak", "Phang-nga"],
+  "areaServed": [
+    "ตะกั่วป่า",
+    "เมืองเก่าตะกั่วป่า",
+    "เขาหลัก",
+    "พังงา",
+    "Takua Pa",
+    "Khao Lak",
+    "Phang-nga"
+  ],
   "geo": {
     "@type": "GeoCoordinates",
     "latitude": 8.8332498,
@@ -100,17 +145,27 @@
     "postalCode": "82110",
     "addressCountry": "TH"
   },
-  "openingHoursSpecification": [{
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-    "opens": "10:00",
-    "closes": "17:00"
-  }],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "opens": "10:00",
+      "closes": "17:00"
+    }
+  ],
   "sameAs": [
     "https://line.me/R/ti/p/@siwara",
     "https://www.facebook.com/siwaracafetakuapa/",
     "https://www.instagram.com/si.wara_cafe/",
-    "https://www.tiktok.com/@siwaracafe"
+    "https://www.tiktok.com/@siwaracafe",
+    "https://takuapa101.com/"
   ]
 }
 </script>
@@ -296,6 +351,10 @@ section{padding:96px 0;position:relative}
 .map-text h3{color:var(--gold-soft);font-size:1.5rem;margin-bottom:18px}
 .map-text p{color:var(--paper);margin-bottom:16px}
 .map-text .pin{color:var(--gold-soft);font-weight:500}
+.map-text .town-link{display:inline-block;margin-top:20px;color:var(--gold-soft);text-decoration:none;
+  font-size:.95rem;border-bottom:1px solid currentColor;padding-bottom:3px;line-height:1.7}
+.map-text .town-link:hover{color:var(--gold)}
+footer .town-link{color:var(--gold-soft)}
 
 /* ===== GALLERY / ATMOSPHERE ===== */
 #atmosphere{background:var(--cream-soft)}
@@ -562,6 +621,7 @@ footer .fsmall{font-size:.8rem;opacity:.55;margin-top:18px;letter-spacing:.5px}
         <p data-en="It marks the beginning of a riverside community that connected people and countless stories to this day. Siwara Cafe is therefore not merely a coffee shop, but a landmark still living on the very same map.">จุดเริ่มต้นของชุมชนริมน้ำที่เชื่อมโยงผู้คน และเรื่องราวมากมายถึงปัจจุบัน
         ศิวรา คาเฟ่ จึงไม่ใช่เพียงร้านกาแฟ แต่คือหนึ่งหมุดหมายที่ยังคงมีชีวิตอยู่บนแผนที่ผืนเดิม</p>
         <p style="opacity:.7;font-size:.9rem;font-style:italic" data-en="Takua Pa — old town, old tales, our home.">ตะกั่วป่า — เมืองเก่า เล่าความหลัง บ้านเรา</p>
+        <a class="town-link" href="https://takuapa101.com/" data-en="Read the full guide to Takua Pa old town · 20 places, 7 traditions and the stories behind them ↗">อ่านคู่มือเมืองเก่าตะกั่วป่าฉบับเต็ม · 20 สถานที่ 7 ประเพณี และเรื่องราวเบื้องหลัง ↗</a>
       </div>
     </div>
   </div>
@@ -921,6 +981,9 @@ footer .fsmall{font-size:.8rem;opacity:.55;margin-top:18px;letter-spacing:.5px}
   <div class="fbrand" data-en="Siwara Cafe">ศิวรา คาเฟ่</div>
   <div class="fline">Here, every moment feels like home.</div>
   <p data-en="A cafe in a wooden house nearly 100 years old · Takua Pa Old Town, Phang-nga">คาเฟ่ในบ้านไม้เก่าเกือบ ๑๐๐ ปี · ย่านเมืองเก่าตะกั่วป่า จังหวัดพังงา</p>
+  <p class="fsmall" style="margin-top:14px" data-en="Planning a trip? See the <a href='https://takuapa101.com/' class='town-link'>Takua Pa old town guide</a>">
+    วางแผนเที่ยวต่อ ดู<a href="https://takuapa101.com/" class="town-link">คู่มือเมืองเก่าตะกั่วป่า</a>
+  </p>
   <p class="fsmall" style="max-width:640px;margin:18px auto 0" data-en="The history of Khun Kasem Thanasan (Khao Sukkasem) is drawn from a biographical note in the <a href='https://www.ratchakitcha.soc.go.th/DATA/PDF/2470/D/3702.PDF' target='_blank' rel='noopener' style='color:var(--gold-soft)'>Royal Thai Government Gazette, 1927</a>">
     ประวัติ ขุนเกษมธนสาร (ขาว ศุขเกษม) เรียบเรียงจากประวัติย่อใน
     <a href="https://www.ratchakitcha.soc.go.th/DATA/PDF/2470/D/3702.PDF" target="_blank" rel="noopener" style="color:var(--gold-soft)">ราชกิจจานุเบกษา พ.ศ. ๒๔๗๐</a>
