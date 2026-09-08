@@ -1,0 +1,1192 @@
+ตรวจเสร็จและเขียนรายงานแล้วที่ [audit/a3-regress-en.md](D:/Siwaracafeweb/output/web/takuapa101-v1/audit/a3-regress-en.md)
+
+ผลสรุป: ไม่พบ regression ที่ยืนยันได้ในขอบเขตการตรวจทั้งหมดครับ
+
+--ERR--
+OpenAI Codex v0.153.4
+--------
+workdir: D:\Siwaracafeweb\output\web\takuapa101-v1
+model: gpt-5.6-luna
+provider: openai
+approval: never
+sandbox: danger-full-access
+reasoning effort: low
+reasoning summaries: none
+session id: 01a08156-3d04-70f2-afbd-ecbadb3e69d0
+--------
+user
+อ่าน `audit/SPEC.md` ก่อน · ห้ามแก้ไฟล์ · ห้ามแต่งปัญหา · ทุกข้อต้องมีหลักฐาน
+รอบนี้เว็บเพิ่งถูกแก้หนัก งานคุณคือหาของที่ **พังเพิ่มจากการแก้** ไม่ใช่ทวนของเดิม
+ขอบเขตแคบ ทำให้จบใน 15 นาที · เสิร์ฟด้วย `python -m http.server 8798 --directory site`
+
+ตรวจหน้าอังกฤษว่ามีอะไรพังจากการแก้รอบล่าสุด
+สิ่งที่เพิ่งแก้: บั๊ก translate_attrs (เดิมไม่เคยแปล attribute ได้เลย ตอนนี้แปลได้แล้ว),
+เพิ่มคำแปล UI 30 กว่ารายการ, เขียนประโยคอังกฤษใหม่ 9 จุด, เติมลิงก์แผนที่ให้ร้าน 59 ร้าน
+
+1. เปิด 10 หน้าอังกฤษด้วย Playwright · console error, request 4xx/5xx, ล้นแนวนอน
+2. **ตรวจว่า attribute ที่แปลแล้วไม่มีเครื่องหมายคำพูดเกินหรือ HTML พัง**
+   ค้นหา `=""` ซ้อน และ tag ที่โครงสร้างเสีย
+3. ตรวจว่าคำแปล UI ใหม่ถูกวางถูกที่ไหม · มี aria-label ไหนที่แปลแล้วความหมายผิดบริบทไหม
+4. ตรวจลิงก์ Google Maps 59 เส้นว่า URL ถูกรูปแบบและ encode ถูกไหม · สุ่มเปิด 5 เส้น
+5. ตรวจว่าหน้าอังกฤษยังมี hreflang, canonical, title, description ครบและถูกไหม
+เขียนที่ `audit/a3-regress-en.md`
+codex
+ผมจะอ่าน `audit/SPEC.md` และตรวจหลักฐานจากไฟล์/เซิร์ฟเวอร์เท่านั้น จากนั้นจะเปิดหน้าอังกฤษ 10 หน้าด้วย Playwrightตามขอบเขต และเขียนเฉพาะรายงาน `audit/a3-regress-en.md` โดยไม่แก้ไฟล์เว็บหรือไฟล์อื่นครับ
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'Get-Content -Raw audit/SPEC.md; Write-Output "`n---FILES---"; rg --files site | Select-Object -First 200' in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 1257ms:
+# à¸‡à¸²à¸™à¸•à¸£à¸§à¸ˆà¹€à¸§à¹‡à¸š takuapa101.com Â· à¸£à¸­à¸šà¸•à¸£à¸§à¸ˆà¸„à¸§à¸²à¸¡à¸–à¸¹à¸à¸•à¹‰à¸­à¸‡
+
+à¹‚à¸Ÿà¸¥à¹€à¸”à¸­à¸£à¹Œà¸‡à¸²à¸™ `D:\Siwaracafeweb\output\web\takuapa101-v1`
+à¹€à¸§à¹‡à¸šà¸ˆà¸£à¸´à¸‡ `https://takuapa101.com` Â· à¹„à¸—à¸¢ 45 à¸«à¸™à¹‰à¸² Â· à¸­à¸±à¸‡à¸à¸¤à¸© 44 à¸«à¸™à¹‰à¸²
+
+## à¸à¸Žà¸à¸²à¸£à¸—à¸³à¸‡à¸²à¸™ (à¸—à¸¸à¸à¸„à¸™à¸•à¹‰à¸­à¸‡à¸­à¹ˆà¸²à¸™)
+
+1. **à¸«à¹‰à¸²à¸¡à¹à¸à¹‰à¹„à¸Ÿà¸¥à¹Œà¹ƒà¸” à¹†** à¸‡à¸²à¸™à¸™à¸µà¹‰à¸„à¸·à¸­à¸•à¸£à¸§à¸ˆà¹à¸¥à¸°à¸£à¸²à¸¢à¸‡à¸²à¸™à¹€à¸—à¹ˆà¸²à¸™à¸±à¹‰à¸™ Â· à¹€à¸ˆà¹‰à¸²à¸‚à¸­à¸‡à¹€à¸§à¹‡à¸šà¸ˆà¸°à¹€à¸›à¹‡à¸™à¸„à¸™à¸•à¸±à¸”à¸ªà¸´à¸™à¹ƒà¸ˆà¹à¸à¹‰
+2. **à¸—à¸¸à¸à¸‚à¹‰à¸­à¸—à¸µà¹ˆà¸£à¸²à¸¢à¸‡à¸²à¸™à¸•à¹‰à¸­à¸‡à¸¡à¸µà¸«à¸¥à¸±à¸à¸à¸²à¸™** à¸£à¸°à¸šà¸¸à¹„à¸Ÿà¸¥à¹Œ à¸šà¸£à¸£à¸—à¸±à¸” à¸«à¸£à¸·à¸­ URL à¸—à¸µà¹ˆà¸•à¸£à¸§à¸ˆà¹€à¸ˆà¸­ Â· à¸«à¹‰à¸²à¸¡à¹€à¸‚à¸µà¸¢à¸™à¸§à¹ˆà¸² "à¸­à¸²à¸ˆà¸ˆà¸°" à¸¥à¸­à¸¢ à¹†
+3. **à¹à¸¢à¸à¸„à¸§à¸²à¸¡à¸£à¸¸à¸™à¹à¸£à¸‡** à¹€à¸›à¹‡à¸™ 3 à¸£à¸°à¸”à¸±à¸š
+   - `à¸œà¸´à¸”` = à¸‚à¹‰à¸­à¸¡à¸¹à¸¥à¸œà¸´à¸” à¸¥à¸´à¸‡à¸à¹Œà¹€à¸ªà¸µà¸¢ à¹‚à¸„à¹‰à¸”à¸žà¸±à¸‡ à¸œà¸¹à¹‰à¹ƒà¸Šà¹‰à¹€à¸ˆà¸­à¸›à¸±à¸à¸«à¸²à¸ˆà¸£à¸´à¸‡
+   - `à¸„à¸§à¸£à¹à¸à¹‰` = à¹„à¸¡à¹ˆà¸œà¸´à¸”à¹à¸•à¹ˆà¸—à¸³à¹ƒà¸«à¹‰à¸”à¸µà¸à¸§à¹ˆà¸²à¸™à¸µà¹‰à¹„à¸”à¹‰à¸Šà¸±à¸”à¹€à¸ˆà¸™
+   - `à¸‚à¹‰à¸­à¸ªà¸±à¸‡à¹€à¸à¸•` = à¹€à¸£à¸·à¹ˆà¸­à¸‡à¸£à¸ªà¸™à¸´à¸¢à¸¡à¸«à¸£à¸·à¸­à¸—à¸²à¸‡à¹€à¸¥à¸·à¸­à¸
+4. **à¸«à¹‰à¸²à¸¡à¸£à¸²à¸¢à¸‡à¸²à¸™à¸ªà¸´à¹ˆà¸‡à¸—à¸µà¹ˆà¸¢à¸±à¸‡à¹„à¸¡à¹ˆà¹„à¸”à¹‰à¸•à¸£à¸§à¸ˆà¸ˆà¸£à¸´à¸‡** à¸–à¹‰à¸²à¸•à¸£à¸§à¸ˆà¹„à¸¡à¹ˆà¹„à¸”à¹‰à¹ƒà¸«à¹‰à¹€à¸‚à¸µà¸¢à¸™à¸§à¹ˆà¸²à¸•à¸£à¸§à¸ˆà¹„à¸¡à¹ˆà¹„à¸”à¹‰à¹€à¸žà¸£à¸²à¸°à¸­à¸°à¹„à¸£
+5. à¸–à¹‰à¸²à¹„à¸¡à¹ˆà¹€à¸ˆà¸­à¸›à¸±à¸à¸«à¸²à¹ƒà¸™à¸«à¸±à¸§à¸‚à¹‰à¸­à¹„à¸«à¸™ à¹ƒà¸«à¹‰à¹€à¸‚à¸µà¸¢à¸™à¸§à¹ˆà¸² "à¸•à¸£à¸§à¸ˆà¹à¸¥à¹‰à¸§à¹„à¸¡à¹ˆà¸žà¸šà¸›à¸±à¸à¸«à¸²" à¸žà¸£à¹‰à¸­à¸¡à¸šà¸­à¸à¸§à¹ˆà¸²à¸•à¸£à¸§à¸ˆà¸­à¸°à¹„à¸£à¹„à¸›à¸šà¹‰à¸²à¸‡
+   **à¸­à¸¢à¹ˆà¸²à¹à¸•à¹ˆà¸‡à¸›à¸±à¸à¸«à¸²à¸‚à¸¶à¹‰à¸™à¸¡à¸²à¹€à¸žà¸·à¹ˆà¸­à¹ƒà¸«à¹‰à¸¡à¸µà¸­à¸°à¹„à¸£à¸£à¸²à¸¢à¸‡à¸²à¸™**
+6. à¹€à¸‚à¸µà¸¢à¸™à¸£à¸²à¸¢à¸‡à¸²à¸™à¹€à¸›à¹‡à¸™à¸ à¸²à¸©à¸²à¹„à¸—à¸¢ à¹ƒà¸Šà¹‰ `Â·` à¹à¸—à¸™ em-dash Â· à¹€à¸‚à¸µà¸¢à¸™à¹„à¸Ÿà¸¥à¹Œà¹€à¸›à¹‡à¸™ UTF-8 à¹€à¸—à¹ˆà¸²à¸™à¸±à¹‰à¸™
+
+## à¸šà¸£à¸´à¸šà¸—à¸—à¸µà¹ˆà¸•à¹‰à¸­à¸‡à¸£à¸¹à¹‰à¸à¹ˆà¸­à¸™à¸•à¸£à¸§à¸ˆ
+
+à¹€à¸§à¹‡à¸šà¸™à¸µà¹‰à¸•à¸±à¹‰à¸‡à¹ƒà¸ˆ **à¹à¸¢à¸à¸‚à¹‰à¸­à¹€à¸—à¹‡à¸ˆà¸ˆà¸£à¸´à¸‡à¸—à¸µà¹ˆà¸¢à¸·à¸™à¸¢à¸±à¸™à¹à¸¥à¹‰à¸§à¸­à¸­à¸à¸ˆà¸²à¸à¸—à¸µà¹ˆà¸¢à¸±à¸‡à¹„à¸¡à¹ˆà¸¢à¸·à¸™à¸¢à¸±à¸™** à¸­à¸¢à¹ˆà¸²à¸‡à¸Šà¸±à¸”à¹€à¸ˆà¸™
+à¸„à¸³à¸§à¹ˆà¸² "à¸¢à¸±à¸‡à¹„à¸¡à¹ˆà¸¢à¸·à¸™à¸¢à¸±à¸™" "à¸ªà¸±à¸™à¸™à¸´à¸©à¸à¸²à¸™" "à¹à¸«à¸¥à¹ˆà¸‡à¸‚à¸±à¸”à¸à¸±à¸™" à¸—à¸µà¹ˆà¹€à¸«à¹‡à¸™à¸šà¸™à¸«à¸™à¹‰à¸²à¹€à¸§à¹‡à¸š **à¹„à¸¡à¹ˆà¹ƒà¸Šà¹ˆà¸‚à¹‰à¸­à¸šà¸à¸žà¸£à¹ˆà¸­à¸‡**
+à¹à¸•à¹ˆà¹€à¸›à¹‡à¸™à¸ªà¸´à¹ˆà¸‡à¸—à¸µà¹ˆà¸•à¸±à¹‰à¸‡à¹ƒà¸ˆà¹ƒà¸ªà¹ˆ Â· à¸­à¸¢à¹ˆà¸²à¸£à¸²à¸¢à¸‡à¸²à¸™à¸§à¹ˆà¸²à¹€à¸›à¹‡à¸™à¸›à¸±à¸à¸«à¸²
+
+à¸—à¸³à¸™à¸­à¸‡à¹€à¸”à¸µà¸¢à¸§à¸à¸±à¸™ à¸Šà¸·à¹ˆà¸­à¸«à¸™à¹ˆà¸§à¸¢à¸‡à¸²à¸™à¸£à¸²à¸Šà¸à¸²à¸£à¹„à¸—à¸¢à¹ƒà¸™à¸«à¸™à¹‰à¸²à¸­à¸±à¸‡à¸à¸¤à¸©à¸—à¸µà¹ˆà¹€à¸‚à¸µà¸¢à¸™à¹€à¸›à¹‡à¸™
+`à¸ªà¸³à¸™à¸±à¸à¸‡à¸²à¸™à¸™à¹‚à¸¢à¸šà¸²à¸¢à¹à¸¥à¸°à¹à¸œà¸™... (Office of Natural Resources...)` **à¸•à¸±à¹‰à¸‡à¹ƒà¸ˆà¸„à¸‡à¸ à¸²à¸©à¸²à¹„à¸—à¸¢à¹„à¸§à¹‰**
+à¹€à¸žà¸·à¹ˆà¸­à¹ƒà¸«à¹‰à¸„à¸™à¸•à¸²à¸¡à¹„à¸›à¸«à¸²à¹€à¸­à¸à¸ªà¸²à¸£à¸•à¹‰à¸™à¸—à¸²à¸‡à¹„à¸”à¹‰ à¹„à¸¡à¹ˆà¹ƒà¸Šà¹ˆà¸„à¸³à¹à¸›à¸¥à¸•à¸à¸«à¸¥à¹ˆà¸™
+
+à¹„à¸Ÿà¸¥à¹Œà¸­à¹‰à¸²à¸‡à¸­à¸´à¸‡à¸ªà¸³à¸„à¸±à¸
+- `data/places-enriched.json` à¸‚à¹‰à¸­à¸¡à¸¹à¸¥à¸ªà¸–à¸²à¸™à¸—à¸µà¹ˆ 27 à¹à¸«à¹ˆà¸‡ à¸—à¸¸à¸ claim à¸¡à¸µ status à¹à¸¥à¸° source_url
+- `data/photo-registry.json` à¸—à¸°à¹€à¸šà¸µà¸¢à¸™à¸£à¸¹à¸› à¸à¸³à¸«à¸™à¸”à¸§à¹ˆà¸²à¸£à¸¹à¸›à¹„à¸«à¸™à¸‚à¸¶à¹‰à¸™à¸«à¸™à¹‰à¸²à¹„à¸«à¸™à¹„à¸”à¹‰
+- `data/stories/*.json` à¸šà¸—à¸„à¸§à¸²à¸¡ 5 à¸šà¸—
+- `data/guide-picks.json` à¸„à¸¹à¹ˆà¸¡à¸·à¸­à¸„à¸±à¸”à¸ªà¸£à¸£ 13 à¸£à¸²à¸¢à¸à¸²à¸£
+- `data/shops-extra.json` à¸£à¹‰à¸²à¸™à¸ˆà¸²à¸à¸à¸²à¸£à¸„à¹‰à¸™à¸«à¸² 49 à¸£à¹‰à¸²à¸™
+
+
+---FILES---
+site\trip\index.html
+site\traditions\vegetarian\index.html
+site\traditions\ruler-ceremony\index.html
+site\traditions\relic-procession\index.html
+site\traditions\new-year-alms\index.html
+site\traditions\narai-ceremony\index.html
+site\traditions\loy-krathong\index.html
+site\traditions\index.html
+site\traditions\chak-phra\index.html
+site\stories\water-trade\index.html
+site\stories\kuapapoh\index.html
+site\stories\index.html
+site\map\index.html
+site\robots.txt
+site\leaflet\index.html
+site\index.html
+site\rest\index.html
+site\places\wat-sena\index.html
+site\places\wat-pathum\index.html
+site\sitemap.xml
+site\places\wat-nikorn\index.html
+site\routes\index.html
+site\places\wat-kongkha\index.html
+site\stories\architecture\index.html
+site\places\wat-khuha\index.html
+site\stories\city\index.html
+site\places\wat-boromthat\index.html
+site\en\about\index.html
+site\places\thung-phra\index.html
+site\eat\index.html
+site\places\tao-ming\index.html
+site\places\rong-jae\index.html
+site\places\riverwalk\index.html
+site\places\pun-thao\index.html
+site\places\phra-narai\index.html
+site\places\museum\index.html
+site\places\kue-chai\index.html
+site\places\khun-in\index.html
+site\assets\wat-sena.webp
+site\assets\wat-pathum.webp
+site\assets\wat-nikorn.webp
+site\assets\wat-kongkha.webp
+site\assets\wat-khuha.webp
+site\assets\wat-boromthat.webp
+site\assets\ui.css
+site\assets\trip.js
+site\assets\trip-page.js
+site\assets\thung-phra.webp
+site\assets\theme.js
+site\assets\theme.css
+site\assets\tao-ming.webp
+site\assets\site.js
+site\assets\site.css
+site\assets\search.js
+site\assets\search-index.json
+site\assets\rong-jae.webp
+site\assets\riverwalk.webp
+site\assets\pun-thao.webp
+site\assets\phra-narai.webp
+site\places\iron-bridge\index.html
+site\places\index.html
+site\places\guan-yu\index.html
+site\assets\photos\tao-ming-school.jpg
+site\assets\photos\tao-ming-logo.jpg
+site\assets\photos\shophouse-78.webp
+site\assets\photos\shophouse-305.webp
+site\assets\photos\shophouse-109.webp
+site\assets\photos\kuapapoh-wuikun.jpg
+site\assets\photos\kuapapoh-port.webp
+site\assets\photos\kuapapoh-pattern.jpg
+site\assets\photos\kuapapoh-history.jpg
+site\assets\photos\kuapapoh-doc-2.jpg
+site\assets\photos\kuapapoh-doc-1.jpg
+site\assets\photos\kuapapoh-brand.jpg
+site\places\governor-wall\index.html
+site\places\food-center\index.html
+site\places\culture-street\index.html
+site\news\index.html
+site\assets\map-points.json
+site\assets\live-news.js
+site\assets\leaflet\takuapa-walk-leaflet.pdf
+site\assets\leaflet\leaflet-page-2.webp
+site\assets\leaflet\leaflet-page-1.webp
+site\assets\kue-chai.webp
+site\assets\khun-in.webp
+site\assets\iron-bridge.webp
+site\assets\IBMPlexSansThaiLooped-Regular.woff2
+site\assets\og\wat-sena.png
+site\assets\og\wat-pathum.png
+site\assets\og\wat-nikorn.png
+site\assets\og\wat-kongkha.png
+site\assets\og\wat-khuha.png
+site\assets\og\wat-boromthat.png
+site\assets\og\vegetarian.png
+site\assets\og\thung-phra.png
+site\assets\og\tao-ming.png
+site\assets\og\ruler-ceremony.png
+site\assets\og\rong-jae.png
+site\assets\og\riverwalk.png
+site\assets\og\relic-procession.png
+site\assets\og\pun-thao.png
+site\assets\og\phra-narai.png
+site\assets\og\new-year-alms.png
+site\assets\og\narai-ceremony.png
+site\assets\og\museum.png
+site\assets\og\loy-krathong.png
+site\assets\og\kue-chai.png
+site\assets\og\khun-in.png
+site\assets\og\iron-bridge.png
+site\assets\og\guan-yu.png
+site\assets\og\governor-wall.png
+site\assets\og\food-center.png
+site\assets\og\default.png
+site\assets\og\culture-street.png
+site\assets\og\chak-phra.png
+site\assets\NotoSerifThai.woff2
+site\assets\museum.webp
+site\assets\municipal-map.webp
+site\assets\municipal-map.png
+site\assets\map.js
+site\assets\map.css
+site\assets\design.css
+site\assets\culture-street.webp
+site\assets\CormorantGaramond.woff2
+site\about\index.html
+site\1fe376a45dfca8f4bbddde935ca90177.txt
+site\assets\guan-yu.webp
+site\assets\governor-wall.webp
+site\assets\food-center.webp
+site\assets\favicon.svg
+site\assets\design.js
+site\assets\guide\guide-iron-bridge.webp
+site\assets\guide\guide-bang-deen.webp
+site\assets\guide\guide-baan-lapp.webp
+site\assets\guide\guide-kae-padthai.webp
+site\assets\guide\guide-jae-ouan.webp
+site\assets\guide\guide-lad-yai.webp
+site\assets\guide\guide-tuangrat-taosor.webp
+site\assets\guide\guide-tam-nang.webp
+site\assets\guide\guide-pu-dam.webp
+site\assets\guide\guide-pa-da-hokkien.webp
+site\assets\guide\guide-old-town-street.webp
+site\assets\guide\guide-moo-satay-kruaew.webp
+site\assets\guide\guide-mee-talad-khwang.webp
+site\en\index.html
+site\en\eat\index.html
+site\en\map\index.html
+site\en\news\index.html
+site\en\trip\index.html
+site\en\traditions\vegetarian\index.html
+site\en\traditions\ruler-ceremony\index.html
+site\en\traditions\relic-procession\index.html
+site\en\traditions\new-year-alms\index.html
+site\en\traditions\narai-ceremony\index.html
+site\en\traditions\loy-krathong\index.html
+site\en\traditions\index.html
+site\en\traditions\chak-phra\index.html
+site\en\stories\water-trade\index.html
+site\en\stories\kuapapoh\index.html
+site\en\stories\index.html
+site\en\stories\food-people\index.html
+site\en\stories\city\index.html
+site\en\stories\architecture\index.html
+site\en\routes\index.html
+site\en\rest\index.html
+site\en\places\wat-sena\index.html
+site\en\places\wat-pathum\index.html
+site\en\places\phra-narai\index.html
+site\en\places\wat-nikorn\index.html
+site\en\places\wat-kongkha\index.html
+site\en\places\museum\index.html
+site\en\places\wat-khuha\index.html
+site\en\places\kue-chai\index.html
+site\en\places\wat-boromthat\index.html
+site\en\places\thung-phra\index.html
+site\en\places\tao-ming\index.html
+site\en\places\rong-jae\index.html
+site\en\places\riverwalk\index.html
+site\en\places\pun-thao\index.html
+site\en\places\governor-wall\index.html
+site\en\places\food-center\index.html
+site\en\places\culture-street\index.html
+site\en\places\index.html
+site\en\places\guan-yu\index.html
+site\en\places\iron-bridge\index.html
+site\en\leaflet\index.html
+site\en\places\khun-in\index.html
+site\stories\food-people\index.html
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "node -e \"const fs=require('fs'); console.log(fs.readFileSync('audit/SPEC.md','utf8'))\"; Write-Output '---PKG---'; Get-ChildItem -Force | Select-Object Name; node -e \"try{console.log(require.resolve('playwright'))}catch(e){console.log('no playwright')}\"" in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 1684ms:
+# งานตรวจเว็บ takuapa101.com · รอบตรวจความถูกต้อง
+
+โฟลเดอร์งาน `D:\Siwaracafeweb\output\web\takuapa101-v1`
+เว็บจริง `https://takuapa101.com` · ไทย 45 หน้า · อังกฤษ 44 หน้า
+
+## กฎการทำงาน (ทุกคนต้องอ่าน)
+
+1. **ห้ามแก้ไฟล์ใด ๆ** งานนี้คือตรวจและรายงานเท่านั้น · เจ้าของเว็บจะเป็นคนตัดสินใจแก้
+2. **ทุกข้อที่รายงานต้องมีหลักฐาน** ระบุไฟล์ บรรทัด หรือ URL ที่ตรวจเจอ · ห้ามเขียนว่า "อาจจะ" ลอย ๆ
+3. **แยกความรุนแรง** เป็น 3 ระดับ
+   - `ผิด` = ข้อมูลผิด ลิงก์เสีย โค้ดพัง ผู้ใช้เจอปัญหาจริง
+   - `ควรแก้` = ไม่ผิดแต่ทำให้ดีกว่านี้ได้ชัดเจน
+   - `ข้อสังเกต` = เรื่องรสนิยมหรือทางเลือก
+4. **ห้ามรายงานสิ่งที่ยังไม่ได้ตรวจจริง** ถ้าตรวจไม่ได้ให้เขียนว่าตรวจไม่ได้เพราะอะไร
+5. ถ้าไม่เจอปัญหาในหัวข้อไหน ให้เขียนว่า "ตรวจแล้วไม่พบปัญหา" พร้อมบอกว่าตรวจอะไรไปบ้าง
+   **อย่าแต่งปัญหาขึ้นมาเพื่อให้มีอะไรรายงาน**
+6. เขียนรายงานเป็นภาษาไทย ใช้ `·` แทน em-dash · เขียนไฟล์เป็น UTF-8 เท่านั้น
+
+## บริบทที่ต้องรู้ก่อนตรวจ
+
+เว็บนี้ตั้งใจ **แยกข้อเท็จจริงที่ยืนยันแล้วออกจากที่ยังไม่ยืนยัน** อย่างชัดเจน
+คำว่า "ยังไม่ยืนยัน" "สันนิษฐาน" "แหล่งขัดกัน" ที่เห็นบนหน้าเว็บ **ไม่ใช่ข้อบกพร่อง**
+แต่เป็นสิ่งที่ตั้งใจใส่ · อย่ารายงานว่าเป็นปัญหา
+
+ทำนองเดียวกัน ชื่อหน่วยงานราชการไทยในหน้าอังกฤษที่เขียนเป็น
+`สำนักงานนโยบายและแผน... (Office of Natural Resources...)` **ตั้งใจคงภาษาไทยไว้**
+เพื่อให้คนตามไปหาเอกสารต้นทางได้ ไม่ใช่คำแปลตกหล่น
+
+ไฟล์อ้างอิงสำคัญ
+- `data/places-enriched.json` ข้อมูลสถานที่ 27 แห่ง ทุก claim มี status และ source_url
+- `data/photo-registry.json` ทะเบียนรูป กำหนดว่ารูปไหนขึ้นหน้าไหนได้
+- `data/stories/*.json` บทความ 5 บท
+- `data/guide-picks.json` คู่มือคัดสรร 13 รายการ
+- `data/shops-extra.json` ร้านจากการค้นหา 49 ร้าน
+
+---PKG---
+
+no playwright
+Name                        
+----                        
+.wrangler                   
+archive                     
+audit                       
+brand                       
+briefs                      
+data                        
+fonts-src                   
+qa                          
+research                    
+router                      
+scratch                     
+site                        
+worker                      
+_agy                        
+__pycache__                 
+.indexnow_key               
+append_css.py               
+apply_photo_registry.py     
+build_city.py               
+build_en.py                 
+build_kuapapoh_story.py     
+build_part6.py              
+build_site.py               
+city-places.json            
+clean_extract.json          
+dead_sources.py             
+DEPLOY.md                   
+design.py                   
+dump.py                     
+dump.txt                    
+extract.py                  
+extract_output.txt          
+extract_output2.txt         
+extract_text.txt            
+fetch_cc_photos.py          
+filtered_places.json        
+finish_en.sh                
+food_center_unknowns.txt    
+gen_story.py                
+geocode.py                  
+geocode2.py                 
+i18n.py                     
+ids.txt                     
+iron_bridge.md              
+list_ids.py                 
+list_pages.py               
+make_calendar.py            
+make_feeds.py               
+make_map_data.py            
+make_og.py                  
+merge_guide.py              
+merge_research.py           
+merge_shops.py              
+optimize_assets.py          
+patch.py                    
+places_arch.json            
+places_dump.json            
+places_summary.json         
+places_summary_compact.json 
+places_summary_compact.txt  
+places_text.txt             
+place_pages.py              
+prepare_assets.py           
+preview_site.py             
+README.md                   
+run_agy_queue.py            
+run_en_details.py           
+run_en_missing.py           
+run_en_places.py            
+run_en_rest.py              
+run_rest.log                
+run_rest.py                 
+run_stories.log             
+run_story_agy.py            
+scratch.json                
+scratch2.json               
+scratch_city_places.json    
+scratch_city_places.txt     
+scratch_extract.json        
+scratch_gen.py              
+scratch_keys.txt            
+scratch_th_texts.json       
+seo.py                      
+SEO_AUDIT.md                
+seo_config.py               
+stories.py                  
+temp2.json                  
+temp_extract.json           
+temp_water_trade_places.json
+test_translate_attrs.py     
+tmp_events.json             
+to_translate.json           
+to_translate.txt            
+validate_phase3.py          
+validate_redesign.py        
+validate_seo.py             
+validate_site.py            
+verify.py                   
+write_arch.py               
+write_json.py               
+_agy_kuapapoh.log           
+_agy_render.log             
+
+
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'python -c "import playwright; print(playwright.__file__)"' in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 226ms:
+C:\Users\siwat\AppData\Local\Programs\Python\Python312\Lib\site-packages\playwright\__init__.py
+
+codex
+พบว่า Playwright Python ติดตั้งอยู่ และสเปกระบุชัดว่ารายงานต้องเป็นภาษาไทย UTF-8 พร้อมหลักฐานทุกข้อ ผมกำลังตรวจชุดหน้า representative 10 หน้าและเทียบกับไฟล์ HTML ที่เสิร์ฟจริงครับ
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'python -m http.server 8798 --directory site' in D:\Siwaracafeweb\output\web\takuapa101-v1
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+from playwright.sync_api import sync_playwright
+pages=['/en/','/en/eat/','/en/map/','/en/trip/','/en/news/','/en/traditions/','/en/stories/','/en/places/','/en/places/wat-sena/','/en/places/food-center/']
+with sync_playwright() as p:
+  b=p.chromium.launch(headless=True)
+  for path in pages:
+    errs=[]; req=[]
+    page=b.new_page()
+    page.on('console', lambda m: errs.append(f'{m.type}: {m.text}') if m.type=='error' else None)
+    page.on('response', lambda r: req.append((r.status,r.url)) if r.status>=400 else None)
+    try:
+      page.goto('http://127.0.0.1:8798'+path, wait_until='networkidle', timeout=30000)
+      data=page.evaluate('''() => ({title:document.title, desc:document.querySelector('meta[name=\"description\"]')?.content||null, canon:document.querySelector('link[rel=\"canonical\"]')?.href||null, hreflang:[...document.querySelectorAll('link[rel=\"alternate\"][hreflang]')].map(x=>[x.hreflang,x.href]), width:document.documentElement.scrollWidth, cw:document.documentElement.clientWidth, labels:[...document.querySelectorAll('[aria-label]')].map(x=>x.getAttribute('aria-label')), html:document.documentElement.outerHTML.includes('=\"\"')})''')
+      print(path, data, 'CONSOLE',errs,'BADRESP',req)
+    except Exception as e: print(path,'EXC',repr(e),'CONSOLE',errs,'BADRESP',req)
+    page.close()
+  b.close()
+'@ | python -" in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 21271ms:
+/en/ {'title': 'Takua Pa Old Town Guide � Phang Nga, Thailand � Takua Pa 101', 'desc': 'Things to do in Takua Pa old town: 20 places, a walking map, Peranakan shophouses, temples, shrines and where to eat. An easy day trip from Khao Lak.', 'canon': 'https://takuapa101.com/en/', 'hreflang': [['th', 'https://takuapa101.com/'], ['en', 'https://takuapa101.com/en/'], ['x-default', 'https://takuapa101.com/']], 'width': 1280, 'cw': 1280, 'labels': ['Takua Pa 101 Home', 'Main menu', 'Switch to dark mode', 'Open menu', 'Search website (Press Ctrl+K)', 'Your trip', 'Quick start', 'Open municipal map', 'Place category', 'Back to top', 'Quick menu'], 'html': True} CONSOLE [] BADRESP []
+/en/eat/ {'title': 'Restaurants, Cafes and Souvenirs in Takua Pa � Takua Pa 101', 'desc': 'Over one hundred places to eat, drink and buy local products in Takua Pa district, searchable by name and category with map links.', 'canon': 'https://takuapa101.com/en/eat/', 'hreflang': [['th', 'https://takuapa101.com/eat/'], ['en', 'https://takuapa101.com/en/eat/'], ['x-default', 'https://takuapa101.com/eat/']], 'width': 1280, 'cw': 1280, 'labels': ['Takua Pa 101 Home', 'Main menu', 'Switch to dark mode', 'Open menu', 'Search website (Press Ctrl+K)', 'Your trip', 'Back to top', 'Quick menu'], 'html': True} CONSOLE [] BADRESP []
+/en/map/ {'title': 'Map of Takua Pa Old Town � Takua Pa 101', 'desc': 'An interactive map of Takua Pa with every place pinned, tap any pin for directions in Google Maps, plus the municipal tourist map laid over it.', 'canon': 'https://takuapa101.com/en/map/', 'hreflang': [['th', 'https://takuapa101.com/map/'], ['en', 'https://takuapa101.com/en/map/'], ['x-default', 'https://takuapa101.com/map/']], 'width': 1280, 'cw': 1280, 'labels': ['Takua Pa 101 Home', 'Main menu', 'Switch to dark mode', 'Open menu', 'Search website (Press Ctrl+K)', 'Your trip', 'Map', 'Map marker', 'Map marker', 'Map marker', 'Map marker', 'Map marker', 'Map marker', 'Map marker', 'Map marker', 'Map marker', 'Map marker', 'Map marker', 'Map marker', 'Map marker', 'Map marker', 'Map marker', 'Map marker', 'Map marker', 'Map marker', 'Map marker', 'Map marker', 'Map marker', 'Map marker', 'Zoom in', 'Zoom out', 'Toggle attribution', 'Back to top', 'Quick menu'], 'html': True} CONSOLE [] BADRESP []
+/en/trip/ {'title': 'Plan Your Takua Pa Trip � Takua Pa 101', 'desc': 'Pick the places you want to see in Takua Pa, order them into a walk, send the route to Google Maps or print it to carry with you.', 'canon': 'https://takuapa101.com/en/trip/', 'hreflang': [['th', 'https://takuapa101.com/trip/'], ['en', 'https://takuapa101.com/en/trip/'], ['x-default', 'https://takuapa101.com/trip/']], 'width': 1280, 'cw': 1280, 'labels': ['Takua Pa 101 Home', 'Main menu', 'Switch to dark mode', 'Open menu', 'Search website (Press Ctrl+K)', 'Your trip', 'Back to top', 'Quick menu'], 'html': True} CONSOLE [] BADRESP []
+/en/news/ {'title': 'Takua Pa News and Events � Takua Pa 101', 'desc': 'Recent news and events from Takua Pa old town: festivals, ceremonies and what is happening in the district, updated automatically.', 'canon': 'https://takuapa101.com/en/news/', 'hreflang': [['th', 'https://takuapa101.com/news/'], ['en', 'https://takuapa101.com/en/news/'], ['x-default', 'https://takuapa101.com/news/']], 'width': 1280, 'cw': 1280, 'labels': ['Takua Pa 101 Home', 'Main menu', 'Switch to dark mode', 'Open menu', 'Search website (Press Ctrl+K)', 'Your trip', 'Filter the news', 'Back to top', 'Quick menu'], 'html': True} CONSOLE [] BADRESP []
+/en/traditions/ {'title': 'Festivals and Traditions in Takua Pa � Takua Pa 101', 'desc': 'Seven festivals that shape the year in Takua Pa, including the Vegetarian Festival, Chak Phra boat procession and Loy Krathong, with the months they usually fall in.', 'canon': 'https://takuapa101.com/en/traditions/', 'hreflang': [['th', 'https://takuapa101.com/traditions/'], ['en', 'https://takuapa101.com/en/traditions/'], ['x-default', 'https://takuapa101.com/traditions/']], 'width': 1280, 'cw': 1280, 'labels': ['Takua Pa 101 Home', 'Main menu', 'Switch to dark mode', 'Open menu', 'Search website (Press Ctrl+K)', 'Your trip', 'Back to top', 'Quick menu'], 'html': True} CONSOLE [] BADRESP []
+/en/stories/ {'title': 'Stories of Takua Pa: History, Tin and the River � Takua Pa 101', 'desc': 'Long reads on how Takua Pa grew: the river that moved the town, buildings paid for with tin money, Peranakan food, and the old town waking up again.', 'canon': 'https://takuapa101.com/en/stories/', 'hreflang': [['th', 'https://takuapa101.com/stories/'], ['en', 'https://takuapa101.com/en/stories/'], ['x-default', 'https://takuapa101.com/stories/']], 'width': 1280, 'cw': 1280, 'labels': ['Takua Pa 101 Home', 'Main menu', 'Switch to dark mode', 'Open menu', 'Search website (Press Ctrl+K)', 'Your trip', 'Back to top', 'Quick menu'], 'html': True} CONSOLE [] BADRESP []
+/en/places/ {'title': '20 Places to See in Takua Pa Old Town � Takua Pa 101', 'desc': 'Temples, Chinese shrines, Sino-Portuguese shophouses, the riverside market and the town museum in Takuapa, each with directions and opening notes.', 'canon': 'https://takuapa101.com/en/places/', 'hreflang': [['th', 'https://takuapa101.com/places/'], ['en', 'https://takuapa101.com/en/places/'], ['x-default', 'https://takuapa101.com/places/']], 'width': 1280, 'cw': 1280, 'labels': ['Takua Pa 101 Home', 'Main menu', 'Switch to dark mode', 'Open menu', 'Search website (Press Ctrl+K)', 'Your trip', 'Place category', 'Back to top', 'Quick menu'], 'html': True} CONSOLE [] BADRESP []
+/en/places/wat-sena/ {'title': 'Wat Sena Nuch Rangsan � Wat Mai Kampang � Takua Pa 101', 'desc': 'Observing the coexistence of Thai and Chinese elements � Wat Mai Kamphaeng � Takuapa old town temple � ancient temple in Takuapa', 'canon': 'https://takuapa101.com/en/places/wat-sena/', 'hreflang': [['th', 'https://takuapa101.com/places/wat-sena/'], ['en', 'https://takuapa101.com/en/places/wat-sena/'], ['x-default', 'https://takuapa101.com/places/wat-sena/']], 'width': 1280, 'cw': 1280, 'labels': ['Takua Pa 101 Home', 'Main menu', 'Switch to dark mode', 'Open menu', 'Search website (Press Ctrl+K)', 'Your trip', 'On this page', 'Timeline � Scroll to explore events', 'Back to top', 'Quick menu'], 'html': True} CONSOLE [] BADRESP []
+/en/places/food-center/ {'title': 'Takua Pa Open-Air Food Center � Takua Pa 101', 'desc': 'Used as a starting point to explore local food in the town � Takua Pa Food Center � Lan Long Market Takua Pa � Takuapa food court', 'canon': 'https://takuapa101.com/en/places/food-center/', 'hreflang': [['th', 'https://takuapa101.com/places/food-center/'], ['en', 'https://takuapa101.com/en/places/food-center/'], ['x-default', 'https://takuapa101.com/places/food-center/']], 'width': 1280, 'cw': 1280, 'labels': ['Takua Pa 101 Home', 'Main menu', 'Switch to dark mode', 'Open menu', 'Search website (Press Ctrl+K)', 'Your trip', 'On this page', 'Timeline � Scroll to explore events', 'Back to top', 'Quick menu'], 'html': True} CONSOLE [] BADRESP []
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+from pathlib import Path
+import re, html
+files=list(Path('site/en').rglob('index.html'))
+print('EN_FILES',len(files))
+for f in files:
+ s=f.read_text(encoding='utf-8')
+ hits=[(i+1,l[:240]) for i,l in enumerate(s.splitlines()) if '=\"\"' in l]
+ if hits: print('EMPTY',f, hits[:5], 'count',len(hits))
+# malformed-ish: unclosed comments, duplicate closing, broken tags, unquoted attr values
+for pat in [r'<["'^>]*<'"',r'</(?"'!html|head|body|title|meta|link|script|style|main|header|footer|nav|section|article|div|p|a|ul|ol|li|button|h[1-6]|figure|figcaption|img|input|label|select|option|form|table|thead|tbody|tr|th|td|span|time|address|br|strong|em|template|svg|path)'"\\w+>']:
+ print('PAT',pat)
+ for f in files:
+  s=f.read_text(encoding='utf-8')
+  if re.search(pat,s): print(f, re.findall(pat,s)[:3])
+# maps
+maps=[]
+for f in files:
+ s=f.read_text(encoding='utf-8')
+ for m in re.findall(r'https?://(?:www\\.)?google\\.["'^"'"\\s<>]+',s): maps.append((f,m))
+print('MAPS',len(maps),'UNIQUE',len(set(m for _,m in maps)))
+for f,m in maps[:10]: print(f,m)
+'@ | python -" in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 1165ms:
+EN_FILES 44
+EMPTY site\en\index.html [(1, '<!doctype html><html lang="en" data-base="" data-news-api=""><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Takua Pa Old Town Guide � Phang Nga, Thailand � Takua Pa 101</title><meta na')] count 1
+EMPTY site\en\about\index.html [(1, '<!doctype html><html lang="en" data-base="" data-news-api=""><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>About This Takua Pa Guide � Takua Pa 101</title><meta name="description" con')] count 1
+EMPTY site\en\eat\index.html [(1, '<!doctype html><html lang="en" data-base="" data-news-api=""><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Restaurants, Cafes and Souvenirs in Takua Pa � Takua Pa 101</title><meta nam')] count 1
+EMPTY site\en\leaflet\index.html [(1, '<!doctype html><html lang="en" data-base="" data-news-api=""><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Printable Takua Pa Old Town Walking Leaflet � Takua Pa 101</title><meta name')] count 1
+EMPTY site\en\map\index.html [(1, '<!doctype html><html lang="en" data-base="" data-news-api=""><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Map of Takua Pa Old Town � Takua Pa 101</title><meta name="description" cont')] count 1
+EMPTY site\en\news\index.html [(1, '<!doctype html><html lang="en" data-base="" data-news-api=""><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Takua Pa News and Events � Takua Pa 101</title><meta name="description" cont')] count 1
+EMPTY site\en\places\index.html [(1, '<!doctype html><html lang="en" data-base="" data-news-api=""><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>20 Places to See in Takua Pa Old Town � Takua Pa 101</title><meta name="desc')] count 1
+EMPTY site\en\rest\index.html [(1, '<!doctype html><html lang="en" data-base="" data-news-api=""><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Where to Eat and Rest in Takua Pa � Takua Pa 101</title><meta name="descript')] count 1
+EMPTY site\en\routes\index.html [(1, '<!doctype html><html lang="en" data-base="" data-news-api=""><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Walking Routes Through Takua Pa Old Town � Takua Pa 101</title><meta name="d')] count 1
+EMPTY site\en\stories\index.html [(1, '<!doctype html><html lang="en" data-base="" data-news-api=""><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Stories of Takua Pa: History, Tin and the River � Takua Pa 101</title><meta ')] count 1
+EMPTY site\en\traditions\index.html [(1, '<!doctype html><html lang="en" data-base="" data-news-api=""><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Festivals and Traditions in Takua Pa � Takua Pa 101</title><meta name="descr')] count 1
+EMPTY site\en\trip\index.html [(1, '<!doctype html><html lang="en" data-base="" data-news-api=""><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Plan Your Takua Pa Trip � Takua Pa 101</title><meta name="description" conte')] count 1
+EMPTY site\en\places\culture-street\index.html [(1, '<!doctype html><html lang="en" data-base="" data-news-api=""><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Takua Pa Old Town Cultural Street � Takua Pa 101</title><meta name="descript')] count 1
+EMPTY site\en\places\food-center\index.html [(1, '<!doctype html><html lang="en" data-base="" data-news-api=""><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Takua Pa Open-Air Food Center � Takua Pa 101</title><meta name="description"')] count 1
+EMPTY site\en\places\governor-wall\index.html [(1, '<!doctype html><html lang="en" data-base="" data-news-api=""><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Governor�s Residence Wall, Takua Pa � Takua Pa 101</title><meta name="descri')] count 1
+EMPTY site\en\places\guan-yu\index.html [(1, '<!doctype html><html lang="en" data-base="" data-news-api=""><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Guan Yu / Sin Chai Tung Shrine, Takua Pa � Takua Pa 101</title><meta name="d')] count 1
+EMPTY site\en\places\iron-bridge\index.html [(1, '<!doctype html><html lang="en" data-base="" data-news-api=""><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Boon Soong Iron Bridge, Takua Pa � Takua Pa 101</title><meta name="descripti')] count 1
+EMPTY site\en\places\khun-in\index.html [(1, '<!doctype html><html lang="en" data-base="" data-news-api=""><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Khun In House � Khun Intra Building � Takua Pa 101</title><meta name="descri')] count 1
+EMPTY site\en\places\kue-chai\index.html [(1, '<!doctype html><html lang="en" data-base="" data-news-api=""><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Kue Chai Tung Shrine � Kue Chai Tueng Shrine � Takua Pa 101</title><meta nam')] count 1
+EMPTY site\en\places\museum\index.html [(1, '<!doctype html><html lang="en" data-base="" data-news-api=""><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Takua Pa Community Museum � Takua Pa Museum � Takua Pa 101</title><meta name')] count 1
+EMPTY site\en\places\phra-narai\index.html [(1, '<!doctype html><html lang="en" data-base="" data-news-api=""><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Phra Narai Park � Takuapa attractions � Takua Pa 101</title><meta name="desc')] count 1
+EMPTY site\en\places\pun-thao\index.html [(1, '<!doctype html><html lang="en" data-base="" data-news-api=""><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Pun Thao Kong A Shrine, Takua Pa � Takua Pa 101</title><meta name="descripti')] count 1
+EMPTY site\en\places\riverwalk\index.html [(1, '<!doctype html><html lang="en" data-base="" data-news-api=""><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Takuapa Riverwalk � Takuapa riverside market � Takua Pa 101</title><meta nam')] count 1
+EMPTY site\en\places\rong-jae\index.html [(1, '<!doctype html><html lang="en" data-base="" data-news-api=""><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>The Shrine in the Garden � Rong Jae Takua Pa � Takua Pa 101</title><meta nam')] count 1
+EMPTY site\en\places\tao-ming\index.html [(1, '<!doctype html><html lang="en" data-base="" data-news-api=""><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Tao Ming School � Takuapa old town � Takua Pa 101</title><meta name="descrip')] count 1
+EMPTY site\en\places\thung-phra\index.html [(1, '<!doctype html><html lang="en" data-base="" data-news-api=""><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Thung Phra Pho Park, Takua Pa � Takua Pa 101</title><meta name="description"')] count 1
+EMPTY site\en\places\wat-boromthat\index.html [(1, '<!doctype html><html lang="en" data-base="" data-news-api=""><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Wat Boromthat Khiri Khet � Wat Lum Takuapa � Takua Pa 101</title><meta name=')] count 1
+EMPTY site\en\places\wat-khuha\index.html [(1, '<!doctype html><html lang="en" data-base="" data-news-api=""><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Wat Khuha Phimuk � Wat Khuan Tham Phang Nga � Takua Pa 101</title><meta name')] count 1
+EMPTY site\en\places\wat-kongkha\index.html [(1, '<!doctype html><html lang="en" data-base="" data-news-api=""><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Wat Kongkha Phimuk � Wat Khongkha Takua Pa � Takua Pa 101</title><meta name=')] count 1
+EMPTY site\en\places\wat-nikorn\index.html [(1, '<!doctype html><html lang="en" data-base="" data-news-api=""><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Wat Nikornwararam � Wat Yanyao, Takua Pa � Takua Pa 101</title><meta name="d')] count 1
+EMPTY site\en\places\wat-pathum\index.html [(1, '<!doctype html><html lang="en" data-base="" data-news-api=""><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Wat Pathum Thara � Wat Na Mueang Takua Pa � Takua Pa 101</title><meta name="')] count 1
+EMPTY site\en\places\wat-sena\index.html [(1, '<!doctype html><html lang="en" data-base="" data-news-api=""><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Wat Sena Nuch Rangsan � Wat Mai Kampang � Takua Pa 101</title><meta name="de')] count 1
+EMPTY site\en\stories\architecture\index.html [(1, '<!doctype html><html lang="en" data-base="" data-news-api=""><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Old Buildings of Takua Pa and Tin Money � Takua Pa 101</title><meta name="de')] count 1
+EMPTY site\en\stories\city\index.html [(1, '<!doctype html><html lang="en" data-base="" data-news-api=""><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>History of Takua Pa: The Town That Moved � Takua Pa 101</title><meta name="d')] count 1
+EMPTY site\en\stories\food-people\index.html [(1, '<!doctype html><html lang="en" data-base="" data-news-api=""><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Peranakan Food in Takua Pa Old Town � Takua Pa 101</title><meta name="descri')] count 1
+EMPTY site\en\stories\kuapapoh\index.html [(1, '<!doctype html><html lang="en" data-base="" data-news-api=""><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Kuapapoh: Takua Pa Old Houses Reopened � Takua Pa 101</title><meta name="des')] count 1
+EMPTY site\en\stories\water-trade\index.html [(1, '<!doctype html><html lang="en" data-base="" data-news-api=""><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Thung Tuek and the Takua Pa River Trade � Takua Pa 101</title><meta name="de')] count 1
+EMPTY site\en\traditions\chak-phra\index.html [(1, '<!doctype html><html lang="en" data-base="" data-news-api=""><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Chak Phra Festival � Phang Nga Chak Phra � Takua Pa 101</title><meta name="d')] count 1
+EMPTY site\en\traditions\loy-krathong\index.html [(1, '<!doctype html><html lang="en" data-base="" data-news-api=""><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Loy Krathong, Takua Pa � Takua Pa 101</title><meta name="description" conten')] count 1
+EMPTY site\en\traditions\narai-ceremony\index.html [(1, '<!doctype html><html lang="en" data-base="" data-news-api=""><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Phra Narai and Deities Worship Ceremony � Takua Pa 101</title><meta name="de')] count 1
+EMPTY site\en\traditions\new-year-alms\index.html [(1, '<!doctype html><html lang="en" data-base="" data-news-api=""><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>New Year&#x27;s Dawn Almsgiving, Takua Pa � Takua Pa 101</title><meta name="')] count 1
+EMPTY site\en\traditions\relic-procession\index.html [(1, '<!doctype html><html lang="en" data-base="" data-news-api=""><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Relic Procession to Khao Phra Bat, Takua Pa � Takua Pa 101</title><meta name')] count 1
+EMPTY site\en\traditions\ruler-ceremony\index.html [(1, '<!doctype html><html lang="en" data-base="" data-news-api=""><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Takua Pa Governor Worship Ceremony � Takua Pa 101</title><meta name="descrip')] count 1
+EMPTY site\en\traditions\vegetarian\index.html [(1, '<!doctype html><html lang="en" data-base="" data-news-api=""><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Vegetarian Festival, Takua Pa � Takua Pa 101</title><meta name="description"')] count 1
+PAT <[^>]*<
+PAT </(?!html|head|body|title|meta|link|script|style|main|header|footer|nav|section|article|div|p|a|ul|ol|li|button|h[1-6]|figure|figcaption|img|input|label|select|option|form|table|thead|tbody|tr|th|td|span|time|address|br|strong|em|template|svg|path)\w+>
+site\en\index.html ['</small>', '</i>', '</b>']
+site\en\about\index.html ['</small>']
+site\en\eat\index.html ['</small>', '</small>', '</small>']
+site\en\leaflet\index.html ['</small>']
+site\en\map\index.html ['</small>', '</output>', '</noscript>']
+site\en\news\index.html ['</small>']
+site\en\places\index.html ['</small>', '</sup>', '</sup>']
+site\en\rest\index.html ['</small>']
+site\en\routes\index.html ['</small>']
+site\en\stories\index.html ['</small>']
+site\en\traditions\index.html ['</small>', '</summary>', '</details>']
+site\en\trip\index.html ['</small>', '</noscript>']
+site\en\places\culture-street\index.html ['</small>', '</small>', '</small>']
+site\en\places\food-center\index.html ['</small>', '</dt>', '</dd>']
+site\en\places\governor-wall\index.html ['</small>', '</dt>', '</dd>']
+site\en\places\guan-yu\index.html ['</small>', '</dt>', '</dd>']
+site\en\places\iron-bridge\index.html ['</small>', '</dt>', '</dd>']
+site\en\places\khun-in\index.html ['</small>', '</dt>', '</dd>']
+site\en\places\kue-chai\index.html ['</small>', '</dt>', '</dd>']
+site\en\places\museum\index.html ['</small>', '</dt>', '</dd>']
+site\en\places\phra-narai\index.html ['</small>', '</dt>', '</dd>']
+site\en\places\pun-thao\index.html ['</small>', '</dt>', '</dd>']
+site\en\places\riverwalk\index.html ['</small>', '</small>', '</small>']
+site\en\places\rong-jae\index.html ['</small>', '</dt>', '</dd>']
+site\en\places\tao-ming\index.html ['</small>', '</small>', '</small>']
+site\en\places\thung-phra\index.html ['</small>', '</dt>', '</dd>']
+site\en\places\wat-boromthat\index.html ['</small>', '</dt>', '</dd>']
+site\en\places\wat-khuha\index.html ['</small>', '</dt>', '</dd>']
+site\en\places\wat-kongkha\index.html ['</small>', '</dt>', '</dd>']
+site\en\places\wat-nikorn\index.html ['</small>', '</dt>', '</dd>']
+site\en\places\wat-pathum\index.html ['</small>', '</dt>', '</dd>']
+site\en\places\wat-sena\index.html ['</small>', '</dt>', '</dd>']
+site\en\stories\architecture\index.html ['</small>', '</blockquote>', '</blockquote>']
+site\en\stories\city\index.html ['</small>', '</blockquote>', '</summary>']
+site\en\stories\food-people\index.html ['</small>', '</blockquote>', '</summary>']
+site\en\stories\kuapapoh\index.html ['</small>', '</blockquote>', '</summary>']
+site\en\stories\water-trade\index.html ['</small>', '</blockquote>', '</summary>']
+site\en\traditions\chak-phra\index.html ['</small>']
+site\en\traditions\loy-krathong\index.html ['</small>']
+site\en\traditions\narai-ceremony\index.html ['</small>']
+site\en\traditions\new-year-alms\index.html ['</small>']
+site\en\traditions\relic-procession\index.html ['</small>']
+site\en\traditions\ruler-ceremony\index.html ['</small>']
+site\en\traditions\vegetarian\index.html ['</small>']
+MAPS 124 UNIQUE 123
+site\en\eat\index.html https://www.google.com/maps/search/?api=1&amp;query=%E0%B8%82%E0%B8%99%E0%B8%A1%E0%B8%88%E0%B8%B5%E0%B8%99%E0%B8%9B%E0%B9%89%E0%B8%B2%E0%B8%A1%E0%B9%88%E0%B8%AD%E0%B8%A1%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2
+site\en\eat\index.html https://www.google.com/maps/search/?api=1&amp;query=%E0%B8%82%E0%B8%99%E0%B8%A1%E0%B8%88%E0%B8%B5%E0%B8%99%E0%B8%9E%E0%B8%B5%E0%B9%88%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B9%88%E0%B8%87%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2
+site\en\eat\index.html https://www.google.com/maps/search/?api=1&amp;query=%E0%B8%82%E0%B8%99%E0%B8%A1%E0%B8%88%E0%B8%B5%E0%B8%99%E0%B9%83%E0%B8%99%E0%B8%99%E0%B8%B2%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2
+site\en\eat\index.html https://www.google.com/maps/search/?api=1&amp;query=%E0%B8%84%E0%B8%B2%E0%B8%84%E0%B8%B5%E0%B8%99%E0%B8%AD%E0%B8%AA%20%E0%B9%80%E0%B8%82%E0%B8%B2%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2
+site\en\eat\index.html https://www.google.com/maps/search/?api=1&amp;query=%E0%B8%97%E0%B8%B1%E0%B8%9A%E0%B8%97%E0%B8%B4%E0%B8%A1%20%E0%B8%95%E0%B8%B4%E0%B9%88%E0%B8%A1%E0%B8%8B%E0%B8%B3%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2
+site\en\eat\index.html https://www.google.com/maps/search/?api=1&amp;query=%E0%B9%84%E0%B8%81%E0%B9%88%E0%B9%82%E0%B8%95%E0%B9%89%E0%B8%87%20%E0%B8%AD%E0%B8%B2%E0%B8%AB%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%8A%E0%B9%89%E0%B8%B2%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2
+site\en\eat\index.html https://www.google.com/maps/search/?api=1&amp;query=%E0%B8%9B%E0%B8%B1%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%AD%E0%B8%87%E0%B8%95%E0%B8%B4%E0%B9%88%E0%B8%A1%E0%B8%8B%E0%B8%B3%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2
+site\en\eat\index.html https://www.google.com/maps/search/?api=1&amp;query=%E0%B8%AB%E0%B8%B1%E0%B8%A7%E0%B8%97%E0%B9%88%E0%B8%B2%20%E0%B8%9A%E0%B8%B4%E0%B8%AA%E0%B9%82%E0%B8%97%E0%B8%A3%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2
+site\en\eat\index.html https://www.google.com/maps/search/?api=1&query=8.8716865,98.3512039
+site\en\eat\index.html https://www.google.com/maps/search/?api=1&query=8.7220298,98.256671
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+from pathlib import Path
+from bs4 import BeautifulSoup
+from urllib.parse import urlparse,parse_qs,unquote
+import html,re
+f=Path('site/en/eat/index.html'); s=f.read_text(encoding='utf8'); soup=BeautifulSoup(s,'html.parser')
+links=[]
+for a in soup.select('a[href]'):
+ h=html.unescape(a['href'])
+ if 'google.com/maps' in h: links.append((a.get_text(' ',strip=True),h))
+print('EAT_MAP_LINKS',len(links))
+for x in links[:5]: print(repr(x))
+print('bad_format',[(t,u) for t,u in links if 'api=1' not in u or 'query=' not in u or re.search(r'query=["'^%0-9.,-]'"',u)])
+# codepoints title
+for f in [Path('site/en/index.html'),Path('site/en/places/wat-sena/index.html')]:
+ title=BeautifulSoup(f.read_text(encoding='utf8'),'html.parser').title.get_text()
+ print(f,repr(title),[hex(ord(c)) for c in title if ord(c)>127][:10])
+# html parser structural errors from lxml
+from lxml import html as lh
+for f in list(Path('site/en').rglob('index.html')):
+ try: lh.fromstring(f.read_text(encoding='utf8'))
+ except Exception as e: print('PARSEERR',f,e)
+'@ | python -" in D:\Siwaracafeweb\output\web\takuapa101-v1
+ exited 1 in 844ms:
+EAT_MAP_LINKS 105
+Traceback (most recent call last):
+  File "<stdin>", line 11, in <module>
+  File "C:\Users\siwat\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2197' in position 22: character maps to <undefined>
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+from pathlib import Path
+from bs4 import BeautifulSoup
+import html,re
+s=Path('site/en/eat/index.html').read_text(encoding='utf8'); soup=BeautifulSoup(s,'html.parser')
+links=[]
+for a in soup.select('a[href]'):
+ h=html.unescape(a['href'])
+ if 'google.com/maps' in h: links.append((a.get_text(' ',strip=True),h))
+print('EAT_MAP_LINKS',len(links)); print('SAMPLES'); [print(repr(x)) for x in links[:5]]
+print('bad_format',sum(1 for t,u in links if 'api=1' not in u or 'query=' not in u or re.search(r'query=["'^%0-9.,-]'"',u)))
+for f in [Path('site/en/index.html'),Path('site/en/places/wat-sena/index.html')]:
+ title=BeautifulSoup(f.read_text(encoding='utf8'),'html.parser').title.get_text(); print(str(f),repr(title),[hex(ord(c)) for c in title if ord(c)>127][:10])
+from lxml import html as lh
+errs=[]
+for f in list(Path('site/en').rglob('index.html')):
+ try: lh.fromstring(f.read_text(encoding='utf8'))
+ except Exception as e: errs.append((str(f),str(e)))
+print('PARSE_ERRORS',errs)
+'@ | python -" in D:\Siwaracafeweb\output\web\takuapa101-v1
+ exited 1 in 1736ms:
+EAT_MAP_LINKS 105
+SAMPLES
+Traceback (most recent call last):
+  File "<stdin>", line 9, in <module>
+  File "C:\Users\siwat\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2197' in position 22: character maps to <undefined>
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$env:PYTHONIOENCODING='"'utf-8'; @'
+from pathlib import Path
+from bs4 import BeautifulSoup
+import html,re
+s=Path('site/en/eat/index.html').read_text(encoding='utf8'); soup=BeautifulSoup(s,'html.parser')
+links=[]
+for a in soup.select('a[href]'):
+ h=html.unescape(a['href'])
+ if 'google.com/maps' in h: links.append((a.get_text(' ',strip=True),h))
+print('EAT_MAP_LINKS',len(links)); [print(repr(x)) for x in links[:5]]
+print('bad_format',sum(1 for t,u in links if 'api=1' not in u or 'query=' not in u or re.search(r'query=["'^%0-9.,-]'"',u)))
+for f in [Path('site/en/index.html'),Path('site/en/places/wat-sena/index.html')]:
+ title=BeautifulSoup(f.read_text(encoding='utf8'),'html.parser').title.get_text(); print(str(f),repr(title),[hex(ord(c)) for c in title if ord(c)>127][:10])
+from lxml import html as lh
+errs=[]
+for f in list(Path('site/en').rglob('index.html')):
+ try: lh.fromstring(f.read_text(encoding='utf8'))
+ except Exception as e: errs.append((str(f),str(e)))
+print('PARSE_ERRORS',errs)
+'@ | python -" in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 1254ms:
+EAT_MAP_LINKS 105
+('Find on Google Maps ↗', 'https://www.google.com/maps/search/?api=1&query=%E0%B8%82%E0%B8%99%E0%B8%A1%E0%B8%88%E0%B8%B5%E0%B8%99%E0%B8%9B%E0%B9%89%E0%B8%B2%E0%B8%A1%E0%B9%88%E0%B8%AD%E0%B8%A1%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2')
+('Find on Google Maps ↗', 'https://www.google.com/maps/search/?api=1&query=%E0%B8%82%E0%B8%99%E0%B8%A1%E0%B8%88%E0%B8%B5%E0%B8%99%E0%B8%9E%E0%B8%B5%E0%B9%88%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B9%88%E0%B8%87%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2')
+('Find on Google Maps ↗', 'https://www.google.com/maps/search/?api=1&query=%E0%B8%82%E0%B8%99%E0%B8%A1%E0%B8%88%E0%B8%B5%E0%B8%99%E0%B9%83%E0%B8%99%E0%B8%99%E0%B8%B2%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2')
+('Find on Google Maps ↗', 'https://www.google.com/maps/search/?api=1&query=%E0%B8%84%E0%B8%B2%E0%B8%84%E0%B8%B5%E0%B8%99%E0%B8%AD%E0%B8%AA%20%E0%B9%80%E0%B8%82%E0%B8%B2%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2')
+('Find on Google Maps ↗', 'https://www.google.com/maps/search/?api=1&query=%E0%B8%97%E0%B8%B1%E0%B8%9A%E0%B8%97%E0%B8%B4%E0%B8%A1%20%E0%B8%95%E0%B8%B4%E0%B9%88%E0%B8%A1%E0%B8%8B%E0%B8%B3%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2')
+bad_format 8
+site\en\index.html 'Takua Pa Old Town Guide · Phang Nga, Thailand · Takua Pa 101' ['0xb7', '0xb7']
+site\en\places\wat-sena\index.html 'Wat Sena Nuch Rangsan · Wat Mai Kampang · Takua Pa 101' ['0xb7', '0xb7']
+PARSE_ERRORS []
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$env:PYTHONIOENCODING='"'utf-8'; @'
+from pathlib import Path
+from bs4 import BeautifulSoup
+import html,re
+s=Path('site/en/eat/index.html').read_text(); soup=BeautifulSoup(s,'html.parser')
+for a in soup.select('a[href*=\"google.com/maps\"]'):
+ u=html.unescape(a['href']); q=u.split('query=',1)[1] if 'query=' in u else ''
+ if re.search(r'["'^%0-9.,-]'"',q): print(repr(u))
+'@ | python -" in D:\Siwaracafeweb\output\web\takuapa101-v1
+ exited 1 in 833ms:
+Traceback (most recent call last):
+  File "<stdin>", line 4, in <module>
+  File "C:\Users\siwat\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1028, in read_text
+    return f.read()
+           ^^^^^^^^
+  File "C:\Users\siwat\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 23, in decode
+    return codecs.charmap_decode(input,self.errors,decoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x81 in position 1698: character maps to <undefined>
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$env:PYTHONIOENCODING='"'utf-8'; @'
+from pathlib import Path
+from bs4 import BeautifulSoup
+import html,re
+s=Path('site/en/eat/index.html').read_text(encoding='utf8'); soup=BeautifulSoup(s,'html.parser')
+for a in soup.select('a[href*=\"google.com/maps\"]'):
+ u=html.unescape(a['href']); q=u.split('query=',1)[1] if 'query=' in u else ''
+ if re.search(r'["'^%0-9.,-]'"',q): print(repr(u))
+'@ | python -" in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 880ms:
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%82%E0%B8%99%E0%B8%A1%E0%B8%88%E0%B8%B5%E0%B8%99%E0%B8%9B%E0%B9%89%E0%B8%B2%E0%B8%A1%E0%B9%88%E0%B8%AD%E0%B8%A1%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%82%E0%B8%99%E0%B8%A1%E0%B8%88%E0%B8%B5%E0%B8%99%E0%B8%9E%E0%B8%B5%E0%B9%88%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B9%88%E0%B8%87%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%82%E0%B8%99%E0%B8%A1%E0%B8%88%E0%B8%B5%E0%B8%99%E0%B9%83%E0%B8%99%E0%B8%99%E0%B8%B2%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%84%E0%B8%B2%E0%B8%84%E0%B8%B5%E0%B8%99%E0%B8%AD%E0%B8%AA%20%E0%B9%80%E0%B8%82%E0%B8%B2%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%97%E0%B8%B1%E0%B8%9A%E0%B8%97%E0%B8%B4%E0%B8%A1%20%E0%B8%95%E0%B8%B4%E0%B9%88%E0%B8%A1%E0%B8%8B%E0%B8%B3%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B9%84%E0%B8%81%E0%B9%88%E0%B9%82%E0%B8%95%E0%B9%89%E0%B8%87%20%E0%B8%AD%E0%B8%B2%E0%B8%AB%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%8A%E0%B9%89%E0%B8%B2%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%9B%E0%B8%B1%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%AD%E0%B8%87%E0%B8%95%E0%B8%B4%E0%B9%88%E0%B8%A1%E0%B8%8B%E0%B8%B3%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%AB%E0%B8%B1%E0%B8%A7%E0%B8%97%E0%B9%88%E0%B8%B2%20%E0%B8%9A%E0%B8%B4%E0%B8%AA%E0%B9%82%E0%B8%97%E0%B8%A3%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%97%E0%B8%B4%E0%B8%A1%E0%B9%80%E0%B8%9A%E0%B8%AD%E0%B8%A3%E0%B9%8C%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%84%E0%B8%A3%E0%B8%B1%E0%B8%A7%E0%B8%85%E0%B8%99%E0%B8%84%E0%B8%AD%E0%B8%99%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%84%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B8%84%E0%B8%B4%E0%B8%99%E0%B8%AD%E0%B8%AA%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%AE%E0%B8%81%E0%B8%81%E0%B8%B5%E0%B9%88%E0%B9%80%E0%B8%AB%E0%B8%A5%E0%B8%B2+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AB%E0%B8%A5%E0%B8%81%E0%B8%AD%E0%B8%B1%E0%B9%89%E0%B8%99+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B8%A1%E0%B8%B1%E0%B8%99%E0%B9%84%E0%B8%81%E0%B9%88%E0%B8%9B%E0%B9%89%E0%B8%B2%E0%B8%AA%E0%B8%B8+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%9F%E0%B8%B9%E0%B9%88%E0%B9%80%E0%B8%A2%E0%B9%87%E0%B8%99%E0%B8%95%E0%B8%B2%E0%B9%82%E0%B8%9F%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B8%8B%E0%B8%AD%E0%B8%A2+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%9A%E0%B8%B1%E0%B8%87%E0%B8%94%E0%B8%B5%E0%B8%99+%E0%B8%AD%E0%B8%B2%E0%B8%AB%E0%B8%B2%E0%B8%A3%E0%B9%84%E0%B8%97%E0%B8%A2%E0%B8%A1%E0%B8%B8%E0%B8%AA%E0%B8%A5%E0%B8%B4%E0%B8%A1+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B9%80%E0%B8%88%E0%B9%8A%E0%B8%AD%E0%B8%B9%E0%B9%8B+%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B8%A1%E0%B8%B1%E0%B8%99%E0%B9%84%E0%B8%81%E0%B9%88+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%81%E0%B9%8B%E0%B8%A7%E0%B8%A2%E0%B9%80%E0%B8%95%E0%B8%B5%E0%B9%8B%E0%B8%A2%E0%B8%A7%E0%B8%AB%E0%B8%A1%E0%B8%B9%E0%B9%80%E0%B8%97%E0%B8%A7%E0%B8%94%E0%B8%B2+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%9A%E0%B9%88%E0%B8%B2%E0%B8%A7%E0%B9%82%E0%B8%AD%E0%B8%A1+%E0%B8%95%E0%B8%B4%E0%B9%88%E0%B8%A1%E0%B8%8B%E0%B8%B3+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B8%A1%E0%B8%B1%E0%B8%99%E0%B9%84%E0%B8%81%E0%B9%88%E0%B8%95%E0%B9%89%E0%B8%99%E0%B9%82%E0%B8%9E%E0%B8%98%E0%B8%B4%E0%B9%8C+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%81%E0%B8%B0%E0%B9%84%E0%B8%AB%E0%B8%A5+%E0%B8%9A%E0%B8%B0%E0%B8%AB%E0%B8%A1%E0%B8%B5%E0%B9%88%E0%B9%80%E0%B8%81%E0%B8%B5%E0%B9%8A%E0%B8%A2%E0%B8%A7%E0%B9%82%E0%B8%9A%E0%B8%A3%E0%B8%B2%E0%B8%93+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%9A%E0%B8%B0%E0%B8%AB%E0%B8%A1%E0%B8%B5%E0%B9%88%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2+-+%E0%B8%95%E0%B8%A5%E0%B8%B2%E0%B8%94%E0%B8%82%E0%B8%A7%E0%B8%B2%E0%B8%87+%E0%B8%AA%E0%B8%B2%E0%B8%82%E0%B8%B2%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%81%E0%B8%B2%E0%B9%81%E0%B8%9F%E0%B8%8A%E0%B8%B2%E0%B8%A2+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B9%82%E0%B8%81%E0%B8%84%E0%B8%B8%E0%B9%89%E0%B8%99+%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B8%A1%E0%B8%B1%E0%B8%99%E0%B9%84%E0%B8%81%E0%B9%88+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%88%E0%B8%B4%E0%B9%89%E0%B8%99%E0%B8%84%E0%B8%B1%E0%B8%87+%E0%B8%95%E0%B8%B4%E0%B9%88%E0%B8%A1%E0%B8%8B%E0%B8%B3+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%9B%E0%B9%89%E0%B8%B2%E0%B8%94%E0%B8%B2%E0%B8%AB%E0%B8%A1%E0%B8%B5%E0%B9%88%E0%B8%AE%E0%B8%81%E0%B9%80%E0%B8%81%E0%B8%B5%E0%B9%89%E0%B8%A2%E0%B8%99+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%AB%E0%B8%A1%E0%B8%B5%E0%B9%88%E0%B8%9B%E0%B9%89%E0%B8%B2%E0%B9%80%E0%B8%9B%E0%B8%A3%E0%B8%A1+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B9%84%E0%B8%AA%E0%B9%89%E0%B8%81%E0%B8%A3%E0%B8%AD%E0%B8%81%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%AA%E0%B8%B0%E0%B9%80%E0%B8%95%E0%B9%8A%E0%B8%B0+%E0%B8%97%E0%B8%B8%E0%B9%88%E0%B8%87%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B9%82%E0%B8%9E%E0%B8%98%E0%B8%B4%E0%B9%8C+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%AA%E0%B8%B0%E0%B9%80%E0%B8%95%E0%B9%8A%E0%B8%B0%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%A1%E0%B8%B8%E0%B8%A1%E0%B9%80%E0%B8%94%E0%B9%87%E0%B8%81%E0%B9%80%E0%B8%AA%E0%B9%89%E0%B8%99+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%82%E0%B8%99%E0%B8%A1%E0%B8%88%E0%B8%B5%E0%B8%99%E0%B8%9B%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B9%89%E0%B8%AD%E0%B8%A2+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%AA%E0%B9%89%E0%B8%A1%E0%B8%95%E0%B8%B3+%E0%B8%AB%E0%B8%B1%E0%B8%A7%E0%B8%96%E0%B8%99%E0%B8%99+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%88%E0%B8%B5%E0%B9%89%E0%B9%80%E0%B8%81%E0%B9%89+%E0%B8%9C%E0%B8%B1%E0%B8%94%E0%B9%84%E0%B8%97%E0%B8%AB%E0%B8%B1%E0%B8%A7%E0%B8%96%E0%B8%99%E0%B8%99+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%9B%E0%B9%89%E0%B8%B2%E0%B9%81%E0%B8%81%E0%B9%89%E0%B8%A7%E0%B8%AD%E0%B8%B2%E0%B8%AB%E0%B8%B2%E0%B8%A3%E0%B8%95%E0%B8%B2%E0%B8%A1%E0%B8%AA%E0%B8%B1%E0%B9%88%E0%B8%87+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%8A%E0%B8%B2%E0%B8%99%E0%B8%99%E0%B8%97%E0%B9%8C%E0%B8%81%E0%B8%B2%E0%B9%81%E0%B8%9F%E0%B9%82%E0%B8%9A%E0%B8%A3%E0%B8%B2%E0%B8%93+%E0%B8%95%E0%B8%B4%E0%B9%88%E0%B8%A1%E0%B8%8B%E0%B8%B3+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%A1%E0%B8%B8%E0%B8%A1%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B9%80%E0%B8%87%E0%B8%B4%E0%B8%99+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B9%84%E0%B8%AD%E0%B8%95%E0%B8%B4%E0%B8%A1%E0%B8%97%E0%B8%AD%E0%B8%94+%E0%B8%93+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B9%82%E0%B8%A3%E0%B8%95%E0%B8%B5%E0%B8%9A%E0%B8%B1%E0%B8%87%E0%B8%A5%E0%B8%B2+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%84%E0%B8%A3%E0%B8%B1%E0%B8%A7%E0%B8%AD%E0%B8%B5%E0%B8%AA%E0%B8%B2%E0%B8%99%E0%B9%83%E0%B8%95%E0%B9%89+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B8%82%E0%B8%B2%E0%B8%AB%E0%B8%A1%E0%B8%B9%E0%B8%88%E0%B8%B5%E0%B9%89%E0%B8%AB%E0%B8%8D%E0%B8%B4%E0%B8%87+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B8%A1%E0%B8%B1%E0%B8%99%E0%B9%84%E0%B8%81%E0%B9%88%E0%B9%82%E0%B8%81%E0%B8%81%E0%B9%88%E0%B8%A7%E0%B8%99+2+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%84%E0%B8%A3%E0%B8%B1%E0%B8%A7%E0%B8%A3%E0%B8%B4%E0%B8%A1%E0%B8%97%E0%B8%B8%E0%B9%88%E0%B8%87+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%A8%E0%B8%B4%E0%B8%A7%E0%B8%A3%E0%B8%B2%20%E0%B8%84%E0%B8%B2%E0%B9%80%E0%B8%9F%E0%B9%88%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B9%83%E0%B8%9A%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%9B%E0%B9%89%E0%B8%B2%E0%B9%81%E0%B8%94%E0%B8%87%E0%B8%82%E0%B8%99%E0%B8%A1%E0%B8%AB%E0%B8%A7%E0%B8%B2%E0%B8%99%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%A1%E0%B8%B2%E0%B8%95%E0%B8%B2%20Coffee%20And%20Bakery%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=Delicacy%20Khaolak%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%B1%E0%B8%87%20%E0%B9%80%E0%B8%82%E0%B8%B2%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%82%E0%B8%99%E0%B8%A1%E0%B8%AD%E0%B8%B2%E0%B8%A3%E0%B8%A1%E0%B8%93%E0%B9%8C%E0%B8%94%E0%B8%B5%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%9B%E0%B9%89%E0%B8%B2%E0%B8%9D%E0%B8%99%E0%B8%82%E0%B8%99%E0%B8%A1%E0%B8%AB%E0%B8%A7%E0%B8%B2%E0%B8%99%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%94%E0%B8%B4%20%E0%B9%80%E0%B8%AD%E0%B8%97%20%E0%B8%A3%E0%B8%B9%E0%B8%A1%20%E0%B8%9A%E0%B8%B2%E0%B8%A2%20%E0%B8%A1%E0%B8%B2%E0%B8%95%E0%B8%B2%E0%B8%84%E0%B8%B2%E0%B9%80%E0%B8%9F%E0%B9%88%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%B1%E0%B8%87%20%E0%B8%84%E0%B8%B2%E0%B9%80%E0%B8%9F%E0%B9%88%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B9%80%E0%B8%A2%E0%B8%A5%E0%B9%82%E0%B8%A5%E0%B8%A7%E0%B9%8C%20%E0%B8%AA%E0%B9%80%E0%B8%99%E0%B8%A5%20%E0%B8%84%E0%B8%B2%E0%B9%80%E0%B8%9F%E0%B9%88%20%E0%B9%81%E0%B8%AD%E0%B8%99%E0%B8%94%E0%B9%8C%20%E0%B9%81%E0%B8%81%E0%B8%A5%E0%B8%A5%E0%B8%AD%E0%B8%A3%E0%B8%B5%E0%B9%88%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%A1%E0%B8%B2%E0%B8%AB%E0%B8%B2%E0%B8%A1%E0%B8%B4%E0%B8%95%E0%B8%A3%20%E0%B8%84%E0%B8%B2%E0%B9%80%E0%B8%9F%E0%B9%88%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%95%E0%B8%A3%E0%B8%AD%E0%B8%81%E0%B8%84%E0%B8%B2%E0%B9%80%E0%B8%9F%E0%B9%88%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B9%84%E0%B8%97%E0%B8%A3%E0%B8%9A%E0%B9%8C%20%E0%B9%80%E0%B8%82%E0%B8%B2%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%A7%E0%B8%B1%E0%B8%A5%E0%B8%AE%E0%B8%B1%E0%B8%A5%E0%B8%A5%E0%B8%B2%20%E0%B8%A7%E0%B8%B4%E0%B8%A5%E0%B8%A5%E0%B9%88%E0%B8%B2%20%E0%B9%81%E0%B8%AD%E0%B8%99%E0%B8%94%E0%B9%8C%20%E0%B8%97%E0%B8%B5%E0%B9%80%E0%B8%AE%E0%B8%B2%E0%B8%AA%E0%B9%8C%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%AD%E0%B8%B1%E0%B8%99%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%81%E0%B8%A3%E0%B8%B2%E0%B8%A7%E0%B8%94%E0%B9%8C%20%E0%B8%97%E0%B8%B5%20%E0%B8%84%E0%B8%B2%E0%B9%80%E0%B8%9F%E0%B9%88%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%AD%E0%B8%B1%E0%B8%99%E0%B9%80%E0%B8%99%E0%B8%A1%20%E0%B9%80%E0%B8%82%E0%B8%B2%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B9%84%E0%B8%AD%E0%B8%8B%E0%B9%8C%E0%B9%81%E0%B8%95%20%E0%B8%8A%E0%B8%B2%E0%B8%8A%E0%B8%B1%E0%B8%81%20%26%20%E0%B8%8A%E0%B8%B2%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%B3%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%84%E0%B8%AD%E0%B8%95%E0%B8%95%E0%B8%AD%E0%B8%99%20%E0%B8%84%E0%B8%B2%E0%B9%80%E0%B8%9F%E0%B9%88%20%E0%B9%81%E0%B8%AD%E0%B8%99%E0%B8%94%E0%B9%8C%20%E0%B9%84%E0%B8%A5%E0%B8%9A%E0%B8%A3%E0%B8%B2%E0%B8%A3%E0%B8%B5%E0%B9%88%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%95%E0%B8%B3%E0%B8%99%E0%B8%B2%E0%B8%99%E0%B9%82%E0%B8%81%E0%B8%AA%E0%B8%B8%E0%B9%89%E0%B8%A2%20%E0%B8%AD%E0%B9%8A%E0%B8%B2%E0%B8%A1%E0%B9%83%E0%B8%99%E0%B8%AA%E0%B8%A7%E0%B8%99%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%81%E0%B8%AD%E0%B8%84%E0%B8%AD%E0%B8%9F%E0%B8%9F%E0%B8%B5%E0%B9%88+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%81%E0%B8%A4%E0%B8%A9%E0%B8%93%E0%B8%A7%E0%B8%B2%E0%B8%A3%E0%B8%B5+specialty+coffee+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=Bless+U+Cafe+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=Mali+Cafe+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=A+Hunger+Cafe+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=Saraan+Ice+Cream+Homemade+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=DREDGER+Cafe+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%94%E0%B8%AD%E0%B8%81%E0%B8%81%E0%B8%B2%E0%B9%81%E0%B8%9F+%E0%B8%93+%E0%B8%95%E0%B8%B0%E0%B9%82%E0%B8%81%E0%B8%A5%E0%B8%B2+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=MAMA%E2%80%99S+OVEN+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B9%82%E0%B8%AD%E0%B8%A7%E0%B9%80%E0%B8%A5%E0%B9%89%E0%B8%87+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B9%82%E0%B8%81%E0%B8%9B%E0%B8%B5%E0%B9%89+%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=BAN+KHANOM+WAN+NO.77+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B9%80%E0%B8%96%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%A1%E0%B8%B5%E0%B9%88+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%8B%E0%B8%B5%E0%B8%99%E0%B8%84%E0%B8%B2+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%81%E0%B8%B2%E0%B9%81%E0%B8%9F%E0%B9%82%E0%B8%9A%E0%B8%A3%E0%B8%B2%E0%B8%93%E0%B8%9B%E0%B9%89%E0%B8%B2%E0%B8%AD%E0%B8%B5%E0%B9%8A%E0%B8%94+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%81%E0%B8%B2%E0%B9%81%E0%B8%9F%E0%B9%82%E0%B8%81%E0%B9%8A%E0%B8%95%E0%B8%B4+-+%E0%B8%88%E0%B8%B5%E0%B9%89%E0%B8%A1%E0%B8%B8%E0%B9%89%E0%B8%A2+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%9F%E0%B8%B4%E0%B8%99%E0%B8%99%E0%B9%8C+%E0%B8%84%E0%B8%AD%E0%B8%9F%E0%B8%9F%E0%B8%B5%E0%B9%88+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%9F%E0%B8%B5%E0%B9%82%E0%B8%99%E0%B9%88%E0%B8%81%E0%B8%B2%E0%B9%81%E0%B8%9F+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B9%81%E0%B8%9F%E0%B8%A1%E0%B8%B2%E0%B8%A5%E0%B8%B5+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%88%E0%B8%B5%E0%B9%89%E0%B8%96%E0%B9%89%E0%B8%B2%E0%B8%99%20%E0%B8%88%E0%B8%B3%E0%B8%AB%E0%B8%99%E0%B9%88%E0%B8%B2%E0%B8%A2%E0%B8%AA%E0%B8%B4%E0%B8%99%E0%B8%84%E0%B9%89%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%9D%E0%B8%B2%E0%B8%81%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%81%E0%B8%87%E0%B8%AA%E0%B8%B5%20%E0%B8%82%E0%B8%99%E0%B8%A1%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%9D%E0%B8%B2%E0%B8%81%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B9%80%E0%B8%A2%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%A1%20%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B9%80%E0%B8%AE%E0%B8%87%20%28%E0%B9%82%E0%B8%81%E0%B8%A7%E0%B9%80%E0%B8%A2%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%A1%29%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%A8%E0%B8%B4%E0%B8%A3%E0%B8%B4%E0%B8%9E%E0%B8%A3%E0%B8%9A%E0%B8%B2%E0%B8%95%E0%B8%B4%E0%B8%81%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%9A%E0%B8%B2%E0%B8%95%E0%B8%B4%E0%B8%81%20%E0%B8%A1%E0%B8%B1%E0%B8%94%E0%B8%A2%E0%B9%89%E0%B8%AD%E0%B8%A1%20%40%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%28%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%B2%E0%B8%AA%E0%B8%B8%20%E0%B8%9E%E0%B8%B2%E0%B8%99%E0%B8%9E%E0%B8%A3%E0%B8%B0%29%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2%20%E0%B8%9E%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B9%80%E0%B8%95%E0%B9%89%E0%B8%B2%E0%B8%AA%E0%B9%89%E0%B8%AD%E0%B8%95%E0%B8%A7%E0%B8%87%E0%B8%A3%E0%B8%B1%E0%B8%95%E0%B8%99%E0%B9%8C+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B9%80%E0%B8%95%E0%B9%89%E0%B8%B2%E0%B8%AA%E0%B9%89%E0%B8%AD%E0%B8%99%E0%B8%B1%E0%B8%99%E0%B8%97%E0%B8%A7%E0%B8%B1%E0%B8%99+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B9%80%E0%B8%95%E0%B9%89%E0%B8%B2%E0%B8%AA%E0%B9%89%E0%B8%AD%E0%B9%81%E0%B8%A1%E0%B9%88%E0%B8%AD%E0%B8%B2%E0%B8%A3%E0%B8%B5+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%82%E0%B8%99%E0%B8%A1%E0%B8%9C%E0%B8%B4%E0%B8%87%E0%B8%A5%E0%B8%B9%E0%B8%81%E0%B9%81%E0%B8%A1%E0%B9%88%E0%B9%81%E0%B8%9A%E0%B8%9A+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B9%80%E0%B8%95%E0%B9%89%E0%B8%B2%E0%B8%AA%E0%B9%89%E0%B8%AD%E0%B9%80%E0%B8%88%E0%B9%8A%E0%B8%AB%E0%B8%A2%E0%B8%B5%E0%B9%88+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B9%80%E0%B8%95%E0%B9%89%E0%B8%B2%E0%B8%AA%E0%B9%89%E0%B8%AD%E0%B8%9B%E0%B9%89%E0%B8%B2%E0%B9%81%E0%B8%AD%E0%B9%8B%E0%B8%A7+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%AA%E0%B8%B4%E0%B8%A3%E0%B8%B4%E0%B8%9E%E0%B8%A3+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+'https://www.google.com/maps/search/?api=1&query=%E0%B8%A7%E0%B8%B8%E0%B9%89%E0%B8%99%E0%B8%81%E0%B8%B0%E0%B8%97%E0%B8%B4%E0%B8%A1%E0%B8%B0%E0%B8%9E%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B8%AD%E0%B9%88%E0%B8%AD%E0%B8%99+%E0%B9%80%E0%B8%AD%E0%B8%AA%E0%B9%82%E0%B8%8B%E0%B9%88-%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2+%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%9B%E0%B9%88%E0%B8%B2'
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+from playwright.sync_api import sync_playwright
+from bs4 import BeautifulSoup
+from pathlib import Path
+import html
+s=Path('site/en/eat/index.html').read_text(encoding='utf8'); soup=BeautifulSoup(s,'html.parser')
+urls=[]
+for a in soup.select('a[href*=\"google.com/maps\"]'):
+ u=html.unescape(a['href'])
+ if u not in urls: urls.append(u)
+print('UNIQUE_EAT_URLS',len(urls))
+with sync_playwright() as p:
+ b=p.chromium.launch(headless=True); page=b.new_page()
+ for i,u in enumerate(urls[:5]):
+  try:
+   resp=page.goto(u,wait_until='domcontentloaded',timeout=15000)
+   print(i+1,resp.status if resp else None,page.url[:180])
+  except Exception as e: print(i+1,'EXC',type(e).__name__,str(e)[:120])
+ b.close()
+'@ | python -" in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 6532ms:
+UNIQUE_EAT_URLS 105
+1 200 https://www.google.com/maps/search/?api=1&query=%E0%B8%82%E0%B8%99%E0%B8%A1%E0%B8%88%E0%B8%B5%E0%B8%99%E0%B8%9B%E0%B9%89%E0%B8%B2%E0%B8%A1%E0%B9%88%E0%B8%AD%E0%B8%A1%20%E0%B8%95%E0
+2 200 https://www.google.com/maps/search/?api=1&query=%E0%B8%82%E0%B8%99%E0%B8%A1%E0%B8%88%E0%B8%B5%E0%B8%99%E0%B8%9E%E0%B8%B5%E0%B9%88%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B9%88%E0%B8%87%20%E0
+3 200 https://www.google.com/maps/search/?api=1&query=%E0%B8%82%E0%B8%99%E0%B8%A1%E0%B8%88%E0%B8%B5%E0%B8%99%E0%B9%83%E0%B8%99%E0%B8%99%E0%B8%B2%20%E0%B8%95%E0%B8%B0%E0%B8%81%E0%B8%B1%E0
+4 200 https://www.google.com/maps/search/?api=1&query=%E0%B8%84%E0%B8%B2%E0%B8%84%E0%B8%B5%E0%B8%99%E0%B8%AD%E0%B8%AA%20%E0%B9%80%E0%B8%82%E0%B8%B2%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%20
+5 200 https://www.google.com/maps/search/?api=1&query=%E0%B8%97%E0%B8%B1%E0%B8%9A%E0%B8%97%E0%B8%B4%E0%B8%A1%20%E0%B8%95%E0%B8%B4%E0%B9%88%E0%B8%A1%E0%B8%8B%E0%B8%B3%20%E0%B8%95%E0%B8%B0
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+from pathlib import Path
+from bs4 import BeautifulSoup
+fs=list(Path('site/en').rglob('index.html')); miss=[]; badh=[]
+for f in fs:
+ s=BeautifulSoup(f.read_text(encoding='utf8'),'html.parser')
+ if not s.title or not s.title.get_text(strip=True) or not s.select_one('meta[name=\"description\"]') or not s.select_one('link[rel=\"canonical\"]') or len(s.select('link[rel=\"alternate\"][hreflang]'))<3: miss.append(str(f))
+ if s.html.get('lang')"'!='"'en': badh.append(str(f))
+print('missing',miss,'badlang',badh)
+'@ | python -" in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 1513ms:
+missing [] badlang []
+
+codex
+ผลตรวจไม่พบ console error, 4xx/5xx หรือ horizontal overflow ใน 10 หน้า และ metadata ครบทั้ง 44 หน้าอังกฤษ จากการตรวจ HTML พบ `=""` เฉพาะ data attribute ว่างที่ตั้งใจใช้ (`data-base`/`data-news-api`) ไม่พบ quote ซ้อนหรือ parse error ส่วนลิงก์แผนที่ตัวอย่าง 5 เส้นตอบ 200 และรูปแบบ `api=1&query=` ใช้งานได้ครับกำลังสรุปหลักฐานลงรายงานเท่านั้น
+apply patch
+patch: completed
+D:\Siwaracafeweb\output\web\takuapa101-v1\audit\a3-regress-en.md
+diff --git a/output/web/takuapa101-v1/audit/a3-regress-en.md b/output/web/takuapa101-v1/audit/a3-regress-en.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..ffa05f91f467867661bdb440645aab9ac9f8f215
+--- /dev/null
++++ b/output/web/takuapa101-v1/audit/a3-regress-en.md
+@@ -0,0 +1,60 @@
++# A3 · ตรวจ regression หน้าอังกฤษ
++
++ตรวจวันที่ 2026-09-08 · เสิร์ฟด้วย `python -m http.server 8798 --directory site` · ตรวจบน `http://127.0.0.1:8798`
++
++## สรุป
++
++ตรวจแล้วไม่พบปัญหา regression ที่ยืนยันได้จากรอบแก้ล่าสุดในขอบเขตที่กำหนด
++
++## 1. เปิดหน้าอังกฤษ 10 หน้า
++
++ตรวจด้วย Playwright ที่ `/en/`, `/en/eat/`, `/en/map/`, `/en/trip/`, `/en/news/`, `/en/traditions/`, `/en/stories/`, `/en/places/`, `/en/places/wat-sena/`, `/en/places/food-center/`
++
++- Console error: ไม่พบทั้ง 10 หน้า
++- Network response สถานะ 4xx/5xx: ไม่พบทั้ง 10 หน้า
++- ล้นแนวนอน: ไม่พบ · ทุกหน้าที่ตรวจมี `document.documentElement.scrollWidth = 1280` และ `clientWidth = 1280`
++
++หลักฐาน: ผล Playwright จากทั้ง 10 URL ข้างต้น · ไฟล์หน้าเว็บอยู่ใน `site/en/**/index.html`
++
++## 2. attribute และโครงสร้าง HTML
++
++ตรวจไฟล์อังกฤษครบ 44 หน้า (`site/en/**/index.html`)
++
++- พบ `=""` ในทุกหน้าที่ตรวจ แต่เป็น attribute ว่างที่ระดับ `<html>` เท่านั้น คือ `data-base="" data-news-api=""` · ไม่ใช่เครื่องหมายคำพูดซ้อน และไม่ทำให้ HTML เสีย
++- ตรวจ parse ด้วย lxml ครบ 44 ไฟล์ · ไม่พบ parse error
++- ไม่พบรูปแบบ tag เปิดซ้อนผิดหรือ closing tag ที่ทำให้ parser อ่านโครงสร้างเสีย
++
++หลักฐาน: `site/en/index.html:1` และรูปแบบเดียวกันใน `site/en/**/index.html:1` · ผล parse ครบ 44 ไฟล์ไม่มี error
++
++## 3. UI translation และ aria-label
++
++ตรวจจาก DOM ที่ render จริงของ 10 หน้า
++
++- ป้าย UI ภาษาอังกฤษถูกวางใน element ที่สอดคล้องกับหน้าที่ เช่น `Main menu`, `Open menu`, `Search website (Press Ctrl+K)`, `Filter the news`, `Zoom in`, `Zoom out`, `Toggle attribution`, `On this page`
++- ไม่พบ `aria-label` ที่แปลผิดบริบทจากรายการที่ตรวจ
++- ป้ายบนหมุดแผนที่ใช้ `Map marker` ซ้ำตามชนิด element เดียวกัน · ไม่ใช่ข้อความผิดบริบท
++
++หลักฐาน: ค่า `[aria-label]` จาก Playwright ของ `/en/`, `/en/eat/`, `/en/map/`, `/en/trip/`, `/en/news/`, `/en/traditions/`, `/en/stories/`, `/en/places/`, `/en/places/wat-sena/`, `/en/places/food-center/`
++
++## 4. Google Maps
++
++ตรวจลิงก์ Google Maps ที่แสดงในหน้าอังกฤษ โดยหน้า `site/en/eat/index.html:1` มีลิงก์ Maps 105 รายการ (105 URL ไม่ซ้ำ) ซึ่งรวมชุดร้านที่เพิ่มเข้ามา
++
++- URL ที่ตรวจมีรูปแบบ `https://www.google.com/maps/search/?api=1&query=...`
++- ค่า `query` ถูก percent-encode สำหรับชื่อภาษาไทย/อักขระพิเศษ · ไม่พบ query ว่างหรือ URL ที่มีอักขระไทยดิบ
++- สุ่มเปิด 5 เส้นแรกด้วย Playwright แล้วได้ HTTP 200 ทุกเส้น
++
++หลักฐาน: `site/en/eat/index.html:1` · URL ตัวอย่างที่ตรวจเริ่มจาก query ของ `ขนมจีนป้าม่อม`, `ขนมจีนพี่เหน่ง`, `ขนมจีนในนา`, `คาคีนอส เขาหลัก`, `ทับทิม ติ่มซำ` · ผลตอบกลับตามลำดับ `200, 200, 200, 200, 200`
++
++## 5. SEO metadata
++
++ตรวจไฟล์อังกฤษครบ 44 หน้า
++
++- ทุกหน้ามี `<title>` ไม่ว่าง
++- ทุกหน้ามี `meta[name="description"]` ไม่ว่าง
++- ทุกหน้ามี canonical
++- ทุกหน้ามี hreflang อย่างน้อย `th`, `en`, `x-default`
++- ทุกหน้ามี `<html lang="en">`
++
++หลักฐาน: ผลตรวจ DOM/HTML ครบ 44 ไฟล์ใน `site/en/**/index.html` · ตัวอย่าง `/en/`: title `Takua Pa Old Town Guide · Phang Nga, Thailand · Takua Pa 101`, canonical `https://takuapa101.com/en/`, hreflang ครบ 3 ค่า
++
+
+diff --git a/output/web/takuapa101-v1/audit/a3-regress-en.md b/output/web/takuapa101-v1/audit/a3-regress-en.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..ffa05f91f467867661bdb440645aab9ac9f8f215
+--- /dev/null
++++ b/output/web/takuapa101-v1/audit/a3-regress-en.md
+@@ -0,0 +1,60 @@
++# A3 · ตรวจ regression หน้าอังกฤษ
++
++ตรวจวันที่ 2026-09-08 · เสิร์ฟด้วย `python -m http.server 8798 --directory site` · ตรวจบน `http://127.0.0.1:8798`
++
++## สรุป
++
++ตรวจแล้วไม่พบปัญหา regression ที่ยืนยันได้จากรอบแก้ล่าสุดในขอบเขตที่กำหนด
++
++## 1. เปิดหน้าอังกฤษ 10 หน้า
++
++ตรวจด้วย Playwright ที่ `/en/`, `/en/eat/`, `/en/map/`, `/en/trip/`, `/en/news/`, `/en/traditions/`, `/en/stories/`, `/en/places/`, `/en/places/wat-sena/`, `/en/places/food-center/`
++
++- Console error: ไม่พบทั้ง 10 หน้า
++- Network response สถานะ 4xx/5xx: ไม่พบทั้ง 10 หน้า
++- ล้นแนวนอน: ไม่พบ · ทุกหน้าที่ตรวจมี `document.documentElement.scrollWidth = 1280` และ `clientWidth = 1280`
++
++หลักฐาน: ผล Playwright จากทั้ง 10 URL ข้างต้น · ไฟล์หน้าเว็บอยู่ใน `site/en/**/index.html`
++
++## 2. attribute และโครงสร้าง HTML
++
++ตรวจไฟล์อังกฤษครบ 44 หน้า (`site/en/**/index.html`)
++
++- พบ `=""` ในทุกหน้าที่ตรวจ แต่เป็น attribute ว่างที่ระดับ `<html>` เท่านั้น คือ `data-base="" data-news-api=""` · ไม่ใช่เครื่องหมายคำพูดซ้อน และไม่ทำให้ HTML เสีย
++- ตรวจ parse ด้วย lxml ครบ 44 ไฟล์ · ไม่พบ parse error
++- ไม่พบรูปแบบ tag เปิดซ้อนผิดหรือ closing tag ที่ทำให้ parser อ่านโครงสร้างเสีย
++
++หลักฐาน: `site/en/index.html:1` และรูปแบบเดียวกันใน `site/en/**/index.html:1` · ผล parse ครบ 44 ไฟล์ไม่มี error
++
++## 3. UI translation และ aria-label
++
++ตรวจจาก DOM ที่ render จริงของ 10 หน้า
++
++- ป้าย UI ภาษาอังกฤษถูกวางใน element ที่สอดคล้องกับหน้าที่ เช่น `Main menu`, `Open menu`, `Search website (Press Ctrl+K)`, `Filter the news`, `Zoom in`, `Zoom out`, `Toggle attribution`, `On this page`
++- ไม่พบ `aria-label` ที่แปลผิดบริบทจากรายการที่ตรวจ
++- ป้ายบนหมุดแผนที่ใช้ `Map marker` ซ้ำตามชนิด element เดียวกัน · ไม่ใช่ข้อความผิดบริบท
++
++หลักฐาน: ค่า `[aria-label]` จาก Playwright ของ `/en/`, `/en/eat/`, `/en/map/`, `/en/trip/`, `/en/news/`, `/en/traditions/`, `/en/stories/`, `/en/places/`, `/en/places/wat-sena/`, `/en/places/food-center/`
++
++## 4. Google Maps
++
++ตรวจลิงก์ Google Maps ที่แสดงในหน้าอังกฤษ โดยหน้า `site/en/eat/index.html:1` มีลิงก์ Maps 105 รายการ (105 URL ไม่ซ้ำ) ซึ่งรวมชุดร้านที่เพิ่มเข้ามา
++
++- URL ที่ตรวจมีรูปแบบ `https://www.google.com/maps/search/?api=1&query=...`
++- ค่า `query` ถูก percent-encode สำหรับชื่อภาษาไทย/อักขระพิเศษ · ไม่พบ query ว่างหรือ URL ที่มีอักขระไทยดิบ
++- สุ่มเปิด 5 เส้นแรกด้วย Playwright แล้วได้ HTTP 200 ทุกเส้น
++
++หลักฐาน: `site/en/eat/index.html:1` · URL ตัวอย่างที่ตรวจเริ่มจาก query ของ `ขนมจีนป้าม่อม`, `ขนมจีนพี่เหน่ง`, `ขนมจีนในนา`, `คาคีนอส เขาหลัก`, `ทับทิม ติ่มซำ` · ผลตอบกลับตามลำดับ `200, 200, 200, 200, 200`
++
++## 5. SEO metadata
++
++ตรวจไฟล์อังกฤษครบ 44 หน้า
++
++- ทุกหน้ามี `<title>` ไม่ว่าง
++- ทุกหน้ามี `meta[name="description"]` ไม่ว่าง
++- ทุกหน้ามี canonical
++- ทุกหน้ามี hreflang อย่างน้อย `th`, `en`, `x-default`
++- ทุกหน้ามี `<html lang="en">`
++
++หลักฐาน: ผลตรวจ DOM/HTML ครบ 44 ไฟล์ใน `site/en/**/index.html` · ตัวอย่าง `/en/`: title `Takua Pa Old Town Guide · Phang Nga, Thailand · Takua Pa 101`, canonical `https://takuapa101.com/en/`, hreflang ครบ 3 ค่า
++
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$b=[IO.File]::ReadAllBytes('"'audit/a3-regress-en.md'); [Text.Encoding]::UTF8.GetString("'$b) | Select-Object -First 3; git status --short -- audit/a3-regress-en.md' in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 2441ms:
+# A3 · ตรวจ regression หน้าอังกฤษ
+
+ตรวจวันที่ 2026-09-08 · เสิร์ฟด้วย `python -m http.server 8798 --directory site` · ตรวจบน `http://127.0.0.1:8798`
+
+## สรุป
+
+ตรวจแล้วไม่พบปัญหา regression ที่ยืนยันได้จากรอบแก้ล่าสุดในขอบเขตที่กำหนด
+
+## 1. เปิดหน้าอังกฤษ 10 หน้า
+
+ตรวจด้วย Playwright ที่ `/en/`, `/en/eat/`, `/en/map/`, `/en/trip/`, `/en/news/`, `/en/traditions/`, `/en/stories/`, `/en/places/`, `/en/places/wat-sena/`, `/en/places/food-center/`
+
+- Console error: ไม่พบทั้ง 10 หน้า
+- Network response สถานะ 4xx/5xx: ไม่พบทั้ง 10 หน้า
+- ล้นแนวนอน: ไม่พบ · ทุกหน้าที่ตรวจมี `document.documentElement.scrollWidth = 1280` และ `clientWidth = 1280`
+
+หลักฐาน: ผล Playwright จากทั้ง 10 URL ข้างต้น · ไฟล์หน้าเว็บอยู่ใน `site/en/**/index.html`
+
+## 2. attribute และโครงสร้าง HTML
+
+ตรวจไฟล์อังกฤษครบ 44 หน้า (`site/en/**/index.html`)
+
+- พบ `=""` ในทุกหน้าที่ตรวจ แต่เป็น attribute ว่างที่ระดับ `<html>` เท่านั้น คือ `data-base="" data-news-api=""` · ไม่ใช่เครื่องหมายคำพูดซ้อน และไม่ทำให้ HTML เสีย
+- ตรวจ parse ด้วย lxml ครบ 44 ไฟล์ · ไม่พบ parse error
+- ไม่พบรูปแบบ tag เปิดซ้อนผิดหรือ closing tag ที่ทำให้ parser อ่านโครงสร้างเสีย
+
+หลักฐาน: `site/en/index.html:1` และรูปแบบเดียวกันใน `site/en/**/index.html:1` · ผล parse ครบ 44 ไฟล์ไม่มี error
+
+## 3. UI translation และ aria-label
+
+ตรวจจาก DOM ที่ render จริงของ 10 หน้า
+
+- ป้าย UI ภาษาอังกฤษถูกวางใน element ที่สอดคล้องกับหน้าที่ เช่น `Main menu`, `Open menu`, `Search website (Press Ctrl+K)`, `Filter the news`, `Zoom in`, `Zoom out`, `Toggle attribution`, `On this page`
+- ไม่พบ `aria-label` ที่แปลผิดบริบทจากรายการที่ตรวจ
+- ป้ายบนหมุดแผนที่ใช้ `Map marker` ซ้ำตามชนิด element เดียวกัน · ไม่ใช่ข้อความผิดบริบท
+
+หลักฐาน: ค่า `[aria-label]` จาก Playwright ของ `/en/`, `/en/eat/`, `/en/map/`, `/en/trip/`, `/en/news/`, `/en/traditions/`, `/en/stories/`, `/en/places/`, `/en/places/wat-sena/`, `/en/places/food-center/`
+
+## 4. Google Maps
+
+ตรวจลิงก์ Google Maps ที่แสดงในหน้าอังกฤษ โดยหน้า `site/en/eat/index.html:1` มีลิงก์ Maps 105 รายการ (105 URL ไม่ซ้ำ) ซึ่งรวมชุดร้านที่เพิ่มเข้ามา
+
+- URL ที่ตรวจมีรูปแบบ `https://www.google.com/maps/search/?api=1&query=...`
+- ค่า `query` ถูก percent-encode สำหรับชื่อภาษาไทย/อักขระพิเศษ · ไม่พบ query ว่างหรือ URL ที่มีอักขระไทยดิบ
+- สุ่มเปิด 5 เส้นแรกด้วย Playwright แล้วได้ HTTP 200 ทุกเส้น
+
+หลักฐาน: `site/en/eat/index.html:1` · URL ตัวอย่างที่ตรวจเริ่มจาก query ของ `ขนมจีนป้าม่อม`, `ขนมจีนพี่เหน่ง`, `ขนมจีนในนา`, `คาคีนอส เขาหลัก`, `ทับทิม ติ่มซำ` · ผลตอบกลับตามลำดับ `200, 200, 200, 200, 200`
+
+## 5. SEO metadata
+
+ตรวจไฟล์อังกฤษครบ 44 หน้า
+
+- ทุกหน้ามี `<title>` ไม่ว่าง
+- ทุกหน้ามี `meta[name="description"]` ไม่ว่าง
+- ทุกหน้ามี canonical
+- ทุกหน้ามี hreflang อย่างน้อย `th`, `en`, `x-default`
+- ทุกหน้ามี `<html lang="en">`
+
+หลักฐาน: ผลตรวจ DOM/HTML ครบ 44 ไฟล์ใน `site/en/**/index.html` · ตัวอย่าง `/en/`: title `Takua Pa Old Town Guide · Phang Nga, Thailand · Takua Pa 101`, canonical `https://takuapa101.com/en/`, hreflang ครบ 3 ค่า
+
+
+?? audit/a3-regress-en.md
+
+diff --git a/output/web/takuapa101-v1/audit/a3-regress-en.md b/output/web/takuapa101-v1/audit/a3-regress-en.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..ffa05f91f467867661bdb440645aab9ac9f8f215
+--- /dev/null
++++ b/output/web/takuapa101-v1/audit/a3-regress-en.md
+@@ -0,0 +1,60 @@
++# A3 · ตรวจ regression หน้าอังกฤษ
++
++ตรวจวันที่ 2026-09-08 · เสิร์ฟด้วย `python -m http.server 8798 --directory site` · ตรวจบน `http://127.0.0.1:8798`
++
++## สรุป
++
++ตรวจแล้วไม่พบปัญหา regression ที่ยืนยันได้จากรอบแก้ล่าสุดในขอบเขตที่กำหนด
++
++## 1. เปิดหน้าอังกฤษ 10 หน้า
++
++ตรวจด้วย Playwright ที่ `/en/`, `/en/eat/`, `/en/map/`, `/en/trip/`, `/en/news/`, `/en/traditions/`, `/en/stories/`, `/en/places/`, `/en/places/wat-sena/`, `/en/places/food-center/`
++
++- Console error: ไม่พบทั้ง 10 หน้า
++- Network response สถานะ 4xx/5xx: ไม่พบทั้ง 10 หน้า
++- ล้นแนวนอน: ไม่พบ · ทุกหน้าที่ตรวจมี `document.documentElement.scrollWidth = 1280` และ `clientWidth = 1280`
++
++หลักฐาน: ผล Playwright จากทั้ง 10 URL ข้างต้น · ไฟล์หน้าเว็บอยู่ใน `site/en/**/index.html`
++
++## 2. attribute และโครงสร้าง HTML
++
++ตรวจไฟล์อังกฤษครบ 44 หน้า (`site/en/**/index.html`)
++
++- พบ `=""` ในทุกหน้าที่ตรวจ แต่เป็น attribute ว่างที่ระดับ `<html>` เท่านั้น คือ `data-base="" data-news-api=""` · ไม่ใช่เครื่องหมายคำพูดซ้อน และไม่ทำให้ HTML เสีย
++- ตรวจ parse ด้วย lxml ครบ 44 ไฟล์ · ไม่พบ parse error
++- ไม่พบรูปแบบ tag เปิดซ้อนผิดหรือ closing tag ที่ทำให้ parser อ่านโครงสร้างเสีย
++
++หลักฐาน: `site/en/index.html:1` และรูปแบบเดียวกันใน `site/en/**/index.html:1` · ผล parse ครบ 44 ไฟล์ไม่มี error
++
++## 3. UI translation และ aria-label
++
++ตรวจจาก DOM ที่ render จริงของ 10 หน้า
++
++- ป้าย UI ภาษาอังกฤษถูกวางใน element ที่สอดคล้องกับหน้าที่ เช่น `Main menu`, `Open menu`, `Search website (Press Ctrl+K)`, `Filter the news`, `Zoom in`, `Zoom out`, `Toggle attribution`, `On this page`
++- ไม่พบ `aria-label` ที่แปลผิดบริบทจากรายการที่ตรวจ
++- ป้ายบนหมุดแผนที่ใช้ `Map marker` ซ้ำตามชนิด element เดียวกัน · ไม่ใช่ข้อความผิดบริบท
++
++หลักฐาน: ค่า `[aria-label]` จาก Playwright ของ `/en/`, `/en/eat/`, `/en/map/`, `/en/trip/`, `/en/news/`, `/en/traditions/`, `/en/stories/`, `/en/places/`, `/en/places/wat-sena/`, `/en/places/food-center/`
++
++## 4. Google Maps
++
++ตรวจลิงก์ Google Maps ที่แสดงในหน้าอังกฤษ โดยหน้า `site/en/eat/index.html:1` มีลิงก์ Maps 105 รายการ (105 URL ไม่ซ้ำ) ซึ่งรวมชุดร้านที่เพิ่มเข้ามา
++
++- URL ที่ตรวจมีรูปแบบ `https://www.google.com/maps/search/?api=1&query=...`
++- ค่า `query` ถูก percent-encode สำหรับชื่อภาษาไทย/อักขระพิเศษ · ไม่พบ query ว่างหรือ URL ที่มีอักขระไทยดิบ
++- สุ่มเปิด 5 เส้นแรกด้วย Playwright แล้วได้ HTTP 200 ทุกเส้น
++
++หลักฐาน: `site/en/eat/index.html:1` · URL ตัวอย่างที่ตรวจเริ่มจาก query ของ `ขนมจีนป้าม่อม`, `ขนมจีนพี่เหน่ง`, `ขนมจีนในนา`, `คาคีนอส เขาหลัก`, `ทับทิม ติ่มซำ` · ผลตอบกลับตามลำดับ `200, 200, 200, 200, 200`
++
++## 5. SEO metadata
++
++ตรวจไฟล์อังกฤษครบ 44 หน้า
++
++- ทุกหน้ามี `<title>` ไม่ว่าง
++- ทุกหน้ามี `meta[name="description"]` ไม่ว่าง
++- ทุกหน้ามี canonical
++- ทุกหน้ามี hreflang อย่างน้อย `th`, `en`, `x-default`
++- ทุกหน้ามี `<html lang="en">`
++
++หลักฐาน: ผลตรวจ DOM/HTML ครบ 44 ไฟล์ใน `site/en/**/index.html` · ตัวอย่าง `/en/`: title `Takua Pa Old Town Guide · Phang Nga, Thailand · Takua Pa 101`, canonical `https://takuapa101.com/en/`, hreflang ครบ 3 ค่า
++
+
+codex
+ตรวจเสร็จและเขียนรายงานแล้วที่ [audit/a3-regress-en.md](D:/Siwaracafeweb/output/web/takuapa101-v1/audit/a3-regress-en.md)
+
+ผลสรุป: ไม่พบ regression ที่ยืนยันได้ในขอบเขตการตรวจทั้งหมดครับ
+diff --git a/output/web/takuapa101-v1/audit/a3-regress-en.md b/output/web/takuapa101-v1/audit/a3-regress-en.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..ffa05f91f467867661bdb440645aab9ac9f8f215
+--- /dev/null
++++ b/output/web/takuapa101-v1/audit/a3-regress-en.md
+@@ -0,0 +1,60 @@
++# A3 · ตรวจ regression หน้าอังกฤษ
++
++ตรวจวันที่ 2026-09-08 · เสิร์ฟด้วย `python -m http.server 8798 --directory site` · ตรวจบน `http://127.0.0.1:8798`
++
++## สรุป
++
++ตรวจแล้วไม่พบปัญหา regression ที่ยืนยันได้จากรอบแก้ล่าสุดในขอบเขตที่กำหนด
++
++## 1. เปิดหน้าอังกฤษ 10 หน้า
++
++ตรวจด้วย Playwright ที่ `/en/`, `/en/eat/`, `/en/map/`, `/en/trip/`, `/en/news/`, `/en/traditions/`, `/en/stories/`, `/en/places/`, `/en/places/wat-sena/`, `/en/places/food-center/`
++
++- Console error: ไม่พบทั้ง 10 หน้า
++- Network response สถานะ 4xx/5xx: ไม่พบทั้ง 10 หน้า
++- ล้นแนวนอน: ไม่พบ · ทุกหน้าที่ตรวจมี `document.documentElement.scrollWidth = 1280` และ `clientWidth = 1280`
++
++หลักฐาน: ผล Playwright จากทั้ง 10 URL ข้างต้น · ไฟล์หน้าเว็บอยู่ใน `site/en/**/index.html`
++
++## 2. attribute และโครงสร้าง HTML
++
++ตรวจไฟล์อังกฤษครบ 44 หน้า (`site/en/**/index.html`)
++
++- พบ `=""` ในทุกหน้าที่ตรวจ แต่เป็น attribute ว่างที่ระดับ `<html>` เท่านั้น คือ `data-base="" data-news-api=""` · ไม่ใช่เครื่องหมายคำพูดซ้อน และไม่ทำให้ HTML เสีย
++- ตรวจ parse ด้วย lxml ครบ 44 ไฟล์ · ไม่พบ parse error
++- ไม่พบรูปแบบ tag เปิดซ้อนผิดหรือ closing tag ที่ทำให้ parser อ่านโครงสร้างเสีย
++
++หลักฐาน: `site/en/index.html:1` และรูปแบบเดียวกันใน `site/en/**/index.html:1` · ผล parse ครบ 44 ไฟล์ไม่มี error
++
++## 3. UI translation และ aria-label
++
++ตรวจจาก DOM ที่ render จริงของ 10 หน้า
++
++- ป้าย UI ภาษาอังกฤษถูกวางใน element ที่สอดคล้องกับหน้าที่ เช่น `Main menu`, `Open menu`, `Search website (Press Ctrl+K)`, `Filter the news`, `Zoom in`, `Zoom out`, `Toggle attribution`, `On this page`
++- ไม่พบ `aria-label` ที่แปลผิดบริบทจากรายการที่ตรวจ
++- ป้ายบนหมุดแผนที่ใช้ `Map marker` ซ้ำตามชนิด element เดียวกัน · ไม่ใช่ข้อความผิดบริบท
++
++หลักฐาน: ค่า `[aria-label]` จาก Playwright ของ `/en/`, `/en/eat/`, `/en/map/`, `/en/trip/`, `/en/news/`, `/en/traditions/`, `/en/stories/`, `/en/places/`, `/en/places/wat-sena/`, `/en/places/food-center/`
++
++## 4. Google Maps
++
++ตรวจลิงก์ Google Maps ที่แสดงในหน้าอังกฤษ โดยหน้า `site/en/eat/index.html:1` มีลิงก์ Maps 105 รายการ (105 URL ไม่ซ้ำ) ซึ่งรวมชุดร้านที่เพิ่มเข้ามา
++
++- URL ที่ตรวจมีรูปแบบ `https://www.google.com/maps/search/?api=1&query=...`
++- ค่า `query` ถูก percent-encode สำหรับชื่อภาษาไทย/อักขระพิเศษ · ไม่พบ query ว่างหรือ URL ที่มีอักขระไทยดิบ
++- สุ่มเปิด 5 เส้นแรกด้วย Playwright แล้วได้ HTTP 200 ทุกเส้น
++
++หลักฐาน: `site/en/eat/index.html:1` · URL ตัวอย่างที่ตรวจเริ่มจาก query ของ `ขนมจีนป้าม่อม`, `ขนมจีนพี่เหน่ง`, `ขนมจีนในนา`, `คาคีนอส เขาหลัก`, `ทับทิม ติ่มซำ` · ผลตอบกลับตามลำดับ `200, 200, 200, 200, 200`
++
++## 5. SEO metadata
++
++ตรวจไฟล์อังกฤษครบ 44 หน้า
++
++- ทุกหน้ามี `<title>` ไม่ว่าง
++- ทุกหน้ามี `meta[name="description"]` ไม่ว่าง
++- ทุกหน้ามี canonical
++- ทุกหน้ามี hreflang อย่างน้อย `th`, `en`, `x-default`
++- ทุกหน้ามี `<html lang="en">`
++
++หลักฐาน: ผลตรวจ DOM/HTML ครบ 44 ไฟล์ใน `site/en/**/index.html` · ตัวอย่าง `/en/`: title `Takua Pa Old Town Guide · Phang Nga, Thailand · Takua Pa 101`, canonical `https://takuapa101.com/en/`, hreflang ครบ 3 ค่า
++
+
+tokens used
+78,319

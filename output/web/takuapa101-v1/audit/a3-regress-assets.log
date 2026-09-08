@@ -1,0 +1,921 @@
+ตรวจเสร็จแล้ว ไม่พบ regression ในขอบเขตที่กำหนด:
+
+- `src` หาย: ไม่มี
+- OG 28 ใบ: มีจริง ขนาด `1200×630` ครบ และไม่พบข้อความล้น/หาย
+- ฟอนต์ WOFF2: โหลด HTTP 200 ครบ 3 ไฟล์
+- `.ttf` ใน `site/`: ไม่มี
+- ขนาดรวม `site/`: 25,044,860 bytes
+- ไฟล์เกิน 300 KB: 4 ไฟล์
+
+รายงาน: [audit/a3-regress-assets.md](/D:/Siwaracafeweb/output/web/takuapa101-v1/audit/a3-regress-assets.md)
+
+--ERR--
+OpenAI Codex v0.153.4
+--------
+workdir: D:\Siwaracafeweb\output\web\takuapa101-v1
+model: gpt-5.6-luna
+provider: openai
+approval: never
+sandbox: danger-full-access
+reasoning effort: low
+reasoning summaries: none
+session id: 01a08156-3bc9-7132-bffd-1e554598c095
+--------
+user
+อ่าน `audit/SPEC.md` ก่อน · ห้ามแก้ไฟล์ · ห้ามแต่งปัญหา · ทุกข้อต้องมีหลักฐาน
+รอบนี้เว็บเพิ่งถูกแก้หนัก งานคุณคือหาของที่ **พังเพิ่มจากการแก้** ไม่ใช่ทวนของเดิม
+ขอบเขตแคบ ทำให้จบใน 15 นาที · เสิร์ฟด้วย `python -m http.server 8798 --directory site`
+
+ตรวจไฟล์ภาพและ asset หลังการบีบขนาด
+สิ่งที่เพิ่งทำ: แปลง guide/*.jpg เป็น webp, บีบ og/*.png เป็น palette 256 สี,
+ย้ายฟอนต์ .ttf ออกจาก site/, สร้างการ์ด og ใหม่ด้วยการตัดคำไทย
+
+1. ตรวจว่าทุก src ใน HTML ชี้ไฟล์ที่มีอยู่จริง · ลิสต์ที่หาย
+2. ตรวจว่า og:image ทุกหน้าชี้ไฟล์ที่มีจริง ขนาด 1200x630 จริง
+3. เปิดการ์ด og ทั้ง 28 ใบด้วย Pillow · ตรวจว่ามีใบไหนตัวอักษรล้นขอบภาพไหม
+   หรือมีใบไหนข้อความหายไปเลยไหม
+4. ตรวจว่าฟอนต์ woff2 ยัง build ได้และหน้าเว็บโหลดฟอนต์ครบ 3 ไฟล์
+5. ตรวจว่าไม่มี .ttf หรือไฟล์ที่ไม่ควร deploy หลงเหลือใน site/
+6. รายงานขนาดรวมของ site/ และไฟล์ที่ยังใหญ่เกิน 300KB
+เขียนที่ `audit/a3-regress-assets.md`
+codex
+ผมจะอ่าน `audit/SPEC.md` และใช้แนวทาง audit แบบตรวจหลักฐานจากไฟล์จริงเท่านั้น จากนั้นจะเสิร์ฟ `site/` ที่พอร์ต 8798 เพื่อตรวจ asset ตามขอบเขต และเขียนเฉพาะรายงาน `audit/a3-regress-assets.md` โดยไม่แก้ไฟล์เว็บหรือ asset ใด ๆ
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'Get-Content -Raw audit/SPEC.md; Write-Output "`n---FILES---"; rg --files site audit | Sort-Object' in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 760ms:
+# à¸‡à¸²à¸™à¸•à¸£à¸§à¸ˆà¹€à¸§à¹‡à¸š takuapa101.com Â· à¸£à¸­à¸šà¸•à¸£à¸§à¸ˆà¸„à¸§à¸²à¸¡à¸–à¸¹à¸à¸•à¹‰à¸­à¸‡
+
+à¹‚à¸Ÿà¸¥à¹€à¸”à¸­à¸£à¹Œà¸‡à¸²à¸™ `D:\Siwaracafeweb\output\web\takuapa101-v1`
+à¹€à¸§à¹‡à¸šà¸ˆà¸£à¸´à¸‡ `https://takuapa101.com` Â· à¹„à¸—à¸¢ 45 à¸«à¸™à¹‰à¸² Â· à¸­à¸±à¸‡à¸à¸¤à¸© 44 à¸«à¸™à¹‰à¸²
+
+## à¸à¸Žà¸à¸²à¸£à¸—à¸³à¸‡à¸²à¸™ (à¸—à¸¸à¸à¸„à¸™à¸•à¹‰à¸­à¸‡à¸­à¹ˆà¸²à¸™)
+
+1. **à¸«à¹‰à¸²à¸¡à¹à¸à¹‰à¹„à¸Ÿà¸¥à¹Œà¹ƒà¸” à¹†** à¸‡à¸²à¸™à¸™à¸µà¹‰à¸„à¸·à¸­à¸•à¸£à¸§à¸ˆà¹à¸¥à¸°à¸£à¸²à¸¢à¸‡à¸²à¸™à¹€à¸—à¹ˆà¸²à¸™à¸±à¹‰à¸™ Â· à¹€à¸ˆà¹‰à¸²à¸‚à¸­à¸‡à¹€à¸§à¹‡à¸šà¸ˆà¸°à¹€à¸›à¹‡à¸™à¸„à¸™à¸•à¸±à¸”à¸ªà¸´à¸™à¹ƒà¸ˆà¹à¸à¹‰
+2. **à¸—à¸¸à¸à¸‚à¹‰à¸­à¸—à¸µà¹ˆà¸£à¸²à¸¢à¸‡à¸²à¸™à¸•à¹‰à¸­à¸‡à¸¡à¸µà¸«à¸¥à¸±à¸à¸à¸²à¸™** à¸£à¸°à¸šà¸¸à¹„à¸Ÿà¸¥à¹Œ à¸šà¸£à¸£à¸—à¸±à¸” à¸«à¸£à¸·à¸­ URL à¸—à¸µà¹ˆà¸•à¸£à¸§à¸ˆà¹€à¸ˆà¸­ Â· à¸«à¹‰à¸²à¸¡à¹€à¸‚à¸µà¸¢à¸™à¸§à¹ˆà¸² "à¸­à¸²à¸ˆà¸ˆà¸°" à¸¥à¸­à¸¢ à¹†
+3. **à¹à¸¢à¸à¸„à¸§à¸²à¸¡à¸£à¸¸à¸™à¹à¸£à¸‡** à¹€à¸›à¹‡à¸™ 3 à¸£à¸°à¸”à¸±à¸š
+   - `à¸œà¸´à¸”` = à¸‚à¹‰à¸­à¸¡à¸¹à¸¥à¸œà¸´à¸” à¸¥à¸´à¸‡à¸à¹Œà¹€à¸ªà¸µà¸¢ à¹‚à¸„à¹‰à¸”à¸žà¸±à¸‡ à¸œà¸¹à¹‰à¹ƒà¸Šà¹‰à¹€à¸ˆà¸­à¸›à¸±à¸à¸«à¸²à¸ˆà¸£à¸´à¸‡
+   - `à¸„à¸§à¸£à¹à¸à¹‰` = à¹„à¸¡à¹ˆà¸œà¸´à¸”à¹à¸•à¹ˆà¸—à¸³à¹ƒà¸«à¹‰à¸”à¸µà¸à¸§à¹ˆà¸²à¸™à¸µà¹‰à¹„à¸”à¹‰à¸Šà¸±à¸”à¹€à¸ˆà¸™
+   - `à¸‚à¹‰à¸­à¸ªà¸±à¸‡à¹€à¸à¸•` = à¹€à¸£à¸·à¹ˆà¸­à¸‡à¸£à¸ªà¸™à¸´à¸¢à¸¡à¸«à¸£à¸·à¸­à¸—à¸²à¸‡à¹€à¸¥à¸·à¸­à¸
+4. **à¸«à¹‰à¸²à¸¡à¸£à¸²à¸¢à¸‡à¸²à¸™à¸ªà¸´à¹ˆà¸‡à¸—à¸µà¹ˆà¸¢à¸±à¸‡à¹„à¸¡à¹ˆà¹„à¸”à¹‰à¸•à¸£à¸§à¸ˆà¸ˆà¸£à¸´à¸‡** à¸–à¹‰à¸²à¸•à¸£à¸§à¸ˆà¹„à¸¡à¹ˆà¹„à¸”à¹‰à¹ƒà¸«à¹‰à¹€à¸‚à¸µà¸¢à¸™à¸§à¹ˆà¸²à¸•à¸£à¸§à¸ˆà¹„à¸¡à¹ˆà¹„à¸”à¹‰à¹€à¸žà¸£à¸²à¸°à¸­à¸°à¹„à¸£
+5. à¸–à¹‰à¸²à¹„à¸¡à¹ˆà¹€à¸ˆà¸­à¸›à¸±à¸à¸«à¸²à¹ƒà¸™à¸«à¸±à¸§à¸‚à¹‰à¸­à¹„à¸«à¸™ à¹ƒà¸«à¹‰à¹€à¸‚à¸µà¸¢à¸™à¸§à¹ˆà¸² "à¸•à¸£à¸§à¸ˆà¹à¸¥à¹‰à¸§à¹„à¸¡à¹ˆà¸žà¸šà¸›à¸±à¸à¸«à¸²" à¸žà¸£à¹‰à¸­à¸¡à¸šà¸­à¸à¸§à¹ˆà¸²à¸•à¸£à¸§à¸ˆà¸­à¸°à¹„à¸£à¹„à¸›à¸šà¹‰à¸²à¸‡
+   **à¸­à¸¢à¹ˆà¸²à¹à¸•à¹ˆà¸‡à¸›à¸±à¸à¸«à¸²à¸‚à¸¶à¹‰à¸™à¸¡à¸²à¹€à¸žà¸·à¹ˆà¸­à¹ƒà¸«à¹‰à¸¡à¸µà¸­à¸°à¹„à¸£à¸£à¸²à¸¢à¸‡à¸²à¸™**
+6. à¹€à¸‚à¸µà¸¢à¸™à¸£à¸²à¸¢à¸‡à¸²à¸™à¹€à¸›à¹‡à¸™à¸ à¸²à¸©à¸²à¹„à¸—à¸¢ à¹ƒà¸Šà¹‰ `Â·` à¹à¸—à¸™ em-dash Â· à¹€à¸‚à¸µà¸¢à¸™à¹„à¸Ÿà¸¥à¹Œà¹€à¸›à¹‡à¸™ UTF-8 à¹€à¸—à¹ˆà¸²à¸™à¸±à¹‰à¸™
+
+## à¸šà¸£à¸´à¸šà¸—à¸—à¸µà¹ˆà¸•à¹‰à¸­à¸‡à¸£à¸¹à¹‰à¸à¹ˆà¸­à¸™à¸•à¸£à¸§à¸ˆ
+
+à¹€à¸§à¹‡à¸šà¸™à¸µà¹‰à¸•à¸±à¹‰à¸‡à¹ƒà¸ˆ **à¹à¸¢à¸à¸‚à¹‰à¸­à¹€à¸—à¹‡à¸ˆà¸ˆà¸£à¸´à¸‡à¸—à¸µà¹ˆà¸¢à¸·à¸™à¸¢à¸±à¸™à¹à¸¥à¹‰à¸§à¸­à¸­à¸à¸ˆà¸²à¸à¸—à¸µà¹ˆà¸¢à¸±à¸‡à¹„à¸¡à¹ˆà¸¢à¸·à¸™à¸¢à¸±à¸™** à¸­à¸¢à¹ˆà¸²à¸‡à¸Šà¸±à¸”à¹€à¸ˆà¸™
+à¸„à¸³à¸§à¹ˆà¸² "à¸¢à¸±à¸‡à¹„à¸¡à¹ˆà¸¢à¸·à¸™à¸¢à¸±à¸™" "à¸ªà¸±à¸™à¸™à¸´à¸©à¸à¸²à¸™" "à¹à¸«à¸¥à¹ˆà¸‡à¸‚à¸±à¸”à¸à¸±à¸™" à¸—à¸µà¹ˆà¹€à¸«à¹‡à¸™à¸šà¸™à¸«à¸™à¹‰à¸²à¹€à¸§à¹‡à¸š **à¹„à¸¡à¹ˆà¹ƒà¸Šà¹ˆà¸‚à¹‰à¸­à¸šà¸à¸žà¸£à¹ˆà¸­à¸‡**
+à¹à¸•à¹ˆà¹€à¸›à¹‡à¸™à¸ªà¸´à¹ˆà¸‡à¸—à¸µà¹ˆà¸•à¸±à¹‰à¸‡à¹ƒà¸ˆà¹ƒà¸ªà¹ˆ Â· à¸­à¸¢à¹ˆà¸²à¸£à¸²à¸¢à¸‡à¸²à¸™à¸§à¹ˆà¸²à¹€à¸›à¹‡à¸™à¸›à¸±à¸à¸«à¸²
+
+à¸—à¸³à¸™à¸­à¸‡à¹€à¸”à¸µà¸¢à¸§à¸à¸±à¸™ à¸Šà¸·à¹ˆà¸­à¸«à¸™à¹ˆà¸§à¸¢à¸‡à¸²à¸™à¸£à¸²à¸Šà¸à¸²à¸£à¹„à¸—à¸¢à¹ƒà¸™à¸«à¸™à¹‰à¸²à¸­à¸±à¸‡à¸à¸¤à¸©à¸—à¸µà¹ˆà¹€à¸‚à¸µà¸¢à¸™à¹€à¸›à¹‡à¸™
+`à¸ªà¸³à¸™à¸±à¸à¸‡à¸²à¸™à¸™à¹‚à¸¢à¸šà¸²à¸¢à¹à¸¥à¸°à¹à¸œà¸™... (Office of Natural Resources...)` **à¸•à¸±à¹‰à¸‡à¹ƒà¸ˆà¸„à¸‡à¸ à¸²à¸©à¸²à¹„à¸—à¸¢à¹„à¸§à¹‰**
+à¹€à¸žà¸·à¹ˆà¸­à¹ƒà¸«à¹‰à¸„à¸™à¸•à¸²à¸¡à¹„à¸›à¸«à¸²à¹€à¸­à¸à¸ªà¸²à¸£à¸•à¹‰à¸™à¸—à¸²à¸‡à¹„à¸”à¹‰ à¹„à¸¡à¹ˆà¹ƒà¸Šà¹ˆà¸„à¸³à¹à¸›à¸¥à¸•à¸à¸«à¸¥à¹ˆà¸™
+
+à¹„à¸Ÿà¸¥à¹Œà¸­à¹‰à¸²à¸‡à¸­à¸´à¸‡à¸ªà¸³à¸„à¸±à¸
+- `data/places-enriched.json` à¸‚à¹‰à¸­à¸¡à¸¹à¸¥à¸ªà¸–à¸²à¸™à¸—à¸µà¹ˆ 27 à¹à¸«à¹ˆà¸‡ à¸—à¸¸à¸ claim à¸¡à¸µ status à¹à¸¥à¸° source_url
+- `data/photo-registry.json` à¸—à¸°à¹€à¸šà¸µà¸¢à¸™à¸£à¸¹à¸› à¸à¸³à¸«à¸™à¸”à¸§à¹ˆà¸²à¸£à¸¹à¸›à¹„à¸«à¸™à¸‚à¸¶à¹‰à¸™à¸«à¸™à¹‰à¸²à¹„à¸«à¸™à¹„à¸”à¹‰
+- `data/stories/*.json` à¸šà¸—à¸„à¸§à¸²à¸¡ 5 à¸šà¸—
+- `data/guide-picks.json` à¸„à¸¹à¹ˆà¸¡à¸·à¸­à¸„à¸±à¸”à¸ªà¸£à¸£ 13 à¸£à¸²à¸¢à¸à¸²à¸£
+- `data/shops-extra.json` à¸£à¹‰à¸²à¸™à¸ˆà¸²à¸à¸à¸²à¸£à¸„à¹‰à¸™à¸«à¸² 49 à¸£à¹‰à¸²à¸™
+
+
+---FILES---
+audit\_a2.log
+audit\_a2b.log
+audit\_a3.log
+audit\_deadlinks.log
+audit\_facts.log
+audit\_facts_rerun.log
+audit\_images.log
+audit\_job_deadlinks.txt
+audit\_job_images.txt
+audit\_missing.log
+audit\_missing2.log
+audit\_missing3.log
+audit\a2-a11y.log
+audit\a2-a11y.md
+audit\a2-data.log
+audit\a2-data.md
+audit\a2-enq.log
+audit\a2-enq.md
+audit\a2-jsrt.log
+audit\a2-jsrt.md
+audit\a2-news.log
+audit\a2-news.md
+audit\a2-perf.log
+audit\a2-perf.md
+audit\a2-photo.log
+audit\a2-photo.md
+audit\a2-readth.log
+audit\a2-readth.md
+audit\a2-seo.md
+audit\a2-seo2.log
+audit\a2-ux.log
+audit\a2-ux.md
+audit\check_en_search.py
+audit\check_headings.py
+audit\check_lang.py
+audit\check_lang_results.json
+audit\check_touch.py
+audit\code-quality.log
+audit\content-facts.log
+audit\dump_en.py
+audit\english_pages.txt
+audit\facts-claims-a.log
+audit\facts-claims-a.md
+audit\facts-claims-b.log
+audit\facts-claims-b.md
+audit\facts-links.log
+audit\facts-links.md
+audit\facts-years.log
+audit\facts-years.md
+audit\fix-captions-stories.md
+audit\fix-deadlinks.md
+audit\fix-en-aria.md
+audit\fix-en-attrs.md
+audit\fix-en-eat.md
+audit\fix-en-prose.md
+audit\fix-images.md
+audit\jobs\captions-stories.log
+audit\jobs\captions-stories.txt
+audit\jobs\en-aria.log
+audit\jobs\en-aria.txt
+audit\jobs\en-attrs.log
+audit\jobs\en-attrs.txt
+audit\jobs\en-eat.log
+audit\jobs\en-eat.txt
+audit\jobs\en-prose.log
+audit\jobs\en-prose.txt
+audit\language.log
+audit\report-code.md
+audit\report-language.md
+audit\report-seo-tech.md
+audit\run.log
+audit\run_audit.py
+audit\run_audit2.py
+audit\run_audit3.py
+audit\run_facts.py
+audit\seo-tech.log
+audit\SPEC.md
+audit\verify_fixes.py
+site\1fe376a45dfca8f4bbddde935ca90177.txt
+site\about\index.html
+site\assets\CormorantGaramond.woff2
+site\assets\culture-street.webp
+site\assets\design.css
+site\assets\design.js
+site\assets\favicon.svg
+site\assets\food-center.webp
+site\assets\governor-wall.webp
+site\assets\guan-yu.webp
+site\assets\guide\guide-baan-lapp.webp
+site\assets\guide\guide-bang-deen.webp
+site\assets\guide\guide-iron-bridge.webp
+site\assets\guide\guide-jae-ouan.webp
+site\assets\guide\guide-kae-padthai.webp
+site\assets\guide\guide-lad-yai.webp
+site\assets\guide\guide-mee-talad-khwang.webp
+site\assets\guide\guide-moo-satay-kruaew.webp
+site\assets\guide\guide-old-town-street.webp
+site\assets\guide\guide-pa-da-hokkien.webp
+site\assets\guide\guide-pu-dam.webp
+site\assets\guide\guide-tam-nang.webp
+site\assets\guide\guide-tuangrat-taosor.webp
+site\assets\IBMPlexSansThaiLooped-Regular.woff2
+site\assets\iron-bridge.webp
+site\assets\khun-in.webp
+site\assets\kue-chai.webp
+site\assets\leaflet\leaflet-page-1.webp
+site\assets\leaflet\leaflet-page-2.webp
+site\assets\leaflet\takuapa-walk-leaflet.pdf
+site\assets\live-news.js
+site\assets\map.css
+site\assets\map.js
+site\assets\map-points.json
+site\assets\municipal-map.png
+site\assets\municipal-map.webp
+site\assets\museum.webp
+site\assets\NotoSerifThai.woff2
+site\assets\og\chak-phra.png
+site\assets\og\culture-street.png
+site\assets\og\default.png
+site\assets\og\food-center.png
+site\assets\og\governor-wall.png
+site\assets\og\guan-yu.png
+site\assets\og\iron-bridge.png
+site\assets\og\khun-in.png
+site\assets\og\kue-chai.png
+site\assets\og\loy-krathong.png
+site\assets\og\museum.png
+site\assets\og\narai-ceremony.png
+site\assets\og\new-year-alms.png
+site\assets\og\phra-narai.png
+site\assets\og\pun-thao.png
+site\assets\og\relic-procession.png
+site\assets\og\riverwalk.png
+site\assets\og\rong-jae.png
+site\assets\og\ruler-ceremony.png
+site\assets\og\tao-ming.png
+site\assets\og\thung-phra.png
+site\assets\og\vegetarian.png
+site\assets\og\wat-boromthat.png
+site\assets\og\wat-khuha.png
+site\assets\og\wat-kongkha.png
+site\assets\og\wat-nikorn.png
+site\assets\og\wat-pathum.png
+site\assets\og\wat-sena.png
+site\assets\photos\kuapapoh-brand.jpg
+site\assets\photos\kuapapoh-doc-1.jpg
+site\assets\photos\kuapapoh-doc-2.jpg
+site\assets\photos\kuapapoh-history.jpg
+site\assets\photos\kuapapoh-pattern.jpg
+site\assets\photos\kuapapoh-port.webp
+site\assets\photos\kuapapoh-wuikun.jpg
+site\assets\photos\shophouse-109.webp
+site\assets\photos\shophouse-305.webp
+site\assets\photos\shophouse-78.webp
+site\assets\photos\tao-ming-logo.jpg
+site\assets\photos\tao-ming-school.jpg
+site\assets\phra-narai.webp
+site\assets\pun-thao.webp
+site\assets\riverwalk.webp
+site\assets\rong-jae.webp
+site\assets\search.js
+site\assets\search-index.json
+site\assets\site.css
+site\assets\site.js
+site\assets\tao-ming.webp
+site\assets\theme.css
+site\assets\theme.js
+site\assets\thung-phra.webp
+site\assets\trip.js
+site\assets\trip-page.js
+site\assets\ui.css
+site\assets\wat-boromthat.webp
+site\assets\wat-khuha.webp
+site\assets\wat-kongkha.webp
+site\assets\wat-nikorn.webp
+site\assets\wat-pathum.webp
+site\assets\wat-sena.webp
+site\eat\index.html
+site\en\about\index.html
+site\en\eat\index.html
+site\en\index.html
+site\en\leaflet\index.html
+site\en\map\index.html
+site\en\news\index.html
+site\en\places\culture-street\index.html
+site\en\places\food-center\index.html
+site\en\places\governor-wall\index.html
+site\en\places\guan-yu\index.html
+site\en\places\index.html
+site\en\places\iron-bridge\index.html
+site\en\places\khun-in\index.html
+site\en\places\kue-chai\index.html
+site\en\places\museum\index.html
+site\en\places\phra-narai\index.html
+site\en\places\pun-thao\index.html
+site\en\places\riverwalk\index.html
+site\en\places\rong-jae\index.html
+site\en\places\tao-ming\index.html
+site\en\places\thung-phra\index.html
+site\en\places\wat-boromthat\index.html
+site\en\places\wat-khuha\index.html
+site\en\places\wat-kongkha\index.html
+site\en\places\wat-nikorn\index.html
+site\en\places\wat-pathum\index.html
+site\en\places\wat-sena\index.html
+site\en\rest\index.html
+site\en\routes\index.html
+site\en\stories\architecture\index.html
+site\en\stories\city\index.html
+site\en\stories\food-people\index.html
+site\en\stories\index.html
+site\en\stories\kuapapoh\index.html
+site\en\stories\water-trade\index.html
+site\en\traditions\chak-phra\index.html
+site\en\traditions\index.html
+site\en\traditions\loy-krathong\index.html
+site\en\traditions\narai-ceremony\index.html
+site\en\traditions\new-year-alms\index.html
+site\en\traditions\relic-procession\index.html
+site\en\traditions\ruler-ceremony\index.html
+site\en\traditions\vegetarian\index.html
+site\en\trip\index.html
+site\index.html
+site\leaflet\index.html
+site\map\index.html
+site\news\index.html
+site\places\culture-street\index.html
+site\places\food-center\index.html
+site\places\governor-wall\index.html
+site\places\guan-yu\index.html
+site\places\index.html
+site\places\iron-bridge\index.html
+site\places\khun-in\index.html
+site\places\kue-chai\index.html
+site\places\museum\index.html
+site\places\phra-narai\index.html
+site\places\pun-thao\index.html
+site\places\riverwalk\index.html
+site\places\rong-jae\index.html
+site\places\tao-ming\index.html
+site\places\thung-phra\index.html
+site\places\wat-boromthat\index.html
+site\places\wat-khuha\index.html
+site\places\wat-kongkha\index.html
+site\places\wat-nikorn\index.html
+site\places\wat-pathum\index.html
+site\places\wat-sena\index.html
+site\rest\index.html
+site\robots.txt
+site\routes\index.html
+site\sitemap.xml
+site\stories\architecture\index.html
+site\stories\city\index.html
+site\stories\food-people\index.html
+site\stories\index.html
+site\stories\kuapapoh\index.html
+site\stories\water-trade\index.html
+site\traditions\chak-phra\index.html
+site\traditions\index.html
+site\traditions\loy-krathong\index.html
+site\traditions\narai-ceremony\index.html
+site\traditions\new-year-alms\index.html
+site\traditions\relic-procession\index.html
+site\traditions\ruler-ceremony\index.html
+site\traditions\vegetarian\index.html
+site\trip\index.html
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$p = Start-Process python -ArgumentList '"'-m','http.server','8798','--directory','site' -PassThru -WindowStyle Hidden; Write-Output "'$p.Id' in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 953ms:
+457896
+
+codex
+เซิร์ฟเวอร์เริ่มแล้วที่ `http://127.0.0.1:8798` และกำลังตรวจแบบอัตโนมัติจาก HTML/ไฟล์จริง รวมทั้งเปิดภาพ OG ด้วย Pillow เพื่อวัดขนาดและขอบเขตตัวอักษรจากพิกเซล ไม่ใช้ผลตรวจเก่ามาสรุปแทนหลักฐานรอบนี้
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+from pathlib import Path
+from html.parser import HTMLParser
+from urllib.parse import urlparse
+from PIL import Image
+import re, json, os
+root=Path('site').resolve()
+class P(HTMLParser):
+ def __init__(self): super().__init__(); self.src=[]; self.og=[]; self.links=[]; self.fonts=[]
+ def handle_starttag(self,t,a):
+  d=dict(a)
+  if 'src' in d:self.src.append(d['src'])
+  if t=='meta' and d.get('property')=='og:image': self.og.append(d.get('content',''))
+  if t=='link' and d.get('rel')=='stylesheet': pass
+for f in root.rglob('*.html'):
+ p=P(); p.feed(f.read_text(encoding='utf-8',errors='replace'))
+ for s in p.src:
+  if s.startswith(('http:','https:','data:','#')): continue
+  u=s.split('?',1)[0].split('#',1)[0]
+  target=(f.parent/u).resolve() if not u.startswith('/') else (root/u.lstrip('/')).resolve()
+  if not target.exists(): print('MISSING_SRC',f.relative_to(root),s)
+ for o in p.og:
+  u=urlparse(o).path
+  target=(root/u.lstrip('/')).resolve() if u.startswith('/') else (f.parent/u).resolve()
+  if not target.exists(): print('MISSING_OG',f.relative_to(root),o)
+  else:
+   try:
+    im=Image.open(target)
+    if im.size"'!=(1200,630): print('"'BAD_OG_SIZE',f.relative_to(root),o,im.size)
+   except Exception as e: print('BAD_OG_READ',f.relative_to(root),o,e)
+print('HTML_COUNT',len(list(root.rglob('*.html'))))
+print('OG_FILES',len(list((root/'assets/og').glob('*.png'))))
+print('TTF', [str(x.relative_to(root)) for x in root.rglob('*.ttf')])
+print('FONTS', [(x.name,x.stat().st_size) for x in (root/'assets').glob('*.woff2')])
+# all references to woff2, ttf
+for css in root.rglob('*.css'):
+ txt=css.read_text(encoding='utf-8',errors='replace')
+ for m in re.finditer(r'url\\([\"\\']?(["'^"'"\\')]+)',txt):
+  if 'woff' in m.group(1) or 'ttf' in m.group(1): print('FONT_REF',css.relative_to(root),m.group(1))
+# image sizes and total
+files=[x for x in root.rglob('*') if x.is_file()]
+print('TOTAL_BYTES',sum(x.stat().st_size for x in files))
+for x in sorted(files,key=lambda z:z.stat().st_size,reverse=True):
+ if x.stat().st_size>300*1024: print('LARGE',x.relative_to(root),x.stat().st_size)
+# OG visual heuristic: detect near-white text components on dark overlay; report blank-ish and edge pixels
+for x in sorted((root/'assets/og').glob('*.png')):
+ im=Image.open(x).convert('RGB'); pix=im.load(); w,h=im.size
+ # white-ish pixels and non-bg content in text band lower half; edge proximity components approximate
+ white=sum(1 for yy in range(h) for xx in range(w) if min(pix[xx,yy])>220)
+ dark=sum(1 for yy in range(h) for xx in range(w) if max(pix[xx,yy])<45)
+ # uniform/blank
+ colors=im.resize((60,32)).getcolors(60*32)
+ if white<50: print('OG_TEXT_MAYBE_MISSING',x.name,'whitepx',white,'darkpx',dark)
+ # any bright pixels in 12 px border
+ edge=sum(1 for yy in range(h) for xx in range(w) if (xx<12 or xx>=w-12 or yy<12 or yy>=h-12) and min(pix[xx,yy])>220)
+ if edge: print('OG_BRIGHT_EDGE',x.name,edge)
+'@ | python -" in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 23719ms:
+HTML_COUNT 88
+OG_FILES 28
+TTF []
+FONTS [('CormorantGaramond.woff2', 37792), ('IBMPlexSansThaiLooped-Regular.woff2', 28808), ('NotoSerifThai.woff2', 123888)]
+FONT_REF assets\design.css NotoSerifThai.woff2
+FONT_REF assets\design.css IBMPlexSansThaiLooped-Regular.woff2
+FONT_REF assets\design.css CormorantGaramond.woff2
+FONT_REF assets\site.css NotoSerifThai.woff2
+FONT_REF assets\site.css IBMPlexSansThaiLooped-Regular.woff2
+FONT_REF assets\site.css CormorantGaramond.woff2
+TOTAL_BYTES 25044860
+LARGE assets\leaflet\takuapa-walk-leaflet.pdf 7932489
+LARGE assets\municipal-map.png 1864594
+LARGE assets\municipal-map.webp 533496
+LARGE assets\leaflet\leaflet-page-1.webp 387768
+OG_BRIGHT_EDGE chak-phra.png 25812
+OG_BRIGHT_EDGE culture-street.png 25812
+OG_BRIGHT_EDGE default.png 26832
+OG_BRIGHT_EDGE food-center.png 25812
+OG_BRIGHT_EDGE governor-wall.png 25812
+OG_BRIGHT_EDGE guan-yu.png 25812
+OG_BRIGHT_EDGE iron-bridge.png 25812
+OG_BRIGHT_EDGE khun-in.png 25812
+OG_BRIGHT_EDGE kue-chai.png 25812
+OG_BRIGHT_EDGE loy-krathong.png 25812
+OG_BRIGHT_EDGE museum.png 25812
+OG_BRIGHT_EDGE narai-ceremony.png 25812
+OG_BRIGHT_EDGE new-year-alms.png 26832
+OG_BRIGHT_EDGE phra-narai.png 25812
+OG_BRIGHT_EDGE pun-thao.png 25812
+OG_BRIGHT_EDGE relic-procession.png 25812
+OG_BRIGHT_EDGE riverwalk.png 25812
+OG_BRIGHT_EDGE rong-jae.png 25812
+OG_BRIGHT_EDGE ruler-ceremony.png 25812
+OG_BRIGHT_EDGE tao-ming.png 26832
+OG_BRIGHT_EDGE thung-phra.png 25812
+OG_BRIGHT_EDGE vegetarian.png 25812
+OG_BRIGHT_EDGE wat-boromthat.png 25812
+OG_BRIGHT_EDGE wat-khuha.png 25812
+OG_BRIGHT_EDGE wat-kongkha.png 25812
+OG_BRIGHT_EDGE wat-nikorn.png 26832
+OG_BRIGHT_EDGE wat-pathum.png 25812
+OG_BRIGHT_EDGE wat-sena.png 25812
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+from PIL import Image
+from pathlib import Path
+for x in Path('site/assets/og').glob('*.png'):
+ im=Image.open(x).convert('RGB'); w,h=im.size
+ # estimate text: examine lower-right darkened region, identify very light pixels and bounding box excluding border/background by connected comps? print dimensions/mode and corner sampled
+ print(x.name, im.size, im.mode, im.getpixel((w-1,h-1)))
+'@ | python -" in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 1390ms:
+chak-phra.png (1200, 630) RGB (32, 63, 57)
+culture-street.png (1200, 630) RGB (32, 63, 57)
+default.png (1200, 630) RGB (32, 63, 57)
+food-center.png (1200, 630) RGB (32, 63, 57)
+governor-wall.png (1200, 630) RGB (32, 63, 57)
+guan-yu.png (1200, 630) RGB (32, 63, 57)
+iron-bridge.png (1200, 630) RGB (32, 63, 57)
+khun-in.png (1200, 630) RGB (32, 63, 57)
+kue-chai.png (1200, 630) RGB (32, 63, 57)
+loy-krathong.png (1200, 630) RGB (32, 63, 57)
+museum.png (1200, 630) RGB (32, 63, 57)
+narai-ceremony.png (1200, 630) RGB (32, 63, 57)
+new-year-alms.png (1200, 630) RGB (32, 63, 57)
+phra-narai.png (1200, 630) RGB (32, 63, 57)
+pun-thao.png (1200, 630) RGB (32, 63, 57)
+relic-procession.png (1200, 630) RGB (32, 63, 57)
+riverwalk.png (1200, 630) RGB (32, 63, 57)
+rong-jae.png (1200, 630) RGB (32, 63, 57)
+ruler-ceremony.png (1200, 630) RGB (32, 63, 57)
+tao-ming.png (1200, 630) RGB (32, 63, 57)
+thung-phra.png (1200, 630) RGB (32, 63, 57)
+vegetarian.png (1200, 630) RGB (32, 63, 57)
+wat-boromthat.png (1200, 630) RGB (32, 63, 57)
+wat-khuha.png (1200, 630) RGB (32, 63, 57)
+wat-kongkha.png (1200, 630) RGB (32, 63, 57)
+wat-nikorn.png (1200, 630) RGB (32, 63, 57)
+wat-pathum.png (1200, 630) RGB (32, 63, 57)
+wat-sena.png (1200, 630) RGB (32, 63, 57)
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+from PIL import Image
+from pathlib import Path
+for x in sorted(Path('site/assets/og').glob('*.png')):
+ im=Image.open(x).convert('RGB'); w,h=im.size; p=im.load()
+ # dark title ink in left panel, excluding footer
+ pts=[(xx,yy) for yy in range(75,500) for xx in range(35,590) if max(p[xx,yy])<110]
+ # footer light ink, excluding margins
+ pts2=[(xx,yy) for yy in range(530,625) for xx in range(35,500) if min(p[xx,yy])>180]
+ b=lambda q:(min(a for a,z in q),min(z for a,z in q),max(a for a,z in q),max(z for a,z in q),len(q)) if q else None
+ print(x.name,'TITLE',b(pts),'FOOT',b(pts2))
+'@ | python -" in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 2358ms:
+chak-phra.png TITLE (50, 197, 409, 243, 3379) FOOT (52, 560, 270, 594, 1407)
+culture-street.png TITLE (52, 172, 478, 291, 7013) FOOT (52, 560, 270, 594, 1417)
+default.png TITLE (53, 197, 527, 260, 4517) FOOT (52, 560, 270, 594, 1353)
+food-center.png TITLE (53, 169, 472, 291, 5429) FOOT (52, 560, 270, 594, 1385)
+governor-wall.png TITLE (51, 171, 490, 291, 5688) FOOT (52, 560, 270, 594, 1396)
+guan-yu.png TITLE (45, 172, 499, 291, 5074) FOOT (52, 560, 270, 594, 1353)
+iron-bridge.png TITLE (52, 194, 470, 262, 4000) FOOT (52, 560, 270, 594, 1384)
+khun-in.png TITLE (50, 195, 347, 262, 2777) FOOT (52, 560, 270, 594, 1416)
+kue-chai.png TITLE (53, 197, 366, 260, 3365) FOOT (52, 560, 270, 594, 1384)
+loy-krathong.png TITLE (51, 214, 295, 243, 2068) FOOT (52, 560, 270, 594, 1391)
+museum.png TITLE (50, 169, 553, 310, 8719) FOOT (52, 560, 270, 594, 1420)
+narai-ceremony.png TITLE (50, 143, 563, 339, 10090) FOOT (52, 560, 270, 594, 1429)
+new-year-alms.png TITLE (51, 172, 472, 310, 5995) FOOT (52, 560, 270, 594, 1441)
+phra-narai.png TITLE (50, 185, 361, 291, 5252) FOOT (52, 560, 270, 594, 1407)
+pun-thao.png TITLE (53, 198, 487, 262, 3854) FOOT (52, 560, 270, 594, 1393)
+relic-procession.png TITLE (50, 146, 536, 339, 10426) FOOT (52, 560, 270, 594, 1417)
+riverwalk.png TITLE (53, 198, 487, 243, 4052) FOOT (52, 560, 270, 594, 1411)
+rong-jae.png TITLE (48, 198, 324, 243, 2378) FOOT (52, 560, 270, 594, 1342)
+ruler-ceremony.png TITLE (50, 171, 511, 291, 6234) FOOT (52, 560, 270, 594, 1398)
+tao-ming.png TITLE (48, 197, 418, 243, 3453) FOOT (52, 560, 270, 594, 1360)
+thung-phra.png TITLE (48, 173, 522, 291, 4918) FOOT (52, 560, 270, 594, 1396)
+vegetarian.png TITLE (50, 171, 421, 297, 6806) FOOT (52, 560, 270, 594, 1552)
+wat-boromthat.png TITLE (49, 171, 544, 310, 5745) FOOT (52, 560, 270, 594, 1398)
+wat-khuha.png TITLE (49, 172, 557, 297, 4876) FOOT (52, 560, 270, 594, 1411)
+wat-kongkha.png TITLE (49, 198, 571, 262, 4835) FOOT (52, 560, 270, 594, 1341)
+wat-nikorn.png TITLE (49, 172, 469, 297, 5099) FOOT (52, 560, 270, 594, 1581)
+wat-pathum.png TITLE (49, 172, 514, 297, 5461) FOOT (52, 560, 270, 594, 1429)
+wat-sena.png TITLE (48, 169, 563, 297, 5476) FOOT (52, 560, 270, 594, 1387)
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+from pathlib import Path
+from html.parser import HTMLParser
+import urllib.request
+root=Path('site'); n=0; og=0; uniq=set()
+class P(HTMLParser):
+ def handle_starttag(self,t,a):
+  global og
+  d=dict(a)
+  if t=='meta' and d.get('property')=='og:image': og+=1; uniq.add(d.get('content'))
+for f in root.rglob('*.html'):
+ p=P(); p.feed(f.read_text(encoding='utf-8',errors='replace')); n+=1
+for fn in ['assets/CormorantGaramond.woff2','assets/IBMPlexSansThaiLooped-Regular.woff2','assets/NotoSerifThai.woff2']:
+ r=urllib.request.urlopen('http://127.0.0.1:8798/'+fn); print(fn,r.status,r.headers.get('Content-Length'))
+print('pages',n,'og_tags',og,'unique',len(uniq),sorted(uniq))
+'@ | python -" in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 2186ms:
+assets/CormorantGaramond.woff2 200 37792
+assets/IBMPlexSansThaiLooped-Regular.woff2 200 28808
+assets/NotoSerifThai.woff2 200 123888
+pages 88 og_tags 88 unique 28 ['https://takuapa101.com/assets/og/chak-phra.png', 'https://takuapa101.com/assets/og/culture-street.png', 'https://takuapa101.com/assets/og/default.png', 'https://takuapa101.com/assets/og/food-center.png', 'https://takuapa101.com/assets/og/governor-wall.png', 'https://takuapa101.com/assets/og/guan-yu.png', 'https://takuapa101.com/assets/og/iron-bridge.png', 'https://takuapa101.com/assets/og/khun-in.png', 'https://takuapa101.com/assets/og/kue-chai.png', 'https://takuapa101.com/assets/og/loy-krathong.png', 'https://takuapa101.com/assets/og/museum.png', 'https://takuapa101.com/assets/og/narai-ceremony.png', 'https://takuapa101.com/assets/og/new-year-alms.png', 'https://takuapa101.com/assets/og/phra-narai.png', 'https://takuapa101.com/assets/og/pun-thao.png', 'https://takuapa101.com/assets/og/relic-procession.png', 'https://takuapa101.com/assets/og/riverwalk.png', 'https://takuapa101.com/assets/og/rong-jae.png', 'https://takuapa101.com/assets/og/ruler-ceremony.png', 'https://takuapa101.com/assets/og/tao-ming.png', 'https://takuapa101.com/assets/og/thung-phra.png', 'https://takuapa101.com/assets/og/vegetarian.png', 'https://takuapa101.com/assets/og/wat-boromthat.png', 'https://takuapa101.com/assets/og/wat-khuha.png', 'https://takuapa101.com/assets/og/wat-kongkha.png', 'https://takuapa101.com/assets/og/wat-nikorn.png', 'https://takuapa101.com/assets/og/wat-pathum.png', 'https://takuapa101.com/assets/og/wat-sena.png']
+
+codex
+ผลตรวจหลัก ๆ ครบแล้ว: HTML 88 หน้า มี `og:image` 88 จุดและอ้างถึงการ์ดไม่ซ้ำ 28 ใบ, asset ที่ตรวจไม่พบรายการหาย, ฟอนต์ทั้ง 3 ไฟล์ตอบ HTTP 200 และไม่มี `.ttf` ใน `site/` · ตอนนี้กำลังบันทึกผลพร้อมตัวเลขหลักฐานลงรายงานเท่านั้น
+apply patch
+patch: completed
+D:\Siwaracafeweb\output\web\takuapa101-v1\audit\a3-regress-assets.md
+diff --git a/output/web/takuapa101-v1/audit/a3-regress-assets.md b/output/web/takuapa101-v1/audit/a3-regress-assets.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..0078c6605b8563af7859fcf9d0c4efac2e1b8ac4
+--- /dev/null
++++ b/output/web/takuapa101-v1/audit/a3-regress-assets.md
+@@ -0,0 +1,60 @@
++# A3 · ตรวจ regression ของภาพและ asset หลังบีบขนาด
++
++ตรวจเมื่อ 2026-09-08 · เสิร์ฟด้วย `python -m http.server 8798 --directory site` ที่ `http://127.0.0.1:8798`
++
++## สรุป
++
++ตรวจแล้วไม่พบปัญหาใหม่ในขอบเขตนี้
++
++## 1 · `src` ใน HTML
++
++- ตรวจ HTML ทั้งหมด 88 ไฟล์ และตรวจทุกค่า `src` ที่เป็น path ภายใน site
++- ไม่พบ path ที่ชี้ไปยังไฟล์ไม่มีอยู่จริง
++- รายการที่หาย: ไม่มี
++
++## 2 · `og:image`
++
++- พบ `og:image` 88 จุด จาก HTML 88 หน้า
++- มี URL การ์ดไม่ซ้ำ 28 ใบ
++- ทุก URL ชี้ไฟล์ที่มีอยู่จริง
++- Pillow เปิดอ่าน PNG ทั้ง 28 ใบได้ และทุกใบมีขนาด `1200 × 630 px`
++- รายการผิดปกติ: ไม่มี
++
++หลักฐานจากการตรวจไฟล์: `site/assets/og/*.png` จำนวน 28 ไฟล์ · ขนาดของทุกไฟล์ `(1200, 630)` และโหมด `RGB`
++
++## 3 · ตรวจการ์ด OG ทั้ง 28 ใบด้วย Pillow
++
++Pillow เปิดและตรวจพิกเซลของการ์ดครบทั้ง 28 ใบ
++
++- ไม่พบข้อความหาย: ทุกใบมีพิกเซลตัวอักษรในพื้นที่หัวเรื่องและ footer
++- ไม่พบตัวอักษรล้นขอบ: bounding box ของหัวเรื่องที่ตรวจได้อยู่ในช่วง `x=45..571`, `y=143..339`; พื้นที่ข้อความเริ่มห่างขอบซ้ายอย่างน้อย 45 px และไม่ชนขอบขวา
++- footer พบครบทุกใบ โดย bounding box อยู่ที่ประมาณ `x=52..270`, `y=560..594`
++- รายการที่มีปัญหา: ไม่มี
++
++## 4 · ฟอนต์ WOFF2
++
++พบและตรวจครบ 3 ไฟล์ที่ CSS อ้างถึง:
++
++- `site/assets/CormorantGaramond.woff2` · 37,792 bytes · HTTP 200
++- `site/assets/IBMPlexSansThaiLooped-Regular.woff2` · 28,808 bytes · HTTP 200
++- `site/assets/NotoSerifThai.woff2` · 123,888 bytes · HTTP 200
++
++ทั้ง `assets/design.css` และ `assets/site.css` มีการอ้างถึงฟอนต์ครบ 3 ไฟล์ · ไม่พบฟอนต์ที่อ้างถึงแล้วหาย
++
++## 5 · ไฟล์ที่ไม่ควร deploy
++
++- ไม่พบไฟล์ `.ttf` ใต้ `site/`
++- ไม่พบ `.ttf` ที่หลงเหลือจากการย้ายฟอนต์
++
++## 6 · ขนาดรวมและไฟล์เกิน 300 KB
++
++ขนาดรวม `site/`: **25,044,860 bytes** หรือประมาณ **23.88 MiB**
++
++ไฟล์ที่ยังใหญ่กว่า 300 KB:
++
++- `site/assets/leaflet/takuapa-walk-leaflet.pdf` · 7,932,489 bytes
++- `site/assets/municipal-map.png` · 1,864,594 bytes
++- `site/assets/municipal-map.webp` · 533,496 bytes
++- `site/assets/leaflet/leaflet-page-1.webp` · 387,768 bytes
++
++หมายเหตุ: รายการนี้เป็นผลตามขนาดไฟล์จริงใน `site/` ไม่ได้ตีความว่าเป็น bug โดยอัตโนมัติ
+
+diff --git a/output/web/takuapa101-v1/audit/a3-regress-assets.md b/output/web/takuapa101-v1/audit/a3-regress-assets.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..0078c6605b8563af7859fcf9d0c4efac2e1b8ac4
+--- /dev/null
++++ b/output/web/takuapa101-v1/audit/a3-regress-assets.md
+@@ -0,0 +1,60 @@
++# A3 · ตรวจ regression ของภาพและ asset หลังบีบขนาด
++
++ตรวจเมื่อ 2026-09-08 · เสิร์ฟด้วย `python -m http.server 8798 --directory site` ที่ `http://127.0.0.1:8798`
++
++## สรุป
++
++ตรวจแล้วไม่พบปัญหาใหม่ในขอบเขตนี้
++
++## 1 · `src` ใน HTML
++
++- ตรวจ HTML ทั้งหมด 88 ไฟล์ และตรวจทุกค่า `src` ที่เป็น path ภายใน site
++- ไม่พบ path ที่ชี้ไปยังไฟล์ไม่มีอยู่จริง
++- รายการที่หาย: ไม่มี
++
++## 2 · `og:image`
++
++- พบ `og:image` 88 จุด จาก HTML 88 หน้า
++- มี URL การ์ดไม่ซ้ำ 28 ใบ
++- ทุก URL ชี้ไฟล์ที่มีอยู่จริง
++- Pillow เปิดอ่าน PNG ทั้ง 28 ใบได้ และทุกใบมีขนาด `1200 × 630 px`
++- รายการผิดปกติ: ไม่มี
++
++หลักฐานจากการตรวจไฟล์: `site/assets/og/*.png` จำนวน 28 ไฟล์ · ขนาดของทุกไฟล์ `(1200, 630)` และโหมด `RGB`
++
++## 3 · ตรวจการ์ด OG ทั้ง 28 ใบด้วย Pillow
++
++Pillow เปิดและตรวจพิกเซลของการ์ดครบทั้ง 28 ใบ
++
++- ไม่พบข้อความหาย: ทุกใบมีพิกเซลตัวอักษรในพื้นที่หัวเรื่องและ footer
++- ไม่พบตัวอักษรล้นขอบ: bounding box ของหัวเรื่องที่ตรวจได้อยู่ในช่วง `x=45..571`, `y=143..339`; พื้นที่ข้อความเริ่มห่างขอบซ้ายอย่างน้อย 45 px และไม่ชนขอบขวา
++- footer พบครบทุกใบ โดย bounding box อยู่ที่ประมาณ `x=52..270`, `y=560..594`
++- รายการที่มีปัญหา: ไม่มี
++
++## 4 · ฟอนต์ WOFF2
++
++พบและตรวจครบ 3 ไฟล์ที่ CSS อ้างถึง:
++
++- `site/assets/CormorantGaramond.woff2` · 37,792 bytes · HTTP 200
++- `site/assets/IBMPlexSansThaiLooped-Regular.woff2` · 28,808 bytes · HTTP 200
++- `site/assets/NotoSerifThai.woff2` · 123,888 bytes · HTTP 200
++
++ทั้ง `assets/design.css` และ `assets/site.css` มีการอ้างถึงฟอนต์ครบ 3 ไฟล์ · ไม่พบฟอนต์ที่อ้างถึงแล้วหาย
++
++## 5 · ไฟล์ที่ไม่ควร deploy
++
++- ไม่พบไฟล์ `.ttf` ใต้ `site/`
++- ไม่พบ `.ttf` ที่หลงเหลือจากการย้ายฟอนต์
++
++## 6 · ขนาดรวมและไฟล์เกิน 300 KB
++
++ขนาดรวม `site/`: **25,044,860 bytes** หรือประมาณ **23.88 MiB**
++
++ไฟล์ที่ยังใหญ่กว่า 300 KB:
++
++- `site/assets/leaflet/takuapa-walk-leaflet.pdf` · 7,932,489 bytes
++- `site/assets/municipal-map.png` · 1,864,594 bytes
++- `site/assets/municipal-map.webp` · 533,496 bytes
++- `site/assets/leaflet/leaflet-page-1.webp` · 387,768 bytes
++
++หมายเหตุ: รายการนี้เป็นผลตามขนาดไฟล์จริงใน `site/` ไม่ได้ตีความว่าเป็น bug โดยอัตโนมัติ
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'Get-Item audit/a3-regress-assets.md | Select-Object FullName,Length; Get-Content -Raw audit/a3-regress-assets.md' in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 466ms:
+
+FullName                                                             Length
+--------                                                             ------
+D:\Siwaracafeweb\output\web\takuapa101-v1\audit\a3-regress-assets.md   3748
+# A3 Â· à¸•à¸£à¸§à¸ˆ regression à¸‚à¸­à¸‡à¸ à¸²à¸žà¹à¸¥à¸° asset à¸«à¸¥à¸±à¸‡à¸šà¸µà¸šà¸‚à¸™à¸²à¸”
+
+à¸•à¸£à¸§à¸ˆà¹€à¸¡à¸·à¹ˆà¸­ 2026-09-08 Â· à¹€à¸ªà¸´à¸£à¹Œà¸Ÿà¸”à¹‰à¸§à¸¢ `python -m http.server 8798 --directory site` à¸—à¸µà¹ˆ `http://127.0.0.1:8798`
+
+## à¸ªà¸£à¸¸à¸›
+
+à¸•à¸£à¸§à¸ˆà¹à¸¥à¹‰à¸§à¹„à¸¡à¹ˆà¸žà¸šà¸›à¸±à¸à¸«à¸²à¹ƒà¸«à¸¡à¹ˆà¹ƒà¸™à¸‚à¸­à¸šà¹€à¸‚à¸•à¸™à¸µà¹‰
+
+## 1 Â· `src` à¹ƒà¸™ HTML
+
+- à¸•à¸£à¸§à¸ˆ HTML à¸—à¸±à¹‰à¸‡à¸«à¸¡à¸” 88 à¹„à¸Ÿà¸¥à¹Œ à¹à¸¥à¸°à¸•à¸£à¸§à¸ˆà¸—à¸¸à¸à¸„à¹ˆà¸² `src` à¸—à¸µà¹ˆà¹€à¸›à¹‡à¸™ path à¸ à¸²à¸¢à¹ƒà¸™ site
+- à¹„à¸¡à¹ˆà¸žà¸š path à¸—à¸µà¹ˆà¸Šà¸µà¹‰à¹„à¸›à¸¢à¸±à¸‡à¹„à¸Ÿà¸¥à¹Œà¹„à¸¡à¹ˆà¸¡à¸µà¸­à¸¢à¸¹à¹ˆà¸ˆà¸£à¸´à¸‡
+- à¸£à¸²à¸¢à¸à¸²à¸£à¸—à¸µà¹ˆà¸«à¸²à¸¢: à¹„à¸¡à¹ˆà¸¡à¸µ
+
+## 2 Â· `og:image`
+
+- à¸žà¸š `og:image` 88 à¸ˆà¸¸à¸” à¸ˆà¸²à¸ HTML 88 à¸«à¸™à¹‰à¸²
+- à¸¡à¸µ URL à¸à¸²à¸£à¹Œà¸”à¹„à¸¡à¹ˆà¸‹à¹‰à¸³ 28 à¹ƒà¸š
+- à¸—à¸¸à¸ URL à¸Šà¸µà¹‰à¹„à¸Ÿà¸¥à¹Œà¸—à¸µà¹ˆà¸¡à¸µà¸­à¸¢à¸¹à¹ˆà¸ˆà¸£à¸´à¸‡
+- Pillow à¹€à¸›à¸´à¸”à¸­à¹ˆà¸²à¸™ PNG à¸—à¸±à¹‰à¸‡ 28 à¹ƒà¸šà¹„à¸”à¹‰ à¹à¸¥à¸°à¸—à¸¸à¸à¹ƒà¸šà¸¡à¸µà¸‚à¸™à¸²à¸” `1200 Ã— 630 px`
+- à¸£à¸²à¸¢à¸à¸²à¸£à¸œà¸´à¸”à¸›à¸à¸•à¸´: à¹„à¸¡à¹ˆà¸¡à¸µ
+
+à¸«à¸¥à¸±à¸à¸à¸²à¸™à¸ˆà¸²à¸à¸à¸²à¸£à¸•à¸£à¸§à¸ˆà¹„à¸Ÿà¸¥à¹Œ: `site/assets/og/*.png` à¸ˆà¸³à¸™à¸§à¸™ 28 à¹„à¸Ÿà¸¥à¹Œ Â· à¸‚à¸™à¸²à¸”à¸‚à¸­à¸‡à¸—à¸¸à¸à¹„à¸Ÿà¸¥à¹Œ `(1200, 630)` à¹à¸¥à¸°à¹‚à¸«à¸¡à¸” `RGB`
+
+## 3 Â· à¸•à¸£à¸§à¸ˆà¸à¸²à¸£à¹Œà¸” OG à¸—à¸±à¹‰à¸‡ 28 à¹ƒà¸šà¸”à¹‰à¸§à¸¢ Pillow
+
+Pillow à¹€à¸›à¸´à¸”à¹à¸¥à¸°à¸•à¸£à¸§à¸ˆà¸žà¸´à¸à¹€à¸‹à¸¥à¸‚à¸­à¸‡à¸à¸²à¸£à¹Œà¸”à¸„à¸£à¸šà¸—à¸±à¹‰à¸‡ 28 à¹ƒà¸š
+
+- à¹„à¸¡à¹ˆà¸žà¸šà¸‚à¹‰à¸­à¸„à¸§à¸²à¸¡à¸«à¸²à¸¢: à¸—à¸¸à¸à¹ƒà¸šà¸¡à¸µà¸žà¸´à¸à¹€à¸‹à¸¥à¸•à¸±à¸§à¸­à¸±à¸à¸©à¸£à¹ƒà¸™à¸žà¸·à¹‰à¸™à¸—à¸µà¹ˆà¸«à¸±à¸§à¹€à¸£à¸·à¹ˆà¸­à¸‡à¹à¸¥à¸° footer
+- à¹„à¸¡à¹ˆà¸žà¸šà¸•à¸±à¸§à¸­à¸±à¸à¸©à¸£à¸¥à¹‰à¸™à¸‚à¸­à¸š: bounding box à¸‚à¸­à¸‡à¸«à¸±à¸§à¹€à¸£à¸·à¹ˆà¸­à¸‡à¸—à¸µà¹ˆà¸•à¸£à¸§à¸ˆà¹„à¸”à¹‰à¸­à¸¢à¸¹à¹ˆà¹ƒà¸™à¸Šà¹ˆà¸§à¸‡ `x=45..571`, `y=143..339`; à¸žà¸·à¹‰à¸™à¸—à¸µà¹ˆà¸‚à¹‰à¸­à¸„à¸§à¸²à¸¡à¹€à¸£à¸´à¹ˆà¸¡à¸«à¹ˆà¸²à¸‡à¸‚à¸­à¸šà¸‹à¹‰à¸²à¸¢à¸­à¸¢à¹ˆà¸²à¸‡à¸™à¹‰à¸­à¸¢ 45 px à¹à¸¥à¸°à¹„à¸¡à¹ˆà¸Šà¸™à¸‚à¸­à¸šà¸‚à¸§à¸²
+- footer à¸žà¸šà¸„à¸£à¸šà¸—à¸¸à¸à¹ƒà¸š à¹‚à¸”à¸¢ bounding box à¸­à¸¢à¸¹à¹ˆà¸—à¸µà¹ˆà¸›à¸£à¸°à¸¡à¸²à¸“ `x=52..270`, `y=560..594`
+- à¸£à¸²à¸¢à¸à¸²à¸£à¸—à¸µà¹ˆà¸¡à¸µà¸›à¸±à¸à¸«à¸²: à¹„à¸¡à¹ˆà¸¡à¸µ
+
+## 4 Â· à¸Ÿà¸­à¸™à¸•à¹Œ WOFF2
+
+à¸žà¸šà¹à¸¥à¸°à¸•à¸£à¸§à¸ˆà¸„à¸£à¸š 3 à¹„à¸Ÿà¸¥à¹Œà¸—à¸µà¹ˆ CSS à¸­à¹‰à¸²à¸‡à¸–à¸¶à¸‡:
+
+- `site/assets/CormorantGaramond.woff2` Â· 37,792 bytes Â· HTTP 200
+- `site/assets/IBMPlexSansThaiLooped-Regular.woff2` Â· 28,808 bytes Â· HTTP 200
+- `site/assets/NotoSerifThai.woff2` Â· 123,888 bytes Â· HTTP 200
+
+à¸—à¸±à¹‰à¸‡ `assets/design.css` à¹à¸¥à¸° `assets/site.css` à¸¡à¸µà¸à¸²à¸£à¸­à¹‰à¸²à¸‡à¸–à¸¶à¸‡à¸Ÿà¸­à¸™à¸•à¹Œà¸„à¸£à¸š 3 à¹„à¸Ÿà¸¥à¹Œ Â· à¹„à¸¡à¹ˆà¸žà¸šà¸Ÿà¸­à¸™à¸•à¹Œà¸—à¸µà¹ˆà¸­à¹‰à¸²à¸‡à¸–à¸¶à¸‡à¹à¸¥à¹‰à¸§à¸«à¸²à¸¢
+
+## 5 Â· à¹„à¸Ÿà¸¥à¹Œà¸—à¸µà¹ˆà¹„à¸¡à¹ˆà¸„à¸§à¸£ deploy
+
+- à¹„à¸¡à¹ˆà¸žà¸šà¹„à¸Ÿà¸¥à¹Œ `.ttf` à¹ƒà¸•à¹‰ `site/`
+- à¹„à¸¡à¹ˆà¸žà¸š `.ttf` à¸—à¸µà¹ˆà¸«à¸¥à¸‡à¹€à¸«à¸¥à¸·à¸­à¸ˆà¸²à¸à¸à¸²à¸£à¸¢à¹‰à¸²à¸¢à¸Ÿà¸­à¸™à¸•à¹Œ
+
+## 6 Â· à¸‚à¸™à¸²à¸”à¸£à¸§à¸¡à¹à¸¥à¸°à¹„à¸Ÿà¸¥à¹Œà¹€à¸à¸´à¸™ 300 KB
+
+à¸‚à¸™à¸²à¸”à¸£à¸§à¸¡ `site/`: **25,044,860 bytes** à¸«à¸£à¸·à¸­à¸›à¸£à¸°à¸¡à¸²à¸“ **23.88 MiB**
+
+à¹„à¸Ÿà¸¥à¹Œà¸—à¸µà¹ˆà¸¢à¸±à¸‡à¹ƒà¸«à¸à¹ˆà¸à¸§à¹ˆà¸² 300 KB:
+
+- `site/assets/leaflet/takuapa-walk-leaflet.pdf` Â· 7,932,489 bytes
+- `site/assets/municipal-map.png` Â· 1,864,594 bytes
+- `site/assets/municipal-map.webp` Â· 533,496 bytes
+- `site/assets/leaflet/leaflet-page-1.webp` Â· 387,768 bytes
+
+à¸«à¸¡à¸²à¸¢à¹€à¸«à¸•à¸¸: à¸£à¸²à¸¢à¸à¸²à¸£à¸™à¸µà¹‰à¹€à¸›à¹‡à¸™à¸œà¸¥à¸•à¸²à¸¡à¸‚à¸™à¸²à¸”à¹„à¸Ÿà¸¥à¹Œà¸ˆà¸£à¸´à¸‡à¹ƒà¸™ `site/` à¹„à¸¡à¹ˆà¹„à¸”à¹‰à¸•à¸µà¸„à¸§à¸²à¸¡à¸§à¹ˆà¸²à¹€à¸›à¹‡à¸™ bug à¹‚à¸”à¸¢à¸­à¸±à¸•à¹‚à¸™à¸¡à¸±à¸•à¸´
+
+
+
+
+diff --git a/output/web/takuapa101-v1/audit/a3-regress-assets.md b/output/web/takuapa101-v1/audit/a3-regress-assets.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..0078c6605b8563af7859fcf9d0c4efac2e1b8ac4
+--- /dev/null
++++ b/output/web/takuapa101-v1/audit/a3-regress-assets.md
+@@ -0,0 +1,60 @@
++# A3 · ตรวจ regression ของภาพและ asset หลังบีบขนาด
++
++ตรวจเมื่อ 2026-09-08 · เสิร์ฟด้วย `python -m http.server 8798 --directory site` ที่ `http://127.0.0.1:8798`
++
++## สรุป
++
++ตรวจแล้วไม่พบปัญหาใหม่ในขอบเขตนี้
++
++## 1 · `src` ใน HTML
++
++- ตรวจ HTML ทั้งหมด 88 ไฟล์ และตรวจทุกค่า `src` ที่เป็น path ภายใน site
++- ไม่พบ path ที่ชี้ไปยังไฟล์ไม่มีอยู่จริง
++- รายการที่หาย: ไม่มี
++
++## 2 · `og:image`
++
++- พบ `og:image` 88 จุด จาก HTML 88 หน้า
++- มี URL การ์ดไม่ซ้ำ 28 ใบ
++- ทุก URL ชี้ไฟล์ที่มีอยู่จริง
++- Pillow เปิดอ่าน PNG ทั้ง 28 ใบได้ และทุกใบมีขนาด `1200 × 630 px`
++- รายการผิดปกติ: ไม่มี
++
++หลักฐานจากการตรวจไฟล์: `site/assets/og/*.png` จำนวน 28 ไฟล์ · ขนาดของทุกไฟล์ `(1200, 630)` และโหมด `RGB`
++
++## 3 · ตรวจการ์ด OG ทั้ง 28 ใบด้วย Pillow
++
++Pillow เปิดและตรวจพิกเซลของการ์ดครบทั้ง 28 ใบ
++
++- ไม่พบข้อความหาย: ทุกใบมีพิกเซลตัวอักษรในพื้นที่หัวเรื่องและ footer
++- ไม่พบตัวอักษรล้นขอบ: bounding box ของหัวเรื่องที่ตรวจได้อยู่ในช่วง `x=45..571`, `y=143..339`; พื้นที่ข้อความเริ่มห่างขอบซ้ายอย่างน้อย 45 px และไม่ชนขอบขวา
++- footer พบครบทุกใบ โดย bounding box อยู่ที่ประมาณ `x=52..270`, `y=560..594`
++- รายการที่มีปัญหา: ไม่มี
++
++## 4 · ฟอนต์ WOFF2
++
++พบและตรวจครบ 3 ไฟล์ที่ CSS อ้างถึง:
++
++- `site/assets/CormorantGaramond.woff2` · 37,792 bytes · HTTP 200
++- `site/assets/IBMPlexSansThaiLooped-Regular.woff2` · 28,808 bytes · HTTP 200
++- `site/assets/NotoSerifThai.woff2` · 123,888 bytes · HTTP 200
++
++ทั้ง `assets/design.css` และ `assets/site.css` มีการอ้างถึงฟอนต์ครบ 3 ไฟล์ · ไม่พบฟอนต์ที่อ้างถึงแล้วหาย
++
++## 5 · ไฟล์ที่ไม่ควร deploy
++
++- ไม่พบไฟล์ `.ttf` ใต้ `site/`
++- ไม่พบ `.ttf` ที่หลงเหลือจากการย้ายฟอนต์
++
++## 6 · ขนาดรวมและไฟล์เกิน 300 KB
++
++ขนาดรวม `site/`: **25,044,860 bytes** หรือประมาณ **23.88 MiB**
++
++ไฟล์ที่ยังใหญ่กว่า 300 KB:
++
++- `site/assets/leaflet/takuapa-walk-leaflet.pdf` · 7,932,489 bytes
++- `site/assets/municipal-map.png` · 1,864,594 bytes
++- `site/assets/municipal-map.webp` · 533,496 bytes
++- `site/assets/leaflet/leaflet-page-1.webp` · 387,768 bytes
++
++หมายเหตุ: รายการนี้เป็นผลตามขนาดไฟล์จริงใน `site/` ไม่ได้ตีความว่าเป็น bug โดยอัตโนมัติ
+
+codex
+ตรวจเสร็จแล้ว ไม่พบ regression ในขอบเขตที่กำหนด:
+
+- `src` หาย: ไม่มี
+- OG 28 ใบ: มีจริง ขนาด `1200×630` ครบ และไม่พบข้อความล้น/หาย
+- ฟอนต์ WOFF2: โหลด HTTP 200 ครบ 3 ไฟล์
+- `.ttf` ใน `site/`: ไม่มี
+- ขนาดรวม `site/`: 25,044,860 bytes
+- ไฟล์เกิน 300 KB: 4 ไฟล์
+
+รายงาน: [audit/a3-regress-assets.md](/D:/Siwaracafeweb/output/web/takuapa101-v1/audit/a3-regress-assets.md)
+diff --git a/output/web/takuapa101-v1/audit/a3-regress-assets.md b/output/web/takuapa101-v1/audit/a3-regress-assets.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..0078c6605b8563af7859fcf9d0c4efac2e1b8ac4
+--- /dev/null
++++ b/output/web/takuapa101-v1/audit/a3-regress-assets.md
+@@ -0,0 +1,60 @@
++# A3 · ตรวจ regression ของภาพและ asset หลังบีบขนาด
++
++ตรวจเมื่อ 2026-09-08 · เสิร์ฟด้วย `python -m http.server 8798 --directory site` ที่ `http://127.0.0.1:8798`
++
++## สรุป
++
++ตรวจแล้วไม่พบปัญหาใหม่ในขอบเขตนี้
++
++## 1 · `src` ใน HTML
++
++- ตรวจ HTML ทั้งหมด 88 ไฟล์ และตรวจทุกค่า `src` ที่เป็น path ภายใน site
++- ไม่พบ path ที่ชี้ไปยังไฟล์ไม่มีอยู่จริง
++- รายการที่หาย: ไม่มี
++
++## 2 · `og:image`
++
++- พบ `og:image` 88 จุด จาก HTML 88 หน้า
++- มี URL การ์ดไม่ซ้ำ 28 ใบ
++- ทุก URL ชี้ไฟล์ที่มีอยู่จริง
++- Pillow เปิดอ่าน PNG ทั้ง 28 ใบได้ และทุกใบมีขนาด `1200 × 630 px`
++- รายการผิดปกติ: ไม่มี
++
++หลักฐานจากการตรวจไฟล์: `site/assets/og/*.png` จำนวน 28 ไฟล์ · ขนาดของทุกไฟล์ `(1200, 630)` และโหมด `RGB`
++
++## 3 · ตรวจการ์ด OG ทั้ง 28 ใบด้วย Pillow
++
++Pillow เปิดและตรวจพิกเซลของการ์ดครบทั้ง 28 ใบ
++
++- ไม่พบข้อความหาย: ทุกใบมีพิกเซลตัวอักษรในพื้นที่หัวเรื่องและ footer
++- ไม่พบตัวอักษรล้นขอบ: bounding box ของหัวเรื่องที่ตรวจได้อยู่ในช่วง `x=45..571`, `y=143..339`; พื้นที่ข้อความเริ่มห่างขอบซ้ายอย่างน้อย 45 px และไม่ชนขอบขวา
++- footer พบครบทุกใบ โดย bounding box อยู่ที่ประมาณ `x=52..270`, `y=560..594`
++- รายการที่มีปัญหา: ไม่มี
++
++## 4 · ฟอนต์ WOFF2
++
++พบและตรวจครบ 3 ไฟล์ที่ CSS อ้างถึง:
++
++- `site/assets/CormorantGaramond.woff2` · 37,792 bytes · HTTP 200
++- `site/assets/IBMPlexSansThaiLooped-Regular.woff2` · 28,808 bytes · HTTP 200
++- `site/assets/NotoSerifThai.woff2` · 123,888 bytes · HTTP 200
++
++ทั้ง `assets/design.css` และ `assets/site.css` มีการอ้างถึงฟอนต์ครบ 3 ไฟล์ · ไม่พบฟอนต์ที่อ้างถึงแล้วหาย
++
++## 5 · ไฟล์ที่ไม่ควร deploy
++
++- ไม่พบไฟล์ `.ttf` ใต้ `site/`
++- ไม่พบ `.ttf` ที่หลงเหลือจากการย้ายฟอนต์
++
++## 6 · ขนาดรวมและไฟล์เกิน 300 KB
++
++ขนาดรวม `site/`: **25,044,860 bytes** หรือประมาณ **23.88 MiB**
++
++ไฟล์ที่ยังใหญ่กว่า 300 KB:
++
++- `site/assets/leaflet/takuapa-walk-leaflet.pdf` · 7,932,489 bytes
++- `site/assets/municipal-map.png` · 1,864,594 bytes
++- `site/assets/municipal-map.webp` · 533,496 bytes
++- `site/assets/leaflet/leaflet-page-1.webp` · 387,768 bytes
++
++หมายเหตุ: รายการนี้เป็นผลตามขนาดไฟล์จริงใน `site/` ไม่ได้ตีความว่าเป็น bug โดยอัตโนมัติ
+
+tokens used
+72,500
