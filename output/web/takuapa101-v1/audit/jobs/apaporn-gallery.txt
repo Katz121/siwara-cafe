@@ -1,0 +1,50 @@
+งานแก้จริง (แก้ไฟล์ได้) · โฟลเดอร์งาน D:\Siwaracafeweb\output\web\takuapa101-v1
+
+# งาน: เพิ่มแกลเลอรีรูปในกระทู้ /stories/apaporn/
+
+กระทู้นี้แก่นคือ "โชว์อาภรณ์" แต่ตอนนี้หน้าแสดงรูปแค่ 3 ใบ
+ทั้งที่มีรูปพร้อมใช้ในทะเบียน 9 ใบ · ผู้อ่านควรได้เห็นงานครบ
+
+## รูปที่มีในทะเบียนแล้ว (`data/photo-registry.json` · `allowed_on` มี `apaporn`)
+- kuapapoh-charm-09.webp (ใช้เป็น hero แล้ว)
+- kuapapoh-charm-kebaya-pink.webp (ใช้ในหัวข้อ 2 แล้ว)
+- kuapapoh-expo-corner.webp (ใช้ในหัวข้อ 3 แล้ว)
+- kuapapoh-charm-kebaya-green.webp  ← ยังไม่ได้ใช้
+- kuapapoh-charm-lace-white.webp    ← ยังไม่ได้ใช้
+- kuapapoh-charm-09-wall.webp       ← ยังไม่ได้ใช้
+- kuapapoh-expo-wall.webp           ← ยังไม่ได้ใช้
+- kuapapoh-expo-shelf.webp          ← ยังไม่ได้ใช้
+- kuapapoh-artist-card.webp         ← ยังไม่ได้ใช้
+
+## สิ่งที่ต้องทำ
+1. เพิ่ม field ใหม่ `gallery` ให้ story รองรับ · เป็น list ของชื่อไฟล์เท่านั้น
+   ตัวอย่างใน `data/stories/apaporn.json`
+   ```
+   "gallery": {
+     "heading_th": "...",
+     "files": ["/assets/photos/kuapapoh-charm-kebaya-green.webp", ...]
+   }
+   ```
+2. เขียนตัวเรนเดอร์ใน `stories.py` วางแกลเลอรีไว้ **หลัง section สุดท้าย
+   แต่ก่อนกล่องหลักฐานและรายการแหล่งอ้างอิง**
+   - ต้องเรียกผ่าน `photo_for(story_id, file)` เหมือนรูปอื่น ถ้าไม่ผ่านทะเบียนให้ข้าม
+   - **คำบรรยายและ alt ต้องมาจาก `registry_caption()` เท่านั้น ห้ามเขียนใหม่**
+     (นี่คือกฎที่เจ้าของเว็บย้ำมากที่สุด)
+   - ใส่ `loading="lazy"` และ `width`/`height` จากขนาดไฟล์จริง (อ่านด้วย Pillow)
+   - เลย์เอาต์ grid ที่มือถืออ่านได้ · เขียน CSS ต่อท้าย `site/assets/ui.css`
+     ให้เข้ากับสไตล์เดิมของเว็บ (ดูคลาส story-* ที่มีอยู่)
+     **ห้ามล้นแนวนอนที่ 390px**
+3. ใส่รูป 6 ใบที่ยังไม่ได้ใช้ลงแกลเลอรีใน `data/stories/apaporn.json`
+   `heading_th` ให้ตั้งชื่อที่ตรงกับสิ่งที่อยู่ในรูป เช่นแยกเป็นชุดผลงานกับบรรยากาศงาน
+   ถ้าจะแยกเป็นสองแกลเลอรีก็ได้ ให้ `gallery` เป็น list ของ object
+4. รัน `python build_site.py` และ `python build_en.py`
+5. รัน `python audit/regress.py` · **ต้องขึ้น "ผ่านทุกข้อ"**
+   ชุดตรวจคาดจำนวนหน้าไว้ 88 · ตอนนี้มี 90 (45+45) ให้แก้ตัวเลขในชุดตรวจให้ตรงความจริง
+6. เติมคำแปลอังกฤษที่ขาดใน `data/i18n/en/ui.json` ให้หน้า `/en/stories/apaporn/`
+   ไม่มีภาษาไทยตกค้างในหัวข้อและคำบรรยาย
+7. เขียนสรุปที่ `audit/fix-apaporn-gallery.md`
+
+## กฎ
+- ใช้ `·` **ห้าม em-dash หรือ en-dash**
+- ห้ามแตะ `data/photo-registry.json` (ทะเบียนถูกต้องแล้ว)
+- ห้ามเปลี่ยนเนื้อความย่อหน้าเดิมในกระทู้

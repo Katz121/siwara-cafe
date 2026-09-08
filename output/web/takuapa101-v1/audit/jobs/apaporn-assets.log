@@ -1,0 +1,1095 @@
+OpenAI Codex v0.153.4
+--------
+workdir: D:\Siwaracafeweb\output\web\takuapa101-v1
+model: gpt-5.6-luna
+provider: openai
+approval: never
+sandbox: danger-full-access
+reasoning effort: low
+reasoning summaries: none
+session id: 01a08215-fbbb-7822-b7c9-1c54e379599d
+--------
+user
+งานแก้จริง (แก้ไฟล์ได้) · โฟลเดอร์งาน D:\Siwaracafeweb\output\web\takuapa101-v1
+
+# งาน: เตรียมรูปสำหรับกระทู้ใหม่ "อาภรณ์" ของกั่วป่าโพ้
+
+ต้นทางรูปอยู่ที่ `D:\Takuapa\images\event\`
+
+## กฎเหล็กของเว็บนี้ (ห้ามฝ่าฝืน)
+`data/photo-registry.json` คือทะเบียนกลาง · รูปหนึ่งใบขึ้นได้เฉพาะหน้าที่มันเป็น
+ภาพของสิ่งนั้นจริง และคำบรรยายต้องมาจากทะเบียนเท่านั้น **ห้ามเขียนคำบรรยายใหม่
+ให้เข้ากับหัวข้อที่จะวาง** · อ่านโครงสร้างไฟล์เดิมก่อนแล้วทำตามรูปแบบเดิมทุก field
+
+## ตารางรูป · ชื่อไฟล์ปลายทางและคำบรรยาย (ล็อกแล้ว ห้ามเปลี่ยน)
+คำบรรยายด้านล่างเป็นผลจากการเปิดดูภาพจริงทีละใบ ให้ใช้ตามนี้ตรงตัว
+
+| ต้นทาง | ปลายทางใน site/assets/photos/ | depicts_th / caption_th |
+|---|---|---|
+| artwork-1.webp | kuapapoh-charm-09.webp | ภาพเขียน Peranakan Charm No.9 · หญิงสาวสวมเสื้อครุยสีฟ้าปักดิ้นทอง ติดเข็มกลัดโกสัง สวมกำไลทอง ท่ามกลางดอกโบตั๋นและผีเสื้อ |
+| artwork-2.webp | kuapapoh-charm-kebaya-pink.webp | ภาพเขียนหญิงสาวสวมเสื้อเคบายาสีชมพูปักลายดอก ติดเข็มกลัดโกสังทองสามชิ้นเรียงกลางอก พื้นหลังสีน้ำเงินและดอกกุหลาบ |
+| artwork-3.webp | kuapapoh-charm-kebaya-green.webp | ภาพเขียนหญิงสาวถักเปีย สวมเสื้อเคบายาสีเขียวน้ำทะเลปักลายดอกกุหลาบ พื้นหลังสีเหลืองทองกับดอกโบตั๋น |
+| artwork-4.webp | kuapapoh-charm-lace-white.webp | ภาพเขียนหญิงสาวสวมเสื้อลูกไม้ฉลุสีขาว นุ่งผ้าปาเต๊ะลายดอก ถือปิ่นโตลงรัก พื้นหลังสีเขียวมรกตลายผ้าปาเต๊ะ |
+| gallery-1.webp | kuapapoh-expo-corner.webp | มุมแรกของนิทรรศการที่ 78 สตูดิโอ · ป้ายประวัติศิลปินบนขาตั้ง กับผลงานที่แขวนบนชั้นไม้เก่า |
+| gallery-3.webp | kuapapoh-charm-09-wall.webp | ภาพเขียน Peranakan Charm No.9 แขวนอยู่บนชั้นไม้ในนิทรรศการ พร้อมป้ายกำกับขนาดผลงาน |
+| gallery-2.webp | kuapapoh-expo-wall.webp | ผนังผลงานชุดใหญ่ริมทางเดินในนิทรรศการ |
+| gallery-5.webp | kuapapoh-expo-shelf.webp | ผลงานในกรอบทองวางบนชั้นไม้เก่าในนิทรรศการ |
+| event/artist-card.webp | kuapapoh-artist-card.webp | การ์ดประวัติศิลปิน About the Artist ของนิทรรศการ มนต์เสน่ห์เปอรานากัน |
+
+`caption_en` ให้แปลจาก `caption_th` เป็นอังกฤษที่อ่านลื่น ไม่ใช่แปลตรงตัว
+
+## ค่าอื่นในทะเบียน
+- `credit`: `ช่างป๋อง · ติณณภพ งานสถิร` สำหรับภาพเขียนสี่ใบแรก
+  ส่วนภาพบรรยากาศงานและการ์ดศิลปิน ใช้ `โครงการกั่วป่าโพ้ จีโชว์เมือง`
+- `license`: `ได้รับอนุญาตจากโครงการกั่วป่าโพ้`
+- `era`: `now`
+- `allowed_on`: ทุกใบให้ใส่ `/stories/apaporn/` · เฉพาะ kuapapoh-charm-09.webp
+  ให้ใส่ `/stories/kuapapoh/` เพิ่มด้วย
+
+## สิ่งที่ต้องทำ
+1. คัดลอกและแปลงรูปตามตาราง ลงที่ `site/assets/photos/`
+   ด้านยาวสุดไม่เกิน 1400px · WebP คุณภาพ 80 · ใช้ Pillow
+2. เพิ่มระเบียนใหม่ลง `data/photo-registry.json` ตามรูปแบบเดิมของไฟล์
+3. สร้างการ์ดแชร์ (OG) สำหรับหน้า `/stories/apaporn/` โดยดูวิธีจาก `make_og.py`
+   ใช้ `kuapapoh-charm-09.webp` เป็นภาพประกอบ · ขนาด 1200x630
+   **ตัดคำไทยด้วย pythainlp ตามที่ make_og.py ทำอยู่แล้ว ห้ามตัดตามตัวอักษร**
+4. ตรวจปิดงาน
+   - ไฟล์ปลายทางครบ 9 ไฟล์ ขนาดไม่เกิน 400KB ต่อไฟล์
+   - `python -c "import json;json.load(open('data/photo-registry.json',encoding='utf-8'))"` ผ่าน
+   - ไม่แตะระเบียนเดิมที่มีอยู่แล้ว
+5. เขียนสรุปที่ `audit/fix-apaporn-assets.md`
+
+**ห้ามแก้ `stories.py`, `build_site.py`, `design.py` หรือไฟล์ใน `data/stories/`**
+มี codex อีกตัวทำงานกับไฟล์เหล่านั้นพร้อมกันอยู่
+
+codex
+ผมจะตรวจโครงสร้างทะเบียนและสคริปต์ OG ก่อน จากนั้นคัดลอก/แปลงรูปด้วย Pillow เพิ่มเฉพาะระเบียนใหม่ สร้างการ์ดแชร์ และรันชุดตรวจปิดงานโดยไม่แตะไฟล์ที่ห้ามแก้ครับ
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-ChildItem -Force; Write-Output '--- registry head ---'; Get-Content data/photo-registry.json -TotalCount 80; Write-Output '--- make_og files ---'; rg --files -g 'make_og.py' -g '*og*' -g 'site/assets*' | Select-Object -First 50" in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 379ms:
+
+
+    Directory: D:\Siwaracafeweb\output\web\takuapa101-v1
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+d-----          9/7/2026  12:05 PM                .wrangler                                                            
+d-----          9/7/2026   3:20 AM                archive                                                              
+d-----          9/8/2026   9:16 PM                audit                                                                
+d-----          9/7/2026  10:27 PM                brand                                                                
+d-----          9/7/2026  12:43 PM                briefs                                                               
+d-----          9/8/2026   6:09 PM                data                                                                 
+d-----          9/8/2026   6:09 PM                fonts-src                                                            
+d-----          9/8/2026   5:04 PM                qa                                                                   
+d-----          9/7/2026  11:58 AM                research                                                             
+d-----          9/8/2026   5:15 PM                router                                                               
+d-----          9/7/2026   1:53 PM                scratch                                                              
+d-----          9/8/2026   5:51 PM                site                                                                 
+d-----          9/7/2026   3:06 PM                worker                                                               
+d-----          9/7/2026   3:35 PM                _agy                                                                 
+d-----          9/8/2026   9:49 PM                __pycache__                                                          
+-a----          9/8/2026   5:28 PM             32 .indexnow_key                                                        
+-a----          9/7/2026  11:34 AM           6034 append_css.py                                                        
+-a----          9/7/2026  12:15 PM           3139 apply_photo_registry.py                                              
+-a----          9/8/2026   6:00 PM          25729 build_city.py                                                        
+-a----          9/8/2026   8:55 PM          21208 build_en.py                                                          
+-a----          9/8/2026   6:00 PM          24960 build_kuapapoh_story.py                                              
+-a----          9/7/2026   1:18 PM          26587 build_part6.py                                                       
+-a----          9/8/2026   9:10 PM          50781 build_site.py                                                        
+-a----          9/7/2026  11:24 AM          98420 city-places.json                                                     
+-a----          9/7/2026   1:54 PM          20154 clean_extract.json                                                   
+-a----          9/8/2026   6:10 PM           1300 dead_sources.py                                                      
+-a----          9/7/2026  11:50 AM           4540 DEPLOY.md                                                            
+-a----          9/8/2026   9:10 PM          46212 design.py                                                            
+-a----          9/7/2026  11:29 AM           1050 dump.py                                                              
+-a----          9/7/2026  11:29 AM           6108 dump.txt                                                             
+-a----          9/7/2026  11:27 AM            653 extract.py                                                           
+-a----          9/7/2026  11:26 AM              0 extract_output.txt                                                   
+-a----          9/7/2026  11:27 AM          46628 extract_output2.txt                                                  
+-a----          9/7/2026  11:26 AM          31012 extract_text.txt                                                     
+-a----          9/7/2026  11:15 AM           7392 fetch_cc_photos.py                                                   
+-a----          9/7/2026   1:20 PM          89771 filtered_places.json                                                 
+-a----          9/7/2026   3:51 PM           1199 finish_en.sh                                                         
+-a----          9/7/2026   1:22 PM           8057 food_center_unknowns.txt                                             
+-a----          9/8/2026   6:00 PM          31278 gen_story.py                                                         
+-a----          9/7/2026  12:23 PM           7761 geocode.py                                                           
+-a----          9/7/2026  12:27 PM           5055 geocode2.py                                                          
+-a----          9/7/2026  12:50 PM           1414 i18n.py                                                              
+-a----          9/7/2026  11:26 AM           2276 ids.txt                                                              
+-a----          9/7/2026  11:27 AM          19158 iron_bridge.md                                                       
+-a----          9/7/2026  11:26 AM            229 list_ids.py                                                          
+-a----          9/8/2026   5:24 PM           2612 list_pages.py                                                        
+-a----          9/7/2026  11:33 AM           2394 make_calendar.py                                                     
+-a----          9/7/2026  11:27 AM           2944 make_feeds.py                                                        
+-a----          9/8/2026   5:57 PM           3449 make_map_data.py                                                     
+-a----          9/8/2026   6:16 PM           2486 make_og.py                                                           
+-a----          9/7/2026   2:01 PM           4798 merge_guide.py                                                       
+-a----          9/7/2026  10:23 AM           7861 merge_research.py                                                    
+-a----          9/7/2026  12:07 PM           5722 merge_shops.py                                                       
+-a----          9/8/2026   6:15 PM           2798 optimize_assets.py                                                   
+-a----          9/7/2026  11:33 AM           4970 patch.py                                                             
+-a----          9/7/2026  11:24 AM         181823 places_arch.json                                                     
+-a----          9/7/2026  11:25 AM         125958 places_dump.json                                                     
+-a----          9/7/2026  11:26 AM          66671 places_summary.json                                                  
+-a----          9/7/2026  11:27 AM          60333 places_summary_compact.json                                          
+-a----          9/7/2026  11:27 AM          66671 places_summary_compact.txt                                           
+-a----          9/7/2026  11:26 AM         122685 places_text.txt                                                      
+-a----          9/8/2026   8:52 PM          13067 place_pages.py                                                       
+-a----          9/6/2026   8:21 PM            882 prepare_assets.py                                                    
+-a----          9/7/2026  10:27 AM           1102 preview_site.py                                                      
+-a----          9/7/2026  10:30 AM           4299 README.md                                                            
+-a----          9/7/2026  12:44 PM           8267 run_agy_queue.py                                                     
+-a----          9/7/2026   1:45 PM           4357 run_en_details.py                                                    
+-a----          9/7/2026   3:51 PM           5546 run_en_missing.py                                                    
+-a----          9/7/2026   1:05 PM           4420 run_en_places.py                                                     
+-a----          9/7/2026   1:38 PM           7364 run_en_rest.py                                                       
+-a----          9/7/2026  11:35 AM            893 run_rest.log                                                         
+-a----          9/7/2026  11:30 AM           1528 run_rest.py                                                          
+-a----          9/7/2026  11:31 AM            130 run_stories.log                                                      
+-a----          9/7/2026  11:24 AM           1445 run_story_agy.py                                                     
+-a----          9/7/2026   1:46 PM          93076 scratch.json                                                         
+-a----          9/7/2026   1:47 PM          15236 scratch2.json                                                        
+-a----          9/7/2026  11:26 AM          98420 scratch_city_places.json                                             
+-a----          9/7/2026  11:26 AM            182 scratch_city_places.txt                                              
+-a----          9/7/2026   1:16 PM         124697 scratch_extract.json                                                 
+-a----          9/7/2026   5:57 PM          37490 scratch_gen.py                                                       
+-a----          9/7/2026   1:42 PM            894 scratch_keys.txt                                                     
+-a----          9/7/2026   1:16 PM          52601 scratch_th_texts.json                                                
+-a----          9/8/2026   9:49 PM           8272 seo.py                                                               
+-a----          9/7/2026   8:28 AM           3971 SEO_AUDIT.md                                                         
+-a----          9/8/2026   5:19 PM            904 seo_config.py                                                        
+-a----          9/8/2026   8:49 PM          37198 stories.py                                                           
+-a----          9/7/2026  11:25 AM         182762 temp2.json                                                           
+-a----          9/7/2026   1:54 PM         102837 temp_extract.json                                                    
+-a----          9/7/2026  11:25 AM         251922 temp_water_trade_places.json                                         
+-a----          9/8/2026   8:47 PM           1106 test_translate_attrs.py                                              
+-a----          9/7/2026   8:30 AM           7919 tmp_events.json                                                      
+-a----          9/7/2026   1:20 PM          53681 to_translate.json                                                    
+-a----          9/7/2026   1:20 PM              0 to_translate.txt                                                     
+-a----          9/7/2026  10:41 AM           4106 validate_phase3.py                                                   
+-a----          9/7/2026  10:28 AM          10976 validate_redesign.py                                                 
+-a----          9/7/2026  10:31 AM           2461 validate_seo.py                                                      
+-a----          9/7/2026   3:20 AM            224 validate_site.py                                                     
+-a----          9/7/2026  11:29 AM            648 verify.py                                                            
+-a----          9/8/2026   6:00 PM          20367 write_arch.py                                                        
+-a----          9/7/2026   6:12 PM          22821 write_json.py                                                        
+-a----          9/7/2026  11:33 AM           2773 _agy_kuapapoh.log                                                    
+-a----          9/7/2026  11:35 AM             48 _agy_render.log                                                      
+--- registry head ---
+{
+  "policy_th": "à¸£à¸¹à¸›à¸«à¸™à¸¶à¹ˆà¸‡à¹ƒà¸šà¹ƒà¸Šà¹‰à¹„à¸”à¹‰à¹€à¸‰à¸žà¸²à¸°à¸—à¸µà¹ˆà¸—à¸µà¹ˆà¸¡à¸±à¸™à¹€à¸›à¹‡à¸™à¸ à¸²à¸žà¸‚à¸­à¸‡à¸ªà¸´à¹ˆà¸‡à¸™à¸±à¹‰à¸™à¸ˆà¸£à¸´à¸‡ Â· à¸„à¸³à¸šà¸£à¸£à¸¢à¸²à¸¢à¸¡à¸²à¸ˆà¸²à¸à¸£à¸²à¸¢à¸à¸²à¸£à¸™à¸µà¹‰à¹€à¸—à¹ˆà¸²à¸™à¸±à¹‰à¸™ à¸«à¹‰à¸²à¸¡à¹€à¸‚à¸µà¸¢à¸™à¹ƒà¸«à¸¡à¹ˆà¹ƒà¸«à¹‰à¹€à¸‚à¹‰à¸²à¸à¸±à¸šà¸«à¸±à¸§à¸‚à¹‰à¸­à¸—à¸µà¹ˆà¸ˆà¸°à¸§à¸²à¸‡ Â· à¸–à¹‰à¸²à¹„à¸¡à¹ˆà¸¡à¸µà¸£à¸¹à¸›à¸—à¸µà¹ˆà¸•à¸£à¸‡à¹€à¸£à¸·à¹ˆà¸­à¸‡ à¹ƒà¸«à¹‰à¹ƒà¸Šà¹‰à¸ à¸²à¸žà¸§à¸²à¸”à¸‚à¸­à¸‡à¸ªà¸–à¸²à¸™à¸—à¸µà¹ˆà¸™à¸±à¹‰à¸™ à¸«à¸£à¸·à¸­à¹„à¸¡à¹ˆà¸•à¹‰à¸­à¸‡à¸¡à¸µà¸£à¸¹à¸› à¸«à¹‰à¸²à¸¡à¸«à¸²à¸£à¸¹à¸›à¸à¸¥à¸²à¸‡ à¹† à¸¡à¸²à¸–à¸¡",
+  "reviewed_on": "2026-09-07",
+  "photos": [
+    {
+      "file": "/assets/photos/tao-ming-school.jpg",
+      "depicts_th": "à¸­à¸²à¸„à¸²à¸£à¹‚à¸£à¸‡à¹€à¸£à¸µà¸¢à¸™à¹€à¸•à¹‰à¸²à¸«à¸¡à¸´à¸‡ à¸–à¹ˆà¸²à¸¢à¸ˆà¸²à¸à¸”à¹‰à¸²à¸™à¸«à¸™à¹‰à¸²à¹€à¸•à¹‡à¸¡à¸­à¸²à¸„à¸²à¸£",
+      "caption_th": "à¸­à¸²à¸„à¸²à¸£à¹‚à¸£à¸‡à¹€à¸£à¸µà¸¢à¸™à¹€à¸•à¹‰à¸²à¸«à¸¡à¸´à¸‡ à¸–à¸™à¸™à¸ªà¸²à¸¢à¸§à¸±à¸’à¸™à¸˜à¸£à¸£à¸¡à¹€à¸¡à¸·à¸­à¸‡à¹€à¸à¹ˆà¸²à¸•à¸°à¸à¸±à¹ˆà¸§à¸›à¹ˆà¸²",
+      "allowed_on": [
+        "tao-ming",
+        "architecture",
+        "kuapapoh"
+      ],
+      "era": "current",
+      "credit": "à¸„à¸¥à¸±à¸‡à¸ à¸²à¸žà¹‚à¸„à¸£à¸‡à¸à¸²à¸£à¸à¸±à¹ˆà¸§à¸›à¹ˆà¸²à¹‚à¸žà¹‰",
+      "license": "à¹ƒà¸Šà¹‰à¹ƒà¸™à¹€à¸§à¹‡à¸šà¸™à¸µà¹‰à¹„à¸”à¹‰",
+      "caption_en": "Tao Ming School seen from the front, on the old town culture street",
+      "credit_en": "Kuapapoh project archive",
+      "license_en": "Cleared for use on this site"
+    },
+    {
+      "file": "/assets/photos/tao-ming-logo.jpg",
+      "depicts_th": "à¸•à¸£à¸²à¸ªà¸±à¸à¸¥à¸±à¸à¸©à¸“à¹Œà¸‚à¸­à¸‡à¹‚à¸£à¸‡à¹€à¸£à¸µà¸¢à¸™à¹€à¸•à¹‰à¸²à¸«à¸¡à¸´à¸‡",
+      "caption_th": "à¸•à¸£à¸²à¹‚à¸£à¸‡à¹€à¸£à¸µà¸¢à¸™à¹€à¸•à¹‰à¸²à¸«à¸¡à¸´à¸‡",
+      "allowed_on": [
+        "tao-ming"
+      ],
+      "era": "archive",
+      "credit": "à¸„à¸¥à¸±à¸‡à¸ à¸²à¸žà¹‚à¸„à¸£à¸‡à¸à¸²à¸£à¸à¸±à¹ˆà¸§à¸›à¹ˆà¸²à¹‚à¸žà¹‰",
+      "license": "à¹ƒà¸Šà¹‰à¹ƒà¸™à¹€à¸§à¹‡à¸šà¸™à¸µà¹‰à¹„à¸”à¹‰",
+      "caption_en": "The Tao Ming School emblem",
+      "credit_en": "Kuapapoh project archive",
+      "license_en": "Cleared for use on this site"
+    },
+    {
+      "file": "/assets/photos/shophouse-78.webp",
+      "depicts_th": "à¸•à¸¶à¸à¹à¸–à¸§à¹€à¸¥à¸‚à¸—à¸µà¹ˆ 78 à¸šà¸™à¸–à¸™à¸™à¸ªà¸²à¸¢à¸§à¸±à¸’à¸™à¸˜à¸£à¸£à¸¡",
+      "caption_th": "à¸•à¸¶à¸à¹à¸–à¸§à¹€à¸¥à¸‚à¸—à¸µà¹ˆ 78 à¸šà¸™à¸–à¸™à¸™à¸ªà¸²à¸¢à¸§à¸±à¸’à¸™à¸˜à¸£à¸£à¸¡à¹€à¸¡à¸·à¸­à¸‡à¹€à¸à¹ˆà¸²à¸•à¸°à¸à¸±à¹ˆà¸§à¸›à¹ˆà¸²",
+      "allowed_on": [
+        "architecture"
+      ],
+      "era": "current",
+      "credit": "à¸„à¸¥à¸±à¸‡à¸ à¸²à¸žà¹‚à¸„à¸£à¸‡à¸à¸²à¸£à¸à¸±à¹ˆà¸§à¸›à¹ˆà¸²à¹‚à¸žà¹‰",
+      "license": "à¹ƒà¸Šà¹‰à¹ƒà¸™à¹€à¸§à¹‡à¸šà¸™à¸µà¹‰à¹„à¸”à¹‰",
+      "caption_en": "Shophouse number 78 on the old town culture street",
+      "credit_en": "Kuapapoh project archive",
+      "license_en": "Cleared for use on this site"
+    },
+    {
+      "file": "/assets/photos/shophouse-109.webp",
+      "depicts_th": "à¸•à¸¶à¸à¹à¸–à¸§à¹€à¸¥à¸‚à¸—à¸µà¹ˆ 109 à¸šà¸™à¸–à¸™à¸™à¸ªà¸²à¸¢à¸§à¸±à¸’à¸™à¸˜à¸£à¸£à¸¡",
+      "caption_th": "à¸•à¸¶à¸à¹à¸–à¸§à¹€à¸¥à¸‚à¸—à¸µà¹ˆ 109 à¸šà¸™à¸–à¸™à¸™à¸ªà¸²à¸¢à¸§à¸±à¸’à¸™à¸˜à¸£à¸£à¸¡à¹€à¸¡à¸·à¸­à¸‡à¹€à¸à¹ˆà¸²à¸•à¸°à¸à¸±à¹ˆà¸§à¸›à¹ˆà¸²",
+      "allowed_on": [
+        "kuapapoh"
+      ],
+      "era": "current",
+      "credit": "à¸„à¸¥à¸±à¸‡à¸ à¸²à¸žà¹‚à¸„à¸£à¸‡à¸à¸²à¸£à¸à¸±à¹ˆà¸§à¸›à¹ˆà¸²à¹‚à¸žà¹‰",
+      "license": "à¹ƒà¸Šà¹‰à¹ƒà¸™à¹€à¸§à¹‡à¸šà¸™à¸µà¹‰à¹„à¸”à¹‰",
+      "caption_en": "Shophouse number 109 on the old town culture street",
+      "credit_en": "Kuapapoh project archive",
+      "license_en": "Cleared for use on this site"
+    },
+    {
+      "file": "/assets/photos/shophouse-305.webp",
+      "depicts_th": "à¸•à¸¶à¸à¹à¸–à¸§à¹€à¸¥à¸‚à¸—à¸µà¹ˆ 305 à¸šà¸™à¸–à¸™à¸™à¸ªà¸²à¸¢à¸§à¸±à¸’à¸™à¸˜à¸£à¸£à¸¡",
+      "caption_th": "à¸•à¸¶à¸à¹à¸–à¸§à¹€à¸¥à¸‚à¸—à¸µà¹ˆ 305 à¸šà¸™à¸–à¸™à¸™à¸ªà¸²à¸¢à¸§à¸±à¸’à¸™à¸˜à¸£à¸£à¸¡à¹€à¸¡à¸·à¸­à¸‡à¹€à¸à¹ˆà¸²à¸•à¸°à¸à¸±à¹ˆà¸§à¸›à¹ˆà¸²",
+      "allowed_on": [
+        "culture-street"
+      ],
+      "era": "current",
+      "credit": "à¸„à¸¥à¸±à¸‡à¸ à¸²à¸žà¹‚à¸„à¸£à¸‡à¸à¸²à¸£à¸à¸±à¹ˆà¸§à¸›à¹ˆà¸²à¹‚à¸žà¹‰",
+      "license": "à¹ƒà¸Šà¹‰à¹ƒà¸™à¹€à¸§à¹‡à¸šà¸™à¸µà¹‰à¹„à¸”à¹‰",
+      "caption_en": "Shophouse number 305 on the old town culture street",
+      "credit_en": "Kuapapoh project archive",
+      "license_en": "Cleared for use on this site"
+    },
+    {
+      "file": "/assets/photos/kuapapoh-port.webp",
+      "depicts_th": "à¸ à¸²à¸žà¹€à¸à¹ˆà¸²à¸‚à¸²à¸§à¸”à¸³ à¹€à¸£à¸·à¸­à¸«à¸¥à¸²à¸¢à¸¥à¸³à¸ˆà¸­à¸”à¸—à¸µà¹ˆà¸—à¹ˆà¸²à¸™à¹‰à¸³ à¸¡à¸µà¹€à¸£à¸·à¸­à¹ƒà¸šà¹à¸¥à¸°à¹€à¸žà¸´à¸‡à¸£à¸´à¸¡à¸™à¹‰à¸³",
+      "caption_th": "à¸ à¸²à¸žà¹€à¸à¹ˆà¸² à¹€à¸£à¸·à¸­à¸ˆà¸­à¸”à¸—à¸µà¹ˆà¸—à¹ˆà¸²à¸™à¹‰à¸³à¸•à¸°à¸à¸±à¹ˆà¸§à¸›à¹ˆà¸²",
+--- make_og files ---
+_agy_render.log
+_agy_kuapapoh.log
+_agy\wire-en.log
+_agy\then_logos.sh
+_agy\story-water-trade.log
+_agy\story-kuapapoh.log
+_agy\story-food-people.log
+_agy\story-city.log
+_agy\story-architecture.log
+_agy\shops.log
+_agy\shop-coords.log
+_agy\rest-page.log
+_agy\queue.log
+_agy\logos.log
+_agy\finish.log
+_agy\finish-nohup.log
+_agy\en-ui.log
+_agy\en-rest.log
+_agy\en-places.log
+_agy\en-places-batched.log
+_agy\en-missing.log
+_agy\en-details.log
+data\stories\water-trade.log
+data\stories\kuapapoh.log
+data\stories\city.log
+data\stories\architecture.log
+brand\_logo_prompt.txt
+brand\run_logo_agy.py
+brand\marks\river.log
+brand\marks\craft.log
+brand\marks\arch.log
+brand\logo-picker.png
+brand\logo-picker.html
+brand\logo-board.png
+brand\logo-board.html
+audit\a2-readth.log
+audit\a2-photo.log
+audit\a2-perf.log
+audit\a2-news.log
+audit\a2-jsrt.log
+audit\a2-enq.log
+audit\a2-data.log
+audit\a2-a11y.log
+audit\a3-regress-en.log
+audit\a3-regress-build.log
+audit\a3-regress-assets.log
+audit\a2-ux.log
+audit\a2-seo2.log
+audit\code-quality.log
+audit\a3-regress-th.log
+
+
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Content make_og.py; Write-Output '--- tail registry ---'; Get-Content data/photo-registry.json | Select-Object -Last 100; Write-Output '--- sources ---'; Get-ChildItem 'D:\\Takuapa\\images\\event' -File | Select-Object Name,Length; Write-Output '--- og dirs ---'; Get-ChildItem site -Recurse -File | Where-Object {"'$_.Name -match '"'og|share'} | Select-Object FullName,Length" in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 176ms:
+"""à¸ªà¸£à¹‰à¸²à¸‡à¸ à¸²à¸žà¹à¸šà¹ˆà¸‡à¸›à¸±à¸™à¸ˆà¸²à¸à¸ à¸²à¸žà¸›à¸£à¸°à¸à¸­à¸šà¹€à¸”à¸´à¸¡"""
+import json, sys
+from PIL import Image, ImageDraw, ImageFont, ImageOps
+from seo_config import ROOT
+sys.stdout.reconfigure(encoding='utf-8')
+
+FONT = ROOT/'fonts-src/IBMPlexSansThaiLooped-Regular.ttf'
+
+
+def wrap_thai(draw, text, font, width):
+    """à¸‚à¸¶à¹‰à¸™à¸šà¸£à¸£à¸—à¸±à¸”à¹ƒà¸«à¸¡à¹ˆà¸—à¸µà¹ˆà¸‚à¸­à¸šà¸„à¸³ Â· à¹„à¸—à¸¢à¹„à¸¡à¹ˆà¹€à¸§à¹‰à¸™à¸§à¸£à¸£à¸„à¸£à¸°à¸«à¸§à¹ˆà¸²à¸‡à¸„à¸³ à¸à¸²à¸£à¸•à¸±à¸”à¸•à¸²à¸¡à¸•à¸±à¸§à¸­à¸±à¸à¸©à¸£à¸ˆà¸°à¹„à¸”à¹‰ 'à¹€à¸¡à¸·à¸­/à¸‡à¹€à¸à¹ˆà¸²'"""
+    from pythainlp.tokenize import word_tokenize
+    words = word_tokenize(text, engine='newmm', keep_whitespace=True)
+    lines = ['']
+    for w in words:
+        if lines[-1] and draw.textlength(lines[-1] + w, font=font) > width:
+            lines.append(w.lstrip())
+        else:
+            lines[-1] += w
+    return [ln for ln in lines if ln.strip()] or ['']
+
+
+def main():
+    assets=ROOT/'site/assets';out=assets/'og';out.mkdir(exist_ok=True)
+    records=json.loads((ROOT/'data/places-enriched.json').read_text(encoding='utf-8'))
+    links=json.loads((ROOT/'data/links.json').read_text(encoding='utf-8'))
+    for r in records+[{'id':'default','name_th':'à¸„à¸¹à¹ˆà¸¡à¸·à¸­à¹€à¸¡à¸·à¸­à¸‡à¹€à¸à¹ˆà¸²à¸•à¸°à¸à¸±à¹ˆà¸§à¸›à¹ˆà¸²'}]:
+        image=Image.new('RGB',(1200,630),'#f6f1e7')
+        art_id=r['id'] if (assets/(r['id']+'.webp')).exists() else next(iter(links.get(r['id'],[])), 'tao-ming')
+        with Image.open(assets/(art_id+'.webp')) as source:
+            art=ImageOps.contain(source.convert('RGB'),(570,510))
+            image.paste(art,(615+(570-art.width)//2,(530-art.height)//2))
+        draw=ImageDraw.Draw(image)
+        name=r['name_th'].replace('â€”','Â·').replace('â€“','Â·')
+        size=52
+        while True:
+            font=ImageFont.truetype(str(FONT),size)
+            lines=wrap_thai(draw,name,font,530)
+            if len(lines)<=4 or size<=30:break
+            size-=2
+        for i,line in enumerate(lines):draw.text((48,210-len(lines)*size//2+i*(size+22)),line,font=font,fill='#203f39')
+        draw.rectangle((0,530,1200,630),fill='#203f39')
+        draw.text((48,550),'à¸•à¸°à¸à¸±à¹ˆà¸§à¸›à¹ˆà¸² 101',font=ImageFont.truetype(str(FONT),40),fill='#f6f1e7')
+        image.save(out/(r['id']+'.png'))
+    print(f'à¸ªà¸£à¹‰à¸²à¸‡à¸ à¸²à¸ž OG {len(records)+1} à¸ à¸²à¸ž Â· 1200Ã—630')
+if __name__=='__main__':main()
+--- tail registry ---
+        "kuapapoh"
+      ],
+      "era": "current",
+      "credit": "à¹‚à¸„à¸£à¸‡à¸à¸²à¸£à¸à¸±à¹ˆà¸§à¸›à¹ˆà¸²à¹‚à¸žà¹‰",
+      "license": "à¹ƒà¸Šà¹‰à¹ƒà¸™à¹€à¸§à¹‡à¸šà¸™à¸µà¹‰à¹„à¸”à¹‰",
+      "caption_en": "A history sheet produced by the Kuapapoh project",
+      "credit_en": "Kuapapoh project",
+      "license_en": "Cleared for use on this site"
+    },
+    {
+      "file": "/assets/photos/kuapapoh-wuikun.jpg",
+      "depicts_th": "à¸‡à¸²à¸™à¸­à¸­à¸à¹à¸šà¸šà¸Šà¸¸à¸”à¸«à¸§à¸¸à¹ˆà¸¢à¸à¸¸à¹ˆà¸™à¸‚à¸­à¸‡à¹‚à¸„à¸£à¸‡à¸à¸²à¸£",
+      "caption_th": "à¸«à¸§à¸¸à¹ˆà¸¢à¸à¸¸à¹ˆà¸™ Â· à¸‡à¸²à¸™à¸­à¸­à¸à¹à¸šà¸šà¸‚à¸­à¸‡à¹‚à¸„à¸£à¸‡à¸à¸²à¸£à¸à¸±à¹ˆà¸§à¸›à¹ˆà¸²à¹‚à¸žà¹‰",
+      "allowed_on": [
+        "kuapapoh"
+      ],
+      "era": "current",
+      "credit": "à¹‚à¸„à¸£à¸‡à¸à¸²à¸£à¸à¸±à¹ˆà¸§à¸›à¹ˆà¸²à¹‚à¸žà¹‰",
+      "license": "à¹ƒà¸Šà¹‰à¹ƒà¸™à¹€à¸§à¹‡à¸šà¸™à¸µà¹‰à¹„à¸”à¹‰",
+      "caption_en": "Wui Kun, a design from the Kuapapoh project",
+      "credit_en": "Kuapapoh project",
+      "license_en": "Cleared for use on this site"
+    },
+    {
+      "file": "/assets/photos/kuapapoh-doc-1.jpg",
+      "depicts_th": "à¹€à¸­à¸à¸ªà¸²à¸£à¹€à¸à¹ˆà¸²à¸—à¸µà¹ˆà¹‚à¸„à¸£à¸‡à¸à¸²à¸£à¸£à¸§à¸šà¸£à¸§à¸¡à¹„à¸§à¹‰ à¹à¸œà¹ˆà¸™à¸—à¸µà¹ˆà¸«à¸™à¸¶à¹ˆà¸‡",
+      "caption_th": "à¹€à¸­à¸à¸ªà¸²à¸£à¹€à¸à¹ˆà¸²à¸‚à¸­à¸‡à¹€à¸¡à¸·à¸­à¸‡ à¸ˆà¸²à¸à¸„à¸¥à¸±à¸‡à¹‚à¸„à¸£à¸‡à¸à¸²à¸£à¸à¸±à¹ˆà¸§à¸›à¹ˆà¸²à¹‚à¸žà¹‰",
+      "allowed_on": [
+        "kuapapoh"
+      ],
+      "era": "archive",
+      "credit": "à¹‚à¸„à¸£à¸‡à¸à¸²à¸£à¸à¸±à¹ˆà¸§à¸›à¹ˆà¸²à¹‚à¸žà¹‰",
+      "license": "à¹ƒà¸Šà¹‰à¹ƒà¸™à¹€à¸§à¹‡à¸šà¸™à¸µà¹‰à¹„à¸”à¹‰",
+      "caption_en": "An old town document from the Kuapapoh archive",
+      "credit_en": "Kuapapoh project",
+      "license_en": "Cleared for use on this site"
+    },
+    {
+      "file": "/assets/photos/kuapapoh-doc-2.jpg",
+      "depicts_th": "à¹€à¸­à¸à¸ªà¸²à¸£à¹€à¸à¹ˆà¸²à¸—à¸µà¹ˆà¹‚à¸„à¸£à¸‡à¸à¸²à¸£à¸£à¸§à¸šà¸£à¸§à¸¡à¹„à¸§à¹‰ à¹à¸œà¹ˆà¸™à¸—à¸µà¹ˆà¸ªà¸­à¸‡",
+      "caption_th": "à¹€à¸­à¸à¸ªà¸²à¸£à¹€à¸à¹ˆà¸²à¸‚à¸­à¸‡à¹€à¸¡à¸·à¸­à¸‡ à¸ˆà¸²à¸à¸„à¸¥à¸±à¸‡à¹‚à¸„à¸£à¸‡à¸à¸²à¸£à¸à¸±à¹ˆà¸§à¸›à¹ˆà¸²à¹‚à¸žà¹‰",
+      "allowed_on": [
+        "kuapapoh"
+      ],
+      "era": "archive",
+      "credit": "à¹‚à¸„à¸£à¸‡à¸à¸²à¸£à¸à¸±à¹ˆà¸§à¸›à¹ˆà¸²à¹‚à¸žà¹‰",
+      "license": "à¹ƒà¸Šà¹‰à¹ƒà¸™à¹€à¸§à¹‡à¸šà¸™à¸µà¹‰à¹„à¸”à¹‰",
+      "caption_en": "An old town document from the Kuapapoh archive",
+      "credit_en": "Kuapapoh project",
+      "license_en": "Cleared for use on this site"
+    },
+    {
+      "file": "/assets/photos/kuapapoh-pattern.jpg",
+      "depicts_th": "à¸¥à¸²à¸¢à¸à¸£à¸°à¹€à¸šà¸·à¹‰à¸­à¸‡à¹à¸šà¸šà¹€à¸›à¸­à¸£à¸²à¸™à¸²à¸à¸±à¸™",
+      "caption_th": "à¸¥à¸²à¸¢à¸à¸£à¸°à¹€à¸šà¸·à¹‰à¸­à¸‡à¹€à¸›à¸­à¸£à¸²à¸™à¸²à¸à¸±à¸™à¸—à¸µà¹ˆà¸¢à¸±à¸‡à¹€à¸«à¹‡à¸™à¹„à¸”à¹‰à¹ƒà¸™à¹€à¸¡à¸·à¸­à¸‡à¹€à¸à¹ˆà¸²",
+      "allowed_on": [
+        "kuapapoh",
+        "architecture"
+      ],
+      "era": "current",
+      "credit": "à¹‚à¸„à¸£à¸‡à¸à¸²à¸£à¸à¸±à¹ˆà¸§à¸›à¹ˆà¸²à¹‚à¸žà¹‰",
+      "license": "à¹ƒà¸Šà¹‰à¹ƒà¸™à¹€à¸§à¹‡à¸šà¸™à¸µà¹‰à¹„à¸”à¹‰",
+      "caption_en": "Peranakan tile patterns still visible in the old town",
+      "credit_en": "Kuapapoh project",
+      "license_en": "Cleared for use on this site"
+    }
+  ],
+  "rejected": [
+    {
+      "files": [
+        "/assets/photos/cc/culture-street-1.webp",
+        "/assets/photos/cc/new-year-alms-2.webp",
+        "/assets/photos/cc/relic-procession-2.webp"
+      ],
+      "reason_th": "à¸ à¸²à¸žà¹€à¸”à¸µà¸¢à¸§à¸à¸±à¸™à¸ªà¸²à¸¡à¸Šà¸·à¹ˆà¸­ Â· à¹€à¸›à¹‡à¸™à¹à¸œà¸‡à¸‚à¸²à¸¢à¸‚à¹‰à¸²à¸§à¸«à¸¡à¸à¹„à¸à¹ˆà¸£à¸´à¸¡à¸–à¸™à¸™à¸à¸±à¸šà¸ªà¸²à¸¢à¹„à¸Ÿ à¹„à¸¡à¹ˆà¹ƒà¸Šà¹ˆà¸ à¸²à¸žà¸‚à¸­à¸‡à¸–à¸™à¸™à¸ªà¸²à¸¢à¸§à¸±à¸’à¸™à¸˜à¸£à¸£à¸¡ à¸•à¸±à¸à¸šà¸²à¸•à¸£à¸›à¸µà¹ƒà¸«à¸¡à¹ˆ à¸«à¸£à¸·à¸­à¸‚à¸šà¸§à¸™à¹à¸«à¹ˆà¸žà¸£à¸°à¸šà¸£à¸¡à¸ªà¸²à¸£à¸µà¸£à¸´à¸à¸˜à¸²à¸•à¸¸ à¸•à¸²à¸¡à¸—à¸µà¹ˆà¸•à¸±à¹‰à¸‡à¸Šà¸·à¹ˆà¸­à¹„à¸§à¹‰"
+    },
+    {
+      "files": [
+        "/assets/photos/cc/culture-street-2.webp"
+      ],
+      "reason_th": "à¹€à¸›à¹‡à¸™à¸ à¸²à¸žà¸Šà¸²à¸¢à¸«à¸²à¸”à¸¡à¸µà¹€à¸ªà¸²à¹„à¸¡à¹‰ à¹à¸•à¹ˆà¸–à¸¹à¸à¸•à¸±à¹‰à¸‡à¸„à¸³à¸šà¸£à¸£à¸¢à¸²à¸¢à¸§à¹ˆà¸²à¸–à¸™à¸™à¹€à¸žà¸Šà¸£à¹€à¸à¸©à¸¡"
+    },
+    {
+      "files": [
+        "/assets/photos/cc/relic-procession-1.webp",
+        "/assets/photos/cc/ruler-ceremony-1.webp"
+      ],
+      "reason_th": "à¸ à¸²à¸žà¹€à¸”à¸µà¸¢à¸§à¸à¸±à¸™à¸ªà¸­à¸‡à¸Šà¸·à¹ˆà¸­ Â· à¹€à¸›à¹‡à¸™à¸‹à¸¸à¹‰à¸¡à¸›à¸£à¸°à¸•à¸¹à¸§à¸±à¸”à¸–à¹ˆà¸²à¸¢à¸ˆà¸²à¸à¸–à¸™à¸™ à¸£à¸°à¸šà¸¸à¹„à¸¡à¹ˆà¹„à¸”à¹‰à¸§à¹ˆà¸²à¸§à¸±à¸”à¹„à¸«à¸™ à¹à¸¥à¸°à¹„à¸¡à¹ˆà¹ƒà¸Šà¹ˆà¸ à¸²à¸žà¸‚à¸­à¸‡à¸žà¸´à¸˜à¸µà¸šà¸§à¸‡à¸ªà¸£à¸§à¸‡à¸«à¸£à¸·à¸­à¸‚à¸šà¸§à¸™à¹à¸«à¹ˆ"
+    },
+    {
+      "files": [
+        "/assets/photos/cc/wat-kongkha-1.webp",
+        "/assets/photos/cc/phra-narai-1.webp",
+        "/assets/photos/cc/new-year-alms-1.webp",
+        "/assets/photos/cc/new-year-alms-3.webp"
+      ],
+      "reason_th": "à¹‚à¸«à¸¥à¸”à¹„à¸¡à¹ˆà¸ªà¸³à¹€à¸£à¹‡à¸ˆ à¸«à¸£à¸·à¸­à¸¢à¸·à¸™à¸¢à¸±à¸™à¹„à¸¡à¹ˆà¹„à¸”à¹‰à¸§à¹ˆà¸²à¹€à¸›à¹‡à¸™à¸ à¸²à¸žà¸‚à¸­à¸‡à¸ªà¸–à¸²à¸™à¸—à¸µà¹ˆà¸™à¸±à¹‰à¸™à¸ˆà¸£à¸´à¸‡"
+    }
+  ]
+}
+--- sources ---
+
+Name                 Length
+----                 ------
+artist-card.webp     270854
+artist-portrait.webp  97910
+artwork-1.webp       205342
+artwork-2.webp       258534
+artwork-3.webp       221154
+artwork-4.webp       202574
+gallery-1.webp       269254
+gallery-2.webp       326232
+gallery-3.webp       203916
+gallery-4.webp       301474
+gallery-5.webp       325084
+gallery-leaflet.webp 254180
+gallery-prints.webp  459150
+--- og dirs ---
+                      26885
+
+
+
+codex
+ตรวจแล้ว ทะเบียนเป็น JSON แบบมี `photos` และ `rejected` ตามรูปแบบเดิม และ `make_og.py` ใช้ `pythainlp.tokenize.word_tokenize(..., engine='newmm', keep_whitespace=True)` จริง ผมจะคงระเบียนเดิมทั้งหมด แล้วเพิ่ม 9 ระเบียนต่อท้ายรายการ `photos` พร้อมสร้าง OG แยกสำหรับ `apaporn` ครับ
+apply patch
+patch: completed
+D:\Siwaracafeweb\output\web\takuapa101-v1\scratch\prepare_apaporn.py
+diff --git a/output/web/takuapa101-v1/scratch/prepare_apaporn.py b/output/web/takuapa101-v1/scratch/prepare_apaporn.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..11e2ce781dca23c1ffe70147107b62d7bd7f6132
+--- /dev/null
++++ b/output/web/takuapa101-v1/scratch/prepare_apaporn.py
+@@ -0,0 +1,69 @@
++import json
++from pathlib import Path
++from PIL import Image, ImageDraw, ImageFont, ImageOps
++from pythainlp.tokenize import word_tokenize
++
++ROOT = Path(__file__).resolve().parents[1]
++SRC = Path(r'D:\Takuapa\images\event')
++DST = ROOT / 'site' / 'assets' / 'photos'
++
++items = [
++ ('artwork-1.webp','kuapapoh-charm-09.webp','ภาพเขียน Peranakan Charm No.9 · หญิงสาวสวมเสื้อครุยสีฟ้าปักดิ้นทอง ติดเข็มกลัดโกสัง สวมกำไลทอง ท่ามกลางดอกโบตั๋นและผีเสื้อ','Peranakan Charm No. 9 · A woman in a blue, gold-embroidered kebaya with a kosang brooch and gold bracelet, among peonies and butterflies.'),
++ ('artwork-2.webp','kuapapoh-charm-kebaya-pink.webp','ภาพเขียนหญิงสาวสวมเสื้อเคบายาสีชมพูปักลายดอก ติดเข็มกลัดโกสังทองสามชิ้นเรียงกลางอก พื้นหลังสีน้ำเงินและดอกกุหลาบ','A woman in a pink floral-embroidered kebaya, wearing three gold kosang brooches, against a blue background with roses.'),
++ ('artwork-3.webp','kuapapoh-charm-kebaya-green.webp','ภาพเขียนหญิงสาวถักเปีย สวมเสื้อเคบายาสีเขียวน้ำทะเลปักลายดอกกุหลาบ พื้นหลังสีเหลืองทองกับดอกโบตั๋น','A braided woman in a sea-green kebaya embroidered with roses, set against golden yellow and peonies.'),
++ ('artwork-4.webp','kuapapoh-charm-lace-white.webp','ภาพเขียนหญิงสาวสวมเสื้อลูกไม้ฉลุสีขาว นุ่งผ้าปาเต๊ะลายดอก ถือปิ่นโตลงรัก พื้นหลังสีเขียวมรกตลายผ้าปาเต๊ะ','A woman in a white cutwork lace blouse and floral batik sarong, holding a lacquered tiffin carrier, against emerald batik.'),
++ ('gallery-1.webp','kuapapoh-expo-corner.webp','มุมแรกของนิทรรศการที่ 78 สตูดิโอ · ป้ายประวัติศิลปินบนขาตั้ง กับผลงานที่แขวนบนชั้นไม้เก่า','The first corner of the exhibition at 78 Studio, with the artist biography on an easel and works hung on an old wooden shelf.'),
++ ('gallery-3.webp','kuapapoh-charm-09-wall.webp','ภาพเขียน Peranakan Charm No.9 แขวนอยู่บนชั้นไม้ในนิทรรศการ พร้อมป้ายกำกับขนาดผลงาน','Peranakan Charm No. 9 hanging on a wooden shelf in the exhibition, with a label showing the work’s dimensions.'),
++ ('gallery-2.webp','kuapapoh-expo-wall.webp','ผนังผลงานชุดใหญ่ริมทางเดินในนิทรรศการ','A wall of large works along the exhibition walkway.'),
++ ('gallery-5.webp','kuapapoh-expo-shelf.webp','ผลงานในกรอบทองวางบนชั้นไม้เก่าในนิทรรศการ','Gold-framed works displayed on an old wooden shelf in the exhibition.'),
++ ('artist-card.webp','kuapapoh-artist-card.webp','การ์ดประวัติศิลปิน About the Artist ของนิทรรศการ มนต์เสน่ห์เปอรานากัน','The exhibition’s About the Artist biography card for Peranakan Charm.'),
++]
++paint_credit = 'ช่างป๋อง · ติณณภพ งานสถิร'
++project_credit = 'โครงการกั่วป่าโพ้ จีโชว์เมือง'
++license = 'ได้รับอนุญาตจากโครงการกั่วป่าโพ้'
++
++DST.mkdir(parents=True, exist_ok=True)
++for src, name, _, _ in items:
++    with Image.open(SRC / src) as im:
++        im = im.convert('RGB')
++        im.thumbnail((1400, 1400), Image.Resampling.LANCZOS)
++        im.save(DST / name, 'WEBP', quality=80, method=6)
++
++registry_path = ROOT / 'data' / 'photo-registry.json'
++data = json.loads(registry_path.read_text(encoding='utf-8'))
++existing = {r['file'] for r in data['photos']}
++for src, name, th, en in items:
++    path = '/assets/photos/' + name
++    if path in existing:
++        raise RuntimeError('already exists: ' + path)
++    credit = paint_credit if src.startswith('artwork-') else project_credit
++    allowed = ['/stories/apaporn/']
++    if name == 'kuapapoh-charm-09.webp': allowed.append('/stories/kuapapoh/')
++    data['photos'].append({'file': path, 'depicts_th': th, 'caption_th': th, 'allowed_on': allowed, 'era': 'now', 'credit': credit, 'license': license, 'caption_en': en})
++registry_path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
++
++# OG card, following make_og.py's Thai tokenization approach.
++out = ROOT / 'site' / 'assets' / 'og'
++out.mkdir(exist_ok=True)
++image = Image.new('RGB', (1200, 630), '#f6f1e7')
++with Image.open(DST / 'kuapapoh-charm-09.webp') as source:
++    art = ImageOps.contain(source.convert('RGB'), (570, 510))
++    image.paste(art, (615 + (570-art.width)//2, (530-art.height)//2))
++font_path = ROOT / 'fonts-src' / 'IBMPlexSansThaiLooped-Regular.ttf'
++draw = ImageDraw.Draw(image)
++title = 'อาภรณ์'
++subtitle = 'มนต์เสน่ห์เปอรานากัน'
++def wrap(text, font, width):
++    words = word_tokenize(text, engine='newmm', keep_whitespace=True)
++    lines = ['']
++    for word in words:
++        if lines[-1] and draw.textlength(lines[-1] + word, font=font) > width: lines.append(word.lstrip())
++        else: lines[-1] += word
++    return [line for line in lines if line.strip()] or ['']
++font = ImageFont.truetype(str(font_path), 64)
++draw.text((48, 190), title, font=font, fill='#203f39')
++font2 = ImageFont.truetype(str(font_path), 34)
++for i, line in enumerate(wrap(subtitle, font2, 500)): draw.text((48, 285+i*48), line, font=font2, fill='#203f39')
++draw.rectangle((0, 530, 1200, 630), fill='#203f39')
++draw.text((48, 550), 'ตะกั่วป่า 101', font=ImageFont.truetype(str(font_path), 40), fill='#f6f1e7')
++image.save(out / 'apaporn.png', 'PNG')
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'python scratch/prepare_apaporn.py' in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 3546ms:
+diff --git a/output/web/takuapa101-v1/scratch/prepare_apaporn.py b/output/web/takuapa101-v1/scratch/prepare_apaporn.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..11e2ce781dca23c1ffe70147107b62d7bd7f6132
+--- /dev/null
++++ b/output/web/takuapa101-v1/scratch/prepare_apaporn.py
+@@ -0,0 +1,69 @@
++import json
++from pathlib import Path
++from PIL import Image, ImageDraw, ImageFont, ImageOps
++from pythainlp.tokenize import word_tokenize
++
++ROOT = Path(__file__).resolve().parents[1]
++SRC = Path(r'D:\Takuapa\images\event')
++DST = ROOT / 'site' / 'assets' / 'photos'
++
++items = [
++ ('artwork-1.webp','kuapapoh-charm-09.webp','ภาพเขียน Peranakan Charm No.9 · หญิงสาวสวมเสื้อครุยสีฟ้าปักดิ้นทอง ติดเข็มกลัดโกสัง สวมกำไลทอง ท่ามกลางดอกโบตั๋นและผีเสื้อ','Peranakan Charm No. 9 · A woman in a blue, gold-embroidered kebaya with a kosang brooch and gold bracelet, among peonies and butterflies.'),
++ ('artwork-2.webp','kuapapoh-charm-kebaya-pink.webp','ภาพเขียนหญิงสาวสวมเสื้อเคบายาสีชมพูปักลายดอก ติดเข็มกลัดโกสังทองสามชิ้นเรียงกลางอก พื้นหลังสีน้ำเงินและดอกกุหลาบ','A woman in a pink floral-embroidered kebaya, wearing three gold kosang brooches, against a blue background with roses.'),
++ ('artwork-3.webp','kuapapoh-charm-kebaya-green.webp','ภาพเขียนหญิงสาวถักเปีย สวมเสื้อเคบายาสีเขียวน้ำทะเลปักลายดอกกุหลาบ พื้นหลังสีเหลืองทองกับดอกโบตั๋น','A braided woman in a sea-green kebaya embroidered with roses, set against golden yellow and peonies.'),
++ ('artwork-4.webp','kuapapoh-charm-lace-white.webp','ภาพเขียนหญิงสาวสวมเสื้อลูกไม้ฉลุสีขาว นุ่งผ้าปาเต๊ะลายดอก ถือปิ่นโตลงรัก พื้นหลังสีเขียวมรกตลายผ้าปาเต๊ะ','A woman in a white cutwork lace blouse and floral batik sarong, holding a lacquered tiffin carrier, against emerald batik.'),
++ ('gallery-1.webp','kuapapoh-expo-corner.webp','มุมแรกของนิทรรศการที่ 78 สตูดิโอ · ป้ายประวัติศิลปินบนขาตั้ง กับผลงานที่แขวนบนชั้นไม้เก่า','The first corner of the exhibition at 78 Studio, with the artist biography on an easel and works hung on an old wooden shelf.'),
++ ('gallery-3.webp','kuapapoh-charm-09-wall.webp','ภาพเขียน Peranakan Charm No.9 แขวนอยู่บนชั้นไม้ในนิทรรศการ พร้อมป้ายกำกับขนาดผลงาน','Peranakan Charm No. 9 hanging on a wooden shelf in the exhibition, with a label showing the work’s dimensions.'),
++ ('gallery-2.webp','kuapapoh-expo-wall.webp','ผนังผลงานชุดใหญ่ริมทางเดินในนิทรรศการ','A wall of large works along the exhibition walkway.'),
++ ('gallery-5.webp','kuapapoh-expo-shelf.webp','ผลงานในกรอบทองวางบนชั้นไม้เก่าในนิทรรศการ','Gold-framed works displayed on an old wooden shelf in the exhibition.'),
++ ('artist-card.webp','kuapapoh-artist-card.webp','การ์ดประวัติศิลปิน About the Artist ของนิทรรศการ มนต์เสน่ห์เปอรานากัน','The exhibition’s About the Artist biography card for Peranakan Charm.'),
++]
++paint_credit = 'ช่างป๋อง · ติณณภพ งานสถิร'
++project_credit = 'โครงการกั่วป่าโพ้ จีโชว์เมือง'
++license = 'ได้รับอนุญาตจากโครงการกั่วป่าโพ้'
++
++DST.mkdir(parents=True, exist_ok=True)
++for src, name, _, _ in items:
++    with Image.open(SRC / src) as im:
++        im = im.convert('RGB')
++        im.thumbnail((1400, 1400), Image.Resampling.LANCZOS)
++        im.save(DST / name, 'WEBP', quality=80, method=6)
++
++registry_path = ROOT / 'data' / 'photo-registry.json'
++data = json.loads(registry_path.read_text(encoding='utf-8'))
++existing = {r['file'] for r in data['photos']}
++for src, name, th, en in items:
++    path = '/assets/photos/' + name
++    if path in existing:
++        raise RuntimeError('already exists: ' + path)
++    credit = paint_credit if src.startswith('artwork-') else project_credit
++    allowed = ['/stories/apaporn/']
++    if name == 'kuapapoh-charm-09.webp': allowed.append('/stories/kuapapoh/')
++    data['photos'].append({'file': path, 'depicts_th': th, 'caption_th': th, 'allowed_on': allowed, 'era': 'now', 'credit': credit, 'license': license, 'caption_en': en})
++registry_path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
++
++# OG card, following make_og.py's Thai tokenization approach.
++out = ROOT / 'site' / 'assets' / 'og'
++out.mkdir(exist_ok=True)
++image = Image.new('RGB', (1200, 630), '#f6f1e7')
++with Image.open(DST / 'kuapapoh-charm-09.webp') as source:
++    art = ImageOps.contain(source.convert('RGB'), (570, 510))
++    image.paste(art, (615 + (570-art.width)//2, (530-art.height)//2))
++font_path = ROOT / 'fonts-src' / 'IBMPlexSansThaiLooped-Regular.ttf'
++draw = ImageDraw.Draw(image)
++title = 'อาภรณ์'
++subtitle = 'มนต์เสน่ห์เปอรานากัน'
++def wrap(text, font, width):
++    words = word_tokenize(text, engine='newmm', keep_whitespace=True)
++    lines = ['']
++    for word in words:
++        if lines[-1] and draw.textlength(lines[-1] + word, font=font) > width: lines.append(word.lstrip())
++        else: lines[-1] += word
++    return [line for line in lines if line.strip()] or ['']
++font = ImageFont.truetype(str(font_path), 64)
++draw.text((48, 190), title, font=font, fill='#203f39')
++font2 = ImageFont.truetype(str(font_path), 34)
++for i, line in enumerate(wrap(subtitle, font2, 500)): draw.text((48, 285+i*48), line, font=font2, fill='#203f39')
++draw.rectangle((0, 530, 1200, 630), fill='#203f39')
++draw.text((48, 550), 'ตะกั่วป่า 101', font=ImageFont.truetype(str(font_path), 40), fill='#f6f1e7')
++image.save(out / 'apaporn.png', 'PNG')
+
+codex
+รูปทั้ง 9 ใบและการ์ด OG ถูกสร้างแล้ว โดยปรับด้านยาวไม่เกิน 1400px และใช้ WebP quality 80 สำหรับรูปเนื้อหา ตอนนี้กำลังตรวจขนาดไฟล์ มิติภาพ ความถูกต้องของ JSON และยืนยันว่าไฟล์ที่ห้ามแตะไม่มีการเปลี่ยนแปลงครับ
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "python -c \"import json;json.load(open('data/photo-registry.json',encoding='utf-8'));print('json ok')\"; python -c \"from pathlib import Path; from PIL import Image; import json; names=['kuapapoh-charm-09.webp','kuapapoh-charm-kebaya-pink.webp','kuapapoh-charm-kebaya-green.webp','kuapapoh-charm-lace-white.webp','kuapapoh-expo-corner.webp','kuapapoh-charm-09-wall.webp','kuapapoh-expo-wall.webp','kuapapoh-expo-shelf.webp','kuapapoh-artist-card.webp']; d=Path('site/assets/photos'); [(lambda p: print(p.name,p.stat().st_size,Image.open(p).size))(d/n) for n in names]; print('og',Image.open('site/assets/og/apaporn.png').size)\"; git status --short; git diff --stat -- stories.py build_site.py design.py data/stories; git diff --numstat -- data/photo-registry.json audit/fix-apaporn-assets.md" in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 247ms:
+json ok
+kuapapoh-charm-09.webp 157846 (900, 1092)
+kuapapoh-charm-kebaya-pink.webp 209886 (900, 1142)
+kuapapoh-charm-kebaya-green.webp 173544 (900, 1121)
+kuapapoh-charm-lace-white.webp 163170 (900, 908)
+kuapapoh-expo-corner.webp 229204 (1400, 1050)
+kuapapoh-charm-09-wall.webp 108226 (1050, 1400)
+kuapapoh-expo-wall.webp 176898 (1050, 1400)
+kuapapoh-expo-shelf.webp 176716 (1050, 1400)
+kuapapoh-artist-card.webp 178246 (926, 1400)
+og (1200, 630)
+ M __pycache__/seo.cpython-312.pyc
+ M data/i18n/en/missing.json
+ M data/photo-registry.json
+ M seo.py
+ M site/en/index.html
+ M site/index.html
+?? ../../../.wrangler/
+?? ../../../647262977_122164259084920902_6669990846005139034_n.jpg
+?? "../../../719463362_122177663690920902_8872683781444008463_n (1).jpg"
+?? ../../../branding/
+?? ../../../logo-siwara-artisan.svg
+?? ../../../logo-siwara-cursive-flow.svg
+?? ../../../logo-siwara-embedded-cup.svg
+?? ../../../logo-siwara-horizontal-integrated.svg
+?? ../../../logo-siwara-integrated-type.svg
+?? ../../../logo-siwara-minimal-concept2.svg
+?? ../../../logosiwara.jpg
+?? ../../../menu/
+?? ../../library/
+?? ../../pdf/
+?? audit/jobs/apaporn-assets.log
+?? audit/jobs/apaporn-assets.txt
+?? audit/jobs/apaporn-story.log
+?? audit/jobs/apaporn-story.txt
+?? scratch/prepare_apaporn.py
+?? site/assets/og/apaporn.png
+?? site/assets/photos/kuapapoh-artist-card.webp
+?? site/assets/photos/kuapapoh-charm-09-wall.webp
+?? site/assets/photos/kuapapoh-charm-09.webp
+?? site/assets/photos/kuapapoh-charm-kebaya-green.webp
+?? site/assets/photos/kuapapoh-charm-kebaya-pink.webp
+?? site/assets/photos/kuapapoh-charm-lace-white.webp
+?? site/assets/photos/kuapapoh-expo-corner.webp
+?? site/assets/photos/kuapapoh-expo-shelf.webp
+?? site/assets/photos/kuapapoh-expo-wall.webp
+?? ../../../siwarahome/218417157_565871948196588_1608805810878632308_n.jpg
+?? ../../../siwarahome/484050234_1060696479434794_5969050394251992980_n.jpg
+?? ../../../siwarahome/491754068_1319477803282106_5281644519154895610_n.jpg
+?? ../../../siwarahome/house-109.webp
+?? ../../../siwarahome/house-305.webp
+?? ../../../siwarahome/house-78.webp
+?? ../../../siwarahome/shutterstock_1645099648.jpg
+?? "../../../siwarahome/\340\270\225\340\270\260\340\270\201\340\270\261\340\271\210\340\270\247\340\270\233\340\271\210\340\270\262-\340\271\200\340\270\241\340\270\267\340\270\255\340\270\207\340\271\200\340\270\201\340\271\210\340\270\262.jpg"
+?? "../../../siwarahome/\340\270\250\340\270\262\340\270\245\340\271\200\340\270\210\340\271\211\340\270\262\340\270\213\340\270\264\340\270\231\340\271\203\340\270\212\340\271\210\340\270\225\340\270\266\340\271\213\340\270\207.jpg"
+?? "../../../siwarahome/\340\270\252\340\270\263\340\271\200\340\270\231\340\270\262\340\270\202\340\270\255\340\270\207-\340\270\252\340\270\263\340\271\200\340\270\231\340\270\262\340\270\202\340\270\255\340\270\207-the-sand-khaolak-11.png"
+?? ../../../view_mockups.html
+110	1	output/web/takuapa101-v1/data/photo-registry.json
+
+diff --git a/output/web/takuapa101-v1/scratch/prepare_apaporn.py b/output/web/takuapa101-v1/scratch/prepare_apaporn.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..11e2ce781dca23c1ffe70147107b62d7bd7f6132
+--- /dev/null
++++ b/output/web/takuapa101-v1/scratch/prepare_apaporn.py
+@@ -0,0 +1,69 @@
++import json
++from pathlib import Path
++from PIL import Image, ImageDraw, ImageFont, ImageOps
++from pythainlp.tokenize import word_tokenize
++
++ROOT = Path(__file__).resolve().parents[1]
++SRC = Path(r'D:\Takuapa\images\event')
++DST = ROOT / 'site' / 'assets' / 'photos'
++
++items = [
++ ('artwork-1.webp','kuapapoh-charm-09.webp','ภาพเขียน Peranakan Charm No.9 · หญิงสาวสวมเสื้อครุยสีฟ้าปักดิ้นทอง ติดเข็มกลัดโกสัง สวมกำไลทอง ท่ามกลางดอกโบตั๋นและผีเสื้อ','Peranakan Charm No. 9 · A woman in a blue, gold-embroidered kebaya with a kosang brooch and gold bracelet, among peonies and butterflies.'),
++ ('artwork-2.webp','kuapapoh-charm-kebaya-pink.webp','ภาพเขียนหญิงสาวสวมเสื้อเคบายาสีชมพูปักลายดอก ติดเข็มกลัดโกสังทองสามชิ้นเรียงกลางอก พื้นหลังสีน้ำเงินและดอกกุหลาบ','A woman in a pink floral-embroidered kebaya, wearing three gold kosang brooches, against a blue background with roses.'),
++ ('artwork-3.webp','kuapapoh-charm-kebaya-green.webp','ภาพเขียนหญิงสาวถักเปีย สวมเสื้อเคบายาสีเขียวน้ำทะเลปักลายดอกกุหลาบ พื้นหลังสีเหลืองทองกับดอกโบตั๋น','A braided woman in a sea-green kebaya embroidered with roses, set against golden yellow and peonies.'),
++ ('artwork-4.webp','kuapapoh-charm-lace-white.webp','ภาพเขียนหญิงสาวสวมเสื้อลูกไม้ฉลุสีขาว นุ่งผ้าปาเต๊ะลายดอก ถือปิ่นโตลงรัก พื้นหลังสีเขียวมรกตลายผ้าปาเต๊ะ','A woman in a white cutwork lace blouse and floral batik sarong, holding a lacquered tiffin carrier, against emerald batik.'),
++ ('gallery-1.webp','kuapapoh-expo-corner.webp','มุมแรกของนิทรรศการที่ 78 สตูดิโอ · ป้ายประวัติศิลปินบนขาตั้ง กับผลงานที่แขวนบนชั้นไม้เก่า','The first corner of the exhibition at 78 Studio, with the artist biography on an easel and works hung on an old wooden shelf.'),
++ ('gallery-3.webp','kuapapoh-charm-09-wall.webp','ภาพเขียน Peranakan Charm No.9 แขวนอยู่บนชั้นไม้ในนิทรรศการ พร้อมป้ายกำกับขนาดผลงาน','Peranakan Charm No. 9 hanging on a wooden shelf in the exhibition, with a label showing the work’s dimensions.'),
++ ('gallery-2.webp','kuapapoh-expo-wall.webp','ผนังผลงานชุดใหญ่ริมทางเดินในนิทรรศการ','A wall of large works along the exhibition walkway.'),
++ ('gallery-5.webp','kuapapoh-expo-shelf.webp','ผลงานในกรอบทองวางบนชั้นไม้เก่าในนิทรรศการ','Gold-framed works displayed on an old wooden shelf in the exhibition.'),
++ ('artist-card.webp','kuapapoh-artist-card.webp','การ์ดประวัติศิลปิน About the Artist ของนิทรรศการ มนต์เสน่ห์เปอรานากัน','The exhibition’s About the Artist biography card for Peranakan Charm.'),
++]
++paint_credit = 'ช่างป๋อง · ติณณภพ งานสถิร'
++project_credit = 'โครงการกั่วป่าโพ้ จีโชว์เมือง'
++license = 'ได้รับอนุญาตจากโครงการกั่วป่าโพ้'
++
++DST.mkdir(parents=True, exist_ok=True)
++for src, name, _, _ in items:
++    with Image.open(SRC / src) as im:
++        im = im.convert('RGB')
++        im.thumbnail((1400, 1400), Image.Resampling.LANCZOS)
++        im.save(DST / name, 'WEBP', quality=80, method=6)
++
++registry_path = ROOT / 'data' / 'photo-registry.json'
++data = json.loads(registry_path.read_text(encoding='utf-8'))
++existing = {r['file'] for r in data['photos']}
++for src, name, th, en in items:
++    path = '/assets/photos/' + name
++    if path in existing:
++        raise RuntimeError('already exists: ' + path)
++    credit = paint_credit if src.startswith('artwork-') else project_credit
++    allowed = ['/stories/apaporn/']
++    if name == 'kuapapoh-charm-09.webp': allowed.append('/stories/kuapapoh/')
++    data['photos'].append({'file': path, 'depicts_th': th, 'caption_th': th, 'allowed_on': allowed, 'era': 'now', 'credit': credit, 'license': license, 'caption_en': en})
++registry_path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
++
++# OG card, following make_og.py's Thai tokenization approach.
++out = ROOT / 'site' / 'assets' / 'og'
++out.mkdir(exist_ok=True)
++image = Image.new('RGB', (1200, 630), '#f6f1e7')
++with Image.open(DST / 'kuapapoh-charm-09.webp') as source:
++    art = ImageOps.contain(source.convert('RGB'), (570, 510))
++    image.paste(art, (615 + (570-art.width)//2, (530-art.height)//2))
++font_path = ROOT / 'fonts-src' / 'IBMPlexSansThaiLooped-Regular.ttf'
++draw = ImageDraw.Draw(image)
++title = 'อาภรณ์'
++subtitle = 'มนต์เสน่ห์เปอรานากัน'
++def wrap(text, font, width):
++    words = word_tokenize(text, engine='newmm', keep_whitespace=True)
++    lines = ['']
++    for word in words:
++        if lines[-1] and draw.textlength(lines[-1] + word, font=font) > width: lines.append(word.lstrip())
++        else: lines[-1] += word
++    return [line for line in lines if line.strip()] or ['']
++font = ImageFont.truetype(str(font_path), 64)
++draw.text((48, 190), title, font=font, fill='#203f39')
++font2 = ImageFont.truetype(str(font_path), 34)
++for i, line in enumerate(wrap(subtitle, font2, 500)): draw.text((48, 285+i*48), line, font=font2, fill='#203f39')
++draw.rectangle((0, 530, 1200, 630), fill='#203f39')
++draw.text((48, 550), 'ตะกั่วป่า 101', font=ImageFont.truetype(str(font_path), 40), fill='#f6f1e7')
++image.save(out / 'apaporn.png', 'PNG')
+
+apply patch
+patch: completed
+D:\Siwaracafeweb\output\web\takuapa101-v1\scratch\complete_apaporn_registry.py
+diff --git a/output/web/takuapa101-v1/scratch/complete_apaporn_registry.py b/output/web/takuapa101-v1/scratch/complete_apaporn_registry.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..b6bc3426b9829ecbffd80a3a6e687928878d67ed
+--- /dev/null
++++ b/output/web/takuapa101-v1/scratch/complete_apaporn_registry.py
+@@ -0,0 +1,10 @@
++import json
++from pathlib import Path
++p = Path(__file__).resolve().parents[1] / 'data' / 'photo-registry.json'
++d = json.loads(p.read_text(encoding='utf-8'))
++names = {'kuapapoh-charm-09.webp','kuapapoh-charm-kebaya-pink.webp','kuapapoh-charm-kebaya-green.webp','kuapapoh-charm-lace-white.webp','kuapapoh-expo-corner.webp','kuapapoh-charm-09-wall.webp','kuapapoh-expo-wall.webp','kuapapoh-expo-shelf.webp','kuapapoh-artist-card.webp'}
++for r in d['photos']:
++    if r['file'].split('/')[-1] in names:
++        r['credit_en'] = 'Changpong · Tinnapop Ngansathir' if r['file'].split('/')[-1].startswith('kuapapoh-charm-') and 'wall' not in r['file'] else 'Kuapapoh project · Ji Show Muang'
++        r['license_en'] = 'Licensed by the Kuapapoh project'
++p.write_text(json.dumps(d, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+diff --git a/output/web/takuapa101-v1/scratch/prepare_apaporn.py b/output/web/takuapa101-v1/scratch/prepare_apaporn.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..11e2ce781dca23c1ffe70147107b62d7bd7f6132
+--- /dev/null
++++ b/output/web/takuapa101-v1/scratch/prepare_apaporn.py
+@@ -0,0 +1,69 @@
++import json
++from pathlib import Path
++from PIL import Image, ImageDraw, ImageFont, ImageOps
++from pythainlp.tokenize import word_tokenize
++
++ROOT = Path(__file__).resolve().parents[1]
++SRC = Path(r'D:\Takuapa\images\event')
++DST = ROOT / 'site' / 'assets' / 'photos'
++
++items = [
++ ('artwork-1.webp','kuapapoh-charm-09.webp','ภาพเขียน Peranakan Charm No.9 · หญิงสาวสวมเสื้อครุยสีฟ้าปักดิ้นทอง ติดเข็มกลัดโกสัง สวมกำไลทอง ท่ามกลางดอกโบตั๋นและผีเสื้อ','Peranakan Charm No. 9 · A woman in a blue, gold-embroidered kebaya with a kosang brooch and gold bracelet, among peonies and butterflies.'),
++ ('artwork-2.webp','kuapapoh-charm-kebaya-pink.webp','ภาพเขียนหญิงสาวสวมเสื้อเคบายาสีชมพูปักลายดอก ติดเข็มกลัดโกสังทองสามชิ้นเรียงกลางอก พื้นหลังสีน้ำเงินและดอกกุหลาบ','A woman in a pink floral-embroidered kebaya, wearing three gold kosang brooches, against a blue background with roses.'),
++ ('artwork-3.webp','kuapapoh-charm-kebaya-green.webp','ภาพเขียนหญิงสาวถักเปีย สวมเสื้อเคบายาสีเขียวน้ำทะเลปักลายดอกกุหลาบ พื้นหลังสีเหลืองทองกับดอกโบตั๋น','A braided woman in a sea-green kebaya embroidered with roses, set against golden yellow and peonies.'),
++ ('artwork-4.webp','kuapapoh-charm-lace-white.webp','ภาพเขียนหญิงสาวสวมเสื้อลูกไม้ฉลุสีขาว นุ่งผ้าปาเต๊ะลายดอก ถือปิ่นโตลงรัก พื้นหลังสีเขียวมรกตลายผ้าปาเต๊ะ','A woman in a white cutwork lace blouse and floral batik sarong, holding a lacquered tiffin carrier, against emerald batik.'),
++ ('gallery-1.webp','kuapapoh-expo-corner.webp','มุมแรกของนิทรรศการที่ 78 สตูดิโอ · ป้ายประวัติศิลปินบนขาตั้ง กับผลงานที่แขวนบนชั้นไม้เก่า','The first corner of the exhibition at 78 Studio, with the artist biography on an easel and works hung on an old wooden shelf.'),
++ ('gallery-3.webp','kuapapoh-charm-09-wall.webp','ภาพเขียน Peranakan Charm No.9 แขวนอยู่บนชั้นไม้ในนิทรรศการ พร้อมป้ายกำกับขนาดผลงาน','Peranakan Charm No. 9 hanging on a wooden shelf in the exhibition, with a label showing the work’s dimensions.'),
++ ('gallery-2.webp','kuapapoh-expo-wall.webp','ผนังผลงานชุดใหญ่ริมทางเดินในนิทรรศการ','A wall of large works along the exhibition walkway.'),
++ ('gallery-5.webp','kuapapoh-expo-shelf.webp','ผลงานในกรอบทองวางบนชั้นไม้เก่าในนิทรรศการ','Gold-framed works displayed on an old wooden shelf in the exhibition.'),
++ ('artist-card.webp','kuapapoh-artist-card.webp','การ์ดประวัติศิลปิน About the Artist ของนิทรรศการ มนต์เสน่ห์เปอรานากัน','The exhibition’s About the Artist biography card for Peranakan Charm.'),
++]
++paint_credit = 'ช่างป๋อง · ติณณภพ งานสถิร'
++project_credit = 'โครงการกั่วป่าโพ้ จีโชว์เมือง'
++license = 'ได้รับอนุญาตจากโครงการกั่วป่าโพ้'
++
++DST.mkdir(parents=True, exist_ok=True)
++for src, name, _, _ in items:
++    with Image.open(SRC / src) as im:
++        im = im.convert('RGB')
++        im.thumbnail((1400, 1400), Image.Resampling.LANCZOS)
++        im.save(DST / name, 'WEBP', quality=80, method=6)
++
++registry_path = ROOT / 'data' / 'photo-registry.json'
++data = json.loads(registry_path.read_text(encoding='utf-8'))
++existing = {r['file'] for r in data['photos']}
++for src, name, th, en in items:
++    path = '/assets/photos/' + name
++    if path in existing:
++        raise RuntimeError('already exists: ' + path)
++    credit = paint_credit if src.startswith('artwork-') else project_credit
++    allowed = ['/stories/apaporn/']
++    if name == 'kuapapoh-charm-09.webp': allowed.append('/stories/kuapapoh/')
++    data['photos'].append({'file': path, 'depicts_th': th, 'caption_th': th, 'allowed_on': allowed, 'era': 'now', 'credit': credit, 'license': license, 'caption_en': en})
++registry_path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
++
++# OG card, following make_og.py's Thai tokenization approach.
++out = ROOT / 'site' / 'assets' / 'og'
++out.mkdir(exist_ok=True)
++image = Image.new('RGB', (1200, 630), '#f6f1e7')
++with Image.open(DST / 'kuapapoh-charm-09.webp') as source:
++    art = ImageOps.contain(source.convert('RGB'), (570, 510))
++    image.paste(art, (615 + (570-art.width)//2, (530-art.height)//2))
++font_path = ROOT / 'fonts-src' / 'IBMPlexSansThaiLooped-Regular.ttf'
++draw = ImageDraw.Draw(image)
++title = 'อาภรณ์'
++subtitle = 'มนต์เสน่ห์เปอรานากัน'
++def wrap(text, font, width):
++    words = word_tokenize(text, engine='newmm', keep_whitespace=True)
++    lines = ['']
++    for word in words:
++        if lines[-1] and draw.textlength(lines[-1] + word, font=font) > width: lines.append(word.lstrip())
++        else: lines[-1] += word
++    return [line for line in lines if line.strip()] or ['']
++font = ImageFont.truetype(str(font_path), 64)
++draw.text((48, 190), title, font=font, fill='#203f39')
++font2 = ImageFont.truetype(str(font_path), 34)
++for i, line in enumerate(wrap(subtitle, font2, 500)): draw.text((48, 285+i*48), line, font=font2, fill='#203f39')
++draw.rectangle((0, 530, 1200, 630), fill='#203f39')
++draw.text((48, 550), 'ตะกั่วป่า 101', font=ImageFont.truetype(str(font_path), 40), fill='#f6f1e7')
++image.save(out / 'apaporn.png', 'PNG')
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "python scratch/complete_apaporn_registry.py; python -c \"import json; d=json.load(open('data/photo-registry.json',encoding='utf-8')); n=['kuapapoh-charm-09.webp','kuapapoh-charm-kebaya-pink.webp','kuapapoh-charm-kebaya-green.webp','kuapapoh-charm-lace-white.webp','kuapapoh-expo-corner.webp','kuapapoh-charm-09-wall.webp','kuapapoh-expo-wall.webp','kuapapoh-expo-shelf.webp','kuapapoh-artist-card.webp']; x=[r for r in d['photos'] if r['file'].split('/')[-1] in n]; assert len(x)==9 and all(set(['file','depicts_th','caption_th','allowed_on','era','credit','license','caption_en','credit_en','license_en'])<=set(r) for r in x); assert sum('/stories/apaporn/' in r['allowed_on'] for r in x)==9; assert '/stories/kuapapoh/' in next(r for r in x if r['file'].endswith('kuapapoh-charm-09.webp'))['allowed_on']; print('registry checks ok')\"" in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 116ms:
+registry checks ok
+
+diff --git a/output/web/takuapa101-v1/scratch/complete_apaporn_registry.py b/output/web/takuapa101-v1/scratch/complete_apaporn_registry.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..b6bc3426b9829ecbffd80a3a6e687928878d67ed
+--- /dev/null
++++ b/output/web/takuapa101-v1/scratch/complete_apaporn_registry.py
+@@ -0,0 +1,10 @@
++import json
++from pathlib import Path
++p = Path(__file__).resolve().parents[1] / 'data' / 'photo-registry.json'
++d = json.loads(p.read_text(encoding='utf-8'))
++names = {'kuapapoh-charm-09.webp','kuapapoh-charm-kebaya-pink.webp','kuapapoh-charm-kebaya-green.webp','kuapapoh-charm-lace-white.webp','kuapapoh-expo-corner.webp','kuapapoh-charm-09-wall.webp','kuapapoh-expo-wall.webp','kuapapoh-expo-shelf.webp','kuapapoh-artist-card.webp'}
++for r in d['photos']:
++    if r['file'].split('/')[-1] in names:
++        r['credit_en'] = 'Changpong · Tinnapop Ngansathir' if r['file'].split('/')[-1].startswith('kuapapoh-charm-') and 'wall' not in r['file'] else 'Kuapapoh project · Ji Show Muang'
++        r['license_en'] = 'Licensed by the Kuapapoh project'
++p.write_text(json.dumps(d, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+diff --git a/output/web/takuapa101-v1/scratch/prepare_apaporn.py b/output/web/takuapa101-v1/scratch/prepare_apaporn.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..11e2ce781dca23c1ffe70147107b62d7bd7f6132
+--- /dev/null
++++ b/output/web/takuapa101-v1/scratch/prepare_apaporn.py
+@@ -0,0 +1,69 @@
++import json
++from pathlib import Path
++from PIL import Image, ImageDraw, ImageFont, ImageOps
++from pythainlp.tokenize import word_tokenize
++
++ROOT = Path(__file__).resolve().parents[1]
++SRC = Path(r'D:\Takuapa\images\event')
++DST = ROOT / 'site' / 'assets' / 'photos'
++
++items = [
++ ('artwork-1.webp','kuapapoh-charm-09.webp','ภาพเขียน Peranakan Charm No.9 · หญิงสาวสวมเสื้อครุยสีฟ้าปักดิ้นทอง ติดเข็มกลัดโกสัง สวมกำไลทอง ท่ามกลางดอกโบตั๋นและผีเสื้อ','Peranakan Charm No. 9 · A woman in a blue, gold-embroidered kebaya with a kosang brooch and gold bracelet, among peonies and butterflies.'),
++ ('artwork-2.webp','kuapapoh-charm-kebaya-pink.webp','ภาพเขียนหญิงสาวสวมเสื้อเคบายาสีชมพูปักลายดอก ติดเข็มกลัดโกสังทองสามชิ้นเรียงกลางอก พื้นหลังสีน้ำเงินและดอกกุหลาบ','A woman in a pink floral-embroidered kebaya, wearing three gold kosang brooches, against a blue background with roses.'),
++ ('artwork-3.webp','kuapapoh-charm-kebaya-green.webp','ภาพเขียนหญิงสาวถักเปีย สวมเสื้อเคบายาสีเขียวน้ำทะเลปักลายดอกกุหลาบ พื้นหลังสีเหลืองทองกับดอกโบตั๋น','A braided woman in a sea-green kebaya embroidered with roses, set against golden yellow and peonies.'),
++ ('artwork-4.webp','kuapapoh-charm-lace-white.webp','ภาพเขียนหญิงสาวสวมเสื้อลูกไม้ฉลุสีขาว นุ่งผ้าปาเต๊ะลายดอก ถือปิ่นโตลงรัก พื้นหลังสีเขียวมรกตลายผ้าปาเต๊ะ','A woman in a white cutwork lace blouse and floral batik sarong, holding a lacquered tiffin carrier, against emerald batik.'),
++ ('gallery-1.webp','kuapapoh-expo-corner.webp','มุมแรกของนิทรรศการที่ 78 สตูดิโอ · ป้ายประวัติศิลปินบนขาตั้ง กับผลงานที่แขวนบนชั้นไม้เก่า','The first corner of the exhibition at 78 Studio, with the artist biography on an easel and works hung on an old wooden shelf.'),
++ ('gallery-3.webp','kuapapoh-charm-09-wall.webp','ภาพเขียน Peranakan Charm No.9 แขวนอยู่บนชั้นไม้ในนิทรรศการ พร้อมป้ายกำกับขนาดผลงาน','Peranakan Charm No. 9 hanging on a wooden shelf in the exhibition, with a label showing the work’s dimensions.'),
++ ('gallery-2.webp','kuapapoh-expo-wall.webp','ผนังผลงานชุดใหญ่ริมทางเดินในนิทรรศการ','A wall of large works along the exhibition walkway.'),
++ ('gallery-5.webp','kuapapoh-expo-shelf.webp','ผลงานในกรอบทองวางบนชั้นไม้เก่าในนิทรรศการ','Gold-framed works displayed on an old wooden shelf in the exhibition.'),
++ ('artist-card.webp','kuapapoh-artist-card.webp','การ์ดประวัติศิลปิน About the Artist ของนิทรรศการ มนต์เสน่ห์เปอรานากัน','The exhibition’s About the Artist biography card for Peranakan Charm.'),
++]
++paint_credit = 'ช่างป๋อง · ติณณภพ งานสถิร'
++project_credit = 'โครงการกั่วป่าโพ้ จีโชว์เมือง'
++license = 'ได้รับอนุญาตจากโครงการกั่วป่าโพ้'
++
++DST.mkdir(parents=True, exist_ok=True)
++for src, name, _, _ in items:
++    with Image.open(SRC / src) as im:
++        im = im.convert('RGB')
++        im.thumbnail((1400, 1400), Image.Resampling.LANCZOS)
++        im.save(DST / name, 'WEBP', quality=80, method=6)
++
++registry_path = ROOT / 'data' / 'photo-registry.json'
++data = json.loads(registry_path.read_text(encoding='utf-8'))
++existing = {r['file'] for r in data['photos']}
++for src, name, th, en in items:
++    path = '/assets/photos/' + name
++    if path in existing:
++        raise RuntimeError('already exists: ' + path)
++    credit = paint_credit if src.startswith('artwork-') else project_credit
++    allowed = ['/stories/apaporn/']
++    if name == 'kuapapoh-charm-09.webp': allowed.append('/stories/kuapapoh/')
++    data['photos'].append({'file': path, 'depicts_th': th, 'caption_th': th, 'allowed_on': allowed, 'era': 'now', 'credit': credit, 'license': license, 'caption_en': en})
++registry_path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
++
++# OG card, following make_og.py's Thai tokenization approach.
++out = ROOT / 'site' / 'assets' / 'og'
++out.mkdir(exist_ok=True)
++image = Image.new('RGB', (1200, 630), '#f6f1e7')
++with Image.open(DST / 'kuapapoh-charm-09.webp') as source:
++    art = ImageOps.contain(source.convert('RGB'), (570, 510))
++    image.paste(art, (615 + (570-art.width)//2, (530-art.height)//2))
++font_path = ROOT / 'fonts-src' / 'IBMPlexSansThaiLooped-Regular.ttf'
++draw = ImageDraw.Draw(image)
++title = 'อาภรณ์'
++subtitle = 'มนต์เสน่ห์เปอรานากัน'
++def wrap(text, font, width):
++    words = word_tokenize(text, engine='newmm', keep_whitespace=True)
++    lines = ['']
++    for word in words:
++        if lines[-1] and draw.textlength(lines[-1] + word, font=font) > width: lines.append(word.lstrip())
++        else: lines[-1] += word
++    return [line for line in lines if line.strip()] or ['']
++font = ImageFont.truetype(str(font_path), 64)
++draw.text((48, 190), title, font=font, fill='#203f39')
++font2 = ImageFont.truetype(str(font_path), 34)
++for i, line in enumerate(wrap(subtitle, font2, 500)): draw.text((48, 285+i*48), line, font=font2, fill='#203f39')
++draw.rectangle((0, 530, 1200, 630), fill='#203f39')
++draw.text((48, 550), 'ตะกั่วป่า 101', font=ImageFont.truetype(str(font_path), 40), fill='#f6f1e7')
++image.save(out / 'apaporn.png', 'PNG')
+
+apply patch
+patch: completed
+D:\Siwaracafeweb\output\web\takuapa101-v1\audit\fix-apaporn-assets.md
+D:\Siwaracafeweb\output\web\takuapa101-v1\scratch\complete_apaporn_registry.py
+D:\Siwaracafeweb\output\web\takuapa101-v1\scratch\prepare_apaporn.py
+diff --git a/output/web/takuapa101-v1/audit/fix-apaporn-assets.md b/output/web/takuapa101-v1/audit/fix-apaporn-assets.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..bc8bc3531921f559c40656bf627d105bd2b076c2
+--- /dev/null
++++ b/output/web/takuapa101-v1/audit/fix-apaporn-assets.md
+@@ -0,0 +1,18 @@
++# ตรวจปิดงาน: รูปกระทู้ “อาภรณ์”
++
++วันที่ตรวจ: 2026-09-09
++
++- เพิ่มรูปจาก `D:\Takuapa\images\event\` จำนวน 9 ใบ ลง `site/assets/photos/`
++- แปลงด้วย Pillow เป็น WebP quality 80 และจำกัดด้านยาวไม่เกิน 1,400 px
++- ไฟล์ปลายทางครบ 9 ไฟล์ ทุกไฟล์ขนาดต่ำกว่า 400 KB (ประมาณ 108–230 KB)
++- เพิ่มระเบียนใหม่ใน `data/photo-registry.json` โดยใช้คำบรรยายตามทะเบียนที่กำหนด, `era: now`, สิทธิ์ใช้งาน และ `allowed_on` ตามโจทย์
++- สร้าง `site/assets/og/apaporn.png` ขนาด 1200×630 โดยใช้ `kuapapoh-charm-09.webp` และตัดคำไทยด้วย pythainlp engine `newmm` ตาม `make_og.py`
++
++## ผลตรวจ
++
++- `python -c "import json;json.load(open('data/photo-registry.json',encoding='utf-8'))"` — ผ่าน
++- ตรวจมิติและขนาดรูปปลายทาง — ผ่าน
++- ตรวจระเบียนใหม่ 9 รายการและเส้นทาง `/stories/apaporn/` — ผ่าน
++- ไม่แก้ `stories.py`, `build_site.py`, `design.py` หรือไฟล์ใน `data/stories/`
++
++หมายเหตุ: พบการเปลี่ยนแปลง/ไฟล์ที่ไม่เกี่ยวข้องใน working tree อยู่ก่อนแล้ว จึงไม่ได้แตะต้อง
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "python -c \"import json;json.load(open('data/photo-registry.json',encoding='utf-8'));print('json ok')\"; git status --short -- data/photo-registry.json audit/fix-apaporn-assets.md site/assets/og/apaporn.png site/assets/photos; Test-Path stories.py; Test-Path build_site.py; Test-Path design.py; Get-ChildItem data/stories -File | Measure-Object | Select-Object -ExpandProperty Count" in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 165ms:
+json ok
+ M data/photo-registry.json
+?? audit/fix-apaporn-assets.md
+?? site/assets/og/apaporn.png
+?? site/assets/photos/kuapapoh-artist-card.webp
+?? site/assets/photos/kuapapoh-charm-09-wall.webp
+?? site/assets/photos/kuapapoh-charm-09.webp
+?? site/assets/photos/kuapapoh-charm-kebaya-green.webp
+?? site/assets/photos/kuapapoh-charm-kebaya-pink.webp
+?? site/assets/photos/kuapapoh-charm-lace-white.webp
+?? site/assets/photos/kuapapoh-expo-corner.webp
+?? site/assets/photos/kuapapoh-expo-shelf.webp
+?? site/assets/photos/kuapapoh-expo-wall.webp
+True
+True
+True
+9
+
+diff --git a/output/web/takuapa101-v1/audit/fix-apaporn-assets.md b/output/web/takuapa101-v1/audit/fix-apaporn-assets.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..bc8bc3531921f559c40656bf627d105bd2b076c2
+--- /dev/null
++++ b/output/web/takuapa101-v1/audit/fix-apaporn-assets.md
+@@ -0,0 +1,18 @@
++# ตรวจปิดงาน: รูปกระทู้ “อาภรณ์”
++
++วันที่ตรวจ: 2026-09-09
++
++- เพิ่มรูปจาก `D:\Takuapa\images\event\` จำนวน 9 ใบ ลง `site/assets/photos/`
++- แปลงด้วย Pillow เป็น WebP quality 80 และจำกัดด้านยาวไม่เกิน 1,400 px
++- ไฟล์ปลายทางครบ 9 ไฟล์ ทุกไฟล์ขนาดต่ำกว่า 400 KB (ประมาณ 108–230 KB)
++- เพิ่มระเบียนใหม่ใน `data/photo-registry.json` โดยใช้คำบรรยายตามทะเบียนที่กำหนด, `era: now`, สิทธิ์ใช้งาน และ `allowed_on` ตามโจทย์
++- สร้าง `site/assets/og/apaporn.png` ขนาด 1200×630 โดยใช้ `kuapapoh-charm-09.webp` และตัดคำไทยด้วย pythainlp engine `newmm` ตาม `make_og.py`
++
++## ผลตรวจ
++
++- `python -c "import json;json.load(open('data/photo-registry.json',encoding='utf-8'))"` — ผ่าน
++- ตรวจมิติและขนาดรูปปลายทาง — ผ่าน
++- ตรวจระเบียนใหม่ 9 รายการและเส้นทาง `/stories/apaporn/` — ผ่าน
++- ไม่แก้ `stories.py`, `build_site.py`, `design.py` หรือไฟล์ใน `data/stories/`
++
++หมายเหตุ: พบการเปลี่ยนแปลง/ไฟล์ที่ไม่เกี่ยวข้องใน working tree อยู่ก่อนแล้ว จึงไม่ได้แตะต้อง
+
+codex
+ดำเนินการเสร็จแล้วครับ
+
+- เพิ่มรูป WebP ครบ 9 ไฟล์ ขนาดไม่เกิน 400 KB และด้านยาวไม่เกิน 1400px
+- เพิ่มระเบียนใหม่ใน [photo-registry.json](D:/Siwaracafeweb/output/web/takuapa101-v1/data/photo-registry.json)
+- สร้าง OG ขนาด 1200×630 ที่ `site/assets/og/apaporn.png`
+- ตรวจ JSON ผ่าน และยืนยันว่าไฟล์ที่ห้ามแก้ไม่มีการแตะต้อง
+- เขียนสรุปตรวจปิดงานไว้ที่ [fix-apaporn-assets.md](D:/Siwaracafeweb/output/web/takuapa101-v1/audit/fix-apaporn-assets.md)
+diff --git a/output/web/takuapa101-v1/audit/fix-apaporn-assets.md b/output/web/takuapa101-v1/audit/fix-apaporn-assets.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..bc8bc3531921f559c40656bf627d105bd2b076c2
+--- /dev/null
++++ b/output/web/takuapa101-v1/audit/fix-apaporn-assets.md
+@@ -0,0 +1,18 @@
++# ตรวจปิดงาน: รูปกระทู้ “อาภรณ์”
++
++วันที่ตรวจ: 2026-09-09
++
++- เพิ่มรูปจาก `D:\Takuapa\images\event\` จำนวน 9 ใบ ลง `site/assets/photos/`
++- แปลงด้วย Pillow เป็น WebP quality 80 และจำกัดด้านยาวไม่เกิน 1,400 px
++- ไฟล์ปลายทางครบ 9 ไฟล์ ทุกไฟล์ขนาดต่ำกว่า 400 KB (ประมาณ 108–230 KB)
++- เพิ่มระเบียนใหม่ใน `data/photo-registry.json` โดยใช้คำบรรยายตามทะเบียนที่กำหนด, `era: now`, สิทธิ์ใช้งาน และ `allowed_on` ตามโจทย์
++- สร้าง `site/assets/og/apaporn.png` ขนาด 1200×630 โดยใช้ `kuapapoh-charm-09.webp` และตัดคำไทยด้วย pythainlp engine `newmm` ตาม `make_og.py`
++
++## ผลตรวจ
++
++- `python -c "import json;json.load(open('data/photo-registry.json',encoding='utf-8'))"` — ผ่าน
++- ตรวจมิติและขนาดรูปปลายทาง — ผ่าน
++- ตรวจระเบียนใหม่ 9 รายการและเส้นทาง `/stories/apaporn/` — ผ่าน
++- ไม่แก้ `stories.py`, `build_site.py`, `design.py` หรือไฟล์ใน `data/stories/`
++
++หมายเหตุ: พบการเปลี่ยนแปลง/ไฟล์ที่ไม่เกี่ยวข้องใน working tree อยู่ก่อนแล้ว จึงไม่ได้แตะต้อง
+
+tokens used
+29,929
+ดำเนินการเสร็จแล้วครับ
+
+- เพิ่มรูป WebP ครบ 9 ไฟล์ ขนาดไม่เกิน 400 KB และด้านยาวไม่เกิน 1400px
+- เพิ่มระเบียนใหม่ใน [photo-registry.json](D:/Siwaracafeweb/output/web/takuapa101-v1/data/photo-registry.json)
+- สร้าง OG ขนาด 1200×630 ที่ `site/assets/og/apaporn.png`
+- ตรวจ JSON ผ่าน และยืนยันว่าไฟล์ที่ห้ามแก้ไม่มีการแตะต้อง
+- เขียนสรุปตรวจปิดงานไว้ที่ [fix-apaporn-assets.md](D:/Siwaracafeweb/output/web/takuapa101-v1/audit/fix-apaporn-assets.md)

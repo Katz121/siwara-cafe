@@ -40,9 +40,9 @@ en = [p for p in pages if os.path.relpath(p, SITE).replace(os.sep, '/').startswi
 th = [p for p in pages if p not in en]
 
 print('\n== โครงสร้าง ==')
-check('มี 88 หน้า', len(pages) == 88, str(len(pages)))
+check('มี 90 หน้า', len(pages) == 90, str(len(pages)))
 locs = re.findall(r'<loc>(.*?)</loc>', read(os.path.join(SITE, 'sitemap.xml')))
-check('sitemap 88 URL ไม่ซ้ำ', len(locs) == 88 and len(set(locs)) == 88,
+check('sitemap 90 URL ไม่ซ้ำ', len(locs) == 90 and len(set(locs)) == 90,
       '%d URL · ไม่ซ้ำ %d' % (len(locs), len(set(locs))))
 
 print('\n== ข้อความ ==')

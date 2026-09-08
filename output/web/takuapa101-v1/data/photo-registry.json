@@ -174,6 +174,133 @@
       "caption_en": "Peranakan tile patterns still visible in the old town",
       "credit_en": "Kuapapoh project",
       "license_en": "Cleared for use on this site"
+    },
+    {
+      "file": "/assets/photos/kuapapoh-charm-09.webp",
+      "depicts_th": "ภาพเขียน Peranakan Charm No.9 · หญิงสาวสวมเสื้อครุยสีฟ้าปักดิ้นทอง ติดเข็มกลัดโกสัง สวมกำไลทอง ท่ามกลางดอกโบตั๋นและผีเสื้อ",
+      "caption_th": "ภาพเขียน Peranakan Charm No.9 · หญิงสาวสวมเสื้อครุยสีฟ้าปักดิ้นทอง ติดเข็มกลัดโกสัง สวมกำไลทอง ท่ามกลางดอกโบตั๋นและผีเสื้อ",
+      "allowed_on": [
+        "apaporn",
+        "kuapapoh"
+      ],
+      "era": "now",
+      "credit": "ช่างป๋อง · ติณณภพ งานสถิร",
+      "license": "ได้รับอนุญาตจากโครงการกั่วป่าโพ้",
+      "caption_en": "Peranakan Charm No. 9 · A woman in a blue, gold-embroidered kebaya with a kosang brooch and gold bracelet, among peonies and butterflies.",
+      "credit_en": "Changpong · Tinnapop Ngansathir",
+      "license_en": "Licensed by the Kuapapoh project"
+    },
+    {
+      "file": "/assets/photos/kuapapoh-charm-kebaya-pink.webp",
+      "depicts_th": "ภาพเขียนหญิงสาวสวมเสื้อเคบายาสีชมพูปักลายดอก ติดเข็มกลัดโกสังทองสามชิ้นเรียงกลางอก พื้นหลังสีน้ำเงินและดอกกุหลาบ",
+      "caption_th": "ภาพเขียนหญิงสาวสวมเสื้อเคบายาสีชมพูปักลายดอก ติดเข็มกลัดโกสังทองสามชิ้นเรียงกลางอก พื้นหลังสีน้ำเงินและดอกกุหลาบ",
+      "allowed_on": [
+        "apaporn"
+      ],
+      "era": "now",
+      "credit": "ช่างป๋อง · ติณณภพ งานสถิร",
+      "license": "ได้รับอนุญาตจากโครงการกั่วป่าโพ้",
+      "caption_en": "A woman in a pink floral-embroidered kebaya, wearing three gold kosang brooches, against a blue background with roses.",
+      "credit_en": "Changpong · Tinnapop Ngansathir",
+      "license_en": "Licensed by the Kuapapoh project"
+    },
+    {
+      "file": "/assets/photos/kuapapoh-charm-kebaya-green.webp",
+      "depicts_th": "ภาพเขียนหญิงสาวถักเปีย สวมเสื้อเคบายาสีเขียวน้ำทะเลปักลายดอกกุหลาบ พื้นหลังสีเหลืองทองกับดอกโบตั๋น",
+      "caption_th": "ภาพเขียนหญิงสาวถักเปีย สวมเสื้อเคบายาสีเขียวน้ำทะเลปักลายดอกกุหลาบ พื้นหลังสีเหลืองทองกับดอกโบตั๋น",
+      "allowed_on": [
+        "apaporn"
+      ],
+      "era": "now",
+      "credit": "ช่างป๋อง · ติณณภพ งานสถิร",
+      "license": "ได้รับอนุญาตจากโครงการกั่วป่าโพ้",
+      "caption_en": "A braided woman in a sea-green kebaya embroidered with roses, set against golden yellow and peonies.",
+      "credit_en": "Changpong · Tinnapop Ngansathir",
+      "license_en": "Licensed by the Kuapapoh project"
+    },
+    {
+      "file": "/assets/photos/kuapapoh-charm-lace-white.webp",
+      "depicts_th": "ภาพเขียนหญิงสาวสวมเสื้อลูกไม้ฉลุสีขาว นุ่งผ้าปาเต๊ะลายดอก ถือปิ่นโตลงรัก พื้นหลังสีเขียวมรกตลายผ้าปาเต๊ะ",
+      "caption_th": "ภาพเขียนหญิงสาวสวมเสื้อลูกไม้ฉลุสีขาว นุ่งผ้าปาเต๊ะลายดอก ถือปิ่นโตลงรัก พื้นหลังสีเขียวมรกตลายผ้าปาเต๊ะ",
+      "allowed_on": [
+        "apaporn"
+      ],
+      "era": "now",
+      "credit": "ช่างป๋อง · ติณณภพ งานสถิร",
+      "license": "ได้รับอนุญาตจากโครงการกั่วป่าโพ้",
+      "caption_en": "A woman in a white cutwork lace blouse and floral batik sarong, holding a lacquered tiffin carrier, against emerald batik.",
+      "credit_en": "Changpong · Tinnapop Ngansathir",
+      "license_en": "Licensed by the Kuapapoh project"
+    },
+    {
+      "file": "/assets/photos/kuapapoh-expo-corner.webp",
+      "depicts_th": "มุมแรกของนิทรรศการที่ 78 สตูดิโอ · ป้ายประวัติศิลปินบนขาตั้ง กับผลงานที่แขวนบนชั้นไม้เก่า",
+      "caption_th": "มุมแรกของนิทรรศการที่ 78 สตูดิโอ · ป้ายประวัติศิลปินบนขาตั้ง กับผลงานที่แขวนบนชั้นไม้เก่า",
+      "allowed_on": [
+        "apaporn"
+      ],
+      "era": "now",
+      "credit": "โครงการกั่วป่าโพ้ จีโชว์เมือง",
+      "license": "ได้รับอนุญาตจากโครงการกั่วป่าโพ้",
+      "caption_en": "The first corner of the exhibition at 78 Studio, with the artist biography on an easel and works hung on an old wooden shelf.",
+      "credit_en": "Kuapapoh project · Ji Show Muang",
+      "license_en": "Licensed by the Kuapapoh project"
+    },
+    {
+      "file": "/assets/photos/kuapapoh-charm-09-wall.webp",
+      "depicts_th": "ภาพเขียน Peranakan Charm No.9 แขวนอยู่บนชั้นไม้ในนิทรรศการ พร้อมป้ายกำกับขนาดผลงาน",
+      "caption_th": "ภาพเขียน Peranakan Charm No.9 แขวนอยู่บนชั้นไม้ในนิทรรศการ พร้อมป้ายกำกับขนาดผลงาน",
+      "allowed_on": [
+        "apaporn"
+      ],
+      "era": "now",
+      "credit": "โครงการกั่วป่าโพ้ จีโชว์เมือง",
+      "license": "ได้รับอนุญาตจากโครงการกั่วป่าโพ้",
+      "caption_en": "Peranakan Charm No. 9 hanging on a wooden shelf in the exhibition, with a label showing the work’s dimensions.",
+      "credit_en": "Kuapapoh project · Ji Show Muang",
+      "license_en": "Licensed by the Kuapapoh project"
+    },
+    {
+      "file": "/assets/photos/kuapapoh-expo-wall.webp",
+      "depicts_th": "ผนังผลงานชุดใหญ่ริมทางเดินในนิทรรศการ",
+      "caption_th": "ผนังผลงานชุดใหญ่ริมทางเดินในนิทรรศการ",
+      "allowed_on": [
+        "apaporn"
+      ],
+      "era": "now",
+      "credit": "โครงการกั่วป่าโพ้ จีโชว์เมือง",
+      "license": "ได้รับอนุญาตจากโครงการกั่วป่าโพ้",
+      "caption_en": "A wall of large works along the exhibition walkway.",
+      "credit_en": "Kuapapoh project · Ji Show Muang",
+      "license_en": "Licensed by the Kuapapoh project"
+    },
+    {
+      "file": "/assets/photos/kuapapoh-expo-shelf.webp",
+      "depicts_th": "ผลงานในกรอบทองวางบนชั้นไม้เก่าในนิทรรศการ",
+      "caption_th": "ผลงานในกรอบทองวางบนชั้นไม้เก่าในนิทรรศการ",
+      "allowed_on": [
+        "apaporn"
+      ],
+      "era": "now",
+      "credit": "โครงการกั่วป่าโพ้ จีโชว์เมือง",
+      "license": "ได้รับอนุญาตจากโครงการกั่วป่าโพ้",
+      "caption_en": "Gold-framed works displayed on an old wooden shelf in the exhibition.",
+      "credit_en": "Kuapapoh project · Ji Show Muang",
+      "license_en": "Licensed by the Kuapapoh project"
+    },
+    {
+      "file": "/assets/photos/kuapapoh-artist-card.webp",
+      "depicts_th": "การ์ดประวัติศิลปิน About the Artist ของนิทรรศการ มนต์เสน่ห์เปอรานากัน",
+      "caption_th": "การ์ดประวัติศิลปิน About the Artist ของนิทรรศการ มนต์เสน่ห์เปอรานากัน",
+      "allowed_on": [
+        "apaporn"
+      ],
+      "era": "now",
+      "credit": "โครงการกั่วป่าโพ้ จีโชว์เมือง",
+      "license": "ได้รับอนุญาตจากโครงการกั่วป่าโพ้",
+      "caption_en": "The exhibition’s About the Artist biography card for Peranakan Charm.",
+      "credit_en": "Kuapapoh project · Ji Show Muang",
+      "license_en": "Licensed by the Kuapapoh project"
     }
   ],
   "rejected": [

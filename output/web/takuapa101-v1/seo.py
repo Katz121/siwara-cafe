@@ -70,7 +70,7 @@ def entity(r, canonical):
 def schemas(path,title,record,body):
     canonical=SITE_BASE_URL+path
     result=[{'@context':'https://schema.org','@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'หน้าแรก','item':SITE_BASE_URL+'/'}]+([{'@type':'ListItem','position':2,'name':title,'item':canonical}] if path!='/' else [])}]
-    if path=='/':result.append({'@context':'https://schema.org','@type':'WebSite','name':'ตะกั่วป่า 101','url':canonical,'potentialAction':{'@type':'SearchAction','target':{'@type':'EntryPoint','urlTemplate':SITE_BASE_URL+'/places/?q={search_term_string}'},'query-input':'required name=search_term_string'}})
+    if path=='/':result.append({'@context':'https://schema.org','@type':'WebSite','name':'ตะกั่วป่า 101','url':canonical,'potentialAction':{'@type':'SearchAction','target':{'@type':'EntryPoint','urlTemplate':SITE_BASE_URL+'/places/?q={search_term_string}'},'query-input':'required name=search_term_string'},'publisher':{'@type':'Organization','name':'บ้านศิวรา ตะกั่วป่า','alternateName':'Baan Siwara Takua Pa','url':'https://siwaracafe.com/','sameAs':['https://siwaracafe.com/','https://www.facebook.com/siwaracafetakuapa/']},'isPartOf':{'@type':'WebSite','url':'https://siwaracafe.com/'}})
     if record:
         r=ENRICHED[record['id']];result.append(entity(r,canonical))
         questions=faq(r) if r['type']=='place' else []

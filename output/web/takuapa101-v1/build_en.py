@@ -110,6 +110,8 @@ def build_memory():
                 add(f_th.get('text_th'), f_en.get('text') or f_en.get('text_th'))
         for a, b in zip(th.get('pull_quotes') or [], en.get('pull_quotes') or []):
             add(a, b)
+        for g_th, g_en in zip(th.get('gallery') or [], en.get('gallery') or []):
+            add(g_th.get('heading_th'), g_en.get('heading_en') or g_en.get('heading'))
         eb_th, eb_en = th.get('evidence_box') or {}, en.get('evidence_box') or {}
         add(eb_th.get('heading_th'), eb_en.get('heading') or eb_en.get('heading_th'))
         for i_th, i_en in zip(eb_th.get('items') or [], eb_en.get('items') or []):

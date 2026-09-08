@@ -8,6 +8,7 @@ from pathlib import Path
 import json
 import glob
 import os
+from PIL import Image
 from dead_sources import source_link
 
 # ---- Photo registry guard ----
@@ -41,6 +42,33 @@ def registry_caption(photo, lang='th'):
     """Return captions only from the registry; story JSON cannot override them."""
     key = 'caption_en' if lang == 'en' else 'caption_th'
     return (photo or {}).get(key, '')
+
+def story_gallery(story, lang='th'):
+    groups = story.get('gallery') or []
+    if isinstance(groups, dict): groups = [groups]
+    rendered = []
+    for group in groups:
+        cards = []
+        for file in group.get('files', []):
+            photo = photo_for(story.get('id'), file)
+            if not photo: continue
+            try: width, height = Image.open(ROOT / 'site' / file.lstrip('/')).size
+            except (OSError, ValueError): continue
+            caption = registry_caption(photo, lang)
+            credit = photo.get('credit_en' if lang == 'en' else 'credit', '')
+            cards.append(f'<figure class="story-gallery-card"><img src="{escape(file)}" alt="{escape(caption)}" loading="lazy" width="{width}" height="{height}"><figcaption><span>{escape(caption)}</span><span class="credit">{escape(credit)}</span></figcaption></figure>')
+        if cards:
+            heading = group.get('heading_en' if lang == 'en' else 'heading_th', '')
+            rendered.append(f'<section class="story-gallery-group"><h3>{escape(heading)}</h3><div class="story-gallery-grid">{"".join(cards)}</div></section>')
+    if not rendered: return ''
+    label = 'Gallery' if lang == 'en' else 'แกลเลอรีภาพ'
+    return f'<section class="story-gallery-v2"><h2>{label}</h2>{"".join(rendered)}</section>'
+
+def story_paragraph(text):
+    """Escape story copy while allowing the audited inline links we author."""
+    import re
+    out = escape(text)
+    return re.sub(r'\[([^\]]+)\]\((https://[^)]+)\)', r'<a href="\2" target="_blank" rel="noopener">\1</a>', out)
 
 
 ROOT = Path(__file__).parent
@@ -111,7 +139,7 @@ def get_all_stories():
                 stories_dict[sd['id']] = sd
         except Exception:
             pass
-    order = ['city', 'architecture', 'water-trade', 'food-people', 'kuapapoh']
+    order = ['city', 'architecture', 'water-trade', 'food-people', 'kuapapoh', 'apaporn']
     result = []
     for o in order:
         if o in stories_dict:
@@ -227,7 +255,17 @@ def article(story, ctx):
             sec_content += f'<figure class="section-photo-v2"><img src="{escape(sp["file"])}" alt="{escape(cap)}" loading="lazy"><figcaption><span>{escape(cap)}</span><span class="credit">{escape(sp.get("credit",""))}</span></figcaption></figure>'
         
         for p in sec.get("paragraphs", []):
-            sec_content += f'<p>{escape(p)}</p>'
+            sec_content += f'<p>{story_paragraph(p)}</p>'
+
+        # ย่อหน้าถูก escape ทั้งหมด จึงใส่ลิงก์ในเนื้อความไม่ได้
+        # section ที่ต้องการลิงก์ออกให้ประกาศไว้ใน "links" แล้วเรนเดอร์เป็นบรรทัดต่อท้าย
+        links = sec.get("links", [])
+        if links:
+            items = ''.join(
+                f'<a href="{escape(l["url"], True)}" target="_blank" rel="noopener">{escape(l["text_th"])}</a>'
+                for l in links if l.get("url") and l.get("text_th"))
+            if items:
+                sec_content += f'<p class="story-outlinks">{items}</p>'
             
         flags_html = ''
         for flag in sec.get("flags", []):
@@ -280,7 +318,8 @@ def article(story, ctx):
                 src_lis += f'<li><cite>{escape(src["title"])}</cite> · {escape(src["publisher"])} · {escape(src["locator"])} · {source_link(src["url"], "ดูแหล่งที่มา")}</li>'
     sources_html = f'<section class="story-sources-v2"><h2>แหล่งข้อมูล</h2><ol>{src_lis}</ol></section>'
 
-    return f'<div class="story-article-v2">{header}{hero_html}<div class="story-layout-v2"><div class="story-main-v2">{lede_html}{sections_html}{places_html}{story_outro(story.get("id"))}{un_html}{sources_html}</div><div class="story-sidebar-v2">{ev_html}{toc_html}</div></div></div>'
+    gallery_html = story_gallery(story, ctx.get("lang", "th"))
+    return f'<div class="story-article-v2">{header}{hero_html}<div class="story-layout-v2"><div class="story-main-v2">{lede_html}{sections_html}{places_html}{story_outro(story.get("id"))}{gallery_html}{un_html}{sources_html}</div><div class="story-sidebar-v2">{ev_html}{toc_html}</div></div></div>'
 
 def index(ctx):
     cards = ''

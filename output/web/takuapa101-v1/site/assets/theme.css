@@ -169,3 +169,10 @@
   .site-header nav a{min-height:44px}
   .tab-bar a{min-height:48px}
 }
+
+/* บนจอแคบ ปุ่มสลับภาษาของภาษาที่เปิดอยู่ไม่มีอะไรให้กด · เหลือไว้แต่ปุ่มที่พาไปอีกภาษา
+   ไม่งั้นแถบเครื่องมือกว้างเกินจอ (เจอตอนหน้าอังกฤษล้น 20px ที่ 390px) */
+@media (max-width:460px){
+  html[lang="en"] .site-header .lang-switch[hreflang="en"],
+  html[lang="th"] .site-header .lang-switch[hreflang="th"]{display:none}
+}

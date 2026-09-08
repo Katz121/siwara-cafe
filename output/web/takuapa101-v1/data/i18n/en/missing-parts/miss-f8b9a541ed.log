@@ -1,0 +1,305 @@
+เสร็จแล้วครับ
+
+ไฟล์: [miss-f8b9a541ed.json](D:/Siwaracafeweb/output/web/takuapa101-v1/data/i18n/en/missing-parts/miss-f8b9a541ed.json)
+
+ตรวจสอบแล้วด้วย `json.load`:
+
+- JSON ถูกต้อง
+- คีย์ครบ 24 รายการ
+- อ่านแบบ UTF-8 ได้สำเร็จ
+
+--ERR--
+OpenAI Codex v0.153.4
+--------
+workdir: D:\Siwaracafeweb\output\web\takuapa101-v1
+model: gpt-5.6-luna
+provider: openai
+approval: never
+sandbox: danger-full-access
+reasoning effort: low
+reasoning summaries: none
+session id: 01a0821f-6c96-77b2-abf7-9b4602417a59
+--------
+user
+โฟลเดอร์งาน D:\Siwaracafeweb\output\web\takuapa101-v1
+อ่าน `briefs/2026-09-07_english-spec.md` หัวข้อ "กฎการแปล" ให้ครบก่อนลงมือ
+
+แปลข้อความไทยต่อไปนี้เป็นภาษาอังกฤษ · ทั้งหมด 24 รายการ
+ข้อความเหล่านี้มาจากเว็บไกด์เมืองเก่าตะกั่วป่า มีทั้งป้ายสถานะ ปุ่ม หัวข้อ และเนื้อหา
+
+- ของกินตะกั่วป่า คาเฟ่ และจุดแวะพัก
+- เส้นทางเดินเที่ยวเมืองเก่าตะกั่วป่า
+- [{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "หน้าแรก", "item": "https://takuapa101.com/"}, {"@type": "ListItem", "position": 2, "name": "เรื่องเล่าตะกั่วป่า", "item": "https://takuapa101.com/stories/"}]}, {"@context": "https://schema.org", "@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": 1, "url": "https://takuapa101.com/stories/city/"}, {"@type": "ListItem", "position": 2, "url": "https://takuapa101.com/stories/architecture/"}, {"@type": "ListItem", "position": 3, "url": "https://takuapa101.com/stories/water-trade/"}, {"@type": "ListItem", "position": 4, "url": "https://takuapa101.com/stories/food-people/"}, {"@type": "ListItem", "position": 5, "url": "https://takuapa101.com/stories/kuapapoh/"}, {"@type": "ListItem", "position": 6, "url": "https://takuapa101.com/stories/apaporn/"}]}]
+- 5 นาที
+- อาภรณ์ · เมืองเก่าเปิดผนึก · ตะกั่วป่า 101
+- [{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "หน้าแรก", "item": "https://takuapa101.com/"}, {"@type": "ListItem", "position": 2, "name": "อาภรณ์ · เมืองเก่าเปิดผนึก", "item": "https://takuapa101.com/stories/apaporn/"}]}]
+- ปรับปรุงเมื่อ 2026-09-09 · เวลาอ่าน 5 นาที
+- โครงการกั่วป่าโพ้ฟื้นพื้นที่ว่างในอาคารเก่าให้เป็นพื้นที่สร้างสรรค์ บ้านเลขที่ 78 เดิมเป็นบ้านนายเหมืองและบริษัทเหมืองแร่ดีบุก ปัจจุบันเป็นกั่วป่าเหมืองมิวเซียมที่มีกิจกรรมหมุนเวียน · อ่านรายละเอียดของพื้นที่และโครงการได้ที่
+- เว็บไซต์กั่วป่าโพ้
+- ก่อนออกเดินทาง คุณตรวจสอบข่าวการจัดแสดงและรายละเอียดล่าสุดได้ที่
+- และติดตามภาพรวมโครงการได้ที่
+- กั่วป่าโพ้ · จีโชว์เมือง
+- กั่วป่าโพ้ · ข้อมูลโครงการ
+- · โครงการกั่วป่าโพ้ · content.json · hero, six, events, houses ·
+- · กั่วป่าโพ้ · หน้าสาธารณะของโครงการ ·
+- ตึกเก่าตะกั่วป่า สถาปัตยกรรมยุคเหมืองดีบุก
+- ประวัติตะกั่วป่า เมืองที่ย้ายตามสายน้ำ
+- อาหารบาบ๋าตะกั่วป่า รสชาติของชุมชนตลาดเก่า
+- การเดินสอบถามจากผู้คนในพื้นที่ หรือตรวจเช็กข้อมูลกับผู้ค้าโดยตรงก่อนการเดินทาง จึงเป็นวิธีที่ช่วยให้วางแผนการแวะกินได้ตรงกับสถานการณ์
+- กั่วป่าโพ้ บ้านเก่าตะกั่วป่าที่กลับมามีชีวิต
+- ความพยายามในการนำพื้นที่ทั้งสามแห่งนี้กลับมาใช้งาน เป็นการริเริ่มที่เต็มไปด้วยความมุ่งมั่นของเจ้าของโครงการในการเพิ่มมูลค่าทางเศรษฐกิจและสร้างคุณค่าให้เมือง แต่เราต้องเข้าใจร่วมกันว่า นี่เป็นคำอธิบายและการดำเนินการระดับโครงการชุมชน ไม่ใช่การประกาศสถานะโบราณสถานหรือการรับรองทางประวัติศาสตร์จากหน่วยงานภาครัฐ
+- ทุ่งตึกและแม่น้ำตะกั่วป่า เส้นทางการค้าโบราณ
+- ประเพณีตะกั่วป่า ตลอดทั้งปี
+- วางแผนเที่ยวตะกั่วป่า ทริปของคุณ
+
+เขียนไฟล์ `data/i18n/en/missing-parts/miss-f8b9a541ed.json` เป็น JSON object
+คีย์คือข้อความไทยเดิม **เป๊ะตัวต่อตัว** ค่าคือคำแปลอังกฤษ
+```
+{{"ยังไม่ยืนยัน": "Not verified", "ยืนยันแล้ว": "Verified"}}
+```
+
+กฎ:
+- คีย์ต้องเหมือนต้นฉบับทุกตัวอักษร รวมช่องว่างและลูกศร ↗ ห้ามแก้ไข
+- ค่าที่แปลให้คงลูกศร ↗ หรือ · ไว้ถ้าต้นฉบับมี
+- ป้ายสถานะให้สั้น กระชับ เช่น "ยังไม่ยืนยัน" -> "Not verified"
+- ห้ามเพิ่มข้อเท็จจริงที่ต้นฉบับไม่มี · คำกำกับความไม่แน่นอนต้องอยู่ครบ
+- ชื่อวัด ศาลเจ้า ถนน ให้ทับศัพท์ เช่น Wat Kongkha Phimuk, Thanon Si Takua Pa
+- ชื่อหน่วยงานราชการให้เขียนเป็น "ชื่อไทย (English name)"
+- ปีใช้ ค.ศ. พร้อมวงเล็บ พ.ศ. ถ้าต้นฉบับระบุ พ.ศ.
+- ห้าม em-dash และ en-dash · ห้ามคำโฆษณาลอย ๆ
+
+เขียนลง path จริง ห้ามลง scratch · **UTF-8 เท่านั้น**
+เสร็จแล้ว json.load ยืนยันว่าคีย์ครบ 24 รายการ แล้วรายงาน
+
+codex
+ผมจะอ่านหัวข้อ “กฎการแปล” ในไฟล์ brief ให้ครบก่อน จากนั้นจะสร้างไฟล์ JSON ตามคีย์ต้นฉบับแบบตรงตัวและตรวจด้วย `json.load` ว่ามีครบ 24 รายการและเป็น UTF-8 ครับ
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$p='"'briefs/2026-09-07_english-spec.md'; "'$lines=Get-Content -LiteralPath $p -Encoding UTF8; $start=($lines | Select-String -Pattern '"'กฎการแปล' | Select-Object -First 1).LineNumber; if(-not "'$start){throw '"'ไม่พบหัวข้อ กฎการแปล'}; "'$end=$lines.Count; for($i=$start; $i -le $lines.Count; $i++){ if($i -gt $start -and $lines[$i-1] -match '"'"'^#{1,6} '"'){"'$end=$i-1; break} }; $lines[($start-1)..($end-1)]' in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 117ms:
+## กฎการแปล
+1. **แปลเพื่อคนอ่านจริง ไม่ใช่แปลตรงตัว** · ชื่อเฉพาะให้ทับศัพท์แล้ววงเล็บคำอธิบาย เช่น
+   `Wat Boromthat Khiri Khet (the town's relic temple)` · `Tao Ming School (the town's first Chinese school)`
+2. ชื่อสถานที่ใช้ระบบทับศัพท์เดียวกันทั้งเว็บ · ทำ `data/i18n/romanisation.json` เป็นตารางกลาง
+3. **ห้ามเพิ่มข้อเท็จจริงที่ไม่มีในต้นฉบับไทย** และห้ามตัดคำกำกับความไม่แน่นอนทิ้ง
+   `ยังไม่ยืนยัน` ต้องกลายเป็น `not verified` ไม่ใช่หายไป
+   `สันนิษฐาน` เป็น `suggested, not settled`
+4. อธิบายบริบทที่คนต่างชาติไม่รู้เพิ่มได้ **เฉพาะที่เป็นความรู้ทั่วไป** เช่น บอกว่า Loy Krathong คือ
+   เทศกาลลอยกระทงเดือนพฤศจิกายน · แต่ห้ามเพิ่มข้อมูลเฉพาะของตะกั่วป่าที่ต้นฉบับไม่ได้พูด
+5. หน่วยและวันที่: ใช้ปี ค.ศ. ในภาษาอังกฤษ พร้อมวงเล็บ พ.ศ. ครั้งแรกที่ปรากฏในแต่ละหน้า
+6. เสียงเล่า: กระชับ ตรงไปตรงมา แบบคู่มือเดินทางที่ดี ไม่ใช่โบรชัวร์ ไม่ใช้คำโฆษณาเกินจริง
+   ห้าม `hidden gem`, `must-see`, `paradise`, `authentic` แบบลอย ๆ
+7. ห้าม em-dash และ en-dash · ใช้ `·` หรือเขียนเป็นประโยคใหม่
+8. **เขียนไฟล์เป็น UTF-8 เท่านั้น**
+
+
+codex
+อ่านกฎครบแล้วครับ จุดสำคัญที่นำมาใช้คือคงเครื่องหมาย `·` และลูกศรเดิม, ไม่เพิ่มข้อมูล, ใช้สำนวนคู่มือเดินทางกระชับ, หลีกเลี่ยง em-dash/en-dash และเขียน UTF-8 เท่านั้น ตอนนี้กำลังลงไฟล์จริงและจะตรวจจำนวนคีย์กับการโหลด JSON ต่อครับ
+apply patch
+patch: completed
+D:\Siwaracafeweb\output\web\takuapa101-v1\data\i18n\en\missing-parts\miss-f8b9a541ed.json
+diff --git a/output/web/takuapa101-v1/data/i18n/en/missing-parts/miss-f8b9a541ed.json b/output/web/takuapa101-v1/data/i18n/en/missing-parts/miss-f8b9a541ed.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..14e3c58f3c230116f2e7b663a29d4a8eb797bcb0
+--- /dev/null
++++ b/output/web/takuapa101-v1/data/i18n/en/missing-parts/miss-f8b9a541ed.json
+@@ -0,0 +1,26 @@
++{
++  "ของกินตะกั่วป่า คาเฟ่ และจุดแวะพัก": "Takuapa food, cafés, and places to stop",
++  "เส้นทางเดินเที่ยวเมืองเก่าตะกั่วป่า": "Walking route through Takuapa Old Town",
++  "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"หน้าแรก\", \"item\": \"https://takuapa101.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"เรื่องเล่าตะกั่วป่า\", \"item\": \"https://takuapa101.com/stories/\"}]}, {\"@context\": \"https://schema.org\", \"@type\": \"ItemList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"url\": \"https://takuapa101.com/stories/city/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"url\": \"https://takuapa101.com/stories/architecture/\"}, {\"@type\": \"ListItem\", \"position\": 3, \"url\": \"https://takuapa101.com/stories/water-trade/\"}, {\"@type\": \"ListItem\", \"position\": 4, \"url\": \"https://takuapa101.com/stories/food-people/\"}, {\"@type\": \"ListItem\", \"position\": 5, \"url\": \"https://takuapa101.com/stories/kuapapoh/\"}, {\"@type\": \"ListItem\", \"position\": 6, \"url\": \"https://takuapa101.com/stories/apaporn/\"}]}]": "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://takuapa101.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Stories of Takuapa\", \"item\": \"https://takuapa101.com/stories/\"}]}, {\"@context\": \"https://schema.org\", \"@type\": \"ItemList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"url\": \"https://takuapa101.com/stories/city/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"url\": \"https://takuapa101.com/stories/architecture/\"}, {\"@type\": \"ListItem\", \"position\": 3, \"url\": \"https://takuapa101.com/stories/water-trade/\"}, {\"@type\": \"ListItem\", \"position\": 4, \"url\": \"https://takuapa101.com/stories/food-people/\"}, {\"@type\": \"ListItem\", \"position\": 5, \"url\": \"https://takuapa101.com/stories/kuapapoh/\"}, {\"@type\": \"ListItem\", \"position\": 6, \"url\": \"https://takuapa101.com/stories/apaporn/\"}]}]",
++  "5 นาที": "5 minutes",
++  "อาภรณ์ · เมืองเก่าเปิดผนึก · ตะกั่วป่า 101": "Apaporn · Old Town Unsealed · Takuapa 101",
++  "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"หน้าแรก\", \"item\": \"https://takuapa101.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"อาภรณ์ · เมืองเก่าเปิดผนึก\", \"item\": \"https://takuapa101.com/stories/apaporn/\"}]}]": "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://takuapa101.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Apaporn · Old Town Unsealed\", \"item\": \"https://takuapa101.com/stories/apaporn/\"}]}]",
++  "ปรับปรุงเมื่อ 2026-09-09 · เวลาอ่าน 5 นาที": "Updated 2026-09-09 · 5-minute read",
++  "โครงการกั่วป่าโพ้ฟื้นพื้นที่ว่างในอาคารเก่าให้เป็นพื้นที่สร้างสรรค์ บ้านเลขที่ 78 เดิมเป็นบ้านนายเหมืองและบริษัทเหมืองแร่ดีบุก ปัจจุบันเป็นกั่วป่าเหมืองมิวเซียมที่มีกิจกรรมหมุนเวียน · อ่านรายละเอียดของพื้นที่และโครงการได้ที่": "The Kuapa Poh project has turned vacant space in an old building into a creative space. Number 78 was formerly the mine owner's house and the tin mining company's office. It is now the Kuapa Mining Museum, with rotating activities · Read more about the space and project at",
++  "เว็บไซต์กั่วป่าโพ้": "Kuapa Poh website",
++  "ก่อนออกเดินทาง คุณตรวจสอบข่าวการจัดแสดงและรายละเอียดล่าสุดได้ที่": "Before setting out, check exhibition news and the latest details at",
++  "และติดตามภาพรวมโครงการได้ที่": "Follow the project overview at",
++  "กั่วป่าโพ้ · จีโชว์เมือง": "Kuapa Poh · G-Show Muang",
++  "กั่วป่าโพ้ · ข้อมูลโครงการ": "Kuapa Poh · Project information",
++  "· โครงการกั่วป่าโพ้ · content.json · hero, six, events, houses ·": "· Kuapa Poh project · content.json · hero, six, events, houses ·",
++  "· กั่วป่าโพ้ · หน้าสาธารณะของโครงการ ·": "· Kuapa Poh · Public project page ·",
++  "ตึกเก่าตะกั่วป่า สถาปัตยกรรมยุคเหมืองดีบุก": "Takuapa's old buildings, architecture from the tin-mining era",
++  "ประวัติตะกั่วป่า เมืองที่ย้ายตามสายน้ำ": "The history of Takuapa, a town that moved with the river",
++  "อาหารบาบ๋าตะกั่วป่า รสชาติของชุมชนตลาดเก่า": "Takuapa Baba food, the flavors of the old-market community",
++  "การเดินสอบถามจากผู้คนในพื้นที่ หรือตรวจเช็กข้อมูลกับผู้ค้าโดยตรงก่อนการเดินทาง จึงเป็นวิธีที่ช่วยให้วางแผนการแวะกินได้ตรงกับสถานการณ์": "Asking local people or checking directly with vendors before your trip can help you plan food stops according to the current situation.",
++  "กั่วป่าโพ้ บ้านเก่าตะกั่วป่าที่กลับมามีชีวิต": "Kuapa Poh, an old Takuapa house brought back to life",
++  "ความพยายามในการนำพื้นที่ทั้งสามแห่งนี้กลับมาใช้งาน เป็นการริเริ่มที่เต็มไปด้วยความมุ่งมั่นของเจ้าของโครงการในการเพิ่มมูลค่าทางเศรษฐกิจและสร้างคุณค่าให้เมือง แต่เราต้องเข้าใจร่วมกันว่า นี่เป็นคำอธิบายและการดำเนินการระดับโครงการชุมชน ไม่ใช่การประกาศสถานะโบราณสถานหรือการรับรองทางประวัติศาสตร์จากหน่วยงานภาครัฐ": "The effort to bring these three places back into use reflects the project owners' determination to add economic value and create value for the town. But we should understand that this is a community-project description and initiative, not a declaration of historic-site status or historical certification by a government agency.",
++  "ทุ่งตึกและแม่น้ำตะกั่วป่า เส้นทางการค้าโบราณ": "Thung Tuk and the Takuapa River, an ancient trade route",
++  "ประเพณีตะกั่วป่า ตลอดทั้งปี": "Takuapa traditions throughout the year",
++  "วางแผนเที่ยวตะกั่วป่า ทริปของคุณ": "Plan your trip to Takuapa"
++}
+
+diff --git a/output/web/takuapa101-v1/data/i18n/en/missing-parts/miss-f8b9a541ed.json b/output/web/takuapa101-v1/data/i18n/en/missing-parts/miss-f8b9a541ed.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..14e3c58f3c230116f2e7b663a29d4a8eb797bcb0
+--- /dev/null
++++ b/output/web/takuapa101-v1/data/i18n/en/missing-parts/miss-f8b9a541ed.json
+@@ -0,0 +1,26 @@
++{
++  "ของกินตะกั่วป่า คาเฟ่ และจุดแวะพัก": "Takuapa food, cafés, and places to stop",
++  "เส้นทางเดินเที่ยวเมืองเก่าตะกั่วป่า": "Walking route through Takuapa Old Town",
++  "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"หน้าแรก\", \"item\": \"https://takuapa101.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"เรื่องเล่าตะกั่วป่า\", \"item\": \"https://takuapa101.com/stories/\"}]}, {\"@context\": \"https://schema.org\", \"@type\": \"ItemList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"url\": \"https://takuapa101.com/stories/city/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"url\": \"https://takuapa101.com/stories/architecture/\"}, {\"@type\": \"ListItem\", \"position\": 3, \"url\": \"https://takuapa101.com/stories/water-trade/\"}, {\"@type\": \"ListItem\", \"position\": 4, \"url\": \"https://takuapa101.com/stories/food-people/\"}, {\"@type\": \"ListItem\", \"position\": 5, \"url\": \"https://takuapa101.com/stories/kuapapoh/\"}, {\"@type\": \"ListItem\", \"position\": 6, \"url\": \"https://takuapa101.com/stories/apaporn/\"}]}]": "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://takuapa101.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Stories of Takuapa\", \"item\": \"https://takuapa101.com/stories/\"}]}, {\"@context\": \"https://schema.org\", \"@type\": \"ItemList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"url\": \"https://takuapa101.com/stories/city/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"url\": \"https://takuapa101.com/stories/architecture/\"}, {\"@type\": \"ListItem\", \"position\": 3, \"url\": \"https://takuapa101.com/stories/water-trade/\"}, {\"@type\": \"ListItem\", \"position\": 4, \"url\": \"https://takuapa101.com/stories/food-people/\"}, {\"@type\": \"ListItem\", \"position\": 5, \"url\": \"https://takuapa101.com/stories/kuapapoh/\"}, {\"@type\": \"ListItem\", \"position\": 6, \"url\": \"https://takuapa101.com/stories/apaporn/\"}]}]",
++  "5 นาที": "5 minutes",
++  "อาภรณ์ · เมืองเก่าเปิดผนึก · ตะกั่วป่า 101": "Apaporn · Old Town Unsealed · Takuapa 101",
++  "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"หน้าแรก\", \"item\": \"https://takuapa101.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"อาภรณ์ · เมืองเก่าเปิดผนึก\", \"item\": \"https://takuapa101.com/stories/apaporn/\"}]}]": "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://takuapa101.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Apaporn · Old Town Unsealed\", \"item\": \"https://takuapa101.com/stories/apaporn/\"}]}]",
++  "ปรับปรุงเมื่อ 2026-09-09 · เวลาอ่าน 5 นาที": "Updated 2026-09-09 · 5-minute read",
++  "โครงการกั่วป่าโพ้ฟื้นพื้นที่ว่างในอาคารเก่าให้เป็นพื้นที่สร้างสรรค์ บ้านเลขที่ 78 เดิมเป็นบ้านนายเหมืองและบริษัทเหมืองแร่ดีบุก ปัจจุบันเป็นกั่วป่าเหมืองมิวเซียมที่มีกิจกรรมหมุนเวียน · อ่านรายละเอียดของพื้นที่และโครงการได้ที่": "The Kuapa Poh project has turned vacant space in an old building into a creative space. Number 78 was formerly the mine owner's house and the tin mining company's office. It is now the Kuapa Mining Museum, with rotating activities · Read more about the space and project at",
++  "เว็บไซต์กั่วป่าโพ้": "Kuapa Poh website",
++  "ก่อนออกเดินทาง คุณตรวจสอบข่าวการจัดแสดงและรายละเอียดล่าสุดได้ที่": "Before setting out, check exhibition news and the latest details at",
++  "และติดตามภาพรวมโครงการได้ที่": "Follow the project overview at",
++  "กั่วป่าโพ้ · จีโชว์เมือง": "Kuapa Poh · G-Show Muang",
++  "กั่วป่าโพ้ · ข้อมูลโครงการ": "Kuapa Poh · Project information",
++  "· โครงการกั่วป่าโพ้ · content.json · hero, six, events, houses ·": "· Kuapa Poh project · content.json · hero, six, events, houses ·",
++  "· กั่วป่าโพ้ · หน้าสาธารณะของโครงการ ·": "· Kuapa Poh · Public project page ·",
++  "ตึกเก่าตะกั่วป่า สถาปัตยกรรมยุคเหมืองดีบุก": "Takuapa's old buildings, architecture from the tin-mining era",
++  "ประวัติตะกั่วป่า เมืองที่ย้ายตามสายน้ำ": "The history of Takuapa, a town that moved with the river",
++  "อาหารบาบ๋าตะกั่วป่า รสชาติของชุมชนตลาดเก่า": "Takuapa Baba food, the flavors of the old-market community",
++  "การเดินสอบถามจากผู้คนในพื้นที่ หรือตรวจเช็กข้อมูลกับผู้ค้าโดยตรงก่อนการเดินทาง จึงเป็นวิธีที่ช่วยให้วางแผนการแวะกินได้ตรงกับสถานการณ์": "Asking local people or checking directly with vendors before your trip can help you plan food stops according to the current situation.",
++  "กั่วป่าโพ้ บ้านเก่าตะกั่วป่าที่กลับมามีชีวิต": "Kuapa Poh, an old Takuapa house brought back to life",
++  "ความพยายามในการนำพื้นที่ทั้งสามแห่งนี้กลับมาใช้งาน เป็นการริเริ่มที่เต็มไปด้วยความมุ่งมั่นของเจ้าของโครงการในการเพิ่มมูลค่าทางเศรษฐกิจและสร้างคุณค่าให้เมือง แต่เราต้องเข้าใจร่วมกันว่า นี่เป็นคำอธิบายและการดำเนินการระดับโครงการชุมชน ไม่ใช่การประกาศสถานะโบราณสถานหรือการรับรองทางประวัติศาสตร์จากหน่วยงานภาครัฐ": "The effort to bring these three places back into use reflects the project owners' determination to add economic value and create value for the town. But we should understand that this is a community-project description and initiative, not a declaration of historic-site status or historical certification by a government agency.",
++  "ทุ่งตึกและแม่น้ำตะกั่วป่า เส้นทางการค้าโบราณ": "Thung Tuk and the Takuapa River, an ancient trade route",
++  "ประเพณีตะกั่วป่า ตลอดทั้งปี": "Takuapa traditions throughout the year",
++  "วางแผนเที่ยวตะกั่วป่า ทริปของคุณ": "Plan your trip to Takuapa"
++}
+
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command '$p='"'data/i18n/en/missing-parts/miss-f8b9a541ed.json'; "'$raw=[IO.File]::ReadAllText((Join-Path (Get-Location) $p), [Text.Encoding]::UTF8); $obj=$raw | ConvertFrom-Json; $count=$obj.PSObject.Properties.Count; $json=[System.Text.Json.JsonDocument]::Parse($raw); Write-Output "json.load-equivalent: OK"; Write-Output "key_count: $count"; if($count -ne 24){throw "Expected 24 keys, got $count"}; Write-Output "encoding: UTF-8 read OK"; Write-Output "path: $p"' in D:\Siwaracafeweb\output\web\takuapa101-v1
+ exited 1 in 269ms:
+Unable to find type [System.Text.Json.JsonDocument].
+At line:2 char:213
++ ... bject.Properties.Count; $json=[System.Text.Json.JsonDocument]::Parse( ...
++                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (System.Text.Json.JsonDocument:TypeName) [], RuntimeException
+    + FullyQualifiedErrorId : TypeNotFound
+ 
+json.load-equivalent: OK
+key_count: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+Expected 24 keys, got 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+At line:2 char:352
++ ... ount"; if($count -ne 24){throw "Expected 24 keys, got $count"}; Write ...
++                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (Expected 24 key...1 1 1 1 1 1 1 1:String) [], RuntimeException
+    + FullyQualifiedErrorId : Expected 24 keys, got 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 
+
+diff --git a/output/web/takuapa101-v1/data/i18n/en/missing-parts/miss-f8b9a541ed.json b/output/web/takuapa101-v1/data/i18n/en/missing-parts/miss-f8b9a541ed.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..14e3c58f3c230116f2e7b663a29d4a8eb797bcb0
+--- /dev/null
++++ b/output/web/takuapa101-v1/data/i18n/en/missing-parts/miss-f8b9a541ed.json
+@@ -0,0 +1,26 @@
++{
++  "ของกินตะกั่วป่า คาเฟ่ และจุดแวะพัก": "Takuapa food, cafés, and places to stop",
++  "เส้นทางเดินเที่ยวเมืองเก่าตะกั่วป่า": "Walking route through Takuapa Old Town",
++  "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"หน้าแรก\", \"item\": \"https://takuapa101.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"เรื่องเล่าตะกั่วป่า\", \"item\": \"https://takuapa101.com/stories/\"}]}, {\"@context\": \"https://schema.org\", \"@type\": \"ItemList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"url\": \"https://takuapa101.com/stories/city/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"url\": \"https://takuapa101.com/stories/architecture/\"}, {\"@type\": \"ListItem\", \"position\": 3, \"url\": \"https://takuapa101.com/stories/water-trade/\"}, {\"@type\": \"ListItem\", \"position\": 4, \"url\": \"https://takuapa101.com/stories/food-people/\"}, {\"@type\": \"ListItem\", \"position\": 5, \"url\": \"https://takuapa101.com/stories/kuapapoh/\"}, {\"@type\": \"ListItem\", \"position\": 6, \"url\": \"https://takuapa101.com/stories/apaporn/\"}]}]": "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://takuapa101.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Stories of Takuapa\", \"item\": \"https://takuapa101.com/stories/\"}]}, {\"@context\": \"https://schema.org\", \"@type\": \"ItemList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"url\": \"https://takuapa101.com/stories/city/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"url\": \"https://takuapa101.com/stories/architecture/\"}, {\"@type\": \"ListItem\", \"position\": 3, \"url\": \"https://takuapa101.com/stories/water-trade/\"}, {\"@type\": \"ListItem\", \"position\": 4, \"url\": \"https://takuapa101.com/stories/food-people/\"}, {\"@type\": \"ListItem\", \"position\": 5, \"url\": \"https://takuapa101.com/stories/kuapapoh/\"}, {\"@type\": \"ListItem\", \"position\": 6, \"url\": \"https://takuapa101.com/stories/apaporn/\"}]}]",
++  "5 นาที": "5 minutes",
++  "อาภรณ์ · เมืองเก่าเปิดผนึก · ตะกั่วป่า 101": "Apaporn · Old Town Unsealed · Takuapa 101",
++  "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"หน้าแรก\", \"item\": \"https://takuapa101.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"อาภรณ์ · เมืองเก่าเปิดผนึก\", \"item\": \"https://takuapa101.com/stories/apaporn/\"}]}]": "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://takuapa101.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Apaporn · Old Town Unsealed\", \"item\": \"https://takuapa101.com/stories/apaporn/\"}]}]",
++  "ปรับปรุงเมื่อ 2026-09-09 · เวลาอ่าน 5 นาที": "Updated 2026-09-09 · 5-minute read",
++  "โครงการกั่วป่าโพ้ฟื้นพื้นที่ว่างในอาคารเก่าให้เป็นพื้นที่สร้างสรรค์ บ้านเลขที่ 78 เดิมเป็นบ้านนายเหมืองและบริษัทเหมืองแร่ดีบุก ปัจจุบันเป็นกั่วป่าเหมืองมิวเซียมที่มีกิจกรรมหมุนเวียน · อ่านรายละเอียดของพื้นที่และโครงการได้ที่": "The Kuapa Poh project has turned vacant space in an old building into a creative space. Number 78 was formerly the mine owner's house and the tin mining company's office. It is now the Kuapa Mining Museum, with rotating activities · Read more about the space and project at",
++  "เว็บไซต์กั่วป่าโพ้": "Kuapa Poh website",
++  "ก่อนออกเดินทาง คุณตรวจสอบข่าวการจัดแสดงและรายละเอียดล่าสุดได้ที่": "Before setting out, check exhibition news and the latest details at",
++  "และติดตามภาพรวมโครงการได้ที่": "Follow the project overview at",
++  "กั่วป่าโพ้ · จีโชว์เมือง": "Kuapa Poh · G-Show Muang",
++  "กั่วป่าโพ้ · ข้อมูลโครงการ": "Kuapa Poh · Project information",
++  "· โครงการกั่วป่าโพ้ · content.json · hero, six, events, houses ·": "· Kuapa Poh project · content.json · hero, six, events, houses ·",
++  "· กั่วป่าโพ้ · หน้าสาธารณะของโครงการ ·": "· Kuapa Poh · Public project page ·",
++  "ตึกเก่าตะกั่วป่า สถาปัตยกรรมยุคเหมืองดีบุก": "Takuapa's old buildings, architecture from the tin-mining era",
++  "ประวัติตะกั่วป่า เมืองที่ย้ายตามสายน้ำ": "The history of Takuapa, a town that moved with the river",
++  "อาหารบาบ๋าตะกั่วป่า รสชาติของชุมชนตลาดเก่า": "Takuapa Baba food, the flavors of the old-market community",
++  "การเดินสอบถามจากผู้คนในพื้นที่ หรือตรวจเช็กข้อมูลกับผู้ค้าโดยตรงก่อนการเดินทาง จึงเป็นวิธีที่ช่วยให้วางแผนการแวะกินได้ตรงกับสถานการณ์": "Asking local people or checking directly with vendors before your trip can help you plan food stops according to the current situation.",
++  "กั่วป่าโพ้ บ้านเก่าตะกั่วป่าที่กลับมามีชีวิต": "Kuapa Poh, an old Takuapa house brought back to life",
++  "ความพยายามในการนำพื้นที่ทั้งสามแห่งนี้กลับมาใช้งาน เป็นการริเริ่มที่เต็มไปด้วยความมุ่งมั่นของเจ้าของโครงการในการเพิ่มมูลค่าทางเศรษฐกิจและสร้างคุณค่าให้เมือง แต่เราต้องเข้าใจร่วมกันว่า นี่เป็นคำอธิบายและการดำเนินการระดับโครงการชุมชน ไม่ใช่การประกาศสถานะโบราณสถานหรือการรับรองทางประวัติศาสตร์จากหน่วยงานภาครัฐ": "The effort to bring these three places back into use reflects the project owners' determination to add economic value and create value for the town. But we should understand that this is a community-project description and initiative, not a declaration of historic-site status or historical certification by a government agency.",
++  "ทุ่งตึกและแม่น้ำตะกั่วป่า เส้นทางการค้าโบราณ": "Thung Tuk and the Takuapa River, an ancient trade route",
++  "ประเพณีตะกั่วป่า ตลอดทั้งปี": "Takuapa traditions throughout the year",
++  "วางแผนเที่ยวตะกั่วป่า ทริปของคุณ": "Plan your trip to Takuapa"
++}
+
+codex
+การตรวจครั้งแรกอ่าน JSON ได้ แต่ PowerShell ประเมินจำนวนพร็อพเพอร์ตีเป็นอาร์เรย์ค่า `1` จึงไม่ใช่ตัวนับที่เชื่อถือได้ ผมจะยืนยันซ้ำด้วย Python `json.load` โดยตรงตามที่ขอ และตรวจคีย์ว่าครบ 24 รายการครับ
+exec
+"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "python -c \"import json; from pathlib import Path; p=Path(r'data/i18n/en/missing-parts/miss-f8b9a541ed.json'); raw=p.read_text(encoding='utf-8'); data=json.loads(raw); assert len(data)==24, len(data); print('json.load: OK'); print('key_count:', len(data)); print('utf-8: OK')\"" in D:\Siwaracafeweb\output\web\takuapa101-v1
+ succeeded in 106ms:
+json.load: OK
+key_count: 24
+utf-8: OK
+
+diff --git a/output/web/takuapa101-v1/data/i18n/en/missing-parts/miss-f8b9a541ed.json b/output/web/takuapa101-v1/data/i18n/en/missing-parts/miss-f8b9a541ed.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..14e3c58f3c230116f2e7b663a29d4a8eb797bcb0
+--- /dev/null
++++ b/output/web/takuapa101-v1/data/i18n/en/missing-parts/miss-f8b9a541ed.json
+@@ -0,0 +1,26 @@
++{
++  "ของกินตะกั่วป่า คาเฟ่ และจุดแวะพัก": "Takuapa food, cafés, and places to stop",
++  "เส้นทางเดินเที่ยวเมืองเก่าตะกั่วป่า": "Walking route through Takuapa Old Town",
++  "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"หน้าแรก\", \"item\": \"https://takuapa101.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"เรื่องเล่าตะกั่วป่า\", \"item\": \"https://takuapa101.com/stories/\"}]}, {\"@context\": \"https://schema.org\", \"@type\": \"ItemList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"url\": \"https://takuapa101.com/stories/city/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"url\": \"https://takuapa101.com/stories/architecture/\"}, {\"@type\": \"ListItem\", \"position\": 3, \"url\": \"https://takuapa101.com/stories/water-trade/\"}, {\"@type\": \"ListItem\", \"position\": 4, \"url\": \"https://takuapa101.com/stories/food-people/\"}, {\"@type\": \"ListItem\", \"position\": 5, \"url\": \"https://takuapa101.com/stories/kuapapoh/\"}, {\"@type\": \"ListItem\", \"position\": 6, \"url\": \"https://takuapa101.com/stories/apaporn/\"}]}]": "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://takuapa101.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Stories of Takuapa\", \"item\": \"https://takuapa101.com/stories/\"}]}, {\"@context\": \"https://schema.org\", \"@type\": \"ItemList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"url\": \"https://takuapa101.com/stories/city/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"url\": \"https://takuapa101.com/stories/architecture/\"}, {\"@type\": \"ListItem\", \"position\": 3, \"url\": \"https://takuapa101.com/stories/water-trade/\"}, {\"@type\": \"ListItem\", \"position\": 4, \"url\": \"https://takuapa101.com/stories/food-people/\"}, {\"@type\": \"ListItem\", \"position\": 5, \"url\": \"https://takuapa101.com/stories/kuapapoh/\"}, {\"@type\": \"ListItem\", \"position\": 6, \"url\": \"https://takuapa101.com/stories/apaporn/\"}]}]",
++  "5 นาที": "5 minutes",
++  "อาภรณ์ · เมืองเก่าเปิดผนึก · ตะกั่วป่า 101": "Apaporn · Old Town Unsealed · Takuapa 101",
++  "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"หน้าแรก\", \"item\": \"https://takuapa101.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"อาภรณ์ · เมืองเก่าเปิดผนึก\", \"item\": \"https://takuapa101.com/stories/apaporn/\"}]}]": "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://takuapa101.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Apaporn · Old Town Unsealed\", \"item\": \"https://takuapa101.com/stories/apaporn/\"}]}]",
++  "ปรับปรุงเมื่อ 2026-09-09 · เวลาอ่าน 5 นาที": "Updated 2026-09-09 · 5-minute read",
++  "โครงการกั่วป่าโพ้ฟื้นพื้นที่ว่างในอาคารเก่าให้เป็นพื้นที่สร้างสรรค์ บ้านเลขที่ 78 เดิมเป็นบ้านนายเหมืองและบริษัทเหมืองแร่ดีบุก ปัจจุบันเป็นกั่วป่าเหมืองมิวเซียมที่มีกิจกรรมหมุนเวียน · อ่านรายละเอียดของพื้นที่และโครงการได้ที่": "The Kuapa Poh project has turned vacant space in an old building into a creative space. Number 78 was formerly the mine owner's house and the tin mining company's office. It is now the Kuapa Mining Museum, with rotating activities · Read more about the space and project at",
++  "เว็บไซต์กั่วป่าโพ้": "Kuapa Poh website",
++  "ก่อนออกเดินทาง คุณตรวจสอบข่าวการจัดแสดงและรายละเอียดล่าสุดได้ที่": "Before setting out, check exhibition news and the latest details at",
++  "และติดตามภาพรวมโครงการได้ที่": "Follow the project overview at",
++  "กั่วป่าโพ้ · จีโชว์เมือง": "Kuapa Poh · G-Show Muang",
++  "กั่วป่าโพ้ · ข้อมูลโครงการ": "Kuapa Poh · Project information",
++  "· โครงการกั่วป่าโพ้ · content.json · hero, six, events, houses ·": "· Kuapa Poh project · content.json · hero, six, events, houses ·",
++  "· กั่วป่าโพ้ · หน้าสาธารณะของโครงการ ·": "· Kuapa Poh · Public project page ·",
++  "ตึกเก่าตะกั่วป่า สถาปัตยกรรมยุคเหมืองดีบุก": "Takuapa's old buildings, architecture from the tin-mining era",
++  "ประวัติตะกั่วป่า เมืองที่ย้ายตามสายน้ำ": "The history of Takuapa, a town that moved with the river",
++  "อาหารบาบ๋าตะกั่วป่า รสชาติของชุมชนตลาดเก่า": "Takuapa Baba food, the flavors of the old-market community",
++  "การเดินสอบถามจากผู้คนในพื้นที่ หรือตรวจเช็กข้อมูลกับผู้ค้าโดยตรงก่อนการเดินทาง จึงเป็นวิธีที่ช่วยให้วางแผนการแวะกินได้ตรงกับสถานการณ์": "Asking local people or checking directly with vendors before your trip can help you plan food stops according to the current situation.",
++  "กั่วป่าโพ้ บ้านเก่าตะกั่วป่าที่กลับมามีชีวิต": "Kuapa Poh, an old Takuapa house brought back to life",
++  "ความพยายามในการนำพื้นที่ทั้งสามแห่งนี้กลับมาใช้งาน เป็นการริเริ่มที่เต็มไปด้วยความมุ่งมั่นของเจ้าของโครงการในการเพิ่มมูลค่าทางเศรษฐกิจและสร้างคุณค่าให้เมือง แต่เราต้องเข้าใจร่วมกันว่า นี่เป็นคำอธิบายและการดำเนินการระดับโครงการชุมชน ไม่ใช่การประกาศสถานะโบราณสถานหรือการรับรองทางประวัติศาสตร์จากหน่วยงานภาครัฐ": "The effort to bring these three places back into use reflects the project owners' determination to add economic value and create value for the town. But we should understand that this is a community-project description and initiative, not a declaration of historic-site status or historical certification by a government agency.",
++  "ทุ่งตึกและแม่น้ำตะกั่วป่า เส้นทางการค้าโบราณ": "Thung Tuk and the Takuapa River, an ancient trade route",
++  "ประเพณีตะกั่วป่า ตลอดทั้งปี": "Takuapa traditions throughout the year",
++  "วางแผนเที่ยวตะกั่วป่า ทริปของคุณ": "Plan your trip to Takuapa"
++}
+
+codex
+เสร็จแล้วครับ
+
+ไฟล์: [miss-f8b9a541ed.json](D:/Siwaracafeweb/output/web/takuapa101-v1/data/i18n/en/missing-parts/miss-f8b9a541ed.json)
+
+ตรวจสอบแล้วด้วย `json.load`:
+
+- JSON ถูกต้อง
+- คีย์ครบ 24 รายการ
+- อ่านแบบ UTF-8 ได้สำเร็จ
+diff --git a/output/web/takuapa101-v1/data/i18n/en/missing-parts/miss-f8b9a541ed.json b/output/web/takuapa101-v1/data/i18n/en/missing-parts/miss-f8b9a541ed.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..14e3c58f3c230116f2e7b663a29d4a8eb797bcb0
+--- /dev/null
++++ b/output/web/takuapa101-v1/data/i18n/en/missing-parts/miss-f8b9a541ed.json
+@@ -0,0 +1,26 @@
++{
++  "ของกินตะกั่วป่า คาเฟ่ และจุดแวะพัก": "Takuapa food, cafés, and places to stop",
++  "เส้นทางเดินเที่ยวเมืองเก่าตะกั่วป่า": "Walking route through Takuapa Old Town",
++  "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"หน้าแรก\", \"item\": \"https://takuapa101.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"เรื่องเล่าตะกั่วป่า\", \"item\": \"https://takuapa101.com/stories/\"}]}, {\"@context\": \"https://schema.org\", \"@type\": \"ItemList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"url\": \"https://takuapa101.com/stories/city/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"url\": \"https://takuapa101.com/stories/architecture/\"}, {\"@type\": \"ListItem\", \"position\": 3, \"url\": \"https://takuapa101.com/stories/water-trade/\"}, {\"@type\": \"ListItem\", \"position\": 4, \"url\": \"https://takuapa101.com/stories/food-people/\"}, {\"@type\": \"ListItem\", \"position\": 5, \"url\": \"https://takuapa101.com/stories/kuapapoh/\"}, {\"@type\": \"ListItem\", \"position\": 6, \"url\": \"https://takuapa101.com/stories/apaporn/\"}]}]": "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://takuapa101.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Stories of Takuapa\", \"item\": \"https://takuapa101.com/stories/\"}]}, {\"@context\": \"https://schema.org\", \"@type\": \"ItemList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"url\": \"https://takuapa101.com/stories/city/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"url\": \"https://takuapa101.com/stories/architecture/\"}, {\"@type\": \"ListItem\", \"position\": 3, \"url\": \"https://takuapa101.com/stories/water-trade/\"}, {\"@type\": \"ListItem\", \"position\": 4, \"url\": \"https://takuapa101.com/stories/food-people/\"}, {\"@type\": \"ListItem\", \"position\": 5, \"url\": \"https://takuapa101.com/stories/kuapapoh/\"}, {\"@type\": \"ListItem\", \"position\": 6, \"url\": \"https://takuapa101.com/stories/apaporn/\"}]}]",
++  "5 นาที": "5 minutes",
++  "อาภรณ์ · เมืองเก่าเปิดผนึก · ตะกั่วป่า 101": "Apaporn · Old Town Unsealed · Takuapa 101",
++  "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"หน้าแรก\", \"item\": \"https://takuapa101.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"อาภรณ์ · เมืองเก่าเปิดผนึก\", \"item\": \"https://takuapa101.com/stories/apaporn/\"}]}]": "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://takuapa101.com/\"}, {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Apaporn · Old Town Unsealed\", \"item\": \"https://takuapa101.com/stories/apaporn/\"}]}]",
++  "ปรับปรุงเมื่อ 2026-09-09 · เวลาอ่าน 5 นาที": "Updated 2026-09-09 · 5-minute read",
++  "โครงการกั่วป่าโพ้ฟื้นพื้นที่ว่างในอาคารเก่าให้เป็นพื้นที่สร้างสรรค์ บ้านเลขที่ 78 เดิมเป็นบ้านนายเหมืองและบริษัทเหมืองแร่ดีบุก ปัจจุบันเป็นกั่วป่าเหมืองมิวเซียมที่มีกิจกรรมหมุนเวียน · อ่านรายละเอียดของพื้นที่และโครงการได้ที่": "The Kuapa Poh project has turned vacant space in an old building into a creative space. Number 78 was formerly the mine owner's house and the tin mining company's office. It is now the Kuapa Mining Museum, with rotating activities · Read more about the space and project at",
++  "เว็บไซต์กั่วป่าโพ้": "Kuapa Poh website",
++  "ก่อนออกเดินทาง คุณตรวจสอบข่าวการจัดแสดงและรายละเอียดล่าสุดได้ที่": "Before setting out, check exhibition news and the latest details at",
++  "และติดตามภาพรวมโครงการได้ที่": "Follow the project overview at",
++  "กั่วป่าโพ้ · จีโชว์เมือง": "Kuapa Poh · G-Show Muang",
++  "กั่วป่าโพ้ · ข้อมูลโครงการ": "Kuapa Poh · Project information",
++  "· โครงการกั่วป่าโพ้ · content.json · hero, six, events, houses ·": "· Kuapa Poh project · content.json · hero, six, events, houses ·",
++  "· กั่วป่าโพ้ · หน้าสาธารณะของโครงการ ·": "· Kuapa Poh · Public project page ·",
++  "ตึกเก่าตะกั่วป่า สถาปัตยกรรมยุคเหมืองดีบุก": "Takuapa's old buildings, architecture from the tin-mining era",
++  "ประวัติตะกั่วป่า เมืองที่ย้ายตามสายน้ำ": "The history of Takuapa, a town that moved with the river",
++  "อาหารบาบ๋าตะกั่วป่า รสชาติของชุมชนตลาดเก่า": "Takuapa Baba food, the flavors of the old-market community",
++  "การเดินสอบถามจากผู้คนในพื้นที่ หรือตรวจเช็กข้อมูลกับผู้ค้าโดยตรงก่อนการเดินทาง จึงเป็นวิธีที่ช่วยให้วางแผนการแวะกินได้ตรงกับสถานการณ์": "Asking local people or checking directly with vendors before your trip can help you plan food stops according to the current situation.",
++  "กั่วป่าโพ้ บ้านเก่าตะกั่วป่าที่กลับมามีชีวิต": "Kuapa Poh, an old Takuapa house brought back to life",
++  "ความพยายามในการนำพื้นที่ทั้งสามแห่งนี้กลับมาใช้งาน เป็นการริเริ่มที่เต็มไปด้วยความมุ่งมั่นของเจ้าของโครงการในการเพิ่มมูลค่าทางเศรษฐกิจและสร้างคุณค่าให้เมือง แต่เราต้องเข้าใจร่วมกันว่า นี่เป็นคำอธิบายและการดำเนินการระดับโครงการชุมชน ไม่ใช่การประกาศสถานะโบราณสถานหรือการรับรองทางประวัติศาสตร์จากหน่วยงานภาครัฐ": "The effort to bring these three places back into use reflects the project owners' determination to add economic value and create value for the town. But we should understand that this is a community-project description and initiative, not a declaration of historic-site status or historical certification by a government agency.",
++  "ทุ่งตึกและแม่น้ำตะกั่วป่า เส้นทางการค้าโบราณ": "Thung Tuk and the Takuapa River, an ancient trade route",
++  "ประเพณีตะกั่วป่า ตลอดทั้งปี": "Takuapa traditions throughout the year",
++  "วางแผนเที่ยวตะกั่วป่า ทริปของคุณ": "Plan your trip to Takuapa"
++}
+
+tokens used
+14,481
