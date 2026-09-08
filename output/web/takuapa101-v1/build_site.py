@@ -53,14 +53,14 @@ def source(): return f'<aside class="source"><h2>ที่มาของข้�
 NAV_PRIMARY=[('places','สถานที่'),('stories','เรื่องเล่า'),('map','แผนที่'),('rest','กินเที่ยว'),('news','ความเคลื่อนไหว'),('trip','ทริปของคุณ')]
 NAV_MORE=[('traditions','ประเพณี'),('eat','กินและของฝาก'),('routes','เส้นทางเดิน'),('leaflet','แผ่นพับ'),('about','เกี่ยวกับ')]
 nav=NAV_PRIMARY+NAV_MORE
-def page(path,title,desc,body,record=None,og_id=None):
+def page(path,title,desc,body,record=None,og_id=None,story=None):
  body = design.transform(path, body, globals(), record)
  if path == '/map/':
   title = 'แผนที่ตะกั่วป่า เมืองเก่าและย่านยาว'
   desc = 'แผนที่เที่ยวตะกั่วป่าปักหมุดสถานที่จริง กดนำทางด้วย Google Maps ได้ทันที พร้อมภาพแผนที่เทศบาลซ้อนทับ'
  canonical=BASE+path
- schema, body = seo.schemas(path, title, record, body)
  og_image=BASE+"/assets/og/"+(og_id or (record["id"] if record else "default"))+".png"
+ schema, body = seo.schemas(path, title, record, body, story, og_image)
  meta={"og:title":title,"og:description":desc,"og:url":canonical,"og:type":"website","og:image":og_image,"og:locale":"th_TH","og:site_name":"ตะกั่วป่า 101","twitter:card":"summary_large_image","twitter:image":og_image}
  social="".join(f'<meta {"property" if k.startswith("og:") else "name"}="{k}" content="{esc(v)}">' for k,v in meta.items())
  def _link(slug, label, extra=''):
@@ -364,7 +364,7 @@ for story in stories.get_all_stories():
  # ใช้การ์ดแชร์ของกระทู้เองถ้ามี ไม่งั้นตกไปเป็นภาพ default
  _og = story['id'] if (OUT / 'assets' / 'og' / f"{story['id']}.png").exists() else None
  page(route, _short_th.get(story['id'], story['title']), story['dek'],
-      stories.article(story, {'byid': byid}), og_id=_og)
+      stories.article(story, {'byid': byid}), og_id=_og, story=story)
 
 (OUT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join(f'<url><loc>{esc(BASE+p)}</loc><lastmod>{date.today().isoformat()}</lastmod></url>' for p in PAGES)+'</urlset>',encoding='utf-8')
 for name in ['NotoSerifThai','IBMPlexSansThaiLooped-Regular','CormorantGaramond']:

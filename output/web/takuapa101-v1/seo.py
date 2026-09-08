@@ -67,9 +67,49 @@ def entity(r, canonical):
         if value in months:s['eventSchedule']={'@type':'Schedule','repeatFrequency':'P1Y','byMonth':months.index(value)+1}
     return s
 
-def schemas(path,title,record,body):
+# บ้านศิวราเป็นผู้จัดทำเว็บนี้ · ประกาศเป็น Organization ในช่อง publisher
+# ซึ่งเป็นช่องที่ถูกต้องสำหรับองค์กร · ช่อง author ไว้สำหรับคนที่เขียนจริง
+# เนื้อหาบทความเรียบเรียงจากเอกสารราชการ จึงไม่อ้างว่าคาเฟ่เป็นผู้เขียน
+PUBLISHER = {
+    '@type': 'Organization',
+    'name': 'บ้านศิวรา ตะกั่วป่า',
+    'alternateName': ['ศิวรา คาเฟ่', 'Siwara Cafe', 'Baan Siwara Takua Pa'],
+    'url': 'https://siwaracafe.com/',
+    'sameAs': ['https://siwaracafe.com/',
+               'https://www.facebook.com/siwaracafetakuapa/',
+               'https://www.instagram.com/si.wara_cafe/'],
+}
+
+
+def article_schema(canonical, title, desc, story, og_image):
+    """Article schema ให้หน้ากระทู้ · เดิมหน้าพวกนี้มีแค่ BreadcrumbList
+    เสิร์ชเอนจินจึงไม่รู้ว่าเป็นบทความ ใครจัดทำ และอัปเดตเมื่อไร"""
+    updated = (story.get('updated') or '').strip()
+    d = {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        'headline': title[:110],
+        'description': desc,
+        'mainEntityOfPage': {'@type': 'WebPage', '@id': canonical},
+        'url': canonical,
+        'inLanguage': 'th-TH',
+        'publisher': PUBLISHER,
+        'isPartOf': {'@type': 'WebSite', 'name': 'ตะกั่วป่า 101', 'url': SITE_BASE_URL + '/'},
+        'about': {'@type': 'Place', 'name': 'เมืองเก่าตะกั่วป่า จังหวัดพังงา'},
+    }
+    if updated:
+        d['datePublished'] = updated
+        d['dateModified'] = updated
+    if og_image:
+        d['image'] = og_image
+    return d
+
+
+def schemas(path,title,record,body,story=None,og_image=None):
     canonical=SITE_BASE_URL+path
     result=[{'@context':'https://schema.org','@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'หน้าแรก','item':SITE_BASE_URL+'/'}]+([{'@type':'ListItem','position':2,'name':title,'item':canonical}] if path!='/' else [])}]
+    if story:
+        result.append(article_schema(canonical, title, story.get('dek',''), story, og_image))
     if path=='/':result.append({'@context':'https://schema.org','@type':'WebSite','name':'ตะกั่วป่า 101','url':canonical,'potentialAction':{'@type':'SearchAction','target':{'@type':'EntryPoint','urlTemplate':SITE_BASE_URL+'/places/?q={search_term_string}'},'query-input':'required name=search_term_string'},'publisher':{'@type':'Organization','name':'บ้านศิวรา ตะกั่วป่า','alternateName':'Baan Siwara Takua Pa','url':'https://siwaracafe.com/','sameAs':['https://siwaracafe.com/','https://www.facebook.com/siwaracafetakuapa/']},'isPartOf':{'@type':'WebSite','url':'https://siwaracafe.com/'}})
     if record:
         r=ENRICHED[record['id']];result.append(entity(r,canonical))

@@ -272,6 +272,47 @@ def repoint_links(html):
     return re.sub(r'\b(href|action)=(["\'])([^"\']+)\2', sub, html)
 
 
+def localise_jsonld(html, en_url, th_url, title_en, mem):
+    """JSON-LD อยู่ใน <script> ตัวแปลข้อความจึงข้ามไป · หน้าอังกฤษเลยได้ schema
+    ที่ headline เป็นไทยและบอก inLanguage th-TH · แก้ทีละก้อนด้วย json จริง"""
+    import json as _j
+
+    def fix(node):
+        if isinstance(node, list):
+            return [fix(x) for x in node]
+        if not isinstance(node, dict):
+            return node
+        if node.get('inLanguage') in ('th-TH', 'th'):
+            node['inLanguage'] = 'en-GB'
+        for key in ('url', '@id', 'item'):
+            v = node.get(key)
+            if isinstance(v, str) and v == th_url:
+                node[key] = en_url
+        if node.get('@type') == 'Article':
+            node['headline'] = title_en[:110]
+            node['url'] = en_url
+            node['mainEntityOfPage'] = {'@type': 'WebPage', '@id': en_url}
+            desc = node.get('description')
+            if isinstance(desc, str) and mem.get(desc):
+                node['description'] = mem[desc]
+            about = node.get('about')
+            if isinstance(about, dict) and mem.get(about.get('name')):
+                about['name'] = mem[about['name']]
+            pub = node.get('publisher')
+            if isinstance(pub, dict) and mem.get(pub.get('name')):
+                pub['name'] = mem[pub['name']]
+        return {k: fix(v) for k, v in node.items()}
+
+    def one(m):
+        try:
+            data = _j.loads(m.group(2))
+        except Exception:
+            return m.group(0)
+        return m.group(1) + _j.dumps(fix(data), ensure_ascii=False).replace('</', '<\/') + m.group(3)
+
+    return re.sub(r'(<script type="application/ld\+json"[^>]*>)(.*?)(</script>)', one, html, flags=re.S)
+
+
 def english_meta_for(route, en_meta, places_en, places_th, stories_en):
     """Title and description for an English page.
 
@@ -387,7 +428,7 @@ def main():
                 f'<link rel="alternate" hreflang="x-default" href="{esc(th_url)}">')
         if 'hreflang="en"' not in out:
             out = out.replace('</head>', alts + '</head>', 1)
-        out = out.replace('"@context": "https://schema.org"', '"@context": "https://schema.org", "inLanguage": "en"')
+        out = localise_jsonld(out, en_url, th_url, t_en, mem)
         switch = f'<a class="lang-switch" href="{esc((BASE_PATH or "") + ("/" if route == "/" else route))}" hreflang="th" lang="th">ไทย</a>'
         out = out.replace('<div class="header-tools">', '<div class="header-tools">' + switch, 1)
 
