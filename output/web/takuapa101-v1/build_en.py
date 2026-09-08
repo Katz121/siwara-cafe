@@ -237,6 +237,60 @@ def repoint_links(html):
     return re.sub(r'\b(href|action)=(["\'])([^"\']+)\2', sub, html)
 
 
+def english_meta_for(route, en_meta, places_en, places_th, stories_en):
+    """Title and description for an English page.
+
+    The hand written table covers the section pages. Place, tradition and story
+    pages are generated from the translated data plus the English search terms
+    the research collected, so every English page gets English metadata rather
+    than inheriting the Thai.
+    """
+    hit = en_meta.get(route)
+    if hit:
+        return hit
+
+    parts = route.strip('/').split('/')
+    if len(parts) == 2 and parts[0] in ('places', 'traditions'):
+        pid = parts[1]
+        en = places_en.get(pid) or {}
+        th = places_th.get(pid) or {}
+        name = en.get('name') or th.get('name_en') or th.get('name_th') or pid
+        # A parenthetical gloss belongs in the description, not the title, where
+        # it only gets cut off mid word.
+        name = re.sub(r'\s*\([^)]*\)', '', name).strip()
+        # A few English keyword lists carry a Thai word; it must not reach an
+        # English title or description.
+        kws = [k for k in ((th.get('seo') or {}).get('keywords_en') or [])
+               if not re.search(r'[฀-๿]', k)]
+        alias = next((k for k in kws if k.lower() != name.lower()
+                      and name.lower() not in k.lower() and 4 < len(k) < 34), '')
+        LIMIT = 44
+        title = name
+        if alias and len(name) + len(alias) + 3 <= LIMIT:
+            title = f'{name} · {alias}'
+        if 'takua' not in title.lower() and len(title) + 11 <= LIMIT:
+            title = f'{title}, Takua Pa'
+        if len(title) > LIMIT:
+            title = title[:LIMIT].rsplit(' ', 1)[0]
+        title = title.rstrip(' ·,')
+        lead = (en.get('lead') or '').strip().rstrip('.')
+        extras = [k for k in kws if k.lower() not in title.lower()][:3]
+        desc = lead or f'{name} in Takua Pa old town, Phang Nga.'
+        if extras:
+            room = 150 - len(' · '.join(extras)) - 3
+            desc = desc[:max(room, 40)].rstrip(' ·.') + ' · ' + ' · '.join(extras)
+        return title[:60], desc[:158]
+
+    if len(parts) == 2 and parts[0] == 'stories':
+        st = stories_en.get(parts[1]) or {}
+        short = load('data/seo-titles-en.json').get(parts[1])
+        title = (short or st.get('title') or '').strip()
+        dek = (st.get('dek') or '').strip()
+        if title:
+            return title[:60], (dek or title)[:158]
+    return None
+
+
 def main():
     mem = build_memory()
     print(f'คำแปลในหน่วยความจำ {len(mem)} รายการ')
@@ -252,6 +306,16 @@ def main():
         pages.append((route, os.path.join(dirpath, 'index.html')))
 
     en_meta = load('data/i18n/en/meta.json')
+    places_en = load('data/i18n/en/places.json')
+    places_th = {r['id']: r for r in load('data/places-enriched.json', [])}
+    stories_en = {}
+    for fp in glob.glob(os.path.join(I18N, 'stories', '*.json')):
+        try:
+            sd = json.load(open(fp, encoding='utf-8'))
+            if sd.get('id'):
+                stories_en[sd['id']] = sd
+        except Exception:
+            continue
     made = skipped = 0
     for route, src in sorted(pages):
         html = open(src, encoding='utf-8').read()
@@ -267,7 +331,7 @@ def main():
         out = repoint_links(out)
         out = out.replace('<html lang="th"', '<html lang="en"', 1)
         # English search intent is not a translation of the Thai phrasing.
-        pair = en_meta.get(route)
+        pair = english_meta_for(route, en_meta, places_en, places_th, stories_en)
         if pair:
             t_en, d_en = pair
             out = re.sub(r'<title>.*?</title>', '<title>' + esc(t_en) + ' · Takua Pa 101</title>', out, count=1, flags=re.S)

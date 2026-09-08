@@ -348,9 +348,10 @@ page('/news/','ข่าวตะกั่วป่า งานและกิ�
 
 stories.write_audit()
 page('/stories/','เรื่องเล่าตะกั่วป่า','บทความประวัติศาสตร์และวัฒนธรรมตะกั่วป่าจากแหล่งข้อมูลทางการ แยกระดับหลักฐานชัดเจน',stories.index({'byid': byid}))
+_short_th = json.loads((DATA/'seo-titles-th.json').read_text(encoding='utf-8'))
 for story in stories.get_all_stories():
  route = story.get('route') or f"/stories/{story['id']}/"
- page(route, story['title'], story['dek'], stories.article(story, {'byid': byid}))
+ page(route, _short_th.get(story['id'], story['title']), story['dek'], stories.article(story, {'byid': byid}))
 page('/rest/', 'ของกินตะกั่วป่า คาเฟ่ และจุดแวะพัก', 'ร้านอาหารและคาเฟ่ตะกั่วป่าที่มีคนไปมาเองแล้ว ของกินตะกั่วป่าและของฝากขึ้นชื่อ พร้อมเวลาเปิดและพิกัดนำทาง', render_rest())
 
 (OUT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join(f'<url><loc>{esc(BASE+p)}</loc><lastmod>{date.today().isoformat()}</lastmod></url>' for p in PAGES)+'</urlset>',encoding='utf-8')
