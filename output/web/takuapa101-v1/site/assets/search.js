@@ -134,13 +134,24 @@
   var btn = document.querySelector('[data-nav-toggle]');
   if (!nav || !btn) return;
   function sync() {
+    var open = btn.getAttribute('aria-expanded') === 'true';
     if (mq.matches) {
-      nav.hidden = btn.getAttribute('aria-expanded') !== 'true';
+      // Phone: the whole menu is the drawer.
+      nav.hidden = !open;
+      nav.classList.remove('is-open');
     } else {
+      // Desktop: six links stay in the bar and the drawer adds the rest.
       nav.hidden = false;
-      btn.setAttribute('aria-expanded', 'false');
+      nav.classList.toggle('is-open', open);
     }
   }
+
+  document.addEventListener('click', function (e) {
+    if (btn.getAttribute('aria-expanded') !== 'true') return;
+    if (e.target.closest('#main-nav') || e.target.closest('[data-nav-toggle]')) return;
+    btn.setAttribute('aria-expanded', 'false');
+    sync();
+  });
   btn.addEventListener('click', function () {
     btn.setAttribute('aria-expanded', btn.getAttribute('aria-expanded') === 'true' ? 'false' : 'true');
     sync();

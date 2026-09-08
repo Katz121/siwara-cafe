@@ -1,0 +1,151 @@
+/* ============================================================
+   Night theme · the old town after the shops close
+   The palette is not an inversion: it takes the lamp light of the
+   culture street at night, warm ink over deep green, so the
+   illustrations still read as ink on paper rather than glowing.
+   ============================================================ */
+
+:root{
+  color-scheme: light;
+  --shadow-soft: 0 12px 20px #4834190c;
+  --header-bg: rgba(250,245,233,.97);
+  --card-bg: #fcf6e8;
+  --card-edge: #c7b594;
+  --open-row: #f2ead9;
+  --on-ink: #d2d9ca;
+  --map-stage: #e7e0d2;
+  --map-dot: #bdb6a7;
+  --art-blend: multiply;
+}
+
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --paper:#141d1a;
+  --sand:#1d2a25;
+  --art:#e8dcc0;          /* illustrations keep a warm ground so ink stays legible */
+  --ink:#eae3d2;
+  --muted:#9aa89c;
+  --rust:#e0895f;
+  --line:#33453d;
+  --lime:#cfe08a;
+  --shadow-soft: 0 14px 26px #0006;
+  --header-bg: rgba(20,29,26,.94);
+  --card-bg:#1b2723;
+  --card-edge:#3a4d44;
+  --open-row:#1b2723;
+  --on-ink:#c6d2c4;
+  --map-stage:#101815;
+  --map-dot:#2b3a33;
+  --art-blend: normal;
+}
+
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --paper:#141d1a; --sand:#1d2a25; --art:#e8dcc0; --ink:#eae3d2;
+    --muted:#9aa89c; --rust:#e0895f; --line:#33453d; --lime:#cfe08a;
+    --shadow-soft: 0 14px 26px #0006;
+    --header-bg: rgba(20,29,26,.94);
+    --card-bg:#1b2723; --card-edge:#3a4d44; --open-row:#1b2723;
+    --on-ink:#c6d2c4; --map-stage:#101815; --map-dot:#2b3a33;
+    --art-blend: normal;
+  }
+}
+
+/* Values that were written as literals before the theme existed. */
+.site-header{background:var(--header-bg)}
+.postcard{background:var(--card-bg);border-color:var(--card-edge);box-shadow:var(--shadow-soft)}
+.tradition[open]{background:var(--open-row)}
+.map-teaser p,.map-caption,.footer-top p,.footer-bottom{color:var(--on-ink)}
+.map-stage{background:var(--map-stage);background-image:radial-gradient(var(--map-dot) .7px,transparent .7px)}
+.place-image img,.route-art img,.food-feature-image img,.eat-intro-art img,
+.about-illustration img,.place-hero-art img,.route-chapter-visual img{mix-blend-mode:var(--art-blend)}
+
+/* Cards written against the cream palette in later passes. */
+:root[data-theme="dark"] .story-card-v2,
+:root[data-theme="dark"] .rest-stop,
+:root[data-theme="dark"] .quick-card,
+:root[data-theme="dark"] .story-tile,
+:root[data-theme="dark"] .walk-point,
+:root[data-theme="dark"] .leaflet-block,
+:root[data-theme="dark"] .searchbox-panel,
+:root[data-theme="dark"] .tabbar,
+:root[data-theme="dark"] .card-art-v2,
+:root[data-theme="dark"] .pick-art{background:var(--card-bg);border-color:var(--line)}
+:root[data-theme="dark"] .siwara-card,
+:root[data-theme="dark"] .qs-icon,
+:root[data-theme="dark"] .chip{background:var(--sand)}
+:root[data-theme="dark"] .searchbox-results li.is-active a{background:var(--sand)}
+:root[data-theme="dark"] .news-auto-tag{background:#2c2a1d;color:#d8c48a;border-color:#4a442f}
+:root[data-theme="dark"] .shop-warn{background:#3a2a1c;color:#e0b483}
+:root[data-theme="dark"] .searchbox-panel input{background:var(--sand);border-color:var(--line)}
+:root[data-theme="dark"] .filters,
+:root[data-theme="dark"] .empty-state,
+:root[data-theme="dark"] #empty,
+:root[data-theme="dark"] .event-note,
+:root[data-theme="dark"] .food-feature,
+:root[data-theme="dark"] .story dl,
+:root[data-theme="dark"] .map-help{background:var(--sand)}
+:root[data-theme="dark"] input,
+:root[data-theme="dark"] select,
+:root[data-theme="dark"] .search-label input{background:var(--sand);border-color:var(--line);color:var(--ink)}
+
+/* The theme switch itself */
+.theme-toggle{
+  display:grid;place-items:center;width:42px;height:42px;
+  border:1px solid var(--line);border-radius:11px;background:transparent;
+  color:inherit;cursor:pointer;font:inherit;line-height:1;
+}
+.theme-toggle:hover{border-color:var(--rust)}
+.theme-toggle .tt-day{display:none}
+.theme-toggle .tt-night{display:block}
+:root[data-theme="dark"] .theme-toggle .tt-day{display:block}
+:root[data-theme="dark"] .theme-toggle .tt-night{display:none}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]) .theme-toggle .tt-day{display:block}
+  :root:not([data-theme="light"]) .theme-toggle .tt-night{display:none}
+}
+
+/* ============ Page transitions ============ */
+@view-transition{ navigation: auto }
+@media (prefers-reduced-motion: reduce){
+  @view-transition{ navigation: none }
+}
+::view-transition-old(root),
+::view-transition-new(root){ animation-duration:.22s }
+
+/* The header now carries theme, search, trip and map buttons, so the menu
+   needs to give way earlier rather than wrap onto a second line. */
+@media (max-width:1400px){
+  .site-header nav{gap:16px;font-size:.84rem}
+  .header-tools{gap:6px}
+}
+@media (max-width:1240px){
+  .site-header .header-map{display:none}
+  .site-header nav{gap:13px;font-size:.82rem}
+}
+@media (max-width:1080px){
+  .site-header .theme-toggle{display:none}   /* the tab bar area keeps it on phones */
+}
+@media (max-width:900px){
+  .site-header .theme-toggle{display:grid}
+}
+
+/* Secondary links live in the drawer on wide screens and appear inline once the
+   whole menu becomes a drawer on narrow ones. */
+@media (min-width:901px){
+  .site-header nav .nav-more{display:none}
+  .site-header nav.is-open{
+    position:absolute;right:24px;top:100%;z-index:700;
+    display:flex;flex-direction:column;align-items:stretch;gap:0;
+    min-width:230px;padding:8px 16px 12px;
+    background:var(--paper);border:1px solid var(--line);border-radius:14px;
+    box-shadow:var(--shadow-soft);
+  }
+  .site-header nav.is-open .nav-more{display:flex}
+  .site-header nav.is-open a{padding:11px 2px;border-bottom:1px solid var(--line);min-height:44px;align-items:center}
+  .site-header nav.is-open a:last-child{border-bottom:0}
+  .site-header nav.is-open a:after{display:none}
+  .nav-toggle{display:grid}
+}
+.site-header{position:relative}

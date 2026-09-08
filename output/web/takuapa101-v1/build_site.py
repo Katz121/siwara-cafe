@@ -42,10 +42,12 @@ def pic(id, eager=False):
  w,h=Image.open(OUT/f'assets/{id}.webp').size
  return f'<img src="/assets/{id}.webp" alt="{esc(byid[id]["name_th"])}" width="{w}" height="{h}" loading="{"eager" if eager else "lazy"}">'
 def source(): return f'<aside class="source"><h2>ที่มาของข้อมูล</h2><p>เรียบเรียงจาก<a href="{SOURCE}">แผ่นพับเทศบาลเมืองตะกั่วป่า</a> · สกัดข้อมูล 6 กันยายน 2569 เอกสารไม่ระบุวันที่เผยแพร่ เวลาเปิด สถานะร้าน และกำหนดงานปัจจุบันยังไม่ได้ยืนยัน ควรตรวจสอบกับสถานที่ก่อนเดินทาง</p></aside>'
-nav=[('places','สถานที่'),('map','แผนที่'),('traditions','ประเพณี'),('eat','กินและของฝาก'),('routes','เส้นทางเดิน'),('trip','ทริปของคุณ'),('about','เกี่ยวกับ')]
-nav.insert(1, ('news', 'ความเคลื่อนไหว'))
-nav.insert(5, ('rest', 'กินเที่ยว'))
-nav.insert(0, ("stories", "เรื่องเล่าตะกั่วป่า"))
+# Ten top level links plus four header buttons will not sit on one row, and a
+# wrapped menu reads as a mistake. Six carry the site; the rest stay one tap away
+# in the menu drawer and remain in the footer, so nothing becomes unreachable.
+NAV_PRIMARY=[('places','สถานที่'),('stories','เรื่องเล่า'),('map','แผนที่'),('rest','กินเที่ยว'),('news','ความเคลื่อนไหว'),('trip','ทริปของคุณ')]
+NAV_MORE=[('traditions','ประเพณี'),('eat','กินและของฝาก'),('routes','เส้นทางเดิน'),('leaflet','แผ่นพับ'),('about','เกี่ยวกับ')]
+nav=NAV_PRIMARY+NAV_MORE
 def page(path,title,desc,body,record=None):
  body = design.transform(path, body, globals(), record)
  if path == '/map/':
@@ -56,7 +58,11 @@ def page(path,title,desc,body,record=None):
  og_image=BASE+"/assets/og/"+(record["id"] if record else "default")+".png"
  meta={"og:title":title,"og:description":desc,"og:url":canonical,"og:type":"website","og:image":og_image,"og:locale":"th_TH","og:site_name":"ตะกั่วป่า 101","twitter:card":"summary_large_image","twitter:image":og_image}
  social="".join(f'<meta {"property" if k.startswith("og:") else "name"}="{k}" content="{esc(v)}">' for k,v in meta.items())
- menu=''.join(f'<a href="/{slug}/"'+(' aria-current="page"' if path.startswith('/'+slug+'/') else '')+f'>{label}</a>' for slug,label in nav)
+ def _link(slug, label, extra=''):
+  cur = ' aria-current="page"' if path.startswith('/' + slug + '/') else ''
+  return f'<a href="/{slug}/"{cur}{extra}>{label}</a>'
+ menu = ''.join(_link(s2, l) for s2, l in NAV_PRIMARY)
+ menu += ''.join(_link(s2, l, ' class="nav-more"') for s2, l in NAV_MORE)
  html=f'''<!doctype html><html lang="th" data-base="{BASE_PATH}" data-news-api="{NEWS_API}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>{esc(title)} · ตะกั่วป่า 101</title><meta name="description" content="{esc(desc)}"><meta name="robots" content="{ROBOTS}">{social}<meta name="generator" content="ตะกั่วป่า 101"><link rel="canonical" href="{esc(canonical)}"><link rel="preload" href="/assets/NotoSerifThai.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/assets/IBMPlexSansThaiLooped-Regular.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="/assets/site.css"><script type="application/ld+json">{json.dumps(schema,ensure_ascii=False).replace('</','<\\/')}</script><script src="/assets/site.js" defer></script><script src="/assets/trip.js" defer></script>{'<script src="/assets/trip-page.js" defer></script>' if path == '/trip/' else ''}</head><body><a class="skip" href="#main">ข้ามไปเนื้อหา</a><header class="nav"><a class="brand" href="/">ตะกั่วป่า <span>101</span></a><nav id="main-nav" aria-label="เมนูหลัก">{menu}</nav></header><main id="main">{body}</main><footer><a class="brand" href="/">ตะกั่วป่า <span>101</span></a><p>เมืองเก่า เรื่องเล่า และผู้คน</p><div><a href="https://siwaracafe.com/">จัดทำโดยบ้านศิวรา ตะกั่วป่า</a><a href="{SOURCE}">แผ่นพับต้นทาง ↗</a></div></footer></body></html>'''
  html = seo.prefix_links(design.shell(path, html))
  dest=OUT/path.strip('/')/'index.html'; dest.parent.mkdir(parents=True,exist_ok=True);dest.write_text(html,encoding='utf-8');PAGES.append(path)
