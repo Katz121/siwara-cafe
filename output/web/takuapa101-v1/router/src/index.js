@@ -1,54 +1,31 @@
-/* Puts the Pages deployment on the main domain.
-   siwaracafe.com/takuapa/*      -> the Pages site
-   siwaracafe.com/takuapa/api/*  -> the news Worker, same origin so no CORS */
+/* siwaracafe.com/takuapa/* -> takuapa101.com
+ *
+ * The guide moved to its own domain. Anyone who saved or shared the old path
+ * still lands on the right page, and a 301 tells search engines to move the
+ * ranking across rather than treat the two as duplicates.
+ */
 
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
     const base = env.BASE_PATH || '/takuapa';
+    const target = (env.SITE_ORIGIN || 'https://takuapa101.com').replace(/\/$/, '');
 
-    if (url.pathname === base) {
-      return Response.redirect(url.origin + base + '/', 301);
-    }
-    if (!url.pathname.startsWith(base + '/')) {
+    if (!url.pathname.startsWith(base)) {
       return new Response('ไม่พบหน้านี้', { status: 404 });
     }
 
+    // /takuapa -> /, /takuapa/places/ -> /places/
     const rest = url.pathname.slice(base.length) || '/';
+    const dest = target + (rest.startsWith('/') ? rest : '/' + rest) + url.search;
 
-    // News API is served from the same origin as the site.
-    if (rest.startsWith('/api/')) {
-      const target = new URL(env.NEWS_WORKER);
-      target.pathname = rest;
-      target.search = url.search;
-      const upstream = await fetch(target.toString(), {
-        method: request.method,
-        headers: { 'User-Agent': 'takuapa101-router/1.0' },
-      });
-      const headers = new Headers(upstream.headers);
-      headers.delete('access-control-allow-origin');
-      return new Response(upstream.body, { status: upstream.status, headers });
-    }
-
-    // Everything else comes from Pages. The site is built with /takuapa in its
-    // links, so the prefix is stripped before asking Pages for the file.
-    const target = new URL(env.PAGES_ORIGIN);
-    target.pathname = rest;
-    target.search = url.search;
-
-    const upstream = await fetch(target.toString(), {
-      method: request.method,
-      headers: request.headers,
-      redirect: 'manual',
+    return new Response(null, {
+      status: 301,
+      headers: {
+        Location: dest,
+        'Cache-Control': 'public, max-age=3600',
+        'x-moved-by': 'takuapa101-router',
+      },
     });
-
-    const headers = new Headers(upstream.headers);
-    // Pages may redirect to a path without the prefix; put it back.
-    const loc = headers.get('location');
-    if (loc && loc.startsWith('/') && !loc.startsWith(base + '/')) {
-      headers.set('location', base + loc);
-    }
-    headers.set('x-served-by', 'takuapa101-router');
-    return new Response(upstream.body, { status: upstream.status, headers });
   },
 };

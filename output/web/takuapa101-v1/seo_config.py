@@ -11,3 +11,8 @@ NEWS_API = os.environ.get('TAKUAPA_NEWS_API', '')
 # Preview deploys must not be indexed: a temporary host competing with the real
 # domain creates duplicate content that is expensive to unwind later.
 ROBOTS = os.environ.get('TAKUAPA_ROBOTS', 'index,follow,max-image-preview:large')
+
+# Search Console ownership. Paste the content string from the meta tag method
+# into TAKUAPA_GOOGLE_VERIFY; the file method works too, drop it in site/.
+GOOGLE_VERIFY = os.environ.get('TAKUAPA_GOOGLE_VERIFY', '')
+BING_VERIFY = os.environ.get('TAKUAPA_BING_VERIFY', '')

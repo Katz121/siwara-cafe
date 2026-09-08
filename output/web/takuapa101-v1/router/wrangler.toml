@@ -1,15 +1,14 @@
-name = "takuapa101-router"
+name = "takuapa101-redirect"
 main = "src/index.js"
 compatibility_date = "2026-09-01"
 
-# Serves the Pages deployment under siwaracafe.com/takuapa/ so the pages live on
-# the main domain instead of a separate one.
+# The guide used to live under siwaracafe.com/takuapa/. This keeps those links
+# working and hands the ranking to the new domain with a 301.
 routes = [
   { pattern = "siwaracafe.com/takuapa", zone_name = "siwaracafe.com" },
   { pattern = "siwaracafe.com/takuapa/*", zone_name = "siwaracafe.com" },
 ]
 
 [vars]
-PAGES_ORIGIN = "https://takuapa101.pages.dev"
-NEWS_WORKER = "https://takuapa101-news.workers.dev"
+SITE_ORIGIN = "https://takuapa101.com"
 BASE_PATH = "/takuapa"
