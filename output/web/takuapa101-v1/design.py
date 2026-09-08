@@ -292,7 +292,7 @@ def city_feed(ctx, limit_news=8):
             stories = [{'id': x['id'], 'group': x['group'], 'title': x['title'], 'dek': x['dek']} for x in st.STORIES + [st.KUAPAPOH]]
         except Exception:
             stories = []
-    _order = ['city', 'architecture', 'water-trade', 'food-people', 'kuapapoh']
+    _order = ['city', 'apaporn', 'architecture', 'water-trade', 'food-people', 'kuapapoh']
     stories.sort(key=lambda x: _order.index(x['id']) if x.get('id') in _order else 99)
     news = _load_json('data/news-feed.json', [])[:limit_news]
 
@@ -349,7 +349,7 @@ def city_feed(ctx, limit_news=8):
                 f'<span class="news-main"><b>{e(n.get("title_th",""))}</b>'
                 f'<span class="news-meta">{place}{" · " + out if out else ""}</span>{link}</span></li>')
 
-    left = ''.join(story_card(sd, i == 0) for i, sd in enumerate(stories[:5]))
+    left = ''.join(story_card(sd, i == 0) for i, sd in enumerate(stories))
     right = ''.join(news_item(n) for n in news)
     return (
         '<section class="section city-feed" id="city-feed">'
