@@ -1,0 +1,12 @@
+# output/ คือพื้นที่ทำงาน ไม่ใช่ตัวเว็บ · มีไฟล์ zip ขนาด 200MB+ ที่ทำให้ deploy ล้มด้วย
+# ข้อจำกัดขนาดไฟล์ 100MB ของ Vercel · เว็บ siwaracafe.com ไม่ได้อ้างถึงอะไรในนี้เลย
+output/
+
+.git/
+.wrangler/
+.claude/
+
+# ภาพหน้าจอที่วางไว้ชั่วคราวตอนคุยงาน
+image.png
+image copy.png
+view_mockups.html
