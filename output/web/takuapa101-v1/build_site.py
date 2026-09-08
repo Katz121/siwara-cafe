@@ -51,8 +51,8 @@ nav=NAV_PRIMARY+NAV_MORE
 def page(path,title,desc,body,record=None):
  body = design.transform(path, body, globals(), record)
  if path == '/map/':
-  title = 'แผนที่เมืองตะกั่วป่า'
-  desc = 'เปิดภาพแผนที่เทศบาลเมืองตะกั่วป่า ขยายและเลื่อนดูย่านยาวกับเมืองเก่า พร้อมรายชื่อสถานที่สำหรับอ่านต่อ'
+  title = 'แผนที่ตะกั่วป่า เมืองเก่าและย่านยาว'
+  desc = 'แผนที่เที่ยวตะกั่วป่าปักหมุดสถานที่จริง กดนำทางด้วย Google Maps ได้ทันที พร้อมภาพแผนที่เทศบาลซ้อนทับ'
  canonical=BASE+path
  schema, body = seo.schemas(path, title, record, body)
  og_image=BASE+"/assets/og/"+(record["id"] if record else "default")+".png"
@@ -88,8 +88,53 @@ caption='ผังนี้อ้างอิงตำแหน่งจาก�
 def map_preview(): return f'<div class="map-preview"><div>{map_svg()}</div><div><span class="eyebrow">READ THE OLD TOWN</span><h2>แผนที่ย่านเก่า</h2><p>มองถนน สายน้ำ และจุดหมายของเมืองไว้ในภาพเดียว เลือกหมายเลขเพื่ออ่านเรื่องของสถานที่</p><a class="text-link" href="/map/">เปิดแผนที่เต็มและรายชื่อจุด ↗</a><p class="small">{caption}</p></div></div>'
 def timeline(): return '<div class="timeline">'+''.join(f'<article><span class="eyebrow">{period(r)}</span><h3>{a(r)}</h3></article>' for r in sorted(events,key=lambda r:['new-year-alms','ruler-ceremony','relic-procession','narai-ceremony','vegetarian','chak-phra','loy-krathong'].index(r['id'])))+'</div>'
 hero=f'<section class="masthead"><div class="hero-lines">{map_svg(decorative=True)}</div><div class="edition"><span>TAKUA PA · PHANG NGA</span><span>คู่มือเมืองเก่า / 01</span></div><div class="hero-title"><div><span class="eyebrow">ค่อย ๆ รู้จักเมือง ผ่านเรื่องราวระหว่างทาง</span><h1>ตะกั่วป่า <em>101</em></h1><p class="subtitle">วัด ศาลเจ้า ตึกเก่า<br>และย่านตลาดริมน้ำ</p><p>รวมสถานที่และเรื่องราวจากแผ่นพับเทศบาลเมืองตะกั่วป่า<br>ชวนเลือกจุดแวะ แล้วเปิดอ่านเมืองในแบบของคุณ</p><div class="hero-links"><a href="/map/">เปิดแผนที่ย่านเก่า ↗</a><a href="/places/">ดูสถานที่ทั้ง 20 แห่ง ↗</a></div></div><a class="hero-art" href="/places/tao-ming/">{pic("tao-ming",True)}<span>โรงเรียนเต้าหมิง · อาคารที่ส่งต่อภาษาและวัฒนธรรม ↗</span></a></div><div class="hero-bottom"><span>20 สถานที่</span><span>7 ประเพณี</span><span>59 ร้านจากเอกสารเทศบาล</span></div></section>'
-page('/','คู่มือเมืองเก่าตะกั่วป่า','รู้จักตะกั่วป่าผ่าน 20 สถานที่ แผนที่ย่านเก่า ประเพณี และรายชื่อร้านจากเอกสารเทศบาล',hero+'<section><div class="section-heading"><h2>เริ่มจากตรงนี้</h2><span>เลือกเรื่องที่อยากรู้จัก</span></div>'+route_list()+'</section><section>'+map_preview()+'</section><section><div class="section-heading"><h2>สถานที่ 20 แห่ง</h2><span>เรื่องของเมือง ผ่านแต่ละจุดหมาย</span></div>'+directory()+'</section><section><h2>ประเพณีตลอดปี</h2><p>ช่วงเวลาตามเอกสารต้นทาง · ตรวจสอบกำหนดการของแต่ละปีก่อนเดินทาง</p>'+timeline()+'</section><section class="eat-callout"><span class="number">59</span><div><h2>กินและซื้อของฝากในย่าน</h2><p>รายชื่อร้านอาหาร 32 แห่ง · เครื่องดื่ม 19 แห่ง · ของฝาก 8 แห่ง จากแผ่นพับ</p><a class="text-link" href="/eat/">เปิดรายชื่อร้านในย่าน ↗</a></div></section><section><h2>ข้อมูลนี้มาจากไหน</h2><p class="measure">ข้อมูลเรียบเรียงจากแผ่นพับประชาสัมพันธ์เทศบาลเมืองตะกั่วป่า สกัดเมื่อ 6 กันยายน 2569 รายละเอียดการเข้าชมและสถานะร้านปัจจุบันยังไม่ได้ยืนยัน</p><a class="text-link" href="/about/">อ่านที่มาและข้อจำกัดข้อมูล ↗</a></section>')
-page('/places/','สถานที่ 20 แห่ง','ดัชนีวัด ศาลเจ้า ตึกเก่า สวน ตลาด และพิพิธภัณฑ์ในตะกั่วป่า',intro('สถานที่ 20 แห่ง','เลือกหนึ่งจุดหมาย แล้วค่อย ๆ ต่อเรื่องราวของเมืองเข้าด้วยกัน')+'<div class="jump-links">'+''.join(f'<a href="#category-{i}">{name} · {len(ids)}</a>' for i,(name,ids) in enumerate(groups))+'</div>'+directory())
+page('/','เที่ยวตะกั่วป่า คู่มือเมืองเก่าตะกั่วป่า พังงา','ที่เที่ยวตะกั่วป่า 20 แห่ง แผนที่เมืองเก่า ของกินตะกั่วป่า คาเฟ่ และประเพณีตลอดปี · คู่มือเที่ยว Takua Pa จังหวัดพังงา',hero+'<section><div class="section-heading"><h2>เริ่มจากตรงนี้</h2><span>เลือกเรื่องที่อยากรู้จัก</span></div>'+route_list()+'</section><section>'+map_preview()+'</section><section><div class="section-heading"><h2>สถานที่ 20 แห่ง</h2><span>เรื่องของเมือง ผ่านแต่ละจุดหมาย</span></div>'+directory()+'</section><section><h2>ประเพณีตลอดปี</h2><p>ช่วงเวลาตามเอกสารต้นทาง · ตรวจสอบกำหนดการของแต่ละปีก่อนเดินทาง</p>'+timeline()+'</section><section class="eat-callout"><span class="number">59</span><div><h2>กินและซื้อของฝากในย่าน</h2><p>รายชื่อร้านอาหาร 32 แห่ง · เครื่องดื่ม 19 แห่ง · ของฝาก 8 แห่ง จากแผ่นพับ</p><a class="text-link" href="/eat/">เปิดรายชื่อร้านในย่าน ↗</a></div></section><section><h2>ข้อมูลนี้มาจากไหน</h2><p class="measure">ข้อมูลเรียบเรียงจากแผ่นพับประชาสัมพันธ์เทศบาลเมืองตะกั่วป่า สกัดเมื่อ 6 กันยายน 2569 รายละเอียดการเข้าชมและสถานะร้านปัจจุบันยังไม่ได้ยืนยัน</p><a class="text-link" href="/about/">อ่านที่มาและข้อจำกัดข้อมูล ↗</a></section>')
+page('/places/','ที่เที่ยวตะกั่วป่า 20 แห่ง','ที่เที่ยวตะกั่วป่าครบทุกจุด วัด ศาลเจ้าจีน ตึกชิโน-โปรตุกีส สวนสาธารณะ ตลาดริมน้ำ และพิพิธภัณฑ์ พร้อมพิกัดนำทาง',intro('สถานที่ 20 แห่ง','เลือกหนึ่งจุดหมาย แล้วค่อย ๆ ต่อเรื่องราวของเมืองเข้าด้วยกัน')+'<div class="jump-links">'+''.join(f'<a href="#category-{i}">{name} · {len(ids)}</a>' for i,(name,ids) in enumerate(groups))+'</div>'+directory())
+
+def seo_meta(r, fallback_title, fallback_desc):
+    """Title and description built from the search terms the research collected.
+
+    The terms are woven into a readable sentence rather than listed: a visible
+    keyword list is spam, while the same words inside a real description are
+    what a person scanning results actually reads.
+    """
+    enriched = seo.ENRICHED.get(r['id']) if r and r.get('id') else None
+    kws = ((enriched or {}).get('seo') or {}).get('keywords_th') or []
+    name = (r.get('name_th') if r else '') or ''
+    town = 'ตะกั่วป่า'
+
+    # An alternative name people search for, when it is not already in the title.
+    alias = ''
+    for k in kws:
+        bare = k.replace(' ' + town, '').replace(' พังงา', '').strip()
+        if bare and bare != name and bare not in name and 3 < len(bare) < 30:
+            alias = bare
+            break
+
+    # Google shows roughly 60 characters and the suffix takes 16, so the alias
+    # only earns its place when the pair still fits.
+    title = name or fallback_title
+    if alias and len(name) + len(alias) + 6 <= 44:
+        title = f'{name} · {alias}'
+    if town not in title and len(title) + 10 <= 44:
+        title = f'{title} {town}'
+
+    # Keep the human sentence short enough that the search terms survive.
+    base = (fallback_desc or '').split(' · ')[0].strip()
+    extras = []
+    for k in kws:
+        if k in base or k in title or k in extras:
+            continue
+        extras.append(k)
+        if len(extras) == 3:
+            break
+    desc = base
+    if extras:
+        room = 155 - len(' · '.join(extras)) - 3
+        desc = base[:max(room, 40)].rstrip(' ·') + ' · ' + ' · '.join(extras)
+    return title[:70], desc[:158]
+
+
 for r in places:
  id=r['id']; related=next(ids for _,ids in groups if id in ids); related=[x for x in related if x!=id][:3]+links.get(id,[])+[key for key,ids in links.items() if id in ids];related=list(dict.fromkeys(related))
  details=r.get('source_details',{});dl=''
@@ -98,17 +143,18 @@ for r in places:
  if 'source_superlative' in details: dl+='<dt>ข้อสังเกตจากต้นทาง</dt><dd>เอกสารเทศบาลระบุว่าเป็นอุโบสถขนาดเล็กที่สุดในไทย ยังไม่ได้ตรวจเทียบกับแหล่งอื่น</dd>'
  mapped=id in positions
  body=intro(r['name_th'],copy[id]['kicker'])+f'<div class="detail"><p class="english">{esc(r.get("name_en",""))}</p><figure>{pic(id,True)}</figure><h2>เรื่องของที่นี่</h2><p>{copy[id]["body"]}</p>'+''.join(f'<p>{esc(f)}</p>' for f in r.get('facts_paraphrased',[]) if f!=copy[id]['body'])+(f'<h2>รายละเอียดจากเอกสาร</h2><dl>{dl}</dl>' if dl else '')+'<h2>อยู่ตรงไหนในย่าน</h2>'+(f'<div class="detail-map">{map_svg(id)}</div><p class="small">{caption}</p>' if mapped else '<p>ไม่ปรากฏตำแหน่งในแผนที่ต้นทาง</p>')+'<a class="text-link" href="/map/">เปิดแผนที่และรายชื่อทั้งหมด ↗</a>'+('<h2>เกี่ยวข้องกัน</h2><ul>'+''.join(f'<li>{a(byid[x])}</li>' for x in related)+'</ul>' if related else '')+source()+'</div>'
- page(url(r),r['name_th'],copy[id]['kicker']+' · '+copy[id]['body'],body,r)
-page('/traditions/','ประเพณีตลอดปี','กิจกรรมและประเพณีตะกั่วป่า 7 รายการ พร้อมช่วงเวลาตามแผ่นพับเทศบาล',intro('ประเพณีตลอดปี','จังหวะของเมือง ผ่านความเชื่อและการพบกันของผู้คน')+timeline()+source())
+ _t,_d = seo_meta(r, r['name_th'], copy[id]['kicker']+' · '+copy[id]['body'])
+ page(url(r),_t,_d,body,r)
+page('/traditions/','ประเพณีตะกั่วป่า ตลอดทั้งปี','เทศกาลและประเพณีตะกั่วป่า 7 อย่าง กินผัก ชักพระ ลอยกระทง แห่พระบรมสารีริกธาตุ พร้อมช่วงเวลาที่จัดในแต่ละปี',intro('ประเพณีตลอดปี','จังหวะของเมือง ผ่านความเชื่อและการพบกันของผู้คน')+timeline()+source())
 for r in events:
  body=intro(r['name_th'],period(r))+'<div class="detail"><h2>ช่วงเวลาจากเอกสาร</h2><p>'+period(r)+'</p><p>รายการนี้ปรากฏในหมวดกิจกรรมและประเพณีของแผ่นพับเทศบาลเมืองตะกั่วป่า ช่วงเวลาข้างต้นเป็นข้อมูลจากเอกสาร ยังไม่ใช่กำหนดการยืนยันของปีปัจจุบัน</p>'+('<h2>สถานที่ที่เกี่ยวข้อง</h2><ul>'+''.join(f'<li>{a(byid[id])}</li>' for id in links.get(r['id'],[]))+'</ul>' if links.get(r['id']) else '')+source()+'</div>'
  page(url(r),r['name_th'],r['name_th']+' · '+period(r)+' ตามเอกสารเทศบาลเมืองตะกั่วป่า',body,r)
-page('/routes/','เส้นทางเดินอ่านเมือง','เลือกจุดแวะตามเรื่องวัดและเจดีย์ ศาลเจ้า หรือตึกเก่าและตลาดริมน้ำ',intro('เส้นทางเดินอ่านเมือง','สามชุดจุดหมายให้เลือกตามความสนใจ')+'<p class="measure">รายการนี้จัดกลุ่มสถานที่ตามเรื่องราว ไม่กำหนดเวลาเดินหรือระยะทาง ใช้แผนที่ประกอบการเลือกจุดแวะ และตรวจสอบการเข้าชมก่อนออกเดินทาง</p>'+route_list(True)+map_preview()+source())
+page('/routes/','เส้นทางเดินเที่ยวเมืองเก่าตะกั่วป่า','เดินเที่ยวตะกั่วป่า 4 เส้นทาง วัดและเจดีย์ ศาลเจ้าจีน ตึกเก่าและตลาดริมน้ำ เลือกตามเวลาที่มี',intro('เส้นทางเดินอ่านเมือง','สามชุดจุดหมายให้เลือกตามความสนใจ')+'<p class="measure">รายการนี้จัดกลุ่มสถานที่ตามเรื่องราว ไม่กำหนดเวลาเดินหรือระยะทาง ใช้แผนที่ประกอบการเลือกจุดแวะ และตรวจสอบการเข้าชมก่อนออกเดินทาง</p>'+route_list(True)+map_preview()+source())
 shopgroups=[('restaurant','ร้านอาหาร'),('drink_shop','เครื่องดื่ม'),('souvenir_shop','ของฝาก')]
 shophtml=''.join(f'<section class="shop-group" data-category="{cat}"><h2>{label} <span class="count">{sum(r["category"]==cat for r in shops)}</span></h2><ol class="shop-list">'+''.join(f'<li id="{r["id"]}" data-shop="{esc(r["name_th"])}"><span class="shop-number">{r["source_list_number"]:02d}</span><span>{esc(r["name_th"])}</span></li>' for r in shops if r['category']==cat)+'</ol></section>' for cat,label in shopgroups)
-page('/eat/','กินและของฝาก','ค้นหารายชื่อร้านอาหาร เครื่องดื่ม และของฝาก 59 ร้าน ตามแผ่นพับเทศบาลเมืองตะกั่วป่า',intro('กินและของฝากในย่าน','59 รายชื่อจากแผ่นพับเทศบาลเมืองตะกั่วป่า')+'<p>รายชื่อและลำดับตามเอกสารต้นทาง ยังไม่ได้ยืนยันสถานะการเปิดร้านในปัจจุบัน</p><div class="filters"><label>ค้นหาชื่อร้าน<input id="shop-search" type="search" placeholder="พิมพ์ชื่อร้านที่ต้องการ"></label><label>หมวดหมู่<select id="shop-category"><option value="all">ทุกร้าน</option>'+''.join(f'<option value="{cat}">{label}</option>' for cat,label in shopgroups)+'</select></label></div><p id="results" role="status" aria-live="polite">แสดง 59 ร้าน</p><p id="empty" hidden>ไม่พบรายชื่อ ลองเปลี่ยนคำค้นหรือเลือกหมวดอื่น</p>'+shophtml+source())
+page('/eat/','ร้านอาหารตะกั่วป่า และของฝาก','รายชื่อร้านอาหารตะกั่วป่า คาเฟ่ และของฝากกว่า 100 ร้าน ค้นหาตามชื่อและหมวด พร้อมลิงก์นำทาง',intro('กินและของฝากในย่าน','59 รายชื่อจากแผ่นพับเทศบาลเมืองตะกั่วป่า')+'<p>รายชื่อและลำดับตามเอกสารต้นทาง ยังไม่ได้ยืนยันสถานะการเปิดร้านในปัจจุบัน</p><div class="filters"><label>ค้นหาชื่อร้าน<input id="shop-search" type="search" placeholder="พิมพ์ชื่อร้านที่ต้องการ"></label><label>หมวดหมู่<select id="shop-category"><option value="all">ทุกร้าน</option>'+''.join(f'<option value="{cat}">{label}</option>' for cat,label in shopgroups)+'</select></label></div><p id="results" role="status" aria-live="polite">แสดง 59 ร้าน</p><p id="empty" hidden>ไม่พบรายชื่อ ลองเปลี่ยนคำค้นหรือเลือกหมวดอื่น</p>'+shophtml+source())
 table='<table><caption>รายชื่อจุดบนผัง</caption><thead><tr><th>หมายเลข</th><th>สถานที่</th><th>ตำแหน่งในต้นทาง</th></tr></thead><tbody>'+''.join(f'<tr><td>{places.index(byid[p["id"]])+1:02d}</td><td>{a(byid[p["id"]])}</td><td>{"ปรากฏในแผนที่" if p["x"] is not None else "ไม่ปรากฏตำแหน่ง"}</td></tr>' for p in points)+'</tbody></table>'
-page('/map/','แผนที่ย่านเก่า','ผังถนนและสถานที่จากแผนที่เทศบาลเมืองตะกั่วป่า พร้อมรายชื่อจุดและแผนที่ต้นทาง',intro('แผนที่ย่านเก่า','ถนน สายน้ำ และจุดหมายที่เชื่อมเรื่องราวของเมือง')+f'<p class="measure">{caption}</p><details class="map-panel"><summary>ดูเป็นผังแผนที่ · 14 จุดจากต้นทาง</summary><div class="map-scroll">{map_svg()}</div></details>'+table+'<h2>เทียบกับแผนที่ต้นทาง</h2><p>แสดงเฉพาะหมุดสถานที่ที่จับคู่ได้ชัดเจน หมายเลขร้านบนภาพต้นทางยังไม่ได้จับคู่เป็นหมุดในผังนี้</p><a class="text-link" href="/assets/municipal-map.png">เปิดภาพแผนที่เทศบาลฉบับเต็ม ↗</a>'+source())
+page('/map/','แผนที่ตะกั่วป่า เมืองเก่าและย่านยาว','แผนที่เที่ยวตะกั่วป่าปักหมุดสถานที่จริง กดนำทางด้วย Google Maps ได้ทันที พร้อมภาพแผนที่เทศบาลซ้อนทับ',intro('แผนที่ย่านเก่า','ถนน สายน้ำ และจุดหมายที่เชื่อมเรื่องราวของเมือง')+f'<p class="measure">{caption}</p><details class="map-panel"><summary>ดูเป็นผังแผนที่ · 14 จุดจากต้นทาง</summary><div class="map-scroll">{map_svg()}</div></details>'+table+'<h2>เทียบกับแผนที่ต้นทาง</h2><p>แสดงเฉพาะหมุดสถานที่ที่จับคู่ได้ชัดเจน หมายเลขร้านบนภาพต้นทางยังไม่ได้จับคู่เป็นหมุดในผังนี้</p><a class="text-link" href="/assets/municipal-map.png">เปิดภาพแผนที่เทศบาลฉบับเต็ม ↗</a>'+source())
 about_jsonld = [
   {
     "@context": "https://schema.org",
@@ -120,7 +166,7 @@ about_jsonld = [
 about_html = intro('ข้อมูลนี้มาจากไหน','รู้จักเมือง พร้อมรู้ที่มาของเรื่องที่อ่าน') + f'<div class="detail"><h2>คู่มือจากบ้านศิวรา</h2><p>ตะกั่วป่า 101 จัดทำโดย <a href="https://siwaracafe.com/">บ้านศิวรา</a> ในตะกั่วป่า เพื่อรวบรวมเรื่องสถานที่ ประเพณี และร้านค้าในเมืองให้อ่านต่อกันได้</p><p>ศิวรา คาเฟ่ เป็นบ้านไม้สักหลังหนึ่งในย่านตลาดเก่า สังเกตได้จากจั่วไม้ กระจกสี และบานประตูไม้เก่าแบบดั้งเดิม ตั้งอยู่ที่ 53 ถนนราษฎร์บำรุง โดยเราตั้งใจให้บ้านไม้หลังนี้พาผู้คนไปรู้จักเมืองให้ลึกซึ้งขึ้น</p><h2>ข้อมูลที่นำมาใช้</h2><p>แผ่นพับเทศบาลเมืองตะกั่วป่าเป็นต้นทางของข้อมูลสถานที่ 20 แห่ง ประเพณี 7 รายการ และรายชื่อร้าน 59 แห่ง รวม 86 รายการ สกัดเมื่อ 6 กันยายน 2569</p><h2>ก่อนออกเดินทาง</h2><p>เอกสารต้นทางไม่ระบุวันที่เผยแพร่ เว็บไซต์จึงยังไม่ยืนยันเวลาเปิด ค่าเข้า สถานะร้าน หรือกำหนดการจัดงานปัจจุบัน ควรติดต่อสถานที่หรือเทศบาลเพื่อยืนยันรายละเอียดก่อนเดินทาง</p><h2>อ่านผังอย่างไร</h2><p>'+caption+'</p><p>จับคู่สถานที่ได้ 14 แห่ง ส่วนอีก 6 แห่งแสดงในรายชื่อโดยไม่เติมตำแหน่งขึ้นเอง</p>'+source()+'</div>'
 about_html += f'<script type="application/ld+json">{json.dumps(about_jsonld, ensure_ascii=False).replace("</", "<\\/")}</script>'
 page('/about/','ข้อมูลนี้มาจากไหน','ที่มาของคู่มือเมืองเก่าตะกั่วป่า ความสัมพันธ์กับบ้านศิวรา และขอบเขตข้อมูลจากแผ่นพับเทศบาล', about_html)
-page('/trip/','ทริปของคุณ','เลือกจุดหมายในเมืองเก่าตะกั่วป่า แล้วจัดเป็นเส้นทางเดินของคุณเอง','<div id="trip-app"></div><noscript><p>ต้องเปิด JavaScript เพื่อใช้งานจัดทริป หรือเลือกดู<a href="/places/">สถานที่ทั้งหมด</a>และ<a href="/map/">แผนที่</a></p></noscript>')
+page('/trip/','วางแผนเที่ยวตะกั่วป่า ทริปของคุณ','เลือกที่เที่ยวตะกั่วป่าที่อยากไป จัดเป็นเส้นทางเดินของคุณเอง ส่งเข้า Google Maps และพิมพ์พกไปได้','<div id="trip-app"></div><noscript><p>ต้องเปิด JavaScript เพื่อใช้งานจัดทริป หรือเลือกดู<a href="/places/">สถานที่ทั้งหมด</a>และ<a href="/map/">แผนที่</a></p></noscript>')
 def render_rest():
     extra_shops = json.loads((DATA/'shops-extra.json').read_text(encoding='utf-8'))
     all_shops = shops + extra_shops
@@ -240,7 +286,7 @@ def render_leaflet():
     return html
 
 page('/leaflet/', 'แผ่นพับเดินเมืองเก่าตะกั่วป่า', 'แผ่นพับสองหน้า พิมพ์ A4 พับครึ่ง พกไปเดินเมืองเก่าตะกั่วป่า โหลดฟรี', render_leaflet())
-page('/rest/', 'พักเบรกและกินเที่ยวตะกั่วป่า', 'ร้านอร่อยและจุดแวะในตะกั่วป่าที่มีคนไปมาเองแล้ว พร้อมเวลาเปิดและพิกัดนำทาง แผ่นพับเดินเมืองเก่าโหลดฟรี', render_rest())
+page('/rest/', 'ของกินตะกั่วป่า คาเฟ่ และจุดแวะพัก', 'ร้านอาหารและคาเฟ่ตะกั่วป่าที่มีคนไปมาเองแล้ว ของกินตะกั่วป่าและของฝากขึ้นชื่อ พร้อมเวลาเปิดและพิกัดนำทาง', render_rest())
 
 (OUT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join(f'<url><loc>{esc(BASE+p)}</loc><lastmod>{date.today().isoformat()}</lastmod></url>' for p in PAGES)+'</urlset>',encoding='utf-8')
 (OUT/'robots.txt').write_text('User-agent: *\nAllow: /\nSitemap: '+BASE+'/sitemap.xml\n',encoding='utf-8')
@@ -298,14 +344,14 @@ def render_news():
     html = f'<div class="news-page"><div class="intro"><a class="eyebrow" href="/">ตะกั่วป่า 101 / คู่มือเมืองเก่า</a><h1>ความเคลื่อนไหวของเมือง</h1><p class="lead">ข่าวสารและกิจกรรมที่เกิดขึ้นในเมืองเก่าตะกั่วป่า</p></div><div class="news-filters" role="group" aria-label="กรองข่าวสาร">{tabs}</div><div class="news-list-full">{items_html}</div></div><script type="application/ld+json">{json.dumps(jsonld, ensure_ascii=False).replace("</", "<\\\\/")}</script>'
     return html
 
-page('/news/','ความเคลื่อนไหวของเมือง','ข่าวสารและกิจกรรมในเมืองเก่าตะกั่วป่า',render_news())
+page('/news/','ข่าวตะกั่วป่า งานและกิจกรรมในเมือง','ข่าวตะกั่วป่าและกิจกรรมล่าสุดในเมืองเก่า เทศกาล งานประเพณี และความเคลื่อนไหวของย่าน อัปเดตอัตโนมัติ',render_news())
 
 stories.write_audit()
 page('/stories/','เรื่องเล่าตะกั่วป่า','บทความประวัติศาสตร์และวัฒนธรรมตะกั่วป่าจากแหล่งข้อมูลทางการ แยกระดับหลักฐานชัดเจน',stories.index({'byid': byid}))
 for story in stories.get_all_stories():
  route = story.get('route') or f"/stories/{story['id']}/"
  page(route, story['title'], story['dek'], stories.article(story, {'byid': byid}))
-page('/rest/', 'พักเบรกและกินเที่ยวตะกั่วป่า', 'ร้านอร่อยและจุดแวะในตะกั่วป่าที่มีคนไปมาเองแล้ว พร้อมเวลาเปิดและพิกัดนำทาง แผ่นพับเดินเมืองเก่าโหลดฟรี', render_rest())
+page('/rest/', 'ของกินตะกั่วป่า คาเฟ่ และจุดแวะพัก', 'ร้านอาหารและคาเฟ่ตะกั่วป่าที่มีคนไปมาเองแล้ว ของกินตะกั่วป่าและของฝากขึ้นชื่อ พร้อมเวลาเปิดและพิกัดนำทาง', render_rest())
 
 (OUT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join(f'<url><loc>{esc(BASE+p)}</loc><lastmod>{date.today().isoformat()}</lastmod></url>' for p in PAGES)+'</urlset>',encoding='utf-8')
 for name in ['NotoSerifThai','IBMPlexSansThaiLooped-Regular','CormorantGaramond']:

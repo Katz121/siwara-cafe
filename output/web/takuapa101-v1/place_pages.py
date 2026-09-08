@@ -101,6 +101,10 @@ def render(record,ctx,groups):
             nearby_rows.append('<li>'+text(item.get('name_th'))+' '+badge(item.get('status'))+' '+link(item.get('source_url'))+'</li>')
     nearby=list(dict.fromkeys(nearby+[i for i in ids if i!=rid]))
     section('nearby','ที่ใกล้เคียงและสถานที่ในหมวดเดียวกัน','<ul class="nearby-links">'+''.join(nearby_rows)+''.join('<li>'+ctx['a'](ctx['byid'][i])+'</li>' for i in nearby if i not in [p for p in []] and not any(ctx['url'](ctx['byid'][i]) in row for row in nearby_rows))+'</ul>')
+    import design as _d
+    _note = _d.siwara_note(rid)
+    if _note:
+        sections.append(('nearby-note', '', _note))
     section('faq','คำถามที่พบบ่อย','<!--PLACE_FAQ-->')
     types={'official':'หน่วยงานทางการ','news':'ข่าว','blog':'บล็อก','social':'สื่อสังคม','community':'ชุมชน','project':'โครงการ','reference':'เอกสารอ้างอิง'}
     rows=''.join('<tr><th scope="row">'+text(s.get('name'))+'</th><td>'+text(types.get(s.get('type'),'แหล่งข้อมูลอื่น'))+'</td><td>'+text(s.get('accessed') or 'ยังไม่ยืนยัน')+'</td><td>'+link(s.get('url'),'เปิดแหล่ง ↗')+'</td></tr>' for s in r.get('sources',[]))

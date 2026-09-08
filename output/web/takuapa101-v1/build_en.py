@@ -251,6 +251,7 @@ def main():
         route = '/' if rel == '.' else '/' + rel + '/'
         pages.append((route, os.path.join(dirpath, 'index.html')))
 
+    en_meta = load('data/i18n/en/meta.json')
     made = skipped = 0
     for route, src in sorted(pages):
         html = open(src, encoding='utf-8').read()
@@ -265,6 +266,17 @@ def main():
 
         out = repoint_links(out)
         out = out.replace('<html lang="th"', '<html lang="en"', 1)
+        # English search intent is not a translation of the Thai phrasing.
+        pair = en_meta.get(route)
+        if pair:
+            t_en, d_en = pair
+            out = re.sub(r'<title>.*?</title>', '<title>' + esc(t_en) + ' · Takua Pa 101</title>', out, count=1, flags=re.S)
+            out = re.sub(r'(<meta name="description" content=")[^"]*(")',
+                         lambda m: m.group(1) + esc(d_en, quote=True) + m.group(2), out, count=1)
+            out = re.sub(r'(<meta property="og:title" content=")[^"]*(")',
+                         lambda m: m.group(1) + esc(t_en, quote=True) + m.group(2), out, count=1)
+            out = re.sub(r'(<meta property="og:description" content=")[^"]*(")',
+                         lambda m: m.group(1) + esc(d_en, quote=True) + m.group(2), out, count=1)
         out = out.replace('"og:locale":"th_TH"', '"og:locale":"en_US"')
         out = out.replace('og:locale" content="th_TH"', 'og:locale" content="en_US"')
         en_url = BASE + PREFIX + ('' if route == '/' else route)

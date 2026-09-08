@@ -140,11 +140,35 @@ def illustration_for(story, ctx=None, skip=()):
             return {'file': rel, 'caption_th': name, 'pid': pid}
     return None
 
+# A closing aside on the two stories where the guide's author has something the
+# article itself cannot give: a building you can walk into, and a list of places
+# that are still open. Anywhere else this would be an advert.
+STORY_OUTRO = {
+    'architecture': ('https://siwaracafe.com/',
+        'อาคารในบทความนี้ส่วนใหญ่ดูได้เฉพาะภายนอก · บ้านไม้สักหลังหนึ่งในย่านตลาดเก่าเปิดเป็นคาเฟ่ '
+        'จึงเป็นหนึ่งในไม่กี่หลังที่เดินเข้าไปดูโครงสร้างไม้ ฝ้า และช่องแสงข้างในได้จริง',
+        'บ้านไม้สักที่เข้าไปข้างในได้ ↗'),
+    'food-people': ('https://siwaracafe.com/guide',
+        'บทความนี้เล่าที่มาของรสชาติ ส่วนรายชื่อร้านที่ยังเปิดอยู่จริงพร้อมเวลาเปิดและพิกัด '
+        'อยู่ในคู่มือกินเที่ยวที่คนทำเว็บนี้เดินไปชิมมาเอง',
+        'เปิดคู่มือกินเที่ยวตะกั่วป่า ↗'),
+}
+
+
+def story_outro(sid):
+    hit = STORY_OUTRO.get(sid)
+    if not hit:
+        return ''
+    href, body, label = hit
+    return (f'<aside class="story-outro"><p>{escape(body)}</p>'
+            f'<a class="text-link" href="{escape(href)}" target="_blank" rel="noopener">{escape(label)}</a></aside>')
+
+
 def article(story, ctx):
     is_new = 'lede' in story
     if not is_new:
         sections = ''.join(f'<section><span class="chapter">หลักฐานช่วงที่ {i:02d}</span><h2>{escape(h)}</h2><p>{escape(p)}</p></section>' for i, (h, p) in enumerate(story['sections'], 1))
-        return f'<div class="story-article"><div class="breadcrumbs"><a href="/">หน้าแรก</a><span>/</span><a href="/stories/">เรื่องเล่าตะกั่วป่า</a><span>/</span><span>{escape(story["group"])}</span></div><header class="story-hero"><span class="eyebrow">เรื่องเล่าตะกั่วป่า · {escape(story["group"])}</span><h1>{escape(story["title"])}</h1><p class="lead">{escape(story["dek"])}</p><p class="story-meta">ปรับปรุง 7 กันยายน 2569 · เรียบเรียงจากเอกสารทางการ · ระดับหลักฐาน: มีทั้งข้อเท็จจริงและข้อสันนิษฐาน</p></header><article class="story-prose">{sections}<aside class="evidence-note"><strong>อ่านอย่างมีหลักฐาน</strong><p>ข้อความนี้สรุปจากแหล่งที่ระบุด้านล่าง หากเป็นคำว่า “เชื่อมโยง”, “สันนิษฐาน” หรือ “ยังไม่มีข้อยุติ” เว็บไซต์คงคำกำกับไว้เพื่อไม่ทำให้ข้อสันนิษฐานกลายเป็นข้อเท็จจริง</p></aside><h2>สถานที่ที่อ่านต่อได้</h2>{_place_links(story["places"], ctx)}<h2>แหล่งข้อมูลของบทความ</h2>{_source_list(story["sources"])}</article></div>'
+        return f'<div class="story-article"><div class="breadcrumbs"><a href="/">หน้าแรก</a><span>/</span><a href="/stories/">เรื่องเล่าตะกั่วป่า</a><span>/</span><span>{escape(story["group"])}</span></div><header class="story-hero"><span class="eyebrow">เรื่องเล่าตะกั่วป่า · {escape(story["group"])}</span><h1>{escape(story["title"])}</h1><p class="lead">{escape(story["dek"])}</p><p class="story-meta">ปรับปรุง 7 กันยายน 2569 · เรียบเรียงจากเอกสารทางการ · ระดับหลักฐาน: มีทั้งข้อเท็จจริงและข้อสันนิษฐาน</p></header><article class="story-prose">{sections}<aside class="evidence-note"><strong>อ่านอย่างมีหลักฐาน</strong><p>ข้อความนี้สรุปจากแหล่งที่ระบุด้านล่าง หากเป็นคำว่า “เชื่อมโยง”, “สันนิษฐาน” หรือ “ยังไม่มีข้อยุติ” เว็บไซต์คงคำกำกับไว้เพื่อไม่ทำให้ข้อสันนิษฐานกลายเป็นข้อเท็จจริง</p></aside><h2>สถานที่ที่อ่านต่อได้</h2>{_place_links(story["places"], ctx)}{story_outro(story.get("id"))}<h2>แหล่งข้อมูลของบทความ</h2>{_source_list(story["sources"])}</article></div>'
 
     meta = f'<p class="story-meta">ปรับปรุงเมื่อ {escape(story.get("updated", ""))} · เวลาอ่าน {story.get("reading_minutes", 0)} นาที</p>'
     header = f'<header class="story-hero-v2"><div class="breadcrumbs"><a href="/">หน้าแรก</a><span>/</span><a href="/stories/">เรื่องเล่าตะกั่วป่า</a><span>/</span><span>{escape(story.get("group", ""))}</span></div><span class="eyebrow">เรื่องเล่าตะกั่วป่า · {escape(story.get("group", ""))}</span><h1>{escape(story.get("title", ""))}</h1><p class="lead">{escape(story.get("dek", ""))}</p>{meta}</header>'
@@ -247,7 +271,7 @@ def article(story, ctx):
                 src_lis += f'<li><cite>{escape(src["title"])}</cite> · {escape(src["publisher"])} · {escape(src["locator"])} · <a href="{escape(src["url"])}" target="_blank" rel="noopener">ดูแหล่งที่มา</a></li>'
     sources_html = f'<section class="story-sources-v2"><h2>แหล่งข้อมูล</h2><ol>{src_lis}</ol></section>'
 
-    return f'<div class="story-article-v2">{header}{hero_html}<div class="story-layout-v2"><div class="story-main-v2">{lede_html}{sections_html}{places_html}{un_html}{sources_html}</div><div class="story-sidebar-v2">{ev_html}{toc_html}</div></div></div>'
+    return f'<div class="story-article-v2">{header}{hero_html}<div class="story-layout-v2"><div class="story-main-v2">{lede_html}{sections_html}{places_html}{story_outro(story.get("id"))}{un_html}{sources_html}</div><div class="story-sidebar-v2">{ev_html}{toc_html}</div></div></div>'
 
 def index(ctx):
     cards = ''

@@ -316,6 +316,37 @@ def city_feed(ctx, limit_news=8):
         + '</div></section>')
 
 
+# ---- Contextual links to the guide's author ----
+# One repeated footer link on every page is the weakest kind of link and reads
+# as boilerplate. These are placed only where the connection is real, each with
+# its own wording, pointing at whichever page of theirs actually answers it.
+SIWARA_NOTES = {
+    'culture-street': ('https://siwaracafe.com/',
+        'ศิวรา คาเฟ่ บ้านไม้สักบนถนนสายนี้',
+        'ตึกแถวเลขที่ 53 ถนนราษฎร์บำรุง ย่านตลาดเก่า เป็นบ้านไม้สักที่เปิดเป็นคาเฟ่ '
+        'จึงเป็นหนึ่งในไม่กี่หลังบนถนนสายนี้ที่เดินเข้าไปดูข้างในได้'),
+    'riverwalk': ('https://siwaracafe.com/',
+        'ที่นั่งพักใกล้ตลาด',
+        'ถ้าเดินตลาดเสร็จแล้วอยากนั่งพัก ย่านตลาดเก่าอยู่ห่างไปไม่ไกล '
+        'มีบ้านไม้เก่าที่เปิดเป็นคาเฟ่อยู่ริมถนนราษฎร์บำรุง'),
+    'khun-in': ('https://siwaracafe.com/',
+        'บ้านไม้อีกหลังที่เข้าไปข้างในได้',
+        'บ้านขุนอินทร์เปิดให้ชมเฉพาะภายนอก ถ้าอยากเห็นว่าบ้านไม้เก่าของเมืองนี้ '
+        'ข้างในหน้าตาเป็นอย่างไร มีอีกหลังในย่านตลาดเก่าที่เปิดเป็นคาเฟ่'),
+}
+
+
+def siwara_note(pid):
+    """A short, honest aside. Returns nothing for pages where it would be filler."""
+    hit = SIWARA_NOTES.get(pid)
+    if not hit:
+        return ''
+    href, label, body = hit
+    return (f'<aside class="nearby-note"><span class="chapter">แวะพักใกล้ ๆ</span>'
+            f'<p>{e(body)}</p>'
+            f'<a class="text-link" href="{e(href)}" target="_blank" rel="noopener">{e(label)} ↗</a></aside>')
+
+
 def shell(path, html):
     html=html.replace('/assets/site.css','/assets/design.css').replace('/assets/site.js','/assets/design.js')
     html=html.replace('<body>',f'<body class="{"home" if path=="/" else "inner-page"}">')
