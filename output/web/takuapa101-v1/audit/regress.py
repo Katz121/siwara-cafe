@@ -76,6 +76,19 @@ for f in (glob.glob(os.path.join(SITE, 'assets', '*.js'))
         moji.append(os.path.basename(f))
 check('ไม่มี mojibake หรือ ??? ในไฟล์', not moji, ', '.join(moji[:4]))
 
+# Google ปฏิเสธ Event ที่ไม่มี startDate ทั้งก้อน · เคยหลุดไป 7 หน้ามาแล้ว
+bad_event = []
+for p_ in pages:
+    for m in re.finditer(r'application/ld\+json[^>]*>(.*?)</script>', read(p_), re.S):
+        try:
+            data = json.loads(m.group(1))
+        except Exception:
+            continue
+        for node in (data if isinstance(data, list) else [data]):
+            if isinstance(node, dict) and node.get('@type') == 'Event' and not node.get('startDate'):
+                bad_event.append(os.path.relpath(p_, SITE))
+check('ไม่มี Event schema ที่ขาด startDate', not bad_event, ', '.join(bad_event[:3]))
+
 print('\n== ลิงก์และแหล่งอ้างอิง ==')
 dead = [d['url_prefix'] for d in json.load(
     io.open(os.path.join(ROOT, 'data', 'dead-sources.json'), encoding='utf-8'))]

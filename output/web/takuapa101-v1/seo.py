@@ -59,7 +59,34 @@ def entity(r, canonical):
             s['openingHoursSpecification']=[{'@type':'OpeningHoursSpecification','dayOfWeek':'https://schema.org/Sunday','opens':m[1]+':'+m[2],'closes':m[3]+':'+m[4]}]
     else:
         f=r.get('festival') or {}
-        if f.get('venue_th'):s['location']={'@type':'Place','name':clean(f['venue_th'])}
+        # Google บังคับ startDate สำหรับ Event · ประเพณีเหล่านี้ยังไม่มีกำหนดการ
+        # ที่ยืนยันได้สักงาน การเดาวันเพื่อให้ผ่านคือสิ่งที่เว็บนี้ห้ามตัวเองไว้
+        # จึงประกาศเป็น Event เฉพาะปีที่มีวันจริง ที่เหลือใช้ Article อธิบายประเพณี
+        start=(f.get('start_date') or '').strip()
+        if not start:
+            s['@type']='Article'
+            s['headline']=clean(r['name_th'])[:110]
+            s['mainEntityOfPage']={'@type':'WebPage','@id':canonical}
+            s['inLanguage']='th-TH'
+            s['publisher']=PUBLISHER
+            s['about']={'@type':'Event','name':clean(r['name_th'])}
+            if f.get('venue_th'):
+                s['about']['location']={'@type':'Place','name':clean(f['venue_th'])}
+            if f.get('activities_th'):
+                s['description']=' · '.join(clean(x) for x in f['activities_th'])
+            return s
+        s['startDate']=start
+        if f.get('end_date'):s['endDate']=f['end_date']
+        s['eventStatus']='https://schema.org/EventScheduled'
+        s['eventAttendanceMode']='https://schema.org/OfflineEventAttendanceMode'
+        s['organizer']={'@type':'Organization','name':clean(f.get('organizer_th') or 'เทศบาลเมืองตะกั่วป่า'),
+                        'url':'https://www.takuapacity.go.th/'}
+        s['performer']={'@type':'Organization','name':'ชุมชนเมืองเก่าตะกั่วป่า'}
+        s['offers']={'@type':'Offer','price':'0','priceCurrency':'THB',
+                     'availability':'https://schema.org/InStock','url':canonical}
+        if f.get('venue_th'):s['location']={'@type':'Place','name':clean(f['venue_th']),
+                                            'address':{'@type':'PostalAddress','addressLocality':'ตะกั่วป่า',
+                                                       'addressRegion':'พังงา','addressCountry':'TH'}}
         if f.get('activities_th'):s['description']=' · '.join(clean(x) for x in f['activities_th'])
         # Exclude approximate lunar months and evidence limited to one past year.
         months=['มกราคม','กุมภาพันธ์','มีนาคม','เมษายน','พฤษภาคม','มิถุนายน','กรกฎาคม','สิงหาคม','กันยายน','ตุลาคม','พฤศจิกายน','ธันวาคม']
