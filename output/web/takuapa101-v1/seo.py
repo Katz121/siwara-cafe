@@ -69,9 +69,9 @@ def entity(r, canonical):
             s['mainEntityOfPage']={'@type':'WebPage','@id':canonical}
             s['inLanguage']='th-TH'
             s['publisher']=PUBLISHER
-            s['about']={'@type':'Event','name':clean(r['name_th'])}
+            s['about']={'@type':'Thing','name':clean(r['name_th'])}
             if f.get('venue_th'):
-                s['about']['location']={'@type':'Place','name':clean(f['venue_th'])}
+                s['contentLocation']={'@type':'Place','name':clean(f['venue_th'])}
             if f.get('activities_th'):
                 s['description']=' · '.join(clean(x) for x in f['activities_th'])
             return s

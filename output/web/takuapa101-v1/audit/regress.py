@@ -84,9 +84,16 @@ for p_ in pages:
             data = json.loads(m.group(1))
         except Exception:
             continue
-        for node in (data if isinstance(data, list) else [data]):
-            if isinstance(node, dict) and node.get('@type') == 'Event' and not node.get('startDate'):
-                bad_event.append(os.path.relpath(p_, SITE))
+        def _walk(node):
+            if isinstance(node, dict):
+                if node.get('@type') == 'Event' and not node.get('startDate'):
+                    bad_event.append(os.path.relpath(p_, SITE))
+                for v in node.values():
+                    _walk(v)
+            elif isinstance(node, list):
+                for v in node:
+                    _walk(v)
+        _walk(data)
 check('ไม่มี Event schema ที่ขาด startDate', not bad_event, ', '.join(bad_event[:3]))
 
 print('\n== ลิงก์และแหล่งอ้างอิง ==')
