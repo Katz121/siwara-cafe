@@ -140,6 +140,8 @@ def shop_entity(r, canonical):
         node['url'] = r['website']
     if r.get('google_maps_url'):
         node['hasMap'] = r['google_maps_url']
+    if r.get('price_range_symbol'):
+        node['priceRange'] = r['price_range_symbol']
     if r.get('signature_th'):
         node['makesOffer'] = [{'@type': 'Offer', 'itemOffered':
                                {'@type': 'MenuItem' if r.get('category') != 'souvenir_shop' else 'Product',

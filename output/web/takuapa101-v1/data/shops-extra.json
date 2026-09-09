@@ -5,7 +5,7 @@
     "name_en": "Siwara Cafe",
     "category": "drink_shop",
     "website": "https://siwaracafe.com/",
-    "one_liner_th": "คาเฟ่ในตะกั่วป่า ผู้จัดทำคู่มือเมืองเล่มนี้",
+    "one_liner_th": "คาเฟ่ในบ้านไม้สักเกือบร้อยปี ย่านเมืองเก่าตะกั่วป่า เลือกระดับคั่วกาแฟได้ มีเค้กโฮมเมดและบอร์ดเกมในร้าน",
     "provenance": "first-party",
     "sources": [
       {
@@ -20,7 +20,8 @@
     "signature_th": [
       "กาแฟฮันนี่เลม่อน",
       "น้ำช่อดอกมะพร้าว",
-      "เค้กและเบเกอรี่โฮมเมด"
+      "เค้กและเบเกอรี่โฮมเมด",
+      "รับทำเค้กวันเกิดและ Snack Box"
     ],
     "address_th": "53 ถนนราษฎร์บำรุง ตำบลตะกั่วป่า อำเภอตะกั่วป่า จังหวัดพังงา 82110 (ตรงข้าม 7-Eleven)",
     "subdistrict": "ตะกั่วป่า",
@@ -35,7 +36,8 @@
     "google_maps_url": "https://maps.app.goo.gl/EmCpQ4hKVBHTm3vM9",
     "near_old_town": true,
     "unknowns": [],
-    "batch": "first-party"
+    "batch": "first-party",
+    "price_range_symbol": "฿฿"
   },
   {
     "id": "baan-bai",
