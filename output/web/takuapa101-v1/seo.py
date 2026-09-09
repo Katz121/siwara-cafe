@@ -105,6 +105,48 @@ def article_schema(canonical, title, desc, story, og_image):
     return d
 
 
+SHOP_TYPE = {'restaurant': 'Restaurant', 'drink_shop': 'CafeOrCoffeeShop',
+             'souvenir_shop': 'Store'}
+
+
+def shop_entity(r, canonical):
+    """structured data ของร้านที่ค้นข้อมูลมาแล้ว · ใส่เฉพาะ field ที่มีข้อมูลจริง
+    ห้ามเดา เพราะ schema ที่กรอกมั่วเสียหายกว่าไม่มี"""
+    node = {'@type': SHOP_TYPE.get(r.get('category'), 'LocalBusiness'),
+            'name': r.get('name_th'),
+            'url': canonical + '#' + r['id']}
+    # ร้านที่มีเว็บของตัวเอง ใช้ @id เดียวกับที่เว็บนั้นประกาศไว้
+    # เสิร์ชเอนจินจะได้รู้ว่าเป็นกิจการเดียวกัน ไม่ใช่คนละแห่งที่ชื่อพ้องกัน
+    if r.get('id') == 'siwara-cafe':
+        node['@id'] = 'https://siwaracafe.com/#cafe'
+        node['sameAs'] = ['https://siwaracafe.com/',
+                          'https://www.facebook.com/siwaracafetakuapa/',
+                          'https://www.instagram.com/si.wara_cafe/']
+    if r.get('name_en'):
+        node['alternateName'] = r['name_en']
+    if r.get('one_liner_th'):
+        node['description'] = r['one_liner_th']
+    if r.get('address_th'):
+        node['address'] = {'@type': 'PostalAddress', 'streetAddress': r['address_th'],
+                           'addressLocality': 'ตะกั่วป่า', 'addressRegion': 'พังงา',
+                           'addressCountry': 'TH'}
+    g = r.get('geo') or {}
+    if g.get('lat') and g.get('lng'):
+        node['geo'] = {'@type': 'GeoCoordinates', 'latitude': g['lat'], 'longitude': g['lng']}
+    if r.get('phone'):
+        digits = ''.join(c for c in r['phone'] if c.isdigit())
+        node['telephone'] = ('+66' + digits[1:]) if digits.startswith('0') else r['phone']
+    if r.get('website'):
+        node['url'] = r['website']
+    if r.get('google_maps_url'):
+        node['hasMap'] = r['google_maps_url']
+    if r.get('signature_th'):
+        node['makesOffer'] = [{'@type': 'Offer', 'itemOffered':
+                               {'@type': 'MenuItem' if r.get('category') != 'souvenir_shop' else 'Product',
+                                'name': x}} for x in r['signature_th'][:5]]
+    return node
+
+
 def schemas(path,title,record,body,story=None,og_image=None):
     canonical=SITE_BASE_URL+path
     result=[{'@context':'https://schema.org','@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'หน้าแรก','item':SITE_BASE_URL+'/'}]+([{'@type':'ListItem','position':2,'name':title,'item':canonical}] if path!='/' else [])}]
@@ -132,6 +174,18 @@ def schemas(path,title,record,body,story=None,og_image=None):
         if path=='/eat/':
             library=json.loads((ROOT/'data/library.json').read_text(encoding='utf-8'))
             result.append({'@context':'https://schema.org','@type':'ItemList','itemListElement':[{'@type':'ListItem','position':i,'name':r['name_th'],'url':canonical+'#'+r['id']} for i,r in enumerate([r for r in library['records'] if r['type']=='business_directory'],1)]})
+        if path=='/eat/':
+            try:
+                extra=json.loads((ROOT/'data/shops-extra.json').read_text(encoding='utf-8'))
+                extra=extra if isinstance(extra,list) else extra.get('shops',[])
+            except Exception:
+                extra=[]
+            rich=[shop_entity(r,canonical) for r in extra if r.get('address_th') or r.get('website')]
+            if rich:
+                result.append({'@context':'https://schema.org','@type':'ItemList',
+                               'name':'ร้านอาหาร คาเฟ่ และของฝากในอำเภอตะกั่วป่า',
+                               'itemListElement':[{'@type':'ListItem','position':i,'item':n}
+                                                  for i,n in enumerate(rich,1)]})
         if items:result.append({'@context':'https://schema.org','@type':'ItemList','itemListElement':[{'@type':'ListItem','position':i,'url':SITE_BASE_URL+u} for i,u in enumerate(items,1)]})
     return result,body
 

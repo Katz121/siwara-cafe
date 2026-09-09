@@ -182,7 +182,9 @@ def transform(path,body,ctx,record):
             if r.get('hours_th'): meta.append(e(r['hours_th']))
             if r.get('subdistrict'): meta.append('ต.' + e(r['subdistrict']))
             if meta: bits.append(f'<small class="shop-meta">{" · ".join(meta)}</small>')
-            if r.get('geo'):
+            if r.get('google_maps_url'):
+                bits.append(f'<a class="shop-nav" href="{e(r["google_maps_url"])}" target="_blank" rel="noopener">นำทาง ↗</a>')
+            elif r.get('geo'):
                 g = r['geo']
                 bits.append(f'<a class="shop-nav" href="https://www.google.com/maps/search/?api=1&query={g["lat"]},{g["lng"]}" target="_blank" rel="noopener">นำทาง ↗</a>')
             elif r.get('google_maps_url') or r.get('maps_search_url'):
